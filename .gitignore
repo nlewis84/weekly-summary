@@ -1,0 +1,9 @@
+node_modules/
+.env
+2026-weekly-work-summaries/
+.cursor/
+build/
+.react-router/
+coverage/
+*.log
+.DS_Store
