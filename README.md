@@ -1,6 +1,6 @@
 # Weekly Summary
 
-Generates weekly work summaries from Linear issues, GitHub activity, and optional check-ins. Standalone project (extracted from Apollos).
+Generates weekly work summaries from Linear issues, GitHub activity, and optional check-ins. Standalone project.
 
 ## Features
 
