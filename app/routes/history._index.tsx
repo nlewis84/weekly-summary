@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-import { useLoaderData, Link, useRevalidator } from "react-router";
+import { useLoaderData, Link, useRevalidator, useSearchParams } from "react-router";
 import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
 import { listWeeklySummaries } from "../../lib/github-fetch";
@@ -20,8 +20,11 @@ export async function loader({ request }: LoaderFunctionArgs) {
     return data({ error: "Method not allowed" }, { status: 405 });
   }
 
+  const url = new URL(request.url);
+  const bust = !!url.searchParams.get("_bust");
+
   try {
-    const weeks = await listWeeklySummaries();
+    const weeks = await listWeeklySummaries({ bust });
     return data({ weeks, error: null as string | null });
   } catch (err) {
     console.error("History loader error:", err);
@@ -50,6 +53,7 @@ export default function HistoryIndex() {
     error: string | null;
   };
   const revalidator = useRevalidator();
+  const [searchParams, setSearchParams] = useSearchParams();
   const toast = useToast();
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
@@ -64,6 +68,17 @@ export default function HistoryIndex() {
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
   };
+
+  // Strip _bust from URL after load to keep URL clean
+  useEffect(() => {
+    if (searchParams.get("_bust") && revalidator.state !== "loading") {
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete("_bust");
+        return next.size ? next : new URLSearchParams();
+      });
+    }
+  }, [searchParams, revalidator.state, setSearchParams]);
 
   const filteredWeeks = useMemo(() => {
     if (!debouncedSearch.trim()) return weeks;
@@ -138,17 +153,19 @@ export default function HistoryIndex() {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div className="flex items-center gap-4 flex-wrap">
-          <h2 className="text-lg font-semibold text-[var(--color-text)]">
+          <h2 className="text-lg font-semibold text-(--color-text)">
             Historical Summaries
           </h2>
           <Link
             to="/history/compare"
+            prefetch="intent"
             className="text-sm text-primary-500 hover:text-primary-400 font-medium"
           >
             Compare weeks
           </Link>
           <Link
             to="/charts?view=annual"
+            prefetch="intent"
             className="text-sm text-primary-500 hover:text-primary-400 font-medium"
           >
             Annual
@@ -163,7 +180,7 @@ export default function HistoryIndex() {
                   )
                 }
                 disabled={exporting}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-primary-600 hover:text-primary-500 hover:bg-[var(--color-surface-elevated)] rounded-lg transition-colors disabled:opacity-50"
+                className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-primary-600 hover:text-primary-500 hover:bg-(--color-surface-elevated) rounded-lg transition-colors disabled:opacity-50"
                 title={
                   selected.size > 0
                     ? `Export ${selected.size} selected`
@@ -181,7 +198,7 @@ export default function HistoryIndex() {
                 <button
                   type="button"
                   onClick={clearSelection}
-                  className="text-sm text-[var(--color-text-muted)] hover:text-primary-500"
+                  className="text-sm text-(--color-text-muted) hover:text-primary-500"
                 >
                   Clear
                 </button>
@@ -193,7 +210,7 @@ export default function HistoryIndex() {
           <MagnifyingGlass
             size={18}
             weight="regular"
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)] pointer-events-none"
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-(--color-text-muted) pointer-events-none"
           />
           <input
             type="search"
@@ -201,26 +218,35 @@ export default function HistoryIndex() {
             onChange={handleSearchChange}
             placeholder="Search by date or week…"
             aria-label="Search history"
-            className="w-full sm:w-64 pl-8 pr-4 py-2 text-sm bg-[var(--color-surface-elevated)] border border-[var(--color-border)] rounded-lg text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="w-full sm:w-64 pl-8 pr-4 py-2 text-sm bg-(--color-surface-elevated) border border-(--color-border) rounded-lg text-(--color-text) placeholder:text-(--color-text-muted) focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           />
         </div>
       </div>
 
       {error && (
-        <ErrorBanner message={error} onRetry={() => revalidator.revalidate()} />
+        <ErrorBanner
+          message={error}
+          onRetry={() => {
+            setSearchParams((prev) => {
+              const next = new URLSearchParams(prev);
+              next.set("_bust", Date.now().toString());
+              return next;
+            });
+          }}
+        />
       )}
 
       {weeks.length === 0 && !error ? (
-        <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] p-8 text-center text-[var(--color-text-muted)] border border-[var(--color-border)]">
+        <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-(--color-text-muted) border border-(--color-border)">
           No summaries found in repository.
         </div>
       ) : filteredWeeks.length === 0 ? (
-        <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] p-8 text-center text-[var(--color-text-muted)] border border-[var(--color-border)]">
+        <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-(--color-text-muted) border border-(--color-border)">
           No weeks match &quot;{search}&quot;.
         </div>
       ) : (
         <>
-          <div className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
+          <div className="flex items-center gap-2 text-sm text-(--color-text-muted)">
             <button
               type="button"
               onClick={selectAllFiltered}
@@ -234,14 +260,14 @@ export default function HistoryIndex() {
           <ul className="space-y-2">
             {filteredWeeks.map((week: string) => (
               <li key={week}>
-                <div className="flex items-center gap-3 p-4 bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] hover:shadow-[var(--shadow-skeuo-card-hover)] hover:border-primary-500/50 transition-all group">
+                <div className="flex items-center gap-3 p-4 bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) hover:shadow-(--shadow-skeuo-card-hover) hover:border-primary-500/50 transition-all group">
                   <button
                     type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       toggleWeek(week);
                     }}
-                    className="shrink-0 p-0.5 text-[var(--color-text-muted)] hover:text-primary-500"
+                    className="shrink-0 p-0.5 text-(--color-text-muted) hover:text-primary-500"
                     aria-label={selected.has(week) ? "Deselect" : "Select"}
                   >
                     {selected.has(week) ? (
@@ -256,6 +282,7 @@ export default function HistoryIndex() {
                   </button>
                   <Link
                     to={`/history/${week}`}
+                    prefetch="intent"
                     className="flex flex-1 items-center gap-3 min-w-0"
                   >
                     <CalendarBlank
@@ -263,10 +290,10 @@ export default function HistoryIndex() {
                       weight="regular"
                       className="text-primary-500 shrink-0"
                     />
-                    <span className="font-medium text-[var(--color-text)] group-hover:text-primary-500 transition-colors">
+                    <span className="font-medium text-(--color-text) group-hover:text-primary-500 transition-colors">
                       Week ending {formatWeekLabel(week)}
                     </span>
-                    <span className="text-sm text-[var(--color-text-muted)] ml-auto shrink-0">
+                    <span className="text-sm text-(--color-text-muted) ml-auto shrink-0">
                       {week}
                     </span>
                   </Link>

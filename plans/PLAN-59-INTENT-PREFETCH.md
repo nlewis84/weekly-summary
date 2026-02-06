@@ -1,6 +1,6 @@
 # PLAN-59: Intent Prefetch on Links
 
-**Status:** Draft
+**Status:** Done
 
 ## Overview
 

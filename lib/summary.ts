@@ -8,6 +8,7 @@ import { mkdirSync, existsSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Payload, RunSummaryResult, CheckIn, Stats } from "./types.js";
 import { buildMarkdownSummary } from "./markdown.js";
+import { dataCache } from "./cache.js";
 
 const SUMMARY_README = `# Weekly Work Summaries
 
@@ -50,14 +51,34 @@ const LINEAR_CREATED_QUERY = `
   }
 `;
 
-export function getWindowStart(now: Date, todayMode: boolean, yesterdayMode = false): Date {
+export function getWindowStart(
+  now: Date,
+  todayMode: boolean,
+  yesterdayMode = false
+): Date {
   if (yesterdayMode) {
     const yesterday = new Date(now);
     yesterday.setDate(now.getDate() - 1);
-    return new Date(yesterday.getFullYear(), yesterday.getMonth(), yesterday.getDate(), 0, 0, 0, 0);
+    return new Date(
+      yesterday.getFullYear(),
+      yesterday.getMonth(),
+      yesterday.getDate(),
+      0,
+      0,
+      0,
+      0
+    );
   }
   if (todayMode) {
-    return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0);
+    return new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate(),
+      0,
+      0,
+      0,
+      0
+    );
   }
   const day = now.getDay();
   const daysSinceSaturday = (day + 1) % 7;
@@ -67,7 +88,11 @@ export function getWindowStart(now: Date, todayMode: boolean, yesterdayMode = fa
   return saturday;
 }
 
-export function getWindowEnd(now: Date, todayMode = false, yesterdayMode = false): Date {
+export function getWindowEnd(
+  now: Date,
+  todayMode = false,
+  yesterdayMode = false
+): Date {
   if (yesterdayMode) {
     const yesterday = new Date(now);
     yesterday.setDate(now.getDate() - 1);
@@ -138,7 +163,9 @@ export function parseCheckIns(checkInsText: string): CheckIn[] {
     if (content) entries.push({ day: currentDay, content });
   }
 
-  return entries.length > 0 ? entries : [{ day: "Check-ins", content: checkInsText.trim() }];
+  return entries.length > 0
+    ? entries
+    : [{ day: "Check-ins", content: checkInsText.trim() }];
 }
 
 async function fetchLinearPage(
@@ -168,13 +195,23 @@ async function fetchAllLinearIssues(
   do {
     const vars = { ...base, after };
     const data = await fetchLinearPage(headers, query, vars);
-    const conn = (data as { issues?: { nodes: unknown[]; pageInfo?: { hasNextPage?: boolean; endCursor?: string } } })?.issues;
+    const conn = (
+      data as {
+        issues?: {
+          nodes: unknown[];
+          pageInfo?: { hasNextPage?: boolean; endCursor?: string };
+        };
+      }
+    )?.issues;
     if (!conn?.nodes) break;
     all.push(...conn.nodes);
     if (!conn.pageInfo?.hasNextPage) break;
     after = conn.pageInfo?.endCursor ?? null;
   } while (after !== null);
-  return all as Array<{ state?: { name?: string; type?: string }; completedAt?: string | null }>;
+  return all as Array<{
+    state?: { name?: string; type?: string };
+    completedAt?: string | null;
+  }>;
 }
 
 async function fetchLinearData(
@@ -184,16 +221,24 @@ async function fetchLinearData(
   windowEndISO: string
 ) {
   const key = process.env.LINEAR_API_KEY;
-  if (!key) return { completedIssues: [], workedOnIssues: [], createdIssues: [], userName: null };
+  if (!key)
+    return {
+      completedIssues: [],
+      workedOnIssues: [],
+      createdIssues: [],
+      userName: null,
+    };
 
   const headers = { Authorization: key, "Content-Type": "application/json" };
 
   try {
     const userData = await fetchLinearPage(headers, LINEAR_USER_QUERY, {});
-    const userId = (userData as { viewer?: { id?: string; name?: string } })?.viewer?.id;
+    const userId = (userData as { viewer?: { id?: string; name?: string } })
+      ?.viewer?.id;
     if (!userId) throw new Error("No Linear user ID");
 
-    const userName = (userData as { viewer?: { name?: string } })?.viewer?.name ?? null;
+    const userName =
+      (userData as { viewer?: { name?: string } })?.viewer?.name ?? null;
 
     const [completedIssues, rawWorkedOn, createdIssues] = await Promise.all([
       fetchAllLinearIssues(headers, LINEAR_COMPLETED_QUERY, {
@@ -215,7 +260,9 @@ async function fetchLinearData(
     const workedOnIssues = rawWorkedOn.filter((issue) => {
       const stateName = issue.state?.name ?? "";
       const stateType = issue.state?.type ?? "";
-      const completedAt = issue.completedAt ? new Date(issue.completedAt) : null;
+      const completedAt = issue.completedAt
+        ? new Date(issue.completedAt)
+        : null;
       if (stateName === "In Progress" || stateName === "In Review") return true;
       if (stateName === "Done" || stateType === "completed") {
         if (!completedAt) return false;
@@ -226,7 +273,12 @@ async function fetchLinearData(
 
     return { completedIssues, workedOnIssues, createdIssues, userName };
   } catch {
-    return { completedIssues: [], workedOnIssues: [], createdIssues: [], userName: null };
+    return {
+      completedIssues: [],
+      workedOnIssues: [],
+      createdIssues: [],
+      userName: null,
+    };
   }
 }
 
@@ -237,8 +289,12 @@ function filterApollosPRs(items: Array<{ html_url?: string }>) {
 function getCommitRepos(): { owner: string; repos: string[] } {
   const owner = process.env.GITHUB_ORG ?? "ApollosProject";
   const raw =
-    process.env.GITHUB_COMMIT_REPOS ?? "apollos-admin,apollos-cluster,apollos-platforms,git-for-sql";
-  const repos = raw.split(",").map((r) => r.trim()).filter(Boolean);
+    process.env.GITHUB_COMMIT_REPOS ??
+    "apollos-admin,apollos-cluster,apollos-platforms,git-for-sql";
+  const repos = raw
+    .split(",")
+    .map((r) => r.trim())
+    .filter(Boolean);
   return { owner, repos };
 }
 
@@ -297,21 +353,22 @@ async function fetchGitHubData(
   const since = windowStartISO.split("T")[0];
 
   try {
-    const [prsCreatedRes, prsUpdatedRes, reviewsRes, commitsPushed] = await Promise.all([
-      fetch(
-        `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+created:>=${since}&per_page=100`,
-        { headers }
-      ),
-      fetch(
-        `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+updated:>=${since}&per_page=100`,
-        { headers }
-      ),
-      fetch(
-        `${GITHUB_API_BASE}/search/issues?q=reviewed-by:${username}+type:pr+updated:>=${since}&per_page=100`,
-        { headers }
-      ),
-      fetchCommitsPushed(username, headers, windowStart, windowEnd),
-    ]);
+    const [prsCreatedRes, prsUpdatedRes, reviewsRes, commitsPushed] =
+      await Promise.all([
+        fetch(
+          `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+created:>=${since}&per_page=100`,
+          { headers }
+        ),
+        fetch(
+          `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+updated:>=${since}&per_page=100`,
+          { headers }
+        ),
+        fetch(
+          `${GITHUB_API_BASE}/search/issues?q=reviewed-by:${username}+type:pr+updated:>=${since}&per_page=100`,
+          { headers }
+        ),
+        fetchCommitsPushed(username, headers, windowStart, windowEnd),
+      ]);
 
     const [prsCreatedData, prsUpdatedData, reviewsData] = await Promise.all([
       prsCreatedRes.ok ? prsCreatedRes.json() : { items: [] },
@@ -319,7 +376,10 @@ async function fetchGitHubData(
       reviewsRes.ok ? reviewsRes.json() : { items: [] },
     ]);
 
-    const allPRs = [...(prsCreatedData.items ?? []), ...(prsUpdatedData.items ?? [])];
+    const allPRs = [
+      ...(prsCreatedData.items ?? []),
+      ...(prsUpdatedData.items ?? []),
+    ];
     const seen = new Set<string>();
     const uniquePRs = allPRs.filter((pr: { html_url?: string }) => {
       if (!pr.html_url || seen.has(pr.html_url)) return false;
@@ -328,20 +388,27 @@ async function fetchGitHubData(
     });
 
     const prDetails = await Promise.all(
-      uniquePRs.map(async (pr: { pull_request?: { url?: string }; html_url?: string; merged_at?: string; state?: string }) => {
-        if (pr.pull_request?.url) {
-          try {
-            const r = await fetch(pr.pull_request.url, { headers });
-            if (r.ok) {
-              const d = await r.json();
-              return { ...pr, merged_at: d.merged_at, state: d.state };
+      uniquePRs.map(
+        async (pr: {
+          pull_request?: { url?: string };
+          html_url?: string;
+          merged_at?: string;
+          state?: string;
+        }) => {
+          if (pr.pull_request?.url) {
+            try {
+              const r = await fetch(pr.pull_request.url, { headers });
+              if (r.ok) {
+                const d = await r.json();
+                return { ...pr, merged_at: d.merged_at, state: d.state };
+              }
+            } catch {
+              /* fetch failed, use original pr */
             }
-          } catch {
-            /* fetch failed, use original pr */
           }
+          return pr;
         }
-        return pr;
-      })
+      )
     );
 
     const reviews = filterApollosPRs(reviewsData.items ?? []);
@@ -370,7 +437,12 @@ async function fetchGitHubData(
     );
     const totalComments = commentCounts.reduce((a, b) => a + b, 0);
 
-    return { prs: prDetails, reviews, comments: totalComments, commits_pushed: commitsPushed };
+    return {
+      prs: prDetails,
+      reviews,
+      comments: totalComments,
+      commits_pushed: commitsPushed,
+    };
   } catch {
     return { prs: [], reviews: [], comments: 0, commits_pushed: 0 };
   }
@@ -380,7 +452,9 @@ function categorizePRs(
   prs: Array<{ merged_at?: string | null; state?: string }>,
   windowStart: Date
 ) {
-  const merged = prs.filter((pr) => pr.merged_at && new Date(pr.merged_at) >= windowStart);
+  const merged = prs.filter(
+    (pr) => pr.merged_at && new Date(pr.merged_at) >= windowStart
+  );
   const open = prs.filter((pr) => pr.state === "open" && !pr.merged_at);
   return { merged, open };
 }
@@ -397,7 +471,11 @@ function groupPRsByRepo(prs: Array<{ html_url?: string }>) {
 }
 
 function buildTerminalOutput(
-  linearData: { completedIssues: unknown[]; workedOnIssues: unknown[]; createdIssues: unknown[] },
+  linearData: {
+    completedIssues: unknown[];
+    workedOnIssues: unknown[];
+    createdIssues: unknown[];
+  },
   githubData: { prs: unknown[]; reviews: unknown[]; commits_pushed?: number },
   checkIns: CheckIn[],
   prCategories: { merged: unknown[] },
@@ -441,10 +519,38 @@ export function saveWeeklySummary(payload: Payload, outputDir: string): void {
     writeFileSync(jsonPath, JSON.stringify(payload, null, 2), "utf8");
     writeFileSync(mdPath, buildMarkdownSummary(payload), "utf8");
 
-    console.log(`\n📁 Saved to ${outputDir}/ (${weekEnding}.json, ${weekEnding}.md)`);
+    console.log(
+      `\n📁 Saved to ${outputDir}/ (${weekEnding}.json, ${weekEnding}.md)`
+    );
   } catch (err) {
     console.error(`⚠️  Could not save summary: ${(err as Error).message}`);
   }
+}
+
+/**
+ * Cached runSummary for Index loader. Use bust: true when user clicks Refresh.
+ */
+export async function getCachedRunSummary(
+  options: {
+    todayMode: boolean;
+    yesterdayMode?: boolean;
+    checkInsText: string;
+    outputDir: string | null;
+  } & { bust?: boolean }
+): Promise<RunSummaryResult> {
+  const { bust, ...opts } = options;
+  const key = opts.yesterdayMode
+    ? "index:yesterday"
+    : opts.todayMode
+      ? "index:today"
+      : "index:weekly";
+
+  const cached = !bust && (dataCache.get(key) as RunSummaryResult | undefined);
+  if (cached) return cached;
+
+  const result = await runSummary(opts);
+  dataCache.set(key, result);
+  return result;
 }
 
 export async function runSummary(options: {
@@ -493,11 +599,13 @@ export async function runSummary(options: {
   );
 
   // Use Friday of the week (not UTC date) so filenames stay consistent across timezones
-  const refDate = yesterdayMode ? (() => {
-    const d = new Date(now);
-    d.setDate(now.getDate() - 1);
-    return d;
-  })() : now;
+  const refDate = yesterdayMode
+    ? (() => {
+        const d = new Date(now);
+        d.setDate(now.getDate() - 1);
+        return d;
+      })()
+    : now;
   const weekStart = getWindowStart(refDate, false);
   const fridayOfWeek = new Date(weekStart);
   fridayOfWeek.setDate(weekStart.getDate() + 6);
@@ -514,45 +622,80 @@ export async function runSummary(options: {
     },
     stats,
     linear: {
-      completed_issues: linearData.completedIssues.map((i: { identifier?: string; title?: string; project?: { name?: string }; url?: string; completedAt?: string | null; state?: { name?: string; type?: string } }) => ({
-        identifier: i.identifier ?? "",
-        title: i.title ?? "",
-        project: i.project?.name ?? null,
-        url: i.url ?? null,
-        completedAt: i.completedAt ?? null,
-        state: i.state?.name ?? i.state?.type ?? null,
-      })),
-      worked_on_issues: linearData.workedOnIssues.map((i: { identifier?: string; title?: string; project?: { name?: string }; url?: string; completedAt?: string | null; state?: { name?: string; type?: string } }) => ({
-        identifier: i.identifier ?? "",
-        title: i.title ?? "",
-        project: i.project?.name ?? null,
-        url: i.url ?? null,
-        completedAt: i.completedAt ?? null,
-        state: i.state?.name ?? i.state?.type ?? null,
-      })),
-      created_issues: linearData.createdIssues.map((i: { identifier?: string; title?: string; project?: { name?: string }; url?: string; createdAt?: string | null; state?: { name?: string; type?: string } }) => ({
-        identifier: i.identifier ?? "",
-        title: i.title ?? "",
-        project: i.project?.name ?? null,
-        url: i.url ?? null,
-        createdAt: i.createdAt ?? null,
-        state: i.state?.name ?? i.state?.type ?? null,
-      })),
+      completed_issues: linearData.completedIssues.map(
+        (i: {
+          identifier?: string;
+          title?: string;
+          project?: { name?: string };
+          url?: string;
+          completedAt?: string | null;
+          state?: { name?: string; type?: string };
+        }) => ({
+          identifier: i.identifier ?? "",
+          title: i.title ?? "",
+          project: i.project?.name ?? null,
+          url: i.url ?? null,
+          completedAt: i.completedAt ?? null,
+          state: i.state?.name ?? i.state?.type ?? null,
+        })
+      ),
+      worked_on_issues: linearData.workedOnIssues.map(
+        (i: {
+          identifier?: string;
+          title?: string;
+          project?: { name?: string };
+          url?: string;
+          completedAt?: string | null;
+          state?: { name?: string; type?: string };
+        }) => ({
+          identifier: i.identifier ?? "",
+          title: i.title ?? "",
+          project: i.project?.name ?? null,
+          url: i.url ?? null,
+          completedAt: i.completedAt ?? null,
+          state: i.state?.name ?? i.state?.type ?? null,
+        })
+      ),
+      created_issues: linearData.createdIssues.map(
+        (i: {
+          identifier?: string;
+          title?: string;
+          project?: { name?: string };
+          url?: string;
+          createdAt?: string | null;
+          state?: { name?: string; type?: string };
+        }) => ({
+          identifier: i.identifier ?? "",
+          title: i.title ?? "",
+          project: i.project?.name ?? null,
+          url: i.url ?? null,
+          createdAt: i.createdAt ?? null,
+          state: i.state?.name ?? i.state?.type ?? null,
+        })
+      ),
     },
     github: {
-      merged_prs: prCategories.merged.map((pr: { title?: string; html_url?: string; merged_at?: string | null }) => {
-        const m = pr.html_url?.match(/ApollosProject\/([^/]+)/);
-        return {
+      merged_prs: prCategories.merged.map(
+        (pr: {
+          title?: string;
+          html_url?: string;
+          merged_at?: string | null;
+        }) => {
+          const m = pr.html_url?.match(/ApollosProject\/([^/]+)/);
+          return {
+            title: pr.title ?? "",
+            url: pr.html_url ?? "",
+            repo: m ? m[1] : null,
+            merged_at: pr.merged_at ?? null,
+          };
+        }
+      ),
+      reviews: githubData.reviews.map(
+        (pr: { title?: string; html_url?: string }) => ({
           title: pr.title ?? "",
           url: pr.html_url ?? "",
-          repo: m ? m[1] : null,
-          merged_at: pr.merged_at ?? null,
-        };
-      }),
-      reviews: githubData.reviews.map((pr: { title?: string; html_url?: string }) => ({
-        title: pr.title ?? "",
-        url: pr.html_url ?? "",
-      })),
+        })
+      ),
     },
     check_ins: checkIns,
     terminal_output: terminalOutput,

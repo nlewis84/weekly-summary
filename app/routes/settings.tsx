@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Sun, Moon, Monitor, ArrowsClockwise } from "phosphor-react";
 import { QuotaIndicator } from "../components/QuotaIndicator";
-import { REFRESH_OPTIONS, setRefreshInterval, getStoredRefreshInterval } from "../hooks/useRefreshInterval";
+import {
+  REFRESH_OPTIONS,
+  setRefreshInterval,
+  getStoredRefreshInterval,
+} from "../hooks/useRefreshInterval";
 import { useGoals, type WeeklyGoals } from "../hooks/useGoals";
 
 type Theme = "light" | "dark" | "system";
@@ -11,7 +15,9 @@ const STORAGE_KEY = "weekly-summary-theme";
 
 function getSystemTheme(): "light" | "dark" {
   if (typeof window === "undefined") return "dark";
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
 }
 
 function getEffectiveTheme(theme: Theme): "light" | "dark" {
@@ -39,7 +45,10 @@ export default function Settings() {
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
-    const initial = stored && ["light", "dark", "system"].includes(stored) ? stored : "system";
+    const initial =
+      stored && ["light", "dark", "system"].includes(stored)
+        ? stored
+        : "system";
     setTheme(initial);
     setRefreshIntervalState(getStoredRefreshInterval());
     setMounted(true);
@@ -49,16 +58,18 @@ export default function Settings() {
     setTheme(next);
     localStorage.setItem(STORAGE_KEY, next);
     applyTheme(getEffectiveTheme(next));
-    window.dispatchEvent(new CustomEvent("weekly-summary-theme-changed", { detail: next }));
+    window.dispatchEvent(
+      new CustomEvent("weekly-summary-theme-changed", { detail: next })
+    );
   };
 
   if (!mounted) {
     return (
       <div className="space-y-6">
-        <h2 className="text-lg font-semibold text-[var(--color-text)]">Settings</h2>
-        <div className="bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-6 animate-pulse">
-          <div className="h-4 w-32 bg-[var(--color-surface-elevated)] rounded mb-4" />
-          <div className="h-10 w-48 bg-[var(--color-surface-elevated)] rounded" />
+        <h2 className="text-lg font-semibold text-(--color-text)">Settings</h2>
+        <div className="bg-(--color-surface) rounded-xl border border-(--color-border) p-6 animate-pulse">
+          <div className="h-4 w-32 bg-(--color-surface-elevated) rounded mb-4" />
+          <div className="h-10 w-48 bg-(--color-surface-elevated) rounded" />
         </div>
       </div>
     );
@@ -66,10 +77,10 @@ export default function Settings() {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-lg font-semibold text-[var(--color-text)]">Settings</h2>
+      <h2 className="text-lg font-semibold text-(--color-text)">Settings</h2>
 
-      <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-6 space-y-4">
-        <h3 className="text-sm font-medium text-[var(--color-text)]">Appearance</h3>
+      <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6 space-y-4">
+        <h3 className="text-sm font-medium text-(--color-text)">Appearance</h3>
         <fieldset className="space-y-2">
           <legend className="sr-only">Theme</legend>
           {[
@@ -81,8 +92,8 @@ export default function Settings() {
               key={value}
               className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${
                 theme === value
-                  ? "bg-[var(--color-surface-elevated)] border-primary-500/50"
-                  : "border-[var(--color-border)] hover:bg-[var(--color-surface-elevated)]"
+                  ? "bg-(--color-surface-elevated) border-primary-500/50"
+                  : "border-(--color-border) hover:bg-(--color-surface-elevated)"
               }`}
             >
               <input
@@ -93,17 +104,26 @@ export default function Settings() {
                 onChange={() => handleThemeChange(value)}
                 className="sr-only"
               />
-              <Icon size={20} weight="regular" className="text-primary-500 shrink-0" />
-              <span className="text-sm font-medium text-[var(--color-text)]">{label}</span>
+              <Icon
+                size={20}
+                weight="regular"
+                className="text-primary-500 shrink-0"
+              />
+              <span className="text-sm font-medium text-(--color-text)">
+                {label}
+              </span>
             </label>
           ))}
         </fieldset>
       </div>
 
-      <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-6 space-y-4">
-        <h3 className="text-sm font-medium text-[var(--color-text)]">Auto-refresh</h3>
-        <p className="text-sm text-[var(--color-text-muted)]">
-          How often the home page refreshes data. Manual refresh (R key or button) always works.
+      <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6 space-y-4">
+        <h3 className="text-sm font-medium text-(--color-text)">
+          Auto-refresh
+        </h3>
+        <p className="text-sm text-(--color-text-muted)">
+          How often the home page refreshes data. Manual refresh (R key or
+          button) always works.
         </p>
         <fieldset className="space-y-2">
           <legend className="sr-only">Refresh interval</legend>
@@ -112,8 +132,8 @@ export default function Settings() {
               key={value}
               className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${
                 refreshInterval === value
-                  ? "bg-[var(--color-surface-elevated)] border-primary-500/50"
-                  : "border-[var(--color-border)] hover:bg-[var(--color-surface-elevated)]"
+                  ? "bg-(--color-surface-elevated) border-primary-500/50"
+                  : "border-(--color-border) hover:bg-(--color-surface-elevated)"
               }`}
             >
               <input
@@ -127,22 +147,31 @@ export default function Settings() {
                 }}
                 className="sr-only"
               />
-              <ArrowsClockwise size={20} weight="regular" className="text-primary-500 shrink-0" />
-              <span className="text-sm font-medium text-[var(--color-text)]">{label}</span>
+              <ArrowsClockwise
+                size={20}
+                weight="regular"
+                className="text-primary-500 shrink-0"
+              />
+              <span className="text-sm font-medium text-(--color-text)">
+                {label}
+              </span>
             </label>
           ))}
         </fieldset>
       </div>
 
-      <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-6 space-y-4">
-        <h3 className="text-sm font-medium text-[var(--color-text)]">Weekly goals</h3>
-        <p className="text-sm text-[var(--color-text-muted)]">
-          Optional targets for key metrics. Progress shows as &quot;12/20&quot; in the weekly ticker. Leave blank to hide.
+      <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6 space-y-4">
+        <h3 className="text-sm font-medium text-(--color-text)">
+          Weekly goals
+        </h3>
+        <p className="text-sm text-(--color-text-muted)">
+          Optional targets for key metrics. Progress shows as &quot;12/20&quot;
+          in the weekly ticker. Leave blank to hide.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {GOAL_KEYS.map(({ key, label }) => (
             <label key={key} className="flex flex-col gap-1">
-              <span className="text-xs text-[var(--color-text-muted)]">{label}</span>
+              <span className="text-xs text-(--color-text-muted)">{label}</span>
               <input
                 type="number"
                 min={0}
@@ -150,11 +179,12 @@ export default function Settings() {
                 value={goals[key] ?? ""}
                 onChange={(e) => {
                   const v = e.target.value;
-                  const n = v === "" ? undefined : Math.max(0, parseInt(v, 10) || 0);
+                  const n =
+                    v === "" ? undefined : Math.max(0, parseInt(v, 10) || 0);
                   setGoals({ ...goals, [key]: n && n > 0 ? n : undefined });
                 }}
                 placeholder="—"
-                className="px-3 py-2 bg-[var(--color-surface-elevated)] border border-[var(--color-border)] rounded-lg text-[var(--color-text)] focus:ring-2 focus:ring-primary-500"
+                className="px-3 py-2 bg-(--color-surface-elevated) border border-(--color-border) rounded-lg text-(--color-text) focus:ring-2 focus:ring-primary-500"
               />
             </label>
           ))}
@@ -163,25 +193,32 @@ export default function Settings() {
           <button
             type="button"
             onClick={clearGoals}
-            className="text-sm text-[var(--color-text-muted)] hover:text-primary-500"
+            className="text-sm text-(--color-text-muted) hover:text-primary-500"
           >
             Clear all goals
           </button>
         )}
       </div>
 
-      <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-6">
-        <h3 className="text-sm font-medium text-[var(--color-text)] mb-2">Server settings</h3>
-        <p className="text-sm text-[var(--color-text-muted)]">
-          GitHub repo, Linear API key, and summary paths are configured via environment variables
-          (e.g. <code className="px-1 py-0.5 bg-[var(--color-surface-elevated)] rounded text-xs">.env</code>). They cannot be changed from this app.
+      <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6">
+        <h3 className="text-sm font-medium text-(--color-text) mb-2">
+          Server settings
+        </h3>
+        <p className="text-sm text-(--color-text-muted)">
+          GitHub repo, Linear API key, and summary paths are configured via
+          environment variables (e.g.{" "}
+          <code className="px-1 py-0.5 bg-(--color-surface-elevated) rounded text-xs">
+            .env
+          </code>
+          ). They cannot be changed from this app.
         </p>
         <QuotaIndicator />
       </div>
 
       <Link
         to="/"
-        className="inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-primary-500 transition-colors"
+        prefetch="intent"
+        className="inline-flex items-center gap-2 text-sm text-(--color-text-muted) hover:text-primary-500 transition-colors"
       >
         ← Back to home
       </Link>

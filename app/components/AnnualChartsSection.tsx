@@ -10,8 +10,8 @@ import type { AnnualData } from "../../lib/annual-data";
 
 function MetricCard({ label, value }: { label: string; value: number }) {
   return (
-    <div className="bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-4">
-      <p className="text-xs text-[var(--color-text-muted)]">{label}</p>
+    <div className="bg-(--color-surface) rounded-xl border border-(--color-border) p-4">
+      <p className="text-xs text-(--color-text-muted)">{label}</p>
       <p className="text-xl font-semibold text-primary-500">{value}</p>
     </div>
   );
@@ -50,23 +50,21 @@ function CompareTotals({
         return (
           <div
             key={key}
-            className="bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-4"
+            className="bg-(--color-surface) rounded-xl border border-(--color-border) p-4"
           >
-            <p className="text-xs text-[var(--color-text-muted)]">{label}</p>
+            <p className="text-xs text-(--color-text-muted)">{label}</p>
             <div className="flex items-baseline gap-2 flex-wrap">
               <span className="text-xl font-semibold text-primary-500">
                 {a}
               </span>
-              <span className="text-sm text-[var(--color-text-muted)]">
-                vs {b}
-              </span>
+              <span className="text-sm text-(--color-text-muted)">vs {b}</span>
               <span
                 className={`text-xs font-medium ${
                   isUp
                     ? "text-emerald-500"
                     : isDown
                       ? "text-red-500"
-                      : "text-[var(--color-text-muted)]"
+                      : "text-(--color-text-muted)"
                 }`}
               >
                 {delta}
@@ -108,14 +106,15 @@ export function AnnualChartsSection({
       {showBackLink && (
         <Link
           to="/history"
-          className="inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-primary-500"
+          prefetch="intent"
+          className="inline-flex items-center gap-2 text-sm text-(--color-text-muted) hover:text-primary-500"
         >
           ← Back to History
         </Link>
       )}
 
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <h3 className="text-lg font-semibold text-[var(--color-text)]">
+        <h3 className="text-lg font-semibold text-(--color-text)">
           Annual — {annualData.year}
           {compareData && ` vs ${compareData.year}`}
         </h3>
@@ -124,7 +123,7 @@ export function AnnualChartsSection({
             <select
               value={year}
               onChange={(e) => onYearChange(e.target.value)}
-              className="px-4 py-2 bg-[var(--color-surface-elevated)] border border-[var(--color-border)] rounded-lg text-[var(--color-text)] focus:ring-2 focus:ring-primary-500"
+              className="px-4 py-2 bg-(--color-surface-elevated) border border-(--color-border) rounded-lg text-(--color-text) focus:ring-2 focus:ring-primary-500"
               aria-label="Select year"
             >
               {years.map((y) => (
@@ -138,7 +137,7 @@ export function AnnualChartsSection({
             <select
               value={compareYear}
               onChange={(e) => onCompareChange(e.target.value)}
-              className="px-4 py-2 bg-[var(--color-surface-elevated)] border border-[var(--color-border)] rounded-lg text-[var(--color-text)] focus:ring-2 focus:ring-primary-500"
+              className="px-4 py-2 bg-(--color-surface-elevated) border border-(--color-border) rounded-lg text-(--color-text) focus:ring-2 focus:ring-primary-500"
               aria-label="Compare with year"
             >
               <option value="">Compare with…</option>
@@ -182,13 +181,13 @@ export function AnnualChartsSection({
       )}
 
       {annualData.months.length > 0 && (
-        <div className="bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-4 sm:p-6 overflow-hidden">
-          <h4 className="text-sm font-medium text-[var(--color-text)] mb-4">
+        <div className="bg-(--color-surface) rounded-xl border border-(--color-border) p-4 sm:p-6 overflow-hidden">
+          <h4 className="text-sm font-medium text-(--color-text) mb-4">
             Monthly trend
           </h4>
           <Suspense
             fallback={
-              <div className="h-72 animate-pulse bg-[var(--color-surface-elevated)] rounded" />
+              <div className="h-72 animate-pulse bg-(--color-surface-elevated) rounded" />
             }
           >
             <AnnualChartsContent months={annualData.months} />
@@ -197,30 +196,30 @@ export function AnnualChartsSection({
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-4 sm:p-6">
-          <h4 className="text-sm font-medium text-[var(--color-text)] mb-4">
+        <div className="bg-(--color-surface) rounded-xl border border-(--color-border) p-4 sm:p-6">
+          <h4 className="text-sm font-medium text-(--color-text) mb-4">
             Top repos (PRs merged)
           </h4>
           <ul className="space-y-2">
             {annualData.topRepos.slice(0, 10).map(({ repo, prs }) => (
               <li key={repo} className="flex justify-between text-sm">
-                <span className="text-[var(--color-text)]">{repo}</span>
-                <span className="text-[var(--color-text-muted)]">{prs}</span>
+                <span className="text-(--color-text)">{repo}</span>
+                <span className="text-(--color-text-muted)">{prs}</span>
               </li>
             ))}
           </ul>
         </div>
-        <div className="bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-4 sm:p-6">
-          <h4 className="text-sm font-medium text-[var(--color-text)] mb-4">
+        <div className="bg-(--color-surface) rounded-xl border border-(--color-border) p-4 sm:p-6">
+          <h4 className="text-sm font-medium text-(--color-text) mb-4">
             Top Linear projects
           </h4>
           <ul className="space-y-2">
             {annualData.topProjects.slice(0, 10).map(({ project, issues }) => (
               <li key={project} className="flex justify-between text-sm">
-                <span className="text-[var(--color-text)] truncate max-w-[200px]">
+                <span className="text-(--color-text) truncate max-w-[200px]">
                   {project}
                 </span>
-                <span className="text-[var(--color-text-muted)] shrink-0">
+                <span className="text-(--color-text-muted) shrink-0">
                   {issues}
                 </span>
               </li>
@@ -229,8 +228,8 @@ export function AnnualChartsSection({
         </div>
       </div>
 
-      <div className="bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-4 sm:p-6">
-        <h4 className="text-sm font-medium text-[var(--color-text)] mb-4">
+      <div className="bg-(--color-surface) rounded-xl border border-(--color-border) p-4 sm:p-6">
+        <h4 className="text-sm font-medium text-(--color-text) mb-4">
           Weeks ({annualData.weeks.length})
         </h4>
         <div className="flex flex-wrap gap-2">
@@ -238,7 +237,8 @@ export function AnnualChartsSection({
             <Link
               key={w}
               to={`/history/${w}`}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm bg-[var(--color-surface-elevated)] hover:bg-primary-500/10 rounded-lg text-[var(--color-text)] hover:text-primary-500 transition-colors"
+              prefetch="intent"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm bg-(--color-surface-elevated) hover:bg-primary-500/10 rounded-lg text-(--color-text) hover:text-primary-500 transition-colors"
             >
               <CalendarBlank size={14} weight="regular" />
               {w}

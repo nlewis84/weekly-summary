@@ -4,6 +4,7 @@
  */
 
 import { listWeeklySummaries, fetchWeeklySummary } from "./github-fetch.js";
+import { dataCache } from "./cache.js";
 import type { Payload } from "./types.js";
 
 export interface ChartDataPoint {
@@ -30,26 +31,44 @@ export interface ChartsData {
   repoActivity: RepoActivity[];
 }
 
-export async function getChartsData(): Promise<ChartsData> {
-  const weeks = await listWeeklySummaries();
-  const results = await Promise.all(weeks.map(async (week) => ({ week, payload: await fetchWeeklySummary(week) })));
-  const payloads = results.filter((r): r is { week: string; payload: Payload } => r.payload != null).map((r) => ({ week_ending: r.week, payload: r.payload }));
+export async function getChartsData(options?: {
+  bust?: boolean;
+}): Promise<ChartsData> {
+  const bust = options?.bust ?? false;
+  const key = "charts:data";
+  if (!bust) {
+    const cached = dataCache.get(key) as ChartsData | null;
+    if (cached) return cached;
+  }
 
-  const dataPoints: ChartDataPoint[] = payloads.map(({ week_ending, payload }) => {
-    const s = payload.stats;
-    return {
-      week_ending,
-      prs_merged: s.prs_merged,
-      pr_reviews: s.pr_reviews,
-      pr_comments: s.pr_comments,
-      commits_pushed: s.commits_pushed ?? 0,
-      linear_completed: s.linear_completed,
-      linear_worked_on: s.linear_worked_on,
-      linear_issues_created: s.linear_issues_created ?? 0,
-      prs_total: s.prs_total,
-      repos_count: s.repos.length,
-    };
-  });
+  const weeks = await listWeeklySummaries({ bust });
+  const results = await Promise.all(
+    weeks.map(async (week) => ({
+      week,
+      payload: await fetchWeeklySummary(week, { bust }),
+    }))
+  );
+  const payloads = results
+    .filter((r): r is { week: string; payload: Payload } => r.payload != null)
+    .map((r) => ({ week_ending: r.week, payload: r.payload }));
+
+  const dataPoints: ChartDataPoint[] = payloads.map(
+    ({ week_ending, payload }) => {
+      const s = payload.stats;
+      return {
+        week_ending,
+        prs_merged: s.prs_merged,
+        pr_reviews: s.pr_reviews,
+        pr_comments: s.pr_comments,
+        commits_pushed: s.commits_pushed ?? 0,
+        linear_completed: s.linear_completed,
+        linear_worked_on: s.linear_worked_on,
+        linear_issues_created: s.linear_issues_created ?? 0,
+        prs_total: s.prs_total,
+        repos_count: s.repos.length,
+      };
+    }
+  );
 
   const repoMap = new Map<string, Map<string, number>>();
   for (const { week_ending, payload } of payloads) {
@@ -72,5 +91,7 @@ export async function getChartsData(): Promise<ChartsData> {
     })
     .sort((a, b) => b.total_prs - a.total_prs);
 
-  return { dataPoints, repoActivity };
+  const result = { dataPoints, repoActivity };
+  dataCache.set(key, result);
+  return result;
 }

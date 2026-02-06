@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-import { useLoaderData, useRevalidator } from "react-router";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useLoaderData, useNavigation, useSearchParams } from "react-router";
+import { useToast } from "~/components/Toast";
 import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
-import { runSummary } from "../../lib/summary";
+import { getCachedRunSummary } from "../../lib/summary";
 import { fetchWeeklySummary } from "../../lib/github-fetch";
 import { TodaySection } from "~/components/TodaySection";
 import { WeeklySection } from "~/components/WeeklySection";
@@ -36,8 +37,16 @@ export async function loader({ request }: LoaderFunctionArgs) {
     );
   }
 
+  const url = new URL(request.url);
+  const bust = !!url.searchParams.get("_bust");
+
   const runToday = () =>
-    runSummary({ todayMode: true, checkInsText: "", outputDir: null }).then(
+    getCachedRunSummary({
+      todayMode: true,
+      checkInsText: "",
+      outputDir: null,
+      bust,
+    }).then(
       (r) => ({ payload: r.payload }),
       (err) => {
         console.error("Today summary error:", err);
@@ -46,11 +55,12 @@ export async function loader({ request }: LoaderFunctionArgs) {
     );
 
   const runYesterday = () =>
-    runSummary({
+    getCachedRunSummary({
       todayMode: false,
       yesterdayMode: true,
       checkInsText: "",
       outputDir: null,
+      bust,
     }).then(
       (r) => ({ payload: r.payload }),
       (err) => {
@@ -60,12 +70,17 @@ export async function loader({ request }: LoaderFunctionArgs) {
     );
 
   const runWeekly = () =>
-    runSummary({ todayMode: false, checkInsText: "", outputDir: null }).then(
+    getCachedRunSummary({
+      todayMode: false,
+      checkInsText: "",
+      outputDir: null,
+      bust,
+    }).then(
       async (r) => {
         const prevWeekEnding = getPrevWeekEnding(r.payload.meta.week_ending);
         let prevPayload: Payload | null = null;
         try {
-          prevPayload = await fetchWeeklySummary(prevWeekEnding);
+          prevPayload = await fetchWeeklySummary(prevWeekEnding, { bust });
         } catch {
           // No previous week; trend badges will not show
         }
@@ -89,14 +104,20 @@ export async function loader({ request }: LoaderFunctionArgs) {
 export default function Index() {
   const { today, yesterday, weekly } = useLoaderData<typeof loader>();
   const [viewMode, setViewMode] = useState<ViewMode>("today");
-  const revalidator = useRevalidator();
+  const navigation = useNavigation();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const toast = useToast();
   const { intervalMs, label } = useRefreshInterval();
   const { goals } = useGoals();
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const handleRefresh = () => {
-    revalidator.revalidate();
-  };
+  const handleRefresh = useCallback(() => {
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev);
+      next.set("_bust", Date.now().toString());
+      return next;
+    });
+  }, [setSearchParams]);
 
   useEffect(() => {
     if (intervalMs === null) return;
@@ -104,7 +125,7 @@ export default function Index() {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [intervalMs, revalidator.revalidate]);
+  }, [intervalMs, handleRefresh]);
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -118,7 +139,7 @@ export default function Index() {
         !e.shiftKey
       ) {
         e.preventDefault();
-        revalidator.revalidate();
+        handleRefresh();
       }
       if (
         e.key === "y" &&
@@ -133,9 +154,21 @@ export default function Index() {
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [revalidator]);
+  }, [handleRefresh]);
 
-  const isLoading = revalidator.state === "loading";
+  const isLoading = navigation.state === "loading";
+
+  // Strip _bust from URL after load to keep URL clean; toast on refresh complete
+  useEffect(() => {
+    if (searchParams.get("_bust") && navigation.state !== "loading") {
+      toast("Data refreshed");
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete("_bust");
+        return next.size ? next : new URLSearchParams();
+      });
+    }
+  }, [searchParams, navigation.state, setSearchParams, toast]);
 
   const todayPayload = today && "payload" in today ? today.payload : null;
   const todayError = today && "error" in today ? today.error : null;
@@ -151,7 +184,7 @@ export default function Index() {
       <div
         role="tablist"
         aria-label="Date range"
-        className="flex w-fit rounded-lg border border-[var(--color-border)] p-0.5 bg-[var(--color-surface-elevated)]"
+        className="flex w-fit rounded-lg border border-(--color-border) p-0.5 bg-(--color-surface-elevated)"
       >
         {(["today", "yesterday"] as const).map((mode) => (
           <button
@@ -163,7 +196,7 @@ export default function Index() {
             className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 ${
               viewMode === mode
                 ? "bg-primary-600 text-white shadow-sm hover:bg-primary-500"
-                : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+                : "text-(--color-text-muted) hover:text-(--color-text)"
             }`}
           >
             {mode.charAt(0).toUpperCase() + mode.slice(1)}
@@ -177,7 +210,7 @@ export default function Index() {
             <TodaySection
               payload={todayPayload ?? null}
               error={todayError ?? null}
-              isLoading={isLoading && !todayPayload}
+              isLoading={isLoading}
               onRefresh={handleRefresh}
               refreshIntervalLabel={label}
               title="Today"
@@ -188,7 +221,7 @@ export default function Index() {
             <TodaySection
               payload={yesterdayPayload ?? null}
               error={yesterdayError ?? null}
-              isLoading={isLoading && !yesterdayPayload}
+              isLoading={isLoading}
               onRefresh={handleRefresh}
               refreshIntervalLabel={label}
               title="Yesterday"
@@ -197,7 +230,10 @@ export default function Index() {
           )}
         </div>
 
-        <div id="build-summary" className="xl:sticky xl:top-6 xl:flex xl:flex-col xl:items-start xl:min-h-0">
+        <div
+          id="build-summary"
+          className="xl:sticky xl:top-6 xl:flex xl:flex-col xl:items-start xl:min-h-0"
+        >
           <FullSummaryFormContainer />
         </div>
 
@@ -210,7 +246,7 @@ export default function Index() {
                 : null
             }
             error={weeklyError ?? null}
-            isLoading={isLoading && !weeklyPayload}
+            isLoading={isLoading}
             goals={goals}
           />
         </div>

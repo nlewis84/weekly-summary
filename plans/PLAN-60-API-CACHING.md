@@ -1,6 +1,6 @@
 # PLAN-60: API Caching to Reduce Request Burn
 
-**Status:** Draft
+**Status:** Done
 
 ## Overview
 

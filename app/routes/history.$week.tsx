@@ -1,4 +1,5 @@
-import { useLoaderData, Link, useRevalidator } from "react-router";
+import { useEffect } from "react";
+import { useLoaderData, Link, useRevalidator, useSearchParams } from "react-router";
 import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
 import {
@@ -16,6 +17,9 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
     return data({ error: "Method not allowed" }, { status: 405 });
   }
 
+  const url = new URL(request.url);
+  const bust = !!url.searchParams.get("_bust");
+
   const week = params.week;
   if (!week || !/^\d{4}-\d{2}-\d{2}$/.test(week)) {
     return data({
@@ -27,7 +31,7 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
   }
 
   try {
-    const result = await fetchWeeklySummaryRaw(week);
+    const result = await fetchWeeklySummaryRaw(week, { bust });
     const payload =
       result && !("type" in result && result.type === "markdown")
         ? (result as import("../../lib/types").Payload)
@@ -41,7 +45,7 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
       const d = new Date(week + "T12:00:00Z");
       d.setDate(d.getDate() - 7);
       const prevWeek = d.toISOString().slice(0, 10);
-      prevPayload = await fetchWeeklySummary(prevWeek);
+      prevPayload = await fetchWeeklySummary(prevWeek, { bust });
     } catch {
       // No previous week
     }
@@ -75,6 +79,7 @@ function formatWeekLabel(weekEnding: string): string {
 
 export default function HistoryWeek() {
   const revalidator = useRevalidator();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { payload, prevPayload, markdown, error, week } = useLoaderData<
     typeof loader
   >() as {
@@ -85,6 +90,17 @@ export default function HistoryWeek() {
     week: string;
   };
   const toast = useToast();
+
+  // Strip _bust from URL after load to keep URL clean
+  useEffect(() => {
+    if (searchParams.get("_bust") && revalidator.state !== "loading") {
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete("_bust");
+        return next.size ? next : new URLSearchParams();
+      });
+    }
+  }, [searchParams, revalidator.state, setSearchParams]);
 
   const handleCopyMarkdown = async () => {
     const text = payload ? buildMarkdownSummary(payload) : markdown;
@@ -134,14 +150,15 @@ export default function HistoryWeek() {
     <div className="space-y-6">
       <Link
         to="/history"
-        className="inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-primary-500 transition-colors"
+        prefetch="intent"
+        className="inline-flex items-center gap-2 text-sm text-(--color-text-muted) hover:text-primary-500 transition-colors"
       >
         <ArrowLeft size={18} weight="regular" />
         Back to History
       </Link>
 
       <div className="flex items-center justify-between gap-4">
-        <h2 className="text-lg font-semibold text-[var(--color-text)]">
+        <h2 className="text-lg font-semibold text-(--color-text)">
           Week ending {week ? formatWeekLabel(week) : "—"}
         </h2>
         {(payload || markdown) && (
@@ -149,7 +166,7 @@ export default function HistoryWeek() {
             <button
               type="button"
               onClick={handleExportPdf}
-              className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-[var(--color-text-muted)] hover:text-primary-500 hover:bg-[var(--color-surface-elevated)] rounded-lg transition-colors"
+              className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-(--color-text-muted) hover:text-primary-500 hover:bg-(--color-surface-elevated) rounded-lg transition-colors"
               title="Export as PDF (opens print dialog)"
             >
               <FilePdf size={16} weight="regular" />
@@ -158,7 +175,7 @@ export default function HistoryWeek() {
             <button
               type="button"
               onClick={handleCopyMarkdown}
-              className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-[var(--color-text-muted)] hover:text-primary-500 hover:bg-[var(--color-surface-elevated)] rounded-lg transition-colors"
+              className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-(--color-text-muted) hover:text-primary-500 hover:bg-(--color-surface-elevated) rounded-lg transition-colors"
               title="Copy full markdown"
             >
               <Copy size={16} weight="regular" />
@@ -169,7 +186,16 @@ export default function HistoryWeek() {
       </div>
 
       {error && (
-        <ErrorBanner message={error} onRetry={() => revalidator.revalidate()} />
+        <ErrorBanner
+          message={error}
+          onRetry={() => {
+            setSearchParams((prev) => {
+              const next = new URLSearchParams(prev);
+              next.set("_bust", Date.now().toString());
+              return next;
+            });
+          }}
+        />
       )}
 
       {payload ? (
@@ -179,16 +205,16 @@ export default function HistoryWeek() {
           payload={payload}
         />
       ) : markdown ? (
-        <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-6">
-          <p className="text-sm text-[var(--color-text-muted)] mb-4">
+        <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6">
+          <p className="text-sm text-(--color-text-muted) mb-4">
             Week-in-review (transcript)
           </p>
-          <pre className="whitespace-pre-wrap text-sm text-[var(--color-text)] font-sans max-h-[60vh] overflow-y-auto">
+          <pre className="whitespace-pre-wrap text-sm text-(--color-text) font-sans max-h-[60vh] overflow-y-auto">
             {markdown}
           </pre>
         </div>
       ) : !error ? (
-        <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] p-8 text-center text-[var(--color-text-muted)] border border-[var(--color-border)]">
+        <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-(--color-text-muted) border border-(--color-border)">
           Summary not found.
         </div>
       ) : null}

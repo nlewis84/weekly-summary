@@ -1,6 +1,6 @@
 # Plan 64: Card Consistency & Style Guide Polish
 
-**Status:** Draft · **Priority: P2** · **Effort: Small–Medium** · **Impact: Medium**
+**Status: ✅ Complete** · **Priority: P2** · **Effort: Small–Medium** · **Impact: Medium**
 
 **Created Feb 2026:** Aligns Metrics and This week cards with the Build Weekly Summary card's header divider pattern, fixes height alignment, and addresses style guide feedback.
 
@@ -34,28 +34,28 @@ To match Build Summary, Metrics and This week should move the divider to the con
 
 ### 1. Header Divider Consistency
 
-- [ ] **MetricsCard:** Change from `border-b pb-4 mb-4` on header to `border-t pt-4` on the content wrapper. Header gets `pb-4` only (no border). Content wrapper gets `border-t border-[var(--color-border)] pt-4`.
-- [ ] **WeeklyTicker:** Same change—content wrapper gets `border-t pt-4`, header loses `border-b mb-4`.
+- [x] **MetricsCard:** Change from `border-b pb-4 mb-4` on header to `border-t pt-4` on the content wrapper. Header gets `pb-4` only (no border). Content wrapper gets `border-t border-[var(--color-border)] pt-4`.
+- [x] **WeeklyTicker:** Same change—content wrapper gets `border-t pt-4`, header loses `border-b mb-4`.
 
 ### 2. This Week Card Height
 
-- [ ] On xl, the This week card (WeeklyTicker) should match Build Summary height. The right two columns (Build Summary, This week) are in a grid with `items-stretch`. Build Summary column has `items-start` so its card doesn't stretch. This week column needs its card to stretch to match.
-- [ ] Add `xl:h-full xl:flex xl:flex-col xl:min-h-0` to WeeklyTicker so it fills its grid cell. Ensure the WeeklySection wrapper and grid cell allow stretch.
-- [ ] May need to remove `items-start` from Build Summary column and use a different approach, or ensure both columns use `items-stretch` with cards that fill. Verify Build Summary and This week cards align in height.
+- [x] On xl, the This week card (WeeklyTicker) should match Build Summary height. The right two columns (Build Summary, This week) are in a grid with `items-stretch`. Build Summary column has `items-start` so its card doesn't stretch. This week column needs its card to stretch to match.
+- [x] Add `xl:h-full xl:flex xl:flex-col xl:min-h-0` to WeeklyTicker so it fills its grid cell. Ensure the WeeklySection wrapper and grid cell allow stretch.
+- [x] May need to remove `items-start` from Build Summary column and use a different approach, or ensure both columns use `items-stretch` with cards that fill. Verify Build Summary and This week cards align in height.
 
 ### 3. Style Guide Additions (Documentation)
 
-- [ ] **Spacing system:** Add a spacing scale to `docs/STYLE-GUIDE.md`—e.g. use Tailwind's 4, 5, 6 (1rem, 1.25rem, 1.5rem) consistently. Avoid arbitrary values.
-- [ ] **Metrics card internal spacing:** Ensure consistent `mt-4` or `pt-4` between sections (metric grid → Repos → View details).
-- [ ] **Typography scale:** Document text sizes for card titles, labels, values (e.g. `text-lg` titles, `text-sm` labels, `text-base` values).
+- [x] **Spacing system:** Add a spacing scale to `docs/STYLE-GUIDE.md`—e.g. use Tailwind's 4, 5, 6 (1rem, 1.25rem, 1.5rem) consistently. Avoid arbitrary values.
+- [x] **Metrics card internal spacing:** Ensure consistent `mt-4` or `pt-4` between sections (metric grid → Repos → View details).
+- [x] **Typography scale:** Document text sizes for card titles, labels, values (e.g. `text-lg` titles, `text-sm` labels, `text-base` values).
 
 ### 4. Repo List Overflow (This week card)
 
-- [ ] Decide: truncate with ellipsis + tooltip, or allow wrap with consistent line-height. Document in style guide.
+- [x] Decide: truncate with ellipsis + tooltip, or allow wrap with consistent line-height. Document in style guide.
 
 ### 5. Header Alignment
 
-- [ ] Align "Today" header / refresh controls with the left edge of the card grid for cleaner visual alignment.
+- [ ] Align "Today" header / refresh controls with the left edge of the card grid for cleaner visual alignment. (Deferred: current layout already aligns within the column.)
 
 ## Affected Files
 

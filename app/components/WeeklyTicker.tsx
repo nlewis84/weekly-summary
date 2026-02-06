@@ -39,7 +39,7 @@ function TrendBadge({ delta }: { delta: number }) {
       <Minus
         size={12}
         weight="bold"
-        className="text-[var(--color-text-muted)]"
+        className="text-(--color-text-muted)"
         aria-label="no change"
       />
     );
@@ -116,9 +116,9 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
   };
 
   return (
-    <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] hover:shadow-[var(--shadow-skeuo-card-hover)] border border-[var(--color-border)] p-5 transition-all duration-300">
-      <div className="flex items-center justify-between pb-4 mb-4 border-b border-[var(--color-border)]">
-        <h2 className="flex items-center gap-2 text-base font-semibold text-[var(--color-text)]">
+    <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:h-full xl:flex xl:flex-col xl:min-h-0">
+      <div className="flex items-center justify-between pb-4">
+        <h2 className="flex items-center gap-2 text-base font-semibold text-(--color-text)">
           <CalendarBlank
             size={20}
             weight="regular"
@@ -130,7 +130,7 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
           type="button"
           onClick={handleCopy}
           aria-label="Copy stats for standup"
-          className="flex items-center justify-center gap-1.5 min-h-[36px] min-w-[36px] px-2.5 py-1.5 text-sm text-[var(--color-text-muted)] hover:text-primary-500 hover:bg-[var(--color-surface-elevated)] rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+          className="flex items-center justify-center gap-1.5 min-h-[36px] min-w-[36px] px-2.5 py-1.5 text-sm text-(--color-text-muted) hover:text-primary-500 hover:bg-(--color-surface-elevated) rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
           title="Copy stats for standup"
         >
           <Copy size={16} weight="regular" />
@@ -138,7 +138,7 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
         </button>
       </div>
 
-      <div className="space-y-1">
+      <div className="pt-4 border-t border-(--color-border) space-y-1 xl:flex-1 xl:min-h-0">
         {METRICS.map(({ key, label, Icon }, i) => {
           const delta = getDelta(key);
           const target =
@@ -153,10 +153,10 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
             <div
               key={key}
               className={`flex items-center justify-between gap-4 py-2.5 px-3 rounded-lg transition-colors ${
-                i % 2 === 1 ? "bg-[var(--color-surface-elevated)]/60" : ""
-              } hover:bg-[var(--color-surface-elevated)]`}
+                i % 2 === 1 ? "bg-(--color-surface-elevated)/60" : ""
+              } hover:bg-(--color-surface-elevated)`}
             >
-              <span className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] min-w-0">
+              <span className="flex items-center gap-2 text-sm text-(--color-text-muted) min-w-0">
                 <Icon
                   size={16}
                   weight="regular"
@@ -166,7 +166,7 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
               </span>
               <div className="flex items-center gap-2 shrink-0">
                 {target != null && value < target && (
-                  <div className="w-12 h-1 bg-[var(--color-surface)] rounded-full overflow-hidden">
+                  <div className="w-12 h-1 bg-(--color-surface) rounded-full overflow-hidden">
                     <div
                       className="h-full bg-primary-500/60 rounded-full transition-all"
                       style={{
@@ -175,12 +175,12 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
                     />
                   </div>
                 )}
-                <span className="text-base font-semibold text-[var(--color-text)] tabular-nums">
+                <span className="text-base font-semibold text-(--color-text) tabular-nums">
                   {target != null ? `${value}/${target}` : value}
                 </span>
                 {delta != null && target == null && (
                   <span
-                    className="flex items-center gap-0.5 text-xs text-[var(--color-text-muted)]"
+                    className="flex items-center gap-0.5 text-xs text-(--color-text-muted)"
                     title={
                       delta > 0
                         ? `+${delta} vs last week`
@@ -209,8 +209,12 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
         })}
       </div>
 
-      <p className="mt-3 pt-3 text-xs text-[var(--color-text-muted)] flex items-center gap-1.5">
-        <Folder size={14} weight="regular" className="text-primary-500 shrink-0" />
+      <p className="mt-3 pt-3 text-xs text-(--color-text-muted) flex items-center gap-1.5">
+        <Folder
+          size={14}
+          weight="regular"
+          className="text-primary-500 shrink-0"
+        />
         {stats.repos.length > 0 ? stats.repos.join(", ") : "—"}
       </p>
     </div>

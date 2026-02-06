@@ -130,14 +130,14 @@ export function ChartsContent({
 
   return (
     <div>
-      <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-4 sm:p-6 overflow-hidden">
-        <h3 className="text-sm font-medium text-[var(--color-text)] mb-4">
+      <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-4 sm:p-6 overflow-hidden">
+        <h3 className="text-sm font-medium text-(--color-text) mb-4">
           PRs & Linear
         </h3>
         <section aria-labelledby="github-metrics-heading">
           <h4
             id="github-metrics-heading"
-            className="text-xs font-medium text-[var(--color-text-muted)] mb-3"
+            className="text-xs font-medium text-(--color-text-muted) mb-3"
           >
             GitHub
           </h4>
@@ -145,9 +145,9 @@ export function ChartsContent({
             {GITHUB_METRICS.map(({ key, color }) => (
               <div
                 key={key}
-                className="bg-[var(--color-surface-elevated)] rounded-lg border border-[var(--color-border)] p-3"
+                className="bg-(--color-surface-elevated) rounded-lg border border-(--color-border) p-3"
               >
-                <h5 className="text-xs font-medium text-[var(--color-text-muted)] mb-2 truncate">
+                <h5 className="text-xs font-medium text-(--color-text-muted) mb-2 truncate">
                   {key}
                 </h5>
                 <MetricLineChart
@@ -167,7 +167,7 @@ export function ChartsContent({
         <section aria-labelledby="linear-metrics-heading">
           <h4
             id="linear-metrics-heading"
-            className="text-xs font-medium text-[var(--color-text-muted)] mb-3"
+            className="text-xs font-medium text-(--color-text-muted) mb-3"
           >
             Linear
           </h4>
@@ -175,9 +175,9 @@ export function ChartsContent({
             {LINEAR_METRICS.map(({ key, color }) => (
               <div
                 key={key}
-                className="bg-[var(--color-surface-elevated)] rounded-lg border border-[var(--color-border)] p-3"
+                className="bg-(--color-surface-elevated) rounded-lg border border-(--color-border) p-3"
               >
-                <h5 className="text-xs font-medium text-[var(--color-text-muted)] mb-2 truncate">
+                <h5 className="text-xs font-medium text-(--color-text-muted) mb-2 truncate">
                   {key}
                 </h5>
                 <MetricLineChart
@@ -196,7 +196,7 @@ export function ChartsContent({
         </section>
 
         <section
-          className="mt-6 pt-6 border-t border-[var(--color-border)]"
+          className="mt-6 pt-6 border-t border-(--color-border)"
           aria-labelledby="repos-card-heading"
           aria-describedby="repos-card-description"
         >
@@ -204,13 +204,13 @@ export function ChartsContent({
             <div>
               <h3
                 id="repos-card-heading"
-                className="text-sm font-medium text-[var(--color-text)]"
+                className="text-sm font-medium text-(--color-text)"
               >
                 Most Active Repos
               </h3>
               <p
                 id="repos-card-description"
-                className="text-xs text-[var(--color-text-muted)] mt-0.5"
+                className="text-xs text-(--color-text-muted) mt-0.5"
               >
                 Where your PR activity is concentrated
               </p>
@@ -218,7 +218,7 @@ export function ChartsContent({
             <div
               role="tablist"
               aria-label="Repos chart view"
-              className="flex rounded-lg border border-[var(--color-border)] p-0.5 bg-[var(--color-surface-elevated)]"
+              className="flex rounded-lg border border-(--color-border) p-0.5 bg-(--color-surface-elevated)"
             >
               <button
                 type="button"
@@ -229,8 +229,8 @@ export function ChartsContent({
                 onClick={() => setReposView("most-active")}
                 className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
                   reposView === "most-active"
-                    ? "bg-[var(--color-surface)] text-[var(--color-text)] shadow-sm"
-                    : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+                    ? "bg-(--color-surface) text-(--color-text) shadow-sm"
+                    : "text-(--color-text-muted) hover:text-(--color-text)"
                 }`}
               >
                 Most active
@@ -244,8 +244,8 @@ export function ChartsContent({
                 onClick={() => setReposView("over-time")}
                 className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
                   reposView === "over-time"
-                    ? "bg-[var(--color-surface)] text-[var(--color-text)] shadow-sm"
-                    : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+                    ? "bg-(--color-surface) text-(--color-text) shadow-sm"
+                    : "text-(--color-text-muted) hover:text-(--color-text)"
                 }`}
               >
                 Over time
@@ -298,7 +298,7 @@ export function ChartsContent({
                       <LabelList
                         dataKey="PRs merged"
                         position="right"
-                        className="fill-[var(--color-text-muted)]"
+                        className="fill-(--color-text-muted)"
                       />
                     </Bar>
                   </BarChart>

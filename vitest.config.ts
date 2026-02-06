@@ -14,5 +14,8 @@ export default defineConfig({
     globals: true,
     environment: "node",
     include: ["./lib/**/*.test.ts", "./app/**/*.test.ts"],
+    env: {
+      CACHE_TTL_MS: "0",
+    },
   },
 });

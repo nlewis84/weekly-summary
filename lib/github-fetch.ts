@@ -6,13 +6,17 @@
 
 import type { Payload } from "./types.js";
 import { fetchWithRetry } from "./github-api.js";
+import { dataCache } from "./cache.js";
 
 const GITHUB_API = "https://api.github.com";
 const DEFAULT_PATHS = "2026-weekly-work-summaries";
 
 function getSummaryPaths(): string[] {
   const raw = process.env.GITHUB_SUMMARY_PATHS ?? DEFAULT_PATHS;
-  return raw.split(",").map((p) => p.trim()).filter(Boolean);
+  return raw
+    .split(",")
+    .map((p) => p.trim())
+    .filter(Boolean);
 }
 
 function getRepoSpec(): { owner: string; repo: string } {
@@ -43,7 +47,16 @@ interface GhContentItem {
  * Returns week_ending strings (e.g. "2026-01-31") sorted descending, deduplicated.
  * Includes: *.json (YYYY-MM-DD.json) and *-week-in-review.md (YYYY-MM-DD-week-in-review.md)
  */
-export async function listWeeklySummaries(): Promise<string[]> {
+export async function listWeeklySummaries(options?: {
+  bust?: boolean;
+}): Promise<string[]> {
+  const bust = options?.bust ?? false;
+  const key = "history:weeks";
+  if (!bust) {
+    const cached = dataCache.get(key) as string[] | null;
+    if (cached) return cached;
+  }
+
   const { owner, repo } = getRepoSpec();
   const paths = getSummaryPaths();
   const allWeeks = new Set<string>();
@@ -69,17 +82,24 @@ export async function listWeeklySummaries(): Promise<string[]> {
     }
   }
 
-  return [...allWeeks].sort((a, b) => b.localeCompare(a));
+  const result = [...allWeeks].sort((a, b) => b.localeCompare(a));
+  dataCache.set(key, result);
+  return result;
 }
 
-export type WeeklySummaryResult = Payload | { type: "markdown"; week_ending: string; content: string };
+export type WeeklySummaryResult =
+  | Payload
+  | { type: "markdown"; week_ending: string; content: string };
 
 /**
  * Fetch a single weekly summary by week_ending (e.g. "2026-01-31").
  * Tries .json first, then -week-in-review.md. Returns Payload for JSON, or markdown result for .md.
  */
-export async function fetchWeeklySummary(weekEnding: string): Promise<Payload | null> {
-  const result = await fetchWeeklySummaryRaw(weekEnding);
+export async function fetchWeeklySummary(
+  weekEnding: string,
+  options?: { bust?: boolean }
+): Promise<Payload | null> {
+  const result = await fetchWeeklySummaryRaw(weekEnding, options);
   if (!result) return null;
   if ("type" in result && result.type === "markdown") return null; // Charts/History detail need Payload
   return result as Payload;
@@ -88,7 +108,17 @@ export async function fetchWeeklySummary(weekEnding: string): Promise<Payload | 
 /**
  * Fetch weekly summary as Payload or raw markdown. Use for History page to show both.
  */
-export async function fetchWeeklySummaryRaw(weekEnding: string): Promise<WeeklySummaryResult | null> {
+export async function fetchWeeklySummaryRaw(
+  weekEnding: string,
+  options?: { bust?: boolean }
+): Promise<WeeklySummaryResult | null> {
+  const bust = options?.bust ?? false;
+  const key = `history:week:${weekEnding}`;
+  if (!bust) {
+    const cached = dataCache.get(key) as WeeklySummaryResult | null | undefined;
+    if (cached !== undefined) return cached;
+  }
+
   const { owner, repo } = getRepoSpec();
   const paths = getSummaryPaths();
   const year = weekEnding.slice(0, 4);
@@ -100,26 +130,43 @@ export async function fetchWeeklySummaryRaw(weekEnding: string): Promise<WeeklyS
   for (const basePath of orderedPaths) {
     const jsonPath = `${basePath}/${weekEnding}.json`;
     const jsonUrl = `${GITHUB_API}/repos/${owner}/${repo}/contents/${jsonPath}`;
-    const jsonRes = await fetchWithRetry(jsonUrl, { headers: getAuthHeaders() });
+    const jsonRes = await fetchWithRetry(jsonUrl, {
+      headers: getAuthHeaders(),
+    });
     if (jsonRes.ok) {
-      const data = (await jsonRes.json()) as { content?: string; encoding?: string };
+      const data = (await jsonRes.json()) as {
+        content?: string;
+        encoding?: string;
+      };
       if (!data.content || data.encoding !== "base64") {
         throw new Error("Invalid GitHub content response");
       }
       const raw = Buffer.from(data.content, "base64").toString("utf8");
-      return JSON.parse(raw) as Payload;
+      const result = JSON.parse(raw) as Payload;
+      dataCache.set(key, result);
+      return result;
     }
 
     const mdPath = `${basePath}/${weekEnding}-week-in-review.md`;
     const mdUrl = `${GITHUB_API}/repos/${owner}/${repo}/contents/${mdPath}`;
     const mdRes = await fetchWithRetry(mdUrl, { headers: getAuthHeaders() });
     if (mdRes.ok) {
-      const data = (await mdRes.json()) as { content?: string; encoding?: string };
+      const data = (await mdRes.json()) as {
+        content?: string;
+        encoding?: string;
+      };
       if (data.content && data.encoding === "base64") {
         const content = Buffer.from(data.content, "base64").toString("utf8");
-        return { type: "markdown", week_ending: weekEnding, content };
+        const result = {
+          type: "markdown" as const,
+          week_ending: weekEnding,
+          content,
+        };
+        dataCache.set(key, result);
+        return result;
       }
     }
   }
+  dataCache.set(key, null);
   return null;
 }

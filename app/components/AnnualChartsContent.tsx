@@ -47,9 +47,9 @@ export function AnnualChartsContent({ months }: AnnualChartsContentProps) {
       {METRICS.map(({ key, color }) => (
         <div
           key={key}
-          className="bg-[var(--color-surface-elevated)] rounded-lg border border-[var(--color-border)] p-3"
+          className="bg-(--color-surface-elevated) rounded-lg border border-(--color-border) p-3"
         >
-          <h4 className="text-xs font-medium text-[var(--color-text-muted)] mb-2 truncate">
+          <h4 className="text-xs font-medium text-(--color-text-muted) mb-2 truncate">
             {key}
           </h4>
           <MetricLineChart

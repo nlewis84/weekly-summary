@@ -3,6 +3,7 @@
  */
 
 import { listWeeklySummaries, fetchWeeklySummary } from "./github-fetch.js";
+import { dataCache } from "./cache.js";
 import type { Payload } from "./types.js";
 
 export interface MonthlyAggregate {
@@ -34,19 +35,58 @@ export interface AnnualData {
   weeks: string[];
 }
 
-const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const MONTH_LABELS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
-export async function getAnnualData(year: string): Promise<AnnualData> {
-  const weeks = await listWeeklySummaries();
+export async function getAnnualData(
+  year: string,
+  options?: { bust?: boolean }
+): Promise<AnnualData> {
+  const bust = options?.bust ?? false;
+  const key = `charts:annual:${year}`;
+  if (!bust) {
+    const cached = dataCache.get(key) as AnnualData | null;
+    if (cached) return cached;
+  }
+
+  const weeks = await listWeeklySummaries({ bust });
   const yearWeeks = weeks.filter((w) => w.startsWith(year));
   const results = await Promise.all(
-    yearWeeks.map(async (week) => ({ week, payload: await fetchWeeklySummary(week) }))
+    yearWeeks.map(async (week) => ({
+      week,
+      payload: await fetchWeeklySummary(week, { bust }),
+    }))
   );
   const payloads = results.filter(
     (r): r is { week: string; payload: Payload } => r.payload != null
   );
 
-  const monthMap = new Map<string, { prs_merged: number; pr_reviews: number; pr_comments: number; commits_pushed: number; linear_completed: number; linear_worked_on: number; linear_issues_created: number; prs_total: number; count: number }>();
+  const monthMap = new Map<
+    string,
+    {
+      prs_merged: number;
+      pr_reviews: number;
+      pr_comments: number;
+      commits_pushed: number;
+      linear_completed: number;
+      linear_worked_on: number;
+      linear_issues_created: number;
+      prs_total: number;
+      count: number;
+    }
+  >();
   const repoMap = new Map<string, number>();
   const projectMap = new Map<string, number>();
 
@@ -126,12 +166,21 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
       commits_pushed: acc.commits_pushed + m.commits_pushed,
       linear_completed: acc.linear_completed + m.linear_completed,
       linear_worked_on: acc.linear_worked_on + m.linear_worked_on,
-      linear_issues_created: acc.linear_issues_created + m.linear_issues_created,
+      linear_issues_created:
+        acc.linear_issues_created + m.linear_issues_created,
     }),
-    { prs_merged: 0, pr_reviews: 0, pr_comments: 0, commits_pushed: 0, linear_completed: 0, linear_worked_on: 0, linear_issues_created: 0 }
+    {
+      prs_merged: 0,
+      pr_reviews: 0,
+      pr_comments: 0,
+      commits_pushed: 0,
+      linear_completed: 0,
+      linear_worked_on: 0,
+      linear_issues_created: 0,
+    }
   );
 
-  return {
+  const result = {
     year,
     months,
     total_prs_merged: totals.prs_merged,
@@ -145,10 +194,23 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
     topProjects,
     weeks: yearWeeks.sort(),
   };
+  dataCache.set(key, result);
+  return result;
 }
 
-export async function getAvailableYears(): Promise<string[]> {
-  const weeks = await listWeeklySummaries();
+export async function getAvailableYears(options?: {
+  bust?: boolean;
+}): Promise<string[]> {
+  const bust = options?.bust ?? false;
+  const key = "charts:years";
+  if (!bust) {
+    const cached = dataCache.get(key) as string[] | null;
+    if (cached) return cached;
+  }
+
+  const weeks = await listWeeklySummaries({ bust });
   const years = new Set(weeks.map((w) => w.slice(0, 4)));
-  return [...years].sort((a, b) => b.localeCompare(a));
+  const result = [...years].sort((a, b) => b.localeCompare(a));
+  dataCache.set(key, result);
+  return result;
 }
