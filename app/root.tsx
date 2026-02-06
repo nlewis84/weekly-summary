@@ -61,6 +61,7 @@ export default function App() {
               </a>
             </h1>
             <nav className="flex items-center gap-4 text-sm">
+              <a href="/#build-summary" className="text-primary-600 font-medium hover:text-primary-500 transition-colors">Build Summary</a>
               <a href="/history" className="text-gray-600 hover:text-primary-500 transition-colors">History</a>
               <a href="/charts" className="text-gray-600 hover:text-primary-500 transition-colors">Charts</a>
             </nav>

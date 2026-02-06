@@ -75,9 +75,11 @@ export default function Index() {
         onRefresh={handleRefresh}
       />
 
-      <WeeklySection stats={weeklyPayload?.stats ?? null} error={weeklyError ?? null} />
+      <div id="build-summary">
+        <FullSummaryFormContainer />
+      </div>
 
-      <FullSummaryFormContainer />
+      <WeeklySection stats={weeklyPayload?.stats ?? null} error={weeklyError ?? null} />
     </div>
   );
 }

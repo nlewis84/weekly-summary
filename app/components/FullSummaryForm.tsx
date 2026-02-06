@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { FileText } from "phosphor-react";
 import { LottieIcon } from "./LottieIcon";
 import { MetricsCard } from "./MetricsCard";
@@ -20,8 +21,16 @@ export function FullSummaryForm({
   saved,
   payload,
 }: FullSummaryFormProps) {
+  const detailsRef = useRef<HTMLDetailsElement>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash === "#build-summary" && detailsRef.current) {
+      detailsRef.current.open = true;
+    }
+  }, []);
+
   return (
-    <details className="bg-gray-50 rounded-xl shadow-[var(--shadow-skeuo-card)] border border-gray-200">
+    <details ref={detailsRef} className="bg-gray-50 rounded-xl shadow-[var(--shadow-skeuo-card)] border border-gray-200">
       <summary className="flex items-center gap-2 px-4 py-3 cursor-pointer font-medium text-gray-900 list-none [&::-webkit-details-marker]:hidden">
         <FileText size={20} weight="regular" className="text-primary-500 shrink-0" />
         Build Weekly Summary
