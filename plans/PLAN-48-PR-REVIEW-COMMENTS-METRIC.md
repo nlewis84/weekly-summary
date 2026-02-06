@@ -2,6 +2,8 @@
 
 **Status: 🔲 Pending** · **Priority: P2** · **Effort: Low** · **Impact: Medium**
 
+**Validated Feb 2026:** `pr_review_comments` not in `Stats`. `pr_comments` (Plan 42) exists for issue-level comments. Still relevant.
+
 ## Problem
 
 `pr_comments` (Plan 42) counts issue-level comments on PRs. **Review comments** are different: inline code review feedback (e.g. "Consider using X here"). They signal depth of code review, not just discussion.

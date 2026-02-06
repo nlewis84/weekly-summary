@@ -2,6 +2,8 @@
 
 **Status: 🔲 Pending** · **Priority: P2** · **Effort: Low** · **Impact: Medium**
 
+**Validated Feb 2026:** `linear_issues_created` not in `Stats`. Still relevant.
+
 ## Problem
 
 We track issues completed and worked on (as assignee). **Issues created** is different: it signals ownership, initiative, and backlog contribution—who's creating work for the team.

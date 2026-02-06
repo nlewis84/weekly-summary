@@ -1,14 +1,16 @@
 # Plan 52: Commits Pushed Stat Not Populating
 
-**Status: 🔲 Pending** · **Priority: P2** · **Effort: Medium** · **Impact: High**
+**Status: ✅ Complete** · **Priority: P2** · **Effort: Medium** · **Impact: High**
 
-## Problem
+## Problem (Resolved)
 
-The `commits_pushed` stat is not populating correctly in `.md` or `.json` weekly summary files. Observed:
+The `commits_pushed` stat was not populating correctly in `.md` or `.json` weekly summary files. Observed:
 
-- **2026-02-07.json**: `commits_pushed: 0` despite 8 merged PRs and active development
+- **2026-02-06.json** (week ending 2026-02-07): `commits_pushed: 0` despite 8 merged PRs and active development
 - **2026-01-16.json**: No `commits_pushed` in stats at all (transcript-sourced)
 - Charts, MetricsCard, and markdown all expect this field
+
+**Fix implemented:** Repo Commits API in `lib/summary.ts`, `commits_pushed` in `DEFAULT_STATS` and `extractStats()` in `lib/transcript-parse.ts`. Current summaries (e.g. 2026-02-06.json) now show non-zero values.
 
 ## Root Cause Analysis
 
@@ -138,11 +140,11 @@ done
 
 ## Tasks
 
-- [ ] Run curl commands above to confirm Repo Commits API returns non-zero counts for recent weeks
-- [ ] Implement `fetchCommitsPushed` using Repo Commits API in `lib/summary.ts`
-- [ ] Add `commits_pushed` to `DEFAULT_STATS` and `extractStats()` in `lib/transcript-parse.ts`
+- [x] Run curl commands above to confirm Repo Commits API returns non-zero counts for recent weeks
+- [x] Implement `fetchCommitsPushed` using Repo Commits API in `lib/summary.ts`
+- [x] Add `commits_pushed` to `DEFAULT_STATS` and `extractStats()` in `lib/transcript-parse.ts`
 - [ ] Add optional Events API fallback with pagination (if desired)
-- [ ] Add/update tests in `lib/summary.test.ts`
+- [x] Add/update tests in `lib/summary.test.ts`
 - [ ] Consider backfill script for existing JSON files (optional)
 
 ## Success Criteria

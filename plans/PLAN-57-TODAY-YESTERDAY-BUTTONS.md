@@ -1,6 +1,8 @@
 # Plan 57: Today/Yesterday Button Styling
 
-**Status: Draft** · **Priority: P2** · **Effort: Low** · **Impact: Medium**
+**Status: 🔲 Draft** · **Priority: P2** · **Effort: Low** · **Impact: Medium**
+
+**Validated Feb 2026:** `_index.tsx` still uses `bg-[var(--color-primary)]` for active and `bg-[var(--color-surface-elevated)]` for inactive. Still relevant.
 
 ## Problem
 

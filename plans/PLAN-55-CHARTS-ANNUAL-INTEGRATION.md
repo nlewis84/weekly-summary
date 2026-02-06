@@ -2,6 +2,8 @@
 
 **Status: 🔲 Pending** · **Priority: P2** · **Effort: Medium** · **Impact: High**
 
+**Validated Feb 2026:** Charts and Annual remain separate routes (`/charts` vs `/history/annual`). No Weekly/Annual tab on Charts. Still relevant.
+
 ---
 
 ## Problem

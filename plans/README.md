@@ -54,17 +54,14 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [36](PLAN-36-YESTERDAY-SUMMARY.md) | Yesterday Summary | P1 | ✅ Complete |
 | [37](PLAN-37-WEEKLY-GOALS.md) | Weekly Goals / Targets | P1 | ✅ Complete |
 | [39](PLAN-39-HISTORY-FILTERS.md) | History Filters (by Repo / Project) | P2 | 🔲 Pending |
-| [41](PLAN-41-SCHEDULED-SUMMARY.md) | Scheduled Summary Generation | P4 | 🔲 Pending |
 | [42](PLAN-42-PR-COMMENTS-METRIC.md) | PR Comments Metric | P2 | ✅ Complete |
 | [43](PLAN-43-DARK-MODE-PREFER.md) | Respect System Dark Mode on First Visit | P2 | ✅ Complete |
 | [44](PLAN-44-COMPARE-ANNUAL.md) | Compare Years (Annual) | P2 | ✅ Complete |
 | [45](PLAN-45-COMMITS-METRIC.md) | Commits Pushed (GitHub) | P2 | ✅ Complete |
-| [46](PLAN-46-LINEAR-COMMENTS-METRIC.md) | Linear Issue Comments | P2 | 🔲 Pending |
-| [47](PLAN-47-GITHUB-ISSUES-METRIC.md) | GitHub Issues Opened/Closed | P2 | 🔲 Pending |
 | [48](PLAN-48-PR-REVIEW-COMMENTS-METRIC.md) | PR Review Comments (Code Review) | P2 | 🔲 Pending |
 | [49](PLAN-49-LINEAR-ISSUES-CREATED-METRIC.md) | Linear Issues Created | P2 | 🔲 Pending |
 | [50](PLAN-50-CHART-LIBRARY-REPLACEMENT.md) | Chart Library Replacement (Beautiful Charts) | P2 | ✅ Complete |
-| [52](PLAN-52-COMMITS-PUSHED-FIX.md) | Commits Pushed Stat Not Populating | P2 | 🔲 Pending |
+| [52](PLAN-52-COMMITS-PUSHED-FIX.md) | Commits Pushed Stat Not Populating | P2 | ✅ Complete |
 | [53](PLAN-53-REPOS-CHART-OPTIONS.md) | Repos Chart – Presentation Options | P2 | ✅ Complete |
 | [54](PLAN-54-PROGRESS-CHARTS-REDESIGN.md) | Progress Charts – Holistic Redesign | P2 | ✅ Complete |
 | [55](PLAN-55-CHARTS-ANNUAL-INTEGRATION.md) | Integrate Annual Dashboard into Charts | P2 | 🔲 Pending |
@@ -83,4 +80,4 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 
 **P4 – Growth:** 28 Slack → 29 Annual dashboard
 
-**New (34–50):** 34 Configurable refresh → 36 Yesterday → 37 Weekly goals → 42 PR comments → 50 Chart library replacement → 45–49 metrics → 39 History filters → 43 Dark mode → 44 Compare annual → 35 Health check → 41 Scheduled summary
+**New (34–50):** 34 Configurable refresh → 36 Yesterday → 37 Weekly goals → 42 PR comments → 50 Chart library replacement → 45–49 metrics → 39 History filters → 43 Dark mode → 44 Compare annual → 35 Health check

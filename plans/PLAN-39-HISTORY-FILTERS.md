@@ -2,6 +2,8 @@
 
 **Status: 🔲 Pending** · **Priority: P2** · **Effort: Medium** · **Impact: Medium**
 
+**Validated Feb 2026:** History has search filter (Plan 19) but no repo/project filters. Still relevant.
+
 ## Problem
 
 History shows all weeks. Users working across multiple repos or Linear projects may want to filter: "Show only weeks where I worked on apollos-admin" or "weeks with Linear project X."

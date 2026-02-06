@@ -1,5 +1,9 @@
 # Plan 56: Remove Slack Functionality
 
+**Status: 🔲 Pending**
+
+**Validated Feb 2026:** Slack still present: `lib/slack.ts`, `app/routes/api.slack.ts`, Post to Slack buttons in FullSummaryForm and history.$week. Still relevant.
+
 Remove all Slack integration from the weekly-summary app. The Slack feature (Plan 28) is complete but will be deprecated and removed.
 
 ## Scope
@@ -31,7 +35,6 @@ Remove all Slack integration from the weekly-summary app. The Slack feature (Pla
 | `plans/README.md` | Remove Slack from P4 examples, plan index (28), and "Recommended Next" section |
 | `plans/PLAN-28-SLACK-INTEGRATION.md` | Mark as deprecated/removed or delete |
 | `plans/PLAN-05-PRODUCTIVITY-FEATURES.md` | Update "Slack/Teams post" reference if still relevant |
-| `plans/PLAN-41-SCHEDULED-SUMMARY.md` | Remove "optional Slack notification on completion" from checklist |
 
 ### 5. Content Files (Optional)
 
@@ -45,7 +48,7 @@ Remove all Slack integration from the weekly-summary app. The Slack feature (Pla
 2. **Delete API route** – Remove `app/routes/api.slack.ts`.
 3. **Delete lib** – Remove `lib/slack.ts`.
 4. **Update env** – Remove Slack vars from `.env.example`.
-5. **Update plans** – Update `plans/README.md`, deprecate/remove `PLAN-28-SLACK-INTEGRATION.md`, and fix references in `PLAN-05`, `PLAN-41`.
+5. **Update plans** – Update `plans/README.md`, deprecate/remove `PLAN-28-SLACK-INTEGRATION.md`, and fix references in `PLAN-05`.
 
 ## Verification
 
