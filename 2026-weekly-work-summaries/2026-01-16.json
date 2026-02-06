@@ -7,15 +7,13 @@
     "source_of_truth": "Week-in-review video transcript"
   },
   "stats": {
-    "prs_merged": 0,
-    "prs_total": 0,
-    "pr_reviews": 0,
+    "prs_merged": 22,
+    "prs_total": 81,
+    "pr_reviews": 34,
     "pr_comments": 0,
-    "linear_completed": 0,
-    "linear_worked_on": 0,
-    "repos": [
-      "apollos-admin"
-    ]
+    "linear_completed": 20,
+    "linear_worked_on": 25,
+    "repos": ["apollos-admin", "apollos-cluster", "apollos-platforms"]
   },
   "linear": {
     "completed_issues": [],

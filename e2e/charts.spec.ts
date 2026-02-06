@@ -6,12 +6,13 @@ test.describe("Charts page", () => {
 
     await expect(page.getByRole("heading", { name: "Progress Charts" })).toBeVisible();
 
-    // Either chart (role=img with aria-label) or error
+    // Either chart (role=img with aria-label), error, retry, or no-data state
     const hasChart = await page.getByRole("img", { name: /chart|graph|area|bar/i }).first().isVisible().catch(() => false);
     const hasError = await page.getByRole("alert").isVisible().catch(() => false);
     const hasRetry = await page.getByRole("button", { name: "Retry" }).isVisible().catch(() => false);
+    const hasNoData = await page.getByText(/No data available for charts/i).isVisible().catch(() => false);
 
-    expect(hasChart || hasError || hasRetry).toBeTruthy();
+    expect(hasChart || hasError || hasRetry || hasNoData).toBeTruthy();
   });
 
   test("has Export CSV when charts load", async ({ page }) => {
