@@ -77,6 +77,8 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [66](PLAN-66-CURSOR-AFFORDANCES.md) | Cursor Affordances Across the App | P2 | ✅ Complete |
 | [67](PLAN-67-SETTINGS-LARGE-SCREEN-LAYOUT.md) | Settings Page Large-Screen Layout | P2 | Draft |
 | [68](PLAN-68-HISTORY-WEEK-CARD-FULLY-CLICKABLE.md) | History Week Cards Fully Clickable | P2 | Draft |
+| [69](PLAN-69-DEV-PORT-3001.md) | Run Dev Server on Port 3001 Locally | P3 | ✅ Complete |
+| [70](PLAN-70-FAVICON-ROUTE-ERROR.md) | Fix favicon.ico Route Error | P3 | ✅ Complete |
 
 ## Recommended Next (by priority)
 

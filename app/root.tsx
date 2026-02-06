@@ -16,7 +16,10 @@ import { ToastProvider } from "./components/Toast";
 import { ShortcutsHelp } from "./components/ShortcutsHelp";
 import "./tailwind.css";
 
-export const links: LinksFunction = () => [];
+export const links: LinksFunction = () => [
+  { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+  { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+];
 
 export function ErrorBoundary() {
   const error = useRouteError();

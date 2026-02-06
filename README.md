@@ -40,7 +40,7 @@ pnpm cli
 ### Web
 
 ```bash
-pnpm dev    # http://localhost:3000
+pnpm dev    # http://localhost:3001
 pnpm build && pnpm start
 ```
 
