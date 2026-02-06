@@ -342,7 +342,7 @@ function buildTerminalOutput(
   return out;
 }
 
-function buildMarkdownSummary(payload: Payload): string {
+export function buildMarkdownSummary(payload: Payload): string {
   const { meta, stats, linear, github, check_ins, terminal_output } = payload;
   let md = `# Weekly Work Summary — ${meta.week_ending}\n\n`;
   md += `*Generated ${meta.generated_at} | Window: ${meta.window_start.slice(0, 10)} – ${meta.window_end.slice(0, 10)}*\n\n`;
@@ -415,8 +415,10 @@ export async function runSummary(options: {
 
   const checkIns = parseCheckIns(checkInsText);
   const prCategories = categorizePRs(githubData.prs, windowStart);
-  const prsByRepo = groupPRsByRepo(githubData.prs);
-  const repos = Object.keys(prsByRepo);
+  // Include both PRs (created/updated) and reviews for "repos worked on"
+  const prsAndReviews = [...githubData.prs, ...githubData.reviews];
+  const prsByRepo = groupPRsByRepo(prsAndReviews);
+  const repos = [...new Set(Object.keys(prsByRepo))].sort();
 
   const stats: Stats = {
     prs_merged: prCategories.merged.length,

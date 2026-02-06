@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "generated_at": "2026-01-30T22:36:42.918Z",
+    "window_start": "2026-01-24T06:00:00.000Z",
+    "window_end": "2026-01-31T05:59:59.999Z",
+    "week_ending": "2026-01-31",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact exactly as they occurred."
+  },
+  "stats": {
+    "prs_merged": 3,
+    "prs_total": 9,
+    "pr_reviews": 18,
+    "pr_comments": 44,
+    "linear_completed": 3,
+    "linear_worked_on": 7,
+    "repos": [
+      "apollos-cluster",
+      "apollos-admin"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-6669",
+        "title": "Make createPaymentIntent non-blocking on web",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6669/make-createpaymentintent-non-blocking-on-web",
+        "completedAt": "2026-01-29T21:26:31.371Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6629",
+        "title": "Adhere to church config setting on recurring default",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6629/adhere-to-church-config-setting-on-recurring-default",
+        "completedAt": "2026-01-29T15:34:36.167Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6495",
+        "title": "Investigate time to paint when coming from mobile give -> other payment methods -> web giving",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6495/investigate-time-to-paint-when-coming-from-mobile-give-other-payment",
+        "completedAt": "2026-01-27T21:44:09.186Z",
+        "state": "Done"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-6724",
+        "title": "Active church profile with inactive global profile does not activate global",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6724/active-church-profile-with-inactive-global-profile-does-not-activate",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6723",
+        "title": "Global login skips match screen when inactive church account exists",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6723/global-login-skips-match-screen-when-inactive-church-account-exists",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6670",
+        "title": "Dedupe getCurrentUserSharedProfile / user queries",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6670/dedupe-getcurrentusersharedprofile-user-queries",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6669",
+        "title": "Make createPaymentIntent non-blocking on web",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6669/make-createpaymentintent-non-blocking-on-web",
+        "completedAt": "2026-01-29T21:26:31.371Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6629",
+        "title": "Adhere to church config setting on recurring default",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6629/adhere-to-church-config-setting-on-recurring-default",
+        "completedAt": "2026-01-29T15:34:36.167Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6502",
+        "title": "Make Auth Errors less disruptive",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6502/make-auth-errors-less-disruptive",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6495",
+        "title": "Investigate time to paint when coming from mobile give -> other payment methods -> web giving",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6495/investigate-time-to-paint-when-coming-from-mobile-give-other-payment",
+        "completedAt": "2026-01-27T21:44:09.186Z",
+        "state": "Done"
+      }
+    ],
+    "in_review": [
+      {
+        "identifier": "APO-6724",
+        "title": "Active church profile with inactive global profile does not activate global",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6724/active-church-profile-with-inactive-global-profile-does-not-activate",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6723",
+        "title": "Global login skips match screen when inactive church account exists",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6723/global-login-skips-match-screen-when-inactive-church-account-exists",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6670",
+        "title": "Dedupe getCurrentUserSharedProfile / user queries",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6670/dedupe-getcurrentusersharedprofile-user-queries",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6502",
+        "title": "Make Auth Errors less disruptive",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6502/make-auth-errors-less-disruptive",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "in_progress": [
+      {
+        "identifier": "APO-6724",
+        "title": "Active church profile with inactive global profile does not activate global",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6724/active-church-profile-with-inactive-global-profile-does-not-activate",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6723",
+        "title": "Global login skips match screen when inactive church account exists",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6723/global-login-skips-match-screen-when-inactive-church-account-exists",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6670",
+        "title": "Dedupe getCurrentUserSharedProfile / user queries",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6670/dedupe-getcurrentusersharedprofile-user-queries",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6502",
+        "title": "Make Auth Errors less disruptive",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6502/make-auth-errors-less-disruptive",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat: load payment intent asynchronously for faster initial render",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2748",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-29T21:19:47Z",
+        "state": "closed"
+      },
+      {
+        "title": "chore: if APP.GIVING_DEFAULT_FREQUENCY is set, use it for toggle and frequency",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2745",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-28T23:32:47Z",
+        "state": "closed"
+      },
+      {
+        "title": "chore: add performance monitoring and optimize parallel data fetching",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2720",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-27T19:50:01Z",
+        "state": "closed"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "feat: support church token in global context for linked profiles",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2420",
+        "repo": "apollos-cluster",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "feat: activate inactive global profile when church user logs in",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2418",
+        "repo": "apollos-cluster",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "chore: optimize payment route by utilizing user data from root loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759",
+        "repo": "apollos-admin",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "fix: add type assertions to form validators and refs",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2742",
+        "repo": "apollos-admin",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "refactor: new auth flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2718",
+        "repo": "apollos-admin",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "feat: add option to use existing action groups for tap tags",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2350",
+        "repo": "apollos-admin",
+        "merged_at": null,
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "refactor: new auth flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2718"
+      },
+      {
+        "title": "chore: optimize payment route by utilizing user data from root loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759"
+      },
+      {
+        "title": "Migration Assistant Admin UI",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2667"
+      },
+      {
+        "title": "Web Embeds V2 PRD",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2731"
+      },
+      {
+        "title": "[APO-6536] Add Payout ID to filters in `transaction` screen.",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2761"
+      },
+      {
+        "title": "feat: load payment intent asynchronously for faster initial render",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2748"
+      },
+      {
+        "title": "feat: add feature flagged user menu for giving history and payments",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2760"
+      },
+      {
+        "title": "Remove lists feature flag gating",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2753"
+      },
+      {
+        "title": "Remove unused ENABLE_NEW_EDITOR env example",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2752"
+      },
+      {
+        "title": "Fix suggested follows person ID saving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2751"
+      },
+      {
+        "title": "feat: add Make Default button on saved payment method card",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2749"
+      },
+      {
+        "title": "Stabilize comment ordering in CommentsBottomSheet",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5900"
+      },
+      {
+        "title": "Persist default church on switch",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2744"
+      },
+      {
+        "title": "chore: add performance monitoring and optimize parallel data fetching",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2720"
+      },
+      {
+        "title": "Clear people origins on Rock delete",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2716"
+      },
+      {
+        "title": "Disable YouVersion translations until cluster ready",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2725"
+      },
+      {
+        "title": "Fix slash command cleanup after selection",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2719"
+      },
+      {
+        "title": "test: stabilize openai summary test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2726"
+      }
+    ],
+    "comments_count": 44
+  },
+  "check_ins": [
+    {
+      "day": "Yesterday",
+      "content": "Jan 29\nDev Standup\nPR reviews w/ Michael NeeleyMichael Darryl YipDarryl Austin WitherowAustin Vitor LelisVitor Marcelo ReynaMarcelo \nCreatePaymentIntent not blocking content paint is live in prod\nWeb Auth revamp in review\nDuplicate graphql calls in web refactor in review"
+    },
+    {
+      "day": "Wednesday",
+      "content": "Jan 28\nMake sure we use config for Recurring defaulting on in Web Giving\nTime to paint from Mobile to Web handoff plan w/ Vincent WilsonVincent \nDev Standup\nLinear clean up with things from Dev Standup\nMade CreatePaymentIntent non-blocking on Web\nZoom before.png\nAttachment options… before.png\nZoom after.png\nAttachment options… after.n-action.gif\nin-action.gif 386 KB View full-size Download"
+    },
+    {
+      "day": "Tuesday",
+      "content": "Jan 27\nVercel cold function fixes merged to prod (checking things out periodically all day)\nDev Standup\nFuture of Web Embeds huddle\nRevamped Auth Flow in Web PR ready for review\nPR reviews w/ Marcelo ReynaMarcelo"
+    },
+    {
+      "day": "Monday",
+      "content": "Jan 26\nDev Standup\nVercel Cold Function improvements\nBetter setup of Sentry with Vercel\nParallelized queries in Web for better performance\nMore info re: what we had previously identified as Time to paint issues\nTime to paint issues is actually a misidentification. We have seen, and cataloged, very impressive responsiveness in time to paint across Web. The things that are really slowing down Web are Vercel Cold Functions. Vincent WilsonVincent rightly pointed out to me that this problem gbetter with scale (not worse). We've also pushed up some changes to our Vercel instance (Fluid Compute and bundle reduction) to improve performance even more. As we test Web Giving, for the time being I believe that we may see occasional blips of \"long load times\", but we should see that improve on subsequent requests across the app. These changes will probably go live in full to production tomorrow."
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n🎯 Most Important Accomplishments:\n\n  Web Giving - ACH, Credit Card, and Apple Pay: Completed 3 issues\n    • Make createPaymentIntent non-blocking on web (APO-6669)\n    • Adhere to church config setting on recurring default (APO-6629)\n    • Investigate time to paint when coming from mobile give -> other payment methods -> web giving (APO-6495)\n\n  apollos-admin: Merged 3 PRs\n    • feat: load payment intent asynchronously for faster initi...\n    • chore: if APP.GIVING_DEFAULT_FREQUENCY is set, use it for...\n    ... and 1 more\n\n📋 Other Work:\n\n  • 4 issues in review\n  • 4 issues in progress\n  • 6 open PRs\n  • Reviewed 18 PRs\n  • 44 comments on PRs\n\n📝 Daily Highlights:\n\n  Yesterday: Jan 29...\n  Wednesday: Jan 28...\n  Tuesday: Jan 27...\n  Monday: Jan 26...\n\n📊 Stats:\n\n  • 3 PRs merged\n  • 9 total PRs created/updated\n  • 18 PR reviews\n  • 3 Linear issues completed (Done only)\n  • 7 total Linear issues worked on (in progress, in review, or done)\n  • Worked across 2 repos: apollos-cluster, apollos-admin\n\n\n\n✨ Formatted Summary (AI-enhanced):\n\n🎯 Most Important Accomplishments:\n\nWeb Giving - ACH, Credit Card, and Apple Pay: Completed 3 issues  \n  • Make createPaymentIntent non-blocking on web (APO-6669)  \n  • Adhere to church config setting on recurring default (APO-6629)  \n  • Investigate time to paint when coming from mobile give -> other payment methods -> web giving (APO-6495)  \n\napollos-admin: Merged 3 PRs  \n  • feat: load payment intent asynchronously for faster initial render  \n  • chore: if APP.GIVING_DEFAULT_FREQUENCY is set, use it for toggle and frequency  \n  • chore: add performance monitoring and optimize parallel data fetching  \n\n📋 Other Work:\n\nIssues in review (4):  \n  • Active church profile with inactive global profile does not activate global (APO-6724)  \n  • Global login skips match screen when inactive church account exists (APO-6723)  \n  • Dedupe getCurrentUserSharedProfile / user queries (APO-6670)  \n  • Make Auth Errors less disruptive (APO-6502)  \n\nIssues in progress (4):  \n  • Active church profile with inactive global profile does not activate global (APO-6724)  \n  • Global login skips match screen when inactive church account exists (APO-6723)  \n  • Dedupe getCurrentUserSharedProfile / user queries (APO-6670)  \n  • Make Auth Errors less disruptive (APO-6502)  \n\nOpen PRs (6):  \n  • feat: support church token in global context for linked profiles  \n  • feat: activate inactive global profile when church user logs in  \n  • chore: optimize payment route by utilizing user data from root loader  \n  • fix: add type assertions to form validators and refs  \n  • refactor: new auth flow  \n  • feat: add option to use existing action groups for tap tags  \n\nReviewed PRs (18):  \n  • refactor: new auth flow  \n  • chore: optimize payment route by utilizing user data from root loader  \n  • Migration Assistant Admin UI  \n  • Web Embeds V2 PRD  \n  • [APO-6536] Add Payout ID to filters in `transaction` screen.  \n  • feat: load payment intent asynchronously for faster initial render  \n  • feat: add feature flagged user menu for giving history and payments  \n  • Remove lists feature flag gating  \n  • Remove unused ENABLE_NEW_EDITOR env example  \n  • Fix suggested follows person ID saving  \n  • feat: add Make Default button on saved payment method card  \n  • Stabilize comment ordering in CommentsBottomSheet  \n  • Persist default church on switch  \n  • chore: add performance monitoring and optimize parallel data fetching  \n  • Clear people origins on Rock delete  \n  • Disable YouVersion translations until cluster ready  \n  • Fix slash command cleanup after selection  \n  • test: stabilize openai summary test  \n\n  • 44 comments on PRs  \n\n📝 Daily Highlights:\n\nYesterday:  \nJan 29  \n  Dev Standup  \n  PR reviews w/ Michael Neeley, Michael Darryl Yip, Darryl Austin Witherow, Austin Vitor Lelis, Vitor Marcelo Reyna, Marcelo  \n  CreatePaymentIntent not blocking content paint is live in prod  \n  Web Auth revamp in review  \n  Duplicate graphql calls in web refactor in review  \n\nWednesday:  \nJan 28  \n  Make sure we use config for Recurring defaulting on in Web Giving  \n  Time to paint from Mobile to Web handoff plan w/ Vincent Wilson  \n  Dev Standup  \n  Linear clean up with things from Dev Standup  \n  Made CreatePaymentIntent non-blocking on Web  \n\nTuesday:  \nJan 27  \n  Vercel cold function fixes merged to prod (checking things out periodically all day)  \n  Dev Standup  \n  Future of Web Embeds huddle  \n  Revamped Auth Flow in Web PR ready for review  \n  PR reviews w/ Marcelo Reyna  \n\nMonday:  \nJan 26  \n  Dev Standup  \n  Vercel Cold Function improvements  \n  Better setup of Sentry with Vercel  \n  Parallelized queries in Web for better performance  \n  More info re: what we had previously identified as Time to paint issues  \n  Time to paint issues is actually a misidentification. We have seen, and cataloged, very impressive responsiveness in time to paint across Web. The things that are really slowing down Web are Vercel Cold Functions. Vincent rightly pointed out to me that this problem gets better with scale (not worse). We've also pushed up some changes to our Vercel instance (Fluid Compute and bundle reduction) to improve performance even more. As we test Web Giving, for the time being I believe that we may see occasional blips of \"long load times\", but we should see that improve on subsequent requests across the app. These changes will probably go live in full to production tomorrow.  \n\n📊 Stats:\n\n  • 3 PRs merged  \n  • 9 total PRs created/updated  \n  • 18 PR reviews  \n  • 3 Linear issues completed (Done only)  \n  • 7 total Linear issues worked on (in progress, in review, or done)  \n  • Worked across 2 repos: apollos-cluster, apollos-admin",
+  "formatted_output": "🎯 Most Important Accomplishments:\n\nWeb Giving - ACH, Credit Card, and Apple Pay: Completed 3 issues  \n  • Make createPaymentIntent non-blocking on web (APO-6669)  \n  • Adhere to church config setting on recurring default (APO-6629)  \n  • Investigate time to paint when coming from mobile give -> other payment methods -> web giving (APO-6495)  \n\napollos-admin: Merged 3 PRs  \n  • feat: load payment intent asynchronously for faster initial render  \n  • chore: if APP.GIVING_DEFAULT_FREQUENCY is set, use it for toggle and frequency  \n  • chore: add performance monitoring and optimize parallel data fetching  \n\n📋 Other Work:\n\nIssues in review (4):  \n  • Active church profile with inactive global profile does not activate global (APO-6724)  \n  • Global login skips match screen when inactive church account exists (APO-6723)  \n  • Dedupe getCurrentUserSharedProfile / user queries (APO-6670)  \n  • Make Auth Errors less disruptive (APO-6502)  \n\nIssues in progress (4):  \n  • Active church profile with inactive global profile does not activate global (APO-6724)  \n  • Global login skips match screen when inactive church account exists (APO-6723)  \n  • Dedupe getCurrentUserSharedProfile / user queries (APO-6670)  \n  • Make Auth Errors less disruptive (APO-6502)  \n\nOpen PRs (6):  \n  • feat: support church token in global context for linked profiles  \n  • feat: activate inactive global profile when church user logs in  \n  • chore: optimize payment route by utilizing user data from root loader  \n  • fix: add type assertions to form validators and refs  \n  • refactor: new auth flow  \n  • feat: add option to use existing action groups for tap tags  \n\nReviewed PRs (18):  \n  • refactor: new auth flow  \n  • chore: optimize payment route by utilizing user data from root loader  \n  • Migration Assistant Admin UI  \n  • Web Embeds V2 PRD  \n  • [APO-6536] Add Payout ID to filters in `transaction` screen.  \n  • feat: load payment intent asynchronously for faster initial render  \n  • feat: add feature flagged user menu for giving history and payments  \n  • Remove lists feature flag gating  \n  • Remove unused ENABLE_NEW_EDITOR env example  \n  • Fix suggested follows person ID saving  \n  • feat: add Make Default button on saved payment method card  \n  • Stabilize comment ordering in CommentsBottomSheet  \n  • Persist default church on switch  \n  • chore: add performance monitoring and optimize parallel data fetching  \n  • Clear people origins on Rock delete  \n  • Disable YouVersion translations until cluster ready  \n  • Fix slash command cleanup after selection  \n  • test: stabilize openai summary test  \n\n  • 44 comments on PRs  \n\n📝 Daily Highlights:\n\nYesterday:  \nJan 29  \n  Dev Standup  \n  PR reviews w/ Michael Neeley, Michael Darryl Yip, Darryl Austin Witherow, Austin Vitor Lelis, Vitor Marcelo Reyna, Marcelo  \n  CreatePaymentIntent not blocking content paint is live in prod  \n  Web Auth revamp in review  \n  Duplicate graphql calls in web refactor in review  \n\nWednesday:  \nJan 28  \n  Make sure we use config for Recurring defaulting on in Web Giving  \n  Time to paint from Mobile to Web handoff plan w/ Vincent Wilson  \n  Dev Standup  \n  Linear clean up with things from Dev Standup  \n  Made CreatePaymentIntent non-blocking on Web  \n\nTuesday:  \nJan 27  \n  Vercel cold function fixes merged to prod (checking things out periodically all day)  \n  Dev Standup  \n  Future of Web Embeds huddle  \n  Revamped Auth Flow in Web PR ready for review  \n  PR reviews w/ Marcelo Reyna  \n\nMonday:  \nJan 26  \n  Dev Standup  \n  Vercel Cold Function improvements  \n  Better setup of Sentry with Vercel  \n  Parallelized queries in Web for better performance  \n  More info re: what we had previously identified as Time to paint issues  \n  Time to paint issues is actually a misidentification. We have seen, and cataloged, very impressive responsiveness in time to paint across Web. The things that are really slowing down Web are Vercel Cold Functions. Vincent rightly pointed out to me that this problem gets better with scale (not worse). We've also pushed up some changes to our Vercel instance (Fluid Compute and bundle reduction) to improve performance even more. As we test Web Giving, for the time being I believe that we may see occasional blips of \"long load times\", but we should see that improve on subsequent requests across the app. These changes will probably go live in full to production tomorrow.  \n\n📊 Stats:\n\n  • 3 PRs merged  \n  • 9 total PRs created/updated  \n  • 18 PR reviews  \n  • 3 Linear issues completed (Done only)  \n  • 7 total Linear issues worked on (in progress, in review, or done)  \n  • Worked across 2 repos: apollos-cluster, apollos-admin"
+}

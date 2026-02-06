@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "generated_at": "2026-02-05T22:21:33.719Z",
+    "window_start": "2026-01-31T06:00:00.000Z",
+    "window_end": "2026-02-06T05:59:59.999Z",
+    "week_ending": "2026-02-06",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact exactly as they occurred."
+  },
+  "stats": {
+    "prs_merged": 7,
+    "prs_total": 14,
+    "pr_reviews": 20,
+    "pr_comments": 33,
+    "linear_completed": 5,
+    "linear_worked_on": 9,
+    "repos": [
+      "apollos-admin",
+      "apollos-platforms",
+      "apollos-cluster"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-6795",
+        "title": "Ensure that redirect linking in the apollos app doesn't double encode urls passed to it",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6795/ensure-that-redirect-linking-in-the-apollos-app-doesnt-double-encode",
+        "completedAt": "2026-02-04T22:23:00.060Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6765",
+        "title": "Merge button: support users with Apollos data on both profiles",
+        "project": "Merge & Deactivate User",
+        "url": "https://linear.app/differential/issue/APO-6765/merge-button-support-users-with-apollos-data-on-both-profiles",
+        "completedAt": "2026-02-05T21:57:38.881Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6754",
+        "title": "mitm mobile to web handoff",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6754/mitm-mobile-to-web-handoff",
+        "completedAt": "2026-02-04T22:23:45.732Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6724",
+        "title": "Active church profile with inactive global profile does not activate global",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6724/active-church-profile-with-inactive-global-profile-does-not-activate",
+        "completedAt": "2026-02-05T17:38:16.202Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6723",
+        "title": "Global login skips match screen when inactive church account exists",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6723/global-login-skips-match-screen-when-inactive-church-account-exists",
+        "completedAt": "2026-02-05T17:38:16.125Z",
+        "state": "Done"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-6924",
+        "title": "Build a Metaquery for Moving Data between users in Admin",
+        "project": "Merge & Deactivate User",
+        "url": "https://linear.app/differential/issue/APO-6924/build-a-metaquery-for-moving-data-between-users-in-admin",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6887",
+        "title": "Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6887/ensure-churches-without-full-giving-platform-pass-along-payment-params",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6795",
+        "title": "Ensure that redirect linking in the apollos app doesn't double encode urls passed to it",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6795/ensure-that-redirect-linking-in-the-apollos-app-doesnt-double-encode",
+        "completedAt": "2026-02-04T22:23:00.060Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6765",
+        "title": "Merge button: support users with Apollos data on both profiles",
+        "project": "Merge & Deactivate User",
+        "url": "https://linear.app/differential/issue/APO-6765/merge-button-support-users-with-apollos-data-on-both-profiles",
+        "completedAt": "2026-02-05T21:57:38.881Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6762",
+        "title": "CF - (4) users with duplicate profiles that need to be merged",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-6762/cf-4-users-with-duplicate-profiles-that-need-to-be-merged",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-6754",
+        "title": "mitm mobile to web handoff",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6754/mitm-mobile-to-web-handoff",
+        "completedAt": "2026-02-04T22:23:45.732Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6724",
+        "title": "Active church profile with inactive global profile does not activate global",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6724/active-church-profile-with-inactive-global-profile-does-not-activate",
+        "completedAt": "2026-02-05T17:38:16.202Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6723",
+        "title": "Global login skips match screen when inactive church account exists",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6723/global-login-skips-match-screen-when-inactive-church-account-exists",
+        "completedAt": "2026-02-05T17:38:16.125Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6690",
+        "title": "When entering bank details manually, you see an error message",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6690/when-entering-bank-details-manually-you-see-an-error-message",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "in_review": [
+      {
+        "identifier": "APO-6924",
+        "title": "Build a Metaquery for Moving Data between users in Admin",
+        "project": "Merge & Deactivate User",
+        "url": "https://linear.app/differential/issue/APO-6924/build-a-metaquery-for-moving-data-between-users-in-admin",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6887",
+        "title": "Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6887/ensure-churches-without-full-giving-platform-pass-along-payment-params",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6690",
+        "title": "When entering bank details manually, you see an error message",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6690/when-entering-bank-details-manually-you-see-an-error-message",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "in_progress": [
+      {
+        "identifier": "APO-6924",
+        "title": "Build a Metaquery for Moving Data between users in Admin",
+        "project": "Merge & Deactivate User",
+        "url": "https://linear.app/differential/issue/APO-6924/build-a-metaquery-for-moving-data-between-users-in-admin",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6887",
+        "title": "Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6887/ensure-churches-without-full-giving-platform-pass-along-payment-params",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6762",
+        "title": "CF - (4) users with duplicate profiles that need to be merged",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-6762/cf-4-users-with-duplicate-profiles-that-need-to-be-merged",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-6690",
+        "title": "When entering bank details manually, you see an error message",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6690/when-entering-bank-details-manually-you-see-an-error-message",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat: handle content_completed conflicts during user profile merges",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2799",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-05T16:00:31Z",
+        "state": "closed"
+      },
+      {
+        "title": "fix: update default Apollos web URL to apollos.com",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5932",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-02-05T20:19:23Z",
+        "state": "closed"
+      },
+      {
+        "title": "fix: no double encoding of redirect URL in GivingScreen",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5927",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-02-03T17:24:14Z",
+        "state": "closed"
+      },
+      {
+        "title": "feat: add ability to move Apollos data between user profiles",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2779",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-04T23:21:06Z",
+        "state": "closed"
+      },
+      {
+        "title": "fix: replace with cloudinary url with s3 in seeds/tests",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2425",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-02-04T19:57:35Z",
+        "state": "closed"
+      },
+      {
+        "title": "refactor: new auth flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2718",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-05T19:49:27Z",
+        "state": "closed"
+      },
+      {
+        "title": "feat: activate inactive global profile when church user logs in",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2418",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-02-05T15:12:47Z",
+        "state": "closed"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "feat: add schema discovery for person data migration conflicts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2801",
+        "repo": "apollos-admin",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "test: add tests for updateAlgorithmAndFeatureState function",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2800",
+        "repo": "apollos-admin",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "feat: preserve prefilled payment data when redirecting to external giving platforms",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2793",
+        "repo": "apollos-admin",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "feat: handle Stripe payment redirect flow and improve error messages",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2776",
+        "repo": "apollos-admin",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "fix: add type assertions to form validators and refs",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2742",
+        "repo": "apollos-admin",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "chore: optimize payment route by utilizing user data from root loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759",
+        "repo": "apollos-admin",
+        "merged_at": null,
+        "state": "open"
+      },
+      {
+        "title": "feat: support church token in global context for linked profiles",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2420",
+        "repo": "apollos-cluster",
+        "merged_at": null,
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "feat: add schema discovery for person data migration conflicts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2801"
+      },
+      {
+        "title": "refactor: new auth flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2718"
+      },
+      {
+        "title": "chore: optimize payment route by utilizing user data from root loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759"
+      },
+      {
+        "title": "Fix search state not preserved on back navigation",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2802"
+      },
+      {
+        "title": "Migration Assistant Admin UI",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2667"
+      },
+      {
+        "title": "Fix static link image updates in feed editor",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2780"
+      },
+      {
+        "title": "feat: handle content_completed conflicts during user profile merges",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2799"
+      },
+      {
+        "title": "feat: add ability to move Apollos data between user profiles",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2779"
+      },
+      {
+        "title": "support jsonb values in query results column",
+        "url": "https://github.com/ApollosProject/git-for-sql/pull/6"
+      },
+      {
+        "title": "fix: replace with cloudinary url with s3 in seeds/tests",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2425"
+      },
+      {
+        "title": "Inline Iframe Embed",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2757"
+      },
+      {
+        "title": "feat(web-embeds-v2): add embed context detection with postMessage handshake",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2737"
+      },
+      {
+        "title": "feat(web): add back and fullscreen to modal",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2756"
+      },
+      {
+        "title": "feat(web-embeds-v2): add theme mode support with light/dark/auto options",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2736"
+      },
+      {
+        "title": "Implement tailwind preset",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2735"
+      },
+      {
+        "title": "Remove Cursor note from AGENTS.md",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2781"
+      },
+      {
+        "title": "Initialize web-embeds-v2 project with project scaffolding",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2732"
+      },
+      {
+        "title": "Web Embeds V2 PRD",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2731"
+      },
+      {
+        "title": "Fix unhandled rejections in ConnectButtonFeature",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2769"
+      },
+      {
+        "title": "Bump Vite 5.x to patched version",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2763"
+      }
+    ],
+    "comments_count": 33
+  },
+  "check_ins": [],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n🎯 Most Important Accomplishments:\n\n  Web Giving - ACH, Credit Card, and Apple Pay: Completed 4 issues\n    • Ensure that redirect linking in the apollos app doesn't double encode urls passed to it (APO-6795)\n    • mitm mobile to web handoff (APO-6754)\n    • Active church profile with inactive global profile does not activate global (APO-6724)\n    ... and 1 more\n\n  Merge & Deactivate User: Completed 1 issue\n    • Merge button: support users with Apollos data on both profiles (APO-6765)\n\n  apollos-admin: Merged 3 PRs\n    • feat: handle content_completed conflicts during user prof...\n    • feat: add ability to move Apollos data between user profiles\n    ... and 1 more\n\n  apollos-platforms: Merged 2 PRs\n    • fix: update default Apollos web URL to apollos.com\n    • fix: no double encoding of redirect URL in GivingScreen\n\n📋 Other Work:\n\n  • 3 issues in review\n  • 4 issues in progress\n  • 7 open PRs\n  • Reviewed 20 PRs\n  • 33 comments on PRs\n\n📊 Stats:\n\n  • 7 PRs merged\n  • 14 total PRs created/updated\n  • 20 PR reviews\n  • 5 Linear issues completed (Done only)\n  • 9 total Linear issues worked on (in progress, in review, or done)\n  • Worked across 3 repos: apollos-admin, apollos-platforms, apollos-cluster\n\n\n\n✨ Formatted Summary (AI-enhanced):\n\n🎯 Most Important Accomplishments:\n\nWeb Giving - ACH, Credit Card, and Apple Pay: Completed 4 issues  \n   • Ensure that redirect linking in the apollos app doesn't double encode urls passed to it (APO-6795)  \n   • mitm mobile to web handoff (APO-6754)  \n   • Active church profile with inactive global profile does not activate global (APO-6724)  \n   • Global login skips match screen when inactive church account exists (APO-6723)  \n\nMerge & Deactivate User: Completed 1 issue  \n   • Merge button: support users with Apollos data on both profiles (APO-6765)  \n\napollos-admin: Merged 3 PRs  \n   • feat: handle content_completed conflicts during user profile merges  \n   • feat: add ability to move Apollos data between user profiles  \n   • refactor: new auth flow  \n\napollos-platforms: Merged 2 PRs  \n   • fix: update default Apollos web URL to apollos.com  \n   • fix: no double encoding of redirect URL in GivingScreen  \n\napollos-cluster: Merged 2 PRs  \n   • fix: replace with cloudinary url with s3 in seeds/tests  \n   • feat: activate inactive global profile when church user logs in  \n\n📋 Other Work:\n\nIssues in review (3):  \n   • Build a Metaquery for Moving Data between users in Admin (APO-6924)  \n   • Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment (APO-6887)  \n   • When entering bank details manually, you see an error message (APO-6690)  \n\nIssues in progress (4):  \n   • Build a Metaquery for Moving Data between users in Admin (APO-6924)  \n   • Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment (APO-6887)  \n   • CF - (4) users with duplicate profiles that need to be merged (APO-6762)  \n   • When entering bank details manually, you see an error message (APO-6690)  \n\nOpen PRs (7):  \n   • feat: add schema discovery for person data migration conflicts  \n   • test: add tests for updateAlgorithmAndFeatureState function  \n   • feat: preserve prefilled payment data when redirecting to external giving platforms  \n   • feat: handle Stripe payment redirect flow and improve error messages  \n   • fix: add type assertions to form validators and refs  \n   • chore: optimize payment route by utilizing user data from root loader  \n   • feat: support church token in global context for linked profiles  \n\nReviewed PRs (20):  \n   • feat: add schema discovery for person data migration conflicts  \n   • refactor: new auth flow  \n   • chore: optimize payment route by utilizing user data from root loader  \n   • Fix search state not preserved on back navigation  \n   • Migration Assistant Admin UI  \n   • Fix static link image updates in feed editor  \n   • feat: handle content_completed conflicts during user profile merges  \n   • feat: add ability to move Apollos data between user profiles  \n   • support jsonb values in query results column  \n   • fix: replace with cloudinary url with s3 in seeds/tests  \n   • Inline Iframe Embed  \n   • feat(web-embeds-v2): add embed context detection with postMessage handshake  \n   • feat(web): add back and fullscreen to modal  \n   • feat(web-embeds-v2): add theme mode support with light/dark/auto options  \n   • Implement tailwind preset  \n   • Remove Cursor note from AGENTS.md  \n   • Initialize web-embeds-v2 project with project scaffolding  \n   • Web Embeds V2 PRD  \n   • Fix unhandled rejections in ConnectButtonFeature  \n   • Bump Vite 5.x to patched version  \n\n   • 33 comments on PRs  \n\n📊 Stats:\n\n   • 7 PRs merged  \n   • 14 total PRs created/updated  \n   • 20 PR reviews  \n   • 5 Linear issues completed (Done only)  \n   • 9 total Linear issues worked on (in progress, in review, or done)  \n   • Worked across 3 repos: apollos-admin, apollos-platforms, apollos-cluster",
+  "formatted_output": "🎯 Most Important Accomplishments:\n\nWeb Giving - ACH, Credit Card, and Apple Pay: Completed 4 issues  \n   • Ensure that redirect linking in the apollos app doesn't double encode urls passed to it (APO-6795)  \n   • mitm mobile to web handoff (APO-6754)  \n   • Active church profile with inactive global profile does not activate global (APO-6724)  \n   • Global login skips match screen when inactive church account exists (APO-6723)  \n\nMerge & Deactivate User: Completed 1 issue  \n   • Merge button: support users with Apollos data on both profiles (APO-6765)  \n\napollos-admin: Merged 3 PRs  \n   • feat: handle content_completed conflicts during user profile merges  \n   • feat: add ability to move Apollos data between user profiles  \n   • refactor: new auth flow  \n\napollos-platforms: Merged 2 PRs  \n   • fix: update default Apollos web URL to apollos.com  \n   • fix: no double encoding of redirect URL in GivingScreen  \n\napollos-cluster: Merged 2 PRs  \n   • fix: replace with cloudinary url with s3 in seeds/tests  \n   • feat: activate inactive global profile when church user logs in  \n\n📋 Other Work:\n\nIssues in review (3):  \n   • Build a Metaquery for Moving Data between users in Admin (APO-6924)  \n   • Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment (APO-6887)  \n   • When entering bank details manually, you see an error message (APO-6690)  \n\nIssues in progress (4):  \n   • Build a Metaquery for Moving Data between users in Admin (APO-6924)  \n   • Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment (APO-6887)  \n   • CF - (4) users with duplicate profiles that need to be merged (APO-6762)  \n   • When entering bank details manually, you see an error message (APO-6690)  \n\nOpen PRs (7):  \n   • feat: add schema discovery for person data migration conflicts  \n   • test: add tests for updateAlgorithmAndFeatureState function  \n   • feat: preserve prefilled payment data when redirecting to external giving platforms  \n   • feat: handle Stripe payment redirect flow and improve error messages  \n   • fix: add type assertions to form validators and refs  \n   • chore: optimize payment route by utilizing user data from root loader  \n   • feat: support church token in global context for linked profiles  \n\nReviewed PRs (20):  \n   • feat: add schema discovery for person data migration conflicts  \n   • refactor: new auth flow  \n   • chore: optimize payment route by utilizing user data from root loader  \n   • Fix search state not preserved on back navigation  \n   • Migration Assistant Admin UI  \n   • Fix static link image updates in feed editor  \n   • feat: handle content_completed conflicts during user profile merges  \n   • feat: add ability to move Apollos data between user profiles  \n   • support jsonb values in query results column  \n   • fix: replace with cloudinary url with s3 in seeds/tests  \n   • Inline Iframe Embed  \n   • feat(web-embeds-v2): add embed context detection with postMessage handshake  \n   • feat(web): add back and fullscreen to modal  \n   • feat(web-embeds-v2): add theme mode support with light/dark/auto options  \n   • Implement tailwind preset  \n   • Remove Cursor note from AGENTS.md  \n   • Initialize web-embeds-v2 project with project scaffolding  \n   • Web Embeds V2 PRD  \n   • Fix unhandled rejections in ConnectButtonFeature  \n   • Bump Vite 5.x to patched version  \n\n   • 33 comments on PRs  \n\n📊 Stats:\n\n   • 7 PRs merged  \n   • 14 total PRs created/updated  \n   • 20 PR reviews  \n   • 5 Linear issues completed (Done only)  \n   • 9 total Linear issues worked on (in progress, in review, or done)  \n   • Worked across 3 repos: apollos-admin, apollos-platforms, apollos-cluster"
+}

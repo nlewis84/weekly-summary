@@ -1,6 +1,7 @@
 import { data } from "react-router";
 import type { ActionFunctionArgs } from "react-router";
 import { runSummary } from "../../lib/summary";
+import { saveSummaryToGitHub } from "../../lib/github-persist";
 
 export async function action({ request }: ActionFunctionArgs) {
   if (request.method !== "POST") {
@@ -10,6 +11,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
   const checkIns = (formData.get("checkIns") as string) ?? "";
   const todayOnly = formData.get("todayOnly") === "on";
+  const shouldSave = formData.get("save") === "true";
 
   try {
     const result = await runSummary({
@@ -17,6 +19,13 @@ export async function action({ request }: ActionFunctionArgs) {
       checkInsText: checkIns,
       outputDir: null,
     });
+
+    if (shouldSave) {
+      const repoSpec = process.env.GITHUB_REPO ?? "nlewis84/weekly-summary";
+      await saveSummaryToGitHub(result.payload, repoSpec);
+      return data({ payload: result.payload, saved: true });
+    }
+
     return data({ payload: result.payload });
   } catch (err) {
     console.error("Summary error:", err);

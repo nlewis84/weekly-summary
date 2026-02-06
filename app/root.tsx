@@ -32,7 +32,7 @@ export const meta: MetaFunction = () => [
 
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="en" style={{ background: "linear-gradient(135deg, hsl(252, 40%, 96%) 0%, hsl(270, 30%, 97%) 50%, hsl(252, 40%, 96%) 100%)" }}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,7 +43,7 @@ export default function App() {
         <header className="bg-white shadow-[var(--shadow-skeuo-card)] py-4 mb-6 border-b border-gray-200/80">
           <div className="max-w-3xl mx-auto px-4">
             <h1 className="flex items-center gap-2 text-xl font-bold text-gray-900 m-0">
-              <ChartBar size={24} weight="bold" className="text-primary-600" />
+              <ChartBar size={28} weight="bold" className="text-primary-600" />
               Weekly Summary
             </h1>
           </div>
