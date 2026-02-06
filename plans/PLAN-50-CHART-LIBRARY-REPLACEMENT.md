@@ -1,85 +1,197 @@
 # Plan 50: Chart Library Replacement (Beautiful Charts)
 
-**Status: 🔲 Pending** · **Priority: P2** · **Effort: High** · **Impact: High**
+**Status: 🔲 Pending**  
+**Priority: P2**  
+**Effort: High**  
+**Impact: High**
+
+---
 
 ## Problem
 
-Current charts (Tremor/Recharts) are visually poor: flat gray/black areas, minimal contrast, no gradients or polish. They look dated and unappealing in dark mode. Users have called them "absolutely terrible" and "not beautiful."
+Our current charts (Tremor/Recharts) are visually weak. They rely heavily on flat gray/black fills, lack contrast, and do not align with modern UI expectations—especially in dark mode. Feedback has described them as dated and visually unappealing.
 
-## Research: Favored Chart Libraries (2024–2025)
+Beyond aesthetics, Tremor introduces unnecessary abstraction and styling constraints that make it difficult to align charts with our design system.
 
-Web search for "best React chart library 2024 2025 beautiful aesthetic" and "most beautiful JavaScript charting library 2024" surfaced these as top choices:
+---
 
-### 1. **Rosen Charts** (rosencharts.com) — **Recommended**
+## Decision
 
-- **Tagline**: "The next generation of charting"
-- **Highlights**: First fully RSC-compatible React chart library; copy-pasteable examples; automatic dark mode; built on D3 + HTML/SVG; Tailwind/Shadcn/Next.js/Remix compatible
-- **Aesthetics**: Gradient effects, pattern-based designs, stunning area/bar/line examples; direct access to divs/SVGs for pixel-perfect control
-- **Bundle**: Reduces bundle size vs Recharts; D3 as only dependency
-- **License**: MIT, open-source (675+ GitHub stars)
-- **Chart types**: Area (stacked, gradient, outlined), bar (horizontal, vertical, gradient), line, pie, donut, scatter, heatmap, treemap, funnel, radar
-- **Fit**: Matches our stack (React Router, Tailwind, dark mode); area + bar charts available; beautiful by default
+### ✅ Standardize on **shadcn/ui Chart Patterns (Recharts-based)**
 
-### 2. **MUI X Charts** (mui.com/x/react-charts)
+Rather than introducing an entirely new chart ecosystem, we will standardize on chart implementations built using **shadcn/ui patterns**.
 
-- **Highlights**: Production-ready; D3 + SVG; Material UI integration; extensive customization
-- **Aesthetics**: Beautiful defaults; open-core (MIT Community)
-- **Chart types**: Bar, line, pie, scatter, gauge, radar, heatmap, funnel
-- **Fit**: Heavier if we don't use MUI; would add new design system
+These patterns provide:
 
-### 3. **Visx** (airbnb.io/visx)
+- Design-system consistency
+- Tailwind-first styling
+- Strong accessibility defaults
+- Highly customizable composition
+- Clean integration with our existing stack
+- Modern visual styling out of the box
 
-- **Highlights**: Low-level primitives from Airbnb; D3 + React; un-opinionated; modular (install only what you need)
-- **Aesthetics**: You build the look; no default "beautiful" theme—requires design work
-- **Fit**: Maximum flexibility but more implementation effort; not "beautiful out of the box"
+shadcn charts use **Recharts as a rendering layer**, but replace Tremor’s styling and layout constraints with composable, theme-aware UI primitives.
 
-### 4. **Plotly.js** (plotly.com/javascript)
+This allows us to dramatically improve aesthetics while minimizing migration risk.
 
-- **Highlights**: 40+ chart types; 3D; declarative JSON config; D3 + stack.gl
-- **Aesthetics**: Sophisticated, highly customizable
-- **Fit**: Heavier; more suited to scientific/analytics dashboards
+---
 
-### 5. **Chart.js** (chartjs.org)
+## Why shadcn Over Other Chart Libraries
 
-- **Highlights**: Simple API; 8 chart types; responsive; animations; v4 tree-shaking
-- **Aesthetics**: Clean but generic; not standout "beautiful"
-- **Fit**: Lighter than Recharts but still basic look
+### Design System Alignment
 
-### 6. **AG Charts** (ag-grid.com/charts)
+shadcn is already part of our UI foundation. Choosing it:
 
-- **Highlights**: Canvas-based; 25+ types; enterprise-grade; React/Angular/Vue
-- **Fit**: Enterprise focus; likely heavier and paid for advanced features
+- Keeps component architecture consistent
+- Leverages our existing Tailwind tokens
+- Reduces new dependency surface area
+- Improves long-term maintainability
 
-## Recommendation
+### Visual Quality
 
-**Rosen Charts** is the best fit: modern, beautiful by default, dark mode native, Tailwind-compatible, and lighter than Tremor/Recharts. Copy-pasteable area and bar examples match our use cases.
+shadcn chart examples demonstrate:
 
-**Fallback**: Visx if we want full control and are willing to design from scratch; MUI X if we adopt Material.
+- Gradient-based fills
+- Strong typography hierarchy
+- Accessible contrast
+- Better legend and tooltip presentation
+- Polished dark mode support
+
+### Flexibility
+
+Unlike Tremor, shadcn:
+
+- Does not lock us into a styling abstraction
+- Allows direct control of chart markup
+- Encourages composability with Card, Tooltip, and Layout primitives
+- Makes it easy to evolve visuals without replacing libraries again later
+
+### Risk Reduction
+
+Remaining on Recharts as the underlying engine:
+
+- Minimizes data transformation changes
+- Preserves existing chart behavior
+- Reduces bundle volatility
+- Keeps team familiarity intact
+
+---
+
+## Alternatives Considered
+
+### Rosen Charts
+
+Very strong visually and modern in architecture, but introduces a completely new charting system. Migration cost, ecosystem maturity, and long-term maintenance risk outweigh the benefits right now.
+
+### Visx
+
+Extremely flexible but requires full visual implementation from scratch. Higher design and engineering overhead.
+
+### MUI X Charts
+
+Production ready and visually solid but introduces a second design system that conflicts with our Tailwind + shadcn stack.
+
+### Plotly / AG Charts
+
+Feature-rich but heavy and geared toward analytics dashboards rather than product UI.
+
+---
 
 ## Current Stack
 
-- `@tremor/react` (uses Recharts under the hood)
-- `ChartsContent.tsx`: AreaChart (PRs & Linear), BarChart (Repos)
-- `AnnualChartsContent.tsx`: AreaChart (monthly)
-- Dark theme via `className="dark"` wrapper
-- Lazy-loaded for chunk size
+- `@tremor/react` (wraps Recharts)
+- `ChartsContent.tsx`
+  - Area charts (PRs & Linear)
+  - Bar charts (Repos)
+- `AnnualChartsContent.tsx`
+  - Monthly area chart
+- Dark theme via wrapper class
+- Lazy-loaded chart chunks
+
+---
+
+## Target Architecture
+
+Charts will be rebuilt using:
+
+- shadcn chart composition patterns
+- Recharts rendering primitives
+- Tailwind design tokens
+- Existing theme variables
+- Shared UI container components
+
+---
 
 ## Tasks
 
-1. [ ] **Spike**: Install Rosen Charts; build one area chart and one bar chart with our data; verify dark mode and theme variables
-2. [ ] **Evaluate**: Compare bundle size (Tremor+Recharts vs Rosen+D3); ensure < or ≈ current chunk
-3. [ ] **Replace**: Swap `ChartsContent.tsx` to use Rosen area + bar charts; match our color palette (primary-500, etc.)
-4. [ ] **Replace**: Swap `AnnualChartsContent.tsx` to Rosen area chart
-5. [ ] **Polish**: Apply gradients, better legend, improved axis labels per Rosen examples
-6. [ ] **Remove**: Uninstall `@tremor/react`; remove Tremor from `tailwind.config.js` content
-7. [ ] **Test**: E2E charts spec; verify Export CSV still works
-8. [ ] **Document**: Add chart library choice to README or docs
+### 1. Spike
+
+- Install shadcn chart examples
+- Build:
+  - One area chart
+  - One bar chart
+- Validate:
+  - Theme token usage
+  - Dark mode rendering
+  - Accessibility behavior
+
+---
+
+### 2. Visual Standardization
+
+- Implement gradient fills
+- Improve tooltip design
+- Standardize legends and axis labels
+- Align typography with UI Card components
+
+---
+
+### 3. Replace Existing Charts
+
+#### `ChartsContent.tsx`
+
+- Replace Tremor AreaChart with shadcn area chart
+- Replace Tremor BarChart with shadcn bar chart
+- Maintain existing data mapping
+
+#### `AnnualChartsContent.tsx`
+
+- Replace Tremor monthly area chart
+- Match layout and responsive behavior
+
+---
+
+### 4. Remove Tremor
+
+- Uninstall `@tremor/react`
+- Remove Tremor-specific Tailwind config
+- Clean up unused theme overrides
+
+---
+
+### 5. Testing
+
+- Update E2E chart specs
+- Validate accessibility labels
+- Verify CSV export compatibility
+- Confirm responsive behavior across breakpoints
+
+---
+
+### 6. Documentation
+
+- Document chart composition patterns
+- Add reusable chart container examples
+- Update README with chart standards
+
+---
 
 ## Success Criteria
 
-- Charts are visually striking: gradients, clear contrast, polished typography
-- Dark mode looks intentional, not muddy
-- Bundle size does not increase significantly
-- Area chart (PRs & Linear) and bar chart (Repos) both migrated
-- Annual dashboard chart migrated
-- All existing functionality (Export CSV, aria-labels) preserved
+- Charts visually align with the rest of the product UI
+- Dark mode is intentional and polished
+- Gradients and typography improve readability
+- Bundle size remains stable or decreases
+- All dashboards migrate successfully
+- Accessibility and export functionality remain intact
+- Tremor is fully removed from the codebase
