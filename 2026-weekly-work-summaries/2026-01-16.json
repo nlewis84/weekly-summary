@@ -11,6 +11,7 @@
     "prs_total": 81,
     "pr_reviews": 34,
     "pr_comments": 0,
+    "commits_pushed": 22,
     "linear_completed": 20,
     "linear_worked_on": 25,
     "repos": ["apollos-admin", "apollos-cluster", "apollos-platforms"]

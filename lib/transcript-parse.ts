@@ -36,6 +36,10 @@ function extractStats(content: string): Partial<Stats> {
   const linearWorkedM = content.match(/(\d+)\s+(?:total\s+)?linear\s+(?:issues?\s+)?(?:that\s+I\s+)?worked\s+on|linear\s+(?:issues?\s+)?worked\s+on\s+(?:was\s+)?(\d+)/i);
   if (linearWorkedM) stats.linear_worked_on = parseInt(linearWorkedM[1] ?? linearWorkedM[2] ?? "0", 10);
 
+  // Commits pushed: "9 commits", "pushed 9 commits", "9 commits pushed"
+  const commitsM = content.match(/(\d+)\s+commits?\s+pushed|pushed\s+(\d+)\s+commits?|(\d+)\s+commits?\s+(?:pushed|this week)/i);
+  if (commitsM) stats.commits_pushed = parseInt(commitsM[1] ?? commitsM[2] ?? commitsM[3] ?? "0", 10);
+
   // Repos
   const repos: string[] = [];
   if (/\badmin\b|apollos-admin/i.test(lower)) repos.push("apollos-admin");
@@ -75,6 +79,7 @@ const DEFAULT_STATS: Stats = {
   prs_total: 0,
   pr_reviews: 0,
   pr_comments: 0,
+  commits_pushed: 0,
   linear_completed: 0,
   linear_worked_on: 0,
   repos: ["apollos-admin"],

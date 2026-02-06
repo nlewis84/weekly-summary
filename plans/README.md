@@ -64,6 +64,8 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [48](PLAN-48-PR-REVIEW-COMMENTS-METRIC.md) | PR Review Comments (Code Review) | P2 | 🔲 Pending |
 | [49](PLAN-49-LINEAR-ISSUES-CREATED-METRIC.md) | Linear Issues Created | P2 | 🔲 Pending |
 | [50](PLAN-50-CHART-LIBRARY-REPLACEMENT.md) | Chart Library Replacement (Beautiful Charts) | P2 | ✅ Complete |
+| [52](PLAN-52-COMMITS-PUSHED-FIX.md) | Commits Pushed Stat Not Populating | P2 | 🔲 Pending |
+| [53](PLAN-53-REPOS-CHART-OPTIONS.md) | Repos Chart – Presentation Options | P2 | 🔲 Planning |
 
 ## Recommended Next (by priority)
 

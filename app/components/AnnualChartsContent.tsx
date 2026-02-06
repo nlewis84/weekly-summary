@@ -1,15 +1,17 @@
 /**
  * Annual dashboard charts - monthly aggregates (shadcn/Recharts).
+ * Small-multiples: one line chart per metric.
  */
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
-import {
-  ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
-  ChartTooltip,
-  ChartTooltipContent,
-  type ChartConfig,
-} from "~/components/ui/chart";
+import { MetricLineChart } from "~/components/MetricLineChart";
+
+const METRICS = [
+  { key: "PRs merged", color: "var(--chart-1)" },
+  { key: "PR reviews", color: "var(--chart-2)" },
+  { key: "PR comments", color: "var(--chart-3)" },
+  { key: "Commits pushed", color: "var(--chart-4)" },
+  { key: "Linear completed", color: "var(--chart-5)" },
+  { key: "Linear worked on", color: "var(--chart-6)" },
+] as const;
 
 interface MonthlyPoint {
   month: string;
@@ -21,15 +23,6 @@ interface MonthlyPoint {
   linear_completed: number;
   linear_worked_on: number;
 }
-
-const chartConfig = {
-  "PRs merged": { label: "PRs merged", color: "var(--chart-1)" },
-  "PR reviews": { label: "PR reviews", color: "var(--chart-2)" },
-  "PR comments": { label: "PR comments", color: "var(--chart-3)" },
-  "Commits pushed": { label: "Commits pushed", color: "var(--chart-4)" },
-  "Linear completed": { label: "Linear completed", color: "var(--chart-5)" },
-  "Linear worked on": { label: "Linear worked on", color: "hsl(252, 70%, 65%)" },
-} satisfies ChartConfig;
 
 interface AnnualChartsContentProps {
   months: MonthlyPoint[];
@@ -47,107 +40,27 @@ export function AnnualChartsContent({ months }: AnnualChartsContentProps) {
   }));
 
   return (
-    <div
-      className="h-72 min-w-0 overflow-x-auto"
-      role="img"
-      aria-label="Area chart showing monthly PRs and Linear metrics"
-    >
-      <ChartContainer
-        config={chartConfig}
-        className="h-full w-full min-h-[288px]"
-      >
-        <AreaChart
-          data={data}
-          margin={{ top: 8, right: 8, left: 0, bottom: 0 }}
-          accessibilityLayer
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {METRICS.map(({ key, color }) => (
+        <div
+          key={key}
+          className="bg-[var(--color-surface-elevated)] rounded-lg border border-[var(--color-border)] p-3"
         >
-          <defs>
-            <linearGradient id="fillAnnualPRsMerged" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="var(--chart-1)" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="var(--chart-1)" stopOpacity={0.1} />
-            </linearGradient>
-            <linearGradient id="fillAnnualPRReviews" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="var(--chart-2)" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="var(--chart-2)" stopOpacity={0.1} />
-            </linearGradient>
-            <linearGradient id="fillAnnualPRComments" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="var(--chart-3)" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="var(--chart-3)" stopOpacity={0.1} />
-            </linearGradient>
-            <linearGradient id="fillAnnualCommits" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="var(--chart-4)" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="var(--chart-4)" stopOpacity={0.1} />
-            </linearGradient>
-            <linearGradient id="fillAnnualLinearCompleted" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="var(--chart-5)" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="var(--chart-5)" stopOpacity={0.1} />
-            </linearGradient>
-            <linearGradient id="fillAnnualLinearWorked" x1="0" y1="0" x2="0" y2="1">
-              <stop
-                offset="5%"
-                stopColor="hsl(252, 70%, 65%)"
-                stopOpacity={0.8}
-              />
-              <stop
-                offset="95%"
-                stopColor="hsl(252, 70%, 65%)"
-                stopOpacity={0.1}
-              />
-            </linearGradient>
-          </defs>
-          <CartesianGrid vertical={false} strokeDasharray="3 3" />
-          <XAxis
-            dataKey="month"
-            tickLine={false}
-            axisLine={false}
-            tickMargin={8}
+          <h4 className="text-xs font-medium text-[var(--color-text-muted)] mb-2 truncate">
+            {key}
+          </h4>
+          <MetricLineChart
+            data={data.map((d) => ({
+              x: d.month,
+              value: d[key as keyof typeof d] as number,
+            }))}
+            metricKey={key}
+            color={color}
+            xKey="month"
+            ariaLabel={`Line chart: ${key} by month`}
           />
-          <ChartTooltip content={<ChartTooltipContent />} />
-          <ChartLegend content={<ChartLegendContent />} />
-          <Area
-            dataKey="PRs merged"
-            type="monotone"
-            stackId="a"
-            fill="url(#fillAnnualPRsMerged)"
-            stroke="var(--chart-1)"
-          />
-          <Area
-            dataKey="PR reviews"
-            type="monotone"
-            stackId="a"
-            fill="url(#fillAnnualPRReviews)"
-            stroke="var(--chart-2)"
-          />
-          <Area
-            dataKey="PR comments"
-            type="monotone"
-            stackId="a"
-            fill="url(#fillAnnualPRComments)"
-            stroke="var(--chart-3)"
-          />
-          <Area
-            dataKey="Commits pushed"
-            type="monotone"
-            stackId="a"
-            fill="url(#fillAnnualCommits)"
-            stroke="var(--chart-4)"
-          />
-          <Area
-            dataKey="Linear completed"
-            type="monotone"
-            stackId="a"
-            fill="url(#fillAnnualLinearCompleted)"
-            stroke="var(--chart-5)"
-          />
-          <Area
-            dataKey="Linear worked on"
-            type="monotone"
-            stackId="a"
-            fill="url(#fillAnnualLinearWorked)"
-            stroke="hsl(252, 70%, 65%)"
-          />
-        </AreaChart>
-      </ChartContainer>
+        </div>
+      ))}
     </div>
   );
 }

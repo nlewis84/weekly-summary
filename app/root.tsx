@@ -29,7 +29,7 @@ export function ErrorBoundary() {
       ? error.message
       : "Something went wrong";
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12">
+    <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="bg-[var(--color-error-bg)] border border-[var(--color-error-border)] rounded-xl p-6 text-[var(--color-error-500)]">
         <h2 className="text-lg font-semibold mb-2">Something went wrong</h2>
         <p className="text-sm mb-4">{message}</p>
@@ -107,7 +107,7 @@ export default function App() {
           Skip to content
         </a>
         <header className="bg-[var(--color-surface)] shadow-[var(--shadow-skeuo-card)] py-4 mb-6 border-b border-[var(--color-border)]">
-          <div className="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <h1 className="flex items-center gap-2 text-xl font-bold text-[var(--color-text)] m-0">
               <ChartBar size={28} weight="bold" className="text-primary-500" />
               <Link to="/" className="text-[var(--color-text)] no-underline hover:text-primary-500 transition-colors min-h-[44px] min-w-[44px] flex items-center">
@@ -145,7 +145,7 @@ export default function App() {
             </nav>
           </div>
         </header>
-        <main id="main-content" className="max-w-3xl mx-auto px-4 sm:px-6 pb-12 min-w-0">
+        <main id="main-content" className="w-full mx-auto px-4 sm:px-6 lg:px-8 pb-12 min-w-0">
           <Outlet />
         </main>
         <ShortcutsHelp />

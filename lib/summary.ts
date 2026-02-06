@@ -219,28 +219,47 @@ function filterApollosPRs(items: Array<{ html_url?: string }>) {
   return (items ?? []).filter((pr) => pr.html_url?.includes("ApollosProject"));
 }
 
+function getCommitRepos(): { owner: string; repos: string[] } {
+  const owner = process.env.GITHUB_ORG ?? "ApollosProject";
+  const raw =
+    process.env.GITHUB_COMMIT_REPOS ?? "apollos-admin,apollos-cluster,apollos-platforms,git-for-sql";
+  const repos = raw.split(",").map((r) => r.trim()).filter(Boolean);
+  return { owner, repos };
+}
+
 async function fetchCommitsPushed(
   username: string,
   headers: Record<string, string>,
   windowStart: Date,
   windowEnd: Date
 ): Promise<number> {
+  const { owner, repos } = getCommitRepos();
+  if (repos.length === 0) return 0;
+
+  const since = windowStart.toISOString();
+  const until = windowEnd.toISOString();
+
   try {
-    const res = await fetch(`${GITHUB_API_BASE}/users/${username}/events?per_page=100`, { headers });
-    if (!res.ok) return 0;
-    const events = (await res.json()) as Array<{
-      type?: string;
-      created_at?: string;
-      payload?: { commits?: unknown[] };
-    }>;
-    let total = 0;
-    for (const ev of events) {
-      if (ev.type !== "PushEvent") continue;
-      const createdAt = ev.created_at ? new Date(ev.created_at) : null;
-      if (!createdAt || createdAt < windowStart || createdAt > windowEnd) continue;
-      total += (ev.payload?.commits ?? []).length;
-    }
-    return total;
+    const counts = await Promise.all(
+      repos.map(async (repo) => {
+        let total = 0;
+        let page = 1;
+        const perPage = 100;
+        let hasMore = true;
+
+        while (hasMore) {
+          const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/commits?author=${username}&since=${since}&until=${until}&per_page=${perPage}&page=${page}`;
+          const res = await fetch(url, { headers });
+          if (!res.ok) return 0;
+          const commits = (await res.json()) as unknown[];
+          total += commits.length;
+          hasMore = commits.length === perPage;
+          page += 1;
+        }
+        return total;
+      })
+    );
+    return counts.reduce((a, b) => a + b, 0);
   } catch {
     return 0;
   }
@@ -456,12 +475,23 @@ export async function runSummary(options: {
     repos
   );
 
+  // Use Friday of the week (not UTC date) so filenames stay consistent across timezones
+  const refDate = yesterdayMode ? (() => {
+    const d = new Date(now);
+    d.setDate(now.getDate() - 1);
+    return d;
+  })() : now;
+  const weekStart = getWindowStart(refDate, false);
+  const fridayOfWeek = new Date(weekStart);
+  fridayOfWeek.setDate(weekStart.getDate() + 6);
+  const weekEnding = `${fridayOfWeek.getFullYear()}-${String(fridayOfWeek.getMonth() + 1).padStart(2, "0")}-${String(fridayOfWeek.getDate()).padStart(2, "0")}`;
+
   const payload: Payload = {
     meta: {
       generated_at: new Date().toISOString(),
       window_start: windowStartISO,
       window_end: windowEndISO,
-      week_ending: windowEnd.toISOString().slice(0, 10),
+      week_ending: weekEnding,
       source_of_truth:
         "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact.",
     },
