@@ -147,7 +147,7 @@ export default function Index() {
   const weeklyError = weekly && "error" in weekly ? weekly.error : null;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       <div
         role="tablist"
         aria-label="Date range"
@@ -171,44 +171,50 @@ export default function Index() {
         ))}
       </div>
 
-      {viewMode === "today" && (
-        <TodaySection
-          payload={todayPayload ?? null}
-          error={todayError ?? null}
-          isLoading={isLoading && !todayPayload}
-          onRefresh={handleRefresh}
-          refreshIntervalLabel={label}
-          title="Today"
-          goals={goals}
-        />
-      )}
-      {viewMode === "yesterday" && (
-        <TodaySection
-          payload={yesterdayPayload ?? null}
-          error={yesterdayError ?? null}
-          isLoading={isLoading && !yesterdayPayload}
-          onRefresh={handleRefresh}
-          refreshIntervalLabel={label}
-          title="Yesterday"
-          goals={goals}
-        />
-      )}
+      <div className="xl:grid xl:grid-cols-[2fr_1fr_1fr] xl:gap-5 xl:items-stretch">
+        <div className="space-y-6 xl:flex xl:flex-col xl:min-h-0">
+          {viewMode === "today" && (
+            <TodaySection
+              payload={todayPayload ?? null}
+              error={todayError ?? null}
+              isLoading={isLoading && !todayPayload}
+              onRefresh={handleRefresh}
+              refreshIntervalLabel={label}
+              title="Today"
+              goals={goals}
+            />
+          )}
+          {viewMode === "yesterday" && (
+            <TodaySection
+              payload={yesterdayPayload ?? null}
+              error={yesterdayError ?? null}
+              isLoading={isLoading && !yesterdayPayload}
+              onRefresh={handleRefresh}
+              refreshIntervalLabel={label}
+              title="Yesterday"
+              goals={goals}
+            />
+          )}
+        </div>
 
-      <div id="build-summary">
-        <FullSummaryFormContainer />
+        <div id="build-summary" className="xl:sticky xl:top-6 xl:flex xl:flex-col xl:items-start xl:min-h-0">
+          <FullSummaryFormContainer />
+        </div>
+
+        <div className="xl:flex xl:flex-col xl:min-h-0">
+          <WeeklySection
+            stats={weeklyPayload?.stats ?? null}
+            prevStats={
+              weekly && "prevPayload" in weekly
+                ? (weekly.prevPayload?.stats ?? null)
+                : null
+            }
+            error={weeklyError ?? null}
+            isLoading={isLoading && !weeklyPayload}
+            goals={goals}
+          />
+        </div>
       </div>
-
-      <WeeklySection
-        stats={weeklyPayload?.stats ?? null}
-        prevStats={
-          weekly && "prevPayload" in weekly
-            ? (weekly.prevPayload?.stats ?? null)
-            : null
-        }
-        error={weeklyError ?? null}
-        isLoading={isLoading && !weeklyPayload}
-        goals={goals}
-      />
     </div>
   );
 }

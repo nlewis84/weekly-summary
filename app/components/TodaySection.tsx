@@ -19,8 +19,8 @@ export function TodaySection({ payload, error, isLoading, onRefresh, refreshInte
   const stats = payload?.stats ?? null;
 
   return (
-    <>
-      <div className="flex items-center justify-between">
+    <div className="xl:flex xl:flex-col xl:min-h-0">
+      <div className="flex items-center justify-between shrink-0">
         <h2 className="text-lg font-semibold text-[var(--color-text)]">{title}</h2>
         <div className="flex items-center gap-2">
           {refreshIntervalLabel && refreshIntervalLabel !== "Off" && (
@@ -33,10 +33,14 @@ export function TodaySection({ payload, error, isLoading, onRefresh, refreshInte
       {error && <ErrorBanner message={error} />}
 
       {stats ? (
-        <MetricsCard stats={stats} payload={payload} goals={goals} />
+        <div className="xl:flex-1 xl:min-h-0 xl:flex xl:flex-col">
+          <MetricsCard stats={stats} payload={payload} goals={goals} />
+        </div>
       ) : isLoading && !stats ? (
-        <MetricsCardSkeleton />
+        <div className="xl:flex-1 xl:min-h-0">
+          <MetricsCardSkeleton />
+        </div>
       ) : null}
-    </>
+    </div>
   );
 }

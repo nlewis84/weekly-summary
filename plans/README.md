@@ -69,6 +69,10 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [58](PLAN-58-CHART-TOOLTIP-SPACING.md) | Chart Tooltip Label/Value Spacing | P2 | ✅ Complete |
 | [59](PLAN-59-INTENT-PREFETCH.md) | Intent Prefetch on Links | P3 | Draft |
 | [60](PLAN-60-API-CACHING.md) | API Caching (15 min TTL, Refresh busts) | P2 | Draft |
+| [61](PLAN-61-MAIN-PAGE-LARGE-SCREEN-LAYOUT.md) | Main Page Large-Screen Layout | P2 | ✅ Executed |
+| [62](PLAN-62-MAIN-PAGE-CARD-POLISH.md) | Main Page Card Polish & This Week Revamp | P2 | ✅ Complete |
+| [63](PLAN-63-XL-WIDTH-FIX.md) | XL Screen Width Fix | P2 | ✅ Complete |
+| [64](PLAN-64-CARD-CONSISTENCY.md) | Card Consistency & Style Guide Polish | P2 | Draft |
 
 ## Recommended Next (by priority)
 

@@ -12,6 +12,7 @@ export function FullSummaryFormContainer() {
   }>();
 
   return (
+    <div className="xl:w-96 xl:h-full xl:flex xl:flex-col xl:flex-nowrap xl:items-stretch xl:min-h-0">
     <FullSummaryForm
       Form={fetcher.Form}
       action="/api/summary"
@@ -22,5 +23,6 @@ export function FullSummaryFormContainer() {
       weekEnding={fetcher.data?.weekEnding}
       payload={fetcher.data?.payload ?? null}
     />
+    </div>
   );
 }

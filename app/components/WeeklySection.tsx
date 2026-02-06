@@ -16,17 +16,13 @@ export function WeeklySection({ stats, prevStats, error, isLoading, goals }: Wee
   if (!stats && !error && !isLoading) return null;
 
   return (
-    <>
+    <div className="space-y-4">
       {error && <ErrorBanner message={`Weekly: ${error}`} />}
       {stats ? (
-        <div className="mt-4">
-          <WeeklyTicker stats={stats} prevStats={prevStats ?? null} goals={goals} />
-        </div>
+        <WeeklyTicker stats={stats} prevStats={prevStats ?? null} goals={goals} />
       ) : isLoading ? (
-        <div className="mt-4">
-          <WeeklyTickerSkeleton />
-        </div>
+        <WeeklyTickerSkeleton />
       ) : null}
-    </>
+    </div>
   );
 }

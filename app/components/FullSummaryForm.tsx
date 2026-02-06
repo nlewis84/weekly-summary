@@ -43,6 +43,7 @@ export function FullSummaryForm({
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const toast = useToast();
   const savedRef = useRef(false);
+  const [isXlScreen, setIsXlScreen] = useState(false);
 
   const [lastBuilt, setLastBuilt] = useState<{
     builtAt: string;
@@ -77,6 +78,17 @@ export function FullSummaryForm({
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    const checkScreenSize = () => {
+      setIsXlScreen(window.matchMedia("(min-width: 1280px)").matches);
+    };
+    checkScreenSize();
+    const mediaQuery = window.matchMedia("(min-width: 1280px)");
+    mediaQuery.addEventListener("change", checkScreenSize);
+    return () => mediaQuery.removeEventListener("change", checkScreenSize);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
     const openIfHash = () => {
       if (window.location.hash === "#build-summary" && detailsRef.current) {
         detailsRef.current.open = true;
@@ -93,9 +105,9 @@ export function FullSummaryForm({
   return (
     <details
       ref={detailsRef}
-      className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)]"
+      className="w-full xl:w-96 bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] xl:flex-1 xl:min-h-0 xl:flex xl:flex-col"
     >
-      <summary className="flex items-center gap-2 px-4 py-3 cursor-pointer font-medium text-[var(--color-text)] list-none [&::-webkit-details-marker]:hidden">
+      <summary className="flex items-center gap-2 px-5 py-4 cursor-pointer font-medium text-[var(--color-text)] list-none [&::-webkit-details-marker]:hidden">
         <FileText
           size={20}
           weight="regular"
@@ -103,7 +115,7 @@ export function FullSummaryForm({
         />
         Build Weekly Summary
       </summary>
-      <div className="px-4 pb-4 pt-2 border-t border-[var(--color-border)] space-y-4">
+      <div className="px-5 pb-5 pt-4 border-t border-[var(--color-border)] space-y-4 xl:flex-1 xl:min-h-0">
         {lastBuilt && (
           <p className="text-sm text-[var(--color-text-muted)]">
             Last built: {formatRelativeTime(lastBuilt.builtAt)}
@@ -129,40 +141,11 @@ export function FullSummaryForm({
             >
               Check-ins
             </label>
-            <div className="flex flex-wrap gap-2 mb-2">
-              {[
-                { label: "PR reviews", text: "PR reviews" },
-                { label: "Feature work", text: "Feature work" },
-                { label: "Bug fixes", text: "Bug fixes" },
-                { label: "Meetings", text: "Meetings" },
-                { label: "Documentation", text: "Documentation" },
-              ].map(({ label, text }) => (
-                <button
-                  key={label}
-                  type="button"
-                  onClick={() => {
-                    const ta = document.getElementById(
-                      "checkIns"
-                    ) as HTMLTextAreaElement | null;
-                    if (ta) {
-                      const insert = ta.value ? `\n${text}` : text;
-                      ta.value += insert;
-                      ta.focus();
-                      ta.setSelectionRange(ta.value.length, ta.value.length);
-                    }
-                  }}
-                  className="px-2.5 py-1 text-xs font-medium text-primary-600 hover:text-primary-500 hover:bg-primary-500/10 rounded-lg border border-primary-500/30 transition-colors"
-                >
-                  + {label}
-                </button>
-              ))}
-            </div>
             <textarea
               id="checkIns"
               name="checkIns"
-              rows={6}
+              rows={isXlScreen ? 5 : 6}
               className="w-full px-3 py-2 border border-[var(--color-border)] rounded-lg text-sm bg-[var(--color-surface-elevated)] shadow-[var(--shadow-skeuo-inset)] focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-[var(--color-text)]"
-              placeholder="Monday: PR reviews&#10;Tuesday: Worked on feature X..."
             />
           </div>
           <div className="flex items-center gap-2">
