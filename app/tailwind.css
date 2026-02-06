@@ -55,6 +55,20 @@ a:focus-visible,
   outline-offset: 2px;
 }
 
+/* Cursor affordances for interactive elements */
+button:not(:disabled) {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+a[href] {
+  cursor: pointer;
+}
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
 html,
 body {
   margin: 0;

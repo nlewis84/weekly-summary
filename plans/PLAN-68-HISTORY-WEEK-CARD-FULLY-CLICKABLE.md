@@ -1,6 +1,6 @@
 # PLAN-68: History Week Cards Fully Clickable
 
-**Status:** Draft · **Priority: P2** · **Effort: Small** · **Impact: Medium**
+**Status:** Done · **Priority: P2** · **Effort: Small** · **Impact: Medium**
 
 ## Overview
 

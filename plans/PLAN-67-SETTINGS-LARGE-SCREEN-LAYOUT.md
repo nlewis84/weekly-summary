@@ -1,6 +1,6 @@
 # Plan 67: Settings Page Large-Screen Layout
 
-**Status:** Draft · **Priority: P2** · **Effort: Small** · **Impact: Medium**
+**Status:** ✅ Executed · **Priority: P2** · **Effort: Small** · **Impact: Medium**
 
 **Created Feb 2026:** On large screens, the Settings page content stretches edge-to-edge, making the four cards (Appearance, Auto-refresh, Weekly goals, Server settings) overly wide. This plan restacks content and uses a side-by-side layout to better utilize horizontal space on desktop, mirroring the approach from Plan 61 (Main Page Large-Screen Layout).
 
@@ -94,11 +94,11 @@ Wrap the four cards in a responsive grid:
 
 ## Tasks
 
-1. [ ] Update `app/routes/settings.tsx` to add two-column grid layout on xl breakpoint
-2. [ ] Group cards: Left (Appearance, Auto-refresh), Right (Weekly goals, Server settings)
-3. [ ] Make cards more compact: reduce padding on xl (`p-6 xl:p-5`)
-4. [ ] Test responsive behavior: mobile, tablet, desktop (xl)
-5. [ ] Verify Back link and page header remain correctly positioned
+1. [x] Update `app/routes/settings.tsx` to add two-column grid layout on xl breakpoint
+2. [x] Group cards: Left (Appearance, Auto-refresh), Right (Weekly goals, Server settings)
+3. [x] Make cards more compact: reduce padding on xl (`p-6 xl:p-5`)
+4. [x] Test responsive behavior: mobile, tablet, desktop (xl)
+5. [x] Verify Back link and page header remain correctly positioned
 
 ## Success Criteria
 

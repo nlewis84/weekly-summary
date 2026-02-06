@@ -260,14 +260,20 @@ export default function HistoryIndex() {
           <ul className="space-y-2">
             {filteredWeeks.map((week: string) => (
               <li key={week}>
-                <div className="flex items-center gap-3 p-4 bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) hover:shadow-(--shadow-skeuo-card-hover) hover:border-primary-500/50 transition-all group">
+                <div className="relative flex items-center gap-3 p-4 bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) hover:shadow-(--shadow-skeuo-card-hover) hover:border-primary-500/50 transition-all group cursor-pointer">
+                  <Link
+                    to={`/history/${week}`}
+                    prefetch="intent"
+                    className="absolute inset-0 z-0 rounded-xl"
+                    aria-label={`Week ending ${formatWeekLabel(week)}`}
+                  />
                   <button
                     type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       toggleWeek(week);
                     }}
-                    className="shrink-0 p-0.5 text-(--color-text-muted) hover:text-primary-500"
+                    className="relative z-10 shrink-0 p-0.5 text-(--color-text-muted) hover:text-primary-500"
                     aria-label={selected.has(week) ? "Deselect" : "Select"}
                   >
                     {selected.has(week) ? (
@@ -280,11 +286,7 @@ export default function HistoryIndex() {
                       <Square size={20} weight="regular" />
                     )}
                   </button>
-                  <Link
-                    to={`/history/${week}`}
-                    prefetch="intent"
-                    className="flex flex-1 items-center gap-3 min-w-0"
-                  >
+                  <div className="relative z-10 flex flex-1 items-center gap-3 min-w-0 pointer-events-none">
                     <CalendarBlank
                       size={22}
                       weight="regular"
@@ -296,7 +298,7 @@ export default function HistoryIndex() {
                     <span className="text-sm text-(--color-text-muted) ml-auto shrink-0">
                       {week}
                     </span>
-                  </Link>
+                  </div>
                 </div>
               </li>
             ))}

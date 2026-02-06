@@ -1,6 +1,6 @@
 # PLAN-66: Cursor Affordances Across the App
 
-**Status:** Draft · **Priority: P2** · **Effort: Small** · **Impact: Medium**
+**Status:** ✅ Complete · **Priority: P2** · **Effort: Small** · **Impact: Medium**
 
 **Created Feb 2026:** Interactive elements (buttons, links, clickable cards, etc.) should show `cursor: pointer` on hover to signal clickability. Many elements in the app lack this affordance.
 
@@ -88,13 +88,13 @@ Audit each interactive element and add `cursor-pointer` (and `cursor-wait`/`curs
 
 ## Tasks
 
-1. [ ] Add global `button:not(:disabled) { cursor: pointer }` (or equivalent) in root CSS
-2. [ ] Add `button:disabled { cursor: not-allowed }` for disabled state
-3. [ ] Audit non-button clickables (divs with onClick, custom cards) and add `cursor-pointer`
-4. [ ] For loading states (e.g. Refresh), add `cursor-wait` where appropriate
-5. [ ] Verify Links (`<Link>`) show pointer—add `cursor-pointer` if not
-6. [ ] Test hover states across main flows: Index, Charts, History, Settings
-7. [ ] Update plans/README.md with Plan 66
+1. [x] Add global `button:not(:disabled) { cursor: pointer }` (or equivalent) in root CSS
+2. [x] Add `button:disabled { cursor: not-allowed }` for disabled state
+3. [x] Audit non-button clickables (divs with onClick, custom cards) and add `cursor-pointer`
+4. [x] For loading states (e.g. Refresh), add `cursor-wait` where appropriate
+5. [x] Verify Links (`<Link>`) show pointer—add `cursor-pointer` if not
+6. [x] Test hover states across main flows: Index, Charts, History, Settings
+7. [x] Update plans/README.md with Plan 66
 
 ## Success Criteria
 

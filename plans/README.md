@@ -74,7 +74,7 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [63](PLAN-63-XL-WIDTH-FIX.md) | XL Screen Width Fix | P2 | ✅ Complete |
 | [64](PLAN-64-CARD-CONSISTENCY.md) | Card Consistency & Style Guide Polish | P2 | ✅ Complete |
 | [65](PLAN-65-REFRESH-BUTTON-UX.md) | Refresh Button UX/UI Improvements | P2 | ✅ Complete |
-| [66](PLAN-66-CURSOR-AFFORDANCES.md) | Cursor Affordances Across the App | P2 | Draft |
+| [66](PLAN-66-CURSOR-AFFORDANCES.md) | Cursor Affordances Across the App | P2 | ✅ Complete |
 | [67](PLAN-67-SETTINGS-LARGE-SCREEN-LAYOUT.md) | Settings Page Large-Screen Layout | P2 | Draft |
 | [68](PLAN-68-HISTORY-WEEK-CARD-FULLY-CLICKABLE.md) | History Week Cards Fully Clickable | P2 | Draft |
 
