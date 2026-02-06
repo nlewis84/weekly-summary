@@ -14,14 +14,144 @@
     "commits_pushed": 21,
     "linear_completed": 29,
     "linear_worked_on": 35,
-    "repos": ["apollos-admin", "apollos-cluster"]
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster"
+    ]
   },
   "linear": {
     "completed_issues": [],
     "worked_on_issues": []
   },
   "github": {
-    "merged_prs": [],
+    "merged_prs": [
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/0",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/1",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/7",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/8",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/9",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/10",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/11",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/12",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/13",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/0",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/1",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-01-09T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-01-09T18:00:00Z"
+      }
+    ],
     "reviews": []
   },
   "check_ins": [

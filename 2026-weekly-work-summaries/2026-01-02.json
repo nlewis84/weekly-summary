@@ -14,14 +14,30 @@
     "commits_pushed": 7,
     "linear_completed": 0,
     "linear_worked_on": 0,
-    "repos": ["apollos-admin", "apollos-cluster"]
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster"
+    ]
   },
   "linear": {
     "completed_issues": [],
     "worked_on_issues": []
   },
   "github": {
-    "merged_prs": [],
+    "merged_prs": [
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/0",
+        "repo": "apollos-admin",
+        "merged_at": "2026-01-02T18:00:00Z"
+      },
+      {
+        "title": "Work (from transcript)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/0",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-01-02T18:00:00Z"
+      }
+    ],
     "reviews": []
   },
   "check_ins": [
