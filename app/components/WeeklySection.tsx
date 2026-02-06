@@ -2,15 +2,17 @@ import { WeeklyTicker } from "./WeeklyTicker";
 import { WeeklyTickerSkeleton } from "./WeeklyTickerSkeleton";
 import { ErrorBanner } from "./ErrorBanner";
 import type { Stats } from "../../lib/types";
+import type { WeeklyGoals } from "../hooks/useGoals";
 
 interface WeeklySectionProps {
   stats: Stats | null;
   prevStats?: Stats | null;
   error: string | null;
   isLoading?: boolean;
+  goals?: WeeklyGoals;
 }
 
-export function WeeklySection({ stats, prevStats, error, isLoading }: WeeklySectionProps) {
+export function WeeklySection({ stats, prevStats, error, isLoading, goals }: WeeklySectionProps) {
   if (!stats && !error && !isLoading) return null;
 
   return (
@@ -18,7 +20,7 @@ export function WeeklySection({ stats, prevStats, error, isLoading }: WeeklySect
       {error && <ErrorBanner message={`Weekly: ${error}`} />}
       {stats ? (
         <div className="mt-4">
-          <WeeklyTicker stats={stats} prevStats={prevStats ?? null} />
+          <WeeklyTicker stats={stats} prevStats={prevStats ?? null} goals={goals} />
         </div>
       ) : isLoading ? (
         <div className="mt-4">

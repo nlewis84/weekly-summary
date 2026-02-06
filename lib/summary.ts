@@ -41,7 +41,12 @@ const LINEAR_WORKED_ON_QUERY = `
   }
 `;
 
-export function getWindowStart(now: Date, todayMode: boolean): Date {
+export function getWindowStart(now: Date, todayMode: boolean, yesterdayMode = false): Date {
+  if (yesterdayMode) {
+    const yesterday = new Date(now);
+    yesterday.setDate(now.getDate() - 1);
+    return new Date(yesterday.getFullYear(), yesterday.getMonth(), yesterday.getDate(), 0, 0, 0, 0);
+  }
   if (todayMode) {
     return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0);
   }
@@ -53,7 +58,20 @@ export function getWindowStart(now: Date, todayMode: boolean): Date {
   return saturday;
 }
 
-export function getWindowEnd(now: Date): Date {
+export function getWindowEnd(now: Date, todayMode = false, yesterdayMode = false): Date {
+  if (yesterdayMode) {
+    const yesterday = new Date(now);
+    yesterday.setDate(now.getDate() - 1);
+    return new Date(
+      yesterday.getFullYear(),
+      yesterday.getMonth(),
+      yesterday.getDate(),
+      23,
+      59,
+      59,
+      999
+    );
+  }
   return new Date(
     now.getFullYear(),
     now.getMonth(),
@@ -201,13 +219,41 @@ function filterApollosPRs(items: Array<{ html_url?: string }>) {
   return (items ?? []).filter((pr) => pr.html_url?.includes("ApollosProject"));
 }
 
+async function fetchCommitsPushed(
+  username: string,
+  headers: Record<string, string>,
+  windowStart: Date,
+  windowEnd: Date
+): Promise<number> {
+  try {
+    const res = await fetch(`${GITHUB_API_BASE}/users/${username}/events?per_page=100`, { headers });
+    if (!res.ok) return 0;
+    const events = (await res.json()) as Array<{
+      type?: string;
+      created_at?: string;
+      payload?: { commits?: unknown[] };
+    }>;
+    let total = 0;
+    for (const ev of events) {
+      if (ev.type !== "PushEvent") continue;
+      const createdAt = ev.created_at ? new Date(ev.created_at) : null;
+      if (!createdAt || createdAt < windowStart || createdAt > windowEnd) continue;
+      total += (ev.payload?.commits ?? []).length;
+    }
+    return total;
+  } catch {
+    return 0;
+  }
+}
+
 async function fetchGitHubData(
   windowStart: Date,
-  windowStartISO: string
+  windowStartISO: string,
+  windowEnd: Date
 ) {
   const token = process.env.GITHUB_TOKEN;
   const username = process.env.GITHUB_USERNAME ?? "nlewis84";
-  if (!token) return { prs: [], reviews: [], comments: 0 };
+  if (!token) return { prs: [], reviews: [], comments: 0, commits_pushed: 0 };
 
   const headers = {
     Authorization: `Bearer ${token}`,
@@ -217,7 +263,7 @@ async function fetchGitHubData(
   const since = windowStartISO.split("T")[0];
 
   try {
-    const [prsCreatedRes, prsUpdatedRes, reviewsRes] = await Promise.all([
+    const [prsCreatedRes, prsUpdatedRes, reviewsRes, commitsPushed] = await Promise.all([
       fetch(
         `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+created:>=${since}&per_page=100`,
         { headers }
@@ -230,6 +276,7 @@ async function fetchGitHubData(
         `${GITHUB_API_BASE}/search/issues?q=reviewed-by:${username}+type:pr+updated:>=${since}&per_page=100`,
         { headers }
       ),
+      fetchCommitsPushed(username, headers, windowStart, windowEnd),
     ]);
 
     const [prsCreatedData, prsUpdatedData, reviewsData] = await Promise.all([
@@ -289,9 +336,9 @@ async function fetchGitHubData(
     );
     const totalComments = commentCounts.reduce((a, b) => a + b, 0);
 
-    return { prs: prDetails, reviews, comments: totalComments };
+    return { prs: prDetails, reviews, comments: totalComments, commits_pushed: commitsPushed };
   } catch {
-    return { prs: [], reviews: [], comments: 0 };
+    return { prs: [], reviews: [], comments: 0, commits_pushed: 0 };
   }
 }
 
@@ -317,7 +364,7 @@ function groupPRsByRepo(prs: Array<{ html_url?: string }>) {
 
 function buildTerminalOutput(
   linearData: { completedIssues: unknown[]; workedOnIssues: unknown[] },
-  githubData: { prs: unknown[]; reviews: unknown[] },
+  githubData: { prs: unknown[]; reviews: unknown[]; commits_pushed?: number },
   checkIns: CheckIn[],
   prCategories: { merged: unknown[] },
   repos: string[]
@@ -329,6 +376,7 @@ function buildTerminalOutput(
   out += "📊 Stats:\n\n";
   out += `  • PRs merged: ${prCategories.merged.length}\n`;
   out += `  • PR reviews: ${githubData.reviews.length}\n`;
+  out += `  • Commits pushed: ${githubData.commits_pushed ?? 0}\n`;
   out += `  • Linear issues completed: ${linearData.completedIssues.length}\n`;
   out += `  • Linear issues worked on: ${linearData.workedOnIssues.length}\n`;
   out += `  • Repos: ${repos.join(", ") || "—"}\n\n`;
@@ -366,19 +414,20 @@ export function saveWeeklySummary(payload: Payload, outputDir: string): void {
 
 export async function runSummary(options: {
   todayMode: boolean;
+  yesterdayMode?: boolean;
   checkInsText: string;
   outputDir: string | null;
 }): Promise<RunSummaryResult> {
-  const { todayMode, checkInsText } = options;
+  const { todayMode, yesterdayMode = false, checkInsText } = options;
   const now = new Date();
-  const windowStart = getWindowStart(now, todayMode);
-  const windowEnd = getWindowEnd(now);
+  const windowStart = getWindowStart(now, todayMode, yesterdayMode);
+  const windowEnd = getWindowEnd(now, todayMode, yesterdayMode);
   const windowStartISO = windowStart.toISOString();
   const windowEndISO = windowEnd.toISOString();
 
   const [linearData, githubData] = await Promise.all([
     fetchLinearData(windowStart, windowEnd, windowStartISO, windowEndISO),
-    fetchGitHubData(windowStart, windowStartISO),
+    fetchGitHubData(windowStart, windowStartISO, windowEnd),
   ]);
 
   const checkIns = parseCheckIns(checkInsText);
@@ -393,6 +442,7 @@ export async function runSummary(options: {
     prs_total: githubData.prs.length,
     pr_reviews: githubData.reviews.length,
     pr_comments: githubData.comments,
+    commits_pushed: githubData.commits_pushed,
     linear_completed: linearData.completedIssues.length,
     linear_worked_on: linearData.workedOnIssues.length,
     repos,

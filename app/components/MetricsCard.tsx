@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Package, PencilSimple, Eye, CheckCircle, ArrowsClockwise, Folder, CaretDown, CaretRight, Copy, CaretUp, Minus } from "phosphor-react";
+import { Package, PencilSimple, Eye, CheckCircle, ArrowsClockwise, Folder, CaretDown, CaretRight, Copy, CaretUp, Minus, ChatCircle, GitCommit } from "phosphor-react";
 import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
 import type { Payload } from "../../lib/types";
+import type { WeeklyGoals } from "../hooks/useGoals";
 
 interface MetricsCardProps {
   stats: Stats;
   prevStats?: Stats | null;
   payload?: Payload | null;
+  goals?: WeeklyGoals;
 }
 
 function TrendBadge({ delta }: { delta: number }) {
@@ -20,6 +22,8 @@ function formatStatsForCopy(stats: Stats): string {
   const parts = [
     `PRs merged: ${stats.prs_merged}`,
     `PR reviews: ${stats.pr_reviews}`,
+    `PR comments: ${stats.pr_comments}`,
+    `Commits pushed: ${stats.commits_pushed}`,
     `Linear completed: ${stats.linear_completed}`,
     `Linear worked on: ${stats.linear_worked_on}`,
     `Repos: ${stats.repos.join(", ") || "—"}`,
@@ -33,15 +37,19 @@ const METRICS = [
   { key: "prs_merged" as const, label: "PRs merged", Icon: Package },
   { key: "prs_total" as const, label: "PRs created/updated", Icon: PencilSimple },
   { key: "pr_reviews" as const, label: "PR reviews", Icon: Eye },
+  { key: "pr_comments" as const, label: "PR comments", Icon: ChatCircle },
+  { key: "commits_pushed" as const, label: "Commits pushed", Icon: GitCommit },
   { key: "linear_completed" as const, label: "Linear issues completed", Icon: CheckCircle },
   { key: "linear_worked_on" as const, label: "Linear issues worked on", Icon: ArrowsClockwise },
 ] as const;
 
-const TREND_METRICS = ["prs_merged", "prs_total", "pr_reviews", "linear_completed", "linear_worked_on"] as const;
+const TREND_METRICS = ["prs_merged", "prs_total", "pr_reviews", "pr_comments", "commits_pushed", "linear_completed", "linear_worked_on"] as const;
+
+const GOAL_METRICS = ["prs_merged", "pr_reviews", "linear_completed"] as const;
 
 const iconSize = 24;
 
-export function MetricsCard({ stats, prevStats, payload }: MetricsCardProps) {
+export function MetricsCard({ stats, prevStats, payload, goals }: MetricsCardProps) {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const toast = useToast();
 
@@ -76,22 +84,30 @@ export function MetricsCard({ stats, prevStats, payload }: MetricsCardProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {METRICS.map(({ key, label, Icon }) => {
           const delta = prevStats && TREND_METRICS.includes(key) ? stats[key] - prevStats[key] : null;
+          const target = goals && GOAL_METRICS.includes(key) ? (goals[key as (typeof GOAL_METRICS)[number]] as number | undefined) : undefined;
+          const value = stats[key];
+          const met = target != null && value >= target;
           return (
             <div
               key={key}
-              className="flex items-center justify-between p-3 bg-[var(--color-surface-elevated)] rounded-lg border border-[var(--color-border)] shadow-[var(--shadow-skeuo-inset)]"
+              className={`flex items-center justify-between p-3 bg-[var(--color-surface-elevated)] rounded-lg border shadow-[var(--shadow-skeuo-inset)] ${met ? "border-emerald-500/50" : "border-[var(--color-border)]"}`}
             >
               <span className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
                 <Icon size={iconSize} weight="regular" className="text-primary-500 shrink-0" />
                 {label}
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="text-lg font-semibold text-primary-500">{stats[key]}</span>
-                {delta != null && (
+                <span className="text-lg font-semibold text-primary-500">
+                  {target != null ? `${value}/${target}` : value}
+                </span>
+                {delta != null && target == null && (
                   <span className="flex items-center gap-0.5 text-xs" title={delta > 0 ? `+${delta} vs last week` : delta < 0 ? `${delta} vs last week` : "no change"}>
                     <TrendBadge delta={delta} />
                     {delta !== 0 && <span>{delta > 0 ? `+${delta}` : delta}</span>}
                   </span>
+                )}
+                {target != null && met && (
+                  <span className="text-emerald-600 dark:text-emerald-400 text-sm" title="Goal met">✓</span>
                 )}
               </span>
             </div>

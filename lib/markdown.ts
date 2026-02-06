@@ -11,7 +11,7 @@ export function buildMarkdownSummary(payload: Payload): string {
   md += `*Generated ${meta.generated_at} | Window: ${meta.window_start.slice(0, 10)} – ${meta.window_end.slice(0, 10)}*\n\n`;
   if (meta.source_of_truth) md += `## Source of truth\n\n${meta.source_of_truth}\n\n`;
   md += `## Stats\n\n`;
-  md += `- PRs merged: ${stats.prs_merged} | Total PRs: ${stats.prs_total} | Reviews: ${stats.pr_reviews} | Comments: ${stats.pr_comments}\n`;
+  md += `- PRs merged: ${stats.prs_merged} | Total PRs: ${stats.prs_total} | Reviews: ${stats.pr_reviews} | Comments: ${stats.pr_comments} | Commits: ${stats.commits_pushed ?? 0}\n`;
   md += `- Linear completed: ${stats.linear_completed} | Worked on: ${stats.linear_worked_on}\n`;
   md += `- Repos: ${stats.repos.join(", ") || "—"}\n\n`;
   md += `## Linear — Completed\n\n`;

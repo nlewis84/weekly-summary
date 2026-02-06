@@ -9,7 +9,7 @@ const formatWeek = (w: string) => {
 };
 
 interface ChartsContentProps {
-  dataPoints: { week_ending: string; prs_merged: number; pr_reviews: number; linear_completed: number; linear_worked_on: number; prs_total: number; repos_count: number }[];
+  dataPoints: { week_ending: string; prs_merged: number; pr_reviews: number; pr_comments: number; commits_pushed: number; linear_completed: number; linear_worked_on: number; prs_total: number; repos_count: number }[];
   repoActivity: { repo: string; total_prs: number }[];
 }
 
@@ -18,6 +18,8 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
     week: formatWeek(d.week_ending),
     "PRs merged": d.prs_merged,
     "PR reviews": d.pr_reviews,
+    "PR comments": d.pr_comments,
+    "Commits pushed": d.commits_pushed,
     "Linear completed": d.linear_completed,
     "Linear worked on": d.linear_worked_on,
     "PRs total": d.prs_total,
@@ -33,12 +35,12 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
     <div className="dark">
       <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-4 sm:p-6 overflow-hidden">
         <h3 className="text-sm font-medium text-[var(--color-text)] mb-4">PRs & Linear</h3>
-        <div className="h-72 min-w-0 overflow-x-auto" role="img" aria-label="Area chart showing PRs merged, PR reviews, Linear completed, and Linear worked on over time">
+        <div className="h-72 min-w-0 overflow-x-auto" role="img" aria-label="Area chart showing PRs merged, PR reviews, PR comments, Linear completed, and Linear worked on over time">
           <AreaChart
             data={metricsData}
             index="week"
-            categories={["PRs merged", "PR reviews", "Linear completed", "Linear worked on"]}
-            colors={["violet", "cyan", "emerald", "amber"]}
+            categories={["PRs merged", "PR reviews", "PR comments", "Commits pushed", "Linear completed", "Linear worked on"]}
+            colors={["violet", "cyan", "blue", "indigo", "emerald", "amber"]}
             valueFormatter={(v) => String(v ?? 0)}
             yAxisWidth={40}
             showAnimation

@@ -8,6 +8,8 @@ interface MonthlyPoint {
   label: string;
   prs_merged: number;
   pr_reviews: number;
+  pr_comments: number;
+  commits_pushed: number;
   linear_completed: number;
   linear_worked_on: number;
 }
@@ -21,6 +23,8 @@ export function AnnualChartsContent({ months }: AnnualChartsContentProps) {
     month: m.label,
     "PRs merged": m.prs_merged,
     "PR reviews": m.pr_reviews,
+    "PR comments": m.pr_comments,
+    "Commits pushed": m.commits_pushed,
     "Linear completed": m.linear_completed,
     "Linear worked on": m.linear_worked_on,
   }));
@@ -31,8 +35,8 @@ export function AnnualChartsContent({ months }: AnnualChartsContentProps) {
         <AreaChart
           data={data}
           index="month"
-          categories={["PRs merged", "PR reviews", "Linear completed", "Linear worked on"]}
-          colors={["violet", "cyan", "emerald", "amber"]}
+          categories={["PRs merged", "PR reviews", "PR comments", "Commits pushed", "Linear completed", "Linear worked on"]}
+          colors={["violet", "cyan", "blue", "indigo", "emerald", "amber"]}
           valueFormatter={(v) => String(v ?? 0)}
           yAxisWidth={40}
           showAnimation

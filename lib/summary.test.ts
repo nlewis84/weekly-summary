@@ -61,6 +61,16 @@ describe("getWindowStart", () => {
     expect(start.getDate()).toBe(31);
     expect(start.getMonth()).toBe(0);
   });
+
+  it("returns midnight yesterday for yesterdayMode", () => {
+    const now = new Date(2026, 1, 5, 14, 30, 0);
+    const start = getWindowStart(now, false, true);
+    expect(start.getFullYear()).toBe(2026);
+    expect(start.getMonth()).toBe(1);
+    expect(start.getDate()).toBe(4);
+    expect(start.getHours()).toBe(0);
+    expect(start.getMinutes()).toBe(0);
+  });
 });
 
 describe("getWindowEnd", () => {
@@ -70,6 +80,16 @@ describe("getWindowEnd", () => {
     expect(end.getFullYear()).toBe(2026);
     expect(end.getMonth()).toBe(1);
     expect(end.getDate()).toBe(5);
+    expect(end.getHours()).toBe(23);
+    expect(end.getMinutes()).toBe(59);
+  });
+
+  it("returns end of yesterday for yesterdayMode", () => {
+    const now = new Date(2026, 1, 5, 14, 0, 0);
+    const end = getWindowEnd(now, false, true);
+    expect(end.getFullYear()).toBe(2026);
+    expect(end.getMonth()).toBe(1);
+    expect(end.getDate()).toBe(4);
     expect(end.getHours()).toBe(23);
     expect(end.getMinutes()).toBe(59);
   });
@@ -93,6 +113,9 @@ describe("runSummary", () => {
           );
         }
         if (url.includes("github.com")) {
+          if (url.includes("/events")) {
+            return new Response(JSON.stringify([]), { headers: { "Content-Type": "application/json" } });
+          }
           return new Response(
             JSON.stringify({ items: [], total_count: 0 }),
             { headers: { "Content-Type": "application/json" } }
@@ -123,6 +146,7 @@ describe("runSummary", () => {
       prs_merged: expect.any(Number),
       prs_total: expect.any(Number),
       pr_reviews: expect.any(Number),
+      commits_pushed: expect.any(Number),
       linear_completed: expect.any(Number),
       linear_worked_on: expect.any(Number),
       repos: expect.any(Array),

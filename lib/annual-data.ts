@@ -10,6 +10,8 @@ export interface MonthlyAggregate {
   label: string; // "Jan 2026"
   prs_merged: number;
   pr_reviews: number;
+  pr_comments: number;
+  commits_pushed: number;
   linear_completed: number;
   linear_worked_on: number;
   prs_total: number;
@@ -21,6 +23,8 @@ export interface AnnualData {
   months: MonthlyAggregate[];
   total_prs_merged: number;
   total_pr_reviews: number;
+  total_pr_comments: number;
+  total_commits_pushed: number;
   total_linear_completed: number;
   total_linear_worked_on: number;
   topRepos: { repo: string; prs: number }[];
@@ -40,7 +44,7 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
     (r): r is { week: string; payload: Payload } => r.payload != null
   );
 
-  const monthMap = new Map<string, { prs_merged: number; pr_reviews: number; linear_completed: number; linear_worked_on: number; prs_total: number; count: number }>();
+  const monthMap = new Map<string, { prs_merged: number; pr_reviews: number; pr_comments: number; commits_pushed: number; linear_completed: number; linear_worked_on: number; prs_total: number; count: number }>();
   const repoMap = new Map<string, number>();
   const projectMap = new Map<string, number>();
 
@@ -50,6 +54,8 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
     const curr = monthMap.get(month) ?? {
       prs_merged: 0,
       pr_reviews: 0,
+      pr_comments: 0,
+      commits_pushed: 0,
       linear_completed: 0,
       linear_worked_on: 0,
       prs_total: 0,
@@ -57,6 +63,8 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
     };
     curr.prs_merged += s.prs_merged;
     curr.pr_reviews += s.pr_reviews;
+    curr.pr_comments += s.pr_comments;
+    curr.commits_pushed += s.commits_pushed ?? 0;
     curr.linear_completed += s.linear_completed;
     curr.linear_worked_on += s.linear_worked_on;
     curr.prs_total += s.prs_total;
@@ -86,6 +94,8 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
         label,
         prs_merged: data.prs_merged,
         pr_reviews: data.pr_reviews,
+        pr_comments: data.pr_comments,
+        commits_pushed: data.commits_pushed,
         linear_completed: data.linear_completed,
         linear_worked_on: data.linear_worked_on,
         prs_total: data.prs_total,
@@ -107,10 +117,12 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
     (acc, m) => ({
       prs_merged: acc.prs_merged + m.prs_merged,
       pr_reviews: acc.pr_reviews + m.pr_reviews,
+      pr_comments: acc.pr_comments + m.pr_comments,
+      commits_pushed: acc.commits_pushed + m.commits_pushed,
       linear_completed: acc.linear_completed + m.linear_completed,
       linear_worked_on: acc.linear_worked_on + m.linear_worked_on,
     }),
-    { prs_merged: 0, pr_reviews: 0, linear_completed: 0, linear_worked_on: 0 }
+    { prs_merged: 0, pr_reviews: 0, pr_comments: 0, commits_pushed: 0, linear_completed: 0, linear_worked_on: 0 }
   );
 
   return {
@@ -118,6 +130,8 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
     months,
     total_prs_merged: totals.prs_merged,
     total_pr_reviews: totals.pr_reviews,
+    total_pr_comments: totals.pr_comments,
+    total_commits_pushed: totals.commits_pushed,
     total_linear_completed: totals.linear_completed,
     total_linear_worked_on: totals.linear_worked_on,
     topRepos,

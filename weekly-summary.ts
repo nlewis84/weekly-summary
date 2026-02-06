@@ -3,6 +3,7 @@
  * Weekly Summary CLI
  * Usage: pnpm cli [check-ins-file]
  *        pnpm cli --today | -t
+ *        pnpm cli --yesterday | -y
  */
 
 import "dotenv/config";
@@ -19,6 +20,7 @@ import { createInterface } from "node:readline";
 import { stdin, stdout } from "node:process";
 
 const isTodayMode = process.argv.includes("--today") || process.argv.includes("-t");
+const isYesterdayMode = process.argv.includes("--yesterday") || process.argv.includes("-y");
 const checkInsFile = process.argv.slice(2).find((a) => !a.startsWith("-"));
 
 async function readCheckIns(): Promise<string> {
@@ -51,9 +53,10 @@ async function main() {
   const outputDir = process.cwd() + "/2026-weekly-work-summaries";
 
   const result = await runSummary({
-    todayMode: isTodayMode,
+    todayMode: isTodayMode && !isYesterdayMode,
+    yesterdayMode: isYesterdayMode,
     checkInsText,
-    outputDir: isTodayMode ? null : outputDir,
+    outputDir: isTodayMode || isYesterdayMode ? null : outputDir,
   });
 
   console.log(result.terminalOutput);

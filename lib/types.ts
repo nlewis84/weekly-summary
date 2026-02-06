@@ -3,6 +3,7 @@ export interface Stats {
   prs_total: number;
   pr_reviews: number;
   pr_comments: number;
+  commits_pushed: number;
   linear_completed: number;
   linear_worked_on: number;
   repos: string[];

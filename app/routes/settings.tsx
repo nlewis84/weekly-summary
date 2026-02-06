@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import { Sun, Moon, Monitor } from "phosphor-react";
+import { Sun, Moon, Monitor, ArrowsClockwise } from "phosphor-react";
 import { QuotaIndicator } from "../components/QuotaIndicator";
+import { REFRESH_OPTIONS, setRefreshInterval, getStoredRefreshInterval } from "../hooks/useRefreshInterval";
+import { useGoals, type WeeklyGoals } from "../hooks/useGoals";
 
 type Theme = "light" | "dark" | "system";
 
@@ -23,14 +25,23 @@ function applyTheme(theme: "light" | "dark") {
   document.documentElement.style.colorScheme = theme;
 }
 
+const GOAL_KEYS: { key: keyof WeeklyGoals; label: string }[] = [
+  { key: "prs_merged", label: "PRs merged" },
+  { key: "pr_reviews", label: "PR reviews" },
+  { key: "linear_completed", label: "Linear completed" },
+];
+
 export default function Settings() {
   const [theme, setTheme] = useState<Theme>("system");
+  const [refreshInterval, setRefreshIntervalState] = useState<string>("5");
   const [mounted, setMounted] = useState(false);
+  const { goals, setGoals, clearGoals } = useGoals();
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
     const initial = stored && ["light", "dark", "system"].includes(stored) ? stored : "system";
     setTheme(initial);
+    setRefreshIntervalState(getStoredRefreshInterval());
     setMounted(true);
   }, []);
 
@@ -87,6 +98,76 @@ export default function Settings() {
             </label>
           ))}
         </fieldset>
+      </div>
+
+      <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-6 space-y-4">
+        <h3 className="text-sm font-medium text-[var(--color-text)]">Auto-refresh</h3>
+        <p className="text-sm text-[var(--color-text-muted)]">
+          How often the home page refreshes data. Manual refresh (R key or button) always works.
+        </p>
+        <fieldset className="space-y-2">
+          <legend className="sr-only">Refresh interval</legend>
+          {REFRESH_OPTIONS.map(({ value, label }) => (
+            <label
+              key={value}
+              className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${
+                refreshInterval === value
+                  ? "bg-[var(--color-surface-elevated)] border-primary-500/50"
+                  : "border-[var(--color-border)] hover:bg-[var(--color-surface-elevated)]"
+              }`}
+            >
+              <input
+                type="radio"
+                name="refreshInterval"
+                value={value}
+                checked={refreshInterval === value}
+                onChange={() => {
+                  setRefreshInterval(value);
+                  setRefreshIntervalState(value);
+                }}
+                className="sr-only"
+              />
+              <ArrowsClockwise size={20} weight="regular" className="text-primary-500 shrink-0" />
+              <span className="text-sm font-medium text-[var(--color-text)]">{label}</span>
+            </label>
+          ))}
+        </fieldset>
+      </div>
+
+      <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-6 space-y-4">
+        <h3 className="text-sm font-medium text-[var(--color-text)]">Weekly goals</h3>
+        <p className="text-sm text-[var(--color-text-muted)]">
+          Optional targets for key metrics. Progress shows as &quot;12/20&quot; in the weekly ticker. Leave blank to hide.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {GOAL_KEYS.map(({ key, label }) => (
+            <label key={key} className="flex flex-col gap-1">
+              <span className="text-xs text-[var(--color-text-muted)]">{label}</span>
+              <input
+                type="number"
+                min={0}
+                step={1}
+                value={goals[key] ?? ""}
+                onChange={(e) => {
+                  const v = e.target.value;
+                  const n = v === "" ? undefined : Math.max(0, parseInt(v, 10) || 0);
+                  setGoals({ ...goals, [key]: n && n > 0 ? n : undefined });
+                }}
+                placeholder="—"
+                className="px-3 py-2 bg-[var(--color-surface-elevated)] border border-[var(--color-border)] rounded-lg text-[var(--color-text)] focus:ring-2 focus:ring-primary-500"
+              />
+            </label>
+          ))}
+        </div>
+        {Object.values(goals).some((v) => typeof v === "number" && v > 0) && (
+          <button
+            type="button"
+            onClick={clearGoals}
+            className="text-sm text-[var(--color-text-muted)] hover:text-primary-500"
+          >
+            Clear all goals
+          </button>
+        )}
       </div>
 
       <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-6">

@@ -8,6 +8,7 @@ Generates weekly work summaries from Linear issues, GitHub activity, and optiona
 - **Web GUI**: React Router 7 app with form and metrics display
 - **6 metrics**: PRs merged, PRs created/updated, PR reviews, Linear completed, Linear worked on, repos
 - **Today mode**: `--today` / `-t` for midnight-to-now window
+- **Yesterday mode**: `--yesterday` / `-y` for yesterday's stats
 
 ## Setup
 
@@ -25,6 +26,9 @@ GitHub API calls retry automatically on 403/429 (rate limit) to stay within GitH
 ```bash
 # Today only (since midnight)
 pnpm cli --today
+
+# Yesterday only
+pnpm cli --yesterday
 
 # With check-ins file
 pnpm cli check-ins.txt
@@ -47,7 +51,7 @@ pnpm build && pnpm start
 | `pnpm dev`   | Start dev server              |
 | `pnpm build` | Build for production          |
 | `pnpm start` | Serve production build        |
-| `pnpm cli`   | Run CLI (supports `--today`)   |
+| `pnpm cli`   | Run CLI (supports `--today`, `--yesterday`) |
 | `pnpm test`  | Run unit tests                |
 | `pnpm test:e2e` | Run Playwright E2E tests  |
 | `pnpm lint`  | Run ESLint                    |
@@ -60,6 +64,11 @@ pnpm build && pnpm start
 3. Deploy: `git push heroku main`
 
 Procfile runs `react-router-serve build/server/index.js`.
+
+## Monitoring
+
+- **Lightweight**: `GET /health` returns `{ ok: true, timestamp }` (no external calls).
+- **Deep check**: `GET /health?deep=true` verifies GitHub and Linear API connectivity. Returns `{ ok, timestamp, github, linear }` with `"ok"` or `"error"` per service. Use for alerting when APIs are down (e.g. Uptime Robot, Heroku).
 
 ## Security
 

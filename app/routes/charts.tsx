@@ -77,6 +77,8 @@ export default function Charts() {
     week: formatWeek(d.week_ending),
     "PRs merged": d.prs_merged,
     "PR reviews": d.pr_reviews,
+    "PR comments": d.pr_comments,
+    "Commits pushed": d.commits_pushed,
     "Linear completed": d.linear_completed,
     "Linear worked on": d.linear_worked_on,
     "PRs total": d.prs_total,
@@ -84,9 +86,9 @@ export default function Charts() {
   }));
 
   const handleExportCsv = () => {
-    const headers = ["Week", "PRs merged", "PR reviews", "Linear completed", "Linear worked on"];
+    const headers = ["Week", "PRs merged", "PR reviews", "PR comments", "Commits pushed", "Linear completed", "Linear worked on"];
     const rows = metricsData.map((d) =>
-      [d.week, d["PRs merged"], d["PR reviews"], d["Linear completed"], d["Linear worked on"]].join(",")
+      [d.week, d["PRs merged"], d["PR reviews"], d["PR comments"], d["Commits pushed"], d["Linear completed"], d["Linear worked on"]].join(",")
     );
     const csv = [headers.join(","), ...rows].join("\n");
     const blob = new Blob([csv], { type: "text/csv" });

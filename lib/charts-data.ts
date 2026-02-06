@@ -10,6 +10,8 @@ export interface ChartDataPoint {
   week_ending: string;
   prs_merged: number;
   pr_reviews: number;
+  pr_comments: number;
+  commits_pushed: number;
   linear_completed: number;
   linear_worked_on: number;
   prs_total: number;
@@ -38,6 +40,8 @@ export async function getChartsData(): Promise<ChartsData> {
       week_ending,
       prs_merged: s.prs_merged,
       pr_reviews: s.pr_reviews,
+      pr_comments: s.pr_comments,
+      commits_pushed: s.commits_pushed ?? 0,
       linear_completed: s.linear_completed,
       linear_worked_on: s.linear_worked_on,
       prs_total: s.prs_total,
