@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Package, PencilSimple, Eye, CheckCircle, ArrowsClockwise, Folder, CaretDown, CaretRight, Copy, CaretUp, Minus, ChatCircle, GitCommit } from "phosphor-react";
+import { Package, PencilSimple, Eye, CheckCircle, ArrowsClockwise, Folder, CaretDown, CaretRight, Copy, CaretUp, Minus, ChatCircle, GitCommit, PlusCircle } from "phosphor-react";
 import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
 import type { Payload } from "../../lib/types";
@@ -26,6 +26,7 @@ function formatStatsForCopy(stats: Stats): string {
     `Commits pushed: ${stats.commits_pushed}`,
     `Linear completed: ${stats.linear_completed}`,
     `Linear worked on: ${stats.linear_worked_on}`,
+    `Linear issues created: ${stats.linear_issues_created}`,
     `Repos: ${stats.repos.join(", ") || "—"}`,
   ];
   return parts.join(" | ");
@@ -41,9 +42,10 @@ const METRICS = [
   { key: "commits_pushed" as const, label: "Commits pushed", Icon: GitCommit },
   { key: "linear_completed" as const, label: "Linear issues completed", Icon: CheckCircle },
   { key: "linear_worked_on" as const, label: "Linear issues worked on", Icon: ArrowsClockwise },
+  { key: "linear_issues_created" as const, label: "Linear issues created", Icon: PlusCircle },
 ] as const;
 
-const TREND_METRICS = ["prs_merged", "prs_total", "pr_reviews", "pr_comments", "commits_pushed", "linear_completed", "linear_worked_on"] as const;
+const TREND_METRICS = ["prs_merged", "prs_total", "pr_reviews", "pr_comments", "commits_pushed", "linear_completed", "linear_worked_on", "linear_issues_created"] as const;
 
 const GOAL_METRICS = ["prs_merged", "pr_reviews", "linear_completed"] as const;
 
@@ -63,7 +65,8 @@ export function MetricsCard({ stats, prevStats, payload, goals }: MetricsCardPro
     payload.github.merged_prs.length > 0 ||
     payload.github.reviews.length > 0 ||
     payload.linear.completed_issues.length > 0 ||
-    payload.linear.worked_on_issues.length > 0
+    payload.linear.worked_on_issues.length > 0 ||
+    (payload.linear.created_issues?.length ?? 0) > 0
   );
 
   return (
@@ -211,6 +214,29 @@ export function MetricsCard({ stats, prevStats, payload, goals }: MetricsCardPro
                   <h3 className="font-medium text-[var(--color-text-muted)] mb-2">Linear worked on</h3>
                   <ul className="space-y-1">
                     {(payload!.linear.worked_on_issues as LinearIssue[]).map((i, idx) => (
+                      <li key={idx}>
+                        {i.url ? (
+                          <a
+                            href={i.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-primary-500 hover:underline"
+                          >
+                            {i.identifier} {i.title}
+                          </a>
+                        ) : (
+                          <span>{i.identifier} {i.title}</span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {(payload!.linear.created_issues?.length ?? 0) > 0 && (
+                <div>
+                  <h3 className="font-medium text-[var(--color-text-muted)] mb-2">Linear issues created</h3>
+                  <ul className="space-y-1">
+                    {((payload!.linear.created_issues ?? []) as LinearIssue[]).map((i, idx) => (
                       <li key={idx}>
                         {i.url ? (
                           <a

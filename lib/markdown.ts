@@ -12,7 +12,7 @@ export function buildMarkdownSummary(payload: Payload): string {
   if (meta.source_of_truth) md += `## Source of truth\n\n${meta.source_of_truth}\n\n`;
   md += `## Stats\n\n`;
   md += `- PRs merged: ${stats.prs_merged} | Total PRs: ${stats.prs_total} | Reviews: ${stats.pr_reviews} | Comments: ${stats.pr_comments} | Commits: ${stats.commits_pushed ?? 0}\n`;
-  md += `- Linear completed: ${stats.linear_completed} | Worked on: ${stats.linear_worked_on}\n`;
+  md += `- Linear completed: ${stats.linear_completed} | Worked on: ${stats.linear_worked_on} | Created: ${stats.linear_issues_created ?? 0}\n`;
   md += `- Repos: ${stats.repos.join(", ") || "—"}\n\n`;
   md += `## Linear — Completed\n\n`;
   for (const i of linear.completed_issues) {
@@ -27,6 +27,13 @@ export function buildMarkdownSummary(payload: Payload): string {
     const id = (i.identifier as string) ?? "";
     const title = (i.title as string) ?? "";
     md += `- ${id} ${title}\n`;
+  }
+  md += `\n## Linear — Created\n\n`;
+  for (const i of linear.created_issues ?? []) {
+    const id = (i.identifier as string) ?? "";
+    const title = (i.title as string) ?? "";
+    const createdAt = (i.createdAt as string) ?? "";
+    md += `- **${id}** ${title}${createdAt ? ` (${createdAt.slice(0, 10)})` : ""}\n`;
   }
   md += `\n## GitHub — Merged PRs\n\n`;
   for (const pr of github.merged_prs) {

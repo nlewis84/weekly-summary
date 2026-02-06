@@ -18,11 +18,278 @@
       "apollos-admin",
       "apollos-cluster",
       "apollos-platforms"
-    ]
+    ],
+    "linear_issues_created": 33
   },
   "linear": {
     "completed_issues": [],
-    "worked_on_issues": []
+    "worked_on_issues": [],
+    "created_issues": [
+      {
+        "identifier": "APO-6470",
+        "title": "Navigating directly to /give/payment with params results in 500",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6470/navigating-directly-to-givepayment-with-params-results-in-500",
+        "createdAt": "2026-01-16T22:26:06.443Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6460",
+        "title": "Add login button back to web header, but only if the user is logged in",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6460/add-login-button-back-to-web-header-but-only-if-the-user-is-logged-in",
+        "createdAt": "2026-01-16T17:13:50.044Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6459",
+        "title": "app/app clip are sending to /payment-method in app but needs to go to /give/payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6459/appapp-clip-are-sending-to-payment-method-in-app-but-needs-to-go-to",
+        "createdAt": "2026-01-16T17:11:38.401Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6443",
+        "title": "/payment make sure the blob about your gift details is actually correct from the params",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6443/payment-make-sure-the-blob-about-your-gift-details-is-actually-correct",
+        "createdAt": "2026-01-15T15:49:58.295Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6442",
+        "title": "loading state on Give button should be a spinner not `Processing...`",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6442/loading-state-on-give-button-should-be-a-spinner-not-processing",
+        "createdAt": "2026-01-15T14:36:48.461Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6440",
+        "title": "on /give if a campus has a default fund it is selected. do the same thing on /new-give",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6440/on-give-if-a-campus-has-a-default-fund-it-is-selected-do-the-same",
+        "createdAt": "2026-01-14T22:50:42.668Z",
+        "state": "Duplicate"
+      },
+      {
+        "identifier": "APO-6439",
+        "title": "make sure we set the default frequency",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6439/make-sure-we-set-the-default-frequency",
+        "createdAt": "2026-01-14T22:50:14.635Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6438",
+        "title": "locations should be sorted in the modal the same as on /give",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6438/locations-should-be-sorted-in-the-modal-the-same-as-on-give",
+        "createdAt": "2026-01-14T22:49:45.002Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6435",
+        "title": "Ensure correct language on Give Button States",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6435/ensure-correct-language-on-give-button-states",
+        "createdAt": "2026-01-14T21:38:12.301Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6434",
+        "title": "move /new-give to replace /give",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6434/move-new-give-to-replace-give",
+        "createdAt": "2026-01-14T20:28:04.545Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6432",
+        "title": "better regex on web to limit what counts as a handle",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-6432/better-regex-on-web-to-limit-what-counts-as-a-handle",
+        "createdAt": "2026-01-14T19:03:07.227Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6430",
+        "title": "block malicious crawler request explicitly on web",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-6430/block-malicious-crawler-request-explicitly-on-web",
+        "createdAt": "2026-01-14T18:05:36.806Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6429",
+        "title": "ensure loading states are minimal or non-existent",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6429/ensure-loading-states-are-minimal-or-non-existent",
+        "createdAt": "2026-01-14T17:29:45.523Z",
+        "state": "Duplicate"
+      },
+      {
+        "identifier": "APO-6427",
+        "title": "location modal close button - see what a ghost mode looks like",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6427/location-modal-close-button-see-what-a-ghost-mode-looks-like",
+        "createdAt": "2026-01-14T17:09:18.757Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6426",
+        "title": "in dark mode, the background of the frequency input should match the other inputs",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6426/in-dark-mode-the-background-of-the-frequency-input-should-match-the",
+        "createdAt": "2026-01-14T17:05:45.446Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6424",
+        "title": "make sure 1st/15th is persisting to /payment screen (through login)",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6424/make-sure-1st15th-is-persisting-to-payment-screen-through-login",
+        "createdAt": "2026-01-14T16:20:37.063Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6422",
+        "title": "Back caret on /payment takes the user back to church slug home route",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6422/back-caret-on-payment-takes-the-user-back-to-church-slug-home-route",
+        "createdAt": "2026-01-14T16:20:04.299Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6421",
+        "title": "Edit details link on /payment doesn't do anything (refreshes the page)",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6421/edit-details-link-on-payment-doesnt-do-anything-refreshes-the-page",
+        "createdAt": "2026-01-14T16:19:39.358Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6420",
+        "title": "Selecting a duration doesn't persist correctly to /new-give/payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6420/selecting-a-duration-doesnt-persist-correctly-to-new-givepayment",
+        "createdAt": "2026-01-14T16:19:01.702Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6415",
+        "title": "Better scroll container on small mobile devices",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6415/better-scroll-container-on-small-mobile-devices",
+        "createdAt": "2026-01-13T21:40:09.656Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6414",
+        "title": "Frequency and Starting should be side by side in mobile viewport and fix top padding",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6414/frequency-and-starting-should-be-side-by-side-in-mobile-viewport-and",
+        "createdAt": "2026-01-13T20:00:10.204Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6413",
+        "title": "money input should get a ring on focus (theme.secondary)",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6413/money-input-should-get-a-ring-on-focus-themesecondary",
+        "createdAt": "2026-01-13T19:49:21.953Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6412",
+        "title": "focus ring for give button should be theme.secondary",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6412/focus-ring-for-give-button-should-be-themesecondary",
+        "createdAt": "2026-01-13T19:47:08.216Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6411",
+        "title": "make the focus ring for fund selector just be around the text and caret (not full width)",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6411/make-the-focus-ring-for-fund-selector-just-be-around-the-text-and",
+        "createdAt": "2026-01-13T19:46:36.557Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6403",
+        "title": "toggling on and off make recurring breaks the config default on frequency and starting inputs",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6403/toggling-on-and-off-make-recurring-breaks-the-config-default-on",
+        "createdAt": "2026-01-13T17:30:54.672Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6402",
+        "title": "Select a frequency option goes away",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6402/select-a-frequency-option-goes-away",
+        "createdAt": "2026-01-13T17:29:17.737Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6399",
+        "title": "Starting input has double focus rings",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6399/starting-input-has-double-focus-rings",
+        "createdAt": "2026-01-13T16:50:44.334Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6395",
+        "title": "New Give - correct routing behavior for /success and back navigation",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6395/new-give-correct-routing-behavior-for-success-and-back-navigation",
+        "createdAt": "2026-01-13T15:57:18.577Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6394",
+        "title": "Make money input look different",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6394/make-money-input-look-different",
+        "createdAt": "2026-01-13T15:54:56.701Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6393",
+        "title": "Remove white ring on focus for campus and fund selectors",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6393/remove-white-ring-on-focus-for-campus-and-fund-selectors",
+        "createdAt": "2026-01-13T15:24:56.121Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6392",
+        "title": "Update the fund selector to look like the mock",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6392/update-the-fund-selector-to-look-like-the-mock",
+        "createdAt": "2026-01-13T15:23:53.929Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6390",
+        "title": "Payment intents should never be the global user",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6390/payment-intents-should-never-be-the-global-user",
+        "createdAt": "2026-01-13T15:06:28.460Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6371",
+        "title": "on a mobile device, it's hard to get the keyboard to open",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6371/on-a-mobile-device-its-hard-to-get-the-keyboard-to-open",
+        "createdAt": "2026-01-12T22:08:43.973Z",
+        "state": "Done"
+      }
+    ]
   },
   "github": {
     "merged_prs": [

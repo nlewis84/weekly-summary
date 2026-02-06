@@ -1,4 +1,4 @@
-import { CalendarBlank, CaretUp, CaretDown, Minus, Copy, Package, Eye, CheckCircle, ArrowsClockwise, Folder, ChatCircle, GitCommit } from "phosphor-react";
+import { CalendarBlank, CaretUp, CaretDown, Minus, Copy, Package, Eye, CheckCircle, ArrowsClockwise, Folder, ChatCircle, GitCommit, PlusCircle } from "phosphor-react";
 import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
 import type { WeeklyGoals } from "../hooks/useGoals";
@@ -9,7 +9,7 @@ interface WeeklyTickerProps {
   goals?: WeeklyGoals;
 }
 
-const METRIC_KEYS = ["prs_merged", "pr_reviews", "pr_comments", "commits_pushed", "linear_completed", "linear_worked_on"] as const;
+const METRIC_KEYS = ["prs_merged", "pr_reviews", "pr_comments", "commits_pushed", "linear_completed", "linear_worked_on", "linear_issues_created"] as const;
 
 function TrendBadge({ delta }: { delta: number }) {
   if (delta === 0) return <Minus size={12} weight="bold" className="text-[var(--color-text-muted)]" aria-label="no change" />;
@@ -25,6 +25,7 @@ function formatStatsForCopy(stats: Stats): string {
     `Commits pushed: ${stats.commits_pushed}`,
     `Linear completed: ${stats.linear_completed}`,
     `Linear worked on: ${stats.linear_worked_on}`,
+    `Linear issues created: ${stats.linear_issues_created}`,
     `Repos: ${stats.repos.join(", ") || "—"}`,
   ];
   return parts.join(" | ");
@@ -37,6 +38,7 @@ const METRICS = [
   { key: "commits_pushed" as const, label: "Commits pushed", Icon: GitCommit },
   { key: "linear_completed" as const, label: "Linear completed", Icon: CheckCircle },
   { key: "linear_worked_on" as const, label: "Linear worked on", Icon: ArrowsClockwise },
+  { key: "linear_issues_created" as const, label: "Issues created", Icon: PlusCircle },
 ] as const;
 
 const GOAL_METRICS = ["prs_merged", "pr_reviews", "linear_completed"] as const;

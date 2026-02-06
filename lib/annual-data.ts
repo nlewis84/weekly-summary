@@ -14,6 +14,7 @@ export interface MonthlyAggregate {
   commits_pushed: number;
   linear_completed: number;
   linear_worked_on: number;
+  linear_issues_created: number;
   prs_total: number;
   week_count: number;
 }
@@ -27,6 +28,7 @@ export interface AnnualData {
   total_commits_pushed: number;
   total_linear_completed: number;
   total_linear_worked_on: number;
+  total_linear_issues_created: number;
   topRepos: { repo: string; prs: number }[];
   topProjects: { project: string; issues: number }[];
   weeks: string[];
@@ -44,7 +46,7 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
     (r): r is { week: string; payload: Payload } => r.payload != null
   );
 
-  const monthMap = new Map<string, { prs_merged: number; pr_reviews: number; pr_comments: number; commits_pushed: number; linear_completed: number; linear_worked_on: number; prs_total: number; count: number }>();
+  const monthMap = new Map<string, { prs_merged: number; pr_reviews: number; pr_comments: number; commits_pushed: number; linear_completed: number; linear_worked_on: number; linear_issues_created: number; prs_total: number; count: number }>();
   const repoMap = new Map<string, number>();
   const projectMap = new Map<string, number>();
 
@@ -58,6 +60,7 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
       commits_pushed: 0,
       linear_completed: 0,
       linear_worked_on: 0,
+      linear_issues_created: 0,
       prs_total: 0,
       count: 0,
     };
@@ -67,6 +70,7 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
     curr.commits_pushed += s.commits_pushed ?? 0;
     curr.linear_completed += s.linear_completed;
     curr.linear_worked_on += s.linear_worked_on;
+    curr.linear_issues_created += s.linear_issues_created ?? 0;
     curr.prs_total += s.prs_total;
     curr.count += 1;
     monthMap.set(month, curr);
@@ -98,6 +102,7 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
         commits_pushed: data.commits_pushed,
         linear_completed: data.linear_completed,
         linear_worked_on: data.linear_worked_on,
+        linear_issues_created: data.linear_issues_created,
         prs_total: data.prs_total,
         week_count: data.count,
       };
@@ -121,8 +126,9 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
       commits_pushed: acc.commits_pushed + m.commits_pushed,
       linear_completed: acc.linear_completed + m.linear_completed,
       linear_worked_on: acc.linear_worked_on + m.linear_worked_on,
+      linear_issues_created: acc.linear_issues_created + m.linear_issues_created,
     }),
-    { prs_merged: 0, pr_reviews: 0, pr_comments: 0, commits_pushed: 0, linear_completed: 0, linear_worked_on: 0 }
+    { prs_merged: 0, pr_reviews: 0, pr_comments: 0, commits_pushed: 0, linear_completed: 0, linear_worked_on: 0, linear_issues_created: 0 }
   );
 
   return {
@@ -134,6 +140,7 @@ export async function getAnnualData(year: string): Promise<AnnualData> {
     total_commits_pushed: totals.commits_pushed,
     total_linear_completed: totals.linear_completed,
     total_linear_worked_on: totals.linear_worked_on,
+    total_linear_issues_created: totals.linear_issues_created,
     topRepos,
     topProjects,
     weeks: yearWeeks.sort(),

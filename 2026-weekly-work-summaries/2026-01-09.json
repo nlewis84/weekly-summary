@@ -17,11 +17,110 @@
     "repos": [
       "apollos-admin",
       "apollos-cluster"
-    ]
+    ],
+    "linear_issues_created": 12
   },
   "linear": {
     "completed_issues": [],
-    "worked_on_issues": []
+    "worked_on_issues": [],
+    "created_issues": [
+      {
+        "identifier": "APO-6288",
+        "title": "if you need to fill out email/phone on payment info screen, the button text should change",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6288/if-you-need-to-fill-out-emailphone-on-payment-info-screen-the-button",
+        "createdAt": "2026-01-09T17:41:17.889Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6255",
+        "title": "If a user is not logged in at all (not even global) and goes to a route like /give/history ...",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6255/if-a-user-is-not-logged-in-at-all-not-even-global-and-goes-to-a-route",
+        "createdAt": "2026-01-08T23:14:31.461Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-6243",
+        "title": "remove code in web that strips global tokens",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6243/remove-code-in-web-that-strips-global-tokens",
+        "createdAt": "2026-01-08T17:33:55.466Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6237",
+        "title": "if you hit give again and have payment info params they carry over when they should clear out",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6237/if-you-hit-give-again-and-have-payment-info-params-they-carry-over",
+        "createdAt": "2026-01-08T16:15:05.228Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6236",
+        "title": "/join does not redirect correctly to payment info if a user tries to give when unauthed",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6236/join-does-not-redirect-correctly-to-payment-info-if-a-user-tries-to",
+        "createdAt": "2026-01-08T15:49:11.658Z",
+        "state": "Duplicate"
+      },
+      {
+        "identifier": "APO-6235",
+        "title": "/join page does not match /signup/match",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6235/join-page-does-not-match-signupmatch",
+        "createdAt": "2026-01-08T15:48:18.019Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6181",
+        "title": "Fix loading state issues",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6181/fix-loading-state-issues",
+        "createdAt": "2026-01-07T14:50:32.521Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6101",
+        "title": "redirect at the correct time if a user is unauthed on /give",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6101/redirect-at-the-correct-time-if-a-user-is-unauthed-on-give",
+        "createdAt": "2026-01-06T23:46:29.404Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6090",
+        "title": "Figure out why Conrad is having Session issues",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6090/figure-out-why-conrad-is-having-session-issues",
+        "createdAt": "2026-01-06T18:37:22.671Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6087",
+        "title": "Secure & Encrypted badge should have a system gray background instead of white in dark mode",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6087/secure-and-encrypted-badge-should-have-a-system-gray-background",
+        "createdAt": "2026-01-06T17:39:47.293Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6086",
+        "title": "Consolidate the /authed-giving page to /give",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6086/consolidate-the-authed-giving-page-to-give",
+        "createdAt": "2026-01-06T17:34:02.256Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6022",
+        "title": "Web - Convert Name, email, phone to hidden inputs on Donation Form",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6022/web-convert-name-email-phone-to-hidden-inputs-on-donation-form",
+        "createdAt": "2026-01-05T15:09:26.194Z",
+        "state": "Done"
+      }
+    ]
   },
   "github": {
     "merged_prs": [

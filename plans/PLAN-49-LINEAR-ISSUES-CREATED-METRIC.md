@@ -1,6 +1,6 @@
 # Plan 49: Linear Issues Created
 
-**Status: 🔲 Pending** · **Priority: P2** · **Effort: Low** · **Impact: Medium**
+**Status: ✅ Done** · **Priority: P2** · **Effort: Low** · **Impact: Medium**
 
 **Validated Feb 2026:** `linear_issues_created` not in `Stats`. Still relevant.
 

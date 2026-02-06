@@ -14,6 +14,7 @@ export interface ChartDataPoint {
   commits_pushed: number;
   linear_completed: number;
   linear_worked_on: number;
+  linear_issues_created: number;
   prs_total: number;
   repos_count: number;
 }
@@ -44,6 +45,7 @@ export async function getChartsData(): Promise<ChartsData> {
       commits_pushed: s.commits_pushed ?? 0,
       linear_completed: s.linear_completed,
       linear_worked_on: s.linear_worked_on,
+      linear_issues_created: s.linear_issues_created ?? 0,
       prs_total: s.prs_total,
       repos_count: s.repos.length,
     };

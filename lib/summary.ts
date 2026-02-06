@@ -41,6 +41,15 @@ const LINEAR_WORKED_ON_QUERY = `
   }
 `;
 
+const LINEAR_CREATED_QUERY = `
+  query GetCreatedIssues($creatorId: ID!, $createdAfter: DateTimeOrDuration!, $createdBefore: DateTimeOrDuration!, $after: String) {
+    issues(filter: { creator: { id: { eq: $creatorId } }, createdAt: { gte: $createdAfter, lte: $createdBefore } }, first: 100, after: $after) {
+      nodes { id identifier title state { name type } url createdAt project { name } }
+      pageInfo { hasNextPage endCursor }
+    }
+  }
+`;
+
 export function getWindowStart(now: Date, todayMode: boolean, yesterdayMode = false): Date {
   if (yesterdayMode) {
     const yesterday = new Date(now);
@@ -175,7 +184,7 @@ async function fetchLinearData(
   windowEndISO: string
 ) {
   const key = process.env.LINEAR_API_KEY;
-  if (!key) return { completedIssues: [], workedOnIssues: [], userName: null };
+  if (!key) return { completedIssues: [], workedOnIssues: [], createdIssues: [], userName: null };
 
   const headers = { Authorization: key, "Content-Type": "application/json" };
 
@@ -186,16 +195,22 @@ async function fetchLinearData(
 
     const userName = (userData as { viewer?: { name?: string } })?.viewer?.name ?? null;
 
-    const completedIssues = await fetchAllLinearIssues(headers, LINEAR_COMPLETED_QUERY, {
-      assigneeId: userId,
-      completedAfter: windowStartISO,
-      completedBefore: windowEndISO,
-    });
-
-    const rawWorkedOn = await fetchAllLinearIssues(headers, LINEAR_WORKED_ON_QUERY, {
-      assigneeId: userId,
-      updatedAfter: windowStartISO,
-    });
+    const [completedIssues, rawWorkedOn, createdIssues] = await Promise.all([
+      fetchAllLinearIssues(headers, LINEAR_COMPLETED_QUERY, {
+        assigneeId: userId,
+        completedAfter: windowStartISO,
+        completedBefore: windowEndISO,
+      }),
+      fetchAllLinearIssues(headers, LINEAR_WORKED_ON_QUERY, {
+        assigneeId: userId,
+        updatedAfter: windowStartISO,
+      }),
+      fetchAllLinearIssues(headers, LINEAR_CREATED_QUERY, {
+        creatorId: userId,
+        createdAfter: windowStartISO,
+        createdBefore: windowEndISO,
+      }),
+    ]);
 
     const workedOnIssues = rawWorkedOn.filter((issue) => {
       const stateName = issue.state?.name ?? "";
@@ -209,9 +224,9 @@ async function fetchLinearData(
       return false;
     });
 
-    return { completedIssues, workedOnIssues, userName };
+    return { completedIssues, workedOnIssues, createdIssues, userName };
   } catch {
-    return { completedIssues: [], workedOnIssues: [], userName: null };
+    return { completedIssues: [], workedOnIssues: [], createdIssues: [], userName: null };
   }
 }
 
@@ -382,7 +397,7 @@ function groupPRsByRepo(prs: Array<{ html_url?: string }>) {
 }
 
 function buildTerminalOutput(
-  linearData: { completedIssues: unknown[]; workedOnIssues: unknown[] },
+  linearData: { completedIssues: unknown[]; workedOnIssues: unknown[]; createdIssues: unknown[] },
   githubData: { prs: unknown[]; reviews: unknown[]; commits_pushed?: number },
   checkIns: CheckIn[],
   prCategories: { merged: unknown[] },
@@ -398,6 +413,7 @@ function buildTerminalOutput(
   out += `  • Commits pushed: ${githubData.commits_pushed ?? 0}\n`;
   out += `  • Linear issues completed: ${linearData.completedIssues.length}\n`;
   out += `  • Linear issues worked on: ${linearData.workedOnIssues.length}\n`;
+  out += `  • Linear issues created: ${linearData.createdIssues.length}\n`;
   out += `  • Repos: ${repos.join(", ") || "—"}\n\n`;
 
   if (checkIns.length > 0) {
@@ -464,6 +480,7 @@ export async function runSummary(options: {
     commits_pushed: githubData.commits_pushed,
     linear_completed: linearData.completedIssues.length,
     linear_worked_on: linearData.workedOnIssues.length,
+    linear_issues_created: linearData.createdIssues.length,
     repos,
   };
 
@@ -511,6 +528,14 @@ export async function runSummary(options: {
         project: i.project?.name ?? null,
         url: i.url ?? null,
         completedAt: i.completedAt ?? null,
+        state: i.state?.name ?? i.state?.type ?? null,
+      })),
+      created_issues: linearData.createdIssues.map((i: { identifier?: string; title?: string; project?: { name?: string }; url?: string; createdAt?: string | null; state?: { name?: string; type?: string } }) => ({
+        identifier: i.identifier ?? "",
+        title: i.title ?? "",
+        project: i.project?.name ?? null,
+        url: i.url ?? null,
+        createdAt: i.createdAt ?? null,
         state: i.state?.name ?? i.state?.type ?? null,
       })),
     },

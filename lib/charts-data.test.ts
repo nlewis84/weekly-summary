@@ -23,9 +23,10 @@ const mockPayload = (weekEnding: string, prsMerged: number, repo: string) => ({
     commits_pushed: 0,
     linear_completed: 3,
     linear_worked_on: 1,
+    linear_issues_created: 0,
     repos: [repo],
   },
-  linear: { completed_issues: [], worked_on_issues: [] },
+  linear: { completed_issues: [], worked_on_issues: [], created_issues: [] },
   github: {
     merged_prs: Array.from({ length: prsMerged }, (_, i) => ({
       title: `PR ${i}`,
@@ -90,6 +91,7 @@ describe("getChartsData", () => {
         commits_pushed: 0,
         linear_completed: 0,
         linear_worked_on: 0,
+        linear_issues_created: 0,
         repos: ["owner/small", "owner/big"],
       },
     });

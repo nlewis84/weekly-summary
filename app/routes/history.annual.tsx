@@ -24,6 +24,7 @@ function CompareTotals({ primary, compare }: { primary: AnnualData; compare: Ann
     { key: "total_commits_pushed", label: "Commits pushed" },
     { key: "total_linear_completed", label: "Linear completed" },
     { key: "total_linear_worked_on", label: "Linear worked on" },
+    { key: "total_linear_issues_created", label: "Linear issues created" },
   ];
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -188,13 +189,14 @@ export default function HistoryAnnual() {
       {compareData ? (
         <CompareTotals primary={annualData} compare={compareData} />
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
           <MetricCard label="PRs merged" value={annualData.total_prs_merged} />
           <MetricCard label="PR reviews" value={annualData.total_pr_reviews} />
           <MetricCard label="PR comments" value={annualData.total_pr_comments} />
           <MetricCard label="Commits pushed" value={annualData.total_commits_pushed} />
           <MetricCard label="Linear completed" value={annualData.total_linear_completed} />
           <MetricCard label="Linear worked on" value={annualData.total_linear_worked_on} />
+          <MetricCard label="Linear issues created" value={annualData.total_linear_issues_created} />
         </div>
       )}
 

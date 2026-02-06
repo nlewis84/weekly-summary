@@ -19,7 +19,8 @@
       "apollos-cluster",
       "apollos-platforms",
       "git-for-sql"
-    ]
+    ],
+    "linear_issues_created": 7
   },
   "linear": {
     "completed_issues": [
@@ -136,6 +137,64 @@
         "url": "https://linear.app/differential/issue/APO-6690/when-entering-bank-details-manually-you-see-an-error-message",
         "completedAt": null,
         "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-6924",
+        "title": "Build a Metaquery for Moving Data between users in Admin",
+        "project": "Merge & Deactivate User",
+        "url": "https://linear.app/differential/issue/APO-6924/build-a-metaquery-for-moving-data-between-users-in-admin",
+        "createdAt": "2026-02-05T15:56:42.603Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6887",
+        "title": "Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6887/ensure-churches-without-full-giving-platform-pass-along-payment-params",
+        "createdAt": "2026-02-04T15:10:58.655Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6801",
+        "title": "Get to 100% test coverage on all web giving files",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6801/get-to-100percent-test-coverage-on-all-web-giving-files",
+        "createdAt": "2026-02-03T17:50:46.454Z",
+        "state": "Queue"
+      },
+      {
+        "identifier": "APO-6800",
+        "title": "Can we set 100% test coverage required for /give related files in Web?",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6800/can-we-set-100percent-test-coverage-required-for-give-related-files-in",
+        "createdAt": "2026-02-03T17:50:30.880Z",
+        "state": "Queue"
+      },
+      {
+        "identifier": "APO-6795",
+        "title": "Ensure that redirect linking in the apollos app doesn't double encode urls passed to it",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6795/ensure-that-redirect-linking-in-the-apollos-app-doesnt-double-encode",
+        "createdAt": "2026-02-03T15:50:25.309Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6789",
+        "title": "Customer data doesn't attach to recurring transactions properly",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6789/customer-data-doesnt-attach-to-recurring-transactions-properly",
+        "createdAt": "2026-02-03T14:37:28.075Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-6765",
+        "title": "Merge button: support users with Apollos data on both profiles",
+        "project": "Merge & Deactivate User",
+        "url": "https://linear.app/differential/issue/APO-6765/merge-button-support-users-with-apollos-data-on-both-profiles",
+        "createdAt": "2026-02-02T20:13:34.902Z",
+        "state": "Done"
       }
     ]
   },

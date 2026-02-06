@@ -149,6 +149,7 @@ describe("runSummary", () => {
       commits_pushed: expect.any(Number),
       linear_completed: expect.any(Number),
       linear_worked_on: expect.any(Number),
+      linear_issues_created: expect.any(Number),
       repos: expect.any(Array),
     });
     expect(result.terminalOutput).toBeDefined();

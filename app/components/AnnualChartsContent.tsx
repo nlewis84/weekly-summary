@@ -11,6 +11,7 @@ const METRICS = [
   { key: "Commits pushed", color: "var(--chart-4)" },
   { key: "Linear completed", color: "var(--chart-5)" },
   { key: "Linear worked on", color: "var(--chart-6)" },
+  { key: "Linear issues created", color: "var(--chart-7)" },
 ] as const;
 
 interface MonthlyPoint {
@@ -22,6 +23,7 @@ interface MonthlyPoint {
   commits_pushed: number;
   linear_completed: number;
   linear_worked_on: number;
+  linear_issues_created: number;
 }
 
 interface AnnualChartsContentProps {
@@ -37,6 +39,7 @@ export function AnnualChartsContent({ months }: AnnualChartsContentProps) {
     "Commits pushed": m.commits_pushed,
     "Linear completed": m.linear_completed,
     "Linear worked on": m.linear_worked_on,
+    "Linear issues created": m.linear_issues_created,
   }));
 
   return (

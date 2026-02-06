@@ -17,11 +17,110 @@
     "repos": [
       "apollos-admin",
       "apollos-cluster"
-    ]
+    ],
+    "linear_issues_created": 12
   },
   "linear": {
     "completed_issues": [],
-    "worked_on_issues": []
+    "worked_on_issues": [],
+    "created_issues": [
+      {
+        "identifier": "APO-6019",
+        "title": "Web - Should a user be able to donate if there are no FUNDS for a selected church?",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6019/web-should-a-user-be-able-to-donate-if-there-are-no-funds-for-a",
+        "createdAt": "2026-01-02T23:45:13.516Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6018",
+        "title": "Updates to Give screen",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6018/updates-to-give-screen",
+        "createdAt": "2026-01-02T20:53:47.509Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6003",
+        "title": "Create profile page button should focus empty inputs instead of being disabled",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6003/create-profile-page-button-should-focus-empty-inputs-instead-of-being",
+        "createdAt": "2025-12-30T23:39:16.976Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6002",
+        "title": "OTP inputs should have white background, not gray and be rectangle on desktop",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6002/otp-inputs-should-have-white-background-not-gray-and-be-rectangle-on",
+        "createdAt": "2025-12-30T21:42:01.057Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5985",
+        "title": "Updates to Thank You screen",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-5985/updates-to-thank-you-screen",
+        "createdAt": "2025-12-29T16:07:11.065Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5984",
+        "title": "Updates to Payment Info screen",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-5984/updates-to-payment-info-screen",
+        "createdAt": "2025-12-29T16:06:28.451Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5983",
+        "title": "Updates to Create Profile screen",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-5983/updates-to-create-profile-screen",
+        "createdAt": "2025-12-29T16:02:46.060Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5982",
+        "title": "Updates to Sign In / Sign Up screen",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-5982/updates-to-sign-in-sign-up-screen",
+        "createdAt": "2025-12-29T15:58:19.106Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5981",
+        "title": "Add Change your Number/Email link to OTP Verify step",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-5981/add-change-your-numberemail-link-to-otp-verify-step",
+        "createdAt": "2025-12-29T15:56:52.708Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5979",
+        "title": "Make sure that you cannot spam the Resend button",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-5979/make-sure-that-you-cannot-spam-the-resend-button",
+        "createdAt": "2025-12-29T15:43:54.045Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5978",
+        "title": "Updates to Merge Screen",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-5978/updates-to-merge-screen",
+        "createdAt": "2025-12-29T15:43:12.182Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5977",
+        "title": "Dark Mode issue around avatar on merge screen",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-5977/dark-mode-issue-around-avatar-on-merge-screen",
+        "createdAt": "2025-12-29T15:39:48.134Z",
+        "state": "Done"
+      }
+    ]
   },
   "github": {
     "merged_prs": [

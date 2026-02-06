@@ -16,11 +16,110 @@
     "linear_worked_on": 33,
     "repos": [
       "apollos-admin"
-    ]
+    ],
+    "linear_issues_created": 12
   },
   "linear": {
     "completed_issues": [],
-    "worked_on_issues": []
+    "worked_on_issues": [],
+    "created_issues": [
+      {
+        "identifier": "APO-6604",
+        "title": "Fix z-index issue with UserMenu and Dialog",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6604/fix-z-index-issue-with-usermenu-and-dialog",
+        "createdAt": "2026-01-23T16:16:19.061Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6571",
+        "title": "Remove top \"powered by Apollos\" callout and update footer with links and language from that newer /give related one",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6571/remove-top-powered-by-apollos-callout-and-update-footer-with-links-and",
+        "createdAt": "2026-01-22T16:49:56.276Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6556",
+        "title": "Make header on web sticky and it should not go away on scroll",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6556/make-header-on-web-sticky-and-it-should-not-go-away-on-scroll",
+        "createdAt": "2026-01-22T16:13:26.107Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6555",
+        "title": "Remove Google/Apply from the Stripe UI component on /give/payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6555/remove-googleapply-from-the-stripe-ui-component-on-givepayment",
+        "createdAt": "2026-01-22T16:12:34.834Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6554",
+        "title": "Put back Apple Pay and Google Pay button on /give/payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6554/put-back-apple-pay-and-google-pay-button-on-givepayment",
+        "createdAt": "2026-01-22T16:09:53.344Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6552",
+        "title": "On submit the /give give button moves around",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6552/on-submit-the-give-give-button-moves-around",
+        "createdAt": "2026-01-21T21:49:28.995Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6541",
+        "title": "Vercel web timeout issues",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6541/vercel-web-timeout-issues",
+        "createdAt": "2026-01-21T17:08:15.858Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6538",
+        "title": "If a user hits /give or /payment with prefilledPayment params, the page should not 500",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6538/if-a-user-hits-give-or-payment-with-prefilledpayment-params-the-page",
+        "createdAt": "2026-01-21T17:01:45.702Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6514",
+        "title": "If a user logs out on /give/payment, they should get sent to /give with params",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6514/if-a-user-logs-out-on-givepayment-they-should-get-sent-to-give-with",
+        "createdAt": "2026-01-20T23:15:06.658Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6503",
+        "title": "remove JOIN CHURCH button in header",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6503/remove-join-church-button-in-header",
+        "createdAt": "2026-01-20T20:51:28.081Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6495",
+        "title": "Investigate time to paint when coming from mobile give -> other payment methods -> web giving",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6495/investigate-time-to-paint-when-coming-from-mobile-give-other-payment",
+        "createdAt": "2026-01-20T17:30:14.668Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6492",
+        "title": "redirect /payment-methods directly to /give/payment with all params intact",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6492/redirect-payment-methods-directly-to-givepayment-with-all-params",
+        "createdAt": "2026-01-20T15:58:27.302Z",
+        "state": "Done"
+      }
+    ]
   },
   "github": {
     "merged_prs": [

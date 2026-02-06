@@ -29,6 +29,7 @@ const GITHUB_METRICS = [
 const LINEAR_METRICS = [
   { key: "Linear completed", color: "var(--chart-5)" },
   { key: "Linear worked on", color: "var(--chart-6)" },
+  { key: "Linear issues created", color: "var(--chart-7)" },
 ] as const;
 
 const REPO_COLORS = [
@@ -53,6 +54,7 @@ interface ChartsContentProps {
     commits_pushed: number;
     linear_completed: number;
     linear_worked_on: number;
+    linear_issues_created: number;
     prs_total: number;
     repos_count: number;
   }[];
@@ -73,6 +75,7 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
     "Commits pushed": d.commits_pushed,
     "Linear completed": d.linear_completed,
     "Linear worked on": d.linear_worked_on,
+    "Linear issues created": d.linear_issues_created,
   }));
 
   const topRepos = repoActivity.slice(0, 6);

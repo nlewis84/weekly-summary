@@ -82,6 +82,7 @@ const DEFAULT_STATS: Stats = {
   commits_pushed: 0,
   linear_completed: 0,
   linear_worked_on: 0,
+  linear_issues_created: 0,
   repos: ["apollos-admin"],
 };
 
@@ -103,7 +104,7 @@ export function parseTranscriptToPayload(content: string): Payload | null {
     "",
     "📋 Extracted from week-in-review transcript",
     "",
-    `Stats: ${stats.prs_merged} PRs merged | ${stats.prs_total} total | ${stats.pr_reviews} reviews | ${stats.linear_completed} Linear completed | ${stats.linear_worked_on} worked on`,
+    `Stats: ${stats.prs_merged} PRs merged | ${stats.prs_total} total | ${stats.pr_reviews} reviews | ${stats.linear_completed} Linear completed | ${stats.linear_worked_on} worked on | ${stats.linear_issues_created} created`,
     "",
     narrative,
   ].join("\n");
@@ -120,6 +121,7 @@ export function parseTranscriptToPayload(content: string): Payload | null {
     linear: {
       completed_issues: [],
       worked_on_issues: [],
+      created_issues: [],
     },
     github: {
       merged_prs: [],

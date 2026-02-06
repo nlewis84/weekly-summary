@@ -45,13 +45,14 @@ function DeltaBadge({ delta }: { delta: number }) {
   return <CaretDown size={14} weight="bold" className="text-amber-600 dark:text-amber-400" />;
 }
 
-const METRIC_KEYS = ["prs_merged", "prs_total", "pr_reviews", "linear_completed", "linear_worked_on"] as const;
+const METRIC_KEYS = ["prs_merged", "prs_total", "pr_reviews", "linear_completed", "linear_worked_on", "linear_issues_created"] as const;
 const METRIC_LABELS: Record<(typeof METRIC_KEYS)[number], string> = {
   prs_merged: "PRs merged",
   prs_total: "PRs created/updated",
   pr_reviews: "PR reviews",
   linear_completed: "Linear completed",
   linear_worked_on: "Linear worked on",
+  linear_issues_created: "Linear issues created",
 };
 
 export default function HistoryCompare() {
@@ -144,8 +145,8 @@ export default function HistoryCompare() {
               </thead>
               <tbody>
                 {METRIC_KEYS.map((key) => {
-                  const v1 = s1[key];
-                  const v2 = s2[key];
+                  const v1 = (s1[key] as number | undefined) ?? 0;
+                  const v2 = (s2[key] as number | undefined) ?? 0;
                   const delta = v2 - v1;
                   return (
                     <tr key={key} className="border-b border-[var(--color-border)] last:border-0">

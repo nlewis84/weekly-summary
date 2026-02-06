@@ -17,7 +17,8 @@
     "repos": [
       "apollos-cluster",
       "apollos-admin"
-    ]
+    ],
+    "linear_issues_created": 8
   },
   "linear": {
     "completed_issues": [
@@ -170,6 +171,72 @@
         "url": "https://linear.app/differential/issue/APO-6502/make-auth-errors-less-disruptive",
         "completedAt": null,
         "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-6754",
+        "title": "mitm mobile to web handoff",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6754/mitm-mobile-to-web-handoff",
+        "createdAt": "2026-01-30T23:01:06.409Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6721",
+        "title": "Loading payment options from Stripe... copy change to Loading payment options",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6721/loading-payment-options-from-stripe-copy-change-to-loading-payment",
+        "createdAt": "2026-01-30T15:39:39.816Z",
+        "state": "Queue"
+      },
+      {
+        "identifier": "APO-6690",
+        "title": "When entering bank details manually, you see an error message",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6690/when-entering-bank-details-manually-you-see-an-error-message",
+        "createdAt": "2026-01-29T17:10:29.307Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6673",
+        "title": "Improve skeletons / loading for Stripe payment element",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6673/improve-skeletons-loading-for-stripe-payment-element",
+        "createdAt": "2026-01-28T19:16:39.979Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6672",
+        "title": "Named / shared GraphQL query for getCurrentUserSharedProfile",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6672/named-shared-graphql-query-for-getcurrentusersharedprofile",
+        "createdAt": "2026-01-28T19:16:09.812Z",
+        "state": "Queue"
+      },
+      {
+        "identifier": "APO-6671",
+        "title": "Create vs update PaymentIntent",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6671/create-vs-update-paymentintent",
+        "createdAt": "2026-01-28T19:15:12.415Z",
+        "state": "Queue"
+      },
+      {
+        "identifier": "APO-6670",
+        "title": "Dedupe getCurrentUserSharedProfile / user queries",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6670/dedupe-getcurrentusersharedprofile-user-queries",
+        "createdAt": "2026-01-28T19:12:53.925Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6669",
+        "title": "Make createPaymentIntent non-blocking on web",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6669/make-createpaymentintent-non-blocking-on-web",
+        "createdAt": "2026-01-28T19:11:31.702Z",
+        "state": "Done"
       }
     ]
   },

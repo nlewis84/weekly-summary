@@ -81,14 +81,15 @@ export default function Charts() {
     "Commits pushed": d.commits_pushed,
     "Linear completed": d.linear_completed,
     "Linear worked on": d.linear_worked_on,
+    "Linear issues created": d.linear_issues_created ?? 0,
     "PRs total": d.prs_total,
     Repos: d.repos_count,
   }));
 
   const handleExportCsv = () => {
-    const headers = ["Week", "PRs merged", "PR reviews", "PR comments", "Commits pushed", "Linear completed", "Linear worked on"];
+    const headers = ["Week", "PRs merged", "PR reviews", "PR comments", "Commits pushed", "Linear completed", "Linear worked on", "Linear issues created"];
     const rows = metricsData.map((d) =>
-      [d.week, d["PRs merged"], d["PR reviews"], d["PR comments"], d["Commits pushed"], d["Linear completed"], d["Linear worked on"]].join(",")
+      [d.week, d["PRs merged"], d["PR reviews"], d["PR comments"], d["Commits pushed"], d["Linear completed"], d["Linear worked on"], d["Linear issues created"] ?? 0].join(",")
     );
     const csv = [headers.join(","), ...rows].join("\n");
     const blob = new Blob([csv], { type: "text/csv" });
