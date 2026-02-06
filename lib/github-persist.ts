@@ -1,10 +1,12 @@
 /**
  * Persist weekly summary to GitHub repo via REST API.
  * Uses PUT /repos/{owner}/{repo}/contents/{path} for create/update.
+ * Retries on 403/429 (rate limit) per GitHub ToS.
  */
 
 import type { Payload } from "./types.js";
 import { buildMarkdownSummary } from "./summary.js";
+import { fetchWithRetry } from "./github-api.js";
 
 const GITHUB_API = "https://api.github.com";
 
@@ -22,7 +24,7 @@ async function putFile(
     content: Buffer.from(content, "utf8").toString("base64"),
   };
 
-  const existing = await fetch(url, {
+  const existing = await fetchWithRetry(url, {
     headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" },
   });
   if (existing.ok) {
@@ -30,7 +32,7 @@ async function putFile(
     if (data.sha) body.sha = data.sha;
   }
 
-  const res = await fetch(url, {
+  const res = await fetchWithRetry(url, {
     method: "PUT",
     headers: {
       Authorization: `Bearer ${token}`,

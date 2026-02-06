@@ -15,15 +15,15 @@ export function WeeklyTicker({ stats }: WeeklyTickerProps) {
   ];
 
   return (
-    <div className="bg-white rounded-xl shadow-[var(--shadow-skeuo-card)] border border-gray-200/90 px-4 py-3">
+    <div className="bg-gray-50 rounded-xl shadow-[var(--shadow-skeuo-card)] border border-gray-200 px-4 py-3">
       <div className="flex flex-wrap items-center gap-x-6 gap-y-1 text-sm">
         <span className="flex items-center gap-2 font-medium text-gray-700">
-          <CalendarBlank size={18} weight="regular" className="text-primary-600 shrink-0" />
+          <CalendarBlank size={18} weight="regular" className="text-primary-500 shrink-0" />
           This week:
         </span>
         {items.map(({ label, value }) => (
           <span key={label} className="text-gray-600">
-            {label} <span className="font-semibold text-primary-600">{value}</span>
+            {label} <span className="font-semibold text-primary-500">{value}</span>
           </span>
         ))}
       </div>

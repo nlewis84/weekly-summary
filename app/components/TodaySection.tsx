@@ -25,7 +25,7 @@ export function TodaySection({ payload, error, isLoading, onRefresh }: TodaySect
       {stats ? (
         <MetricsCard stats={stats} payload={payload} />
       ) : isLoading && !stats ? (
-        <div className="bg-white rounded-xl shadow-[var(--shadow-skeuo-card)] p-8 text-center text-gray-500">
+        <div className="bg-gray-50 rounded-xl shadow-[var(--shadow-skeuo-card)] p-8 text-center text-gray-500 border border-gray-200">
           Loading…
         </div>
       ) : null}

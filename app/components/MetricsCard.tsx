@@ -30,19 +30,19 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
   );
 
   return (
-    <div className="bg-white rounded-xl shadow-[var(--shadow-skeuo-card)] hover:shadow-[var(--shadow-skeuo-card-hover)] border border-gray-200/90 p-6 transition-all duration-300">
+    <div className="bg-gray-50 rounded-xl shadow-[var(--shadow-skeuo-card)] hover:shadow-[var(--shadow-skeuo-card-hover)] border border-gray-200 p-6 transition-all duration-300">
       <h2 className="text-lg font-semibold text-gray-900 mb-4">Metrics</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {METRICS.map(({ key, label, Icon }) => (
           <div
             key={key}
-            className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200/60 shadow-[var(--shadow-skeuo-inset)]"
+            className="flex items-center justify-between p-3 bg-gray-100 rounded-lg border border-gray-200 shadow-[var(--shadow-skeuo-inset)]"
           >
             <span className="flex items-center gap-2 text-sm text-gray-600">
-              <Icon size={iconSize} weight="regular" className="text-primary-600 shrink-0" />
+              <Icon size={iconSize} weight="regular" className="text-primary-500 shrink-0" />
               {label}
             </span>
-            <span className="text-lg font-semibold text-primary-600">
+            <span className="text-lg font-semibold text-primary-500">
               {stats[key]}
             </span>
           </div>
@@ -50,7 +50,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
       </div>
       <div className="mt-4 pt-4 border-t border-gray-200">
         <span className="flex items-center gap-2 text-sm text-gray-600">
-          <Folder size={iconSize} weight="regular" className="text-primary-600 shrink-0" />
+          <Folder size={iconSize} weight="regular" className="text-primary-500 shrink-0" />
           Repos worked on
         </span>
         <p className="text-sm font-medium text-gray-900 mt-1">
@@ -63,7 +63,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
           <button
             type="button"
             onClick={() => setDetailsOpen((o) => !o)}
-            className="flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-700"
+            className="flex items-center gap-2 text-sm font-medium text-primary-500 hover:text-primary-400"
           >
             {detailsOpen ? (
               <CaretDown size={18} weight="bold" />
@@ -88,7 +88,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
                           href={pr.url}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-primary-600 hover:underline"
+                          className="text-primary-500 hover:underline"
                         >
                           {pr.title}
                         </a>
@@ -108,7 +108,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
                           href={r.url}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-primary-600 hover:underline"
+                          className="text-primary-500 hover:underline"
                         >
                           {r.title}
                         </a>
@@ -128,7 +128,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
                             href={i.url}
                             target="_blank"
                             rel="noreferrer"
-                            className="text-primary-600 hover:underline"
+                            className="text-primary-500 hover:underline"
                           >
                             {i.identifier} {i.title}
                           </a>
@@ -151,7 +151,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
                             href={i.url}
                             target="_blank"
                             rel="noreferrer"
-                            className="text-primary-600 hover:underline"
+                            className="text-primary-500 hover:underline"
                           >
                             {i.identifier} {i.title}
                           </a>

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useLoaderData, useFetcher } from "react-router";
+import { useLoaderData, useRevalidator } from "react-router";
 import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
 import { runSummary } from "../../lib/summary";
@@ -43,17 +43,13 @@ export async function loader({ request }: LoaderFunctionArgs) {
   return data({ today, weekly } satisfies IndexLoaderData);
 }
 
-type ApiPayload = { payload?: Payload; error?: string };
-
 export default function Index() {
   const { today, weekly } = useLoaderData<typeof loader>();
-  const todayFetcher = useFetcher<ApiPayload>();
-  const weeklyFetcher = useFetcher<ApiPayload>();
+  const revalidator = useRevalidator();
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const handleRefresh = () => {
-    todayFetcher.load("/api/today");
-    weeklyFetcher.load("/api/weekly");
+    revalidator.revalidate();
   };
 
   useEffect(() => {
@@ -61,22 +57,25 @@ export default function Index() {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, []);
+  }, [revalidator.revalidate]);
 
-  const isLoading = todayFetcher.state === "loading" || weeklyFetcher.state === "loading";
-  const displayToday = todayFetcher.data ?? today;
-  const displayWeekly = weeklyFetcher.data ?? weekly;
+  const isLoading = revalidator.state === "loading";
+
+  const todayPayload = today && "payload" in today ? today.payload : null;
+  const todayError = today && "error" in today ? today.error : null;
+  const weeklyPayload = weekly && "payload" in weekly ? weekly.payload : null;
+  const weeklyError = weekly && "error" in weekly ? weekly.error : null;
 
   return (
     <div className="space-y-6">
       <TodaySection
-        payload={displayToday?.payload ?? null}
-        error={displayToday?.error ?? null}
-        isLoading={isLoading && !today.payload}
+        payload={todayPayload ?? null}
+        error={todayError ?? null}
+        isLoading={isLoading && !todayPayload}
         onRefresh={handleRefresh}
       />
 
-      <WeeklySection stats={displayWeekly?.payload?.stats ?? null} error={displayWeekly?.error ?? null} />
+      <WeeklySection stats={weeklyPayload?.stats ?? null} error={weeklyError ?? null} />
 
       <FullSummaryFormContainer />
     </div>

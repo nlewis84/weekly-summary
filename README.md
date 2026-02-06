@@ -1,6 +1,6 @@
 # Weekly Summary
 
-Generates weekly work summaries from Linear issues, GitHub activity, and optional check-ins. Standalone project.
+Generates weekly work summaries from Linear issues, GitHub activity, and optional check-ins. Standalone project (extracted from Apollos).
 
 ## Features
 
@@ -14,6 +14,8 @@ Generates weekly work summaries from Linear issues, GitHub activity, and optiona
 1. Copy `.env.example` to `.env`
 2. Set `LINEAR_API_KEY` and `GITHUB_TOKEN` in `.env` (optional: `GITHUB_USERNAME`, defaults to `nlewis84`)
 3. The app loads variables from `.env` automatically (CLI and web server)
+
+GitHub API calls retry automatically on 403/429 (rate limit) to stay within GitHub ToS.
 
 ## Usage
 

@@ -36,7 +36,9 @@ export function LottieIcon({
   const [Player, setPlayer] = useState<React.ComponentType<Record<string, unknown>> | null>(null);
 
   useEffect(() => {
-    import("@lottiefiles/react-lottie-player").then((m) => setPlayer(() => m.Player));
+    import("@lottiefiles/react-lottie-player").then((m) =>
+      setPlayer(() => m.Player as unknown as React.ComponentType<Record<string, unknown>>)
+    );
   }, []);
 
   const src = LOTTIE_ICONS[name];

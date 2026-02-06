@@ -1,5 +1,7 @@
 # RR7/Remix Refactor Plan: Loader-Driven Data & Dumb Components
 
+**Status: ✅ Completed** (refresh now uses `useRevalidator`; loader-driven data flow in place)
+
 ## Overview
 
 Refactor the weekly-summary app to follow React Router 7 / Remix principles: **loaders for data**, **actions for mutations**, **dumb presentational components**, and **clear separation of logic from UI**. Each section loads its own data; components receive props and render.
