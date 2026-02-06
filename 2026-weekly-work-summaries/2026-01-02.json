@@ -14,9 +14,7 @@
     "commits_pushed": 7,
     "linear_completed": 0,
     "linear_worked_on": 0,
-    "repos": [
-      "apollos-admin"
-    ]
+    "repos": ["apollos-admin", "apollos-cluster"]
   },
   "linear": {
     "completed_issues": [],
