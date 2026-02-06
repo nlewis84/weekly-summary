@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "generated_at": "2026-02-06T02:31:06.672Z",
+    "window_start": "2026-01-17T06:00:00.000Z",
+    "window_end": "2026-01-23T23:59:59.999Z",
+    "week_ending": "2026-01-23",
+    "source_of_truth": "Week-in-review video transcript"
+  },
+  "stats": {
+    "prs_merged": 25,
+    "prs_total": 31,
+    "pr_reviews": 21,
+    "pr_comments": 0,
+    "linear_completed": 29,
+    "linear_worked_on": 33,
+    "repos": [
+      "apollos-admin"
+    ]
+  },
+  "linear": {
+    "completed_issues": [],
+    "worked_on_issues": []
+  },
+  "github": {
+    "merged_prs": [],
+    "reviews": []
+  },
+  "check_ins": [
+    {
+      "day": "Week in review",
+      "content": "Week in review (2026-01-23): # Week in review — 2026-01-23 (Friday) What's up everybody, this is my week in review. Just wanted to go through some stats for me. Uhm, this week I had 25 PRs that were merged. Not bad, especially since it was a short week. Uhm, 31 PRs that were created or updated, which means that I had a couple PRs that I commented on, uhm, or closed. Uhm, or, actually I've got a couple PRs that are just, just testing for cell issues. Uhm, and then 21 PR reviews, uhm, linear issues completed was at 29 for the week, and linear issues worked on was 33. All of my work this week was in the admin repo. Uhm, okay, so we're looking at most of my work today, and a little bit less yesterday, and periodically the rest of the week as well, was trying to figure out what's going on with, uhm, our time-to-paint issue…"
+    }
+  ],
+  "terminal_output": "╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary (from transcript)                 ║\n╚══════════════════════════════════════════════════════════╝\n\n📋 Extracted from week-in-review transcript\n\nStats: 25 PRs merged | 31 total | 21 reviews | 29 Linear completed | 33 worked on\n\nWeek in review (2026-01-23): # Week in review — 2026-01-23 (Friday) What's up everybody, this is my week in review. Just wanted to go through some stats for me. Uhm, this week I had 25 PRs that were merged. Not bad, especially since it was a short week. Uhm, 31 PRs that were created or updated, which means that I had a couple PRs that I commented on, uhm, or closed. Uhm, or, actually I've got a couple PRs that are just, just testing for cell issues. Uhm, and then 21 PR reviews, uhm, linear issues completed was at 29 for the week, and linear issues worked on was 33. All of my work this week was in the admin repo. Uhm, okay, so we're looking at most of my work today, and a little bit less yesterday, and periodically the rest of the week as well, was trying to figure out what's going on with, uhm, our time-to-paint issue…",
+  "formatted_output": "Week in review (2026-01-23): # Week in review — 2026-01-23 (Friday) What's up everybody, this is my week in review. Just wanted to go through some stats for me. Uhm, this week I had 25 PRs that were merged. Not bad, especially since it was a short week. Uhm, 31 PRs that were created or updated, which means that I had a couple PRs that I commented on, uhm, or closed. Uhm, or, actually I've got a couple PRs that are just, just testing for cell issues. Uhm, and then 21 PR reviews, uhm, linear issues completed was at 29 for the week, and linear issues worked on was 33. All of my work this week was in the admin repo. Uhm, okay, so we're looking at most of my work today, and a little bit less yesterday, and periodically the rest of the week as well, was trying to figure out what's going on with, uhm, our time-to-paint issue…"
+}

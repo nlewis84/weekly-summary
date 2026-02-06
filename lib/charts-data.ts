@@ -29,14 +29,8 @@ export interface ChartsData {
 
 export async function getChartsData(): Promise<ChartsData> {
   const weeks = await listWeeklySummaries();
-  const payloads: { week_ending: string; payload: Payload }[] = [];
-
-  for (const week of weeks) {
-    const payload = await fetchWeeklySummary(week);
-    if (payload) {
-      payloads.push({ week_ending: week, payload });
-    }
-  }
+  const results = await Promise.all(weeks.map(async (week) => ({ week, payload: await fetchWeeklySummary(week) })));
+  const payloads = results.filter((r): r is { week: string; payload: Payload } => r.payload != null).map((r) => ({ week_ending: r.week, payload: r.payload }));
 
   const dataPoints: ChartDataPoint[] = payloads.map(({ week_ending, payload }) => {
     const s = payload.stats;

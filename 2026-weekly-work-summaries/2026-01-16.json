@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "generated_at": "2026-02-06T02:31:06.672Z",
+    "window_start": "2026-01-10T06:00:00.000Z",
+    "window_end": "2026-01-16T23:59:59.999Z",
+    "week_ending": "2026-01-16",
+    "source_of_truth": "Week-in-review video transcript"
+  },
+  "stats": {
+    "prs_merged": 0,
+    "prs_total": 0,
+    "pr_reviews": 0,
+    "pr_comments": 0,
+    "linear_completed": 0,
+    "linear_worked_on": 0,
+    "repos": [
+      "apollos-admin"
+    ]
+  },
+  "linear": {
+    "completed_issues": [],
+    "worked_on_issues": []
+  },
+  "github": {
+    "merged_prs": [],
+    "reviews": []
+  },
+  "check_ins": [
+    {
+      "day": "Week in review",
+      "content": "Week in review (2026-01-16): # Week in review — 2026-01-16 (Friday) What's up, this is my weekly video for what I worked on. So, first off, let me demo a bunch of stuff, and I'm not showing my video because I wanted to work on my big screen, uhm, so you don't have to look at the side of my head. Alright, so, on this one, I am looking at the code as it was on Sunday before I started working on Monday of this week, uhm, so I'm going to show all that stuff. This is the old slash give route. If I go to slash new give, it doesn't even exist. This is not, this is a, a thought in my head at this point. This is not even a code thing at this point. It was not even, uhm, in draft form at this point. So, uhm, we got slash give, uhm, you can see as I'm working through this, we've got, this is the old route. Old donation embed cod…"
+    }
+  ],
+  "terminal_output": "╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary (from transcript)                 ║\n╚══════════════════════════════════════════════════════════╝\n\n📋 Extracted from week-in-review transcript\n\nStats: 0 PRs merged | 0 total | 0 reviews | 0 Linear completed | 0 worked on\n\nWeek in review (2026-01-16): # Week in review — 2026-01-16 (Friday) What's up, this is my weekly video for what I worked on. So, first off, let me demo a bunch of stuff, and I'm not showing my video because I wanted to work on my big screen, uhm, so you don't have to look at the side of my head. Alright, so, on this one, I am looking at the code as it was on Sunday before I started working on Monday of this week, uhm, so I'm going to show all that stuff. This is the old slash give route. If I go to slash new give, it doesn't even exist. This is not, this is a, a thought in my head at this point. This is not even a code thing at this point. It was not even, uhm, in draft form at this point. So, uhm, we got slash give, uhm, you can see as I'm working through this, we've got, this is the old route. Old donation embed cod…",
+  "formatted_output": "Week in review (2026-01-16): # Week in review — 2026-01-16 (Friday) What's up, this is my weekly video for what I worked on. So, first off, let me demo a bunch of stuff, and I'm not showing my video because I wanted to work on my big screen, uhm, so you don't have to look at the side of my head. Alright, so, on this one, I am looking at the code as it was on Sunday before I started working on Monday of this week, uhm, so I'm going to show all that stuff. This is the old slash give route. If I go to slash new give, it doesn't even exist. This is not, this is a, a thought in my head at this point. This is not even a code thing at this point. It was not even, uhm, in draft form at this point. So, uhm, we got slash give, uhm, you can see as I'm working through this, we've got, this is the old route. Old donation embed cod…"
+}

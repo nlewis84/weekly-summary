@@ -1,6 +1,6 @@
 # Plan 02: History Scope (Earlier Summaries)
 
-**Status: 🔲 Pending**
+**Status: ✅ Complete**
 
 ## Problem
 
@@ -30,3 +30,12 @@ Single hardcoded path. Summaries in other folders (e.g. `2025-weekly-work-summar
 - All existing summaries (across years/folders) appear in History
 - Charts include full history
 - No breaking changes for current single-path setup
+
+---
+
+## Resolution
+
+- Added `GITHUB_SUMMARY_PATHS` env var (comma-separated, default: `2026-weekly-work-summaries`)
+- `listWeeklySummaries()` aggregates from all paths, dedupes, sorts
+- `fetchWeeklySummary()` tries each path; prefers path matching year (e.g. 2025 -> 2025-weekly-work-summaries)
+- Documented in README and .env.example

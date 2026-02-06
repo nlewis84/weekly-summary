@@ -1,6 +1,6 @@
 # Plan 01: Charts Overhaul
 
-**Status: 🔲 Pending**
+**Status: ✅ Complete**
 
 ## Problem
 
@@ -42,3 +42,13 @@ Charts look terrible. Current stack uses Recharts (or similar) with basic LineCh
 - Dark theme matches app
 - Responsive on mobile
 - No regressions in data display
+
+---
+
+## Resolution
+
+- Replaced Recharts with **@tremor/react** (Tailwind-native)
+- AreaChart for PRs & Linear metrics (stacked area, animated)
+- BarChart for repos (vertical layout)
+- Added Tremor content path and dark-tremor theme to tailwind.config
+- darkMode: "class" for html.dark compatibility

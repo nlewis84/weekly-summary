@@ -1,6 +1,6 @@
 # Plan 05: Productivity Features
 
-**Status: 🔲 Pending**
+**Status: ✅ Complete**
 
 ## Problem
 
@@ -54,3 +54,13 @@ Identify and add functionality that would make the app more useful for productiv
 - Users can quickly copy metrics for standups/slack
 - Power users can use keyboard for refresh
 - Clear feedback when copy succeeds (toast or inline message)
+
+---
+
+## Resolution
+
+- **Copy stats** button on MetricsCard – copies one-liner for standup/slack
+- **Copy markdown** button on History week detail – copies full summary markdown
+- **Keyboard shortcut** `r` to refresh data (index page, skips when in input/textarea)
+- Extracted `buildMarkdownSummary` to `lib/markdown.ts` (client-safe, no node deps)
+- Refresh button tooltip: "Refresh data (r)"

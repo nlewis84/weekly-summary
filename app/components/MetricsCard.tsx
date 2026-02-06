@@ -1,11 +1,30 @@
 import { useState } from "react";
-import { Package, PencilSimple, Eye, CheckCircle, ArrowsClockwise, Folder, CaretDown, CaretRight } from "phosphor-react";
+import { Package, PencilSimple, Eye, CheckCircle, ArrowsClockwise, Folder, CaretDown, CaretRight, Copy, CaretUp, Minus } from "phosphor-react";
+import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
 import type { Payload } from "../../lib/types";
 
 interface MetricsCardProps {
   stats: Stats;
+  prevStats?: Stats | null;
   payload?: Payload | null;
+}
+
+function TrendBadge({ delta }: { delta: number }) {
+  if (delta === 0) return <Minus size={12} weight="bold" className="text-[var(--color-text-muted)]" aria-label="no change" />;
+  if (delta > 0) return <CaretUp size={12} weight="bold" className="text-emerald-600 dark:text-emerald-400" aria-label={`+${delta}`} />;
+  return <CaretDown size={12} weight="bold" className="text-amber-600 dark:text-amber-400" aria-label={`${delta}`} />;
+}
+
+function formatStatsForCopy(stats: Stats): string {
+  const parts = [
+    `PRs merged: ${stats.prs_merged}`,
+    `PR reviews: ${stats.pr_reviews}`,
+    `Linear completed: ${stats.linear_completed}`,
+    `Linear worked on: ${stats.linear_worked_on}`,
+    `Repos: ${stats.repos.join(", ") || "—"}`,
+  ];
+  return parts.join(" | ");
 }
 
 type LinearIssue = { identifier?: string; title?: string; url?: string | null; project?: string | null };
@@ -18,10 +37,20 @@ const METRICS = [
   { key: "linear_worked_on" as const, label: "Linear issues worked on", Icon: ArrowsClockwise },
 ] as const;
 
+const TREND_METRICS = ["prs_merged", "prs_total", "pr_reviews", "linear_completed", "linear_worked_on"] as const;
+
 const iconSize = 24;
 
-export function MetricsCard({ stats, payload }: MetricsCardProps) {
+export function MetricsCard({ stats, prevStats, payload }: MetricsCardProps) {
   const [detailsOpen, setDetailsOpen] = useState(false);
+  const toast = useToast();
+
+  const handleCopy = async () => {
+    const text = formatStatsForCopy(stats);
+    await navigator.clipboard.writeText(text);
+    toast("Stats copied to clipboard");
+  };
+
   const hasDetails = payload && (
     payload.github.merged_prs.length > 0 ||
     payload.github.reviews.length > 0 ||
@@ -30,36 +59,57 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
   );
 
   return (
-    <div className="bg-gray-50 rounded-xl shadow-[var(--shadow-skeuo-card)] hover:shadow-[var(--shadow-skeuo-card-hover)] border border-gray-200 p-6 transition-all duration-300">
-      <h2 className="text-lg font-semibold text-gray-900 mb-4">Metrics</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {METRICS.map(({ key, label, Icon }) => (
-          <div
-            key={key}
-            className="flex items-center justify-between p-3 bg-gray-100 rounded-lg border border-gray-200 shadow-[var(--shadow-skeuo-inset)]"
-          >
-            <span className="flex items-center gap-2 text-sm text-gray-600">
-              <Icon size={iconSize} weight="regular" className="text-primary-500 shrink-0" />
-              {label}
-            </span>
-            <span className="text-lg font-semibold text-primary-500">
-              {stats[key]}
-            </span>
-          </div>
-        ))}
+    <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] hover:shadow-[var(--shadow-skeuo-card-hover)] border border-[var(--color-border)] p-6 transition-all duration-300">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-lg font-semibold text-[var(--color-text)]">Metrics</h2>
+        <button
+          type="button"
+          onClick={handleCopy}
+          aria-label="Copy stats for standup"
+          className="flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] px-3 py-2 text-sm text-[var(--color-text-muted)] hover:text-primary-500 hover:bg-[var(--color-surface-elevated)] rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+          title="Copy stats for standup"
+        >
+          <Copy size={16} weight="regular" />
+          Copy
+        </button>
       </div>
-      <div className="mt-4 pt-4 border-t border-gray-200">
-        <span className="flex items-center gap-2 text-sm text-gray-600">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {METRICS.map(({ key, label, Icon }) => {
+          const delta = prevStats && TREND_METRICS.includes(key) ? stats[key] - prevStats[key] : null;
+          return (
+            <div
+              key={key}
+              className="flex items-center justify-between p-3 bg-[var(--color-surface-elevated)] rounded-lg border border-[var(--color-border)] shadow-[var(--shadow-skeuo-inset)]"
+            >
+              <span className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
+                <Icon size={iconSize} weight="regular" className="text-primary-500 shrink-0" />
+                {label}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="text-lg font-semibold text-primary-500">{stats[key]}</span>
+                {delta != null && (
+                  <span className="flex items-center gap-0.5 text-xs" title={delta > 0 ? `+${delta} vs last week` : delta < 0 ? `${delta} vs last week` : "no change"}>
+                    <TrendBadge delta={delta} />
+                    {delta !== 0 && <span>{delta > 0 ? `+${delta}` : delta}</span>}
+                  </span>
+                )}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+      <div className="mt-4 pt-4 border-t border-[var(--color-border)]">
+        <span className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
           <Folder size={iconSize} weight="regular" className="text-primary-500 shrink-0" />
           Repos worked on
         </span>
-        <p className="text-sm font-medium text-gray-900 mt-1">
+        <p className="text-sm font-medium text-[var(--color-text)] mt-1">
           {stats.repos.length > 0 ? stats.repos.join(", ") : "—"}
         </p>
       </div>
 
       {hasDetails && (
-        <div className="mt-4 pt-4 border-t border-gray-200">
+        <div className="mt-4 pt-4 border-t border-[var(--color-border)]">
           <button
             type="button"
             onClick={() => setDetailsOpen((o) => !o)}
@@ -80,7 +130,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
               <div className={`mt-3 space-y-4 text-sm transition-opacity duration-300 ${detailsOpen ? "opacity-100" : "opacity-0"}`}>
               {payload!.github.merged_prs.length > 0 && (
                 <div>
-                  <h3 className="font-medium text-gray-700 mb-2">PRs merged</h3>
+                  <h3 className="font-medium text-[var(--color-text-muted)] mb-2">PRs merged</h3>
                   <ul className="space-y-1">
                     {payload!.github.merged_prs.map((pr, i) => (
                       <li key={i}>
@@ -92,7 +142,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
                         >
                           {pr.title}
                         </a>
-                        {pr.repo && <span className="text-gray-500 ml-1">({pr.repo})</span>}
+                        {pr.repo && <span className="text-[var(--color-text-muted)] ml-1">({pr.repo})</span>}
                       </li>
                     ))}
                   </ul>
@@ -100,7 +150,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
               )}
               {payload!.github.reviews.length > 0 && (
                 <div>
-                  <h3 className="font-medium text-gray-700 mb-2">PR reviews</h3>
+                  <h3 className="font-medium text-[var(--color-text-muted)] mb-2">PR reviews</h3>
                   <ul className="space-y-1">
                     {payload!.github.reviews.map((r, i) => (
                       <li key={i}>
@@ -119,7 +169,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
               )}
               {payload!.linear.completed_issues.length > 0 && (
                 <div>
-                  <h3 className="font-medium text-gray-700 mb-2">Linear completed</h3>
+                  <h3 className="font-medium text-[var(--color-text-muted)] mb-2">Linear completed</h3>
                   <ul className="space-y-1">
                     {(payload!.linear.completed_issues as LinearIssue[]).map((i, idx) => (
                       <li key={idx}>
@@ -142,7 +192,7 @@ export function MetricsCard({ stats, payload }: MetricsCardProps) {
               )}
               {payload!.linear.worked_on_issues.length > 0 && (
                 <div>
-                  <h3 className="font-medium text-gray-700 mb-2">Linear worked on</h3>
+                  <h3 className="font-medium text-[var(--color-text-muted)] mb-2">Linear worked on</h3>
                   <ul className="space-y-1">
                     {(payload!.linear.worked_on_issues as LinearIssue[]).map((i, idx) => (
                       <li key={idx}>

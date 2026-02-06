@@ -1,6 +1,6 @@
 # Plan 07: Testing & Error Handling
 
-**Status: 🔲 Pending**
+**Status: ✅ Complete**
 
 ## Problem
 
@@ -26,3 +26,13 @@ Expand test coverage and improve error handling across the app.
 - Loaders and data-fetching logic have unit tests
 - Error states are consistent and actionable
 - CI runs tests on PR
+
+---
+
+## Resolution
+
+- Standardized error UI: ErrorBanner used in charts, history._index, history.$week, FullSummaryForm
+- ErrorBanner: added optional onRetry prop for retry button
+- History and Charts pages: use useRevalidator + onRetry to revalidate on error
+- Added lib/github-fetch.test.ts: listWeeklySummaries, fetchWeeklySummary (mock fetch)
+- Added lib/charts-data.test.ts: getChartsData (mock github-fetch)

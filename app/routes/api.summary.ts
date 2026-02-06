@@ -23,7 +23,12 @@ export async function action({ request }: ActionFunctionArgs) {
     if (shouldSave) {
       const repoSpec = process.env.GITHUB_REPO ?? "nlewis84/weekly-summary";
       await saveSummaryToGitHub(result.payload, repoSpec);
-      return data({ payload: result.payload, saved: true });
+      return data({
+        payload: result.payload,
+        saved: true,
+        builtAt: new Date().toISOString(),
+        weekEnding: result.payload.meta.week_ending,
+      });
     }
 
     return data({ payload: result.payload });

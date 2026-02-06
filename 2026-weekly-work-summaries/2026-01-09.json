@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "generated_at": "2026-02-06T02:31:06.671Z",
+    "window_start": "2026-01-03T06:00:00.000Z",
+    "window_end": "2026-01-09T23:59:59.999Z",
+    "week_ending": "2026-01-09",
+    "source_of_truth": "Week-in-review video transcript"
+  },
+  "stats": {
+    "prs_merged": 21,
+    "prs_total": 25,
+    "pr_reviews": 16,
+    "pr_comments": 0,
+    "linear_completed": 29,
+    "linear_worked_on": 35,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster"
+    ]
+  },
+  "linear": {
+    "completed_issues": [],
+    "worked_on_issues": []
+  },
+  "github": {
+    "merged_prs": [],
+    "reviews": []
+  },
+  "check_ins": [
+    {
+      "day": "Week in review",
+      "content": "Week in review (2026-01-09): # Week in review — 2026-01-09 (Friday) Hey, this is my weekly update. I just wanted to go through at a high level what I worked on this week, and then also do a quick demo of WebGiving, because that's what I spent the majority of my week working on. So, uh, first off, some stats. Uh, this week, I merged 21 PRs. I had 25 total PRs that were created or updated. That means that I had 4 that I closed out, either because the issue was solved or it was an unnecessary PR. also reviewed 16 PRs, um, that got merged. I had 29 linear issues that I completed and 35 total linear issues that I worked on, which means that I either, like, commented or changed something on it. Um, so that's, uh, most of the work was done in Apollos Admin, specifically on web. Uh, but I also did work on cluster, um, on clus…"
+    }
+  ],
+  "terminal_output": "╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary (from transcript)                 ║\n╚══════════════════════════════════════════════════════════╝\n\n📋 Extracted from week-in-review transcript\n\nStats: 21 PRs merged | 25 total | 16 reviews | 29 Linear completed | 35 worked on\n\nWeek in review (2026-01-09): # Week in review — 2026-01-09 (Friday) Hey, this is my weekly update. I just wanted to go through at a high level what I worked on this week, and then also do a quick demo of WebGiving, because that's what I spent the majority of my week working on. So, uh, first off, some stats. Uh, this week, I merged 21 PRs. I had 25 total PRs that were created or updated. That means that I had 4 that I closed out, either because the issue was solved or it was an unnecessary PR. also reviewed 16 PRs, um, that got merged. I had 29 linear issues that I completed and 35 total linear issues that I worked on, which means that I either, like, commented or changed something on it. Um, so that's, uh, most of the work was done in Apollos Admin, specifically on web. Uh, but I also did work on cluster, um, on clus…",
+  "formatted_output": "Week in review (2026-01-09): # Week in review — 2026-01-09 (Friday) Hey, this is my weekly update. I just wanted to go through at a high level what I worked on this week, and then also do a quick demo of WebGiving, because that's what I spent the majority of my week working on. So, uh, first off, some stats. Uh, this week, I merged 21 PRs. I had 25 total PRs that were created or updated. That means that I had 4 that I closed out, either because the issue was solved or it was an unnecessary PR. also reviewed 16 PRs, um, that got merged. I had 29 linear issues that I completed and 35 total linear issues that I worked on, which means that I either, like, commented or changed something on it. Um, so that's, uh, most of the work was done in Apollos Admin, specifically on web. Uh, but I also did work on cluster, um, on clus…"
+}

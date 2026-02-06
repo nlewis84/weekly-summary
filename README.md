@@ -13,6 +13,7 @@ Generates weekly work summaries from Linear issues, GitHub activity, and optiona
 
 1. Copy `.env.example` to `.env`
 2. Set `LINEAR_API_KEY` and `GITHUB_TOKEN` in `.env` (optional: `GITHUB_USERNAME`, defaults to `nlewis84`)
+3. Optional: `GITHUB_SUMMARY_PATHS` – comma-separated paths for summaries (default: `2026-weekly-work-summaries`). Add `2025-weekly-work-summaries` etc. for earlier years.
 3. The app loads variables from `.env` automatically (CLI and web server)
 
 GitHub API calls retry automatically on 403/429 (rate limit) to stay within GitHub ToS.
@@ -47,7 +48,8 @@ pnpm build && pnpm start
 | `pnpm build` | Build for production          |
 | `pnpm start` | Serve production build        |
 | `pnpm cli`   | Run CLI (supports `--today`)   |
-| `pnpm test`  | Run tests                     |
+| `pnpm test`  | Run unit tests                |
+| `pnpm test:e2e` | Run Playwright E2E tests  |
 | `pnpm lint`  | Run ESLint                    |
 | `pnpm typecheck` | TypeScript check          |
 
@@ -58,3 +60,9 @@ pnpm build && pnpm start
 3. Deploy: `git push heroku main`
 
 Procfile runs `react-router-serve build/server/index.js`.
+
+## Security
+
+- **Secrets**: `LINEAR_API_KEY`, `GITHUB_TOKEN`, and other env vars are used only in server-side loaders and API routes. They are never sent to the client bundle.
+- **`.env`**: Never commit `.env`. It is listed in `.gitignore`. Use `.env.example` as a template.
+- **Deployment**: Set config vars via your host (e.g. `heroku config:set`) rather than committing secrets.

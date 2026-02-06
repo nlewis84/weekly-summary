@@ -1,4 +1,5 @@
 import { MetricsCard } from "./MetricsCard";
+import { MetricsCardSkeleton } from "./MetricsCardSkeleton";
 import { RefreshButton } from "./RefreshButton";
 import { ErrorBanner } from "./ErrorBanner";
 import type { Payload } from "../../lib/types";
@@ -16,7 +17,7 @@ export function TodaySection({ payload, error, isLoading, onRefresh }: TodaySect
   return (
     <>
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold text-gray-900">Today</h2>
+        <h2 className="text-lg font-semibold text-[var(--color-text)]">Today</h2>
         <RefreshButton onClick={onRefresh} isLoading={isLoading} />
       </div>
 
@@ -25,9 +26,7 @@ export function TodaySection({ payload, error, isLoading, onRefresh }: TodaySect
       {stats ? (
         <MetricsCard stats={stats} payload={payload} />
       ) : isLoading && !stats ? (
-        <div className="bg-gray-50 rounded-xl shadow-[var(--shadow-skeuo-card)] p-8 text-center text-gray-500 border border-gray-200">
-          Loading…
-        </div>
+        <MetricsCardSkeleton />
       ) : null}
     </>
   );

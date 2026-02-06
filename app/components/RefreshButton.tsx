@@ -12,7 +12,8 @@ export function RefreshButton({ onClick, isLoading }: RefreshButtonProps) {
       type="button"
       onClick={onClick}
       disabled={isLoading}
-      className="flex items-center gap-2 text-sm text-primary-500 hover:text-primary-400 disabled:opacity-50"
+      title="Refresh data (r)"
+      className="flex items-center justify-center gap-2 min-h-[44px] min-w-[44px] px-3 py-2 text-sm text-primary-500 hover:text-primary-400 hover:bg-[var(--color-surface-elevated)] rounded-lg disabled:opacity-50 transition-colors"
     >
       {isLoading ? (
         <LottieIcon name="refresh" size={22} />

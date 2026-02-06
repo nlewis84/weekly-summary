@@ -1,15 +1,57 @@
 import {
+  isRouteErrorResponse,
+  Link,
   Links,
   Meta,
+  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
+  useRouteError,
 } from "react-router";
 import type { LinksFunction, MetaFunction } from "react-router";
 import { ChartBar } from "phosphor-react";
+import { ThemeToggle } from "./components/ThemeToggle";
+import { ToastProvider } from "./components/Toast";
+import { ShortcutsHelp } from "./components/ShortcutsHelp";
 import "./tailwind.css";
 
 export const links: LinksFunction = () => [];
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+  if (typeof window !== "undefined") {
+    console.error("Route error:", error);
+  }
+  const message = isRouteErrorResponse(error)
+    ? `${error.status} ${error.statusText}`
+    : error instanceof Error
+      ? error.message
+      : "Something went wrong";
+  return (
+    <div className="max-w-3xl mx-auto px-4 py-12">
+      <div className="bg-[var(--color-error-bg)] border border-[var(--color-error-border)] rounded-xl p-6 text-[var(--color-error-500)]">
+        <h2 className="text-lg font-semibold mb-2">Something went wrong</h2>
+        <p className="text-sm mb-4">{message}</p>
+        <div className="flex gap-3">
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="px-4 py-2 bg-[var(--color-error-bg)] hover:opacity-90 rounded-lg font-medium border border-[var(--color-error-border)]"
+          >
+            Retry
+          </button>
+          <Link
+            to="/"
+            className="px-4 py-2 bg-[var(--color-surface-elevated)] hover:opacity-90 rounded-lg font-medium border border-[var(--color-border)] text-[var(--color-text)]"
+          >
+            Go home
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export const meta: MetaFunction = () => [
   { title: "Weekly Summary" },
@@ -21,11 +63,16 @@ export const meta: MetaFunction = () => [
 
 export default function App() {
   return (
-    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
+    <html lang="en" className="dark" style={{ colorScheme: "dark" }} suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="color-scheme" content="dark" />
+        <meta name="color-scheme" content="dark light" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem("weekly-summary-theme");var e="system";if(t&&["light","dark","system"].includes(t))e=t;var r=e==="dark"||(e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.add(r?"dark":"light");document.documentElement.style.colorScheme=r?"dark":"light";})();`,
+          }}
+        />
         {(() => {
           const css = (globalThis as { __INLINE_CSS__?: string }).__INLINE_CSS__;
           if (css) {
@@ -51,27 +98,60 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans text-gray-900 leading-relaxed min-h-screen">
-        <header className="bg-gray-50 shadow-[var(--shadow-skeuo-card)] py-4 mb-6 border-b border-gray-200">
-          <div className="max-w-3xl mx-auto px-4 flex items-center justify-between">
-            <h1 className="flex items-center gap-2 text-xl font-bold text-gray-900 m-0">
+      <body className="font-sans text-[var(--color-text)] leading-relaxed min-h-screen overflow-x-hidden">
+        <ToastProvider>
+        <a
+          href="#main-content"
+          className="absolute -left-[9999px] focus:left-4 focus:top-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-500 focus:text-white focus:rounded-lg"
+        >
+          Skip to content
+        </a>
+        <header className="bg-[var(--color-surface)] shadow-[var(--shadow-skeuo-card)] py-4 mb-6 border-b border-[var(--color-border)]">
+          <div className="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <h1 className="flex items-center gap-2 text-xl font-bold text-[var(--color-text)] m-0">
               <ChartBar size={28} weight="bold" className="text-primary-500" />
-              <a href="/" className="text-gray-900 no-underline hover:text-primary-500 transition-colors">
+              <Link to="/" className="text-[var(--color-text)] no-underline hover:text-primary-500 transition-colors min-h-[44px] min-w-[44px] flex items-center">
                 Weekly Summary
-              </a>
+              </Link>
             </h1>
-            <nav className="flex items-center gap-4 text-sm">
-              <a href="/#build-summary" className="text-primary-600 font-medium hover:text-primary-500 transition-colors">Build Summary</a>
-              <a href="/history" className="text-gray-600 hover:text-primary-500 transition-colors">History</a>
-              <a href="/charts" className="text-gray-600 hover:text-primary-500 transition-colors">Charts</a>
+            <nav className="flex flex-wrap items-center gap-1 sm:gap-4 text-sm" aria-label="Main">
+              <ThemeToggle />
+              <Link to="/#build-summary" className="min-h-[44px] min-w-[44px] flex items-center px-3 py-2 text-primary-600 font-medium hover:text-primary-500 hover:bg-[var(--color-surface-elevated)] rounded-lg transition-colors -m-1 sm:m-0">Build Summary</Link>
+              <NavLink
+                to="/history"
+                end={false}
+                className={({ isActive }) =>
+                  `min-h-[44px] min-w-[44px] flex items-center px-3 py-2 rounded-lg -m-1 sm:m-0 transition-colors ${isActive ? "text-primary-600 font-medium bg-[var(--color-surface-elevated)]" : "text-[var(--color-text-muted)] hover:text-primary-500 hover:bg-[var(--color-surface-elevated)]"}`
+                }
+              >
+                History
+              </NavLink>
+              <NavLink
+                to="/charts"
+                className={({ isActive }) =>
+                  `min-h-[44px] min-w-[44px] flex items-center px-3 py-2 rounded-lg -m-1 sm:m-0 transition-colors ${isActive ? "text-primary-600 font-medium bg-[var(--color-surface-elevated)]" : "text-[var(--color-text-muted)] hover:text-primary-500 hover:bg-[var(--color-surface-elevated)]"}`
+                }
+              >
+                Charts
+              </NavLink>
+              <NavLink
+                to="/settings"
+                className={({ isActive }) =>
+                  `min-h-[44px] min-w-[44px] flex items-center px-3 py-2 rounded-lg -m-1 sm:m-0 transition-colors ${isActive ? "text-primary-600 font-medium bg-[var(--color-surface-elevated)]" : "text-[var(--color-text-muted)] hover:text-primary-500 hover:bg-[var(--color-surface-elevated)]"}`
+                }
+              >
+                Settings
+              </NavLink>
             </nav>
           </div>
         </header>
-        <main className="max-w-3xl mx-auto px-4 pb-12">
+        <main id="main-content" className="max-w-3xl mx-auto px-4 sm:px-6 pb-12 min-w-0">
           <Outlet />
         </main>
+        <ShortcutsHelp />
         <ScrollRestoration />
         <Scripts />
+        </ToastProvider>
       </body>
     </html>
   );

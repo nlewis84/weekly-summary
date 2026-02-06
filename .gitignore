@@ -5,5 +5,8 @@ node_modules/
 build/
 .react-router/
 coverage/
+test-results/
+playwright-report/
+playwright/.cache/
 *.log
 .DS_Store

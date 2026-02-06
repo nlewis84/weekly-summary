@@ -1,6 +1,6 @@
 # Plan 08: Performance & Loading States
 
-**Status: 🔲 Pending**
+**Status: ✅ Complete**
 
 ## Problem
 
@@ -26,3 +26,12 @@ Improve perceived performance and loading UX.
 - Users see immediate feedback (skeleton) instead of blank
 - Charts load without blocking main content
 - No jarring layout shifts
+
+---
+
+## Resolution
+
+- MetricsCardSkeleton and WeeklyTickerSkeleton: match MetricsCard/WeeklyTicker layout, animate-pulse
+- TodaySection and WeeklySection: show skeleton when isLoading && !data
+- getChartsData: parallelized with Promise.all (was sequential for-loop)
+- Charts route: already code-split (separate chunk when navigating)

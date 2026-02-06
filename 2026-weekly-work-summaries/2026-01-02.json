@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "generated_at": "2026-02-06T02:31:06.671Z",
+    "window_start": "2025-12-27T06:00:00.000Z",
+    "window_end": "2026-01-02T23:59:59.999Z",
+    "week_ending": "2026-01-02",
+    "source_of_truth": "Week-in-review video transcript"
+  },
+  "stats": {
+    "prs_merged": 0,
+    "prs_total": 0,
+    "pr_reviews": 0,
+    "pr_comments": 0,
+    "linear_completed": 0,
+    "linear_worked_on": 0,
+    "repos": [
+      "apollos-admin"
+    ]
+  },
+  "linear": {
+    "completed_issues": [],
+    "worked_on_issues": []
+  },
+  "github": {
+    "merged_prs": [],
+    "reviews": []
+  },
+  "check_ins": [
+    {
+      "day": "Week in review",
+      "content": "Week in review (2026-01-02): # Week in review — 2026-01-02 (Friday) Hey, how's it going everybody? I just wanted to go through quickly what I went, worked on today and also what my plan is for the week so we can kind of have that in our mind, uhm, moving forward. Okay, so first off, today I worked, uhm, solely on the sign-in and sign-up pages, uhm, inside of web, uhm, to get this closer to, uhm, parity with our, uhm, Figma mocks that Siobhan has been working on. So, uhm, let's just look at what all's changed. So, like, this text is slightly smaller. It's also centered. It's also changed. All of this text is completely different. Uhm, this is a different component now. So, this is going to be using a, actually, not a different component. It was still a tabs component previously. It's using a new very variant of that co…"
+    }
+  ],
+  "terminal_output": "╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary (from transcript)                 ║\n╚══════════════════════════════════════════════════════════╝\n\n📋 Extracted from week-in-review transcript\n\nStats: 0 PRs merged | 0 total | 0 reviews | 0 Linear completed | 0 worked on\n\nWeek in review (2026-01-02): # Week in review — 2026-01-02 (Friday) Hey, how's it going everybody? I just wanted to go through quickly what I went, worked on today and also what my plan is for the week so we can kind of have that in our mind, uhm, moving forward. Okay, so first off, today I worked, uhm, solely on the sign-in and sign-up pages, uhm, inside of web, uhm, to get this closer to, uhm, parity with our, uhm, Figma mocks that Siobhan has been working on. So, uhm, let's just look at what all's changed. So, like, this text is slightly smaller. It's also centered. It's also changed. All of this text is completely different. Uhm, this is a different component now. So, this is going to be using a, actually, not a different component. It was still a tabs component previously. It's using a new very variant of that co…",
+  "formatted_output": "Week in review (2026-01-02): # Week in review — 2026-01-02 (Friday) Hey, how's it going everybody? I just wanted to go through quickly what I went, worked on today and also what my plan is for the week so we can kind of have that in our mind, uhm, moving forward. Okay, so first off, today I worked, uhm, solely on the sign-in and sign-up pages, uhm, inside of web, uhm, to get this closer to, uhm, parity with our, uhm, Figma mocks that Siobhan has been working on. So, uhm, let's just look at what all's changed. So, like, this text is slightly smaller. It's also centered. It's also changed. All of this text is completely different. Uhm, this is a different component now. So, this is going to be using a, actually, not a different component. It was still a tabs component previously. It's using a new very variant of that co…"
+}

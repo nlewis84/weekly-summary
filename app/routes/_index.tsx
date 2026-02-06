@@ -3,6 +3,7 @@ import { useLoaderData, useRevalidator } from "react-router";
 import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
 import { runSummary } from "../../lib/summary";
+import { fetchWeeklySummary } from "../../lib/github-fetch";
 import { TodaySection } from "~/components/TodaySection";
 import { WeeklySection } from "~/components/WeeklySection";
 import { FullSummaryFormContainer } from "~/components/FullSummaryFormContainer";
@@ -10,9 +11,15 @@ import type { Payload } from "../../lib/types";
 
 const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
 
+function getPrevWeekEnding(weekEnding: string): string {
+  const d = new Date(weekEnding + "T12:00:00Z");
+  d.setDate(d.getDate() - 7);
+  return d.toISOString().slice(0, 10);
+}
+
 interface IndexLoaderData {
   today: { payload?: Payload; error?: string };
-  weekly: { payload?: Payload; error?: string };
+  weekly: { payload?: Payload; prevPayload?: Payload | null; error?: string };
 }
 
 export async function loader({ request }: LoaderFunctionArgs) {
@@ -31,7 +38,16 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
   const runWeekly = () =>
     runSummary({ todayMode: false, checkInsText: "", outputDir: null }).then(
-      (r) => ({ payload: r.payload }),
+      async (r) => {
+        const prevWeekEnding = getPrevWeekEnding(r.payload.meta.week_ending);
+        let prevPayload: Payload | null = null;
+        try {
+          prevPayload = await fetchWeeklySummary(prevWeekEnding);
+        } catch {
+          // No previous week; trend badges will not show
+        }
+        return { payload: r.payload, prevPayload };
+      },
       (err) => {
         console.error("Weekly summary error:", err);
         return { error: (err as Error).message };
@@ -59,6 +75,20 @@ export default function Index() {
     };
   }, [revalidator.revalidate]);
 
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "r" && !e.metaKey && !e.ctrlKey && !e.altKey && !e.shiftKey) {
+        const target = e.target as HTMLElement;
+        if (!target.closest("input, textarea, [contenteditable]")) {
+          e.preventDefault();
+          revalidator.revalidate();
+        }
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [revalidator]);
+
   const isLoading = revalidator.state === "loading";
 
   const todayPayload = today && "payload" in today ? today.payload : null;
@@ -79,7 +109,12 @@ export default function Index() {
         <FullSummaryFormContainer />
       </div>
 
-      <WeeklySection stats={weeklyPayload?.stats ?? null} error={weeklyError ?? null} />
+      <WeeklySection
+        stats={weeklyPayload?.stats ?? null}
+        prevStats={weekly && "prevPayload" in weekly ? weekly.prevPayload?.stats ?? null : null}
+        error={weeklyError ?? null}
+        isLoading={isLoading && !weeklyPayload}
+      />
     </div>
   );
 }

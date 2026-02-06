@@ -5,7 +5,7 @@
  */
 
 import type { Payload } from "./types.js";
-import { buildMarkdownSummary } from "./summary.js";
+import { buildMarkdownSummary } from "./markdown.js";
 import { fetchWithRetry } from "./github-api.js";
 
 const GITHUB_API = "https://api.github.com";

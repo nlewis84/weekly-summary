@@ -1,13 +1,19 @@
 /**
  * Fetch historical weekly summaries from GitHub repo via REST API.
- * Lists JSON files in 2026-weekly-work-summaries/ and fetches individual file content.
+ * Supports multiple paths via GITHUB_SUMMARY_PATHS (comma-separated).
+ * Default: 2026-weekly-work-summaries. Add 2025-weekly-work-summaries etc. for earlier years.
  */
 
 import type { Payload } from "./types.js";
 import { fetchWithRetry } from "./github-api.js";
 
 const GITHUB_API = "https://api.github.com";
-const BASE_PATH = "2026-weekly-work-summaries";
+const DEFAULT_PATHS = "2026-weekly-work-summaries";
+
+function getSummaryPaths(): string[] {
+  const raw = process.env.GITHUB_SUMMARY_PATHS ?? DEFAULT_PATHS;
+  return raw.split(",").map((p) => p.trim()).filter(Boolean);
+}
 
 function getRepoSpec(): { owner: string; repo: string } {
   const spec = process.env.GITHUB_REPO ?? "nlewis84/weekly-summary";
@@ -33,49 +39,87 @@ interface GhContentItem {
 }
 
 /**
- * List all JSON files in the summaries directory.
- * Returns week_ending strings (e.g. "2026-01-31") sorted descending.
+ * List all JSON and week-in-review MD files across configured summary paths.
+ * Returns week_ending strings (e.g. "2026-01-31") sorted descending, deduplicated.
+ * Includes: *.json (YYYY-MM-DD.json) and *-week-in-review.md (YYYY-MM-DD-week-in-review.md)
  */
 export async function listWeeklySummaries(): Promise<string[]> {
   const { owner, repo } = getRepoSpec();
-  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${BASE_PATH}`;
+  const paths = getSummaryPaths();
+  const allWeeks = new Set<string>();
 
-  const res = await fetchWithRetry(url, { headers: getAuthHeaders() });
-  if (!res.ok) {
-    const err = (await res.json().catch(() => ({}))) as { message?: string };
-    throw new Error(err.message ?? `GitHub API: ${res.status}`);
+  for (const basePath of paths) {
+    const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${basePath}`;
+    const res = await fetchWithRetry(url, { headers: getAuthHeaders() });
+    if (res.status === 404) continue;
+    if (!res.ok) {
+      const err = (await res.json().catch(() => ({}))) as { message?: string };
+      throw new Error(err.message ?? `GitHub API: ${res.status}`);
+    }
+    const items = (await res.json()) as GhContentItem[];
+    for (const f of items) {
+      if (f.type !== "file") continue;
+      if (f.name.endsWith(".json")) {
+        const name = f.name.replace(/\.json$/, "");
+        if (/^\d{4}-\d{2}-\d{2}$/.test(name)) allWeeks.add(name);
+      } else if (f.name.endsWith("-week-in-review.md")) {
+        const match = f.name.match(/^(\d{4}-\d{2}-\d{2})-week-in-review\.md$/);
+        if (match) allWeeks.add(match[1]);
+      }
+    }
   }
 
-  const items = (await res.json()) as GhContentItem[];
-  const jsonFiles = items.filter((f) => f.type === "file" && f.name.endsWith(".json"));
-  const weekEndings = jsonFiles
-    .map((f) => f.name.replace(/\.json$/, ""))
-    .filter((name) => /^\d{4}-\d{2}-\d{2}$/.test(name))
-    .sort((a, b) => b.localeCompare(a));
-
-  return weekEndings;
+  return [...allWeeks].sort((a, b) => b.localeCompare(a));
 }
+
+export type WeeklySummaryResult = Payload | { type: "markdown"; week_ending: string; content: string };
 
 /**
  * Fetch a single weekly summary by week_ending (e.g. "2026-01-31").
+ * Tries .json first, then -week-in-review.md. Returns Payload for JSON, or markdown result for .md.
  */
 export async function fetchWeeklySummary(weekEnding: string): Promise<Payload | null> {
+  const result = await fetchWeeklySummaryRaw(weekEnding);
+  if (!result) return null;
+  if ("type" in result && result.type === "markdown") return null; // Charts/History detail need Payload
+  return result as Payload;
+}
+
+/**
+ * Fetch weekly summary as Payload or raw markdown. Use for History page to show both.
+ */
+export async function fetchWeeklySummaryRaw(weekEnding: string): Promise<WeeklySummaryResult | null> {
   const { owner, repo } = getRepoSpec();
-  const path = `${BASE_PATH}/${weekEnding}.json`;
-  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${path}`;
+  const paths = getSummaryPaths();
+  const year = weekEnding.slice(0, 4);
+  const yearPath = `${year}-weekly-work-summaries`;
+  const orderedPaths = paths.includes(yearPath)
+    ? [yearPath, ...paths.filter((p) => p !== yearPath)]
+    : paths;
 
-  const res = await fetchWithRetry(url, { headers: getAuthHeaders() });
-  if (res.status === 404) return null;
-  if (!res.ok) {
-    const err = (await res.json().catch(() => ({}))) as { message?: string };
-    throw new Error(err.message ?? `GitHub API: ${res.status}`);
+  for (const basePath of orderedPaths) {
+    const jsonPath = `${basePath}/${weekEnding}.json`;
+    const jsonUrl = `${GITHUB_API}/repos/${owner}/${repo}/contents/${jsonPath}`;
+    const jsonRes = await fetchWithRetry(jsonUrl, { headers: getAuthHeaders() });
+    if (jsonRes.ok) {
+      const data = (await jsonRes.json()) as { content?: string; encoding?: string };
+      if (!data.content || data.encoding !== "base64") {
+        throw new Error("Invalid GitHub content response");
+      }
+      const raw = Buffer.from(data.content, "base64").toString("utf8");
+      return JSON.parse(raw) as Payload;
+    }
+
+    const mdPath = `${basePath}/${weekEnding}-week-in-review.md`;
+    const mdUrl = `${GITHUB_API}/repos/${owner}/${repo}/contents/${mdPath}`;
+    const mdRes = await fetchWithRetry(mdUrl, { headers: getAuthHeaders() });
+    if (mdRes.ok) {
+      const data = (await mdRes.json()) as { content?: string; encoding?: string };
+      if (data.content && data.encoding === "base64") {
+        const content = Buffer.from(data.content, "base64").toString("utf8");
+        return { type: "markdown", week_ending: weekEnding, content };
+      }
+    }
   }
-
-  const data = (await res.json()) as { content?: string; encoding?: string };
-  if (!data.content || data.encoding !== "base64") {
-    throw new Error("Invalid GitHub content response");
-  }
-
-  const raw = Buffer.from(data.content, "base64").toString("utf8");
-  return JSON.parse(raw) as Payload;
+  return null;
 }
