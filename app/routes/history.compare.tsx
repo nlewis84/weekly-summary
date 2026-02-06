@@ -43,7 +43,7 @@ function formatWeekLabel(weekEnding: string): string {
 }
 
 function DeltaBadge({ delta }: { delta: number }) {
-  if (delta === 0) return <Minus size={14} weight="bold" className="text-(--color-text-muted)" />;
+  if (delta === 0) return <Minus size={14} weight="bold" className="text-text-muted" />;
   if (delta > 0) return <CaretUp size={14} weight="bold" className="text-emerald-600 dark:text-emerald-400" />;
   return <CaretDown size={14} weight="bold" className="text-amber-600 dark:text-amber-400" />;
 }
@@ -96,7 +96,7 @@ export default function HistoryCompare() {
       <Link
         to="/history"
         prefetch="intent"
-        className="inline-flex items-center gap-2 text-sm text-(--color-text-muted) hover:text-primary-500 transition-colors"
+        className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-primary-500 transition-colors"
       >
         <ArrowLeft size={18} weight="regular" />
         Back to History
@@ -119,11 +119,11 @@ export default function HistoryCompare() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-(--color-text-muted) mb-2">Week 1</label>
+          <label className="block text-sm font-medium text-text-muted mb-2">Week 1</label>
           <select
             value={week1}
             onChange={(e) => handleWeek1Change(e.target.value)}
-            className="w-full px-4 py-2 bg-(--color-surface-elevated) border border-(--color-border) rounded-lg text-(--color-text) focus:ring-2 focus:ring-primary-500"
+            className="w-full px-4 py-2 bg-surface-elevated border border-(--color-border) rounded-lg text-(--color-text) focus:ring-2 focus:ring-primary-500"
           >
             <option value="">Select week…</option>
             {weeks.map((w) => (
@@ -134,11 +134,11 @@ export default function HistoryCompare() {
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium text-(--color-text-muted) mb-2">Week 2</label>
+          <label className="block text-sm font-medium text-text-muted mb-2">Week 2</label>
           <select
             value={week2}
             onChange={(e) => handleWeek2Change(e.target.value)}
-            className="w-full px-4 py-2 bg-(--color-surface-elevated) border border-(--color-border) rounded-lg text-(--color-text) focus:ring-2 focus:ring-primary-500"
+            className="w-full px-4 py-2 bg-surface-elevated border border-(--color-border) rounded-lg text-(--color-text) focus:ring-2 focus:ring-primary-500"
           >
             <option value="">Select week…</option>
             {weeks.map((w) => (
@@ -151,19 +151,19 @@ export default function HistoryCompare() {
       </div>
 
       {s1 && s2 ? (
-        <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) overflow-hidden">
+        <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-(--color-border)">
-                  <th className="text-left py-3 px-4 font-medium text-(--color-text-muted)">Metric</th>
+                  <th className="text-left py-3 px-4 font-medium text-text-muted">Metric</th>
                   <th className="text-right py-3 px-4 font-medium text-(--color-text)">
                     {week1 ? formatWeekLabel(week1) : "—"}
                   </th>
                   <th className="text-right py-3 px-4 font-medium text-(--color-text)">
                     {week2 ? formatWeekLabel(week2) : "—"}
                   </th>
-                  <th className="text-right py-3 px-4 font-medium text-(--color-text-muted)">Δ</th>
+                  <th className="text-right py-3 px-4 font-medium text-text-muted">Δ</th>
                 </tr>
               </thead>
               <tbody>
@@ -173,7 +173,7 @@ export default function HistoryCompare() {
                   const delta = v2 - v1;
                   return (
                     <tr key={key} className="border-b border-(--color-border) last:border-0">
-                      <td className="py-3 px-4 text-(--color-text-muted)">{METRIC_LABELS[key]}</td>
+                      <td className="py-3 px-4 text-text-muted">{METRIC_LABELS[key]}</td>
                       <td className="py-3 px-4 text-right font-medium text-(--color-text)">{v1}</td>
                       <td className="py-3 px-4 text-right font-medium text-(--color-text)">{v2}</td>
                       <td className="py-3 px-4 text-right">
@@ -190,17 +190,17 @@ export default function HistoryCompare() {
                   );
                 })}
                 <tr className="border-b border-(--color-border) last:border-0">
-                  <td className="py-3 px-4 text-(--color-text-muted)">Repos</td>
+                  <td className="py-3 px-4 text-text-muted">Repos</td>
                   <td className="py-3 px-4 text-right font-medium text-(--color-text)">{s1.repos.join(", ") || "—"}</td>
                   <td className="py-3 px-4 text-right font-medium text-(--color-text)">{s2.repos.join(", ") || "—"}</td>
-                  <td className="py-3 px-4 text-right text-(--color-text-muted)">—</td>
+                  <td className="py-3 px-4 text-right text-text-muted">—</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       ) : (
-        <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-(--color-text-muted) border border-(--color-border)">
+        <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-text-muted border border-(--color-border)">
           Select two weeks to compare. {!week1 && !week2 && "Both weeks need a JSON summary (not transcript-only)."}
         </div>
       )}

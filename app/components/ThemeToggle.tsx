@@ -70,7 +70,7 @@ export function ThemeToggle() {
       onClick={cycle}
       aria-label={`Theme: ${label}. Click to switch.`}
       title={label}
-      className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2 text-(--color-text-muted) hover:text-primary-500 hover:bg-(--color-surface-elevated) rounded-lg transition-colors -m-1 sm:m-0 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-(--color-surface)"
+      className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2 text-text-muted hover:text-primary-500 hover:bg-surface-elevated rounded-lg transition-colors -m-1 sm:m-0 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-surface"
     >
       {theme === "dark" ? (
         <Moon size={20} weight="regular" />

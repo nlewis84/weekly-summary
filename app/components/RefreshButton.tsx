@@ -39,7 +39,7 @@ export function RefreshButton({ onClick, isLoading }: RefreshButtonProps) {
       className={`flex items-center justify-center gap-2 min-h-[44px] min-w-[44px] px-3 py-2 text-sm text-primary-500 rounded-lg transition-colors ${
         displaying
           ? "cursor-wait opacity-75"
-          : "cursor-pointer hover:text-primary-400 hover:bg-(--color-surface-elevated)"
+          : "cursor-pointer hover:text-primary-400 hover:bg-surface-elevated"
       }`}
     >
       <span

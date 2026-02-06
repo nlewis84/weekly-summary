@@ -4,6 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
+        surface: "var(--color-surface)",
+        "surface-elevated": "var(--color-surface-elevated)",
+        "text-muted": "var(--color-text-muted)",
+        border: "var(--color-border)",
+        "error-bg": "var(--color-error-bg)",
+        "error-border": "var(--color-error-border)",
+        "error-500": "var(--color-error-500)",
+        "success-bg": "var(--color-success-bg)",
+        "success-border": "var(--color-success-border)",
+        "success-500": "var(--color-success-500)",
         primary: {
           50: "#e6f7f5",
           100: "#b3e7e0",

@@ -11,11 +11,11 @@
 
 ## Build Weekly Summary Divider Pattern (Reference)
 
-The Build Summary uses `border-t border-[var(--color-border)]` on the content div, with `pt-4` for spacing below the divider:
+The Build Summary uses `border-t border-(--color-border)` on the content div, with `pt-4` for spacing below the divider:
 
 ```tsx
 <summary className="... px-5 py-4 ...">Build Weekly Summary</summary>
-<div className="px-5 pb-5 pt-4 border-t border-[var(--color-border)] ...">
+<div className="px-5 pb-5 pt-4 border-t border-(--color-border) ...">
   {/* content */}
 </div>
 ```
@@ -34,7 +34,7 @@ To match Build Summary, Metrics and This week should move the divider to the con
 
 ### 1. Header Divider Consistency
 
-- [x] **MetricsCard:** Change from `border-b pb-4 mb-4` on header to `border-t pt-4` on the content wrapper. Header gets `pb-4` only (no border). Content wrapper gets `border-t border-[var(--color-border)] pt-4`.
+- [x] **MetricsCard:** Change from `border-b pb-4 mb-4` on header to `border-t pt-4` on the content wrapper. Header gets `pb-4` only (no border). Content wrapper gets `border-t border-(--color-border) pt-4`.
 - [x] **WeeklyTicker:** Same change—content wrapper gets `border-t pt-4`, header loses `border-b mb-4`.
 
 ### 2. This Week Card Height

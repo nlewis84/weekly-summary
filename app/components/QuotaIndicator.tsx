@@ -54,7 +54,7 @@ export function QuotaIndicator() {
       <div className="flex flex-wrap gap-4 text-xs">
         {gh && (
           <span
-            className={ghLow ? "text-amber-600 dark:text-amber-400" : "text-(--color-text-muted)"}
+            className={ghLow ? "text-amber-600 dark:text-amber-400" : "text-text-muted"}
             title={`GitHub: ${gh.remaining} of ${gh.limit} remaining. ${formatReset(gh.resetAt)}`}
           >
             GitHub: {gh.remaining} left
@@ -63,7 +63,7 @@ export function QuotaIndicator() {
         )}
         {lin && lin.remaining != null && (
           <span
-            className={linLow ? "text-amber-600 dark:text-amber-400" : "text-(--color-text-muted)"}
+            className={linLow ? "text-amber-600 dark:text-amber-400" : "text-text-muted"}
             title={`Linear: ${lin.remaining} of ${lin.limit ?? "?"} remaining. ${formatReset(lin.resetAt)}`}
           >
             Linear: {lin.remaining} left

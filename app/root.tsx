@@ -33,21 +33,21 @@ export function ErrorBoundary() {
       : "Something went wrong";
   return (
     <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="bg-(--color-error-bg) border border-(--color-error-border) rounded-xl p-6 text-(--color-error-500)">
+      <div className="bg-error-bg border border-error-border rounded-xl p-6 text-error-500">
         <h2 className="text-lg font-semibold mb-2">Something went wrong</h2>
         <p className="text-sm mb-4">{message}</p>
         <div className="flex gap-3">
           <button
             type="button"
             onClick={() => window.location.reload()}
-            className="px-4 py-2 bg-(--color-error-bg) hover:opacity-90 rounded-lg font-medium border border-(--color-error-border)"
+            className="px-4 py-2 bg-error-bg hover:opacity-90 rounded-lg font-medium border border-error-border"
           >
             Retry
           </button>
           <Link
             to="/"
             prefetch="intent"
-            className="px-4 py-2 bg-(--color-surface-elevated) hover:opacity-90 rounded-lg font-medium border border-(--color-border) text-(--color-text)"
+            className="px-4 py-2 bg-surface-elevated hover:opacity-90 rounded-lg font-medium border border-(--color-border) text-(--color-text)"
           >
             Go home
           </Link>
@@ -130,7 +130,7 @@ export default function App() {
           >
             Skip to content
           </a>
-          <header className="bg-(--color-surface) shadow-(--shadow-skeuo-card) py-4 mb-6 border-b border-(--color-border)">
+          <header className="bg-surface shadow-(--shadow-skeuo-card) py-4 mb-6 border-b border-(--color-border)">
             <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <h1 className="flex items-center gap-2 text-xl font-bold text-(--color-text) m-0">
                 <ChartBar
@@ -154,7 +154,7 @@ export default function App() {
                 <Link
                   to="/#build-summary"
                   prefetch="intent"
-                  className="min-h-[44px] min-w-[44px] flex items-center px-3 py-2 text-primary-600 font-medium hover:text-primary-500 hover:bg-(--color-surface-elevated) rounded-lg transition-colors -m-1 sm:m-0"
+                  className="min-h-[44px] min-w-[44px] flex items-center px-3 py-2 text-primary-600 font-medium hover:text-primary-500 hover:bg-surface-elevated rounded-lg transition-colors -m-1 sm:m-0"
                 >
                   Build Summary
                 </Link>
@@ -163,7 +163,7 @@ export default function App() {
                   prefetch="intent"
                   end={false}
                   className={({ isActive }) =>
-                    `min-h-[44px] min-w-[44px] flex items-center px-3 py-2 rounded-lg -m-1 sm:m-0 transition-colors ${isActive ? "text-primary-600 font-medium bg-(--color-surface-elevated)" : "text-(--color-text-muted) hover:text-primary-500 hover:bg-(--color-surface-elevated)"}`
+                    `min-h-[44px] min-w-[44px] flex items-center px-3 py-2 rounded-lg -m-1 sm:m-0 transition-colors ${isActive ? "text-primary-600 font-medium bg-surface-elevated" : "text-text-muted hover:text-primary-500 hover:bg-surface-elevated"}`
                   }
                 >
                   History
@@ -172,7 +172,7 @@ export default function App() {
                   to="/charts"
                   prefetch="intent"
                   className={({ isActive }) =>
-                    `min-h-[44px] min-w-[44px] flex items-center px-3 py-2 rounded-lg -m-1 sm:m-0 transition-colors ${isActive ? "text-primary-600 font-medium bg-(--color-surface-elevated)" : "text-(--color-text-muted) hover:text-primary-500 hover:bg-(--color-surface-elevated)"}`
+                    `min-h-[44px] min-w-[44px] flex items-center px-3 py-2 rounded-lg -m-1 sm:m-0 transition-colors ${isActive ? "text-primary-600 font-medium bg-surface-elevated" : "text-text-muted hover:text-primary-500 hover:bg-surface-elevated"}`
                   }
                 >
                   Charts
@@ -181,7 +181,7 @@ export default function App() {
                   to="/settings"
                   prefetch="intent"
                   className={({ isActive }) =>
-                    `min-h-[44px] min-w-[44px] flex items-center px-3 py-2 rounded-lg -m-1 sm:m-0 transition-colors ${isActive ? "text-primary-600 font-medium bg-(--color-surface-elevated)" : "text-(--color-text-muted) hover:text-primary-500 hover:bg-(--color-surface-elevated)"}`
+                    `min-h-[44px] min-w-[44px] flex items-center px-3 py-2 rounded-lg -m-1 sm:m-0 transition-colors ${isActive ? "text-primary-600 font-medium bg-surface-elevated" : "text-text-muted hover:text-primary-500 hover:bg-surface-elevated"}`
                   }
                 >
                   Settings

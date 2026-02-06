@@ -47,17 +47,17 @@ Wrap the four cards in a responsive grid:
 
 ```tsx
 <div className="space-y-6">
-  <h2 className="text-lg font-semibold text-[var(--color-text)]">Settings</h2>
+  <h2 className="text-lg font-semibold text-(--color-text)">Settings</h2>
 
   {/* Two-column layout on xl */}
   <div className="xl:grid xl:grid-cols-2 xl:gap-6 xl:items-start space-y-6 xl:space-y-0">
     {/* Left column: Appearance + Auto-refresh */}
     <div className="space-y-6">
-      <div className="bg-[var(--color-surface)] rounded-xl ... p-6 xl:p-5">
+      <div className="bg-surface rounded-xl ... p-6 xl:p-5">
         <h3>Appearance</h3>
         ...
       </div>
-      <div className="bg-[var(--color-surface)] rounded-xl ... p-6 xl:p-5">
+      <div className="bg-surface rounded-xl ... p-6 xl:p-5">
         <h3>Auto-refresh</h3>
         ...
       </div>
@@ -65,11 +65,11 @@ Wrap the four cards in a responsive grid:
 
     {/* Right column: Weekly goals + Server settings */}
     <div className="space-y-6">
-      <div className="bg-[var(--color-surface)] rounded-xl ... p-6 xl:p-5">
+      <div className="bg-surface rounded-xl ... p-6 xl:p-5">
         <h3>Weekly goals</h3>
         ...
       </div>
-      <div className="bg-[var(--color-surface)] rounded-xl ... p-6 xl:p-5">
+      <div className="bg-surface rounded-xl ... p-6 xl:p-5">
         <h3>Server settings</h3>
         ...
       </div>

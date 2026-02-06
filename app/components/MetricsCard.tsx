@@ -33,7 +33,7 @@ function TrendBadge({ delta }: { delta: number }) {
       <Minus
         size={12}
         weight="bold"
-        className="text-(--color-text-muted)"
+        className="text-text-muted"
         aria-label="no change"
       />
     );
@@ -143,14 +143,14 @@ export function MetricsCard({
       (payload.linear.created_issues?.length ?? 0) > 0);
 
   return (
-    <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:h-full xl:flex xl:flex-col xl:min-h-0">
+    <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:h-full xl:flex xl:flex-col xl:min-h-0">
       <div className="flex items-center justify-between pb-4">
         <h2 className="text-lg font-semibold text-(--color-text)">Metrics</h2>
         <button
           type="button"
           onClick={handleCopy}
           aria-label="Copy stats for standup"
-          className="flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] px-3 py-2 text-sm text-(--color-text-muted) hover:text-primary-500 hover:bg-(--color-surface-elevated) rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+          className="flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] px-3 py-2 text-sm text-text-muted hover:text-primary-500 hover:bg-surface-elevated rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
           title="Copy stats for standup"
         >
           <Copy size={16} weight="regular" />
@@ -175,9 +175,9 @@ export function MetricsCard({
             return (
               <div
                 key={key}
-                className={`flex items-center justify-between p-3 bg-(--color-surface-elevated) rounded-lg border shadow-(--shadow-skeuo-inset) ${met ? "border-emerald-500/50" : "border-(--color-border)"}`}
+                className={`flex items-center justify-between p-3 bg-surface-elevated rounded-lg border shadow-(--shadow-skeuo-inset) ${met ? "border-emerald-500/50" : "border-(--color-border)"}`}
               >
-                <span className="flex items-center gap-2 text-sm text-(--color-text-muted)">
+                <span className="flex items-center gap-2 text-sm text-text-muted">
                   <Icon
                     size={iconSize}
                     weight="regular"
@@ -220,7 +220,7 @@ export function MetricsCard({
           })}
         </div>
         <div className="mt-4 pt-4 border-t border-(--color-border)">
-          <span className="flex items-center gap-2 text-sm text-(--color-text-muted)">
+          <span className="flex items-center gap-2 text-sm text-text-muted">
             <Folder
               size={iconSize}
               weight="regular"
@@ -257,7 +257,7 @@ export function MetricsCard({
                 >
                   {payload!.github.merged_prs.length > 0 && (
                     <div>
-                      <h3 className="font-medium text-(--color-text-muted) mb-2">
+                      <h3 className="font-medium text-text-muted mb-2">
                         PRs merged
                       </h3>
                       <ul className="space-y-1">
@@ -272,7 +272,7 @@ export function MetricsCard({
                               {pr.title}
                             </a>
                             {pr.repo && (
-                              <span className="text-(--color-text-muted) ml-1">
+                              <span className="text-text-muted ml-1">
                                 ({pr.repo})
                               </span>
                             )}
@@ -283,7 +283,7 @@ export function MetricsCard({
                   )}
                   {payload!.github.reviews.length > 0 && (
                     <div>
-                      <h3 className="font-medium text-(--color-text-muted) mb-2">
+                      <h3 className="font-medium text-text-muted mb-2">
                         PR reviews
                       </h3>
                       <ul className="space-y-1">
@@ -304,7 +304,7 @@ export function MetricsCard({
                   )}
                   {payload!.linear.completed_issues.length > 0 && (
                     <div>
-                      <h3 className="font-medium text-(--color-text-muted) mb-2">
+                      <h3 className="font-medium text-text-muted mb-2">
                         Linear completed
                       </h3>
                       <ul className="space-y-1">
@@ -333,7 +333,7 @@ export function MetricsCard({
                   )}
                   {payload!.linear.worked_on_issues.length > 0 && (
                     <div>
-                      <h3 className="font-medium text-(--color-text-muted) mb-2">
+                      <h3 className="font-medium text-text-muted mb-2">
                         Linear worked on
                       </h3>
                       <ul className="space-y-1">
@@ -362,7 +362,7 @@ export function MetricsCard({
                   )}
                   {(payload!.linear.created_issues?.length ?? 0) > 0 && (
                     <div>
-                      <h3 className="font-medium text-(--color-text-muted) mb-2">
+                      <h3 className="font-medium text-text-muted mb-2">
                         Linear issues created
                       </h3>
                       <ul className="space-y-1">

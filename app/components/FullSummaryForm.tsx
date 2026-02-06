@@ -105,7 +105,7 @@ export function FullSummaryForm({
   return (
     <details
       ref={detailsRef}
-      className="w-full xl:w-96 bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) xl:flex-1 xl:min-h-0 xl:flex xl:flex-col"
+      className="w-full xl:w-96 bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) xl:flex-1 xl:min-h-0 xl:flex xl:flex-col"
     >
       <summary className="flex items-center gap-2 px-5 py-4 cursor-pointer font-medium text-(--color-text) list-none [&::-webkit-details-marker]:hidden">
         <FileText
@@ -117,7 +117,7 @@ export function FullSummaryForm({
       </summary>
       <div className="px-5 pb-5 pt-4 border-t border-(--color-border) space-y-4 xl:flex-1 xl:min-h-0">
         {lastBuilt && (
-          <p className="text-sm text-(--color-text-muted)">
+          <p className="text-sm text-text-muted">
             Last built: {formatRelativeTime(lastBuilt.builtAt)}
             {lastBuilt.weekEnding && (
               <span className="ml-1">
@@ -137,7 +137,7 @@ export function FullSummaryForm({
           <div>
             <label
               htmlFor="checkIns"
-              className="block text-sm font-medium text-(--color-text-muted) mb-2"
+              className="block text-sm font-medium text-text-muted mb-2"
             >
               Check-ins
             </label>
@@ -145,7 +145,7 @@ export function FullSummaryForm({
               id="checkIns"
               name="checkIns"
               rows={isXlScreen ? 5 : 6}
-              className="w-full px-3 py-2 border border-(--color-border) rounded-lg text-sm bg-(--color-surface-elevated) shadow-(--shadow-skeuo-inset) focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-(--color-text)"
+              className="w-full px-3 py-2 border border-(--color-border) rounded-lg text-sm bg-surface-elevated shadow-(--shadow-skeuo-inset) focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-(--color-text)"
             />
           </div>
           <div className="flex items-center gap-2">
@@ -157,7 +157,7 @@ export function FullSummaryForm({
             />
             <label
               htmlFor="todayOnly"
-              className="text-sm text-(--color-text-muted)"
+              className="text-sm text-text-muted"
             >
               Today only
             </label>
@@ -175,13 +175,13 @@ export function FullSummaryForm({
 
         {saved && (
           <div className="space-y-4">
-            <div className="p-4 bg-(--color-success-bg) border border-(--color-success-border) rounded-xl flex items-center gap-4">
+            <div className="p-4 bg-success-bg border border-success-border rounded-xl flex items-center gap-4">
               <LottieIcon name="check" size={48} loop={false} />
               <div className="flex-1">
-                <p className="font-medium text-(--color-success-500)">
+                <p className="font-medium text-success-500">
                   Saved to repository.
                 </p>
-                <p className="text-sm text-(--color-text-muted) mt-0.5">
+                <p className="text-sm text-text-muted mt-0.5">
                   Your weekly summary has been generated and committed.
                 </p>
               </div>

@@ -180,7 +180,7 @@ export default function HistoryIndex() {
                   )
                 }
                 disabled={exporting}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-primary-600 hover:text-primary-500 hover:bg-(--color-surface-elevated) rounded-lg transition-colors disabled:opacity-50"
+                className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-primary-600 hover:text-primary-500 hover:bg-surface-elevated rounded-lg transition-colors disabled:opacity-50"
                 title={
                   selected.size > 0
                     ? `Export ${selected.size} selected`
@@ -198,7 +198,7 @@ export default function HistoryIndex() {
                 <button
                   type="button"
                   onClick={clearSelection}
-                  className="text-sm text-(--color-text-muted) hover:text-primary-500"
+                  className="text-sm text-text-muted hover:text-primary-500"
                 >
                   Clear
                 </button>
@@ -210,7 +210,7 @@ export default function HistoryIndex() {
           <MagnifyingGlass
             size={18}
             weight="regular"
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-(--color-text-muted) pointer-events-none"
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none"
           />
           <input
             type="search"
@@ -218,7 +218,7 @@ export default function HistoryIndex() {
             onChange={handleSearchChange}
             placeholder="Search by date or week…"
             aria-label="Search history"
-            className="w-full sm:w-64 pl-8 pr-4 py-2 text-sm bg-(--color-surface-elevated) border border-(--color-border) rounded-lg text-(--color-text) placeholder:text-(--color-text-muted) focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="w-full sm:w-64 pl-8 pr-4 py-2 text-sm bg-surface-elevated border border-(--color-border) rounded-lg text-(--color-text) placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           />
         </div>
       </div>
@@ -237,16 +237,16 @@ export default function HistoryIndex() {
       )}
 
       {weeks.length === 0 && !error ? (
-        <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-(--color-text-muted) border border-(--color-border)">
+        <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-text-muted border border-(--color-border)">
           No summaries found in repository.
         </div>
       ) : filteredWeeks.length === 0 ? (
-        <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-(--color-text-muted) border border-(--color-border)">
+        <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-text-muted border border-(--color-border)">
           No weeks match &quot;{search}&quot;.
         </div>
       ) : (
         <>
-          <div className="flex items-center gap-2 text-sm text-(--color-text-muted)">
+          <div className="flex items-center gap-2 text-sm text-text-muted">
             <button
               type="button"
               onClick={selectAllFiltered}
@@ -260,7 +260,7 @@ export default function HistoryIndex() {
           <ul className="space-y-2">
             {filteredWeeks.map((week: string) => (
               <li key={week}>
-                <div className="relative flex items-center gap-3 p-4 bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) hover:shadow-(--shadow-skeuo-card-hover) hover:border-primary-500/50 transition-all group cursor-pointer">
+                <div className="relative flex items-center gap-3 p-4 bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) hover:shadow-(--shadow-skeuo-card-hover) hover:border-primary-500/50 transition-all group cursor-pointer">
                   <Link
                     to={`/history/${week}`}
                     prefetch="intent"
@@ -273,7 +273,7 @@ export default function HistoryIndex() {
                       e.preventDefault();
                       toggleWeek(week);
                     }}
-                    className="relative z-10 shrink-0 p-0.5 text-(--color-text-muted) hover:text-primary-500"
+                    className="relative z-10 shrink-0 p-0.5 text-text-muted hover:text-primary-500"
                     aria-label={selected.has(week) ? "Deselect" : "Select"}
                   >
                     {selected.has(week) ? (
@@ -295,7 +295,7 @@ export default function HistoryIndex() {
                     <span className="font-medium text-(--color-text) group-hover:text-primary-500 transition-colors">
                       Week ending {formatWeekLabel(week)}
                     </span>
-                    <span className="text-sm text-(--color-text-muted) ml-auto shrink-0">
+                    <span className="text-sm text-text-muted ml-auto shrink-0">
                       {week}
                     </span>
                   </div>

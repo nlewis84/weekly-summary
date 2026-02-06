@@ -37,20 +37,20 @@ export function ErrorBoundary() {
       <h2 className="text-lg font-semibold text-(--color-text)">
         Progress Charts
       </h2>
-      <div className="p-4 bg-(--color-error-bg) border border-(--color-error-border) rounded-xl text-(--color-error-500)">
+      <div className="p-4 bg-error-bg border border-error-border rounded-xl text-error-500">
         <p className="mb-4">{message}</p>
         <div className="flex gap-3">
           <button
             type="button"
             onClick={() => window.location.reload()}
-            className="px-3 py-2 bg-(--color-error-bg) hover:opacity-90 rounded-lg font-medium border border-(--color-error-border)"
+            className="px-3 py-2 bg-error-bg hover:opacity-90 rounded-lg font-medium border border-error-border"
           >
             Retry
           </button>
           <Link
             to="/"
             prefetch="intent"
-            className="px-3 py-2 bg-(--color-surface-elevated) hover:opacity-90 rounded-lg font-medium border border-(--color-border) text-(--color-text)"
+            className="px-3 py-2 bg-surface-elevated hover:opacity-90 rounded-lg font-medium border border-(--color-border) text-(--color-text)"
           >
             Go home
           </Link>
@@ -307,7 +307,7 @@ export default function Charts() {
           <div
             role="tablist"
             aria-label="Charts view"
-            className="flex rounded-lg border border-(--color-border) p-0.5 bg-(--color-surface-elevated)"
+            className="flex rounded-lg border border-(--color-border) p-0.5 bg-surface-elevated"
           >
             <button
               type="button"
@@ -318,8 +318,8 @@ export default function Charts() {
               onClick={() => setView("weekly")}
               className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
                 view === "weekly"
-                  ? "bg-(--color-surface) text-(--color-text) shadow-sm"
-                  : "text-(--color-text-muted) hover:text-(--color-text)"
+                  ? "bg-surface text-(--color-text) shadow-sm"
+                  : "text-text-muted hover:text-(--color-text)"
               }`}
             >
               Weekly
@@ -333,8 +333,8 @@ export default function Charts() {
               onClick={() => setView("annual")}
               className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
                 view === "annual"
-                  ? "bg-(--color-surface) text-(--color-text) shadow-sm"
-                  : "text-(--color-text-muted) hover:text-(--color-text)"
+                  ? "bg-surface text-(--color-text) shadow-sm"
+                  : "text-text-muted hover:text-(--color-text)"
               }`}
             >
               Annual
@@ -399,14 +399,14 @@ export default function Charts() {
       >
         {view === "weekly" ? (
           dataPoints.length === 0 && !error ? (
-            <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-(--color-text-muted) border border-(--color-border)">
+            <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-text-muted border border-(--color-border)">
               No data available for charts. Generate summaries with Build
               Summary to populate.
             </div>
           ) : (
             <Suspense
               fallback={
-                <div className="bg-(--color-surface) rounded-xl border border-(--color-border) p-8 animate-pulse h-72" />
+                <div className="bg-surface rounded-xl border border-(--color-border) p-8 animate-pulse h-72" />
               }
             >
               <ChartsContent
@@ -427,7 +427,7 @@ export default function Charts() {
             showBackLink={false}
           />
         ) : annualError ? null : (
-          <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-(--color-text-muted) border border-(--color-border)">
+          <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-text-muted border border-(--color-border)">
             No data for {year}. Generate summaries with Build Summary to
             populate.
           </div>

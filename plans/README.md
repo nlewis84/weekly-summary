@@ -79,6 +79,7 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [68](PLAN-68-HISTORY-WEEK-CARD-FULLY-CLICKABLE.md) | History Week Cards Fully Clickable | P2 | Draft |
 | [69](PLAN-69-DEV-PORT-3001.md) | Run Dev Server on Port 3001 Locally | P3 | ✅ Complete |
 | [70](PLAN-70-FAVICON-ROUTE-ERROR.md) | Fix favicon.ico Route Error | P3 | ✅ Complete |
+| [71](PLAN-71-TAILWIND-CANONICAL-CLASSES.md) | Tailwind Canonical Classes | P3 | Draft |
 
 ## Recommended Next (by priority)
 

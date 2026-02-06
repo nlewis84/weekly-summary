@@ -32,7 +32,7 @@ export function TodaySection({
         <h2 className="text-lg font-semibold text-(--color-text)">{title}</h2>
         <div className="flex items-center gap-2">
           {refreshIntervalLabel && refreshIntervalLabel !== "Off" && (
-            <span className="text-xs text-(--color-text-muted)">
+            <span className="text-xs text-text-muted">
               Refreshes every {refreshIntervalLabel}
             </span>
           )}

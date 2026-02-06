@@ -47,7 +47,7 @@ Align with the **ChartsContent segmented control** pattern for consistency:
 <div
   role="tablist"
   aria-label="Date range"
-  className="flex rounded-lg border border-[var(--color-border)] p-0.5 bg-[var(--color-surface-elevated)]"
+  className="flex rounded-lg border border-(--color-border) p-0.5 bg-surface-elevated"
 >
   {(["today", "yesterday"] as const).map((mode) => (
     <button
@@ -59,7 +59,7 @@ Align with the **ChartsContent segmented control** pattern for consistency:
       className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 ${
         viewMode === mode
           ? "bg-primary-600 text-white shadow-sm hover:bg-primary-500"
-          : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+          : "text-text-muted hover:text-(--color-text)"
       }`}
     >
       {mode.charAt(0).toUpperCase() + mode.slice(1)}

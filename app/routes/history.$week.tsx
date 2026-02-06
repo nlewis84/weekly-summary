@@ -151,7 +151,7 @@ export default function HistoryWeek() {
       <Link
         to="/history"
         prefetch="intent"
-        className="inline-flex items-center gap-2 text-sm text-(--color-text-muted) hover:text-primary-500 transition-colors"
+        className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-primary-500 transition-colors"
       >
         <ArrowLeft size={18} weight="regular" />
         Back to History
@@ -166,7 +166,7 @@ export default function HistoryWeek() {
             <button
               type="button"
               onClick={handleExportPdf}
-              className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-(--color-text-muted) hover:text-primary-500 hover:bg-(--color-surface-elevated) rounded-lg transition-colors"
+              className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-text-muted hover:text-primary-500 hover:bg-surface-elevated rounded-lg transition-colors"
               title="Export as PDF (opens print dialog)"
             >
               <FilePdf size={16} weight="regular" />
@@ -175,7 +175,7 @@ export default function HistoryWeek() {
             <button
               type="button"
               onClick={handleCopyMarkdown}
-              className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-(--color-text-muted) hover:text-primary-500 hover:bg-(--color-surface-elevated) rounded-lg transition-colors"
+              className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-text-muted hover:text-primary-500 hover:bg-surface-elevated rounded-lg transition-colors"
               title="Copy full markdown"
             >
               <Copy size={16} weight="regular" />
@@ -205,8 +205,8 @@ export default function HistoryWeek() {
           payload={payload}
         />
       ) : markdown ? (
-        <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6">
-          <p className="text-sm text-(--color-text-muted) mb-4">
+        <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6">
+          <p className="text-sm text-text-muted mb-4">
             Week-in-review (transcript)
           </p>
           <pre className="whitespace-pre-wrap text-sm text-(--color-text) font-sans max-h-[60vh] overflow-y-auto">
@@ -214,7 +214,7 @@ export default function HistoryWeek() {
           </pre>
         </div>
       ) : !error ? (
-        <div className="bg-(--color-surface) rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-(--color-text-muted) border border-(--color-border)">
+        <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-text-muted border border-(--color-border)">
           Summary not found.
         </div>
       ) : null}
