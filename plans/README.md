@@ -67,6 +67,9 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [52](PLAN-52-COMMITS-PUSHED-FIX.md) | Commits Pushed Stat Not Populating | P2 | 🔲 Pending |
 | [53](PLAN-53-REPOS-CHART-OPTIONS.md) | Repos Chart – Presentation Options | P2 | ✅ Complete |
 | [54](PLAN-54-PROGRESS-CHARTS-REDESIGN.md) | Progress Charts – Holistic Redesign | P2 | ✅ Complete |
+| [55](PLAN-55-CHARTS-ANNUAL-INTEGRATION.md) | Integrate Annual Dashboard into Charts | P2 | 🔲 Pending |
+| [56](PLAN-56-REMOVE-SLACK.md) | Remove Slack Functionality | — | 🔲 Pending |
+| [57](PLAN-57-TODAY-YESTERDAY-BUTTONS.md) | Today/Yesterday Button Styling | P2 | 🔲 Draft |
 
 ## Recommended Next (by priority)
 
