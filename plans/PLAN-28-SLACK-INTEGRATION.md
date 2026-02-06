@@ -1,6 +1,8 @@
 # Plan 28: Slack Integration
 
-**Status: ✅ Complete** · **Priority: P4** · **Effort: High** · **Impact: High**
+**Status: 🗑️ Removed** · **Priority: P4** · **Effort: High** · **Impact: High**
+
+> **Deprecated Feb 2026:** Slack integration was removed per [Plan 56](PLAN-56-REMOVE-SLACK.md).
 
 ## Problem
 

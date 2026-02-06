@@ -1,6 +1,6 @@
 # Plan 57: Today/Yesterday Button Styling
 
-**Status: 🔲 Draft** · **Priority: P2** · **Effort: Low** · **Impact: Medium**
+**Status: ✅ Done** · **Priority: P2** · **Effort: Low** · **Impact: Medium**
 
 **Validated Feb 2026:** `_index.tsx` still uses `bg-[var(--color-primary)]` for active and `bg-[var(--color-surface-elevated)]` for inactive. Still relevant.
 
@@ -21,11 +21,11 @@ The app has two "primary" concepts that are not aligned:
 
 ## Tasks
 
-1. [ ] **Replace `--color-primary` with `primary-600` for active state**
+1. [x] **Replace `--color-primary` with `primary-600` for active state**
    - Change active button from `bg-[var(--color-primary)] text-white` to `bg-primary-600 text-white`
    - Ensures violet brand color in both themes; white text has strong contrast on violet.
 
-2. [ ] **Improve inactive state for clarity**
+2. [x] **Improve inactive state for clarity**
    - Option A (recommended): Give inactive buttons a distinct surface so they read as clickable:
      - `bg-[var(--color-surface-elevated)] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-elevated)] hover:text-[var(--color-text)] border border-[var(--color-border)]`
    - Option B: Match ChartsContent segmented control pattern (no bg on inactive):
@@ -33,10 +33,10 @@ The app has two "primary" concepts that are not aligned:
      - Wrap in a container: `flex rounded-lg border border-[var(--color-border)] p-0.5 bg-[var(--color-surface-elevated)]` so both options sit in a single pill/segmented control.
    - Option B provides clearer visual grouping and matches the repos chart tabs.
 
-3. [ ] **Add hover state for active button**
+3. [x] **Add hover state for active button**
    - `hover:bg-primary-500` for consistency with other primary buttons (e.g. FullSummaryForm submit).
 
-4. [ ] **Add focus-visible ring**
+4. [x] **Add focus-visible ring**
    - `focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2` for keyboard accessibility (matches MetricsCard, WeeklyTicker).
 
 ## Recommended Implementation
@@ -76,12 +76,12 @@ This gives:
 
 ## Success Criteria
 
-- [ ] Active button uses violet (`primary-600`) in light and dark mode
-- [ ] Text on active button has WCAG AA contrast (white on violet)
-- [ ] Inactive button is clearly readable and distinguishable from active
-- [ ] Hover states provide clear feedback
-- [ ] Focus-visible ring appears on keyboard focus
-- [ ] Visual style consistent with ChartsContent tabs and app design system
+- [x] Active button uses violet (`primary-600`) in light and dark mode
+- [x] Text on active button has WCAG AA contrast (white on violet)
+- [x] Inactive button is clearly readable and distinguishable from active
+- [x] Hover states provide clear feedback
+- [x] Focus-visible ring appears on keyboard focus
+- [x] Visual style consistent with ChartsContent tabs and app design system
 
 ## Files to Modify
 

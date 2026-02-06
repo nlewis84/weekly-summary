@@ -4,7 +4,13 @@ import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
 import { listWeeklySummaries } from "../../lib/github-fetch";
 import { buildMarkdownSummary } from "../../lib/markdown";
-import { CalendarBlank, MagnifyingGlass, Package, CheckSquare, Square } from "phosphor-react";
+import {
+  CalendarBlank,
+  MagnifyingGlass,
+  Package,
+  CheckSquare,
+  Square,
+} from "phosphor-react";
 import { ErrorBanner } from "../components/ErrorBanner";
 import { useToast } from "../components/Toast";
 import JSZip from "jszip";
@@ -25,7 +31,11 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
 function formatWeekLabel(weekEnding: string): string {
   const d = new Date(weekEnding);
-  return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  return d.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
 }
 
 function matchesSearch(week: string, label: string, query: string): boolean {
@@ -35,7 +45,10 @@ function matchesSearch(week: string, label: string, query: string): boolean {
 }
 
 export default function HistoryIndex() {
-  const { weeks, error } = useLoaderData<typeof loader>() as { weeks: string[]; error: string | null };
+  const { weeks, error } = useLoaderData<typeof loader>() as {
+    weeks: string[];
+    error: string | null;
+  };
   const revalidator = useRevalidator();
   const toast = useToast();
   const [search, setSearch] = useState("");
@@ -90,7 +103,9 @@ export default function HistoryIndex() {
       for (const week of weeksToExport) {
         const res = await fetch(`/api/history/${week}`);
         if (!res.ok) continue;
-        const { payload } = (await res.json()) as { payload?: import("../../lib/types").Payload };
+        const { payload } = (await res.json()) as {
+          payload?: import("../../lib/types").Payload;
+        };
         if (!payload) continue;
         const md = buildMarkdownSummary(payload);
         zip.file(`${week}.md`, md);
@@ -123,7 +138,9 @@ export default function HistoryIndex() {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div className="flex items-center gap-4 flex-wrap">
-          <h2 className="text-lg font-semibold text-[var(--color-text)]">Historical Summaries</h2>
+          <h2 className="text-lg font-semibold text-[var(--color-text)]">
+            Historical Summaries
+          </h2>
           <Link
             to="/history/compare"
             className="text-sm text-primary-500 hover:text-primary-400 font-medium"
@@ -131,7 +148,7 @@ export default function HistoryIndex() {
             Compare weeks
           </Link>
           <Link
-            to="/history/annual"
+            to="/charts?view=annual"
             className="text-sm text-primary-500 hover:text-primary-400 font-medium"
           >
             Annual
@@ -140,13 +157,25 @@ export default function HistoryIndex() {
             <div className="flex items-center gap-2">
               <button
                 type="button"
-                onClick={() => handleBulkExport(selected.size > 0 ? [...selected] : filteredWeeks)}
+                onClick={() =>
+                  handleBulkExport(
+                    selected.size > 0 ? [...selected] : filteredWeeks
+                  )
+                }
                 disabled={exporting}
                 className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-primary-600 hover:text-primary-500 hover:bg-[var(--color-surface-elevated)] rounded-lg transition-colors disabled:opacity-50"
-                title={selected.size > 0 ? `Export ${selected.size} selected` : "Export all visible"}
+                title={
+                  selected.size > 0
+                    ? `Export ${selected.size} selected`
+                    : "Export all visible"
+                }
               >
                 <Package size={16} weight="regular" />
-                {exporting ? "Exporting…" : selected.size > 0 ? `Export ${selected.size}` : "Export all"}
+                {exporting
+                  ? "Exporting…"
+                  : selected.size > 0
+                    ? `Export ${selected.size}`
+                    : "Export all"}
               </button>
               {selected.size > 0 && (
                 <button
@@ -208,12 +237,19 @@ export default function HistoryIndex() {
                 <div className="flex items-center gap-3 p-4 bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] hover:shadow-[var(--shadow-skeuo-card-hover)] hover:border-primary-500/50 transition-all group">
                   <button
                     type="button"
-                    onClick={(e) => { e.preventDefault(); toggleWeek(week); }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleWeek(week);
+                    }}
                     className="shrink-0 p-0.5 text-[var(--color-text-muted)] hover:text-primary-500"
                     aria-label={selected.has(week) ? "Deselect" : "Select"}
                   >
                     {selected.has(week) ? (
-                      <CheckSquare size={20} weight="fill" className="text-primary-500" />
+                      <CheckSquare
+                        size={20}
+                        weight="fill"
+                        className="text-primary-500"
+                      />
                     ) : (
                       <Square size={20} weight="regular" />
                     )}
@@ -222,11 +258,17 @@ export default function HistoryIndex() {
                     to={`/history/${week}`}
                     className="flex flex-1 items-center gap-3 min-w-0"
                   >
-                    <CalendarBlank size={22} weight="regular" className="text-primary-500 shrink-0" />
+                    <CalendarBlank
+                      size={22}
+                      weight="regular"
+                      className="text-primary-500 shrink-0"
+                    />
                     <span className="font-medium text-[var(--color-text)] group-hover:text-primary-500 transition-colors">
                       Week ending {formatWeekLabel(week)}
                     </span>
-                    <span className="text-sm text-[var(--color-text-muted)] ml-auto shrink-0">{week}</span>
+                    <span className="text-sm text-[var(--color-text-muted)] ml-auto shrink-0">
+                      {week}
+                    </span>
                   </Link>
                 </div>
               </li>

@@ -1,15 +1,27 @@
 import { Suspense, lazy } from "react";
-import { useLoaderData, useRouteError, isRouteErrorResponse, Link } from "react-router";
+import {
+  useLoaderData,
+  useRouteError,
+  isRouteErrorResponse,
+  Link,
+  useSearchParams,
+} from "react-router";
 import { useToast } from "../components/Toast";
 import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
 import { getChartsData } from "../../lib/charts-data";
+import { getAnnualData, getAvailableYears } from "../../lib/annual-data";
 import { useRevalidator } from "react-router";
 import { ErrorBanner } from "../components/ErrorBanner";
+import { AnnualChartsSection } from "../components/AnnualChartsSection";
 
 const ChartsContent = lazy(() =>
-  import("../components/ChartsContent").then((m) => ({ default: m.ChartsContent }))
+  import("../components/ChartsContent").then((m) => ({
+    default: m.ChartsContent,
+  }))
 );
+
+type ViewMode = "weekly" | "annual";
 
 export function ErrorBoundary() {
   const error = useRouteError();
@@ -21,7 +33,9 @@ export function ErrorBoundary() {
       : "Charts failed to load";
   return (
     <div className="space-y-6">
-      <h2 className="text-lg font-semibold text-[var(--color-text)]">Progress Charts</h2>
+      <h2 className="text-lg font-semibold text-[var(--color-text)]">
+        Progress Charts
+      </h2>
       <div className="p-4 bg-[var(--color-error-bg)] border border-[var(--color-error-border)] rounded-xl text-[var(--color-error-500)]">
         <p className="mb-4">{message}</p>
         <div className="flex gap-3">
@@ -32,7 +46,10 @@ export function ErrorBoundary() {
           >
             Retry
           </button>
-          <Link to="/" className="px-3 py-2 bg-[var(--color-surface-elevated)] hover:opacity-90 rounded-lg font-medium border border-[var(--color-border)] text-[var(--color-text)]">
+          <Link
+            to="/"
+            className="px-3 py-2 bg-[var(--color-surface-elevated)] hover:opacity-90 rounded-lg font-medium border border-[var(--color-border)] text-[var(--color-text)]"
+          >
             Go home
           </Link>
         </div>
@@ -43,18 +60,63 @@ export function ErrorBoundary() {
 
 export async function loader({ request }: LoaderFunctionArgs) {
   if (request.method !== "GET") {
-    return data({ error: "Method not allowed", dataPoints: [], repoActivity: [] });
+    return data({
+      error: "Method not allowed",
+      dataPoints: [],
+      repoActivity: [],
+      annualData: null,
+      compareData: null,
+      years: [],
+      annualError: null,
+    });
   }
+
+  const url = new URL(request.url);
+  const view = (url.searchParams.get("view") ?? "weekly") as ViewMode;
+  const year =
+    url.searchParams.get("year") ?? new Date().getFullYear().toString();
+  const compareYear = url.searchParams.get("compare") ?? null;
 
   try {
     const chartData = await getChartsData();
-    return data({ ...chartData, error: null as string | null });
+    let annualData = null;
+    let compareData = null;
+    let years: string[] = [];
+    let annualError: string | null = null;
+
+    if (view === "annual") {
+      try {
+        [annualData, years, compareData] = await Promise.all([
+          getAnnualData(year),
+          getAvailableYears(),
+          compareYear && compareYear !== year
+            ? getAnnualData(compareYear)
+            : Promise.resolve(null),
+        ]);
+      } catch (err) {
+        console.error("Annual data error:", err);
+        annualError = (err as Error).message;
+      }
+    }
+
+    return data({
+      ...chartData,
+      error: null as string | null,
+      annualData,
+      compareData,
+      years,
+      annualError,
+    });
   } catch (err) {
     console.error("Charts loader error:", err);
     return data({
       error: (err as Error).message,
       dataPoints: [],
       repoActivity: [],
+      annualData: null,
+      compareData: null,
+      years: [],
+      annualError: null,
     });
   }
 }
@@ -67,10 +129,62 @@ const formatWeek = (w: string) => {
 export default function Charts() {
   const revalidator = useRevalidator();
   const toast = useToast();
-  const { dataPoints, repoActivity, error } = useLoaderData<typeof loader>() as {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const loaderData = useLoaderData<typeof loader>() as {
     dataPoints: Awaited<ReturnType<typeof getChartsData>>["dataPoints"];
     repoActivity: Awaited<ReturnType<typeof getChartsData>>["repoActivity"];
     error: string | null;
+    annualData: Awaited<
+      ReturnType<typeof import("../../lib/annual-data").getAnnualData>
+    > | null;
+    compareData: Awaited<
+      ReturnType<typeof import("../../lib/annual-data").getAnnualData>
+    > | null;
+    years: string[];
+    annualError: string | null;
+  };
+
+  const {
+    dataPoints,
+    repoActivity,
+    error,
+    annualData,
+    compareData,
+    years,
+    annualError,
+  } = loaderData;
+
+  const view = (searchParams.get("view") ?? "weekly") as ViewMode;
+  const year =
+    searchParams.get("year") ??
+    annualData?.year ??
+    new Date().getFullYear().toString();
+  const compareYear = searchParams.get("compare") ?? "";
+
+  const setView = (v: ViewMode) => {
+    const next = new URLSearchParams(searchParams);
+    next.set("view", v);
+    if (v === "annual") {
+      next.set("year", year);
+      if (compareYear) next.set("compare", compareYear);
+    } else {
+      next.delete("year");
+      next.delete("compare");
+    }
+    setSearchParams(next);
+  };
+
+  const handleYearChange = (y: string) => {
+    const next = new URLSearchParams(searchParams);
+    next.set("year", y);
+    setSearchParams(next);
+  };
+
+  const handleCompareChange = (c: string) => {
+    const next = new URLSearchParams(searchParams);
+    if (c) next.set("compare", c);
+    else next.delete("compare");
+    setSearchParams(next);
   };
 
   const metricsData = dataPoints.map((d) => ({
@@ -87,26 +201,132 @@ export default function Charts() {
   }));
 
   const handleExportCsv = () => {
-    const headers = ["Week", "PRs merged", "PR reviews", "PR comments", "Commits pushed", "Linear completed", "Linear worked on", "Linear issues created"];
-    const rows = metricsData.map((d) =>
-      [d.week, d["PRs merged"], d["PR reviews"], d["PR comments"], d["Commits pushed"], d["Linear completed"], d["Linear worked on"], d["Linear issues created"] ?? 0].join(",")
-    );
-    const csv = [headers.join(","), ...rows].join("\n");
-    const blob = new Blob([csv], { type: "text/csv" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `weekly-metrics-${new Date().toISOString().slice(0, 10)}.csv`;
-    a.click();
-    URL.revokeObjectURL(url);
-    toast("CSV exported");
+    if (view === "annual" && annualData) {
+      const headers = [
+        "Month",
+        "PRs merged",
+        "PR reviews",
+        "PR comments",
+        "Commits pushed",
+        "Linear completed",
+        "Linear worked on",
+        "Linear issues created",
+      ];
+      const rows = annualData.months.map((m) =>
+        [
+          m.label,
+          m.prs_merged,
+          m.pr_reviews,
+          m.pr_comments,
+          m.commits_pushed,
+          m.linear_completed,
+          m.linear_worked_on,
+          m.linear_issues_created,
+        ].join(",")
+      );
+      const totalsRow = [
+        "Total",
+        annualData.total_prs_merged,
+        annualData.total_pr_reviews,
+        annualData.total_pr_comments,
+        annualData.total_commits_pushed,
+        annualData.total_linear_completed,
+        annualData.total_linear_worked_on,
+        annualData.total_linear_issues_created,
+      ].join(",");
+      const csv = [headers.join(","), ...rows, totalsRow].join("\n");
+      const blob = new Blob([csv], { type: "text/csv" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `annual-metrics-${annualData.year}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toast("CSV exported");
+    } else {
+      const headers = [
+        "Week",
+        "PRs merged",
+        "PR reviews",
+        "PR comments",
+        "Commits pushed",
+        "Linear completed",
+        "Linear worked on",
+        "Linear issues created",
+      ];
+      const rows = metricsData.map((d) =>
+        [
+          d.week,
+          d["PRs merged"],
+          d["PR reviews"],
+          d["PR comments"],
+          d["Commits pushed"],
+          d["Linear completed"],
+          d["Linear worked on"],
+          d["Linear issues created"] ?? 0,
+        ].join(",")
+      );
+      const csv = [headers.join(","), ...rows].join("\n");
+      const blob = new Blob([csv], { type: "text/csv" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `weekly-metrics-${new Date().toISOString().slice(0, 10)}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toast("CSV exported");
+    }
   };
+
+  const showExportCsv =
+    (view === "weekly" && dataPoints.length > 0) ||
+    (view === "annual" && annualData);
 
   return (
     <div className="space-y-8">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <h2 className="text-lg font-semibold text-[var(--color-text)]">Progress Charts</h2>
-        {dataPoints.length > 0 && (
+        <div className="flex flex-wrap items-center gap-4">
+          <h2 className="text-lg font-semibold text-[var(--color-text)]">
+            Progress Charts
+          </h2>
+          <div
+            role="tablist"
+            aria-label="Charts view"
+            className="flex rounded-lg border border-[var(--color-border)] p-0.5 bg-[var(--color-surface-elevated)]"
+          >
+            <button
+              type="button"
+              role="tab"
+              aria-selected={view === "weekly"}
+              aria-controls="charts-panel"
+              id="charts-tab-weekly"
+              onClick={() => setView("weekly")}
+              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                view === "weekly"
+                  ? "bg-[var(--color-surface)] text-[var(--color-text)] shadow-sm"
+                  : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+              }`}
+            >
+              Weekly
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={view === "annual"}
+              aria-controls="charts-panel"
+              id="charts-tab-annual"
+              onClick={() => setView("annual")}
+              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                view === "annual"
+                  ? "bg-[var(--color-surface)] text-[var(--color-text)] shadow-sm"
+                  : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+              }`}
+            >
+              Annual
+            </button>
+          </div>
+        </div>
+        {showExportCsv && (
           <button
             type="button"
             onClick={handleExportCsv}
@@ -121,19 +341,56 @@ export default function Charts() {
         <ErrorBanner message={error} onRetry={() => revalidator.revalidate()} />
       )}
 
-      {dataPoints.length === 0 && !error ? (
-        <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] p-8 text-center text-[var(--color-text-muted)] border border-[var(--color-border)]">
-          No data available for charts. Generate summaries with Build Summary to populate.
-        </div>
-      ) : (
-        <Suspense
-          fallback={
-            <div className="bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-8 animate-pulse h-72" />
-          }
-        >
-          <ChartsContent dataPoints={dataPoints} repoActivity={repoActivity} />
-        </Suspense>
+      {view === "annual" && annualError && (
+        <ErrorBanner
+          message={annualError}
+          onRetry={() => revalidator.revalidate()}
+        />
       )}
+
+      <div
+        id="charts-panel"
+        role="tabpanel"
+        aria-labelledby={
+          view === "weekly" ? "charts-tab-weekly" : "charts-tab-annual"
+        }
+      >
+        {view === "weekly" ? (
+          dataPoints.length === 0 && !error ? (
+            <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] p-8 text-center text-[var(--color-text-muted)] border border-[var(--color-border)]">
+              No data available for charts. Generate summaries with Build
+              Summary to populate.
+            </div>
+          ) : (
+            <Suspense
+              fallback={
+                <div className="bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-8 animate-pulse h-72" />
+              }
+            >
+              <ChartsContent
+                dataPoints={dataPoints}
+                repoActivity={repoActivity}
+              />
+            </Suspense>
+          )
+        ) : annualData ? (
+          <AnnualChartsSection
+            annualData={annualData}
+            compareData={compareData}
+            years={years}
+            year={year}
+            compareYear={compareYear}
+            onYearChange={handleYearChange}
+            onCompareChange={handleCompareChange}
+            showBackLink={false}
+          />
+        ) : annualError ? null : (
+          <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] p-8 text-center text-[var(--color-text-muted)] border border-[var(--color-border)]">
+            No data for {year}. Generate summaries with Build Summary to
+            populate.
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { FileText, PaperPlaneTilt } from "phosphor-react";
-import { buildMarkdownSummary } from "../../lib/markdown";
+import { FileText } from "phosphor-react";
 import { useToast } from "./Toast";
 import { LottieIcon } from "./LottieIcon";
 import { MetricsCard } from "./MetricsCard";
@@ -45,8 +44,10 @@ export function FullSummaryForm({
   const toast = useToast();
   const savedRef = useRef(false);
 
-  const [lastBuilt, setLastBuilt] = useState<{ builtAt: string; weekEnding: string } | null>(null);
-  const [slackPosting, setSlackPosting] = useState(false);
+  const [lastBuilt, setLastBuilt] = useState<{
+    builtAt: string;
+    weekEnding: string;
+  } | null>(null);
 
   useEffect(() => {
     try {
@@ -79,7 +80,9 @@ export function FullSummaryForm({
     const openIfHash = () => {
       if (window.location.hash === "#build-summary" && detailsRef.current) {
         detailsRef.current.open = true;
-        document.getElementById("build-summary")?.scrollIntoView({ behavior: "smooth" });
+        document
+          .getElementById("build-summary")
+          ?.scrollIntoView({ behavior: "smooth" });
       }
     };
     openIfHash();
@@ -88,9 +91,16 @@ export function FullSummaryForm({
   }, []);
 
   return (
-    <details ref={detailsRef} className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)]">
+    <details
+      ref={detailsRef}
+      className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)]"
+    >
       <summary className="flex items-center gap-2 px-4 py-3 cursor-pointer font-medium text-[var(--color-text)] list-none [&::-webkit-details-marker]:hidden">
-        <FileText size={20} weight="regular" className="text-primary-500 shrink-0" />
+        <FileText
+          size={20}
+          weight="regular"
+          className="text-primary-500 shrink-0"
+        />
         Build Weekly Summary
       </summary>
       <div className="px-4 pb-4 pt-2 border-t border-[var(--color-border)] space-y-4">
@@ -98,14 +108,25 @@ export function FullSummaryForm({
           <p className="text-sm text-[var(--color-text-muted)]">
             Last built: {formatRelativeTime(lastBuilt.builtAt)}
             {lastBuilt.weekEnding && (
-              <span className="ml-1">(week ending {new Date(lastBuilt.weekEnding).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })})</span>
+              <span className="ml-1">
+                (week ending{" "}
+                {new Date(lastBuilt.weekEnding).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+                )
+              </span>
             )}
           </p>
         )}
         <Form method="post" action={action} className="space-y-4">
           <input type="hidden" name="save" value="true" />
           <div>
-            <label htmlFor="checkIns" className="block text-sm font-medium text-[var(--color-text-muted)] mb-2">
+            <label
+              htmlFor="checkIns"
+              className="block text-sm font-medium text-[var(--color-text-muted)] mb-2"
+            >
               Check-ins
             </label>
             <div className="flex flex-wrap gap-2 mb-2">
@@ -120,7 +141,9 @@ export function FullSummaryForm({
                   key={label}
                   type="button"
                   onClick={() => {
-                    const ta = document.getElementById("checkIns") as HTMLTextAreaElement | null;
+                    const ta = document.getElementById(
+                      "checkIns"
+                    ) as HTMLTextAreaElement | null;
                     if (ta) {
                       const insert = ta.value ? `\n${text}` : text;
                       ta.value += insert;
@@ -149,7 +172,10 @@ export function FullSummaryForm({
               name="todayOnly"
               className="rounded border-[var(--color-border)] text-primary-600 focus:ring-primary-500"
             />
-            <label htmlFor="todayOnly" className="text-sm text-[var(--color-text-muted)]">
+            <label
+              htmlFor="todayOnly"
+              className="text-sm text-[var(--color-text-muted)]"
+            >
               Today only
             </label>
           </div>
@@ -169,44 +195,20 @@ export function FullSummaryForm({
             <div className="p-4 bg-[var(--color-success-bg)] border border-[var(--color-success-border)] rounded-xl flex items-center gap-4">
               <LottieIcon name="check" size={48} loop={false} />
               <div className="flex-1">
-                <p className="font-medium text-[var(--color-success-500)]">Saved to repository.</p>
-                <p className="text-sm text-[var(--color-text-muted)] mt-0.5">Your weekly summary has been generated and committed.</p>
+                <p className="font-medium text-[var(--color-success-500)]">
+                  Saved to repository.
+                </p>
+                <p className="text-sm text-[var(--color-text-muted)] mt-0.5">
+                  Your weekly summary has been generated and committed.
+                </p>
               </div>
-              {payload && (
-                <button
-                  type="button"
-                  onClick={async () => {
-                    const text = buildMarkdownSummary(payload);
-                    if (!text) return;
-                    setSlackPosting(true);
-                    try {
-                      const res = await fetch("/api/slack", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ text }),
-                      });
-                      const data = (await res.json()) as { ok: boolean; error?: string };
-                      if (data.ok) toast("Posted to Slack");
-                      else toast(data.error ?? "Failed to post to Slack");
-                    } catch {
-                      toast("Failed to post to Slack");
-                    } finally {
-                      setSlackPosting(false);
-                    }
-                  }}
-                  disabled={slackPosting}
-                  className="flex items-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-[var(--color-text-muted)] hover:text-primary-500 hover:bg-[var(--color-surface-elevated)] rounded-lg border border-[var(--color-border)] transition-colors disabled:opacity-50"
-                  title="Post to Slack (requires SLACK_WEBHOOK_URL)"
-                >
-                  <PaperPlaneTilt size={16} weight="regular" />
-                  {slackPosting ? "Posting…" : "Post to Slack"}
-                </button>
-              )}
             </div>
           </div>
         )}
 
-        {payload?.stats && <MetricsCard stats={payload.stats} payload={payload} />}
+        {payload?.stats && (
+          <MetricsCard stats={payload.stats} payload={payload} />
+        )}
       </div>
     </details>
   );

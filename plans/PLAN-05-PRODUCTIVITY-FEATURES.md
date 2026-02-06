@@ -31,7 +31,7 @@ Identify and add functionality that would make the app more useful for productiv
 | Feature | Description | Effort |
 |---------|-------------|--------|
 | **Calendar integration** | Add summary to Google Calendar / iCal | High |
-| **Slack/Teams post** | Post summary to channel | High |
+| **Slack/Teams post** | Post summary to channel (removed per Plan 56) | — |
 | **Bulk export** | Export multiple weeks at once | Medium |
 
 ## Recommended First Batch

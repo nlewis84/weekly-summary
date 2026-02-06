@@ -27,7 +27,13 @@ interface IndexLoaderData {
 
 export async function loader({ request }: LoaderFunctionArgs) {
   if (request.method !== "GET") {
-    return data({ today: { error: "Method not allowed" }, weekly: { error: "Method not allowed" } }, { status: 405 });
+    return data(
+      {
+        today: { error: "Method not allowed" },
+        weekly: { error: "Method not allowed" },
+      },
+      { status: 405 }
+    );
   }
 
   const runToday = () =>
@@ -40,7 +46,12 @@ export async function loader({ request }: LoaderFunctionArgs) {
     );
 
   const runYesterday = () =>
-    runSummary({ todayMode: false, yesterdayMode: true, checkInsText: "", outputDir: null }).then(
+    runSummary({
+      todayMode: false,
+      yesterdayMode: true,
+      checkInsText: "",
+      outputDir: null,
+    }).then(
       (r) => ({ payload: r.payload }),
       (err) => {
         console.error("Yesterday summary error:", err);
@@ -66,7 +77,11 @@ export async function loader({ request }: LoaderFunctionArgs) {
       }
     );
 
-  const [today, yesterday, weekly] = await Promise.all([runToday(), runYesterday(), runWeekly()]);
+  const [today, yesterday, weekly] = await Promise.all([
+    runToday(),
+    runYesterday(),
+    runWeekly(),
+  ]);
 
   return data({ today, yesterday, weekly } satisfies IndexLoaderData);
 }
@@ -95,11 +110,23 @@ export default function Index() {
     const onKeyDown = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement;
       if (target.closest("input, textarea, [contenteditable]")) return;
-      if (e.key === "r" && !e.metaKey && !e.ctrlKey && !e.altKey && !e.shiftKey) {
+      if (
+        e.key === "r" &&
+        !e.metaKey &&
+        !e.ctrlKey &&
+        !e.altKey &&
+        !e.shiftKey
+      ) {
         e.preventDefault();
         revalidator.revalidate();
       }
-      if (e.key === "y" && !e.metaKey && !e.ctrlKey && !e.altKey && !e.shiftKey) {
+      if (
+        e.key === "y" &&
+        !e.metaKey &&
+        !e.ctrlKey &&
+        !e.altKey &&
+        !e.shiftKey
+      ) {
         e.preventDefault();
         setViewMode("yesterday");
       }
@@ -112,23 +139,31 @@ export default function Index() {
 
   const todayPayload = today && "payload" in today ? today.payload : null;
   const todayError = today && "error" in today ? today.error : null;
-  const yesterdayPayload = yesterday && "payload" in yesterday ? yesterday.payload : null;
-  const yesterdayError = yesterday && "error" in yesterday ? yesterday.error : null;
+  const yesterdayPayload =
+    yesterday && "payload" in yesterday ? yesterday.payload : null;
+  const yesterdayError =
+    yesterday && "error" in yesterday ? yesterday.error : null;
   const weeklyPayload = weekly && "payload" in weekly ? weekly.payload : null;
   const weeklyError = weekly && "error" in weekly ? weekly.error : null;
 
   return (
     <div className="space-y-6">
-      <div className="flex gap-2">
+      <div
+        role="tablist"
+        aria-label="Date range"
+        className="flex w-fit rounded-lg border border-[var(--color-border)] p-0.5 bg-[var(--color-surface-elevated)]"
+      >
         {(["today", "yesterday"] as const).map((mode) => (
           <button
             key={mode}
             type="button"
+            role="tab"
+            aria-selected={viewMode === mode}
             onClick={() => setViewMode(mode)}
-            className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 ${
               viewMode === mode
-                ? "bg-[var(--color-primary)] text-white"
-                : "bg-[var(--color-surface-elevated)] text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+                ? "bg-primary-600 text-white shadow-sm hover:bg-primary-500"
+                : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
             }`}
           >
             {mode.charAt(0).toUpperCase() + mode.slice(1)}
@@ -165,7 +200,11 @@ export default function Index() {
 
       <WeeklySection
         stats={weeklyPayload?.stats ?? null}
-        prevStats={weekly && "prevPayload" in weekly ? weekly.prevPayload?.stats ?? null : null}
+        prevStats={
+          weekly && "prevPayload" in weekly
+            ? (weekly.prevPayload?.stats ?? null)
+            : null
+        }
         error={weeklyError ?? null}
         isLoading={isLoading && !weeklyPayload}
         goals={goals}

@@ -1,13 +1,15 @@
-import { useState } from "react";
 import { useLoaderData, Link, useRevalidator } from "react-router";
 import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
-import { fetchWeeklySummaryRaw, fetchWeeklySummary } from "../../lib/github-fetch";
+import {
+  fetchWeeklySummaryRaw,
+  fetchWeeklySummary,
+} from "../../lib/github-fetch";
 import { buildMarkdownSummary } from "../../lib/markdown";
 import { MetricsCard } from "~/components/MetricsCard";
 import { ErrorBanner } from "~/components/ErrorBanner";
 import { useToast } from "~/components/Toast";
-import { ArrowLeft, Copy, FilePdf, PaperPlaneTilt } from "phosphor-react";
+import { ArrowLeft, Copy, FilePdf } from "phosphor-react";
 
 export async function loader({ request, params }: LoaderFunctionArgs) {
   if (request.method !== "GET") {
@@ -16,13 +18,24 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
 
   const week = params.week;
   if (!week || !/^\d{4}-\d{2}-\d{2}$/.test(week)) {
-    return data({ error: "Invalid week format", payload: null, prevPayload: null, markdown: null });
+    return data({
+      error: "Invalid week format",
+      payload: null,
+      prevPayload: null,
+      markdown: null,
+    });
   }
 
   try {
     const result = await fetchWeeklySummaryRaw(week);
-    const payload = result && !("type" in result && result.type === "markdown") ? (result as import("../../lib/types").Payload) : null;
-    const markdown = result && "type" in result && result.type === "markdown" ? result.content : null;
+    const payload =
+      result && !("type" in result && result.type === "markdown")
+        ? (result as import("../../lib/types").Payload)
+        : null;
+    const markdown =
+      result && "type" in result && result.type === "markdown"
+        ? result.content
+        : null;
     let prevPayload = null;
     try {
       const d = new Date(week + "T12:00:00Z");
@@ -32,21 +45,39 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
     } catch {
       // No previous week
     }
-    return data({ payload, prevPayload, markdown, week, error: null as string | null });
+    return data({
+      payload,
+      prevPayload,
+      markdown,
+      week,
+      error: null as string | null,
+    });
   } catch (err) {
     console.error("History week loader error:", err);
-    return data({ error: (err as Error).message, payload: null, prevPayload: null, markdown: null, week });
+    return data({
+      error: (err as Error).message,
+      payload: null,
+      prevPayload: null,
+      markdown: null,
+      week,
+    });
   }
 }
 
 function formatWeekLabel(weekEnding: string): string {
   const d = new Date(weekEnding);
-  return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  return d.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
 }
 
 export default function HistoryWeek() {
   const revalidator = useRevalidator();
-  const { payload, prevPayload, markdown, error, week } = useLoaderData<typeof loader>() as {
+  const { payload, prevPayload, markdown, error, week } = useLoaderData<
+    typeof loader
+  >() as {
     payload: import("../../lib/types").Payload | null;
     prevPayload?: import("../../lib/types").Payload | null;
     markdown: string | null;
@@ -54,33 +85,12 @@ export default function HistoryWeek() {
     week: string;
   };
   const toast = useToast();
-  const [slackPosting, setSlackPosting] = useState(false);
 
   const handleCopyMarkdown = async () => {
     const text = payload ? buildMarkdownSummary(payload) : markdown;
     if (!text) return;
     await navigator.clipboard.writeText(text);
     toast("Markdown copied to clipboard");
-  };
-
-  const handlePostToSlack = async () => {
-    const text = payload ? buildMarkdownSummary(payload) : markdown;
-    if (!text) return;
-    setSlackPosting(true);
-    try {
-      const res = await fetch("/api/slack", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text }),
-      });
-      const data = (await res.json()) as { ok: boolean; error?: string };
-      if (data.ok) toast("Posted to Slack");
-      else toast(data.error ?? "Failed to post to Slack");
-    } catch {
-      toast("Failed to post to Slack");
-    } finally {
-      setSlackPosting(false);
-    }
   };
 
   const handleExportPdf = () => {
@@ -138,16 +148,6 @@ export default function HistoryWeek() {
           <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
-              onClick={handlePostToSlack}
-              disabled={slackPosting}
-              className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-[var(--color-text-muted)] hover:text-primary-500 hover:bg-[var(--color-surface-elevated)] rounded-lg transition-colors disabled:opacity-50"
-              title="Post to Slack (requires SLACK_WEBHOOK_URL)"
-            >
-              <PaperPlaneTilt size={16} weight="regular" />
-              {slackPosting ? "Posting…" : "Post to Slack"}
-            </button>
-            <button
-              type="button"
               onClick={handleExportPdf}
               className="flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm text-[var(--color-text-muted)] hover:text-primary-500 hover:bg-[var(--color-surface-elevated)] rounded-lg transition-colors"
               title="Export as PDF (opens print dialog)"
@@ -173,10 +173,16 @@ export default function HistoryWeek() {
       )}
 
       {payload ? (
-        <MetricsCard stats={payload.stats} prevStats={prevPayload?.stats ?? null} payload={payload} />
+        <MetricsCard
+          stats={payload.stats}
+          prevStats={prevPayload?.stats ?? null}
+          payload={payload}
+        />
       ) : markdown ? (
         <div className="bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-6">
-          <p className="text-sm text-[var(--color-text-muted)] mb-4">Week-in-review (transcript)</p>
+          <p className="text-sm text-[var(--color-text-muted)] mb-4">
+            Week-in-review (transcript)
+          </p>
           <pre className="whitespace-pre-wrap text-sm text-[var(--color-text)] font-sans max-h-[60vh] overflow-y-auto">
             {markdown}
           </pre>

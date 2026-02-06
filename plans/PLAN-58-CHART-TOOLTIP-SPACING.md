@@ -1,6 +1,6 @@
 # Plan 58: Chart Tooltip Label/Value Spacing
 
-**Status: 🔲 Pending** · **Priority: P2** · **Effort: Small** · **Impact: Medium**
+**Status: ✅ Complete** · **Priority: P2** · **Effort: Small** · **Impact: Medium**
 
 **Created Feb 2026:** Tooltip metric names (e.g. "Commits pushed", "Linear issues created") can butt up against the hovered value when the label is long.
 
@@ -47,9 +47,9 @@ Insert a separator (e.g. `·` or `:`) between label and value for clarity. Requi
 
 ## Tasks
 
-1. [ ] Add `gap-3` (or `gap-2`) to the flex container in `ChartTooltipContent` that holds the label and value
-2. [ ] Optionally add `shrink-0` to the value span so the number never gets squeezed
-3. [ ] Optionally add `min-w-0` to the label container so long labels can truncate/wrap correctly within flex
+1. [x] Add `gap-3` (or `gap-2`) to the flex container in `ChartTooltipContent` that holds the label and value
+2. [x] Optionally add `shrink-0` to the value span so the number never gets squeezed
+3. [x] Optionally add `min-w-0` to the label container so long labels can truncate/wrap correctly within flex
 4. [ ] Manually verify tooltips on: Charts page (GitHub metrics, repos), Annual charts, any MetricLineChart instances
 
 ## Success Criteria

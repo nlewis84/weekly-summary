@@ -2,7 +2,16 @@
  * Chart components (shadcn/Recharts) - loaded lazily to reduce initial Charts route chunk.
  */
 import { useState } from "react";
-import { Bar, BarChart, CartesianGrid, LabelList, Line, LineChart, XAxis, YAxis } from "recharts";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  LabelList,
+  Line,
+  LineChart,
+  XAxis,
+  YAxis,
+} from "recharts";
 import {
   ChartContainer,
   ChartTooltip,
@@ -63,10 +72,15 @@ interface ChartsContentProps {
 
 type ReposView = "most-active" | "over-time";
 
-export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) {
+export function ChartsContent({
+  dataPoints,
+  repoActivity,
+}: ChartsContentProps) {
   const [reposView, setReposView] = useState<ReposView>("over-time");
 
-  const sorted = [...dataPoints].sort((a, b) => a.week_ending.localeCompare(b.week_ending));
+  const sorted = [...dataPoints].sort((a, b) =>
+    a.week_ending.localeCompare(b.week_ending)
+  );
   const metricsData = sorted.map((d) => ({
     week: formatWeek(d.week_ending),
     "PRs merged": d.prs_merged,
@@ -91,7 +105,10 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
     };
     for (const r of topRepos) {
       const shortName = r.repo.split("/").pop() ?? r.repo;
-      const weekEntry = r.weeks.find((we: { week_ending: string; prs: number }) => we.week_ending === d.week_ending);
+      const weekEntry = r.weeks.find(
+        (we: { week_ending: string; prs: number }) =>
+          we.week_ending === d.week_ending
+      );
       row[shortName] = weekEntry?.prs ?? 0;
     }
     return row;
@@ -100,13 +117,16 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
   const reposLineConfig = topRepos.reduce(
     (acc, r, i) => {
       const shortName = r.repo.split("/").pop() ?? r.repo;
-      acc[shortName] = { label: shortName, color: REPO_COLORS[i % REPO_COLORS.length] };
+      acc[shortName] = {
+        label: shortName,
+        color: REPO_COLORS[i % REPO_COLORS.length],
+      };
       return acc;
     },
     {} as Record<string, { label: string; color: string }>
   ) satisfies ChartConfig;
 
-  const reposChartHeight = Math.max(200, Math.min(280, reposBarData.length * 36 + 80));
+  const reposChartHeight = 248;
 
   return (
     <div>
@@ -115,7 +135,10 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
           PRs & Linear
         </h3>
         <section aria-labelledby="github-metrics-heading">
-          <h4 id="github-metrics-heading" className="text-xs font-medium text-[var(--color-text-muted)] mb-3">
+          <h4
+            id="github-metrics-heading"
+            className="text-xs font-medium text-[var(--color-text-muted)] mb-3"
+          >
             GitHub
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -142,10 +165,13 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
           </div>
         </section>
         <section aria-labelledby="linear-metrics-heading">
-          <h4 id="linear-metrics-heading" className="text-xs font-medium text-[var(--color-text-muted)] mb-3">
+          <h4
+            id="linear-metrics-heading"
+            className="text-xs font-medium text-[var(--color-text-muted)] mb-3"
+          >
             Linear
           </h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {LINEAR_METRICS.map(({ key, color }) => (
               <div
                 key={key}
@@ -174,148 +200,163 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
           aria-labelledby="repos-card-heading"
           aria-describedby="repos-card-description"
         >
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <div>
-            <h3 id="repos-card-heading" className="text-sm font-medium text-[var(--color-text)]">
-              Most Active Repos
-            </h3>
-            <p id="repos-card-description" className="text-xs text-[var(--color-text-muted)] mt-0.5">
-              Where your PR activity is concentrated
-            </p>
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div>
+              <h3
+                id="repos-card-heading"
+                className="text-sm font-medium text-[var(--color-text)]"
+              >
+                Most Active Repos
+              </h3>
+              <p
+                id="repos-card-description"
+                className="text-xs text-[var(--color-text-muted)] mt-0.5"
+              >
+                Where your PR activity is concentrated
+              </p>
+            </div>
+            <div
+              role="tablist"
+              aria-label="Repos chart view"
+              className="flex rounded-lg border border-[var(--color-border)] p-0.5 bg-[var(--color-surface-elevated)]"
+            >
+              <button
+                type="button"
+                role="tab"
+                aria-selected={reposView === "most-active"}
+                aria-controls="repos-chart-panel"
+                id="repos-tab-most-active"
+                onClick={() => setReposView("most-active")}
+                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                  reposView === "most-active"
+                    ? "bg-[var(--color-surface)] text-[var(--color-text)] shadow-sm"
+                    : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+                }`}
+              >
+                Most active
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={reposView === "over-time"}
+                aria-controls="repos-chart-panel"
+                id="repos-tab-over-time"
+                onClick={() => setReposView("over-time")}
+                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                  reposView === "over-time"
+                    ? "bg-[var(--color-surface)] text-[var(--color-text)] shadow-sm"
+                    : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+                }`}
+              >
+                Over time
+              </button>
+            </div>
           </div>
           <div
-            role="tablist"
-            aria-label="Repos chart view"
-            className="flex rounded-lg border border-[var(--color-border)] p-0.5 bg-[var(--color-surface-elevated)]"
+            id="repos-chart-panel"
+            role="tabpanel"
+            aria-labelledby={
+              reposView === "most-active"
+                ? "repos-tab-most-active"
+                : "repos-tab-over-time"
+            }
+            className="min-w-0 overflow-x-auto"
+            style={{ height: reposChartHeight }}
           >
-            <button
-              type="button"
-              role="tab"
-              aria-selected={reposView === "most-active"}
-              aria-controls="repos-chart-panel"
-              id="repos-tab-most-active"
-              onClick={() => setReposView("most-active")}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
-                reposView === "most-active"
-                  ? "bg-[var(--color-surface)] text-[var(--color-text)] shadow-sm"
-                  : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
-              }`}
-            >
-              Most active
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={reposView === "over-time"}
-              aria-controls="repos-chart-panel"
-              id="repos-tab-over-time"
-              onClick={() => setReposView("over-time")}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
-                reposView === "over-time"
-                  ? "bg-[var(--color-surface)] text-[var(--color-text)] shadow-sm"
-                  : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
-              }`}
-            >
-              Over time
-            </button>
-          </div>
-        </div>
-        <div
-          id="repos-chart-panel"
-          role="tabpanel"
-          aria-labelledby={reposView === "most-active" ? "repos-tab-most-active" : "repos-tab-over-time"}
-          className="min-w-0 overflow-x-auto"
-          style={{ minHeight: reposView === "most-active" ? reposChartHeight : 224 }}
-        >
-          {reposView === "most-active" ? (
-            <div
-              role="img"
-              aria-label="Bar chart showing total PRs merged per repository"
-            >
-              <ChartContainer
-                config={reposBarConfig}
-                className="h-full w-full min-h-[200px]"
+            {reposView === "most-active" ? (
+              <div
+                role="img"
+                aria-label="Bar chart showing total PRs merged per repository"
+                className="h-full"
               >
-                <BarChart
-                  data={reposBarData}
-                  layout="vertical"
-                  margin={{ top: 8, right: 40, left: 8, bottom: 8 }}
-                  barCategoryGap="12%"
-                  accessibilityLayer
+                <ChartContainer
+                  config={reposBarConfig}
+                  className="h-full w-full min-h-[160px]"
                 >
-                  <CartesianGrid horizontal={false} strokeDasharray="3 3" />
-                  <XAxis type="number" tickLine={false} axisLine={false} />
-                  <YAxis
-                    dataKey="name"
-                    type="category"
-                    tickLine={false}
-                    axisLine={false}
-                    width={130}
-                  />
-                  <ChartTooltip content={<ChartTooltipContent />} />
-                  <Bar
-                    dataKey="PRs merged"
-                    fill="var(--chart-1)"
-                    radius={[0, 4, 4, 0]}
+                  <BarChart
+                    data={reposBarData}
+                    layout="vertical"
+                    margin={{ top: 8, right: 40, left: 8, bottom: 8 }}
+                    barCategoryGap="12%"
+                    accessibilityLayer
                   >
-                    <LabelList
-                      dataKey="PRs merged"
-                      position="right"
-                      className="fill-[var(--color-text-muted)]"
+                    <CartesianGrid horizontal={false} strokeDasharray="3 3" />
+                    <XAxis type="number" tickLine={false} axisLine={false} />
+                    <YAxis
+                      dataKey="name"
+                      type="category"
+                      tickLine={false}
+                      axisLine={false}
+                      width={130}
                     />
-                  </Bar>
-                </BarChart>
-              </ChartContainer>
-            </div>
-          ) : (
-            <div
-              role="img"
-              aria-label="Line chart showing PRs merged per repository over time"
-            >
-              <ChartContainer
-                config={reposLineConfig}
-                className="h-full w-full min-h-[200px]"
-              >
-                <LineChart
-                  data={reposOverTimeData}
-                  margin={{ top: 8, right: 8, left: 40, bottom: 0 }}
-                  accessibilityLayer
-                >
-                  <CartesianGrid vertical={false} strokeDasharray="3 3" />
-                  <XAxis
-                    dataKey="weekLabel"
-                    tickLine={false}
-                    axisLine={false}
-                    tickMargin={8}
-                  />
-                  <YAxis
-                    domain={[0, "auto"]}
-                    tickLine={false}
-                    axisLine={false}
-                    tickMargin={8}
-                    width={36}
-                  />
-                  <ChartTooltip content={<ChartTooltipContent />} />
-                  <ChartLegend content={<ChartLegendContent />} />
-                  {topRepos.map((r, i) => {
-                    const shortName = r.repo.split("/").pop() ?? r.repo;
-                    return (
-                      <Line
-                        key={r.repo}
-                        dataKey={shortName}
-                        type="monotone"
-                        stroke={REPO_COLORS[i % REPO_COLORS.length]}
-                        strokeWidth={2}
-                        dot={{ fill: REPO_COLORS[i % REPO_COLORS.length], r: 3 }}
-                        activeDot={{ r: 4 }}
+                    <ChartTooltip content={<ChartTooltipContent />} />
+                    <Bar
+                      dataKey="PRs merged"
+                      fill="var(--chart-1)"
+                      radius={[0, 4, 4, 0]}
+                    >
+                      <LabelList
+                        dataKey="PRs merged"
+                        position="right"
+                        className="fill-[var(--color-text-muted)]"
                       />
-                    );
-                  })}
-                </LineChart>
-              </ChartContainer>
-            </div>
-          )}
-        </div>
+                    </Bar>
+                  </BarChart>
+                </ChartContainer>
+              </div>
+            ) : (
+              <div
+                role="img"
+                aria-label="Line chart showing PRs merged per repository over time"
+                className="h-full"
+              >
+                <ChartContainer
+                  config={reposLineConfig}
+                  className="h-full w-full min-h-[160px]"
+                >
+                  <LineChart
+                    data={reposOverTimeData}
+                    margin={{ top: 8, right: 8, left: 40, bottom: 0 }}
+                    accessibilityLayer
+                  >
+                    <CartesianGrid vertical={false} strokeDasharray="3 3" />
+                    <XAxis
+                      dataKey="weekLabel"
+                      tickLine={false}
+                      axisLine={false}
+                      tickMargin={8}
+                    />
+                    <YAxis
+                      domain={[0, "auto"]}
+                      tickLine={false}
+                      axisLine={false}
+                      tickMargin={8}
+                      width={36}
+                    />
+                    <ChartTooltip content={<ChartTooltipContent />} />
+                    <ChartLegend content={<ChartLegendContent />} />
+                    {topRepos.map((r, i) => {
+                      const shortName = r.repo.split("/").pop() ?? r.repo;
+                      return (
+                        <Line
+                          key={r.repo}
+                          dataKey={shortName}
+                          type="monotone"
+                          stroke={REPO_COLORS[i % REPO_COLORS.length]}
+                          strokeWidth={2}
+                          dot={{
+                            fill: REPO_COLORS[i % REPO_COLORS.length],
+                            r: 3,
+                          }}
+                          activeDot={{ r: 4 }}
+                        />
+                      );
+                    })}
+                  </LineChart>
+                </ChartContainer>
+              </div>
+            )}
+          </div>
         </section>
       </div>
     </div>

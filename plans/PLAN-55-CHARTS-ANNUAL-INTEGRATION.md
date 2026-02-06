@@ -1,6 +1,6 @@
 # Plan 55: Integrate Annual Dashboard into Charts Page
 
-**Status: 🔲 Pending** · **Priority: P2** · **Effort: Medium** · **Impact: High**
+**Status: ✅ Done** · **Priority: P2** · **Effort: Medium** · **Impact: High**
 
 **Validated Feb 2026:** Charts and Annual remain separate routes (`/charts` vs `/history/annual`). No Weekly/Annual tab on Charts. Still relevant.
 
@@ -82,26 +82,26 @@ Render both on the same page: Weekly charts first, then Annual dashboard below (
 
 ### Phase 1: Integrate Annual into Charts (Core)
 
-1. [ ] Add view state to Charts page: `"weekly" | "annual"` (default: `"weekly"`).
-2. [ ] Add tab UI: "Weekly" | "Annual" (styled like repos view toggle).
-3. [ ] Extend Charts loader to optionally fetch annual data, or add a separate loader/fetch for annual when tab is "annual".
-4. [ ] Extract reusable components from `history.annual.tsx`:
+1. [x] Add view state to Charts page: `"weekly" | "annual"` (default: `"weekly"`).
+2. [x] Add tab UI: "Weekly" | "Annual" (styled like repos view toggle).
+3. [x] Extend Charts loader to optionally fetch annual data, or add a separate loader/fetch for annual when tab is "annual".
+4. [x] Extract reusable components from `history.annual.tsx`:
    - `MetricCard`, `CompareTotals` (or inline if simple)
    - Top repos list, top projects list, weeks grid
-5. [ ] Render annual content when tab is "annual": year selector, compare dropdown, metric cards, `AnnualChartsContent`, top repos, top projects, weeks links.
-6. [ ] Preserve `/history/annual` route—either redirect to `/charts?view=annual` or keep as duplicate entry point (both work).
+5. [x] Render annual content when tab is "annual": year selector, compare dropdown, metric cards, `AnnualChartsContent`, top repos, top projects, weeks links.
+6. [x] Preserve `/history/annual` route—either redirect to `/charts?view=annual` or keep as duplicate entry point (both work).
 
 ### Phase 2: URL State & Deep Linking
 
-1. [ ] Sync tab to URL: `/charts?view=annual` or `/charts/annual` (if using Option B).
-2. [ ] Support `?year=2025` and `?compare=2024` on Charts page when in annual view.
-3. [ ] Ensure back/forward and bookmarking work correctly.
+1. [x] Sync tab to URL: `/charts?view=annual` or `/charts/annual` (if using Option B).
+2. [x] Support `?year=2025` and `?compare=2024` on Charts page when in annual view.
+3. [x] Ensure back/forward and bookmarking work correctly.
 
 ### Phase 3: Polish & Consistency
 
-1. [ ] Ensure annual section uses same card styling as weekly (border, surface, etc.).
-2. [ ] Add CSV export for annual view (year totals as one row, or monthly breakdown).
-3. [ ] Update History index: change "Annual" link to point to `/charts?view=annual` (or keep both—History link goes to `/history/annual` which could redirect).
+1. [x] Ensure annual section uses same card styling as weekly (border, surface, etc.).
+2. [x] Add CSV export for annual view (year totals as one row, or monthly breakdown).
+3. [x] Update History index: change "Annual" link to point to `/charts?view=annual` (or keep both—History link goes to `/history/annual` which could redirect).
 4. [ ] Update nav label if desired: "Charts" could become "Progress" or stay "Charts" with tooltip "Weekly & annual views."
 
 ### Phase 4: Optional Enhancements
@@ -126,11 +126,11 @@ Render both on the same page: Weekly charts first, then Annual dashboard below (
 
 ## Success Criteria
 
-- [ ] Users can access annual dashboard from Charts page (tab or section).
-- [ ] Annual view includes: year selector, compare mode, metric cards, monthly trend charts, top repos, top projects, weeks links.
-- [ ] `/history/annual` still works (redirect or duplicate).
-- [ ] No regressions in weekly Charts, CSV export, or E2E tests.
-- [ ] URL supports `?view=annual&year=2025&compare=2024` for sharing/bookmarking.
+- [x] Users can access annual dashboard from Charts page (tab or section).
+- [x] Annual view includes: year selector, compare mode, metric cards, monthly trend charts, top repos, top projects, weeks links.
+- [x] `/history/annual` still works (redirect or duplicate).
+- [x] No regressions in weekly Charts, CSV export, or E2E tests.
+- [x] URL supports `?view=annual&year=2025&compare=2024` for sharing/bookmarking.
 
 ---
 

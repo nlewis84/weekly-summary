@@ -10,7 +10,7 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | **P1** | Data value, engagement | Trend badges, Compare weeks, Search |
 | **P2** | Export & polish | Style guide, PDF, Bulk export |
 | **P3** | Platform & scale | Observability, E2E, Chunk size |
-| **P4** | Growth & integrations | Slack, Annual dashboard |
+| **P4** | Growth & integrations | Annual dashboard |
 
 ## Plan Index
 
@@ -43,7 +43,7 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [25](PLAN-25-OBSERVABILITY.md) | Observability & Error Tracking | P3 | ✅ Complete |
 | [26](PLAN-26-E2E-TESTS.md) | E2E Critical Path Tests | P3 | ✅ Complete |
 | [27](PLAN-27-CHUNK-SIZE-REDUCTION.md) | Charts Chunk Size Reduction | P3 | ✅ Complete |
-| [28](PLAN-28-SLACK-INTEGRATION.md) | Slack Integration | P4 | ✅ Complete |
+| [28](PLAN-28-SLACK-INTEGRATION.md) | Slack Integration (removed) | P4 | 🗑️ Removed |
 | [29](PLAN-29-ANNUAL-DASHBOARD.md) | Annual Dashboard | P4 | ✅ Complete |
 | [30](PLAN-30-API-QUOTA-VISIBILITY.md) | API Quota Visibility | P3 | ✅ Complete |
 | [31](PLAN-31-STYLE-GUIDE-ADHERENCE.md) | Style Guide Adherence | P2 | ✅ Complete |
@@ -53,20 +53,22 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [35](PLAN-35-HEALTH-CHECK-ENHANCEMENTS.md) | Health Check Enhancements | P3 | ✅ Complete |
 | [36](PLAN-36-YESTERDAY-SUMMARY.md) | Yesterday Summary | P1 | ✅ Complete |
 | [37](PLAN-37-WEEKLY-GOALS.md) | Weekly Goals / Targets | P1 | ✅ Complete |
-| [39](PLAN-39-HISTORY-FILTERS.md) | History Filters (by Repo / Project) | P2 | 🔲 Pending |
 | [42](PLAN-42-PR-COMMENTS-METRIC.md) | PR Comments Metric | P2 | ✅ Complete |
 | [43](PLAN-43-DARK-MODE-PREFER.md) | Respect System Dark Mode on First Visit | P2 | ✅ Complete |
 | [44](PLAN-44-COMPARE-ANNUAL.md) | Compare Years (Annual) | P2 | ✅ Complete |
 | [45](PLAN-45-COMMITS-METRIC.md) | Commits Pushed (GitHub) | P2 | ✅ Complete |
-| [48](PLAN-48-PR-REVIEW-COMMENTS-METRIC.md) | PR Review Comments (Code Review) | P2 | 🔲 Pending |
-| [49](PLAN-49-LINEAR-ISSUES-CREATED-METRIC.md) | Linear Issues Created | P2 | 🔲 Pending |
+| [49](PLAN-49-LINEAR-ISSUES-CREATED-METRIC.md) | Linear Issues Created | P2 | ✅ Complete |
 | [50](PLAN-50-CHART-LIBRARY-REPLACEMENT.md) | Chart Library Replacement (Beautiful Charts) | P2 | ✅ Complete |
+| [51](PLAN-51-CHARTS-MULTI-STAT.md) | Charts Multi-Stat Overhaul | P2 | ✅ Complete |
 | [52](PLAN-52-COMMITS-PUSHED-FIX.md) | Commits Pushed Stat Not Populating | P2 | ✅ Complete |
 | [53](PLAN-53-REPOS-CHART-OPTIONS.md) | Repos Chart – Presentation Options | P2 | ✅ Complete |
 | [54](PLAN-54-PROGRESS-CHARTS-REDESIGN.md) | Progress Charts – Holistic Redesign | P2 | ✅ Complete |
-| [55](PLAN-55-CHARTS-ANNUAL-INTEGRATION.md) | Integrate Annual Dashboard into Charts | P2 | 🔲 Pending |
-| [56](PLAN-56-REMOVE-SLACK.md) | Remove Slack Functionality | — | 🔲 Pending |
-| [57](PLAN-57-TODAY-YESTERDAY-BUTTONS.md) | Today/Yesterday Button Styling | P2 | 🔲 Draft |
+| [55](PLAN-55-CHARTS-ANNUAL-INTEGRATION.md) | Integrate Annual Dashboard into Charts | P2 | ✅ Complete |
+| [56](PLAN-56-REMOVE-SLACK.md) | Remove Slack Functionality | — | ✅ Complete |
+| [57](PLAN-57-TODAY-YESTERDAY-BUTTONS.md) | Today/Yesterday Button Styling | P2 | ✅ Complete |
+| [58](PLAN-58-CHART-TOOLTIP-SPACING.md) | Chart Tooltip Label/Value Spacing | P2 | ✅ Complete |
+| [59](PLAN-59-INTENT-PREFETCH.md) | Intent Prefetch on Links | P3 | Draft |
+| [60](PLAN-60-API-CACHING.md) | API Caching (15 min TTL, Refresh busts) | P2 | Draft |
 
 ## Recommended Next (by priority)
 
@@ -78,6 +80,6 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 
 **P3 – Platform:** 25 Observability → 30 API quota → 26 E2E → 27 Chunk size
 
-**P4 – Growth:** 28 Slack → 29 Annual dashboard
+**P4 – Growth:** 29 Annual dashboard
 
-**New (34–50):** 34 Configurable refresh → 36 Yesterday → 37 Weekly goals → 42 PR comments → 50 Chart library replacement → 45–49 metrics → 39 History filters → 43 Dark mode → 44 Compare annual → 35 Health check
+**New (34–50):** 34 Configurable refresh → 36 Yesterday → 37 Weekly goals → 42 PR comments → 50 Chart library replacement → 45–49 metrics → 43 Dark mode → 44 Compare annual → 35 Health check
