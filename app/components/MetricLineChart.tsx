@@ -28,8 +28,8 @@ export function MetricLineChart({
   const config = { [metricKey]: { label: metricKey, color } } satisfies ChartConfig;
 
   return (
-    <div className="h-48 min-w-0" role="img" aria-label={ariaLabel}>
-      <ChartContainer config={config} className="h-full w-full min-h-[192px]">
+    <div className="h-56 min-w-0" role="img" aria-label={ariaLabel}>
+      <ChartContainer config={config} className="h-full w-full min-h-[224px]">
         <LineChart
           data={chartData}
           margin={{ top: 8, right: 8, left: 40, bottom: 0 }}

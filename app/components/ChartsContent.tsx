@@ -19,11 +19,14 @@ const formatWeek = (w: string) => {
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 };
 
-const METRICS = [
+const GITHUB_METRICS = [
   { key: "PRs merged", color: "var(--chart-1)" },
   { key: "PR reviews", color: "var(--chart-2)" },
   { key: "PR comments", color: "var(--chart-3)" },
   { key: "Commits pushed", color: "var(--chart-4)" },
+] as const;
+
+const LINEAR_METRICS = [
   { key: "Linear completed", color: "var(--chart-5)" },
   { key: "Linear worked on", color: "var(--chart-6)" },
 ] as const;
@@ -59,7 +62,7 @@ interface ChartsContentProps {
 type ReposView = "most-active" | "over-time";
 
 export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) {
-  const [reposView, setReposView] = useState<ReposView>("most-active");
+  const [reposView, setReposView] = useState<ReposView>("over-time");
 
   const sorted = [...dataPoints].sort((a, b) => a.week_ending.localeCompare(b.week_ending));
   const metricsData = sorted.map((d) => ({
@@ -100,7 +103,7 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
     {} as Record<string, { label: string; color: string }>
   ) satisfies ChartConfig;
 
-  const reposChartHeight = Math.max(200, Math.min(400, reposBarData.length * 36 + 80));
+  const reposChartHeight = Math.max(200, Math.min(280, reposBarData.length * 36 + 80));
 
   return (
     <div>
@@ -108,35 +111,75 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
         <h3 className="text-sm font-medium text-[var(--color-text)] mb-4">
           PRs & Linear
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {METRICS.map(({ key, color }) => (
-            <div
-              key={key}
-              className="bg-[var(--color-surface-elevated)] rounded-lg border border-[var(--color-border)] p-3"
-            >
-              <h4 className="text-xs font-medium text-[var(--color-text-muted)] mb-2 truncate">
-                {key}
-              </h4>
-              <MetricLineChart
-                data={metricsData.map((d) => ({
-                  x: d.week,
-                  value: d[key as keyof typeof d] as number,
-                }))}
-                metricKey={key}
-                color={color}
-                xKey="week"
-                ariaLabel={`Line chart: ${key} over time`}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+        <section aria-labelledby="github-metrics-heading">
+          <h4 id="github-metrics-heading" className="text-xs font-medium text-[var(--color-text-muted)] mb-3">
+            GitHub
+          </h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            {GITHUB_METRICS.map(({ key, color }) => (
+              <div
+                key={key}
+                className="bg-[var(--color-surface-elevated)] rounded-lg border border-[var(--color-border)] p-3"
+              >
+                <h5 className="text-xs font-medium text-[var(--color-text-muted)] mb-2 truncate">
+                  {key}
+                </h5>
+                <MetricLineChart
+                  data={metricsData.map((d) => ({
+                    x: d.week,
+                    value: d[key as keyof typeof d] as number,
+                  }))}
+                  metricKey={key}
+                  color={color}
+                  xKey="week"
+                  ariaLabel={`Line chart: ${key} over time`}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+        <section aria-labelledby="linear-metrics-heading">
+          <h4 id="linear-metrics-heading" className="text-xs font-medium text-[var(--color-text-muted)] mb-3">
+            Linear
+          </h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {LINEAR_METRICS.map(({ key, color }) => (
+              <div
+                key={key}
+                className="bg-[var(--color-surface-elevated)] rounded-lg border border-[var(--color-border)] p-3"
+              >
+                <h5 className="text-xs font-medium text-[var(--color-text-muted)] mb-2 truncate">
+                  {key}
+                </h5>
+                <MetricLineChart
+                  data={metricsData.map((d) => ({
+                    x: d.week,
+                    value: d[key as keyof typeof d] as number,
+                  }))}
+                  metricKey={key}
+                  color={color}
+                  xKey="week"
+                  ariaLabel={`Line chart: ${key} over time`}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
 
-      <div className="mt-6 bg-[var(--color-surface)] rounded-xl shadow-[var(--shadow-skeuo-card)] border border-[var(--color-border)] p-4 sm:p-6 overflow-hidden">
+        <section
+          className="mt-6 pt-6 border-t border-[var(--color-border)]"
+          aria-labelledby="repos-card-heading"
+          aria-describedby="repos-card-description"
+        >
         <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <h3 className="text-sm font-medium text-[var(--color-text)]">
-            Most Active Repos
-          </h3>
+          <div>
+            <h3 id="repos-card-heading" className="text-sm font-medium text-[var(--color-text)]">
+              Most Active Repos
+            </h3>
+            <p id="repos-card-description" className="text-xs text-[var(--color-text-muted)] mt-0.5">
+              Where your PR activity is concentrated
+            </p>
+          </div>
           <div
             role="tablist"
             aria-label="Repos chart view"
@@ -179,7 +222,7 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
           role="tabpanel"
           aria-labelledby={reposView === "most-active" ? "repos-tab-most-active" : "repos-tab-over-time"}
           className="min-w-0 overflow-x-auto"
-          style={{ minHeight: reposView === "most-active" ? reposChartHeight : 240 }}
+          style={{ minHeight: reposView === "most-active" ? reposChartHeight : 224 }}
         >
           {reposView === "most-active" ? (
             <div
@@ -270,6 +313,7 @@ export function ChartsContent({ dataPoints, repoActivity }: ChartsContentProps) 
             </div>
           )}
         </div>
+        </section>
       </div>
     </div>
   );
