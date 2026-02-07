@@ -88,6 +88,7 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [77](PLAN-77-THIS-WEEK-REPOS-REVAMP.md) | This Week Card – Repos Worked On Section Revamp | P2 | Draft |
 | [78](PLAN-78-TOAST-NOTIFICATIONS-POLISH.md) | Toast Notifications Polish | P2 | Draft |
 | [79](PLAN-79-METRICS-CARD-TYPOGRAPHY-AUDIT.md) | Metrics Card Typography Audit | P2 | Draft |
+| [80](PLAN-80-STYLES-AUDIT-TAILWIND-ONLY.md) | Styles Audit – Tailwind Only, No Style Prop | P2 | Draft |
 
 ## Recommended Next (by priority)
 
