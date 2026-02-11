@@ -175,18 +175,20 @@ export function MetricsCard({
             return (
               <div
                 key={key}
-                className={`flex items-center justify-between p-3 bg-surface-elevated rounded-lg border shadow-(--shadow-skeuo-inset) ${met ? "border-emerald-500/50" : "border-(--color-border)"}`}
+                className={`flex items-center justify-between gap-3 min-w-0 overflow-hidden p-3 bg-surface-elevated rounded-lg border shadow-(--shadow-skeuo-inset) ${met ? "border-emerald-500/50" : "border-(--color-border)"}`}
               >
-                <span className="flex items-center gap-2 text-sm text-text-muted">
+                <span className="flex items-center gap-2 min-w-0 flex-1 text-sm text-text-muted">
                   <Icon
                     size={iconSize}
                     weight="regular"
                     className="text-primary-500 shrink-0"
                   />
-                  {label}
+                  <span className="truncate" title={label}>
+                    {label}
+                  </span>
                 </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="text-lg font-semibold text-primary-500">
+                <span className="flex items-center gap-1.5 shrink-0">
+                  <span className="text-lg font-semibold text-primary-500 tabular-nums">
                     {target != null ? `${value}/${target}` : value}
                   </span>
                   {delta != null && target == null && (
@@ -219,7 +221,7 @@ export function MetricsCard({
             );
           })}
         </div>
-        <div className="mt-4 pt-4 border-t border-(--color-border)">
+        <div className="mt-4 pt-4 border-t border-(--color-border) min-w-0">
           <span className="flex items-center gap-2 text-sm text-text-muted">
             <Folder
               size={iconSize}
@@ -228,7 +230,7 @@ export function MetricsCard({
             />
             Repos worked on
           </span>
-          <p className="text-sm font-medium text-(--color-text) mt-1">
+          <p className="text-sm font-medium text-(--color-text) mt-1 truncate" title={stats.repos.length > 0 ? stats.repos.join(", ") : undefined}>
             {stats.repos.length > 0 ? stats.repos.join(", ") : "—"}
           </p>
         </div>

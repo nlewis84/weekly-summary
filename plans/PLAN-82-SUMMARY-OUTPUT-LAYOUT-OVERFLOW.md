@@ -1,6 +1,6 @@
 # Plan 82: Summary Output Layout – Overflow and Data Presentation
 
-**Status:** Draft · **Priority: P2** · **Effort: Medium** · **Impact: High**
+**Status:** ✅ Executed · **Priority: P2** · **Effort: Medium** · **Impact: High**
 
 **Created Feb 2026:** After a user generates a weekly summary, parts of the UI overflow their bounds and do not look good: the Check-ins text area can overflow vertically, and the Metrics card shows numbers floating outside their cards and labels truncated (e.g. "PRs created/u", "PR comment", "Commits pushed"). This plan addresses layout overflow and considers alternative ways to present the summary data.
 
@@ -50,12 +50,12 @@
 
 ## Tasks
 
-1. [ ] **Metrics:** Move value inside each metric card; single container per metric (icon + label + value)
-2. [ ] **Metrics:** Apply label truncation or wrapping (e.g. `truncate` or `line-clamp` / `word-break`) so "PRs created/updated", "PR comments", "Commits pushed" stay within bounds
-3. [ ] **Check-ins:** Add `max-height` and `overflow-y: auto` to Check-ins textarea so content scrolls inside the field
-4. [ ] **Check-ins (optional):** After save, show check-ins in a read-only, height-constrained block with "Show more" if needed
-5. [ ] Verify on different viewport sizes and with long labels / long check-ins text
-6. [ ] Ensure "View details" (Plan 73) and Copy behavior still work after layout changes
+1. [x] **Metrics:** Move value inside each metric card; single container per metric (icon + label + value)
+2. [x] **Metrics:** Apply label truncation or wrapping (e.g. `truncate` or `line-clamp` / `word-break`) so "PRs created/updated", "PR comments", "Commits pushed" stay within bounds
+3. [x] **Check-ins:** Add `max-height` and `overflow-y: auto` to Check-ins textarea so content scrolls inside the field
+4. [ ] **Check-ins (optional):** After save, show check-ins in a read-only, height-constrained block with "Show more" if needed (deferred: form does not receive saved check-ins from server)
+5. [x] Verify on different viewport sizes and with long labels / long check-ins text
+6. [x] Ensure "View details" (Plan 73) and Copy behavior still work after layout changes
 
 ## Success Criteria
 
@@ -63,3 +63,12 @@
 - Check-ins text area does not overflow the layout; content scrolls inside the control (and optionally is shown in a bounded read-only block after save)
 - Summary output (Build Summary + Metrics) looks contained and readable across breakpoints
 - No regression on Metrics "View details" or Copy; layout remains accessible and scannable
+
+---
+
+## Resolution (Feb 2026)
+
+- **MetricsCard** (`app/components/MetricsCard.tsx`): Each metric card now uses `min-w-0 overflow-hidden` so content stays inside; label is in a `min-w-0 flex-1` container with `truncate` and `title={label}` for tooltip; value block has `shrink-0` so numbers stay in-card; added `tabular-nums` for value alignment. "Repos worked on" section given `min-w-0` and `truncate` with `title` for long lists.
+- **FullSummaryForm** (`app/components/FullSummaryForm.tsx`): Check-ins textarea now has `max-h-48 overflow-y-auto resize-y min-h-0` so content scrolls inside the field and the control does not overflow the layout; user can still resize vertically if desired.
+- Optional post-save read-only check-ins block not implemented (would require server to return or client to persist check-ins text).
+- Build and layout verified; View details and Copy unchanged and working.

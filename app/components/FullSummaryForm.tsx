@@ -196,7 +196,7 @@ export function FullSummaryForm({
               id="checkIns"
               name="checkIns"
               rows={isXlScreen ? 5 : 6}
-              className="w-full px-3 py-2 border border-(--color-border) rounded-lg text-sm bg-surface-elevated shadow-(--shadow-skeuo-inset) focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-(--color-text)"
+              className="w-full min-h-0 max-h-48 overflow-y-auto resize-y px-3 py-2 border border-(--color-border) rounded-lg text-sm bg-surface-elevated shadow-(--shadow-skeuo-inset) focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-(--color-text)"
             />
           </div>
           <div className="flex items-center gap-2">
