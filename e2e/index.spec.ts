@@ -31,10 +31,13 @@ test.describe("Index page", () => {
   test("Build Summary form is present and submittable", async ({ page }) => {
     await page.goto("/");
 
-    // Expand Build Summary
-    await page.getByText("Build Weekly Summary").click();
-
-    await expect(page.getByLabel("Check-ins")).toBeVisible();
+    // Expand Build Summary if collapsed (e.g. when a summary was already built)
+    const checkIns = page.getByLabel("Check-ins");
+    const buildSummaryHeader = page.getByText("Build Weekly Summary").first();
+    if (!(await checkIns.isVisible())) {
+      await buildSummaryHeader.click();
+    }
+    await expect(checkIns).toBeVisible();
     await expect(page.getByRole("button", { name: "Generate & Save" })).toBeVisible();
 
     // Form exists (submit may fail without API - that's ok)

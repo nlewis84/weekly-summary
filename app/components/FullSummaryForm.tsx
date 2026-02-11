@@ -8,6 +8,22 @@ import type { Payload } from "../../lib/types";
 
 const LAST_BUILT_KEY = "weekly-summary-last-built";
 
+function readLastBuiltFromStorage(): {
+  builtAt: string;
+  weekEnding: string;
+} | null {
+  try {
+    const raw = localStorage.getItem(LAST_BUILT_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as { builtAt?: string; weekEnding?: string };
+    return parsed?.builtAt && parsed?.weekEnding
+      ? { builtAt: parsed.builtAt, weekEnding: parsed.weekEnding }
+      : null;
+  } catch {
+    return null;
+  }
+}
+
 interface FullSummaryFormProps {
   Form: React.ComponentType<Record<string, unknown>>;
   action: string;
@@ -48,17 +64,15 @@ export function FullSummaryForm({
   const [lastBuilt, setLastBuilt] = useState<{
     builtAt: string;
     weekEnding: string;
-  } | null>(null);
+  } | null>(readLastBuiltFromStorage);
+
+  const [isFormExpanded, setIsFormExpanded] = useState(
+    () => !readLastBuiltFromStorage()
+  );
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem(LAST_BUILT_KEY);
-      if (!raw) return;
-      const parsed = JSON.parse(raw) as { builtAt: string; weekEnding: string };
-      if (parsed?.builtAt && parsed?.weekEnding) setLastBuilt(parsed);
-    } catch {
-      /* ignore */
-    }
+    const stored = readLastBuiltFromStorage();
+    if (stored) setLastBuilt(stored);
   }, []);
 
   useEffect(() => {
@@ -67,6 +81,7 @@ export function FullSummaryForm({
       toast("Summary saved to repository");
       const entry = { builtAt, weekEnding };
       setLastBuilt(entry);
+      setIsFormExpanded(false);
       try {
         localStorage.setItem(LAST_BUILT_KEY, JSON.stringify(entry));
       } catch {
@@ -90,8 +105,8 @@ export function FullSummaryForm({
   useEffect(() => {
     if (typeof window === "undefined") return;
     const openIfHash = () => {
-      if (window.location.hash === "#build-summary" && detailsRef.current) {
-        detailsRef.current.open = true;
+      if (window.location.hash === "#build-summary") {
+        setIsFormExpanded(true);
         document
           .getElementById("build-summary")
           ?.scrollIntoView({ behavior: "smooth" });
@@ -105,18 +120,54 @@ export function FullSummaryForm({
   return (
     <details
       ref={detailsRef}
+      open={isFormExpanded}
+      onToggle={(e) => {
+        const el = e.target as HTMLDetailsElement;
+        if (el.open !== isFormExpanded) setIsFormExpanded(el.open);
+      }}
       className="w-full xl:w-96 bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) xl:flex-1 xl:min-h-0 xl:flex xl:flex-col"
     >
-      <summary className="flex items-center gap-2 px-5 py-4 cursor-pointer font-medium text-(--color-text) list-none [&::-webkit-details-marker]:hidden">
-        <FileText
-          size={20}
-          weight="regular"
-          className="text-primary-500 shrink-0"
-        />
-        Build Weekly Summary
+      <summary className="flex flex-col gap-1 px-5 py-4 cursor-pointer font-medium text-(--color-text) list-none [&::-webkit-details-marker]:hidden">
+        <div className="flex items-center gap-2">
+          <FileText
+            size={20}
+            weight="regular"
+            className="text-primary-500 shrink-0"
+          />
+          Build Weekly Summary
+        </div>
+        {lastBuilt && !isFormExpanded && (
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-normal text-text-muted mt-0.5">
+            <span>
+              Last built: {formatRelativeTime(lastBuilt.builtAt)}
+              {lastBuilt.weekEnding && (
+                <span className="ml-1">
+                  (week ending{" "}
+                  {new Date(lastBuilt.weekEnding).toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                  )
+                </span>
+              )}
+            </span>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsFormExpanded(true);
+              }}
+              className="text-primary-600 hover:text-primary-500 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
+            >
+              Edit check-ins & generate again
+            </button>
+          </div>
+        )}
       </summary>
       <div className="px-5 pb-5 pt-4 border-t border-(--color-border) space-y-4 xl:flex-1 xl:min-h-0">
-        {lastBuilt && (
+        {lastBuilt && isFormExpanded && (
           <p className="text-sm text-text-muted">
             Last built: {formatRelativeTime(lastBuilt.builtAt)}
             {lastBuilt.weekEnding && (
