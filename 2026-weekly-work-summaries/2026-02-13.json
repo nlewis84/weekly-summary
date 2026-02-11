@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "generated_at": "2026-02-11T20:25:01.255Z",
+    "window_start": "2026-02-07T06:00:00.000Z",
+    "window_end": "2026-02-12T05:59:59.999Z",
+    "week_ending": "2026-02-13",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 3,
+    "prs_total": 12,
+    "pr_reviews": 10,
+    "pr_comments": 23,
+    "commits_pushed": 3,
+    "linear_completed": 1,
+    "linear_worked_on": 5,
+    "linear_issues_created": 0,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-platforms"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-6762",
+        "title": "CF - (4) users with duplicate profiles that need to be merged",
+        "project": "WTF: Zero Exception Rock Syncing",
+        "url": "https://linear.app/differential/issue/APO-6762/cf-4-users-with-duplicate-profiles-that-need-to-be-merged",
+        "completedAt": "2026-02-09T18:25:33.060Z",
+        "state": "Done"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-6887",
+        "title": "Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6887/ensure-churches-without-full-giving-platform-pass-along-payment-params",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6762",
+        "title": "CF - (4) users with duplicate profiles that need to be merged",
+        "project": "WTF: Zero Exception Rock Syncing",
+        "url": "https://linear.app/differential/issue/APO-6762/cf-4-users-with-duplicate-profiles-that-need-to-be-merged",
+        "completedAt": "2026-02-09T18:25:33.060Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6690",
+        "title": "When entering bank details manually, you see an error message",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6690/when-entering-bank-details-manually-you-see-an-error-message",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6670",
+        "title": "Dedupe getCurrentUserSharedProfile / user queries",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6670/dedupe-getcurrentusersharedprofile-user-queries",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-5772",
+        "title": "Fund names showing as \"-\" in Admin Transactions Table",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-5772/fund-names-showing-as-in-admin-transactions-table",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "created_issues": []
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat: pass churchSlug to updateStreamUserHost when managing community hosts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2818",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-11T15:24:53Z"
+      },
+      {
+        "title": "fix: improve in-app browser handling for give paths and stuck browsers",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5946",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-02-10T23:46:21Z"
+      },
+      {
+        "title": "Reapply \"refactor: new auth flow\" (#2806)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2808",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-09T15:23:47Z"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "feat: set secured and encrypyed in terms footer",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2820"
+      },
+      {
+        "title": "Fix Admin crash: Deferred estimatedACH",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2816"
+      },
+      {
+        "title": "fix: improve in-app browser handling for give paths and stuck browsers",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5946"
+      },
+      {
+        "title": "fix: people data discovery test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2812"
+      },
+      {
+        "title": "fix(web): avoid 500s on invalid slugs/ids",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2811"
+      },
+      {
+        "title": "Fix stale tap campus resolution for tap-scan give flow",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5935"
+      },
+      {
+        "title": "feat(admin): build default state views for migration tab",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2797"
+      },
+      {
+        "title": "feat: preserve prefilled payment data when redirecting to external giving platforms",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2793"
+      },
+      {
+        "title": "chore: optimize payment route by utilizing user data from root loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759"
+      },
+      {
+        "title": "Migration Assistant Admin UI",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2667"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Yesterday",
+      "content": "Feb 10\nSome linear catch up on Merge/Deactivate issues\nDev Standup\nWork Coach 1:1 w/ Michael NeeleyMichael \nIdentified an issue that could be problematic for CF conference\nPR for the mobile to web issue above\nDebugging it across iOS, Android, and App Clip\nMy AI engineering setup video\nDiscuss\nNew boost"
+    },
+    {
+      "day": "Monday",
+      "content": "Feb 9\nZoom Screenshot 2026-02-09 at 4.44.41 PM.png\nScreenshot 2026-02-09 at 4.44.41 PM.png 119 KB View full-size Download\nAll the PR reviews with all the folks\nCleaned up several of my open PRs from last week and nudges to get eyeballs on them\nFinal validation of Merge & Deactivate Users (successful) in prod Admin\nStarted looking at blank fund names in Admin, that I feel like I've fixed like 3 times"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 3\n  • PR reviews: 10\n  • Commits pushed: 3\n  • Linear issues completed: 1\n  • Linear issues worked on: 5\n  • Linear issues created: 0\n  • Repos: apollos-admin, apollos-cluster, apollos-platforms\n\n📝 Check-ins:\n\n  Yesterday: Feb 10\nSome linear catch up on Merge/Deactivate issues\nDev Standup\nWork Coach 1:...\n  Monday: Feb 9\nZoom Screenshot 2026-02-09 at 4.44.41 PM.png\nScreenshot 2026-02-09 at 4.44...\n",
+  "formatted_output": null
+}
