@@ -1,0 +1,540 @@
+{
+  "meta": {
+    "generated_at": "2026-02-20T20:48:01.278Z",
+    "window_start": "2026-02-14T06:00:00.000Z",
+    "window_end": "2026-02-21T05:59:59.999Z",
+    "week_ending": "2026-02-20",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 10,
+    "prs_total": 30,
+    "pr_reviews": 20,
+    "pr_comments": 29,
+    "commits_pushed": 9,
+    "linear_completed": 6,
+    "linear_worked_on": 21,
+    "linear_issues_created": 16,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-giving-alerts-dashboard",
+      "apollos-platforms",
+      "apollos-shovel"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-7186",
+        "title": "Dashboard: HTTP Basic Auth (protect before sharing URL)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7186/dashboard-http-basic-auth-protect-before-sharing-url",
+        "completedAt": "2026-02-19T20:39:33.802Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7127",
+        "title": "Transaction report generator ignores church_slug from URL",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-7127/transaction-report-generator-ignores-church-slug-from-url",
+        "completedAt": "2026-02-19T17:14:31.047Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7096",
+        "title": "Fix names with whitespace at either end coming from Stripe",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7096/fix-names-with-whitespace-at-either-end-coming-from-stripe",
+        "completedAt": "2026-02-16T21:54:23.922Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7045",
+        "title": "Hide the export button in admin",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7045/hide-the-export-button-in-admin",
+        "completedAt": "2026-02-16T21:16:56.067Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6887",
+        "title": "Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6887/ensure-churches-without-full-giving-platform-pass-along-payment-params",
+        "completedAt": "2026-02-20T19:31:43.216Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6502",
+        "title": "Make Auth Errors less disruptive",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6502/make-auth-errors-less-disruptive",
+        "completedAt": "2026-02-20T19:32:18.258Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-7186",
+        "title": "Dashboard: HTTP Basic Auth (protect before sharing URL)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7186/dashboard-http-basic-auth-protect-before-sharing-url",
+        "completedAt": "2026-02-19T20:39:33.802Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7185",
+        "title": "12 - Per-church reconciliation DAGs at 1 AM church time",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7185/12-per-church-reconciliation-dags-at-1-am-church-time",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7184",
+        "title": "4 - Reconciliation schedule DAG (daily trigger + per-church timezone)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7184/4-reconciliation-schedule-dag-daily-trigger-per-church-timezone",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7183",
+        "title": "13 - round currency amounts in reconciliation process (#2494)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7183/13-round-currency-amounts-in-reconciliation-process-2494",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7182",
+        "title": "11 - add church-specific timezone support for reconciliation scheduling (#2491)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7182/11-add-church-specific-timezone-support-for-reconciliation-scheduling",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7181",
+        "title": "10 - add isRunFinal function to determine if reconciliation run is final (#2489)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7181/10-add-isrunfinal-function-to-determine-if-reconciliation-run-is-final",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7180",
+        "title": "9 - add eligibility check for reconciliation runs (#2487)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7180/9-add-eligibility-check-for-reconciliation-runs-2487",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7179",
+        "title": "8 - add grace window and in-flight classification for reconciliation (#2485)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7179/8-add-grace-window-and-in-flight-classification-for-reconciliation",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7178",
+        "title": "7 - add in_flight column to finance_reconciliation_items (#2484)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7178/7-add-in-flight-column-to-finance-reconciliation-items-2484",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7177",
+        "title": "6 - move reconciliation utilities to util directory (#2483)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7177/6-move-reconciliation-utilities-to-util-directory-2483",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7176",
+        "title": "5 - add reconciliation amount normalization and canonical key handling (#2481)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7176/5-add-reconciliation-amount-normalization-and-canonical-key-handling",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7175",
+        "title": "3 - add reconciliation job queue and cursor tracking (#2472)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7175/3-add-reconciliation-job-queue-and-cursor-tracking-2472",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7174",
+        "title": "2 - add financial reconciliation system with tests (#2471)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7174/2-add-financial-reconciliation-system-with-tests-2471",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7127",
+        "title": "Transaction report generator ignores church_slug from URL",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-7127/transaction-report-generator-ignores-church-slug-from-url",
+        "completedAt": "2026-02-19T17:14:31.047Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7097",
+        "title": "Reconciliation Endpoints/Dashboard",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7097/reconciliation-endpointsdashboard",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7096",
+        "title": "Fix names with whitespace at either end coming from Stripe",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7096/fix-names-with-whitespace-at-either-end-coming-from-stripe",
+        "completedAt": "2026-02-16T21:54:23.922Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7045",
+        "title": "Hide the export button in admin",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7045/hide-the-export-button-in-admin",
+        "completedAt": "2026-02-16T21:16:56.067Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6887",
+        "title": "Ensure churches without full giving platform pass along payment params to push pay if a user hits /payment",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6887/ensure-churches-without-full-giving-platform-pass-along-payment-params",
+        "completedAt": "2026-02-20T19:31:43.216Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6690",
+        "title": "When entering bank details manually, you see an error message",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6690/when-entering-bank-details-manually-you-see-an-error-message",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6502",
+        "title": "Make Auth Errors less disruptive",
+        "project": "Web Giving - ACH, Credit Card, and Apple Pay",
+        "url": "https://linear.app/differential/issue/APO-6502/make-auth-errors-less-disruptive",
+        "completedAt": "2026-02-20T19:32:18.258Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-5772",
+        "title": "Fund names showing as \"-\" in Admin Transactions Table",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-5772/fund-names-showing-as-in-admin-transactions-table",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-7186",
+        "title": "Dashboard: HTTP Basic Auth (protect before sharing URL)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7186/dashboard-http-basic-auth-protect-before-sharing-url",
+        "createdAt": "2026-02-19T20:02:11.840Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7185",
+        "title": "12 - Per-church reconciliation DAGs at 1 AM church time",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7185/12-per-church-reconciliation-dags-at-1-am-church-time",
+        "createdAt": "2026-02-19T19:57:36.311Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7184",
+        "title": "4 - Reconciliation schedule DAG (daily trigger + per-church timezone)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7184/4-reconciliation-schedule-dag-daily-trigger-per-church-timezone",
+        "createdAt": "2026-02-19T19:51:34.894Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7183",
+        "title": "13 - round currency amounts in reconciliation process (#2494)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7183/13-round-currency-amounts-in-reconciliation-process-2494",
+        "createdAt": "2026-02-19T19:36:59.467Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7182",
+        "title": "11 - add church-specific timezone support for reconciliation scheduling (#2491)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7182/11-add-church-specific-timezone-support-for-reconciliation-scheduling",
+        "createdAt": "2026-02-19T19:36:56.658Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7181",
+        "title": "10 - add isRunFinal function to determine if reconciliation run is final (#2489)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7181/10-add-isrunfinal-function-to-determine-if-reconciliation-run-is-final",
+        "createdAt": "2026-02-19T19:36:54.324Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7180",
+        "title": "9 - add eligibility check for reconciliation runs (#2487)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7180/9-add-eligibility-check-for-reconciliation-runs-2487",
+        "createdAt": "2026-02-19T19:36:52.313Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7179",
+        "title": "8 - add grace window and in-flight classification for reconciliation (#2485)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7179/8-add-grace-window-and-in-flight-classification-for-reconciliation",
+        "createdAt": "2026-02-19T19:36:50.116Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7178",
+        "title": "7 - add in_flight column to finance_reconciliation_items (#2484)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7178/7-add-in-flight-column-to-finance-reconciliation-items-2484",
+        "createdAt": "2026-02-19T19:36:41.360Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7177",
+        "title": "6 - move reconciliation utilities to util directory (#2483)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7177/6-move-reconciliation-utilities-to-util-directory-2483",
+        "createdAt": "2026-02-19T19:36:39.883Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7176",
+        "title": "5 - add reconciliation amount normalization and canonical key handling (#2481)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7176/5-add-reconciliation-amount-normalization-and-canonical-key-handling",
+        "createdAt": "2026-02-19T19:36:37.595Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7175",
+        "title": "3 - add reconciliation job queue and cursor tracking (#2472)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7175/3-add-reconciliation-job-queue-and-cursor-tracking-2472",
+        "createdAt": "2026-02-19T19:36:35.744Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7174",
+        "title": "2 - add financial reconciliation system with tests (#2471)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7174/2-add-financial-reconciliation-system-with-tests-2471",
+        "createdAt": "2026-02-19T19:36:33.656Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7173",
+        "title": "1 - create finance reconciliation tables for tracking payment data (#2470)",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7173/1-create-finance-reconciliation-tables-for-tracking-payment-data-2470",
+        "createdAt": "2026-02-19T19:36:31.558Z",
+        "state": "In Prod + FF"
+      },
+      {
+        "identifier": "APO-7164",
+        "title": "Are we good here already?",
+        "project": "Google Pay",
+        "url": "https://linear.app/differential/issue/APO-7164/are-we-good-here-already",
+        "createdAt": "2026-02-19T17:38:41.152Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-7097",
+        "title": "Reconciliation Endpoints/Dashboard",
+        "project": "WTF: Zero Exception Rock Reconciliations",
+        "url": "https://linear.app/differential/issue/APO-7097/reconciliation-endpointsdashboard",
+        "createdAt": "2026-02-16T21:57:05.737Z",
+        "state": "In Review"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "Revert \"Use partitioned cookies\"",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2860",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-20T17:59:23Z"
+      },
+      {
+        "title": "chore: basic auth",
+        "url": "https://github.com/ApollosProject/apollos-giving-alerts-dashboard/pull/1",
+        "repo": "apollos-giving-alerts-dashboard",
+        "merged_at": "2026-02-19T20:38:23Z"
+      },
+      {
+        "title": "feat: use church from URL params in authorizeAndGetChurchSlugAndUser",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2851",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-18T20:24:26Z"
+      },
+      {
+        "title": "feat: create finance reconciliation tables for tracking payment data",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2470",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-02-20T15:06:24Z"
+      },
+      {
+        "title": "chore: trim whitespace due to apple pay",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2468",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-02-16T20:23:22Z"
+      },
+      {
+        "title": "chore: hide the export button",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2839",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-16T18:53:54Z"
+      },
+      {
+        "title": "feat: add test coverage for success redirects",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2837",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-16T16:58:00Z"
+      },
+      {
+        "title": "fix: update Apollos URL from apollos.app to apollos.com",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5947",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-02-19T17:58:22Z"
+      },
+      {
+        "title": "feat: skip Android Chrome redirect for churches with full-platform giving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2815",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-16T17:35:18Z"
+      },
+      {
+        "title": "feat: preserve prefilled payment data when redirecting to external giving platforms",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2793",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-20T19:20:34Z"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "[APO-7214] Fix selected date styling",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2864"
+      },
+      {
+        "title": "Always use target origin id when merging",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1332"
+      },
+      {
+        "title": "feat(admin): add Apollos user check icon to person detail page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2857"
+      },
+      {
+        "title": "[APO-7123] Change start date display format, fix calendar hover state issue",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2847"
+      },
+      {
+        "title": "Merge active apollos users in the shovel - when no chat + identities match.",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1327"
+      },
+      {
+        "title": "feat: add financial reconciliation system with tests",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2471"
+      },
+      {
+        "title": "use dark mode + accordion view w bank first",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2836"
+      },
+      {
+        "title": "[APO-7041] Use react-day-picker for start date",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2834"
+      },
+      {
+        "title": "APO-7015: Bypass transactions report cache for Rock giving exports",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2831"
+      },
+      {
+        "title": "Add ngrok domains to allowed hosts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2828"
+      },
+      {
+        "title": "[APO-7026] No /success redirect after ExpressCheckout submission",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2825"
+      },
+      {
+        "title": "feat: issue refund email",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2823"
+      },
+      {
+        "title": "feat: extract and persist fundId, amount, and campusId from Stripe charge metadata",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2448"
+      },
+      {
+        "title": "feat(admin): build default state views for migration tab",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2797"
+      },
+      {
+        "title": "feat: preserve prefilled payment data when redirecting to external giving platforms",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2793"
+      },
+      {
+        "title": "feat: handle Stripe payment redirect flow and improve error messages",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2776"
+      },
+      {
+        "title": "chore: optimize payment route by utilizing user data from root loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759"
+      },
+      {
+        "title": "Implement tailwind preset",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2735"
+      },
+      {
+        "title": "Initialize web-embeds-v2 project with project scaffolding",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2732"
+      },
+      {
+        "title": "fix: use cluster endpoint for /ask in web and web embeds",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2413"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Yesterday",
+      "content": "Feb 19\nContinued plowing ahead with Giving Alerts Dashboard work\nDetailed all the Dashboard work 👆\nFleshing out a fig jam explanation of that work: \nhttps://www.figma.com/board/FBu7b0NnCGe3AyU4sRyNbM/Giving-Alerts-Dashboard?node-id=0-1&p=f&t=l3SwhpGWAcogQP8G-0 \nZoom Screenshot 2026-02-19 at 6.07.20 PM.png\nScreenshot 2026-02-19 at 6.07.20 PM.png 49.7 KB View full-size Download\nDiscuss\nNew boost"
+    },
+    {
+      "day": "Wednesday",
+      "content": "Feb 18\nFixed bug in Admin identified overnight (church slug issue)\nUpdates to the Giving Alerts Dashboard Repo (pretty much just Cluster work today)\nZoom Screenshot 2026-02-18 at 11.57.32 PM.png\nScreenshot 2026-02-18 at 11.57.32 PM.png 66.5 KB View full-size Download\nZoom Screenshot 2026-02-18 at 11.55.30 PM.png\nScreenshot 2026-02-18 at 11.55.30 PM.png 74.8 KB View full-size Download\nDiscuss\nNew boost"
+    },
+    {
+      "day": "Monday",
+      "content": "Feb 16\nBack on later, but so far:\nMerged Stripe whitespace fix, export button removal, redirect improvements, and added success redirect tests.\nReviewed 8 PRs\nHuddles all day about syncing issues\nBuilt Giving Reconciliation dashboard, which entailed prs to Cluster and Shovel as well"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 10\n  • PR reviews: 20\n  • Commits pushed: 9\n  • Linear issues completed: 6\n  • Linear issues worked on: 21\n  • Linear issues created: 16\n  • Repos: apollos-admin, apollos-cluster, apollos-giving-alerts-dashboard, apollos-platforms, apollos-shovel\n\n📝 Check-ins:\n\n  Yesterday: Feb 19\nContinued plowing ahead with Giving Alerts Dashboard work\nDetailed all th...\n  Wednesday: Feb 18\nFixed bug in Admin identified overnight (church slug issue)\nUpdates to th...\n  Monday: Feb 16\nBack on later, but so far:\nMerged Stripe whitespace fix, export button re...\n",
+  "formatted_output": null
+}
