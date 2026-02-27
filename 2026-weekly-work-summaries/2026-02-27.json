@@ -1,0 +1,436 @@
+{
+  "meta": {
+    "generated_at": "2026-02-27T22:35:47.506Z",
+    "window_start": "2026-02-21T06:00:00.000Z",
+    "window_end": "2026-02-28T05:59:59.999Z",
+    "week_ending": "2026-02-27",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 7,
+    "prs_total": 21,
+    "pr_reviews": 18,
+    "pr_comments": 14,
+    "commits_pushed": 7,
+    "linear_completed": 7,
+    "linear_worked_on": 22,
+    "linear_issues_created": 4,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-shovel"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-7252",
+        "title": "Web login appears broken / unable to sign in",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-7252/web-login-appears-broken-unable-to-sign-in",
+        "completedAt": "2026-02-23T22:37:44.835Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7209",
+        "title": "[Staging - Admin] Sign Up Does Not Send an Email to Create a New Account",
+        "project": "Create Staging Env",
+        "url": "https://linear.app/differential/issue/APO-7209/staging-admin-sign-up-does-not-send-an-email-to-create-a-new-account",
+        "completedAt": "2026-02-23T22:23:37.308Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7203",
+        "title": "[Staging - Web Giving - Crossroads] Can't Login or Create Account Using Email",
+        "project": "Create Staging Env",
+        "url": "https://linear.app/differential/issue/APO-7203/staging-web-giving-crossroads-cant-login-or-create-account-using-email",
+        "completedAt": "2026-02-23T21:31:17.504Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7174",
+        "title": "2 - add financial reconciliation system with tests (#2471)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7174/2-add-financial-reconciliation-system-with-tests-2471",
+        "completedAt": "2026-02-25T06:08:34.081Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7173",
+        "title": "1 - create finance reconciliation tables for tracking payment data (#2470)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7173/1-create-finance-reconciliation-tables-for-tracking-payment-data-2470",
+        "completedAt": "2026-02-23T16:52:44.220Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6108",
+        "title": "Save amount, fundId, and campusId on newly created charges",
+        "project": "Admin: Fix Pending ACH Tile Visibility",
+        "url": "https://linear.app/differential/issue/APO-6108/save-amount-fundid-and-campusid-on-newly-created-charges",
+        "completedAt": "2026-02-24T16:41:19.070Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-5772",
+        "title": "Fund names showing as \"-\" in Admin Transactions Table",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-5772/fund-names-showing-as-in-admin-transactions-table",
+        "completedAt": "2026-02-23T21:45:36.755Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-7301",
+        "title": "Fix the web side of this",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7301/fix-the-web-side-of-this",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7300",
+        "title": "Fix the cluster side of this",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7300/fix-the-cluster-side-of-this",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7269",
+        "title": "Apple Pay not working in desktop Safari",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7269/apple-pay-not-working-in-desktop-safari",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7252",
+        "title": "Web login appears broken / unable to sign in",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-7252/web-login-appears-broken-unable-to-sign-in",
+        "completedAt": "2026-02-23T22:37:44.835Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7209",
+        "title": "[Staging - Admin] Sign Up Does Not Send an Email to Create a New Account",
+        "project": "Create Staging Env",
+        "url": "https://linear.app/differential/issue/APO-7209/staging-admin-sign-up-does-not-send-an-email-to-create-a-new-account",
+        "completedAt": "2026-02-23T22:23:37.308Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7203",
+        "title": "[Staging - Web Giving - Crossroads] Can't Login or Create Account Using Email",
+        "project": "Create Staging Env",
+        "url": "https://linear.app/differential/issue/APO-7203/staging-web-giving-crossroads-cant-login-or-create-account-using-email",
+        "completedAt": "2026-02-23T21:31:17.504Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7185",
+        "title": "12 - Per-church reconciliation DAGs at 1 AM church time",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7185/12-per-church-reconciliation-dags-at-1-am-church-time",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7184",
+        "title": "4 - Reconciliation schedule DAG (daily trigger + per-church timezone)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7184/4-reconciliation-schedule-dag-daily-trigger-per-church-timezone",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7183",
+        "title": "13 - round currency amounts in reconciliation process (#2494)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7183/13-round-currency-amounts-in-reconciliation-process-2494",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7182",
+        "title": "11 - add church-specific timezone support for reconciliation scheduling (#2491)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7182/11-add-church-specific-timezone-support-for-reconciliation-scheduling",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7181",
+        "title": "10 - add isRunFinal function to determine if reconciliation run is final (#2489)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7181/10-add-isrunfinal-function-to-determine-if-reconciliation-run-is-final",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7180",
+        "title": "9 - add eligibility check for reconciliation runs (#2487)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7180/9-add-eligibility-check-for-reconciliation-runs-2487",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7179",
+        "title": "8 - add grace window and in-flight classification for reconciliation (#2485)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7179/8-add-grace-window-and-in-flight-classification-for-reconciliation",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7178",
+        "title": "7 - add in_flight column to finance_reconciliation_items (#2484)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7178/7-add-in-flight-column-to-finance-reconciliation-items-2484",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7177",
+        "title": "6 - move reconciliation utilities to util directory (#2483)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7177/6-move-reconciliation-utilities-to-util-directory-2483",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7176",
+        "title": "5 - add reconciliation amount normalization and canonical key handling (#2481)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7176/5-add-reconciliation-amount-normalization-and-canonical-key-handling",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7175",
+        "title": "3 - add reconciliation job queue and cursor tracking (#2472)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7175/3-add-reconciliation-job-queue-and-cursor-tracking-2472",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7174",
+        "title": "2 - add financial reconciliation system with tests (#2471)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7174/2-add-financial-reconciliation-system-with-tests-2471",
+        "completedAt": "2026-02-25T06:08:34.081Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7173",
+        "title": "1 - create finance reconciliation tables for tracking payment data (#2470)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7173/1-create-finance-reconciliation-tables-for-tracking-payment-data-2470",
+        "completedAt": "2026-02-23T16:52:44.220Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7097",
+        "title": "Reconciliation Endpoints/Dashboard",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7097/reconciliation-endpointsdashboard",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6108",
+        "title": "Save amount, fundId, and campusId on newly created charges",
+        "project": "Admin: Fix Pending ACH Tile Visibility",
+        "url": "https://linear.app/differential/issue/APO-6108/save-amount-fundid-and-campusid-on-newly-created-charges",
+        "completedAt": "2026-02-24T16:41:19.070Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-5772",
+        "title": "Fund names showing as \"-\" in Admin Transactions Table",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-5772/fund-names-showing-as-in-admin-transactions-table",
+        "completedAt": "2026-02-23T21:45:36.755Z",
+        "state": "Released"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-7301",
+        "title": "Fix the web side of this",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7301/fix-the-web-side-of-this",
+        "createdAt": "2026-02-24T20:54:11.379Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7300",
+        "title": "Fix the cluster side of this",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7300/fix-the-cluster-side-of-this",
+        "createdAt": "2026-02-24T20:54:06.198Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7252",
+        "title": "Web login appears broken / unable to sign in",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-7252/web-login-appears-broken-unable-to-sign-in",
+        "createdAt": "2026-02-23T17:30:59.035Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7248",
+        "title": "14 - Refactor stripe api calls",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7248/14-refactor-stripe-api-calls",
+        "createdAt": "2026-02-23T16:45:15.095Z",
+        "state": "Needs Review"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "Revert \"debug: add logs for x-church issues\"",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2511",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-02-23T21:00:10Z"
+      },
+      {
+        "title": "debug: add logs for x-church issues",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2510",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-02-23T20:43:38Z"
+      },
+      {
+        "title": "feat: add financial reconciliation system with tests",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2471",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-02-24T15:20:56Z"
+      },
+      {
+        "title": "feat: extract and persist fundId, amount, and campusId from Stripe charge metadata",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2448",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-02-23T15:02:25Z"
+      },
+      {
+        "title": "feat: prioritize charges.fund_id for fund name in transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2822",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-23T15:10:25Z"
+      },
+      {
+        "title": "feat: handle Stripe payment redirect flow and improve error messages",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2776",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-27T22:02:08Z"
+      },
+      {
+        "title": "fix: add type assertions to form validators and refs",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2742",
+        "repo": "apollos-admin",
+        "merged_at": "2026-02-23T22:38:21Z"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Use new apollos merge utils for PCO",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1340"
+      },
+      {
+        "title": "Refactor: Create Subscriptions After Confirmation",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2526"
+      },
+      {
+        "title": "Merge people w/ non matching identities",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1337"
+      },
+      {
+        "title": "fix: update Stripe Connect integration to use stripeAccount parameter",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2518"
+      },
+      {
+        "title": "[APO-7255] Restore fixed footers for modals",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2874"
+      },
+      {
+        "title": "APO-7265: Enforce 70-char max for Apple Marketing URL",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2869"
+      },
+      {
+        "title": "[APO-7205] Fallback for non CHIPS browsers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2868"
+      },
+      {
+        "title": "Support deep-links in Web Embeds",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2867"
+      },
+      {
+        "title": "[APO-7110] Auto grow sometimes doesn't account for Apple Pay button",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2863"
+      },
+      {
+        "title": "feat(recurring-gifts): render recurring gifts with filtering, cancel, and resume actions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2848"
+      },
+      {
+        "title": "Fix Recurring Gift Confirmation Email for post_subscription_refactor",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2845"
+      },
+      {
+        "title": "Merge active apollos users in the shovel - when no chat + identities match.",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1327"
+      },
+      {
+        "title": "feat: add reconciliation job queue and cursor tracking",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2472"
+      },
+      {
+        "title": "feat: add financial reconciliation system with tests",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2471"
+      },
+      {
+        "title": "feat: extract and persist fundId, amount, and campusId from Stripe charge metadata",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2448"
+      },
+      {
+        "title": "feat: handle Stripe payment redirect flow and improve error messages",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2776"
+      },
+      {
+        "title": "fix: use cluster endpoint for /ask in web and web embeds",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2413"
+      },
+      {
+        "title": "port admin ask endpoint and suggested searches to cluster",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2210"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Yesterday",
+      "content": "Feb 26\nAll the meetings\nLinear cleanup\nDebugging Apply Pay Express Checkout button not working\nZoom Screenshot 2026-02-26 at 5.10.21 PM.png\nScreenshot 2026-02-26 at 5.10.21 PM.png 182 KB View full-size Download\nDiscuss\nNew boost"
+    },
+    {
+      "day": "Wednesday",
+      "content": "Feb 25\nZoom Screenshot 2026-02-25 at 5.38.36 PM.png\nScreenshot 2026-02-25 at 5.38.36 PM.png 116 KB View full-size Download\nLots of PR reviews\nDebugging Apply Pay Express Checkout button not working\nDiscuss\nNew boost"
+    },
+    {
+      "day": "Tuesday",
+      "content": "Feb 24\nZoom Screenshot 2026-02-24 at 7.16.43 PM.png\nScreenshot 2026-02-24 at 7.16.43 PM.png 141 KB View full-size Download\nDebugging Apple Pay button not working on Safari\nDiscuss\nNew boost"
+    },
+    {
+      "day": "Monday",
+      "content": "Feb 23\nZoom Screenshot 2026-02-23 at 4.38.22 PM.png\nScreenshot 2026-02-23 at 4.38.22 PM.png 209 KB View full-size Download\n_______\nthis week:\nEngineering Work\nDebugged Apple Pay Express Checkout not working in Safari — found previous \"fix\" was wrong, got transactions succeeding with correct onBehalfOf, still resolving a duplicate transaction issue\nReviewed PRs (Marcelo's recurring gifts tab, Dylan's subscription/idempotency work)\nTriaged web giving QA feedback — nothing launch-blocking besides Apple Pay\nMoved reconciliation dashboard into recon issues project, cleaned up Linear\nAdvocated for reproducible seed scripts for local testing of admin features\nHelped Zach with staging environment setup for PCO integration\nParticipated in project-oriented dev standups (Thu + Fri)\nOrganizational / Leadership\nRan \"mini retros\" — had 1:1s with Brandon, Gerry, Darryl, Conrad, and Vance about team process issues\nRaised concerns about lack of planning, micromanagement, and team being rudderless\nCalled out admin UI inconsistency problem in standup — assigned to write a proposal\nPushed for a formal engineering retrospective (Gerry + Brandon committed to scheduling one)\nShared feedback in company connect on PR review bottlenecks, standup effectiveness, and need for better shaping"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 7\n  • PR reviews: 18\n  • Commits pushed: 7\n  • Linear issues completed: 7\n  • Linear issues worked on: 22\n  • Linear issues created: 4\n  • Repos: apollos-admin, apollos-cluster, apollos-shovel\n\n📝 Check-ins:\n\n  Yesterday: Feb 26\nAll the meetings\nLinear cleanup\nDebugging Apply Pay Express Checkout butt...\n  Wednesday: Feb 25\nZoom Screenshot 2026-02-25 at 5.38.36 PM.png\nScreenshot 2026-02-25 at 5.3...\n  Tuesday: Feb 24\nZoom Screenshot 2026-02-24 at 7.16.43 PM.png\nScreenshot 2026-02-24 at 7.1...\n  Monday: Feb 23\nZoom Screenshot 2026-02-23 at 4.38.22 PM.png\nScreenshot 2026-02-23 at 4.3...\n",
+  "formatted_output": null
+}
