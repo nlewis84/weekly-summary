@@ -286,6 +286,48 @@ function filterApollosPRs(items: Array<{ html_url?: string }>) {
   return (items ?? []).filter((pr) => pr.html_url?.includes("ApollosProject"));
 }
 
+type CandidateReviewPR = { pull_request?: { url?: string }; html_url?: string; [k: string]: unknown };
+
+/**
+ * Keeps only PRs where the user submitted a review (comment, request changes, or approve) within the time window.
+ * Fixes the issue where PRs updated in the window but reviewed earlier were incorrectly counted.
+ */
+async function filterReviewsBySubmittedInWindow(
+  candidatePRs: CandidateReviewPR[],
+  windowStart: Date,
+  windowEnd: Date,
+  username: string,
+  headers: HeadersInit
+): Promise<CandidateReviewPR[]> {
+  const results = await Promise.all(
+    candidatePRs.map(async (pr) => {
+      const reviewsUrl = pr.pull_request?.url ? `${pr.pull_request.url}/reviews` : null;
+      if (!reviewsUrl) return null;
+      try {
+        const res = await fetch(reviewsUrl, { headers });
+        if (!res.ok) return null;
+        const reviews = (await res.json()) as Array<{
+          user?: { login?: string };
+          state?: string;
+          submitted_at?: string | null;
+        }>;
+        const hasReviewInWindow = reviews.some(
+          (r) =>
+            r.user?.login === username &&
+            r.submitted_at != null &&
+            r.state !== "PENDING" &&
+            new Date(r.submitted_at) >= windowStart &&
+            new Date(r.submitted_at) <= windowEnd
+        );
+        return hasReviewInWindow ? pr : null;
+      } catch {
+        return null;
+      }
+    })
+  );
+  return results.filter((pr): pr is CandidateReviewPR => pr != null);
+}
+
 function getCommitRepos(): { owner: string; repos: string[] } {
   const owner = process.env.GITHUB_ORG ?? "ApollosProject";
   const raw =
@@ -411,7 +453,14 @@ async function fetchGitHubData(
       )
     );
 
-    const reviews = filterApollosPRs(reviewsData.items ?? []);
+    const reviewCandidates = filterApollosPRs(reviewsData.items ?? []);
+    const reviews = await filterReviewsBySubmittedInWindow(
+      reviewCandidates,
+      windowStart,
+      windowEnd,
+      username,
+      headers
+    );
 
     const allForComments = [...prDetails, ...reviews].slice(0, 20) as Array<{
       comments_url?: string;
