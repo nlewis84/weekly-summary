@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "generated_at": "2026-03-06T20:52:29.322Z",
+    "window_start": "2026-02-28T06:00:00.000Z",
+    "window_end": "2026-03-07T05:59:59.999Z",
+    "week_ending": "2026-03-06",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 3,
+    "prs_total": 18,
+    "pr_reviews": 11,
+    "pr_comments": 30,
+    "commits_pushed": 7,
+    "linear_completed": 2,
+    "linear_worked_on": 9,
+    "linear_issues_created": 1,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-shovel"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-6702",
+        "title": "Signing Out not persisted through refresh",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6702/signing-out-not-persisted-through-refresh",
+        "completedAt": "2026-03-06T19:31:47.205Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6690",
+        "title": "When entering bank details manually, you see an error message",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6690/when-entering-bank-details-manually-you-see-an-error-message",
+        "completedAt": "2026-03-02T14:50:23.848Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-7344",
+        "title": "Open Powered by Apollos Link in New Tab",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7344/open-powered-by-apollos-link-in-new-tab",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7185",
+        "title": "12 - Per-church reconciliation DAGs at 1 AM church time",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7185/12-per-church-reconciliation-dags-at-1-am-church-time",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7177",
+        "title": "6 - move reconciliation utilities to util directory (#2483)",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7177/6-move-reconciliation-utilities-to-util-directory-2483",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7097",
+        "title": "Reconciliation Endpoints/Dashboard",
+        "project": "RECON Issues",
+        "url": "https://linear.app/differential/issue/APO-7097/reconciliation-endpointsdashboard",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6846",
+        "title": "[Web Giving] Remove \"Now\" language on Give button for one-time transaction",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6846/web-giving-remove-now-language-on-give-button-for-one-time-transaction",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6721",
+        "title": "Loading payment options from Stripe... copy change to Loading payment options",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6721/loading-payment-options-from-stripe-copy-change-to-loading-payment",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-6702",
+        "title": "Signing Out not persisted through refresh",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6702/signing-out-not-persisted-through-refresh",
+        "completedAt": "2026-03-06T19:31:47.205Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6690",
+        "title": "When entering bank details manually, you see an error message",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6690/when-entering-bank-details-manually-you-see-an-error-message",
+        "completedAt": "2026-03-02T14:50:23.848Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6612",
+        "title": "Update how we redirecting to PushPay",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6612/update-how-we-redirecting-to-pushpay",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-7472",
+        "title": "Express Checkout Button in dark mode should be a different color than black",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7472/express-checkout-button-in-dark-mode-should-be-a-different-color-than",
+        "createdAt": "2026-03-04T16:52:17.786Z",
+        "state": "Not Now"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "fix: resolve Express Checkout on_behalf_of mismatch for destination charges",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2883",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-03T19:45:30Z"
+      },
+      {
+        "title": "feat: add reconciliation amount normalization and canonical key handling",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2481",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-03-05T05:31:55Z"
+      },
+      {
+        "title": "feat: add reconciliation job queue and cursor tracking",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2472",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-03-03T16:43:42Z"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Limit number of pages to embed when embedding a church website for voice qa",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1367"
+      },
+      {
+        "title": "Add Docker support for admin app with GHCR publishing",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2908"
+      },
+      {
+        "title": "[APO-7445] Mobile Auth Screens getting zoomed in",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2893"
+      },
+      {
+        "title": "New `createOrUpdateGiveIntent` mutation",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2555"
+      },
+      {
+        "title": "[APO-7398] Make Redis optional locally when REDIS_URL is unset",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2891"
+      },
+      {
+        "title": "fix: persist canonical scripture query for scripture blocks (APO-7384)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2890"
+      },
+      {
+        "title": "fix: resolve Express Checkout on_behalf_of mismatch for destination charges",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2883"
+      },
+      {
+        "title": "feat(migrations): normalize migration admin UI for multi-source support",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2878"
+      },
+      {
+        "title": "[APO-7205] Fallback for non CHIPS browsers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2868"
+      },
+      {
+        "title": "[Giving] Fix funds changing across page reloads on Transactions Tab",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2853"
+      },
+      {
+        "title": "feat(recurring-gifts): render recurring gifts with filtering, cancel, and resume actions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2848"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "Focused on finalizing PR to fix Express Checkout button on web\nMerged: fix Express Checkout on_behalf_of mismatch (apollos-admin); add reconciliation job queue and cursor tracking (apollos-cluster)\nPR reviews: [APO-7445] Mobile Auth Screens getting zoomed in; persist canonical scripture query (APO-7384); Express Checkout on_behalf_of; migration admin UI for multi-source; recurring gifts with filtering, cancel, resume\nLinear worked on: APO-7185 Per-church reconciliation DAGs at 1 AM church time; APO-7176 reconciliation amount normalization and canonical key handling (#2481)\nRepos: apollos-admin, apollos-cluster, apollos-shovel"
+    },
+    {
+      "day": "Tuesday",
+      "content": "Arch Pod\nMerged on_behalf_of Express Checkout; merged cluster PR for Recon Dashboard; cleaned up two shovel PRs\nPR reviews: [APO-7398] Make Redis optional locally; persist canonical scripture query (APO-7384); Express Checkout on_behalf_of; [Giving] Fix funds changing across page reloads on Transactions Tab\nLinear completed: APO-6690 When entering bank details manually, you see an error message\nLinear worked on: APO-7269 Apple Pay not working in desktop Safari; APO-6690 bank details error\nRepos: apollos-admin, apollos-cluster"
+    },
+    {
+      "day": "Wednesday",
+      "content": "PR reviews; experimented with Airlock; rebased Recon Dashboard PRs; Dev Chat; Linear project sync; PR to enable giving on web for non–full-platform churches and LD flag\nPR reviews: New createOrUpdateGiveIntent mutation; [APO-7205] Fallback for non CHIPS browsers; feat(recurring-gifts): recurring gifts with filtering, cancel, resume\nLinear worked on: APO-7097 Reconciliation Endpoints/Dashboard; APO-6612 Update how we redirect to PushPay\nLinear created: APO-7472 Express Checkout Button in dark mode should be a different color than black\nRepos: apollos-admin, apollos-cluster"
+    },
+    {
+      "day": "Thursday",
+      "content": "Thought leader for Team Retro Part 1 (sailboat retro: wind/sun/anchors/reefs; heat-mapping; theme discussion)\nCalled out unclear reporting structure (everyone reporting to one person; need to bubble up to managers/project leads)\nCalled out weeknight rotation miss (asked in Slack for a schedule, no one took lead, everyone felt obligated)\nAsked whether we’re hiring or adding payment-domain engineering expertise if there’s a capability gap\nFramed the fix as structural, not behavioral (ownership, process, accountability vs. leadership “backing off”)\nPushed for role clarity from company North Star → quarterly goals → how each person owns rocks and a roadmap for the quarter with clear sprint definition; cited working at different altitudes and no one connecting them\nSlack comment (cited in retro): product process doesn’t replace org structure; someone must own the roadmap and know what each dev is working on; leadership must define who owns the roadmap, who builds the sprint, and when it’s reviewed\nRetro; restacking Recon Dashboard PR; figuring out OpenAI spike in usage\nPR review: New createOrUpdateGiveIntent mutation\nLinear worked on: APO-7177 move reconciliation utilities to util directory (#2483)\nRepos: apollos-cluster, apollos-shovel"
+    },
+    {
+      "day": "Friday",
+      "content": "Co-working w/ Tyler, Shahbano, and Matt\nProject meeting; QA issue verification, PRs, and assigning; PR reviews for Vincent Wilson\nPR reviews: Limit number of pages to embed for voice QA; Add Docker support for admin app with GHCR publishing\nLinear completed: APO-6702 Signing Out not persisted through refresh\nLinear worked on: APO-7344 Open Powered by Apollos Link in New Tab; APO-6846 [Web Giving] Remove \"Now\" on Give button; APO-6721 Loading payment options copy change; APO-6702 Signing Out not persisted\nRepos: apollos-admin, apollos-shovel"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 3\n  • PR reviews: 11\n  • Commits pushed: 7\n  • Linear issues completed: 2\n  • Linear issues worked on: 9\n  • Linear issues created: 1\n  • Repos: apollos-admin, apollos-cluster, apollos-shovel\n\n📝 Check-ins:\n\n  Monday: Focused on finalizing PR to fix Express Checkout button on web\nMerged: fix Expre...\n  Tuesday: Arch Pod\nMerged on_behalf_of Express Checkout; merged cluster PR for Recon Dashb...\n  Wednesday: PR reviews; experimented with Airlock; rebased Recon Dashboard PRs; Dev Chat; Li...\n  Thursday: Thought leader for Team Retro Part 1 (sailboat retro: wind/sun/anchors/reefs; he...\n  Friday: Co-working w/ Tyler, Shahbano, and Matt\nProject meeting; QA issue verification, ...\n",
+  "formatted_output": null
+}
