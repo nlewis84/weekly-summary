@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "generated_at": "2026-03-13T22:14:13.258Z",
+    "window_start": "2026-03-07T06:00:00.000Z",
+    "window_end": "2026-03-14T04:59:59.999Z",
+    "week_ending": "2026-03-13",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 11,
+    "prs_total": 22,
+    "pr_reviews": 24,
+    "pr_comments": 26,
+    "commits_pushed": 12,
+    "linear_completed": 8,
+    "linear_worked_on": 10,
+    "linear_issues_created": 1,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-embeds",
+      "apollos-platforms",
+      "apollos-shovel"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-7344",
+        "title": "Open Powered by Apollos Link in New Tab",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7344/open-powered-by-apollos-link-in-new-tab",
+        "completedAt": "2026-03-11T23:33:11.928Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7179",
+        "title": "8 - add grace window and in-flight classification for reconciliation (#2485)",
+        "project": "Reconciliation Endpoints/Dashboard",
+        "url": "https://linear.app/differential/issue/APO-7179/8-add-grace-window-and-in-flight-classification-for-reconciliation",
+        "completedAt": "2026-03-13T14:52:32.854Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7178",
+        "title": "7 - add in_flight column to finance_reconciliation_items (#2484)",
+        "project": "Reconciliation Endpoints/Dashboard",
+        "url": "https://linear.app/differential/issue/APO-7178/7-add-in-flight-column-to-finance-reconciliation-items-2484",
+        "completedAt": "2026-03-11T23:33:13.615Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7177",
+        "title": "6 - move reconciliation utilities to util directory (#2483)",
+        "project": "Reconciliation Endpoints/Dashboard",
+        "url": "https://linear.app/differential/issue/APO-7177/6-move-reconciliation-utilities-to-util-directory-2483",
+        "completedAt": "2026-03-11T23:33:13.655Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7176",
+        "title": "5 - add reconciliation amount normalization and canonical key handling (#2481)",
+        "project": "Reconciliation Endpoints/Dashboard",
+        "url": "https://linear.app/differential/issue/APO-7176/5-add-reconciliation-amount-normalization-and-canonical-key-handling",
+        "completedAt": "2026-03-09T14:23:06.069Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7175",
+        "title": "3 - add reconciliation job queue and cursor tracking (#2472)",
+        "project": "Reconciliation Endpoints/Dashboard",
+        "url": "https://linear.app/differential/issue/APO-7175/3-add-reconciliation-job-queue-and-cursor-tracking-2472",
+        "completedAt": "2026-03-09T14:23:06.170Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6846",
+        "title": "[Web Giving] Remove \"Now\" language on Give button for one-time transaction",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6846/web-giving-remove-now-language-on-give-button-for-one-time-transaction",
+        "completedAt": "2026-03-11T23:33:11.983Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6721",
+        "title": "Loading payment options from Stripe... copy change to Loading payment options",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6721/loading-payment-options-from-stripe-copy-change-to-loading-payment",
+        "completedAt": "2026-03-11T23:33:11.443Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-7540",
+        "title": "Investigate missing Stripe charge metadata \"source\" field",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7540/investigate-missing-stripe-charge-metadata-source-field",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7344",
+        "title": "Open Powered by Apollos Link in New Tab",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7344/open-powered-by-apollos-link-in-new-tab",
+        "completedAt": "2026-03-11T23:33:11.928Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7179",
+        "title": "8 - add grace window and in-flight classification for reconciliation (#2485)",
+        "project": "Reconciliation Endpoints/Dashboard",
+        "url": "https://linear.app/differential/issue/APO-7179/8-add-grace-window-and-in-flight-classification-for-reconciliation",
+        "completedAt": "2026-03-13T14:52:32.854Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7178",
+        "title": "7 - add in_flight column to finance_reconciliation_items (#2484)",
+        "project": "Reconciliation Endpoints/Dashboard",
+        "url": "https://linear.app/differential/issue/APO-7178/7-add-in-flight-column-to-finance-reconciliation-items-2484",
+        "completedAt": "2026-03-11T23:33:13.615Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7177",
+        "title": "6 - move reconciliation utilities to util directory (#2483)",
+        "project": "Reconciliation Endpoints/Dashboard",
+        "url": "https://linear.app/differential/issue/APO-7177/6-move-reconciliation-utilities-to-util-directory-2483",
+        "completedAt": "2026-03-11T23:33:13.655Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7176",
+        "title": "5 - add reconciliation amount normalization and canonical key handling (#2481)",
+        "project": "Reconciliation Endpoints/Dashboard",
+        "url": "https://linear.app/differential/issue/APO-7176/5-add-reconciliation-amount-normalization-and-canonical-key-handling",
+        "completedAt": "2026-03-09T14:23:06.069Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7175",
+        "title": "3 - add reconciliation job queue and cursor tracking (#2472)",
+        "project": "Reconciliation Endpoints/Dashboard",
+        "url": "https://linear.app/differential/issue/APO-7175/3-add-reconciliation-job-queue-and-cursor-tracking-2472",
+        "completedAt": "2026-03-09T14:23:06.170Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6846",
+        "title": "[Web Giving] Remove \"Now\" language on Give button for one-time transaction",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6846/web-giving-remove-now-language-on-give-button-for-one-time-transaction",
+        "completedAt": "2026-03-11T23:33:11.983Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6721",
+        "title": "Loading payment options from Stripe... copy change to Loading payment options",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6721/loading-payment-options-from-stripe-copy-change-to-loading-payment",
+        "completedAt": "2026-03-11T23:33:11.443Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6612",
+        "title": "Update how we redirecting to PushPay",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6612/update-how-we-redirecting-to-pushpay",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-7596",
+        "title": "Give $$$ button needs amount formatting (commas)",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7596/give-dollardollardollar-button-needs-amount-formatting-commas",
+        "createdAt": "2026-03-10T21:40:17.009Z",
+        "state": "Duplicate"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat: set payment method accordion to default collapsed",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2983",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-13T22:08:30Z"
+      },
+      {
+        "title": "chore: change Give Again text to Done",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2982",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-13T22:08:30Z"
+      },
+      {
+        "title": "chore: use confirmSetup instead of confirmPayment in express checkout",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2955",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-11T20:05:16Z"
+      },
+      {
+        "title": "feat: migrate from createPaymentIntent to createOrUpdateGiveIntent for Web Giving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2931",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-12T21:03:01Z"
+      },
+      {
+        "title": "chore: remove NOW from button text",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2921",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-10T14:42:47Z"
+      },
+      {
+        "title": "chore: fix apollos link for web embeds opening in new window",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2920",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-09T22:01:33Z"
+      },
+      {
+        "title": "chore: Copy change for loading indicator",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2919",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-10T14:21:12Z"
+      },
+      {
+        "title": "feat: set a model for OpenAIEmbeddings",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1366",
+        "repo": "apollos-shovel",
+        "merged_at": "2026-03-10T14:22:48Z"
+      },
+      {
+        "title": "feat: add grace window and in-flight classification for reconciliation",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2485",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-03-11T16:01:54Z"
+      },
+      {
+        "title": "feat: add in_flight column to finance_reconciliation_items",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2484",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-03-10T14:00:34Z"
+      },
+      {
+        "title": "refactor: move reconciliation utilities to util directory",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2483",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-03-10T04:17:38Z"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "[Redirect] Fix Auth Handoff from App to Web in Staging",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2626"
+      },
+      {
+        "title": "[APO-7341] Web Embed Alignment Issues",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2977"
+      },
+      {
+        "title": "feat: add requiredRoles with nested requiredSkills to hasAccess",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2957"
+      },
+      {
+        "title": "Add LaunchDarkly env vars to .env.example for local devs",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2956"
+      },
+      {
+        "title": "[APO-7345] Giving form reload on crash",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2951"
+      },
+      {
+        "title": "Remove resume recurring subscription endpoint",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2593"
+      },
+      {
+        "title": "Remove resume recurring gift functionality",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2949"
+      },
+      {
+        "title": "[APO-7548] Handle OTP errors in `web` project",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2942"
+      },
+      {
+        "title": "APO-7508: Update and Reuse Payment/Setup Intents: App Clip Implementation",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6026"
+      },
+      {
+        "title": "Support MP3 audio in web previews",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2936"
+      },
+      {
+        "title": "SYM-22: Support MP3 audio in legacy web embeds",
+        "url": "https://github.com/ApollosProject/apollos-embeds/pull/266"
+      },
+      {
+        "title": "[Finance] Charge source missing from metadata",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2583"
+      },
+      {
+        "title": "Fix duplicate initial charge for subscriptions starting today",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2578"
+      },
+      {
+        "title": "createOrUpdateGiveIntent mobile implementation",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6018"
+      },
+      {
+        "title": "feat: migrate from createPaymentIntent to createOrUpdateGiveIntent for Web Giving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2931"
+      },
+      {
+        "title": "Do not copy origin metadata when duplicating content items",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2930"
+      },
+      {
+        "title": "Fix historical tap tag analytics queries",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2928"
+      },
+      {
+        "title": "[APO-6911] [V2] Full phone validation on giving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2926"
+      },
+      {
+        "title": "[APO-6852] Respect previous set giving details",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2925"
+      },
+      {
+        "title": "[APO-6849] [Web giving] Match app min/max values",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2923"
+      },
+      {
+        "title": "Use env var for LaunchDarkly client side ID, instead of hard-coding",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2922"
+      },
+      {
+        "title": "Add Docker support for admin app with GHCR publishing",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2908"
+      },
+      {
+        "title": "feat: add grace window and in-flight classification for reconciliation",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2485"
+      },
+      {
+        "title": "refactor: move reconciliation utilities to util directory",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2483"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Check-ins",
+      "content": "Nathan Lewis – Weekly Summary (Mar 9–13, 2026)\n\nHighlights\n\nWeb Giving / createOrUpdateGiveIntent: Web implementation of Dylan’s Create/Update Intent work; deep dive with Dylan and Nick; merged createOrUpdateGiveIntent Web Implementation with Nick, Dylan, and Gerard (Thu). PR for WEB source in Stripe metadata (Fri).\nRecon Dashboard / reconciliation: Cleaned up latest Recon Dashboard PR after Gerard’s review (Mon). Merged several Recon Dashboard / cluster PRs across the week (grace window & in-flight classification, in_flight column, job queue & cursor tracking, amount normalization). Cleaned up Linear items for Recon Dashboard (Fri).\nExpress Checkout: Quick fix for Express Checkout for Cluster mid-week staging so it wouldn’t break; merged confirmSetup instead of confirmPayment in express checkout (Wed).\nQA & small fixes: Merged small QA-related Web Giving PRs (Tue). Fix for apollos link for web embeds opening in new window (Mon). Copy/loading indicator and “NOW” button text changes (Tue).\nPlatform / tooling: Merged PR to set a model for OpenAIEmbeddings (apollos-shovel) for OpenAI spend; Docker support for admin app with GHCR publishing review; LaunchDarkly env vars / client-side ID.\nStripe & payments: Stripe local debugging with Gerard (Thu). Investigating missing Stripe charge metadata “source” field; Redirect to PushPay PR and sync with Conrad (Fri).\nPR reviews: Heavy review load all week (including v.05 web embeds, OTP errors, Payment/Setup Intents, phone validation, giving form/min-max, and others). Two reviews in legacy apollos-embeds (Wed).\nMeetings & collaboration: Standup; 1:1 with Michael (Tue). Sync with Vincent and Darryl, Retro Part 2 (Thu). Reading Conrad’s product docs for Thursday meeting (Wed). Figuring out admin merge queue (Fri).\nRepos: apollos-admin, apollos-cluster, apollos-platforms, apollos-shovel, apollos-embeds\n\nNotable PRs merged (summary)\nWeb embeds link fix; Web Giving QA (button text, loading copy); OpenAIEmbeddings model; in_flight column; reconciliation job queue & normalization; express checkout confirmSetup; grace window & in-flight classification (cluster); createOrUpdateGiveIntent Web Implementation.\n\nNotable Linear (summary)\nReconciliation: APO-7175, APO-7176, APO-7179, APO-7180–APO-7185, APO-7097. Web Giving: APO-7506, APO-7540, APO-7716, APO-7718. PushPay redirect: APO-6612. Created: APO-7596 (Give $$$ amount formatting)."
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 11\n  • PR reviews: 24\n  • Commits pushed: 12\n  • Linear issues completed: 8\n  • Linear issues worked on: 10\n  • Linear issues created: 1\n  • Repos: apollos-admin, apollos-cluster, apollos-embeds, apollos-platforms, apollos-shovel\n\n📝 Check-ins:\n\n  Check-ins: Nathan Lewis – Weekly Summary (Mar 9–13, 2026)\n\nHighlights\n\nWeb Giving / createO...\n",
+  "formatted_output": null
+}
