@@ -116,7 +116,7 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
   };
 
   return (
-    <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:h-full xl:flex xl:flex-col xl:min-h-0">
+    <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:flex xl:flex-col xl:min-h-0">
       <div className="flex items-center justify-between pb-4">
         <h2 className="flex items-center gap-2 text-base font-semibold text-(--color-text)">
           <CalendarBlank

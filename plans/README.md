@@ -81,14 +81,16 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [70](PLAN-70-FAVICON-ROUTE-ERROR.md) | Fix favicon.ico Route Error | P3 | ✅ Complete |
 | [71](PLAN-71-TAILWIND-CANONICAL-CLASSES.md) | Tailwind Canonical Classes | P3 | Draft |
 | [72](PLAN-72-BUILD-SUMMARY-ALWAYS-VISIBLE.md) | Build Weekly Summary – Always Visible Form | P2 | Draft |
-| [73](PLAN-73-METRICS-VIEW-DETAILS-EXPAND-ONLY-METRICS-CARD.md) | Metrics View Details – Expand Only That Card | P2 | Draft |
-| [74](PLAN-74-REMOVE-BUILD-SUMMARY-HEADER-BUTTON.md) | Remove Build Summary Button from Header | P2 | Draft |
+| [73](PLAN-73-METRICS-VIEW-DETAILS-EXPAND-ONLY-METRICS-CARD.md) | Metrics View Details – Expand Only That Card | P2 | Superseded by 85 |
+| [74](PLAN-74-REMOVE-BUILD-SUMMARY-HEADER-BUTTON.md) | Remove Build Summary Button from Header | P2 | ✅ Complete |
 | [75](PLAN-75-THEME-TOGGLE-SETTINGS-ONLY.md) | Theme Toggle in Settings Only | P2 | Draft |
 | [76](PLAN-76-CARD-HEADERS-MATCH-BUILD-SUMMARY.md) | Metrics & This Week Headers – Match Build Summary | P2 | Draft |
 | [77](PLAN-77-THIS-WEEK-REPOS-REVAMP.md) | This Week Card – Repos Worked On Section Revamp | P2 | Draft |
 | [78](PLAN-78-TOAST-NOTIFICATIONS-POLISH.md) | Toast Notifications Polish | P2 | Draft |
 | [79](PLAN-79-METRICS-CARD-TYPOGRAPHY-AUDIT.md) | Metrics Card Typography Audit | P2 | Draft |
 | [80](PLAN-80-STYLES-AUDIT-TAILWIND-ONLY.md) | Styles Audit – Tailwind Only, No Style Prop | P2 | Draft |
+| [84](PLAN-84-PRS-ACTIVE-DETAILS-AND-LABEL-FIX.md) | PRs Active Details & Metric Label Truncation Fix | P2 | ✅ Complete |
+| [85](PLAN-85-CARD-EXPAND-ISOLATION-HOVER.md) | Card Expand Isolation & Build Summary Hover | P2 | ✅ Complete |
 
 ## Recommended Next (by priority)
 

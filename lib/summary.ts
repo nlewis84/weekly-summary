@@ -739,6 +739,21 @@ export async function runSummary(options: {
           };
         }
       ),
+      open_prs: prCategories.open.map(
+        (pr: {
+          title?: string;
+          html_url?: string;
+          state?: string | null;
+        }) => {
+          const m = pr.html_url?.match(/ApollosProject\/([^/]+)/);
+          return {
+            title: pr.title ?? "",
+            url: pr.html_url ?? "",
+            repo: m ? m[1] : null,
+            state: pr.state ?? null,
+          };
+        }
+      ),
       reviews: githubData.reviews.map(
         (pr: { title?: string; html_url?: string }) => ({
           title: pr.title ?? "",

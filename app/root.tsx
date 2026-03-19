@@ -151,13 +151,6 @@ export default function App() {
                 aria-label="Main"
               >
                 <ThemeToggle />
-                <Link
-                  to="/#build-summary"
-                  prefetch="intent"
-                  className="min-h-[44px] min-w-[44px] flex items-center px-3 py-2 text-primary-600 font-medium hover:text-primary-500 hover:bg-surface-elevated rounded-lg transition-colors -m-1 sm:m-0"
-                >
-                  Build Summary
-                </Link>
                 <NavLink
                   to="/history"
                   prefetch="intent"

@@ -1,6 +1,6 @@
 # Plan 73: Metrics Card View Details – Expand Only That Card
 
-**Status:** Draft · **Priority: P2** · **Effort: Small** · **Impact: Medium**
+**Status:** Superseded by PLAN-85 · **Priority: P2** · **Effort: Small** · **Impact: Medium**
 
 **Created Feb 2026:** When clicking "View details" on the Metrics card, the Build Weekly Summary and This Week cards also appear to expand because the grid stretches all columns to match the tallest. This plan fixes the layout so only the Metrics card expands.
 

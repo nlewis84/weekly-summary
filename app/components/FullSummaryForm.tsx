@@ -125,7 +125,7 @@ export function FullSummaryForm({
         const el = e.target as HTMLDetailsElement;
         if (el.open !== isFormExpanded) setIsFormExpanded(el.open);
       }}
-      className="w-full xl:w-96 bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) xl:flex-1 xl:min-h-0 xl:flex xl:flex-col"
+      className="w-full xl:w-96 bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) transition-all duration-300 xl:min-h-0 xl:flex xl:flex-col"
     >
       <summary className="flex flex-col gap-1 px-5 py-4 cursor-pointer font-medium text-(--color-text) list-none [&::-webkit-details-marker]:hidden">
         <div className="flex items-center gap-2">

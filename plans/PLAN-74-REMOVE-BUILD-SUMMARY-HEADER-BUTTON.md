@@ -1,6 +1,6 @@
 # Plan 74: Remove Build Summary Button from Header
 
-**Status: Draft**
+**Status: ✅ Complete**
 
 Remove the "Build Summary" link/button from the header navigation. The Build Summary form remains on the index page; users will reach it by scrolling or via the keyboard shortcut `b`.
 

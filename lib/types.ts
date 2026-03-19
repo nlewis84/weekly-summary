@@ -31,6 +31,7 @@ export interface Payload {
   };
   github: {
     merged_prs: Array<{ title: string; url: string; repo: string | null; merged_at: string | null }>;
+    open_prs: Array<{ title: string; url: string; repo: string | null; state: string | null }>;
     reviews: Array<{ title: string; url: string }>;
   };
   check_ins: CheckIn[];

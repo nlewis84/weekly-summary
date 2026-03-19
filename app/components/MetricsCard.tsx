@@ -81,25 +81,29 @@ const METRICS = [
   { key: "prs_merged" as const, label: "PRs merged", Icon: Package },
   {
     key: "prs_total" as const,
-    label: "PRs created/updated",
+    label: "PRs active",
+    tooltip: "PRs created or updated",
     Icon: PencilSimple,
   },
   { key: "pr_reviews" as const, label: "PR reviews", Icon: Eye },
   { key: "pr_comments" as const, label: "PR comments", Icon: ChatCircle },
-  { key: "commits_pushed" as const, label: "Commits pushed", Icon: GitCommit },
+  { key: "commits_pushed" as const, label: "Commits", tooltip: "Commits pushed", Icon: GitCommit },
   {
     key: "linear_completed" as const,
-    label: "Linear issues completed",
+    label: "Linear done",
+    tooltip: "Linear issues completed",
     Icon: CheckCircle,
   },
   {
     key: "linear_worked_on" as const,
-    label: "Linear issues worked on",
+    label: "Linear active",
+    tooltip: "Linear issues worked on",
     Icon: ArrowsClockwise,
   },
   {
     key: "linear_issues_created" as const,
-    label: "Linear issues created",
+    label: "Linear created",
+    tooltip: "Linear issues created",
     Icon: PlusCircle,
   },
 ] as const;
@@ -137,13 +141,14 @@ export function MetricsCard({
   const hasDetails =
     payload &&
     (payload.github.merged_prs.length > 0 ||
+      (payload.github.open_prs?.length ?? 0) > 0 ||
       payload.github.reviews.length > 0 ||
       payload.linear.completed_issues.length > 0 ||
       payload.linear.worked_on_issues.length > 0 ||
       (payload.linear.created_issues?.length ?? 0) > 0);
 
   return (
-    <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:h-full xl:flex xl:flex-col xl:min-h-0">
+    <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:flex xl:flex-col xl:min-h-0">
       <div className="flex items-center justify-between pb-4">
         <h2 className="text-lg font-semibold text-(--color-text)">Metrics</h2>
         <button
@@ -159,7 +164,8 @@ export function MetricsCard({
       </div>
       <div className="xl:flex-1 xl:min-h-0 xl:flex xl:flex-col pt-4 border-t border-(--color-border)">
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-          {METRICS.map(({ key, label, Icon }) => {
+          {METRICS.map(({ key, label, Icon, ...rest }) => {
+            const tooltip = "tooltip" in rest ? (rest as { tooltip: string }).tooltip : label;
             const delta =
               prevStats && TREND_METRICS.includes(key)
                 ? stats[key] - prevStats[key]
@@ -183,7 +189,7 @@ export function MetricsCard({
                     weight="regular"
                     className="text-primary-500 shrink-0"
                   />
-                  <span className="truncate" title={label}>
+                  <span className="truncate" title={tooltip}>
                     {label}
                   </span>
                 </span>
@@ -283,6 +289,32 @@ export function MetricsCard({
                       </ul>
                     </div>
                   )}
+                  {(payload!.github.open_prs?.length ?? 0) > 0 && (
+                    <div>
+                      <h3 className="font-medium text-text-muted mb-2">
+                        PRs active
+                      </h3>
+                      <ul className="space-y-1">
+                        {payload!.github.open_prs.map((pr, i) => (
+                          <li key={i}>
+                            <a
+                              href={pr.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-primary-500 hover:underline"
+                            >
+                              {pr.title}
+                            </a>
+                            {pr.repo && (
+                              <span className="text-text-muted ml-1">
+                                ({pr.repo})
+                              </span>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   {payload!.github.reviews.length > 0 && (
                     <div>
                       <h3 className="font-medium text-text-muted mb-2">
@@ -307,7 +339,7 @@ export function MetricsCard({
                   {payload!.linear.completed_issues.length > 0 && (
                     <div>
                       <h3 className="font-medium text-text-muted mb-2">
-                        Linear completed
+                        Linear done
                       </h3>
                       <ul className="space-y-1">
                         {(
@@ -336,7 +368,7 @@ export function MetricsCard({
                   {payload!.linear.worked_on_issues.length > 0 && (
                     <div>
                       <h3 className="font-medium text-text-muted mb-2">
-                        Linear worked on
+                        Linear active
                       </h3>
                       <ul className="space-y-1">
                         {(
@@ -365,7 +397,7 @@ export function MetricsCard({
                   {(payload!.linear.created_issues?.length ?? 0) > 0 && (
                     <div>
                       <h3 className="font-medium text-text-muted mb-2">
-                        Linear issues created
+                        Linear created
                       </h3>
                       <ul className="space-y-1">
                         {(

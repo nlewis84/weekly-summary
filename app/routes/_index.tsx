@@ -204,7 +204,7 @@ export default function Index() {
         ))}
       </div>
 
-      <div className="xl:grid xl:grid-cols-[2fr_1fr_1fr] xl:gap-5 xl:items-stretch">
+      <div className="xl:grid xl:grid-cols-[2fr_1fr_1fr] xl:gap-5 xl:items-start">
         <div className="space-y-6 xl:flex xl:flex-col xl:min-h-0">
           {viewMode === "today" && (
             <TodaySection
