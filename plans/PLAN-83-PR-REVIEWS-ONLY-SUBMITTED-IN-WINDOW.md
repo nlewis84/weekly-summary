@@ -1,4 +1,6 @@
-# Plan: PR reviews only when you actually reviewed in the window
+# Plan 83: PR Reviews Only Submitted In Window
+
+**Status:** ✅ Complete · **Priority: P2**
 
 ## Problem
 

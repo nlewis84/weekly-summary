@@ -89,6 +89,9 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [78](PLAN-78-TOAST-NOTIFICATIONS-POLISH.md) | Toast Notifications Polish | P2 | Draft |
 | [79](PLAN-79-METRICS-CARD-TYPOGRAPHY-AUDIT.md) | Metrics Card Typography Audit | P2 | Draft |
 | [80](PLAN-80-STYLES-AUDIT-TAILWIND-ONLY.md) | Styles Audit – Tailwind Only, No Style Prop | P2 | Draft |
+| [81](PLAN-81-BUILD-SUMMARY-POST-GENERATION-UX.md) | Build Summary Post-Generation UX | P2 | ✅ Complete |
+| [82](PLAN-82-SUMMARY-OUTPUT-LAYOUT-OVERFLOW.md) | Summary Output Layout – Overflow & Data Presentation | P2 | ✅ Complete |
+| [83](PLAN-83-PR-REVIEWS-ONLY-SUBMITTED-IN-WINDOW.md) | PR Reviews Only Submitted In Window | P2 | ✅ Complete |
 | [84](PLAN-84-PRS-ACTIVE-DETAILS-AND-LABEL-FIX.md) | PRs Active Details & Metric Label Truncation Fix | P2 | ✅ Complete |
 | [85](PLAN-85-CARD-EXPAND-ISOLATION-HOVER.md) | Card Expand Isolation & Build Summary Hover | P2 | ✅ Complete |
 
