@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "generated_at": "2026-03-20T21:06:04.753Z",
+    "window_start": "2026-03-14T05:00:00.000Z",
+    "window_end": "2026-03-21T04:59:59.999Z",
+    "week_ending": "2026-03-20",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 8,
+    "prs_total": 13,
+    "pr_reviews": 18,
+    "pr_comments": 18,
+    "commits_pushed": 8,
+    "linear_completed": 4,
+    "linear_worked_on": 7,
+    "linear_issues_created": 5,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-platforms"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-7641",
+        "title": "Apple Pay on Web Creating New User in Rock",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7641/apple-pay-on-web-creating-new-user-in-rock",
+        "completedAt": "2026-03-17T21:09:27.447Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7513",
+        "title": "Improve Load Speed of Apple Pay Button",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7513/improve-load-speed-of-apple-pay-button",
+        "completedAt": "2026-03-18T14:24:04.278Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7506",
+        "title": "Web Implementation",
+        "project": "WTF: Subscriptions / Payment Intents",
+        "url": "https://linear.app/differential/issue/APO-7506/web-implementation",
+        "completedAt": "2026-03-17T21:09:27.711Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7472",
+        "title": "Express Checkout Button in dark mode should be a different color than black",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7472/express-checkout-button-in-dark-mode-should-be-a-different-color-than",
+        "completedAt": "2026-03-17T21:09:25.823Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-7898",
+        "title": "Everywhere Gifts Are Shown For Gift History Need to Have Decimal Points",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7898/everywhere-gifts-are-shown-for-gift-history-need-to-have-decimal",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7888",
+        "title": "Phone numbers should be able to be saved from the /give/payment screen",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7888/phone-numbers-should-be-able-to-be-saved-from-the-givepayment-screen",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7641",
+        "title": "Apple Pay on Web Creating New User in Rock",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7641/apple-pay-on-web-creating-new-user-in-rock",
+        "completedAt": "2026-03-17T21:09:27.447Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7513",
+        "title": "Improve Load Speed of Apple Pay Button",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7513/improve-load-speed-of-apple-pay-button",
+        "completedAt": "2026-03-18T14:24:04.278Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7506",
+        "title": "Web Implementation",
+        "project": "WTF: Subscriptions / Payment Intents",
+        "url": "https://linear.app/differential/issue/APO-7506/web-implementation",
+        "completedAt": "2026-03-17T21:09:27.711Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7472",
+        "title": "Express Checkout Button in dark mode should be a different color than black",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7472/express-checkout-button-in-dark-mode-should-be-a-different-color-than",
+        "completedAt": "2026-03-17T21:09:25.823Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6862",
+        "title": "Update confirmation receipt styles & language to be more consistent with Donation Receipt email",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6862/update-confirmation-receipt-styles-and-language-to-be-more-consistent",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-7893",
+        "title": "If a refresh token is associated with an inactive user, Web should log the user out instead of crash/error page",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7893/if-a-refresh-token-is-associated-with-an-inactive-user-web-should-log",
+        "createdAt": "2026-03-20T17:22:21.789Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-7888",
+        "title": "Phone numbers should be able to be saved from the /give/payment screen",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7888/phone-numbers-should-be-able-to-be-saved-from-the-givepayment-screen",
+        "createdAt": "2026-03-20T16:32:23.505Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7887",
+        "title": "Campus and Fund Modals should shrink to fit the available options and the footer should have a consistent height",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7887/campus-and-fund-modals-should-shrink-to-fit-the-available-options-and",
+        "createdAt": "2026-03-20T16:09:12.156Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-7843",
+        "title": "Investigate missing Stripe charge metadata \"source\" field (ADMIN PR)",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7843/investigate-missing-stripe-charge-metadata-source-field-admin-pr",
+        "createdAt": "2026-03-18T14:08:17.884Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-7806",
+        "title": "Phone number validation on /give/payment - You can't delete the first number you type",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7806/phone-number-validation-on-givepayment-you-cant-delete-the-first",
+        "createdAt": "2026-03-17T16:08:43.406Z",
+        "state": "Ready for Release"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "chore: mock imports and no dynamic import for handle/give/payment test file",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3025",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-19T18:49:19Z"
+      },
+      {
+        "title": "feat: add environment variable overrides for redirect service and web",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6045",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-03-19T14:44:51Z"
+      },
+      {
+        "title": "chore: improved performance on the redirect from web to /give/payment",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3018",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-19T02:24:44Z"
+      },
+      {
+        "title": "feat: user can save name, phone, email in /give/payment",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3005",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-20T14:32:45Z"
+      },
+      {
+        "title": "chore: remove old cluster code preventing updating phone/email",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2662",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-03-19T04:08:54Z"
+      },
+      {
+        "title": "fix: if signing up with existing, do not send to match",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3001",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-18T21:09:53Z"
+      },
+      {
+        "title": "chore: add source \"WEB\" to createOrUpdateGiveIntent calls",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2981",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-16T20:53:07Z"
+      },
+      {
+        "title": "feat: gate /give redirect for non-full-platform on LD flag",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2910",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-20T14:00:24Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "chore: always show cents on giving history",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3035",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix: strip non-digits from phone field in payment form",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3033",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "refactor: redesign recurring gift confirmation email template to match Donation Receipt email template",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3023",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Revert \"Revert \"chore: add source \"WEB\" to createOrUpdateGiveIntent calls\"\"",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3014",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "[APO-7893] Logout on `refreshSessionQuery` error.",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3034"
+      },
+      {
+        "title": "[APO-7887] Campus and Fund modals now shrink.",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3032"
+      },
+      {
+        "title": "Handle local Astro auth token flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3031"
+      },
+      {
+        "title": "Fix pagination inconsistency and add archived migration filters",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3028"
+      },
+      {
+        "title": "Synchronize migration panel and filter dropdown state",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3026"
+      },
+      {
+        "title": "[APO-6722] Auto-focus email field if email is invalid.",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3024"
+      },
+      {
+        "title": "Improved image deploy pipeline",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3020"
+      },
+      {
+        "title": "Tag images and trigger workflow on deploy",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3019"
+      },
+      {
+        "title": "[Tap-Linking] Get working in staging",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3016"
+      },
+      {
+        "title": "[APO-7537] [Web] Add church favicon",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3013"
+      },
+      {
+        "title": "Fix recurring gifts pagination layout",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3010"
+      },
+      {
+        "title": "feat: user can save name, phone, email in /give/payment",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3005"
+      },
+      {
+        "title": "[APO-7806] Phone Number not deleting last number FIX",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3000"
+      },
+      {
+        "title": "feat: add search bars to Fund and Location filter dropdowns",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2998"
+      },
+      {
+        "title": "[APO-7545] Add embedPreferClose handle to show close button instead of back button",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2992"
+      },
+      {
+        "title": "[APO-7719] [iOS Chrome] Scroll dimensions fix.",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2991"
+      },
+      {
+        "title": "feat: gate /give redirect for non-full-platform on LD flag",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2910"
+      },
+      {
+        "title": "Disable Amplitude for web + web-embeds",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2814"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": ", March 16\nShort week. I was OOO on Monday."
+    },
+    {
+      "day": "Tuesday",
+      "content": ", March 17\nArch Pod\nPR work: phone/email updates for cluster & admin; web auth redirect bug; LaunchDarkly gating + redirect so non–full-platform churches can give on web\nDI site update for Emily (Core Values) + typo fixes\nPR reviews; sync with Vitor on Web Giving; dug into iOS Chrome–only issue\nReviews included: phone field delete fix (APO-7806), search bars on Fund/Location filters, iOS Chrome scroll dimensions (APO-7719)\nLinear: completed APO-7641, APO-7506, APO-7472; worked APO-7349, APO-6912, APO-6612; created APO-7806"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", March 18\nPR reviews (incl. image deploy / tagging, Tap-Linking in staging, APO-7537 favicon, recurring gifts pagination, APO-7545 embedPreferClose, disable Amplitude for web + web-embeds)\nMobile → web auth handoff: performance testing; quick huddle with Gerard\nOpened PRs for Dev X on handoff, perf on handoff, and web auth sign-up bug\nHeavy time with Vitor on Web Giving\nAlso (from next-day recap): merge-queue help for Nick, giving email redesign, Vitor feedback on saving profile + PushPay redirect + new flag, huddle with Tyler & Shahbano\nLinear: completed APO-7513; worked APO-7726, APO-7513; created APO-7843 (Stripe charge metadata source / ADMIN PR)"
+    },
+    {
+      "day": "Thursday",
+      "content": ", March 19\nMerged: mock imports / no dynamic import for handle/give/payment test (apollos-admin); env overrides for redirect service + web (apollos-platforms)\nIn flight: recurring gift confirmation email aligned with Donation Receipt; save name/phone/email on /give/payment; gate /give redirect on LD for non–full-platform (apollos-admin)\nReviews: improved image deploy pipeline; plus reviews on save-profile and gate-redirect PRs\nLinear active: APO-6912, APO-6862"
+    },
+    {
+      "day": "Friday",
+      "content": ", March 20\nWeb Giving polish with Vitor (Slack); lots of PR reviews\nMerged: save name/phone/email on /give/payment**; gate/give` redirect on LD for non–full-platform\nIn flight: always show cents on giving history; strip non-digits from phone on payment form\nReviews: e.g. APO-7893 refresh-session logout, APO-7887 campus/fund modals, Astro local auth token, migration panel/pagination filters, APO-6722 email auto-focus\nLinear: created APO-7893, APO-7888, APO-7887; active APO-7898, APO-7888"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 8\n  • PR reviews: 18\n  • Commits pushed: 8\n  • Linear issues completed: 4\n  • Linear issues worked on: 7\n  • Linear issues created: 5\n  • Repos: apollos-admin, apollos-cluster, apollos-platforms\n\n📝 Check-ins:\n\n  Monday: , March 16\nShort week. I was OOO on Monday.\n  Tuesday: , March 17\nArch Pod\nPR work: phone/email updates for cluster & admin; web auth r...\n  Wednesday: , March 18\nPR reviews (incl. image deploy / tagging, Tap-Linking in staging, APO...\n  Thursday: , March 19\nMerged: mock imports / no dynamic import for handle/give/payment test...\n  Friday: , March 20\nWeb Giving polish with Vitor (Slack); lots of PR reviews\nMerged: save...\n",
+  "formatted_output": null
+}
