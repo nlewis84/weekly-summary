@@ -102,12 +102,16 @@ describe("runSummary", () => {
       vi.fn(async (url: string, init?: RequestInit) => {
         if (url.includes("linear.app")) {
           const body = init?.body ? JSON.parse(init.body as string) : {};
-          const isViewer = String(body.query || "").includes("GetViewer");
+          const queryStr = String(body.query || "");
+          const isViewer = queryStr.includes("GetViewer");
+          const isComments = queryStr.includes("GetUserComments");
           return new Response(
             JSON.stringify({
               data: isViewer
                 ? { viewer: { id: "user-1", name: "Test User" } }
-                : { issues: { nodes: [], pageInfo: { hasNextPage: false } } },
+                : isComments
+                  ? { comments: { nodes: [], pageInfo: { hasNextPage: false } } }
+                  : { issues: { nodes: [], pageInfo: { hasNextPage: false } } },
             }),
             { headers: { "Content-Type": "application/json" } }
           );
@@ -150,6 +154,7 @@ describe("runSummary", () => {
       linear_completed: expect.any(Number),
       linear_worked_on: expect.any(Number),
       linear_issues_created: expect.any(Number),
+      linear_comments: expect.any(Number),
       repos: expect.any(Array),
     });
     expect(result.terminalOutput).toBeDefined();

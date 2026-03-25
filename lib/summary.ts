@@ -51,6 +51,19 @@ const LINEAR_CREATED_QUERY = `
   }
 `;
 
+const LINEAR_COMMENTS_QUERY = `
+  query GetUserComments($userId: ID!, $createdAfter: DateTimeOrDuration!, $createdBefore: DateTimeOrDuration!, $after: String) {
+    comments(filter: { user: { id: { eq: $userId } }, createdAt: { gte: $createdAfter, lte: $createdBefore } }, first: 100, after: $after) {
+      nodes {
+        id
+        createdAt
+        issue { id identifier title url state { name type } project { name } }
+      }
+      pageInfo { hasNextPage endCursor }
+    }
+  }
+`;
+
 export function getWindowStart(
   now: Date,
   todayMode: boolean,
@@ -214,6 +227,46 @@ async function fetchAllLinearIssues(
   }>;
 }
 
+type LinearComment = {
+  id: string;
+  createdAt: string;
+  issue?: {
+    id?: string;
+    identifier?: string;
+    title?: string;
+    url?: string;
+    state?: { name?: string; type?: string };
+    project?: { name?: string };
+  };
+};
+
+async function fetchAllLinearComments(
+  headers: Record<string, string>,
+  query: string,
+  variables: Record<string, unknown>
+): Promise<LinearComment[]> {
+  const all: LinearComment[] = [];
+  let after: string | null = null;
+  const base = { ...variables };
+  do {
+    const vars = { ...base, after };
+    const data = await fetchLinearPage(headers, query, vars);
+    const conn = (
+      data as {
+        comments?: {
+          nodes: LinearComment[];
+          pageInfo?: { hasNextPage?: boolean; endCursor?: string };
+        };
+      }
+    )?.comments;
+    if (!conn?.nodes) break;
+    all.push(...conn.nodes);
+    if (!conn.pageInfo?.hasNextPage) break;
+    after = conn.pageInfo?.endCursor ?? null;
+  } while (after !== null);
+  return all;
+}
+
 async function fetchLinearData(
   windowStart: Date,
   windowEnd: Date,
@@ -226,6 +279,7 @@ async function fetchLinearData(
       completedIssues: [],
       workedOnIssues: [],
       createdIssues: [],
+      commentedIssues: [],
       userName: null,
     };
 
@@ -240,22 +294,28 @@ async function fetchLinearData(
     const userName =
       (userData as { viewer?: { name?: string } })?.viewer?.name ?? null;
 
-    const [completedIssues, rawWorkedOn, createdIssues] = await Promise.all([
-      fetchAllLinearIssues(headers, LINEAR_COMPLETED_QUERY, {
-        assigneeId: userId,
-        completedAfter: windowStartISO,
-        completedBefore: windowEndISO,
-      }),
-      fetchAllLinearIssues(headers, LINEAR_WORKED_ON_QUERY, {
-        assigneeId: userId,
-        updatedAfter: windowStartISO,
-      }),
-      fetchAllLinearIssues(headers, LINEAR_CREATED_QUERY, {
-        creatorId: userId,
-        createdAfter: windowStartISO,
-        createdBefore: windowEndISO,
-      }),
-    ]);
+    const [completedIssues, rawWorkedOn, createdIssues, rawComments] =
+      await Promise.all([
+        fetchAllLinearIssues(headers, LINEAR_COMPLETED_QUERY, {
+          assigneeId: userId,
+          completedAfter: windowStartISO,
+          completedBefore: windowEndISO,
+        }),
+        fetchAllLinearIssues(headers, LINEAR_WORKED_ON_QUERY, {
+          assigneeId: userId,
+          updatedAfter: windowStartISO,
+        }),
+        fetchAllLinearIssues(headers, LINEAR_CREATED_QUERY, {
+          creatorId: userId,
+          createdAfter: windowStartISO,
+          createdBefore: windowEndISO,
+        }),
+        fetchAllLinearComments(headers, LINEAR_COMMENTS_QUERY, {
+          userId,
+          createdAfter: windowStartISO,
+          createdBefore: windowEndISO,
+        }),
+      ]);
 
     const workedOnIssues = rawWorkedOn.filter((issue) => {
       const stateName = issue.state?.name ?? "";
@@ -271,12 +331,35 @@ async function fetchLinearData(
       return false;
     });
 
-    return { completedIssues, workedOnIssues, createdIssues, userName };
+    const seenIssueIds = new Set<string>();
+    const commentedIssues = rawComments
+      .filter((c) => {
+        const issueId = c.issue?.id;
+        if (!issueId || seenIssueIds.has(issueId)) return false;
+        seenIssueIds.add(issueId);
+        return true;
+      })
+      .map((c) => ({
+        identifier: c.issue?.identifier ?? "",
+        title: c.issue?.title ?? "",
+        url: c.issue?.url ?? null,
+        project: c.issue?.project?.name ?? null,
+        state: c.issue?.state?.name ?? c.issue?.state?.type ?? null,
+      }));
+
+    return {
+      completedIssues,
+      workedOnIssues,
+      createdIssues,
+      commentedIssues,
+      userName,
+    };
   } catch {
     return {
       completedIssues: [],
       workedOnIssues: [],
       createdIssues: [],
+      commentedIssues: [],
       userName: null,
     };
   }
@@ -524,6 +607,7 @@ function buildTerminalOutput(
     completedIssues: unknown[];
     workedOnIssues: unknown[];
     createdIssues: unknown[];
+    commentedIssues: unknown[];
   },
   githubData: { prs: unknown[]; reviews: unknown[]; commits_pushed?: number },
   checkIns: CheckIn[],
@@ -541,6 +625,7 @@ function buildTerminalOutput(
   out += `  • Linear issues completed: ${linearData.completedIssues.length}\n`;
   out += `  • Linear issues worked on: ${linearData.workedOnIssues.length}\n`;
   out += `  • Linear issues created: ${linearData.createdIssues.length}\n`;
+  out += `  • Linear replies: ${linearData.commentedIssues.length}\n`;
   out += `  • Repos: ${repos.join(", ") || "—"}\n\n`;
 
   if (checkIns.length > 0) {
@@ -636,6 +721,7 @@ export async function runSummary(options: {
     linear_completed: linearData.completedIssues.length,
     linear_worked_on: linearData.workedOnIssues.length,
     linear_issues_created: linearData.createdIssues.length,
+    linear_comments: linearData.commentedIssues.length,
     repos,
   };
 
@@ -722,6 +808,7 @@ export async function runSummary(options: {
           state: i.state?.name ?? i.state?.type ?? null,
         })
       ),
+      commented_issues: linearData.commentedIssues,
     },
     github: {
       merged_prs: prCategories.merged.map(

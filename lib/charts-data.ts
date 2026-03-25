@@ -16,6 +16,7 @@ export interface ChartDataPoint {
   linear_completed: number;
   linear_worked_on: number;
   linear_issues_created: number;
+  linear_comments: number;
   prs_total: number;
   repos_count: number;
 }
@@ -64,6 +65,7 @@ export async function getChartsData(options?: {
         linear_completed: s.linear_completed,
         linear_worked_on: s.linear_worked_on,
         linear_issues_created: s.linear_issues_created ?? 0,
+        linear_comments: s.linear_comments ?? 0,
         prs_total: s.prs_total,
         repos_count: s.repos.length,
       };

@@ -7,6 +7,7 @@ export interface Stats {
   linear_completed: number;
   linear_worked_on: number;
   linear_issues_created: number;
+  linear_comments: number;
   repos: string[];
 }
 
@@ -28,6 +29,7 @@ export interface Payload {
     completed_issues: Array<Record<string, unknown>>;
     worked_on_issues: Array<Record<string, unknown>>;
     created_issues?: Array<Record<string, unknown>>;
+    commented_issues?: Array<Record<string, unknown>>;
   };
   github: {
     merged_prs: Array<{ title: string; url: string; repo: string | null; merged_at: string | null }>;

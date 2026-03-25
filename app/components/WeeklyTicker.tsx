@@ -2,7 +2,7 @@ import {
   CalendarBlank,
   CaretUp,
   CaretDown,
-  Minus,
+  WaveSine,
   Copy,
   Package,
   Eye,
@@ -31,12 +31,13 @@ const METRIC_KEYS = [
   "linear_completed",
   "linear_worked_on",
   "linear_issues_created",
+  "linear_comments",
 ] as const;
 
 function TrendBadge({ delta }: { delta: number }) {
   if (delta === 0)
     return (
-      <Minus
+      <WaveSine
         size={12}
         weight="bold"
         className="text-text-muted"
@@ -71,6 +72,7 @@ function formatStatsForCopy(stats: Stats): string {
     `Linear completed: ${stats.linear_completed}`,
     `Linear worked on: ${stats.linear_worked_on}`,
     `Linear issues created: ${stats.linear_issues_created}`,
+    `Linear replies: ${stats.linear_comments}`,
     `Repos: ${stats.repos.join(", ") || "—"}`,
   ];
   return parts.join(" | ");
@@ -96,6 +98,11 @@ const METRICS = [
     label: "Issues created",
     Icon: PlusCircle,
   },
+  {
+    key: "linear_comments" as const,
+    label: "Linear replies",
+    Icon: ChatCircle,
+  },
 ] as const;
 
 const GOAL_METRICS = ["prs_merged", "pr_reviews", "linear_completed"] as const;
@@ -110,8 +117,8 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
 
   const getDelta = (key: (typeof METRIC_KEYS)[number]) => {
     if (!prevStats) return null;
-    const curr = stats[key];
-    const prev = prevStats[key];
+    const curr = stats[key] ?? 0;
+    const prev = prevStats[key] ?? 0;
     return curr - prev;
   };
 
@@ -186,13 +193,11 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
                         ? `+${delta} vs last week`
                         : delta < 0
                           ? `${delta} vs last week`
-                          : "no change"
+                          : "+0 vs last week"
                     }
                   >
                     <TrendBadge delta={delta} />
-                    {delta !== 0 && (
-                      <span>{delta > 0 ? `+${delta}` : delta}</span>
-                    )}
+                    <span>{delta > 0 ? `+${delta}` : delta === 0 ? "+0" : delta}</span>
                   </span>
                 )}
                 {target != null && met && (

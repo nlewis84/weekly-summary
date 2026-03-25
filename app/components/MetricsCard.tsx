@@ -10,7 +10,7 @@ import {
   CaretRight,
   Copy,
   CaretUp,
-  Minus,
+  WaveSine,
   ChatCircle,
   GitCommit,
   PlusCircle,
@@ -30,7 +30,7 @@ interface MetricsCardProps {
 function TrendBadge({ delta }: { delta: number }) {
   if (delta === 0)
     return (
-      <Minus
+      <WaveSine
         size={12}
         weight="bold"
         className="text-text-muted"
@@ -65,6 +65,7 @@ function formatStatsForCopy(stats: Stats): string {
     `Linear completed: ${stats.linear_completed}`,
     `Linear worked on: ${stats.linear_worked_on}`,
     `Linear issues created: ${stats.linear_issues_created}`,
+    `Linear replies: ${stats.linear_comments}`,
     `Repos: ${stats.repos.join(", ") || "—"}`,
   ];
   return parts.join(" | ");
@@ -106,6 +107,12 @@ const METRICS = [
     tooltip: "Linear issues created",
     Icon: PlusCircle,
   },
+  {
+    key: "linear_comments" as const,
+    label: "Linear replies",
+    tooltip: "Linear issues commented on",
+    Icon: ChatCircle,
+  },
 ] as const;
 
 const TREND_METRICS = [
@@ -117,6 +124,7 @@ const TREND_METRICS = [
   "linear_completed",
   "linear_worked_on",
   "linear_issues_created",
+  "linear_comments",
 ] as const;
 
 const GOAL_METRICS = ["prs_merged", "pr_reviews", "linear_completed"] as const;
@@ -145,7 +153,8 @@ export function MetricsCard({
       payload.github.reviews.length > 0 ||
       payload.linear.completed_issues.length > 0 ||
       payload.linear.worked_on_issues.length > 0 ||
-      (payload.linear.created_issues?.length ?? 0) > 0);
+      (payload.linear.created_issues?.length ?? 0) > 0 ||
+      (payload.linear.commented_issues?.length ?? 0) > 0);
 
   return (
     <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:flex xl:flex-col xl:min-h-0">
@@ -168,7 +177,7 @@ export function MetricsCard({
             const tooltip = "tooltip" in rest ? (rest as { tooltip: string }).tooltip : label;
             const delta =
               prevStats && TREND_METRICS.includes(key)
-                ? stats[key] - prevStats[key]
+                ? (stats[key] ?? 0) - (prevStats[key] ?? 0)
                 : null;
             const target =
               goals && GOAL_METRICS.includes(key)
@@ -205,13 +214,11 @@ export function MetricsCard({
                           ? `+${delta} vs last week`
                           : delta < 0
                             ? `${delta} vs last week`
-                            : "no change"
+                            : "+0 vs last week"
                       }
                     >
                       <TrendBadge delta={delta} />
-                      {delta !== 0 && (
-                        <span>{delta > 0 ? `+${delta}` : delta}</span>
-                      )}
+                      <span>{delta > 0 ? `+${delta}` : delta === 0 ? "+0" : delta}</span>
                     </span>
                   )}
                   {target != null && met && (
@@ -402,6 +409,36 @@ export function MetricsCard({
                       <ul className="space-y-1">
                         {(
                           (payload!.linear.created_issues ??
+                            []) as LinearIssue[]
+                        ).map((i, idx) => (
+                          <li key={idx}>
+                            {i.url ? (
+                              <a
+                                href={i.url}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-primary-500 hover:underline"
+                              >
+                                {i.identifier} {i.title}
+                              </a>
+                            ) : (
+                              <span>
+                                {i.identifier} {i.title}
+                              </span>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {(payload!.linear.commented_issues?.length ?? 0) > 0 && (
+                    <div>
+                      <h3 className="font-medium text-text-muted mb-2">
+                        Linear replies
+                      </h3>
+                      <ul className="space-y-1">
+                        {(
+                          (payload!.linear.commented_issues ??
                             []) as LinearIssue[]
                         ).map((i, idx) => (
                           <li key={idx}>
