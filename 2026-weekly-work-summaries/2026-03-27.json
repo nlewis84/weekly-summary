@@ -1,0 +1,482 @@
+{
+  "meta": {
+    "generated_at": "2026-03-27T21:39:19.436Z",
+    "window_start": "2026-03-21T05:00:00.000Z",
+    "window_end": "2026-03-28T04:59:59.999Z",
+    "week_ending": "2026-03-27",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 12,
+    "prs_total": 25,
+    "pr_reviews": 13,
+    "pr_comments": 22,
+    "commits_pushed": 14,
+    "linear_completed": 6,
+    "linear_worked_on": 6,
+    "linear_issues_created": 4,
+    "linear_comments": 18,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-shovel",
+      "git-for-sql"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-8013",
+        "title": "Update \"Manage My Giving\" Button Link in Recurring Gift Confirmation Emails",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-8013/update-manage-my-giving-button-link-in-recurring-gift-confirmation",
+        "completedAt": "2026-03-26T21:32:41.744Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7758",
+        "title": "Revert: giving-alerts-dashboard app (HTTP Basic Auth)",
+        "project": "Audit Admin Giving Reports for Exceptions",
+        "url": "https://linear.app/differential/issue/APO-7758/revert-giving-alerts-dashboard-app-http-basic-auth",
+        "completedAt": "2026-03-26T13:11:47.571Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7726",
+        "title": "Auth Handoff Slow when going to Web",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7726/auth-handoff-slow-when-going-to-web",
+        "completedAt": "2026-03-23T14:07:04.121Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7718",
+        "title": "Do not select a payment method by default on payment screen",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7718/do-not-select-a-payment-method-by-default-on-payment-screen",
+        "completedAt": "2026-03-23T14:07:01.909Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7716",
+        "title": "Change text/behavior on \"Give Again\" button to \"Done\"",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7716/change-textbehavior-on-give-again-button-to-done",
+        "completedAt": "2026-03-23T14:07:01.505Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7349",
+        "title": "User Signing Up for a New Profile but Already has a Profile Needs to be Handled Better",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7349/user-signing-up-for-a-new-profile-but-already-has-a-profile-needs-to",
+        "completedAt": "2026-03-23T14:07:02.356Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-8013",
+        "title": "Update \"Manage My Giving\" Button Link in Recurring Gift Confirmation Emails",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-8013/update-manage-my-giving-button-link-in-recurring-gift-confirmation",
+        "completedAt": "2026-03-26T21:32:41.744Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7758",
+        "title": "Revert: giving-alerts-dashboard app (HTTP Basic Auth)",
+        "project": "Audit Admin Giving Reports for Exceptions",
+        "url": "https://linear.app/differential/issue/APO-7758/revert-giving-alerts-dashboard-app-http-basic-auth",
+        "completedAt": "2026-03-26T13:11:47.571Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7726",
+        "title": "Auth Handoff Slow when going to Web",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7726/auth-handoff-slow-when-going-to-web",
+        "completedAt": "2026-03-23T14:07:04.121Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7718",
+        "title": "Do not select a payment method by default on payment screen",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7718/do-not-select-a-payment-method-by-default-on-payment-screen",
+        "completedAt": "2026-03-23T14:07:01.909Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7716",
+        "title": "Change text/behavior on \"Give Again\" button to \"Done\"",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7716/change-textbehavior-on-give-again-button-to-done",
+        "completedAt": "2026-03-23T14:07:01.505Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7349",
+        "title": "User Signing Up for a New Profile but Already has a Profile Needs to be Handled Better",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7349/user-signing-up-for-a-new-profile-but-already-has-a-profile-needs-to",
+        "completedAt": "2026-03-23T14:07:02.356Z",
+        "state": "Released"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-8004",
+        "title": "Bring back ability to edit payment method on recurring giving in web",
+        "project": "Migration (Admin + Donor UX)",
+        "url": "https://linear.app/differential/issue/APO-8004/bring-back-ability-to-edit-payment-method-on-recurring-giving-in-web",
+        "createdAt": "2026-03-26T13:39:14.204Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7940",
+        "title": "/give has too much padding/extra space on web",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7940/give-has-too-much-paddingextra-space-on-web",
+        "createdAt": "2026-03-23T22:43:23.697Z",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-7928",
+        "title": "Focus ring inconsistencies",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7928/focus-ring-inconsistencies",
+        "createdAt": "2026-03-23T19:52:58.094Z",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-7912",
+        "title": "Investigate why having Saved Payment Methods makes the Stripe Payment Method component on /payment load in much slower",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7912/investigate-why-having-saved-payment-methods-makes-the-stripe-payment",
+        "createdAt": "2026-03-23T14:21:02.500Z",
+        "state": "Ready for Release"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-7949",
+        "title": "Adjust Rock Sync to Pass $0 for Fees When Gross Settlement Is Enabled",
+        "url": "https://linear.app/differential/issue/APO-7949/adjust-rock-sync-to-pass-dollar0-for-fees-when-gross-settlement-is",
+        "project": "Stripe Gross Settlement",
+        "state": "Ready for QA"
+      },
+      {
+        "identifier": "APO-6862",
+        "title": "Update confirmation receipt styles & language to be more consistent with Donation Receipt email",
+        "url": "https://linear.app/differential/issue/APO-6862/update-confirmation-receipt-styles-and-language-to-be-more-consistent",
+        "project": "Web Giving",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-7970",
+        "title": "Frequency options display incorrectly",
+        "url": "https://linear.app/differential/issue/APO-7970/frequency-options-display-incorrectly",
+        "project": "Web Giving",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-6612",
+        "title": "Update how we redirecting to PushPay",
+        "url": "https://linear.app/differential/issue/APO-6612/update-how-we-redirecting-to-pushpay",
+        "project": "Web Giving",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-7928",
+        "title": "Focus ring inconsistencies",
+        "url": "https://linear.app/differential/issue/APO-7928/focus-ring-inconsistencies",
+        "project": "Web Giving",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-7912",
+        "title": "Investigate why having Saved Payment Methods makes the Stripe Payment Method component on /payment load in much slower",
+        "url": "https://linear.app/differential/issue/APO-7912/investigate-why-having-saved-payment-methods-makes-the-stripe-payment",
+        "project": "Web Giving",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8006",
+        "title": "Update Manage My Giving URL in Donation Emails",
+        "url": "https://linear.app/differential/issue/APO-8006/update-manage-my-giving-url-in-donation-emails",
+        "project": null,
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-8013",
+        "title": "Update \"Manage My Giving\" Button Link in Recurring Gift Confirmation Emails",
+        "url": "https://linear.app/differential/issue/APO-8013/update-manage-my-giving-button-link-in-recurring-gift-confirmation",
+        "project": "Web Giving",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7924",
+        "title": "Manually Entered Bank Info - ACH giving notifications",
+        "url": "https://linear.app/differential/issue/APO-7924/manually-entered-bank-info-ach-giving-notifications",
+        "project": "Web Giving",
+        "state": "Needs Review"
+      },
+      {
+        "identifier": "APO-7972",
+        "title": "Unlisted YT videos fail to load in Studio C content items only in the app",
+        "url": "https://linear.app/differential/issue/APO-7972/unlisted-yt-videos-fail-to-load-in-studio-c-content-items-only-in-the",
+        "project": null,
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-7968",
+        "title": "(NorthCoast) (admin) Vimeo URLs no longer save (blocked by URL validation - only allows YouTube or direct HLS .m3u8)",
+        "url": "https://linear.app/differential/issue/APO-7968/northcoast-admin-vimeo-urls-no-longer-save-blocked-by-url-validation",
+        "project": null,
+        "state": "Ready for QA"
+      },
+      {
+        "identifier": "APO-7984",
+        "title": "Hide Ability to Edit Payment Method on Scheduled Gift",
+        "url": "https://linear.app/differential/issue/APO-7984/hide-ability-to-edit-payment-method-on-scheduled-gift",
+        "project": "Migration (Admin + Donor UX)",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-7758",
+        "title": "Revert: giving-alerts-dashboard app (HTTP Basic Auth)",
+        "url": "https://linear.app/differential/issue/APO-7758/revert-giving-alerts-dashboard-app-http-basic-auth",
+        "project": "Audit Admin Giving Reports for Exceptions",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7973",
+        "title": "Donor UX - updating payment methods",
+        "url": "https://linear.app/differential/issue/APO-7973/donor-ux-updating-payment-methods",
+        "project": "Migration (Admin + Donor UX)",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-7072",
+        "title": "Giving Embed Admin UI",
+        "url": "https://linear.app/differential/issue/APO-7072/giving-embed-admin-ui",
+        "project": "Giving Embed v2",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-7929",
+        "title": "Manage Recuring Giving (Cancel only)",
+        "url": "https://linear.app/differential/issue/APO-7929/manage-recuring-giving-cancel-only",
+        "project": "Editing Recurring Gifts",
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-7918",
+        "title": "Processing fees appear to be coming over into Rock again",
+        "url": "https://linear.app/differential/issue/APO-7918/processing-fees-appear-to-be-coming-over-into-rock-again",
+        "project": "Web Giving",
+        "state": "Ready for QA"
+      },
+      {
+        "identifier": "APO-7914",
+        "title": "Shortlink fails and GitHub commits do not send",
+        "url": "https://linear.app/differential/issue/APO-7914/shortlink-fails-and-github-commits-do-not-send",
+        "project": null,
+        "state": "Released"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat: feature flagged email for manual ach verification",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3059",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-26T19:36:01Z"
+      },
+      {
+        "title": "feat: add Vimeo support to media URL validation",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3057",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-26T14:28:08Z"
+      },
+      {
+        "title": "chore: set dark color scheme on canvas select",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3053",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-25T20:16:36Z"
+      },
+      {
+        "title": "refactor: adjust to utilize people_merge_records for suggested_follows",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2716",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-03-25T21:07:25Z"
+      },
+      {
+        "title": "feat: pass zero application fee to Rock when STRIPE.FEE_SETTLEMENT is gross",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2693",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-03-24T19:19:19Z"
+      },
+      {
+        "title": "chore: use hook to target styles better",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3041",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-24T14:18:47Z"
+      },
+      {
+        "title": "feat: add focus ring styles to buttons and links",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3038",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-24T14:03:10Z"
+      },
+      {
+        "title": "chore: parallelize some stripe api calls",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2692",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-03-23T23:26:05Z"
+      },
+      {
+        "title": "chore: always show cents on giving history",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3035",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-23T14:20:48Z"
+      },
+      {
+        "title": "fix: strip non-digits from phone field in payment form",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3033",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-23T14:03:42Z"
+      },
+      {
+        "title": "refactor: redesign recurring gift confirmation email template to match Donation Receipt email template",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3023",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-23T14:03:26Z"
+      },
+      {
+        "title": "Revert \"Revert \"chore: add source \"WEB\" to createOrUpdateGiveIntent calls\"\"",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3014",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-23T15:51:45Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "chore: added test coverage to web auth pages",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3061",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat: add status filter to transaction table",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3054",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat: add payment intent requires action event handling",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2722",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "chore: first pass at updating user facing giving embed setup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3052",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat: show the embed version on the page with a badge",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3051",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "chore: restrict access to only people who are in ApollosProject github org",
+        "url": "https://github.com/ApollosProject/git-for-sql/pull/7",
+        "repo": "git-for-sql",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Send recurring cancellation emails from admin Stripe webhooks",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3062"
+      },
+      {
+        "title": "fix: improve press and hover effects on recurring charges and charges",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3058"
+      },
+      {
+        "title": "temporarily disable editing payment method on recurring giving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3055"
+      },
+      {
+        "title": "Drop finance reconciliation tables via new migration",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2700"
+      },
+      {
+        "title": "Revert financial reconciliation system with tests",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2699"
+      },
+      {
+        "title": "Revert reconciliation job queue and cursor tracking",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2698"
+      },
+      {
+        "title": "Revert reconciliation amount normalization and canonical key",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2697"
+      },
+      {
+        "title": "Revert move reconciliation utilities to util directory",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2696"
+      },
+      {
+        "title": "Remove in_flight column from finance_reconciliation_items via new migration",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2695"
+      },
+      {
+        "title": "Revert grace window and in-flight classification",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2694"
+      },
+      {
+        "title": "chore: always show cents on giving history",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3035"
+      },
+      {
+        "title": "Add SQL migration to clean stale IDs from SUGGESTED_FOLLOWS config",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2680"
+      },
+      {
+        "title": "Limit root loader data to prevent leaking store credentials and TIPTAP tokens",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2980"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": ", March 23\nMerged 4 Web Giving PRs: cents on giving history; strip non-digits from phone on payment form; recurring gift confirmation email aligned with Donation Receipt; re-applied WEB source on createOrUpdateGiveIntent (revert of revert).\nCluster: PR to speed up Saved Payment Method loading on web giving (parallelize some Stripe calls).\nOpened 2 Web Giving polish PRs (hook for targeting styles; focus rings on buttons/links).\ngit-for-sql: PR to restrict access to ApollosProject org members.\nA couple of PR reviews; a lot of Linear cleanup/questions.\nSlack with Shahbano on Web Giving emails + notes on a Figma board for next week.\nTooling friction: Cursor / Claude account + API token setup.\nRepos: apollos-admin, apollos-cluster, git-for-sql\nLinear done (among others): APO-7726, APO-7718, APO-7716, APO-7349"
+    },
+    {
+      "day": "Tuesday",
+      "content": ", March 24\nDebugging: gross vs net fee settlement in prod/staging; manual ACH verification in staging/local (ahead of prod).\nHelped Casey and Matt with Web Embeds.\nPR review huddle with Dylan and Vincent (large set of reconciliation-related reverts/migrations reviewed).\nSynced with Michael and Vincent on Admin seeds and Suggested Follows (suggestion PR submitted).\nMerged: pass $0 application fee to Rock when STRIPE.FEE_SETTLEMENT is gross (apollos-cluster); style-targeting hook + focus rings (apollos-admin).\nRepos: apollos-admin, apollos-cluster"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", March 25\nTechnical derisking: more statuses on Admin /transactions + matching cluster work; design shaping for surfacing v2 Web Embed in Admin.\nMerged: dark color scheme on canvas select (apollos-admin); Suggested Follows refactor using people_merge_records (apollos-cluster).\nIn flight: transaction status filter; payment intent requires_action handling; first pass user-facing giving embed setup; embed version badge for CS clarity.\nReviews/tweaks with Michael and Vincent on SQL / Suggested Follows; reviewed SQL migration cleaning stale IDs from Suggested Follows config.\nChats with Jordan and Shahbano on manual ACH / CRDS testing; updated personal tracker for Linear replies.\nRepos: apollos-admin, apollos-cluster, apollos-shovel"
+    },
+    {
+      "day": "Thursday",
+      "content": ", March 26\nArchived Recon Dashboard repo; shut down Vercel staging (no active config).\nCrossroads: verified transactions for Karen.\nMerged: feature-flagged manual ACH / microdeposit verification email (local/staging) so donors can self-verify; Vimeo support in Admin media URL validation.\nMerged / advanced: Admin Web Embed version visibility (badge) + ongoing giving embed setup pass.\nPR reviews (recurring charges press/hover; temporarily disable editing payment method on recurring giving).\nSlack: Dylan (Setup Intents), Shahbano (giving emails); Linear follow-ups.\nLinear: e.g. done APO-8013, APO-7758; created APO-8004 (bring back edit payment method on recurring giving on web).\nRepo: apollos-admin"
+    },
+    {
+      "day": "Friday",
+      "content": ", March 27\n504s in staging with Tyler and Vincent.\nPlaywright CI improvements for admin.\nQA with Tyler; more test coverage on web auth routes (open PR).\nSync Dylan & Shahbano.\nCancel recurring donation email flow with Michael and Vincent (review on sending from Admin Stripe webhooks).\nLinear replies across fee settlement (Rock), receipt copy, frequency UI, PushPay redirect, focus rings, saved PM load time, manage-giving URLs, etc.\nRepo: apollos-admin"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 12\n  • PR reviews: 13\n  • Commits pushed: 14\n  • Linear issues completed: 6\n  • Linear issues worked on: 6\n  • Linear issues created: 4\n  • Linear replies: 18\n  • Repos: apollos-admin, apollos-cluster, apollos-shovel, git-for-sql\n\n📝 Check-ins:\n\n  Monday: , March 23\nMerged 4 Web Giving PRs: cents on giving history; strip non-digits fr...\n  Tuesday: , March 24\nDebugging: gross vs net fee settlement in prod/staging; manual ACH ve...\n  Wednesday: , March 25\nTechnical derisking: more statuses on Admin /transactions + matching ...\n  Thursday: , March 26\nArchived Recon Dashboard repo; shut down Vercel staging (no active co...\n  Friday: , March 27\n504s in staging with Tyler and Vincent.\nPlaywright CI improvements fo...\n",
+  "formatted_output": null
+}
