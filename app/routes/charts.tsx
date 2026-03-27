@@ -199,6 +199,7 @@ export default function Charts() {
     "Linear completed": d.linear_completed,
     "Linear worked on": d.linear_worked_on,
     "Linear issues created": d.linear_issues_created ?? 0,
+    "Linear comments": d.linear_comments ?? 0,
     "PRs total": d.prs_total,
     Repos: d.repos_count,
   }));
@@ -256,6 +257,7 @@ export default function Charts() {
         "Linear completed",
         "Linear worked on",
         "Linear issues created",
+        "Linear comments",
       ];
       const rows = metricsData.map((d) =>
         [
@@ -267,6 +269,7 @@ export default function Charts() {
           d["Linear completed"],
           d["Linear worked on"],
           d["Linear issues created"] ?? 0,
+          d["Linear comments"] ?? 0,
         ].join(",")
       );
       const csv = [headers.join(","), ...rows].join("\n");

@@ -37,8 +37,9 @@ const GITHUB_METRICS = [
 
 const LINEAR_METRICS = [
   { key: "Linear completed", color: "var(--chart-5)" },
-  { key: "Linear worked on", color: "var(--chart-6)" },
   { key: "Linear issues created", color: "var(--chart-7)" },
+  { key: "Linear comments", color: "var(--chart-8)" },
+  { key: "Linear worked on", color: "var(--chart-6)" },
 ] as const;
 
 const REPO_COLORS = [
@@ -64,6 +65,7 @@ interface ChartsContentProps {
     linear_completed: number;
     linear_worked_on: number;
     linear_issues_created: number;
+    linear_comments: number;
     prs_total: number;
     repos_count: number;
   }[];
@@ -90,6 +92,7 @@ export function ChartsContent({
     "Linear completed": d.linear_completed,
     "Linear worked on": d.linear_worked_on,
     "Linear issues created": d.linear_issues_created,
+    "Linear comments": d.linear_comments,
   }));
 
   const topRepos = repoActivity.slice(0, 6);
@@ -171,7 +174,7 @@ export function ChartsContent({
           >
             Linear
           </h4>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {LINEAR_METRICS.map(({ key, color }) => (
               <div
                 key={key}
