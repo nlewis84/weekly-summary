@@ -143,7 +143,7 @@ export function FullSummaryForm({
               {lastBuilt.weekEnding && (
                 <span className="ml-1">
                   (week ending{" "}
-                  {new Date(lastBuilt.weekEnding).toLocaleDateString("en-US", {
+                  {new Date(lastBuilt.weekEnding + "T12:00:00").toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
                     year: "numeric",
@@ -173,7 +173,7 @@ export function FullSummaryForm({
             {lastBuilt.weekEnding && (
               <span className="ml-1">
                 (week ending{" "}
-                {new Date(lastBuilt.weekEnding).toLocaleDateString("en-US", {
+                {new Date(lastBuilt.weekEnding + "T12:00:00").toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
                   year: "numeric",

@@ -69,7 +69,7 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
 }
 
 function formatWeekLabel(weekEnding: string): string {
-  const d = new Date(weekEnding);
+  const d = new Date(weekEnding + "T12:00:00");
   return d.toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",

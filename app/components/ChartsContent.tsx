@@ -24,7 +24,7 @@ import { MetricLineChart } from "~/components/MetricLineChart";
 import type { RepoActivity } from "../../lib/charts-data";
 
 const formatWeek = (w: string) => {
-  const d = new Date(w);
+  const d = new Date(w + "T12:00:00");
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 };
 
