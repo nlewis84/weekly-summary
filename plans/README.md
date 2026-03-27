@@ -94,6 +94,8 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [83](PLAN-83-PR-REVIEWS-ONLY-SUBMITTED-IN-WINDOW.md) | PR Reviews Only Submitted In Window | P2 | ✅ Complete |
 | [84](PLAN-84-PRS-ACTIVE-DETAILS-AND-LABEL-FIX.md) | PRs Active Details & Metric Label Truncation Fix | P2 | ✅ Complete |
 | [85](PLAN-85-CARD-EXPAND-ISOLATION-HOVER.md) | Card Expand Isolation & Build Summary Hover | P2 | ✅ Complete |
+| [86](PLAN-86-CHART-STYLE-REFRESH.md) | Chart Style Refresh | P2 | ✅ Complete |
+| [87](PLAN-87-DAILY-SNAPSHOT-CAPTURE.md) | Daily Snapshot Capture & Weekly Summary Integration | P0 | Draft |
 
 ## Recommended Next (by priority)
 

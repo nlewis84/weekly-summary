@@ -5,6 +5,7 @@ import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
 import { getCachedRunSummary } from "../../lib/summary";
 import { fetchWeeklySummary } from "../../lib/github-fetch";
+import { listDailySnapshots } from "../../lib/daily-snapshot";
 import { TodaySection } from "~/components/TodaySection";
 import { WeeklySection } from "~/components/WeeklySection";
 import { FullSummaryFormContainer } from "~/components/FullSummaryFormContainer";
@@ -24,6 +25,7 @@ interface IndexLoaderData {
   today: { payload?: Payload; error?: string };
   yesterday: { payload?: Payload; error?: string };
   weekly: { payload?: Payload; prevPayload?: Payload | null; error?: string };
+  capturedDates: string[];
 }
 
 export async function loader({ request }: LoaderFunctionArgs) {
@@ -31,7 +33,9 @@ export async function loader({ request }: LoaderFunctionArgs) {
     return data(
       {
         today: { error: "Method not allowed" },
+        yesterday: { error: "Method not allowed" },
         weekly: { error: "Method not allowed" },
+        capturedDates: [] as string[],
       },
       { status: 405 }
     );
@@ -98,11 +102,24 @@ export async function loader({ request }: LoaderFunctionArgs) {
     runWeekly(),
   ]);
 
-  return data({ today, yesterday, weekly } satisfies IndexLoaderData);
+  let capturedDates: string[] = [];
+  try {
+    const weekEnding =
+      weekly && "payload" in weekly
+        ? weekly.payload?.meta.week_ending
+        : undefined;
+    if (weekEnding) {
+      capturedDates = listDailySnapshots(weekEnding).map((s) => s.date);
+    }
+  } catch {
+    // Snapshot listing is best-effort
+  }
+
+  return data({ today, yesterday, weekly, capturedDates } satisfies IndexLoaderData);
 }
 
 export default function Index() {
-  const { today, yesterday, weekly } = useLoaderData<typeof loader>();
+  const { today, yesterday, weekly, capturedDates } = useLoaderData<typeof loader>();
   const [viewMode, setViewMode] = useState<ViewMode>("today");
   const navigation = useNavigation();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -215,6 +232,7 @@ export default function Index() {
               refreshIntervalLabel={label}
               title="Today"
               goals={goals}
+              capturedDates={capturedDates}
             />
           )}
           {viewMode === "yesterday" && (
@@ -226,6 +244,7 @@ export default function Index() {
               refreshIntervalLabel={label}
               title="Yesterday"
               goals={goals}
+              capturedDates={capturedDates}
             />
           )}
         </div>

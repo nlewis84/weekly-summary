@@ -1,11 +1,17 @@
 /**
  * Reusable line chart for a single metric over time (week or month).
  */
-import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
+import {
+  CartesianGrid,
+  Line,
+  LineChart,
+  ReferenceLine,
+  XAxis,
+  YAxis,
+} from "recharts";
 import {
   ChartContainer,
   ChartTooltip,
-  ChartTooltipContent,
   type ChartConfig,
 } from "~/components/ui/chart";
 
@@ -26,6 +32,12 @@ export function MetricLineChart({
 }: MetricLineChartProps) {
   const chartData = data.map((d) => ({ [xKey]: d.x, [metricKey]: d.value }));
   const config = { [metricKey]: { label: metricKey, color } } satisfies ChartConfig;
+
+  const avg =
+    data.length > 0
+      ? data.reduce((sum, d) => sum + d.value, 0) / data.length
+      : 0;
+  const avgDisplay = Number.isInteger(avg) ? avg.toString() : avg.toFixed(1);
 
   return (
     <div className="h-56 min-w-0" role="img" aria-label={ariaLabel}>
@@ -49,13 +61,34 @@ export function MetricLineChart({
             tickMargin={8}
             width={36}
           />
-          <ChartTooltip content={<ChartTooltipContent />} />
+          <ChartTooltip
+            content={({ active, payload, label }) => {
+              if (!active || !payload?.length) return null;
+              const value = payload[0].value as number;
+              return (
+                <div className="rounded-lg border border-(--color-border) bg-surface px-3 py-2 shadow-md text-center">
+                  <p className="text-xs text-text-muted mb-1">{label}</p>
+                  <p className="text-base font-semibold text-(--color-text)">{value}</p>
+                  <p className="text-xs text-text-muted mt-0.5">avg {avgDisplay}</p>
+                </div>
+              );
+            }}
+          />
+          {avg > 0 && (
+            <ReferenceLine
+              y={avg}
+              stroke="var(--color-text-muted)"
+              strokeDasharray="6 4"
+              strokeWidth={1}
+              strokeOpacity={0.4}
+            />
+          )}
           <Line
             dataKey={metricKey}
             type="monotone"
             stroke={color}
-            strokeWidth={2}
-            dot={{ fill: color, r: 3 }}
+            strokeWidth={2.5}
+            dot={false}
             activeDot={{ r: 4 }}
           />
         </LineChart>

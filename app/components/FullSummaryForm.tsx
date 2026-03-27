@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { FileText } from "phosphor-react";
+import { FileText, PushPin } from "phosphor-react";
 import { useToast } from "./Toast";
 import { LottieIcon } from "./LottieIcon";
 import { MetricsCard } from "./MetricsCard";
@@ -24,6 +24,13 @@ function readLastBuiltFromStorage(): {
   }
 }
 
+export interface SnapshotDay {
+  date: string;
+  dayName: string;
+  captured_at: string;
+  checkInText: string;
+}
+
 interface FullSummaryFormProps {
   Form: React.ComponentType<Record<string, unknown>>;
   action: string;
@@ -33,6 +40,8 @@ interface FullSummaryFormProps {
   builtAt?: string;
   weekEnding?: string;
   payload?: Payload | null;
+  snapshots?: SnapshotDay[];
+  snapshotsLoading?: boolean;
 }
 
 function formatRelativeTime(iso: string): string {
@@ -55,11 +64,22 @@ export function FullSummaryForm({
   builtAt,
   weekEnding,
   payload,
+  snapshots = [],
+  snapshotsLoading = false,
 }: FullSummaryFormProps) {
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const toast = useToast();
   const savedRef = useRef(false);
   const [isXlScreen, setIsXlScreen] = useState(false);
+  const [selectedDates, setSelectedDates] = useState<Set<string>>(new Set());
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const hiddenCheckInsRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (snapshots.length > 0) {
+      setSelectedDates(new Set(snapshots.map((s) => s.date)));
+    }
+  }, [snapshots]);
 
   const [lastBuilt, setLastBuilt] = useState<{
     builtAt: string;
@@ -183,19 +203,94 @@ export function FullSummaryForm({
             )}
           </p>
         )}
-        <Form method="post" action={action} className="space-y-4">
+        <Form
+          method="post"
+          action={action}
+          className="space-y-4"
+          onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+            const parts: string[] = [];
+            for (const snap of snapshots) {
+              if (selectedDates.has(snap.date) && snap.checkInText) {
+                parts.push(snap.checkInText);
+              }
+            }
+            const userText = textareaRef.current?.value?.trim() ?? "";
+            if (userText) parts.push(userText);
+            if (hiddenCheckInsRef.current) {
+              hiddenCheckInsRef.current.value = parts.join("\n\n");
+            }
+          }}
+        >
           <input type="hidden" name="save" value="true" />
+          <input type="hidden" name="checkIns" ref={hiddenCheckInsRef} />
+
+          {(snapshots.length > 0 || snapshotsLoading) && (
+            <div>
+              <label className="block text-sm font-medium text-text-muted mb-2">
+                <PushPin size={14} weight="fill" className="inline mr-1 -mt-0.5" />
+                Captured Days
+              </label>
+              {snapshotsLoading ? (
+                <div className="flex gap-2">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="h-8 w-16 rounded-lg bg-surface-elevated animate-pulse"
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-wrap gap-2">
+                  {snapshots.map((snap) => {
+                    const isSelected = selectedDates.has(snap.date);
+                    return (
+                      <button
+                        key={snap.date}
+                        type="button"
+                        onClick={() => {
+                          setSelectedDates((prev) => {
+                            const next = new Set(prev);
+                            if (next.has(snap.date)) {
+                              next.delete(snap.date);
+                            } else {
+                              next.add(snap.date);
+                            }
+                            return next;
+                          });
+                        }}
+                        title={`${snap.dayName} ${snap.date}`}
+                        className={`px-3 py-1.5 text-sm font-medium rounded-lg border transition-colors ${
+                          isSelected
+                            ? "bg-primary-600 text-white border-primary-600 hover:bg-primary-500"
+                            : "bg-surface-elevated text-text-muted border-(--color-border) hover:border-primary-500 hover:text-(--color-text)"
+                        }`}
+                      >
+                        {snap.dayName.slice(0, 3)}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+              {snapshots.length > 0 && (
+                <p className="text-xs text-text-muted mt-1.5">
+                  {selectedDates.size} of {snapshots.length} day{snapshots.length === 1 ? "" : "s"} selected
+                </p>
+              )}
+            </div>
+          )}
+
           <div>
             <label
-              htmlFor="checkIns"
+              htmlFor="additionalCheckIns"
               className="block text-sm font-medium text-text-muted mb-2"
             >
-              Check-ins
+              {snapshots.length > 0 ? "Additional notes" : "Check-ins"}
             </label>
             <textarea
-              id="checkIns"
-              name="checkIns"
+              id="additionalCheckIns"
+              ref={textareaRef}
               rows={isXlScreen ? 5 : 6}
+              placeholder={snapshots.length > 0 ? "Optional — add extra notes or context…" : "Paste your check-in notes here…"}
               className="w-full min-h-0 max-h-48 overflow-y-auto resize-y px-3 py-2 border border-(--color-border) rounded-lg text-sm bg-surface-elevated shadow-(--shadow-skeuo-inset) focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-(--color-text)"
             />
           </div>
