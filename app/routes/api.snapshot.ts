@@ -1,7 +1,8 @@
 import { data } from "react-router";
 import type { ActionFunctionArgs } from "react-router";
 import { getCachedRunSummary } from "../../lib/summary";
-import { saveDailySnapshot } from "../../lib/daily-snapshot";
+import { formatSnapshotAsCheckIn, saveDailySnapshot } from "../../lib/daily-snapshot";
+import { isBasecampConfigured, postCheckInToBasecamp } from "../../lib/basecamp-post";
 
 export async function action({ request }: ActionFunctionArgs) {
   if (request.method !== "POST") {
@@ -11,6 +12,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
   const mode = (formData.get("mode") as string) ?? "today";
   const isYesterday = mode === "yesterday";
+  const postToBasecamp = formData.get("postToBasecamp") === "true";
 
   const dateOverride = formData.get("date") as string | null;
 
@@ -26,7 +28,17 @@ export async function action({ request }: ActionFunctionArgs) {
       dateOverride || result.payload.meta.window_start.slice(0, 10);
     saveDailySnapshot(snapshotDate, result.payload);
 
-    return data({ ok: true, date: snapshotDate });
+    let basecampPosted = false;
+    let basecampError: string | undefined;
+
+    if (postToBasecamp && isBasecampConfigured()) {
+      const checkInText = formatSnapshotAsCheckIn(snapshotDate, result.payload);
+      const bcResult = await postCheckInToBasecamp(snapshotDate, checkInText);
+      basecampPosted = bcResult.ok;
+      basecampError = bcResult.error;
+    }
+
+    return data({ ok: true, date: snapshotDate, basecampPosted, basecampError });
   } catch (err) {
     console.error("Snapshot capture error:", err);
     return data({ error: (err as Error).message }, { status: 500 });

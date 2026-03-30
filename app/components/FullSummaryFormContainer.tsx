@@ -9,11 +9,19 @@ interface SnapshotsResponse {
   error?: string;
 }
 
-export function FullSummaryFormContainer() {
+interface FullSummaryFormContainerProps {
+  basecampConfigured?: boolean;
+}
+
+export function FullSummaryFormContainer({
+  basecampConfigured = false,
+}: FullSummaryFormContainerProps) {
   const fetcher = useFetcher<{
     payload?: Payload;
     error?: string;
     saved?: boolean;
+    basecampPosted?: boolean;
+    basecampError?: string;
     builtAt?: string;
     weekEnding?: string;
   }>();
@@ -60,11 +68,14 @@ export function FullSummaryFormContainer() {
       isSubmitting={fetcher.state !== "idle"}
       error={fetcher.data?.error}
       saved={fetcher.data?.saved}
+      basecampPosted={fetcher.data?.basecampPosted}
+      basecampError={fetcher.data?.basecampError}
       builtAt={fetcher.data?.builtAt}
       weekEnding={fetcher.data?.weekEnding}
       payload={fetcher.data?.payload ?? null}
       snapshots={snapshots}
       snapshotsLoading={snapshotsLoading}
+      basecampConfigured={basecampConfigured}
     />
     </div>
   );

@@ -96,6 +96,7 @@ Plans for improving the weekly-summary app. Each plan is a standalone document. 
 | [85](PLAN-85-CARD-EXPAND-ISOLATION-HOVER.md) | Card Expand Isolation & Build Summary Hover | P2 | ✅ Complete |
 | [86](PLAN-86-CHART-STYLE-REFRESH.md) | Chart Style Refresh | P2 | ✅ Complete |
 | [87](PLAN-87-DAILY-SNAPSHOT-CAPTURE.md) | Daily Snapshot Capture & Weekly Summary Integration | P0 | Draft |
+| [88](PLAN-88-BASECAMP-CLI-INTEGRATION.md) | Basecamp CLI Integration | P1 | ✅ Complete |
 
 ## Recommended Next (by priority)
 

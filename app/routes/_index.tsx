@@ -6,6 +6,7 @@ import { data } from "react-router";
 import { getCachedRunSummary } from "../../lib/summary";
 import { fetchWeeklySummary } from "../../lib/github-fetch";
 import { listDailySnapshots } from "../../lib/daily-snapshot";
+import { isBasecampConfigured } from "../../lib/basecamp-post";
 import { TodaySection } from "~/components/TodaySection";
 import { WeeklySection } from "~/components/WeeklySection";
 import { FullSummaryFormContainer } from "~/components/FullSummaryFormContainer";
@@ -26,6 +27,7 @@ interface IndexLoaderData {
   yesterday: { payload?: Payload; error?: string };
   weekly: { payload?: Payload; prevPayload?: Payload | null; error?: string };
   capturedDates: string[];
+  basecampConfigured: boolean;
 }
 
 export async function loader({ request }: LoaderFunctionArgs) {
@@ -36,6 +38,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
         yesterday: { error: "Method not allowed" },
         weekly: { error: "Method not allowed" },
         capturedDates: [] as string[],
+        basecampConfigured: false,
       },
       { status: 405 }
     );
@@ -115,11 +118,18 @@ export async function loader({ request }: LoaderFunctionArgs) {
     // Snapshot listing is best-effort
   }
 
-  return data({ today, yesterday, weekly, capturedDates } satisfies IndexLoaderData);
+  return data({
+    today,
+    yesterday,
+    weekly,
+    capturedDates,
+    basecampConfigured: isBasecampConfigured(),
+  } satisfies IndexLoaderData);
 }
 
 export default function Index() {
-  const { today, yesterday, weekly, capturedDates } = useLoaderData<typeof loader>();
+  const { today, yesterday, weekly, capturedDates, basecampConfigured } =
+    useLoaderData<typeof loader>();
   const [viewMode, setViewMode] = useState<ViewMode>("today");
   const navigation = useNavigation();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -233,6 +243,7 @@ export default function Index() {
               title="Today"
               goals={goals}
               capturedDates={capturedDates}
+              basecampConfigured={basecampConfigured}
             />
           )}
           {viewMode === "yesterday" && (
@@ -245,6 +256,7 @@ export default function Index() {
               title="Yesterday"
               goals={goals}
               capturedDates={capturedDates}
+              basecampConfigured={basecampConfigured}
             />
           )}
         </div>
@@ -253,7 +265,7 @@ export default function Index() {
           id="build-summary"
           className="xl:sticky xl:top-6 xl:flex xl:flex-col xl:items-start xl:min-h-0"
         >
-          <FullSummaryFormContainer />
+          <FullSummaryFormContainer basecampConfigured={basecampConfigured} />
         </div>
 
         <div className="xl:flex xl:flex-col xl:min-h-0">

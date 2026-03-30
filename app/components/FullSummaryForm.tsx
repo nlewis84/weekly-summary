@@ -37,11 +37,14 @@ interface FullSummaryFormProps {
   isSubmitting: boolean;
   error?: string;
   saved?: boolean;
+  basecampPosted?: boolean;
+  basecampError?: string;
   builtAt?: string;
   weekEnding?: string;
   payload?: Payload | null;
   snapshots?: SnapshotDay[];
   snapshotsLoading?: boolean;
+  basecampConfigured?: boolean;
 }
 
 function formatRelativeTime(iso: string): string {
@@ -61,11 +64,14 @@ export function FullSummaryForm({
   isSubmitting,
   error,
   saved,
+  basecampPosted,
+  basecampError,
   builtAt,
   weekEnding,
   payload,
   snapshots = [],
   snapshotsLoading = false,
+  basecampConfigured = false,
 }: FullSummaryFormProps) {
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const toast = useToast();
@@ -74,6 +80,7 @@ export function FullSummaryForm({
   const [selectedDates, setSelectedDates] = useState<Set<string>>(new Set());
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const hiddenCheckInsRef = useRef<HTMLInputElement>(null);
+  const [postToBasecamp, setPostToBasecamp] = useState(false);
 
   useEffect(() => {
     if (snapshots.length > 0) {
@@ -98,7 +105,10 @@ export function FullSummaryForm({
   useEffect(() => {
     if (saved && builtAt && weekEnding && !savedRef.current) {
       savedRef.current = true;
-      toast("Summary saved to repository");
+      let msg = "Summary saved to repository";
+      if (basecampPosted) msg += " + posted to Basecamp";
+      else if (basecampError) msg += " (Basecamp post failed)";
+      toast(msg);
       const entry = { builtAt, weekEnding };
       setLastBuilt(entry);
       setIsFormExpanded(false);
@@ -109,7 +119,7 @@ export function FullSummaryForm({
       }
     }
     if (!saved) savedRef.current = false;
-  }, [saved, builtAt, weekEnding, toast]);
+  }, [saved, builtAt, weekEnding, basecampPosted, basecampError, toast]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -294,19 +304,43 @@ export function FullSummaryForm({
               className="w-full min-h-0 max-h-48 overflow-y-auto resize-y px-3 py-2 border border-(--color-border) rounded-lg text-sm bg-surface-elevated shadow-(--shadow-skeuo-inset) focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors text-(--color-text)"
             />
           </div>
-          <div className="flex items-center gap-2">
-            <input
-              type="checkbox"
-              id="todayOnly"
-              name="todayOnly"
-              className="rounded border-(--color-border) text-primary-600 focus:ring-primary-500"
-            />
-            <label
-              htmlFor="todayOnly"
-              className="text-sm text-text-muted"
-            >
-              Today only
-            </label>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                id="todayOnly"
+                name="todayOnly"
+                className="rounded border-(--color-border) text-primary-600 focus:ring-primary-500"
+              />
+              <label
+                htmlFor="todayOnly"
+                className="text-sm text-text-muted"
+              >
+                Today only
+              </label>
+            </div>
+            {basecampConfigured && (
+              <div className="flex items-center gap-2">
+                <input
+                  type="hidden"
+                  name="postToBasecamp"
+                  value={postToBasecamp ? "true" : "false"}
+                />
+                <input
+                  type="checkbox"
+                  id="postToBasecamp"
+                  checked={postToBasecamp}
+                  onChange={(e) => setPostToBasecamp(e.target.checked)}
+                  className="rounded border-(--color-border) text-primary-600 focus:ring-primary-500"
+                />
+                <label
+                  htmlFor="postToBasecamp"
+                  className="text-sm text-text-muted"
+                >
+                  Post to Basecamp
+                </label>
+              </div>
+            )}
           </div>
           <button
             type="submit"
@@ -325,11 +359,16 @@ export function FullSummaryForm({
               <LottieIcon name="check" size={48} loop={false} />
               <div className="flex-1">
                 <p className="font-medium text-success-500">
-                  Saved to repository.
+                  Saved to repository{basecampPosted ? " + posted to Basecamp" : ""}.
                 </p>
                 <p className="text-sm text-text-muted mt-0.5">
                   Your weekly summary has been generated and committed.
                 </p>
+                {basecampError && (
+                  <p className="text-sm text-warning-500 mt-0.5">
+                    Basecamp post failed: {basecampError}
+                  </p>
+                )}
               </div>
             </div>
           </div>

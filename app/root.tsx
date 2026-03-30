@@ -162,6 +162,15 @@ export default function App() {
                   History
                 </NavLink>
                 <NavLink
+                  to="/checkins"
+                  prefetch="intent"
+                  className={({ isActive }) =>
+                    `min-h-[44px] min-w-[44px] flex items-center px-3 py-2 rounded-lg -m-1 sm:m-0 transition-colors ${isActive ? "text-primary-600 font-medium bg-surface-elevated" : "text-text-muted hover:text-primary-500 hover:bg-surface-elevated"}`
+                  }
+                >
+                  Check-ins
+                </NavLink>
+                <NavLink
                   to="/charts"
                   prefetch="intent"
                   className={({ isActive }) =>

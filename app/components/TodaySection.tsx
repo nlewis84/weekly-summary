@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFetcher } from "react-router";
 import { PushPin } from "phosphor-react";
 import { MetricsCard } from "./MetricsCard";
@@ -18,6 +18,7 @@ interface TodaySectionProps {
   title?: string;
   goals?: WeeklyGoals;
   capturedDates?: string[];
+  basecampConfigured?: boolean;
 }
 
 export function TodaySection({
@@ -29,11 +30,19 @@ export function TodaySection({
   title = "Today",
   goals,
   capturedDates = [],
+  basecampConfigured = false,
 }: TodaySectionProps) {
   const stats = payload?.stats ?? null;
-  const fetcher = useFetcher<{ ok?: boolean; date?: string; error?: string }>();
+  const fetcher = useFetcher<{
+    ok?: boolean;
+    date?: string;
+    error?: string;
+    basecampPosted?: boolean;
+    basecampError?: string;
+  }>();
   const toast = useToast();
   const toastedRef = useRef(false);
+  const [postToBasecamp, setPostToBasecamp] = useState(false);
 
   const isYesterday = title === "Yesterday";
   const captureDate = payload?.meta.window_start?.slice(0, 10) ?? "";
@@ -46,7 +55,10 @@ export function TodaySection({
     if (fetcher.data?.ok && !toastedRef.current) {
       toastedRef.current = true;
       const verb = alreadyCaptured ? "updated" : "captured";
-      toast(`${isYesterday ? "Yesterday" : "Today"}'s data ${verb}`);
+      let msg = `${isYesterday ? "Yesterday" : "Today"}'s data ${verb}`;
+      if (fetcher.data.basecampPosted) msg += " + posted to Basecamp";
+      else if (fetcher.data.basecampError) msg += " (Basecamp post failed)";
+      toast(msg);
     }
     if (fetcher.state === "submitting") {
       toastedRef.current = false;
@@ -64,7 +76,7 @@ export function TodaySection({
             </span>
           )}
           {stats && (
-            <fetcher.Form method="post" action="/api/snapshot">
+            <fetcher.Form method="post" action="/api/snapshot" className="flex items-center gap-2">
               <input
                 type="hidden"
                 name="mode"
@@ -73,6 +85,11 @@ export function TodaySection({
               {captureDate && (
                 <input type="hidden" name="date" value={captureDate} />
               )}
+              <input
+                type="hidden"
+                name="postToBasecamp"
+                value={postToBasecamp ? "true" : "false"}
+              />
               <button
                 type="submit"
                 disabled={isCapturing || !captureDate}
@@ -100,6 +117,24 @@ export function TodaySection({
                     : `Capture ${isYesterday ? "Yesterday" : "Today"}`}
               </button>
             </fetcher.Form>
+          )}
+          {basecampConfigured && stats && (
+            <button
+              type="button"
+              onClick={() => setPostToBasecamp((v) => !v)}
+              title={postToBasecamp ? "Basecamp posting enabled — click to disable" : "Post check-in to Basecamp when capturing"}
+              className={`flex items-center gap-1.5 min-h-[44px] px-3 py-2 text-sm rounded-lg transition-colors ${
+                postToBasecamp
+                  ? "text-primary-500 bg-primary-500/10 hover:bg-primary-500/15"
+                  : "text-text-muted hover:text-(--color-text) hover:bg-surface-elevated"
+              }`}
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0">
+                <path d="M8 1.5L2.5 4.5V11.5L8 14.5L13.5 11.5V4.5L8 1.5Z" stroke="currentColor" strokeWidth="1.25" strokeLinejoin="round" fill={postToBasecamp ? "currentColor" : "none"} fillOpacity={postToBasecamp ? 0.2 : 0} />
+                <circle cx="8" cy="8" r="2" fill="currentColor" />
+              </svg>
+              Basecamp
+            </button>
           )}
           <RefreshButton onClick={onRefresh} isLoading={isLoading} />
         </div>

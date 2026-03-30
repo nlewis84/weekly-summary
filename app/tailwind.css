@@ -238,3 +238,98 @@ html.light body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Basecamp check-in content */
+.checkin-content ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+.checkin-content ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+.checkin-content li {
+  margin: 0.25rem 0;
+}
+.checkin-content li + li {
+  margin-top: 0.375rem;
+}
+.checkin-content a {
+  color: var(--color-primary-500);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.checkin-content a:hover {
+  color: var(--color-primary-400);
+}
+.checkin-content .bc-mention {
+  color: var(--color-primary-400);
+  font-weight: 600;
+  text-decoration: none;
+}
+.checkin-content .bc-image-wrapper {
+  display: block;
+  margin-top: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 560px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: zoom-in;
+}
+.checkin-content .bc-image-wrapper:hover {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 1px var(--color-primary-500);
+}
+.checkin-content .bc-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background: var(--color-surface-elevated);
+  cursor: zoom-in;
+}
+.checkin-content .bc-image-caption {
+  display: block;
+  padding: 0.375rem 0.625rem;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  background: var(--color-surface-elevated);
+  border-top: 1px solid var(--color-border);
+}
+.checkin-content .bc-image-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-elevated);
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+.checkin-content .bc-image-link:hover {
+  border-color: var(--color-primary-500);
+  color: var(--color-primary-400);
+}
+.checkin-content .bc-image-link::before {
+  content: "📎";
+  font-size: 0.8em;
+}
+.checkin-content p {
+  margin: 0.25rem 0;
+}
+.checkin-content > *:first-child {
+  margin-top: 0;
+}
+.checkin-content > *:last-child {
+  margin-bottom: 0;
+}

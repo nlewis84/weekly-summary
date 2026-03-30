@@ -2,6 +2,8 @@ import { data } from "react-router";
 import type { ActionFunctionArgs } from "react-router";
 import { runSummary } from "../../lib/summary";
 import { saveSummaryToGitHub } from "../../lib/github-persist";
+import { buildMarkdownSummary } from "../../lib/markdown";
+import { isBasecampConfigured, postWeeklySummaryToBasecamp } from "../../lib/basecamp-post";
 
 export async function action({ request }: ActionFunctionArgs) {
   if (request.method !== "POST") {
@@ -12,6 +14,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const checkIns = (formData.get("checkIns") as string) ?? "";
   const todayOnly = formData.get("todayOnly") === "on";
   const shouldSave = formData.get("save") === "true";
+  const postToBasecamp = formData.get("postToBasecamp") === "true";
 
   try {
     const result = await runSummary({
@@ -20,12 +23,28 @@ export async function action({ request }: ActionFunctionArgs) {
       outputDir: null,
     });
 
+    let basecampPosted = false;
+    let basecampError: string | undefined;
+
     if (shouldSave) {
       const repoSpec = process.env.GITHUB_REPO ?? "nlewis84/weekly-summary";
       await saveSummaryToGitHub(result.payload, repoSpec);
+
+      if (postToBasecamp && isBasecampConfigured()) {
+        const markdown = buildMarkdownSummary(result.payload);
+        const bcResult = await postWeeklySummaryToBasecamp(
+          result.payload.meta.week_ending,
+          markdown
+        );
+        basecampPosted = bcResult.ok;
+        basecampError = bcResult.error;
+      }
+
       return data({
         payload: result.payload,
         saved: true,
+        basecampPosted,
+        basecampError,
         builtAt: new Date().toISOString(),
         weekEnding: result.payload.meta.week_ending,
       });
