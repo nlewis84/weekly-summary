@@ -27,6 +27,7 @@ Prefer Tailwind's spacing scale for consistency. Use `4`, `5`, `6` (1rem, 1.25re
 | Labels | `text-sm text-text-muted` | Metric labels, form labels |
 | Values | `text-base font-semibold` or `text-lg font-semibold` | Metric values |
 | Hints, secondary | `text-xs text-text-muted` | Repos list, timestamps |
+| Extra help for controls | Native `title` on the control itself | Avoid inline micro-copy when a tooltip keeps the bar clean |
 
 ## Card Header Divider Pattern
 
@@ -66,6 +67,7 @@ For repo lists (e.g. in Metrics or This week cards): allow natural wrap with con
 
 ## Avoid
 
+- Arbitrary type sizes (`text-[10px]`, `text-[11px]`, etc.): use the typography table (`text-xs` is the smallest standard hint size)
 - `text-gray-900`, `text-gray-600`, `bg-gray-50`, `bg-gray-100`, `border-gray-200`
 - `text-red-400`, `bg-red-500/20`, `text-green-400`
 - Verbose `[var(--...)]` forms: `bg-[var(--color-surface)]`, `text-[var(--color-text-muted)]`, `border-[var(--color-border)]`, etc. Use canonical classes instead (`bg-surface`, `text-text-muted`, `border-(--color-border)`).

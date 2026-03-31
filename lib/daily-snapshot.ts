@@ -78,67 +78,117 @@ export function loadDailySnapshot(date: string): Payload | null {
   }
 }
 
+const MAX_BULLETS_PER_SECTION = 12;
+
+function linearIssuePhrase(issue: Record<string, unknown>): string {
+  const id = (issue.identifier as string) ?? "";
+  const title = (issue.title as string) ?? "";
+  if (id && title) return `${id}: ${title}`;
+  return title || id;
+}
+
+function pushBullets(
+  lines: string[],
+  items: string[],
+  max: number
+): void {
+  const shown = items.slice(0, max);
+  for (const item of shown) {
+    lines.push(`- ${item}`);
+  }
+  const rest = items.length - shown.length;
+  if (rest > 0) {
+    lines.push(`- …and ${rest} more (see Weekly Summary)`);
+  }
+}
+
 /**
- * Formats a daily snapshot into check-in text with a day header.
- * Includes key metrics and item titles so the weekly summary
- * generator can reference them.
+ * Basecamp-style check-in: day line + loose bullets (like a human list),
+ * not stat headers with nested lists.
  */
 export function formatSnapshotAsCheckIn(date: string, payload: Payload): string {
   const dayName = dayNameFor(date);
   const { stats, github, linear } = payload;
-  const lines: string[] = [`${dayName}:`];
+  const lines: string[] = [dayName, ""];
 
-  if (stats.prs_merged > 0) {
-    lines.push(`- Merged ${stats.prs_merged} PR${stats.prs_merged === 1 ? "" : "s"}`);
-    for (const pr of github.merged_prs) {
-      lines.push(`  - ${pr.title}`);
+  const mergedTitles = github.merged_prs.map((p) => p.title).filter(Boolean);
+  const reviewTitles = github.reviews.map((r) => r.title).filter(Boolean);
+  const completedPhrases = linear.completed_issues
+    .map(linearIssuePhrase)
+    .filter(Boolean);
+  const workedPhrases = linear.worked_on_issues
+    .map(linearIssuePhrase)
+    .filter(Boolean);
+
+  if (mergedTitles.length > 0) {
+    pushBullets(lines, mergedTitles, MAX_BULLETS_PER_SECTION);
+  }
+
+  if (reviewTitles.length > 0) {
+    for (const t of reviewTitles.slice(0, MAX_BULLETS_PER_SECTION)) {
+      lines.push(`- Reviewed: ${t}`);
+    }
+    if (reviewTitles.length > MAX_BULLETS_PER_SECTION) {
+      lines.push(
+        `- …and ${reviewTitles.length - MAX_BULLETS_PER_SECTION} more reviews`
+      );
     }
   }
 
-  if (stats.pr_reviews > 0) {
-    lines.push(`- Reviewed ${stats.pr_reviews} PR${stats.pr_reviews === 1 ? "" : "s"}`);
-    for (const r of github.reviews) {
-      lines.push(`  - ${r.title}`);
+  if (completedPhrases.length > 0) {
+    for (const p of completedPhrases.slice(0, MAX_BULLETS_PER_SECTION)) {
+      lines.push(`- Done: ${p}`);
+    }
+    if (completedPhrases.length > MAX_BULLETS_PER_SECTION) {
+      lines.push(
+        `- …and ${completedPhrases.length - MAX_BULLETS_PER_SECTION} more completed issues`
+      );
     }
   }
 
-  if (stats.linear_completed > 0) {
-    lines.push(`- Completed ${stats.linear_completed} Linear issue${stats.linear_completed === 1 ? "" : "s"}`);
-    for (const issue of linear.completed_issues) {
-      const id = (issue.identifier as string) ?? "";
-      const title = (issue.title as string) ?? "";
-      if (id || title) lines.push(`  - ${id} ${title}`.trim());
+  if (workedPhrases.length > 0) {
+    const completedSet = new Set(completedPhrases);
+    const onlyWorked = workedPhrases.filter((p) => !completedSet.has(p));
+    for (const p of onlyWorked.slice(0, MAX_BULLETS_PER_SECTION)) {
+      lines.push(`- In progress: ${p}`);
     }
-  }
-
-  if (stats.linear_worked_on > 0) {
-    lines.push(`- Worked on ${stats.linear_worked_on} Linear issue${stats.linear_worked_on === 1 ? "" : "s"}`);
-    for (const issue of linear.worked_on_issues) {
-      const id = (issue.identifier as string) ?? "";
-      const title = (issue.title as string) ?? "";
-      if (id || title) lines.push(`  - ${id} ${title}`.trim());
+    if (onlyWorked.length > MAX_BULLETS_PER_SECTION) {
+      lines.push(
+        `- …and ${onlyWorked.length - MAX_BULLETS_PER_SECTION} more in-flight issues`
+      );
     }
-  }
-
-  if (stats.commits_pushed > 0) {
-    lines.push(`- Pushed ${stats.commits_pushed} commit${stats.commits_pushed === 1 ? "" : "s"}`);
   }
 
   if (stats.linear_issues_created > 0) {
-    lines.push(`- Created ${stats.linear_issues_created} Linear issue${stats.linear_issues_created === 1 ? "" : "s"}`);
+    lines.push(
+      stats.linear_issues_created === 1
+        ? "- Filed a new Linear ticket"
+        : `- Filed ${stats.linear_issues_created} new Linear tickets`
+    );
   }
 
-  if (stats.linear_comments > 0) {
-    lines.push(`- ${stats.linear_comments} Linear comment${stats.linear_comments === 1 ? "" : "s"}`);
+  if (stats.prs_merged === 0 && stats.commits_pushed > 0) {
+    lines.push(
+      stats.commits_pushed === 1
+        ? "- Pushed commits (no merges in this window)"
+        : `- Pushed ${stats.commits_pushed} commits (no merges in this window)`
+    );
   }
 
-  if (stats.pr_comments > 0) {
-    lines.push(`- ${stats.pr_comments} PR comment${stats.pr_comments === 1 ? "" : "s"}`);
+  if (stats.pr_comments > 0 || stats.linear_comments > 0) {
+    lines.push(
+      stats.pr_comments > 0 && stats.linear_comments > 0
+        ? "- Left comments on PRs and in Linear"
+        : stats.pr_comments > 0
+          ? "- Left comments on PRs"
+          : "- Replied in Linear"
+    );
   }
 
-  if (lines.length === 1) {
-    lines.push("- No activity recorded");
+  const bodyStart = 2;
+  if (lines.length <= bodyStart) {
+    lines.push("- Quiet in GitHub / Linear for this window");
   }
 
-  return lines.join("\n");
+  return lines.join("\n").trimEnd();
 }

@@ -199,7 +199,7 @@ export default function CheckIns() {
               <div className="flex items-center justify-between gap-3 px-4 py-2.5 bg-surface-elevated/50 border-b border-(--color-border)">
                 <div className="flex items-center gap-2 min-w-0">
                   <span
-                    className={`shrink-0 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider rounded ${
+                        className={`shrink-0 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider rounded ${
                       answer.questionType === "weekly"
                         ? "bg-primary-600/20 text-primary-400"
                         : "bg-gray-200/50 text-text-muted"

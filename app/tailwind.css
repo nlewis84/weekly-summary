@@ -55,6 +55,15 @@ a:focus-visible,
   outline-offset: 2px;
 }
 
+/* Tighter focus inside control bounds; negative offset follows border-radius (avoids corner clipping vs inset box-shadow + overflow-hidden) */
+.capture-toolbar-btn:focus-visible,
+.focus-inset-ring:focus-visible {
+  outline: 2px solid hsl(252, 70%, 65%);
+  outline-offset: -2px;
+  box-shadow: none;
+  z-index: 1;
+}
+
 /* Cursor affordances for interactive elements */
 button:not(:disabled) {
   cursor: pointer;
