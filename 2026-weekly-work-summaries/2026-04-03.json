@@ -1,0 +1,528 @@
+{
+  "meta": {
+    "generated_at": "2026-04-02T23:41:11.854Z",
+    "window_start": "2026-03-28T05:00:00.000Z",
+    "window_end": "2026-04-03T04:59:59.999Z",
+    "week_ending": "2026-04-03",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 14,
+    "prs_total": 19,
+    "pr_reviews": 16,
+    "pr_comments": 17,
+    "commits_pushed": 14,
+    "linear_completed": 14,
+    "linear_worked_on": 15,
+    "linear_issues_created": 1,
+    "linear_comments": 7,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-platforms"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-7970",
+        "title": "Frequency options display incorrectly",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7970/frequency-options-display-incorrectly",
+        "completedAt": "2026-03-31T14:05:35.855Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7968",
+        "title": "(NorthCoast) (admin) Vimeo URLs no longer save (blocked by URL validation - only allows YouTube or direct HLS .m3u8)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-7968/northcoast-admin-vimeo-urls-no-longer-save-blocked-by-url-validation",
+        "completedAt": "2026-03-31T14:05:36.757Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7949",
+        "title": "Adjust Rock Sync to Pass $0 for Fees When Gross Settlement Is Enabled",
+        "project": "Stripe Gross Settlement",
+        "url": "https://linear.app/differential/issue/APO-7949/adjust-rock-sync-to-pass-dollar0-for-fees-when-gross-settlement-is",
+        "completedAt": "2026-03-31T14:05:36.665Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7940",
+        "title": "/give has too much padding/extra space on web",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7940/give-has-too-much-paddingextra-space-on-web",
+        "completedAt": "2026-03-31T14:05:29.946Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7928",
+        "title": "Focus ring inconsistencies",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7928/focus-ring-inconsistencies",
+        "completedAt": "2026-03-31T14:05:31.876Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7918",
+        "title": "Processing fees appear to be coming over into Rock again",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7918/processing-fees-appear-to-be-coming-over-into-rock-again",
+        "completedAt": "2026-03-31T14:05:36.829Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7912",
+        "title": "Investigate why having Saved Payment Methods makes the Stripe Payment Method component on /payment load in much slower",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7912/investigate-why-having-saved-payment-methods-makes-the-stripe-payment",
+        "completedAt": "2026-03-31T14:05:30.168Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7898",
+        "title": "Everywhere Gifts Are Shown For Gift History Need to Have Decimal Points",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7898/everywhere-gifts-are-shown-for-gift-history-need-to-have-decimal",
+        "completedAt": "2026-03-31T14:05:34.843Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7888",
+        "title": "Phone numbers should be able to be saved from the /give/payment screen",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7888/phone-numbers-should-be-able-to-be-saved-from-the-givepayment-screen",
+        "completedAt": "2026-03-31T14:05:32.970Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7843",
+        "title": "Investigate missing Stripe charge metadata \"source\" field (ADMIN PR)",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7843/investigate-missing-stripe-charge-metadata-source-field-admin-pr",
+        "completedAt": "2026-03-31T14:05:37.019Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7540",
+        "title": "Investigate missing Stripe charge metadata \"source\" field (Parent Issue)",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7540/investigate-missing-stripe-charge-metadata-source-field-parent-issue",
+        "completedAt": "2026-03-31T14:05:33.388Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6912",
+        "title": "[Web Giving] User being asked for phone again after already providing it (possible profile sync issue)",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6912/web-giving-user-being-asked-for-phone-again-after-already-providing-it",
+        "completedAt": "2026-03-31T14:05:36.613Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6862",
+        "title": "Update confirmation receipt styles & language to be more consistent with Donation Receipt email",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6862/update-confirmation-receipt-styles-and-language-to-be-more-consistent",
+        "completedAt": "2026-03-31T14:05:29.568Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6612",
+        "title": "Update how we redirecting to PushPay",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6612/update-how-we-redirecting-to-pushpay",
+        "completedAt": "2026-03-31T14:05:37.068Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-8127",
+        "title": "Processing error shown after ACH and card gift submission",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8127/processing-error-shown-after-ach-and-card-gift-submission",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7970",
+        "title": "Frequency options display incorrectly",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7970/frequency-options-display-incorrectly",
+        "completedAt": "2026-03-31T14:05:35.855Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7968",
+        "title": "(NorthCoast) (admin) Vimeo URLs no longer save (blocked by URL validation - only allows YouTube or direct HLS .m3u8)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-7968/northcoast-admin-vimeo-urls-no-longer-save-blocked-by-url-validation",
+        "completedAt": "2026-03-31T14:05:36.757Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7949",
+        "title": "Adjust Rock Sync to Pass $0 for Fees When Gross Settlement Is Enabled",
+        "project": "Stripe Gross Settlement",
+        "url": "https://linear.app/differential/issue/APO-7949/adjust-rock-sync-to-pass-dollar0-for-fees-when-gross-settlement-is",
+        "completedAt": "2026-03-31T14:05:36.665Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7940",
+        "title": "/give has too much padding/extra space on web",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7940/give-has-too-much-paddingextra-space-on-web",
+        "completedAt": "2026-03-31T14:05:29.946Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7928",
+        "title": "Focus ring inconsistencies",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7928/focus-ring-inconsistencies",
+        "completedAt": "2026-03-31T14:05:31.876Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7918",
+        "title": "Processing fees appear to be coming over into Rock again",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7918/processing-fees-appear-to-be-coming-over-into-rock-again",
+        "completedAt": "2026-03-31T14:05:36.829Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7912",
+        "title": "Investigate why having Saved Payment Methods makes the Stripe Payment Method component on /payment load in much slower",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7912/investigate-why-having-saved-payment-methods-makes-the-stripe-payment",
+        "completedAt": "2026-03-31T14:05:30.168Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7898",
+        "title": "Everywhere Gifts Are Shown For Gift History Need to Have Decimal Points",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7898/everywhere-gifts-are-shown-for-gift-history-need-to-have-decimal",
+        "completedAt": "2026-03-31T14:05:34.843Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7888",
+        "title": "Phone numbers should be able to be saved from the /give/payment screen",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7888/phone-numbers-should-be-able-to-be-saved-from-the-givepayment-screen",
+        "completedAt": "2026-03-31T14:05:32.970Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7843",
+        "title": "Investigate missing Stripe charge metadata \"source\" field (ADMIN PR)",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7843/investigate-missing-stripe-charge-metadata-source-field-admin-pr",
+        "completedAt": "2026-03-31T14:05:37.019Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-7540",
+        "title": "Investigate missing Stripe charge metadata \"source\" field (Parent Issue)",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-7540/investigate-missing-stripe-charge-metadata-source-field-parent-issue",
+        "completedAt": "2026-03-31T14:05:33.388Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6912",
+        "title": "[Web Giving] User being asked for phone again after already providing it (possible profile sync issue)",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6912/web-giving-user-being-asked-for-phone-again-after-already-providing-it",
+        "completedAt": "2026-03-31T14:05:36.613Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6862",
+        "title": "Update confirmation receipt styles & language to be more consistent with Donation Receipt email",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6862/update-confirmation-receipt-styles-and-language-to-be-more-consistent",
+        "completedAt": "2026-03-31T14:05:29.568Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6612",
+        "title": "Update how we redirecting to PushPay",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6612/update-how-we-redirecting-to-pushpay",
+        "completedAt": "2026-03-31T14:05:37.068Z",
+        "state": "Released"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-8127",
+        "title": "Processing error shown after ACH and card gift submission",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8127/processing-error-shown-after-ach-and-card-gift-submission",
+        "createdAt": "2026-04-02T15:28:44.611Z",
+        "state": "In Review"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-8127",
+        "title": "Processing error shown after ACH and card gift submission",
+        "url": "https://linear.app/differential/issue/APO-8127/processing-error-shown-after-ach-and-card-gift-submission",
+        "project": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-7998",
+        "title": "~ Scheduling the Report Audit",
+        "url": "https://linear.app/differential/issue/APO-7998/scheduling-the-report-audit",
+        "project": "Audit Admin Giving Reports for Exceptions",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-7856",
+        "title": "Update design of Payment Method Deleted Email by Changing Background Color",
+        "url": "https://linear.app/differential/issue/APO-7856/update-design-of-payment-method-deleted-email-by-changing-background",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-7924",
+        "title": "Manually Entered Bank Info - ACH giving notifications (needs shaping)",
+        "url": "https://linear.app/differential/issue/APO-7924/manually-entered-bank-info-ach-giving-notifications-needs-shaping",
+        "project": "Giving Admin: Redesign",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-6446",
+        "title": "SQL error creating new org profile when slug exists",
+        "url": "https://linear.app/differential/issue/APO-6446/sql-error-creating-new-org-profile-when-slug-exists",
+        "project": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8024",
+        "title": "Complete remaining backend tasks to enable Universal Exports in Admin",
+        "url": "https://linear.app/differential/issue/APO-8024/complete-remaining-backend-tasks-to-enable-universal-exports-in-admin",
+        "project": "Universal Giving Exports",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-8020",
+        "title": "Stripe embedded component popups not loading in admin",
+        "url": "https://linear.app/differential/issue/APO-8020/stripe-embedded-component-popups-not-loading-in-admin",
+        "project": null,
+        "state": "Released"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat: add image dimension constraints to ImageUpload component",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3097",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-02T23:38:54Z"
+      },
+      {
+        "title": "feat: add test coverage configuration for web-embeds and canvas-ui-web",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3089",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-01T19:06:49Z"
+      },
+      {
+        "title": "feat: add code coverage to tap linking files",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3086",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-01T17:11:20Z"
+      },
+      {
+        "title": "feat: add test coverage for admin auth middleware utils",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3085",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-01T17:10:58Z"
+      },
+      {
+        "title": "feat: code coverage for admin routes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3084",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-01T17:31:28Z"
+      },
+      {
+        "title": "chore: make ai insights page only for the current church",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3079",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-31T19:30:17Z"
+      },
+      {
+        "title": "feat: add web embeds v1 test coverage",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3078",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-31T19:44:51Z"
+      },
+      {
+        "title": "feat: add canvas ui web test coverage",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3076",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-31T18:04:43Z"
+      },
+      {
+        "title": "feat: add langgraph test coverage",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3075",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-31T16:45:29Z"
+      },
+      {
+        "title": "feat: added test coverage to cluster model files",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3074",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-31T16:04:12Z"
+      },
+      {
+        "title": "feat: add test coverage for admin models",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3071",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-30T22:48:02Z"
+      },
+      {
+        "title": "fix: the event block edit modal was borked",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3069",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-30T18:13:10Z"
+      },
+      {
+        "title": "chore: added test coverage to web auth pages",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3061",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-30T18:33:29Z"
+      },
+      {
+        "title": "feat: show the embed version on the page with a badge",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3051",
+        "repo": "apollos-admin",
+        "merged_at": "2026-03-30T13:51:38Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix: add missing setup intent handling to payment flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3095",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "chore: first pass at updating user facing giving embed setup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3052",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "refactor: reorganize finance reports to match standard module pattern",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2758"
+      },
+      {
+        "title": "fix: add missing setup intent handling to payment flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3095"
+      },
+      {
+        "title": "[APO-8118] Setting min value for tap tag range to 0 instead of 1 in web form.",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3094"
+      },
+      {
+        "title": "[APO-7261] Remove embedMode=inline param, add it automatically",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3090"
+      },
+      {
+        "title": "[Giving] Do not prefetch Giving intent if Giving drawer is not visible",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6096"
+      },
+      {
+        "title": "[Tap-Linking] Get local URLs working",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3081"
+      },
+      {
+        "title": "[APO-8055] Use Stripe as transaction existence source of truth",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2748"
+      },
+      {
+        "title": "Add database indexes for GenerationOccurrence",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3080"
+      },
+      {
+        "title": "[APO-7351] Start date calendar horizontal scroll",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3077"
+      },
+      {
+        "title": "fix: use Stripe API as source of truth for payout reports",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2746"
+      },
+      {
+        "title": "[codex] Fix super admin access sync",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3070"
+      },
+      {
+        "title": "Prevent duplicate recurring cancellation emails",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3068"
+      },
+      {
+        "title": "feat: Finance audit algorithm with Slack/Sentry reporting",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2738"
+      },
+      {
+        "title": "feat: make finance reports CHMS agnostic via ExternalDataBridge",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2737"
+      },
+      {
+        "title": "fix: show friendly error when org profile slug already exists",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2990"
+      },
+      {
+        "title": "refactor: Replace local report generation with cluster API proxy",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2989"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- feat: add test coverage for admin models\n- fix: the event block edit modal was borked\n- chore: added test coverage to web auth pages\n- feat: show the embed version on the page with a badge\n- Reviewed: [codex] Fix super admin access sync\n- Reviewed: Prevent duplicate recurring cancellation emails\n- Reviewed: fix: show friendly error when org profile slug already exists\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- chore: make ai insights page only for the current church\n- feat: add web embeds v1 test coverage\n- feat: add canvas ui web test coverage\n- feat: add langgraph test coverage\n- feat: added test coverage to cluster model files\n- Reviewed: Add database indexes for GenerationOccurrence\n- Reviewed: [APO-7351] Start date calendar horizontal scroll\n- Reviewed: fix: use Stripe API as source of truth for payout reports\n- Left comments on PRs"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- feat: add test coverage configuration for web-embeds and canvas-ui-web\n- feat: add code coverage to tap linking files\n- feat: add test coverage for admin auth middleware utils\n- feat: code coverage for admin routes\n- Reviewed: [APO-7261] Remove embedMode=inline param, add it automatically\n- Reviewed: [Giving] Do not prefetch Giving intent if Giving drawer is not visible\n- Reviewed: [Tap-Linking] Get local URLs working\n- Reviewed: [APO-8055] Use Stripe as transaction existence source of truth\n- Reviewed: fix: use Stripe API as source of truth for payout reports\n- Reviewed: feat: Finance audit algorithm with Slack/Sentry reporting\n- Left comments on PRs"
+    },
+    {
+      "day": "Thursday",
+      "content": "- feat: add image dimension constraints to ImageUpload component\n- Reviewed: refactor: reorganize finance reports to match standard module pattern\n- Reviewed: fix: add missing setup intent handling to payment flow\n- Reviewed: [APO-8118] Setting min value for tap tag range to 0 instead of 1 in web form.\n- Reviewed: feat: make finance reports CHMS agnostic via ExternalDataBridge\n- Reviewed: refactor: Replace local report generation with cluster API proxy\n- In progress: APO-8127: Processing error shown after ACH and card gift submission\n- Filed a new Linear ticket\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": ", April 2\nDaily\nWhat did you work on today\n6:28 PM\nOOO tomorrow 🫡\nPR Reviews (finance reports, tap tag fix, et al) w/ @Dylan @Vitor @Michael @Brandon\nPRs for cloudinary widget (image size) and better web redirects for setup intent errors\nSlackin' - unblocking teammates on PushPay giving flow, LaunchDarkly config, and tap tag setup\nHelped dig into a Vercel production incident (we didn't do anything....they had an outage)\nGot Web Embeds to redeploy to npm\nScreenshot 2026-04-02 at 6.39.38 PM.png\nScreenshot 2026-04-02 at 6.39.38 PM.png"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", April 1\nDaily\nWhat did you work on today\n3:56 PM\nContinued to improve test coverage of the Admin repo\n/packages folder has a 21.23% increase in coverage 🚀\n/apps folder has a 8.36% increase in coverage 🎉\nI removed 14,536 lines of build code and config files from coverage that didn't need to be there\nCompany Connect\nPR reviews for @Dylan, @Nick, and @Gerard\nScreenshot 2026-04-01 at 4.37.34 PM.png\nScreenshot 2026-04-01 at 4.37.34 PM.png"
+    },
+    {
+      "day": "Tuesday",
+      "content": ", March 31\nDaily\nWhat did you work on today\n2:54 PM\nAdmin went down due to issue with AI Insights page (fixed it live w/ @Vincent)\nMarked Web Giving project as DONE ✅\nArch Pod Meeting\nShaping w/ @Shahbano\nFocused energy on improving test coverage for Admin repo - INCREASED over 6% 💪\nBefore\nbefore.png\nbefore.png\nAfter\nafter.png\nafter.png\nScreenshot 2026-03-31 at 2.54.11 PM.png\nScreenshot 2026-03-31 at 2.54.11 PM.png"
+    },
+    {
+      "day": "Monday",
+      "content": ", March 30\nDaily\nWhat did you work on today\n5:48 PM\nNeat. Posted this via Basecamp CLI.\nInvestigated and debugged Stripe embedded component popup issue in admin (Facebook Pixel)\nShaped upcoming work around Giving Reports in Admin w/ @Shahbano\nClarified usage of redirect feature flag for Pushpay churches to use Apple/Google Pay giving flow\nScreenshot 2026-03-30 at 5.48.30 PM.png\nScreenshot 2026-03-30 at 5.48.30 PM.png"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 14\n  • PR reviews: 16\n  • Commits pushed: 14\n  • Linear issues completed: 14\n  • Linear issues worked on: 15\n  • Linear issues created: 1\n  • Linear replies: 7\n  • Repos: apollos-admin, apollos-cluster, apollos-platforms\n\n📝 Check-ins:\n\n  Monday: - feat: add test coverage for admin models\n- fix: the event block edit modal was...\n  Tuesday: - chore: make ai insights page only for the current church\n- feat: add web embed...\n  Wednesday: - feat: add test coverage configuration for web-embeds and canvas-ui-web\n- feat:...\n  Thursday: - feat: add image dimension constraints to ImageUpload component\n- Reviewed: ref...\n  Thursday: , April 2\nDaily\nWhat did you work on today\n6:28 PM\nOOO tomorrow 🫡\nPR Reviews (f...\n  Wednesday: , April 1\nDaily\nWhat did you work on today\n3:56 PM\nContinued to improve test cov...\n  Tuesday: , March 31\nDaily\nWhat did you work on today\n2:54 PM\nAdmin went down due to issue...\n  Monday: , March 30\nDaily\nWhat did you work on today\n5:48 PM\nNeat. Posted this via Baseca...\n",
+  "formatted_output": null
+}
