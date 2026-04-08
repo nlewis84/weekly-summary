@@ -1,0 +1,381 @@
+{
+  "meta": {
+    "generated_at": "2026-04-08T21:10:42.884Z",
+    "window_start": "2026-04-04T05:00:00.000Z",
+    "window_end": "2026-04-09T04:59:59.999Z",
+    "week_ending": "2026-04-10",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 7,
+    "prs_total": 11,
+    "pr_reviews": 13,
+    "pr_comments": 37,
+    "commits_pushed": 5,
+    "linear_completed": 2,
+    "linear_worked_on": 4,
+    "linear_issues_created": 10,
+    "linear_comments": 9,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-infrastructure",
+      "apollos-platforms"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-8231",
+        "title": "Inventory: all admin UI locations that show fees",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8231/inventory-all-admin-ui-locations-that-show-fees",
+        "completedAt": "2026-04-06T18:44:14.007Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8021",
+        "title": "Event end time displays as start time",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8021/event-end-time-displays-as-start-time",
+        "completedAt": "2026-04-08T03:29:19.827Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-8246",
+        "title": "Replace Stripe payouts embed with custom admin UI table",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8246/replace-stripe-payouts-embed-with-custom-admin-ui-table",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8232",
+        "title": "Replace Stripe embed with custom transaction detail drawer",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8232/replace-stripe-embed-with-custom-transaction-detail-drawer",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8231",
+        "title": "Inventory: all admin UI locations that show fees",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8231/inventory-all-admin-ui-locations-that-show-fees",
+        "completedAt": "2026-04-06T18:44:14.007Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8021",
+        "title": "Event end time displays as start time",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8021/event-end-time-displays-as-start-time",
+        "completedAt": "2026-04-08T03:29:19.827Z",
+        "state": "Released"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-8274",
+        "title": "The Sheet canvas ui component needs a footer",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8274/the-sheet-canvas-ui-component-needs-a-footer",
+        "createdAt": "2026-04-07T19:13:48.937Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8246",
+        "title": "Replace Stripe payouts embed with custom admin UI table",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8246/replace-stripe-payouts-embed-with-custom-admin-ui-table",
+        "createdAt": "2026-04-07T14:16:44.204Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8238",
+        "title": "Remove unused ConnectPayments import from giving config",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8238/remove-unused-connectpayments-import-from-giving-config",
+        "createdAt": "2026-04-06T18:53:23.116Z",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8237",
+        "title": "Verify export math / net calculations after fee display changes",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8237/verify-export-math-net-calculations-after-fee-display-changes",
+        "createdAt": "2026-04-06T18:33:27.567Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8236",
+        "title": "Church-level gross vs net settlement source of truth",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8236/church-level-gross-vs-net-settlement-source-of-truth",
+        "createdAt": "2026-04-06T18:33:25.337Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-8235",
+        "title": "Regression: net-settled fee display unchanged",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8235/regression-net-settled-fee-display-unchanged",
+        "createdAt": "2026-04-06T18:33:22.774Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8234",
+        "title": "Gross-settled: show $0 for fees in exported reports",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8234/gross-settled-show-dollar0-for-fees-in-exported-reports",
+        "createdAt": "2026-04-06T18:33:20.237Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8233",
+        "title": "Gross-settled: show $0 for fees in admin tables and detail views",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8233/gross-settled-show-dollar0-for-fees-in-admin-tables-and-detail-views",
+        "createdAt": "2026-04-06T18:33:16.920Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8232",
+        "title": "Replace Stripe embed with custom transaction detail drawer",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8232/replace-stripe-embed-with-custom-transaction-detail-drawer",
+        "createdAt": "2026-04-06T18:33:14.120Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8231",
+        "title": "Inventory: all admin UI locations that show fees",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8231/inventory-all-admin-ui-locations-that-show-fees",
+        "createdAt": "2026-04-06T18:33:06.579Z",
+        "state": "Released"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-8303",
+        "title": "Handle staging Pushpay URL when forwarding query params",
+        "url": "https://linear.app/differential/issue/APO-8303/handle-staging-pushpay-url-when-forwarding-query-params",
+        "project": null,
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-8246",
+        "title": "Replace Stripe payouts embed with custom admin UI table",
+        "url": "https://linear.app/differential/issue/APO-8246/replace-stripe-payouts-embed-with-custom-admin-ui-table",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8024",
+        "title": "Complete remaining backend tasks to enable Universal Exports in Admin",
+        "url": "https://linear.app/differential/issue/APO-8024/complete-remaining-backend-tasks-to-enable-universal-exports-in-admin",
+        "project": "Universal Giving Exports",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-8232",
+        "title": "Replace Stripe embed with custom transaction detail drawer",
+        "url": "https://linear.app/differential/issue/APO-8232/replace-stripe-embed-with-custom-transaction-detail-drawer",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8237",
+        "title": "Verify export math / net calculations after fee display changes",
+        "url": "https://linear.app/differential/issue/APO-8237/verify-export-math-net-calculations-after-fee-display-changes",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8234",
+        "title": "Gross-settled: show $0 for fees in exported reports",
+        "url": "https://linear.app/differential/issue/APO-8234/gross-settled-show-dollar0-for-fees-in-exported-reports",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8233",
+        "title": "Gross-settled: show $0 for fees in admin tables and detail views",
+        "url": "https://linear.app/differential/issue/APO-8233/gross-settled-show-dollar0-for-fees-in-admin-tables-and-detail-views",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8231",
+        "title": "Inventory: all admin UI locations that show fees",
+        "url": "https://linear.app/differential/issue/APO-8231/inventory-all-admin-ui-locations-that-show-fees",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8021",
+        "title": "Event end time displays as start time",
+        "url": "https://linear.app/differential/issue/APO-8021/event-end-time-displays-as-start-time",
+        "project": null,
+        "state": "Released"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat: add sandbox.pushpay.io support to giving URL utility",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3138",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-08T18:42:25Z"
+      },
+      {
+        "title": "Set base URL programmatically for preview apps",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/10",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-04-08T17:00:49Z"
+      },
+      {
+        "title": "chore: add tests for transactions side modal",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3122",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-08T20:47:46Z"
+      },
+      {
+        "title": "chore: remove unused import",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3118",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-07T15:14:34Z"
+      },
+      {
+        "title": "chore: add test coverage for giving settings page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3116",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-07T14:57:58Z"
+      },
+      {
+        "title": "feat: add giving settings page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3113",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-07T15:27:49Z"
+      },
+      {
+        "title": "fix: add missing setup intent handling to payment flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3095",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-07T15:49:51Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "docs: add local Stripe webhook setup instructions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3140",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "chore: add tests for payouts screen",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3124",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat: change stripe ui table to admin ui table for payouts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3123",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat: add transaction detail sheet and refund functionality to giving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3121",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Ensure decimal-point amounts in giving history",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3135"
+      },
+      {
+        "title": "[codex] Fix chat link preview fallback",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6126"
+      },
+      {
+        "title": "[codex] Restrict admin OTP bypass to dev apps account",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3133"
+      },
+      {
+        "title": "[APO-8152] Restore payment method editing, fix list not updating",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3129"
+      },
+      {
+        "title": "feat: add transaction detail sheet and refund functionality to giving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3121"
+      },
+      {
+        "title": "feat: add giving settings page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3113"
+      },
+      {
+        "title": "Switch e2e workflow from Heroku to AWS review apps",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3112"
+      },
+      {
+        "title": "Fix cancellation confirmation email logo contrast",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3108"
+      },
+      {
+        "title": "fix: Audit False Positive - Batch ranges not fully contained",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2767"
+      },
+      {
+        "title": "test(web): add baseline give route component coverage",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3107"
+      },
+      {
+        "title": "fix(ci): stabilize admin seed bootstrap and web e2e preview lookup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3106"
+      },
+      {
+        "title": "Simplify web-embeds v1 by removing donation support",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3105"
+      },
+      {
+        "title": "APO-8075: Add express checkout and hide back arrow in migration payment flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3098"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- Reviewed: feat: add giving settings page\n- Reviewed: Fix cancellation confirmation email logo contrast\n- Reviewed: fix: Audit False Positive - Batch ranges not fully contained\n- Reviewed: test(web): add baseline give route component coverage\n- Reviewed: fix(ci): stabilize admin seed bootstrap and web e2e preview lookup\n- Reviewed: Simplify web-embeds v1 by removing donation support\n- Done: APO-8231: Inventory: all admin UI locations that show fees\n- In progress: APO-8236: Church-level gross vs net settlement source of truth\n- Filed 8 new Linear tickets\n- Pushed commits (no merges in this window)\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- chore: remove unused import\n- chore: add test coverage for giving settings page\n- feat: add giving settings page\n- fix: add missing setup intent handling to payment flow\n- Reviewed: feat: add transaction detail sheet and refund functionality to giving\n- Reviewed: Switch e2e workflow from Heroku to AWS review apps\n- Reviewed: fix: Audit False Positive - Batch ranges not fully contained\n- In progress: APO-8246: Replace Stripe payouts embed with custom admin UI table\n- In progress: APO-8232: Replace Stripe embed with custom transaction detail drawer\n- Filed 2 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- feat: add sandbox.pushpay.io support to giving URL utility\n- Set base URL programmatically for preview apps\n- chore: add tests for transactions side modal\n- Reviewed: Ensure decimal-point amounts in giving history\n- Reviewed: [codex] Fix chat link preview fallback\n- Reviewed: [codex] Restrict admin OTP bypass to dev apps account\n- Reviewed: [APO-8152] Restore payment method editing, fix list not updating\n- Reviewed: APO-8075: Add express checkout and hide back arrow in migration payment flow\n- In progress: APO-8246: Replace Stripe payouts embed with custom admin UI table\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Monday",
+      "content": ", April 6\nYour day was focused on a few parallel threads. You confirmed a staged prod deploy was working in #apollos-customer-success, and you set up some integrations in the #graphite-webhook channel (Instatus). You also spent a good chunk of the morning helping Vitor debug a tap tag/range fix on staging — guiding him through adjusting a record from 1 to 0 and reassuring him that the leading zero feedback was out of scope. In parallel, you connected with Michael Neeley about the Stripe Gross Settlement project, floating a time to sync later in the week."
+    },
+    {
+      "day": "Tuesday",
+      "content": ", April 7\nA busier product-focused day. You kicked off two threads in #product: one around rebuilding the Admin Payouts table (the current one is a Stripe component, so hiding fees requires a full rebuild — you decided to just match the Recurring Gifts table without waiting on designs), and another about the Transaction Row Details modal, working through what data to show (Succeeded/Refunded statuses, the ConnectPaymentDetails component) and whether to keep the Begin Refund button.\nYou also started a thread in #dev about improving the PR review process — proposing that everyone have a primary reviewer paired with them rather than the \"anyone can review\" pool, which was feeling like asking favors.\nIn the afternoon you dove into an OpenAI spend spike investigation, pulling logs and tracing it to what looked like a single user (a church content admin) going on a generation spree in AI Insights. You concluded it wasn't a systemic loop and said you'd keep monitoring. You also noted you'll be OOO Thursday and Friday."
+    },
+    {
+      "day": "Wednesday",
+      "content": ", April 8 (today)\nThis morning was largely engineering coordination. You advised on using a LaunchDarkly flag flip rather than removing code to lock down a feature quickly. You got into a thread about AWS preview app URL configuration — specifically getting REACT_APP_BASE_URL set per-app to handle staging vs. prod environments (referencing the old Heroku approach). There was also some debugging around email invite flows in preview apps.\nYou flagged a likely bug with Pushpay staging URLs (it was pushing to prod last week, now needs a staging URL), and asked someone to file a ticket. The OpenAI spend also re-upped this morning but usage looked normal.\nThis afternoon you kicked off a thread with Dylan on Universal Giving Export after watching his Loom."
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 7\n  • PR reviews: 13\n  • Commits pushed: 5\n  • Linear issues completed: 2\n  • Linear issues worked on: 4\n  • Linear issues created: 10\n  • Linear replies: 9\n  • Repos: apollos-admin, apollos-cluster, apollos-infrastructure, apollos-platforms\n\n📝 Check-ins:\n\n  Monday: - Reviewed: feat: add giving settings page\n- Reviewed: Fix cancellation confirma...\n  Tuesday: - chore: remove unused import\n- chore: add test coverage for giving settings pag...\n  Wednesday: - feat: add sandbox.pushpay.io support to giving URL utility\n- Set base URL prog...\n  Monday: , April 6\nYour day was focused on a few parallel threads. You confirmed a staged...\n  Tuesday: , April 7\nA busier product-focused day. You kicked off two threads in #product: ...\n  Wednesday: , April 8 (today)\nThis morning was largely engineering coordination. You advised...\n",
+  "formatted_output": null
+}
