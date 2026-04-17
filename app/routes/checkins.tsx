@@ -67,6 +67,12 @@ function groupByDate(answers: CheckInAnswer[]): [string, CheckInAnswer[]][] {
     if (existing) existing.push(answer);
     else groups.set(answer.date, [answer]);
   }
+  for (const dayAnswers of groups.values()) {
+    dayAnswers.sort((a, b) => {
+      if (a.questionType === b.questionType) return 0;
+      return a.questionType === "weekly" ? -1 : 1;
+    });
+  }
   return [...groups.entries()];
 }
 
