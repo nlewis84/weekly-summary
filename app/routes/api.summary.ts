@@ -2,7 +2,7 @@ import { data } from "react-router";
 import type { ActionFunctionArgs } from "react-router";
 import { runSummary } from "../../lib/summary";
 import { saveSummaryToGitHub } from "../../lib/github-persist";
-import { buildMarkdownSummary } from "../../lib/markdown";
+import { buildBasecampSummary } from "../../lib/markdown";
 import { isBasecampConfigured, postWeeklySummaryToBasecamp } from "../../lib/basecamp-post";
 
 export async function action({ request }: ActionFunctionArgs) {
@@ -31,7 +31,7 @@ export async function action({ request }: ActionFunctionArgs) {
       await saveSummaryToGitHub(result.payload, repoSpec);
 
       if (postToBasecamp && isBasecampConfigured()) {
-        const markdown = buildMarkdownSummary(result.payload);
+        const markdown = buildBasecampSummary(result.payload);
         const bcResult = await postWeeklySummaryToBasecamp(
           result.payload.meta.week_ending,
           markdown

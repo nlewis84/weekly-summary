@@ -52,3 +52,75 @@ export function buildMarkdownSummary(payload: Payload): string {
   md += `## Terminal output\n\n\`\`\`\n${terminal_output ?? ""}\n\`\`\`\n`;
   return md;
 }
+
+/**
+ * Concise Basecamp-post format. Leaves a blank "Callouts for:" placeholder
+ * at the top for manual edits (bullets + screenshot) before posting.
+ */
+export function buildBasecampSummary(payload: Payload): string {
+  const { linear, github } = payload;
+  const lines: string[] = [];
+
+  lines.push("Callouts for:", "");
+
+  const mergedPrs = github.merged_prs ?? [];
+  if (mergedPrs.length > 0) {
+    lines.push("PRs merged");
+    for (const pr of mergedPrs) {
+      lines.push(formatPrLine(pr.title, pr.repo));
+    }
+  }
+
+  const openPrs = github.open_prs ?? [];
+  if (openPrs.length > 0) {
+    lines.push("PRs active");
+    for (const pr of openPrs) {
+      lines.push(formatPrLine(pr.title, pr.repo));
+    }
+  }
+
+  const reviews = github.reviews ?? [];
+  if (reviews.length > 0) {
+    lines.push("PR reviews");
+    for (const pr of reviews) {
+      lines.push(pr.title ?? "");
+    }
+  }
+
+  const completed = linear.completed_issues ?? [];
+  if (completed.length > 0) {
+    lines.push("Linear done");
+    for (const i of completed) {
+      lines.push(formatLinearLine(i));
+    }
+  }
+
+  const workedOn = linear.worked_on_issues ?? [];
+  if (workedOn.length > 0) {
+    lines.push("Linear active");
+    for (const i of workedOn) {
+      lines.push(formatLinearLine(i));
+    }
+  }
+
+  const created = linear.created_issues ?? [];
+  if (created.length > 0) {
+    lines.push("Linear created");
+    for (const i of created) {
+      lines.push(formatLinearLine(i));
+    }
+  }
+
+  return lines.join("\n") + "\n";
+}
+
+function formatPrLine(title: string | undefined, repo: string | null | undefined): string {
+  const t = title ?? "";
+  return repo ? `${t}(${repo})` : t;
+}
+
+function formatLinearLine(issue: Record<string, unknown>): string {
+  const id = (issue.identifier as string) ?? "";
+  const title = (issue.title as string) ?? "";
+  return id ? `${id} ${title}` : title;
+}
