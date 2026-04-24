@@ -56,71 +56,71 @@ export function buildMarkdownSummary(payload: Payload): string {
 /**
  * Concise Basecamp-post format. Leaves a blank "Callouts for:" placeholder
  * at the top for manual edits (bullets + screenshot) before posting.
+ *
+ * Items are emitted as Markdown bullet lists with hyperlinks so Basecamp
+ * renders each item on its own line and links out to the PR/issue.
  */
 export function buildBasecampSummary(payload: Payload): string {
   const { linear, github } = payload;
-  const lines: string[] = [];
-
-  lines.push("Callouts for:", "");
+  const sections: string[] = [];
 
   const mergedPrs = github.merged_prs ?? [];
   if (mergedPrs.length > 0) {
-    lines.push("PRs merged");
-    for (const pr of mergedPrs) {
-      lines.push(formatPrLine(pr.title, pr.repo));
-    }
+    sections.push(buildSection("PRs merged", mergedPrs.map((pr) => formatPrLine(pr.title, pr.repo, pr.url))));
   }
 
   const openPrs = github.open_prs ?? [];
   if (openPrs.length > 0) {
-    lines.push("PRs active");
-    for (const pr of openPrs) {
-      lines.push(formatPrLine(pr.title, pr.repo));
-    }
+    sections.push(buildSection("PRs active", openPrs.map((pr) => formatPrLine(pr.title, pr.repo, pr.url))));
   }
 
   const reviews = github.reviews ?? [];
   if (reviews.length > 0) {
-    lines.push("PR reviews");
-    for (const pr of reviews) {
-      lines.push(pr.title ?? "");
-    }
+    sections.push(
+      buildSection(
+        "PR reviews",
+        reviews.map((pr) => formatPrLine(pr.title, undefined, pr.url))
+      )
+    );
   }
 
   const completed = linear.completed_issues ?? [];
   if (completed.length > 0) {
-    lines.push("Linear done");
-    for (const i of completed) {
-      lines.push(formatLinearLine(i));
-    }
+    sections.push(buildSection("Linear done", completed.map(formatLinearLine)));
   }
 
   const workedOn = linear.worked_on_issues ?? [];
   if (workedOn.length > 0) {
-    lines.push("Linear active");
-    for (const i of workedOn) {
-      lines.push(formatLinearLine(i));
-    }
+    sections.push(buildSection("Linear active", workedOn.map(formatLinearLine)));
   }
 
   const created = linear.created_issues ?? [];
   if (created.length > 0) {
-    lines.push("Linear created");
-    for (const i of created) {
-      lines.push(formatLinearLine(i));
-    }
+    sections.push(buildSection("Linear created", created.map(formatLinearLine)));
   }
 
-  return lines.join("\n") + "\n";
+  const body = sections.join("\n\n");
+  return `Callouts for:\n\n${body}\n`;
 }
 
-function formatPrLine(title: string | undefined, repo: string | null | undefined): string {
+function buildSection(heading: string, items: string[]): string {
+  return [heading, ...items.map((item) => `- ${item}`)].join("\n");
+}
+
+function formatPrLine(
+  title: string | undefined,
+  repo: string | null | undefined,
+  url: string | undefined
+): string {
   const t = title ?? "";
-  return repo ? `${t}(${repo})` : t;
+  const linked = url ? `[${t}](${url})` : t;
+  return repo ? `${linked}(${repo})` : linked;
 }
 
 function formatLinearLine(issue: Record<string, unknown>): string {
   const id = (issue.identifier as string) ?? "";
   const title = (issue.title as string) ?? "";
-  return id ? `${id} ${title}` : title;
+  const url = (issue.url as string) ?? "";
+  const label = id ? `${id} ${title}` : title;
+  return url ? `[${label}](${url})` : label;
 }

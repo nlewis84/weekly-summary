@@ -88,7 +88,7 @@ describe("buildBasecampSummary", () => {
     expect(md).not.toContain("Terminal output");
   });
 
-  it("formats PR items as `title(repo)` with no URL or date", () => {
+  it("formats PR items as `[title](url)(repo)` markdown list bullets", () => {
     const md = buildBasecampSummary(
       makePayload({
         github: {
@@ -122,17 +122,18 @@ describe("buildBasecampSummary", () => {
     );
 
     expect(md).toContain(
-      "PRs merged\nfix: pagination controls to Transactions should be outside the parent div(apollos-admin)\nfeat: add stripe_platform_id column to customers table(apollos-cluster)"
+      "PRs merged\n- [fix: pagination controls to Transactions should be outside the parent div](https://github.com/ApollosProject/apollos-admin/pull/1)(apollos-admin)\n- [feat: add stripe_platform_id column to customers table](https://github.com/ApollosProject/apollos-cluster/pull/2)(apollos-cluster)"
     );
     expect(md).toContain(
-      "PRs active\nfeat: enrich transactions with Stripe balance transaction fees and net(apollos-admin)"
+      "PRs active\n- [feat: enrich transactions with Stripe balance transaction fees and net](https://github.com/ApollosProject/apollos-admin/pull/3)(apollos-admin)"
     );
-    expect(md).toContain("PR reviews\nfeat: default status filter on recurring tab");
-    expect(md).not.toContain("github.com");
+    expect(md).toContain(
+      "PR reviews\n- [feat: default status filter on recurring tab](https://github.com/x)"
+    );
     expect(md).not.toContain("2026-04-17");
   });
 
-  it("falls back to title-only when PR repo is missing", () => {
+  it("falls back to title-only when PR repo and url are missing", () => {
     const md = buildBasecampSummary(
       makePayload({
         github: {
@@ -142,11 +143,12 @@ describe("buildBasecampSummary", () => {
         },
       })
     );
-    expect(md).toContain("PRs merged\nchore: orphan pr\n");
+    expect(md).toContain("PRs merged\n- chore: orphan pr\n");
     expect(md).not.toContain("chore: orphan pr(");
+    expect(md).not.toContain("[chore: orphan pr]");
   });
 
-  it("formats Linear items as `IDENTIFIER title` with no project or date", () => {
+  it("formats Linear items as `[IDENTIFIER title](url)` markdown list bullets", () => {
     const md = buildBasecampSummary(
       makePayload({
         linear: {
@@ -156,16 +158,22 @@ describe("buildBasecampSummary", () => {
               title: "Handle staging Pushpay URL when forwarding query params",
               completedAt: "2026-04-14T12:00:00.000Z",
               project: "Project A",
+              url: "https://linear.app/x/issue/APO-8303/handle-staging-pushpay",
             },
           ],
           worked_on_issues: [
-            { identifier: "APO-8668", title: "Enrich transactions with balance transaction fee data in loader" },
+            {
+              identifier: "APO-8668",
+              title: "Enrich transactions with balance transaction fee data in loader",
+              url: "https://linear.app/x/issue/APO-8668/enrich-transactions",
+            },
           ],
           created_issues: [
             {
               identifier: "APO-8669",
               title: "Zero fees in payouts export for gross-settled churches",
               createdAt: "2026-04-17T12:00:00.000Z",
+              url: "https://linear.app/x/issue/APO-8669/zero-fees",
             },
           ],
           commented_issues: [],
@@ -173,30 +181,47 @@ describe("buildBasecampSummary", () => {
       })
     );
 
-    expect(md).toContain("Linear done\nAPO-8303 Handle staging Pushpay URL when forwarding query params");
     expect(md).toContain(
-      "Linear active\nAPO-8668 Enrich transactions with balance transaction fee data in loader"
+      "Linear done\n- [APO-8303 Handle staging Pushpay URL when forwarding query params](https://linear.app/x/issue/APO-8303/handle-staging-pushpay)"
     );
     expect(md).toContain(
-      "Linear created\nAPO-8669 Zero fees in payouts export for gross-settled churches"
+      "Linear active\n- [APO-8668 Enrich transactions with balance transaction fee data in loader](https://linear.app/x/issue/APO-8668/enrich-transactions)"
+    );
+    expect(md).toContain(
+      "Linear created\n- [APO-8669 Zero fees in payouts export for gross-settled churches](https://linear.app/x/issue/APO-8669/zero-fees)"
     );
     expect(md).not.toContain("2026-04-14");
     expect(md).not.toContain("2026-04-17");
     expect(md).not.toContain("Project A");
   });
 
+  it("falls back to plain `IDENTIFIER title` when Linear url is missing", () => {
+    const md = buildBasecampSummary(
+      makePayload({
+        linear: {
+          completed_issues: [{ identifier: "APO-1", title: "no url" }],
+          worked_on_issues: [],
+          created_issues: [],
+          commented_issues: [],
+        },
+      })
+    );
+    expect(md).toContain("Linear done\n- APO-1 no url\n");
+    expect(md).not.toContain("[APO-1 no url]");
+  });
+
   it("emits sections in the expected order", () => {
     const md = buildBasecampSummary(
       makePayload({
         github: {
-          merged_prs: [{ title: "a", url: "", repo: "r", merged_at: null }],
-          open_prs: [{ title: "b", url: "", repo: "r", state: "open" }],
-          reviews: [{ title: "c", url: "" }],
+          merged_prs: [{ title: "a", url: "https://x/1", repo: "r", merged_at: null }],
+          open_prs: [{ title: "b", url: "https://x/2", repo: "r", state: "open" }],
+          reviews: [{ title: "c", url: "https://x/3" }],
         },
         linear: {
-          completed_issues: [{ identifier: "APO-1", title: "done" }],
-          worked_on_issues: [{ identifier: "APO-2", title: "active" }],
-          created_issues: [{ identifier: "APO-3", title: "created" }],
+          completed_issues: [{ identifier: "APO-1", title: "done", url: "https://l/1" }],
+          worked_on_issues: [{ identifier: "APO-2", title: "active", url: "https://l/2" }],
+          created_issues: [{ identifier: "APO-3", title: "created", url: "https://l/3" }],
           commented_issues: [],
         },
       })
