@@ -1,0 +1,665 @@
+{
+  "meta": {
+    "generated_at": "2026-04-24T22:23:45.444Z",
+    "window_start": "2026-04-18T05:00:00.000Z",
+    "window_end": "2026-04-25T04:59:59.999Z",
+    "week_ending": "2026-04-24",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 7,
+    "prs_total": 13,
+    "pr_reviews": 14,
+    "pr_comments": 42,
+    "commits_pushed": 6,
+    "linear_completed": 14,
+    "linear_worked_on": 21,
+    "linear_issues_created": 8,
+    "linear_comments": 15,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-platforms",
+      "toolbox"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-8792",
+        "title": "For people gated to Full Platform giving, they see express checkout in a weird spot and can't proceed from /payment",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8792/for-people-gated-to-full-platform-giving-they-see-express-checkout-in",
+        "completedAt": "2026-04-24T04:53:45.675Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8789",
+        "title": "[TOOLBOX] Backfill Stripe Platform ID",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8789/toolbox-backfill-stripe-platform-id",
+        "completedAt": "2026-04-23T21:55:15.366Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8741",
+        "title": "Web: gate give redirect on early-access person allowlist",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8741/web-gate-give-redirect-on-early-access-person-allowlist",
+        "completedAt": "2026-04-23T03:52:50.346Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8737",
+        "title": "Cluster: give-flow early-access person allowlist config + resolver",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8737/cluster-give-flow-early-access-person-allowlist-config-resolver",
+        "completedAt": "2026-04-22T17:00:28.397Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8734",
+        "title": "No 1st and 15th on Web Frequency Drop Down",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8734/no-1st-and-15th-on-web-frequency-drop-down",
+        "completedAt": "2026-04-21T17:48:15.024Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8649",
+        "title": "transaction pagination controls got borked - move them back outside the table div",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8649/transaction-pagination-controls-got-borked-move-them-back-outside-the",
+        "completedAt": "2026-04-21T04:13:16.474Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8626",
+        "title": "PushPay redirect forces login when logged out",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8626/pushpay-redirect-forces-login-when-logged-out",
+        "completedAt": "2026-04-21T04:13:18.065Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8566",
+        "title": "Dialog renders under Drawer Overlay on Admin - Giving - Recurring Tab",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8566/dialog-renders-under-drawer-overlay-on-admin-giving-recurring-tab",
+        "completedAt": "2026-04-21T04:13:17.301Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8544",
+        "title": "(North Coast) Changing publish date sometimes saves incorrect date",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8544/north-coast-changing-publish-date-sometimes-saves-incorrect-date",
+        "completedAt": "2026-04-21T04:13:17.397Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8396",
+        "title": "2 Samuel chapters do not appear in Scripture embed",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8396/2-samuel-chapters-do-not-appear-in-scripture-embed",
+        "completedAt": "2026-04-21T04:13:18.019Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8392",
+        "title": "Bottom of Transactions table can hide the Action Dialog (3 dots)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8392/bottom-of-transactions-table-can-hide-the-action-dialog-3-dots",
+        "completedAt": "2026-04-21T04:13:16.185Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8274",
+        "title": "The Sheet canvas ui component needs a footer",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8274/the-sheet-canvas-ui-component-needs-a-footer",
+        "completedAt": "2026-04-21T04:13:16.095Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8246",
+        "title": "Replace Stripe payouts embed with custom admin UI table",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8246/replace-stripe-payouts-embed-with-custom-admin-ui-table",
+        "completedAt": "2026-04-21T04:13:16.638Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8234",
+        "title": "Gross-settled: show $0 for fees in exported reports",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8234/gross-settled-show-dollar0-for-fees-in-exported-reports",
+        "completedAt": "2026-04-21T04:13:16.569Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-8795",
+        "title": "Refactor Web Redirects (it's confusing code!)",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8795/refactor-web-redirects-its-confusing-code",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8792",
+        "title": "For people gated to Full Platform giving, they see express checkout in a weird spot and can't proceed from /payment",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8792/for-people-gated-to-full-platform-giving-they-see-express-checkout-in",
+        "completedAt": "2026-04-24T04:53:45.675Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8789",
+        "title": "[TOOLBOX] Backfill Stripe Platform ID",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8789/toolbox-backfill-stripe-platform-id",
+        "completedAt": "2026-04-23T21:55:15.366Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8741",
+        "title": "Web: gate give redirect on early-access person allowlist",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8741/web-gate-give-redirect-on-early-access-person-allowlist",
+        "completedAt": "2026-04-23T03:52:50.346Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8738",
+        "title": "Per-entry-point \"Give on Web\" allow toggles (cluster config, surfaced in /giving/settings)",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8738/per-entry-point-give-on-web-allow-toggles-cluster-config-surfaced-in",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8737",
+        "title": "Cluster: give-flow early-access person allowlist config + resolver",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8737/cluster-give-flow-early-access-person-allowlist-config-resolver",
+        "completedAt": "2026-04-22T17:00:28.397Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8736",
+        "title": "Send entry-point source from every give-flow caller",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8736/send-entry-point-source-from-every-give-flow-caller",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8734",
+        "title": "No 1st and 15th on Web Frequency Drop Down",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8734/no-1st-and-15th-on-web-frequency-drop-down",
+        "completedAt": "2026-04-21T17:48:15.024Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8668",
+        "title": "Enrich transactions with balance transaction fee data in loader",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8668/enrich-transactions-with-balance-transaction-fee-data-in-loader",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8649",
+        "title": "transaction pagination controls got borked - move them back outside the table div",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8649/transaction-pagination-controls-got-borked-move-them-back-outside-the",
+        "completedAt": "2026-04-21T04:13:16.474Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8626",
+        "title": "PushPay redirect forces login when logged out",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8626/pushpay-redirect-forces-login-when-logged-out",
+        "completedAt": "2026-04-21T04:13:18.065Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8590",
+        "title": "Express payments fail when logged in",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8590/express-payments-fail-when-logged-in",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8566",
+        "title": "Dialog renders under Drawer Overlay on Admin - Giving - Recurring Tab",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8566/dialog-renders-under-drawer-overlay-on-admin-giving-recurring-tab",
+        "completedAt": "2026-04-21T04:13:17.301Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8544",
+        "title": "(North Coast) Changing publish date sometimes saves incorrect date",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8544/north-coast-changing-publish-date-sometimes-saves-incorrect-date",
+        "completedAt": "2026-04-21T04:13:17.397Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8396",
+        "title": "2 Samuel chapters do not appear in Scripture embed",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8396/2-samuel-chapters-do-not-appear-in-scripture-embed",
+        "completedAt": "2026-04-21T04:13:18.019Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8392",
+        "title": "Bottom of Transactions table can hide the Action Dialog (3 dots)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8392/bottom-of-transactions-table-can-hide-the-action-dialog-3-dots",
+        "completedAt": "2026-04-21T04:13:16.185Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8274",
+        "title": "The Sheet canvas ui component needs a footer",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8274/the-sheet-canvas-ui-component-needs-a-footer",
+        "completedAt": "2026-04-21T04:13:16.095Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8246",
+        "title": "Replace Stripe payouts embed with custom admin UI table",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8246/replace-stripe-payouts-embed-with-custom-admin-ui-table",
+        "completedAt": "2026-04-21T04:13:16.638Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8234",
+        "title": "Gross-settled: show $0 for fees in exported reports",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8234/gross-settled-show-dollar0-for-fees-in-exported-reports",
+        "completedAt": "2026-04-21T04:13:16.569Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8132",
+        "title": "Scope all customer interactions to the `stripe_platform_id`",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8132/scope-all-customer-interactions-to-the-stripe-platform-id",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8128",
+        "title": "Scope Stripe customers to platform ID",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8128/scope-stripe-customers-to-platform-id",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-8807",
+        "title": "Add UI to Admin for configuring the Full Platform Giving people allow config",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8807/add-ui-to-admin-for-configuring-the-full-platform-giving-people-allow",
+        "createdAt": "2026-04-24T20:51:30.935Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-8795",
+        "title": "Refactor Web Redirects (it's confusing code!)",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8795/refactor-web-redirects-its-confusing-code",
+        "createdAt": "2026-04-24T15:54:49.345Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8792",
+        "title": "For people gated to Full Platform giving, they see express checkout in a weird spot and can't proceed from /payment",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8792/for-people-gated-to-full-platform-giving-they-see-express-checkout-in",
+        "createdAt": "2026-04-23T21:27:39.066Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8789",
+        "title": "[TOOLBOX] Backfill Stripe Platform ID",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8789/toolbox-backfill-stripe-platform-id",
+        "createdAt": "2026-04-23T16:11:12.499Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8741",
+        "title": "Web: gate give redirect on early-access person allowlist",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8741/web-gate-give-redirect-on-early-access-person-allowlist",
+        "createdAt": "2026-04-21T17:42:30.691Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8738",
+        "title": "Per-entry-point \"Give on Web\" allow toggles (cluster config, surfaced in /giving/settings)",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8738/per-entry-point-give-on-web-allow-toggles-cluster-config-surfaced-in",
+        "createdAt": "2026-04-21T16:50:40.665Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8737",
+        "title": "Cluster: give-flow early-access person allowlist config + resolver",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8737/cluster-give-flow-early-access-person-allowlist-config-resolver",
+        "createdAt": "2026-04-21T16:33:07.389Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8736",
+        "title": "Send entry-point source from every give-flow caller",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8736/send-entry-point-source-from-every-give-flow-caller",
+        "createdAt": "2026-04-21T16:32:58.064Z",
+        "state": "In Review"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-8740",
+        "title": "Google Pay Button Disappears When Recurring is Turned On for Web Embed",
+        "url": "https://linear.app/differential/issue/APO-8740/google-pay-button-disappears-when-recurring-is-turned-on-for-web-embed",
+        "project": "Giving Polish & Fixes",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8808",
+        "title": "Redirect web giving page when giving is not set up",
+        "url": "https://linear.app/differential/issue/APO-8808/redirect-web-giving-page-when-giving-is-not-set-up",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-8729",
+        "title": "Increase vert/horix Size of Embed to Accommodate for Recurring Giving Buttons and Express Button",
+        "url": "https://linear.app/differential/issue/APO-8729/increase-verthorix-size-of-embed-to-accommodate-for-recurring-giving",
+        "project": "Giving Polish & Fixes",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8799",
+        "title": "Send processing email for gifts still processing",
+        "url": "https://linear.app/differential/issue/APO-8799/send-processing-email-for-gifts-still-processing",
+        "project": null,
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-8792",
+        "title": "For people gated to Full Platform giving, they see express checkout in a weird spot and can't proceed from /payment",
+        "url": "https://linear.app/differential/issue/APO-8792/for-people-gated-to-full-platform-giving-they-see-express-checkout-in",
+        "project": "Giving Polish & Fixes",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8750",
+        "title": "Default Today on Starting Dropdown When 2 Weeks or Monthly is Selected",
+        "url": "https://linear.app/differential/issue/APO-8750/default-today-on-starting-dropdown-when-2-weeks-or-monthly-is-selected",
+        "project": "Giving Polish & Fixes",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8741",
+        "title": "Web: gate give redirect on early-access person allowlist",
+        "url": "https://linear.app/differential/issue/APO-8741/web-gate-give-redirect-on-early-access-person-allowlist",
+        "project": "Giving Polish & Fixes",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8737",
+        "title": "Cluster: give-flow early-access person allowlist config + resolver",
+        "url": "https://linear.app/differential/issue/APO-8737/cluster-give-flow-early-access-person-allowlist-config-resolver",
+        "project": "Giving Polish & Fixes",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8735",
+        "title": "Add Launch Controls for CC+ACH on App Clip and App while Preserving Web Embed Redirect",
+        "url": "https://linear.app/differential/issue/APO-8735/add-launch-controls-for-ccach-on-app-clip-and-app-while-preserving-web",
+        "project": null,
+        "state": "Duplicate"
+      },
+      {
+        "identifier": "APO-8734",
+        "title": "No 1st and 15th on Web Frequency Drop Down",
+        "url": "https://linear.app/differential/issue/APO-8734/no-1st-and-15th-on-web-frequency-drop-down",
+        "project": "Giving Polish & Fixes",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8738",
+        "title": "Per-entry-point \"Give on Web\" allow toggles (cluster config, surfaced in /giving/settings)",
+        "url": "https://linear.app/differential/issue/APO-8738/per-entry-point-give-on-web-allow-toggles-cluster-config-surfaced-in",
+        "project": "Giving Polish & Fixes",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-8730",
+        "title": "Increase Width of Embed to Accommodate for Information in the Frequency Drop Down",
+        "url": "https://linear.app/differential/issue/APO-8730/increase-width-of-embed-to-accommodate-for-information-in-the",
+        "project": "Giving Polish & Fixes",
+        "state": "Duplicate"
+      },
+      {
+        "identifier": "APO-8702",
+        "title": "Web Entry + Other Payment Methods",
+        "url": "https://linear.app/differential/issue/APO-8702/web-entry-other-payment-methods",
+        "project": "Giving Polish & Fixes",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8676",
+        "title": "Apple Pay Button Appear / Disappear When Pressing Recurring Button",
+        "url": "https://linear.app/differential/issue/APO-8676/apple-pay-button-appear-disappear-when-pressing-recurring-button",
+        "project": "Giving Polish & Fixes",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8689",
+        "title": "End-to-end Performance Audit of Web Giving Flow",
+        "url": "https://linear.app/differential/issue/APO-8689/end-to-end-performance-audit-of-web-giving-flow",
+        "project": "Giving Polish & Fixes",
+        "state": "To Do"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "fix: show express checkout in the same place no matter what and allow config to access full platform giving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3245",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-23T23:27:42Z"
+      },
+      {
+        "title": "feat: add full platform giving allowlist management UI and person search",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3244",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-24T21:42:39Z"
+      },
+      {
+        "title": "feat: backfill stripe platform id",
+        "url": "https://github.com/ApollosProject/toolbox/pull/26",
+        "repo": "toolbox",
+        "merged_at": "2026-04-23T17:02:50Z"
+      },
+      {
+        "title": "feat: send entry-point source for giving flow",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6259",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-04-22T17:49:58Z"
+      },
+      {
+        "title": "feat: allowlist gate for full platform giving access bypassing LD flag",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3221",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-22T20:41:23Z"
+      },
+      {
+        "title": "feat: add hasFullPlatformGivingAccess query with person allowlist check",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2890",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-04-21T20:27:50Z"
+      },
+      {
+        "title": "feat: add balanceTransactionId to transactions report data",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2883",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-04-20T22:44:42Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix: avoid redundant allowlist call on payment page loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3247",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat: add giveOnWebAllowedSources field to Church schema",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2911",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: send entry-point source for giving flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3229",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat: enrich transactions with Stripe balance transaction fees and net",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3212",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix: scope Stripe customer rows to platform account ID",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2853",
+        "repo": "apollos-cluster",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "test(stripeProvider): cover createAccount baseURL resolution",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3242"
+      },
+      {
+        "title": "chore: prep web embeds React peers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3241"
+      },
+      {
+        "title": "chore: prep shared package React peers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3240"
+      },
+      {
+        "title": "Remove staging deployment workflow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3236"
+      },
+      {
+        "title": "fix(prisma): enable ssl for pg adapter connections",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3233"
+      },
+      {
+        "title": "feat: add giveOnWebAllowedSources field to Church schema",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2911"
+      },
+      {
+        "title": "[APO-8676] Keep Apple/Google Pay button mounted on Recurring toggle",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3223"
+      },
+      {
+        "title": "chore(schema): remove unused deprecated fields",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2892"
+      },
+      {
+        "title": "fix(ci): filter admin-preview deployment lookup by head SHA",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3216"
+      },
+      {
+        "title": "fix: focus amount input on first give click [APO-8675]",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3215"
+      },
+      {
+        "title": "[codex] Fix auth redirects after give login",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3214"
+      },
+      {
+        "title": "[APO-8156] Allow Administrators to Edit a Donor's Recurring Gift",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2855"
+      },
+      {
+        "title": "fix: scope Stripe customer rows to platform account ID",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2853"
+      },
+      {
+        "title": "feat: add subscription Excel workbook generation",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2848"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- Reviewed: fix(ci): filter admin-preview deployment lookup by head SHA\n- Reviewed: [codex] Fix auth redirects after give login\n- Reviewed: [APO-8156] Allow Administrators to Edit a Donor's Recurring Gift\n- Reviewed: fix: scope Stripe customers by platform account ID instead of church slug\n- Reviewed: feat: add subscription Excel workbook generation\n- In progress: APO-8668: Enrich transactions with balance transaction fee data in loader\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- feat: add hasFullPlatformGivingAccess query with person allowlist check\n- Done: APO-8734: No 1st and 15th on Web Frequency Drop Down\n- In progress: APO-8741: Web: gate give redirect on early-access person allowlist\n- Filed 4 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- feat: send entry-point source for giving flow\n- feat: allowlist gate for full platform giving access bypassing LD flag\n- Reviewed: fix(prisma): enable ssl for pg adapter connections\n- Reviewed: chore(schema): remove unused deprecated fields\n- Done: APO-8737: Cluster: give-flow early-access person allowlist config + resolver\n- In progress: APO-8738: Per-entry-point \"Give on Web\" allow toggles (cluster config, surfaced in /giving/settings)\n- In progress: APO-8736: Send entry-point source from every give-flow caller\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- feat: backfill stripe platform id\n- Reviewed: test(stripeProvider): cover createAccount baseURL resolution\n- Reviewed: chore: prep web embeds React peers\n- Reviewed: Remove staging deployment workflow\n- Reviewed: fix: focus amount input on first give click [APO-8675]\n- Done: APO-8789: [TOOLBOX] Backfill Stripe Platform ID\n- In progress: APO-8792: For people gated to Full Platform giving, they see express checkout in a weird spot and can't proceed from /payment\n- In progress: APO-8590: Express payments fail when logged in\n- In progress: APO-8132: Scope all customer interactions to the `stripe_platform_id`\n- In progress: APO-8128: Scope Stripe customers to platform ID\n- Filed 2 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- feat: add full platform giving allowlist management UI and person search\n- Reviewed: chore: prep shared package React peers\n- Reviewed: feat: add giveOnWebAllowedSources field to Church schema\n- Reviewed: [APO-8676] Keep Apple/Google Pay button mounted on Recurring toggle\n- In progress: APO-8795: Refactor Web Redirects (it's confusing code!)\n- Filed 2 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": ", April 24\nDaily\nWhat did you work on today\n5:15 PM\nShipped People Gating to prod; test-gave to Crossroads\nAdded Karen, Nick, and Sean to giving allowlist\nDebugged Stripe Connected Account modal issue\nReviewed several PRs\nTurned off stale Heroku admin preview deploys (@Gerard killed it fully)\nDiscussed /give load defaults and empty-state design\nSlacking about Giving flow emails\nCleaned up merge conflicts on my open Entry Point gating PRs\nScreenshot 2026-04-24 at 5.15.13 PM.png\nScreenshot 2026-04-24 at 5.15.13 PM.png"
+    },
+    {
+      "day": "Thursday",
+      "content": ", April 23\nDaily\nWhat did you work on today\n4:57 PM\nTrying to clobber through getting us and Crossroads into testing in production\nToolbox script PR to get people gating of Full Platform to work\nRefactored cluster pr to clean up stripe platform ids in customer records in prod\ngot ai to build a first pass at UI to set the People gating config for Full Platform (didn't actually look at it yet)\nFixed an issue where you wouldn't get the Give button on /give/payment and the Express Checkout was in the wrong spot\nScreenshot 2026-04-23 at 4.57.39 PM.png\nScreenshot 2026-04-23 at 4.57.39 PM.png"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", April 22\nDaily\nWhat did you work on today\n4:55 PM\nPRs for tranched rollout of web giving full platform (in review)\nPRs for gated Full platform giving by person id (cluster and web) in prod for cluster and staging for web (being hotfixed to prod)\nSync w/ @Conrad @Dylan @Tyler about Express Checkout loading state\nScreenshot 2026-04-22 at 4.52.20 PM.png\nScreenshot 2026-04-22 at 4.52.20 PM.png"
+    },
+    {
+      "day": "Tuesday",
+      "content": ", April 21\nDaily\nWhat did you work on today\n4:59 PM\nHuddle w/ @David @Gerard @Tyler @Vincent @Conrad about testing in production\nScoping Giving Polish work w/ @Dylan\nCluster PR merged (hotfixed tonight) to allow us to gate Full Platform giving by people id\nWeb PR written to utilize the cluster pr 👆\nPlanning out work for Entry Point sourcing and gating for Full Platform giving\nStarted working on the sourcing part of this\nSlackin' w/ @Dylan periodically about our project\nPushed up the Giving QA Performance app to internal Apollos repo so @Dylan can experiment with it (Claude stuff he was trying wasn't working out)\nScreenshot 2026-04-21 at 4.59.21 PM.png\nScreenshot 2026-04-21 at 4.59.21 PM.png"
+    },
+    {
+      "day": "Monday",
+      "content": ", April 20\nDaily\nWhat did you work on today\n5:19 PM\nSlackin' w/ @Michael @Dylan @Shahbano @Vincent\nPR reviews for @Michael @Nick @Dylan\nMerged a PR remaining from Gross Settlement (hide fees)\nManual QA of giving flows\nHad an agent running most of the day to build a QA battery for Web Giving...trying to get it hooked up to sims as well. Using mitm, ngrok, and all the tools devs use right now to dev in local. (these percentages are wrong...because my tests/environment are wrong right now)\nScreenshot 2026-04-20 at 5.17.48 PM.png\nScreenshot 2026-04-20 at 5.17.48 PM.png\nScreenshot 2026-04-20 at 5.18.54 PM.png"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 7\n  • PR reviews: 14\n  • Commits pushed: 6\n  • Linear issues completed: 14\n  • Linear issues worked on: 21\n  • Linear issues created: 8\n  • Linear replies: 15\n  • Repos: apollos-admin, apollos-cluster, apollos-platforms, toolbox\n\n📝 Check-ins:\n\n  Monday: - Reviewed: fix(ci): filter admin-preview deployment lookup by head SHA\n- Review...\n  Tuesday: - feat: add hasFullPlatformGivingAccess query with person allowlist check\n- Done...\n  Wednesday: - feat: send entry-point source for giving flow\n- feat: allowlist gate for full ...\n  Thursday: - feat: backfill stripe platform id\n- Reviewed: test(stripeProvider): cover crea...\n  Friday: - feat: add full platform giving allowlist management UI and person search\n- Rev...\n  Friday: , April 24\nDaily\nWhat did you work on today\n5:15 PM\nShipped People Gating to pro...\n  Thursday: , April 23\nDaily\nWhat did you work on today\n4:57 PM\nTrying to clobber through ge...\n  Wednesday: , April 22\nDaily\nWhat did you work on today\n4:55 PM\nPRs for tranched rollout of ...\n  Tuesday: , April 21\nDaily\nWhat did you work on today\n4:59 PM\nHuddle w/ @David @Gerard @Ty...\n  Monday: , April 20\nDaily\nWhat did you work on today\n5:19 PM\nSlackin' w/ @Michael @Dylan ...\n",
+  "formatted_output": null
+}
