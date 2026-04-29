@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "generated_at": "2026-04-29T22:03:00.916Z",
+    "window_start": "2026-04-25T05:00:00.000Z",
+    "window_end": "2026-04-30T04:59:59.999Z",
+    "week_ending": "2026-05-01",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 8,
+    "prs_total": 9,
+    "pr_reviews": 6,
+    "pr_comments": 19,
+    "commits_pushed": 7,
+    "linear_completed": 1,
+    "linear_worked_on": 1,
+    "linear_issues_created": 2,
+    "linear_comments": 11,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-8799",
+        "title": "Send processing email for gifts still processing",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8799/send-processing-email-for-gifts-still-processing",
+        "completedAt": "2026-04-29T16:36:12.587Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-8799",
+        "title": "Send processing email for gifts still processing",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8799/send-processing-email-for-gifts-still-processing",
+        "completedAt": "2026-04-29T16:36:12.587Z",
+        "state": "Released"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-8918",
+        "title": "Admin /giving/settings: per-source \"Give on Web\" toggles UI",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8918/admin-givingsettings-per-source-give-on-web-toggles-ui",
+        "createdAt": "2026-04-29T16:47:59.287Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-8856",
+        "title": "Web Embed in modal presentation - Make sure giving sets the Stripe metadata SOURCE correctly",
+        "project": "Giving Polish & Fixes",
+        "url": "https://linear.app/differential/issue/APO-8856/web-embed-in-modal-presentation-make-sure-giving-sets-the-stripe",
+        "createdAt": "2026-04-27T20:54:04.502Z",
+        "state": "To Do"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-8738",
+        "title": "Per-entry-point \"Give on Web\" gating (cluster config + decision order)",
+        "url": "https://linear.app/differential/issue/APO-8738/per-entry-point-give-on-web-gating-cluster-config-decision-order",
+        "project": "Giving Polish & Fixes",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-8677",
+        "title": "Improve Error Screen and Redirect Handling",
+        "url": "https://linear.app/differential/issue/APO-8677/improve-error-screen-and-redirect-handling",
+        "project": "Giving Polish & Fixes",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-6943",
+        "title": "[Admin- Transaction Page] Add Comma to the Count of Transactions on the Page When the Amount is Above 999",
+        "url": "https://linear.app/differential/issue/APO-6943/admin-transaction-page-add-comma-to-the-count-of-transactions-on-the",
+        "project": "Giving Polish & Fixes",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-8365",
+        "title": "Add required validation and helper text for User Support Email in Org Profile",
+        "url": "https://linear.app/differential/issue/APO-8365/add-required-validation-and-helper-text-for-user-support-email-in-org",
+        "project": "Mandatory User Support Email in Admin",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8873",
+        "title": "Send an email when a charge fails",
+        "url": "https://linear.app/differential/issue/APO-8873/send-an-email-when-a-charge-fails",
+        "project": "Giving Polish & Fixes",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-6947",
+        "title": "[Admin - Multiple Pages] Many Differences for Column Table Headers and Formatting in the Table Across Fund / Transactions / Payouts / Reports",
+        "url": "https://linear.app/differential/issue/APO-6947/admin-multiple-pages-many-differences-for-column-table-headers-and",
+        "project": "Giving Polish & Fixes",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8884",
+        "title": "Crossroads page errors after loading for a few seconds",
+        "url": "https://linear.app/differential/issue/APO-8884/crossroads-page-errors-after-loading-for-a-few-seconds",
+        "project": null,
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8156",
+        "title": "Allow Administrators to Edit a Donor's Recurring Gift in the Giving Admin Dashboard",
+        "url": "https://linear.app/differential/issue/APO-8156/allow-administrators-to-edit-a-donors-recurring-gift-in-the-giving",
+        "project": "Editing Recurring Gifts",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8795",
+        "title": "Refactor Web Redirects (it's confusing code!)",
+        "url": "https://linear.app/differential/issue/APO-8795/refactor-web-redirects-its-confusing-code",
+        "project": "Giving Polish & Fixes",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8799",
+        "title": "Send processing email for gifts still processing",
+        "url": "https://linear.app/differential/issue/APO-8799/send-processing-email-for-gifts-still-processing",
+        "project": "Giving Polish & Fixes",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8852",
+        "title": "Pre-check \"Save payment details\" checkbox by default in checkout (ACH & Card)",
+        "url": "https://linear.app/differential/issue/APO-8852/pre-check-save-payment-details-checkbox-by-default-in-checkout-ach-and",
+        "project": "Giving Polish & Fixes",
+        "state": "Canceled"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "fix: make transaction counts have commas",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3277",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-29T20:58:01Z"
+      },
+      {
+        "title": "feat: send an email when a charge fails",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3263",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-28T20:48:51Z"
+      },
+      {
+        "title": "feat: add Give on Web per-source toggle UI to giving settings",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3257",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-29T21:23:08Z"
+      },
+      {
+        "title": "feat: gate full platform giving by source",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3256",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-29T20:31:50Z"
+      },
+      {
+        "title": "feat: add a email for gifts still processing",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3254",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-27T19:59:17Z"
+      },
+      {
+        "title": "fix: avoid redundant allowlist call on payment page loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3247",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-27T13:34:35Z"
+      },
+      {
+        "title": "feat: add giveOnWebAllowedSources field to Church schema",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2911",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-04-27T23:20:39Z"
+      },
+      {
+        "title": "feat: send entry-point source for giving flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3229",
+        "repo": "apollos-admin",
+        "merged_at": "2026-04-27T21:48:12Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "feat: enrich transactions with Stripe balance transaction fees and net",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3212",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "fix(canvas-ui-web): Church mocks include giveOnWebAllowedSources",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3267"
+      },
+      {
+        "title": "fix: Replace Routes During Login/Signup Flow [APO-8677]",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3250"
+      },
+      {
+        "title": "fix: send app clip localizations inline",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3248"
+      },
+      {
+        "title": "chore(schema): remove unused deprecated schema fields",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2916"
+      },
+      {
+        "title": "feat: add giveOnWebAllowedSources field to Church schema",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2911"
+      },
+      {
+        "title": "Allow admins to delete tag groups in Admin",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2764"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- feat: add a email for gifts still processing\n- fix: avoid redundant allowlist call on payment page loader\n- feat: send entry-point source for giving flow\n- Reviewed: fix: Replace Routes During Login/Signup Flow [APO-8677]\n- In progress: APO-8738: Per-entry-point \"Give on Web\" allow toggles (cluster config, surfaced in /giving/settings)\n- In progress: APO-8736: Send entry-point source from every give-flow caller\n- Filed a new Linear ticket\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- feat: send an email when a charge fails\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- fix: make transaction counts have commas\n- feat: add Give on Web per-source toggle UI to giving settings\n- feat: gate full platform giving by source\n- Reviewed: fix: send app clip localizations inline\n- Reviewed: chore(schema): remove unused deprecated schema fields\n- Reviewed: Allow admins to delete tag groups in Admin\n- Done: APO-8799: Send processing email for gifts still processing\n- Filed a new Linear ticket\n- Left comments on PRs and in Linear\nOOO Thursday and Friday."
+    },
+    {
+      "day": "Wednesday",
+      "content": ", April 29\nDaily\nWhat did you work on today\n4:56 PM\nJam w/ @Dylan about Giving Polish project\nACH Charge events jam w/ @Dylan @Brandon\nApp Clip banner jam w/ @Vitor\nPRs merged to add commas to an Admin dashboard, Source Gating! on Giving, and toggles for Source Gating added to Admin\nReviewed and commented on several PRS\nNormal Linear issue commenting and organizing\nScreenshot 2026-04-29 at 4.56.59 PM.png\nScreenshot 2026-04-29 at 4.56.59 PM.png"
+    },
+    {
+      "day": "Tuesday",
+      "content": ", April 28\nDaily\nWhat did you work on today\n4:22 PM\nProject update (detailed steps to land on Crossroads Blockers this week)\nCleaned up two PRs that are in draft now in anticipation of a couple of hotfixes over the next 24 hours\nDebugging a staging login issue w/ @Austin\nInvestigated `charge.failed` emails and pushed a PR to add this capability to our system (to be hotfixed as well)\nDebugging Admin/Web deployment issues (related to some package updates)\nArch Pod Huddle\nScreenshot 2026-04-28 at 4.22.41 PM.png\nScreenshot 2026-04-28 at 4.22.41 PM.png"
+    },
+    {
+      "day": "Monday",
+      "content": ", April 27\nDaily\nWhat did you work on today\n5:46 PM\nLinear cleanup for Giving Polish project\nPR to add a new Gift Processing email written and merged (blocker for Crossroads) w/ @Dylan\nMerged a PR for entry point sourcing, and refactoring allowlist logic\nRebased a couple of Giving Source gating PRs\nOpened PRs to actually gating full platform giving by SOURCE, and better toggles for this in Giving Settings\nScreenshot 2026-04-27 at 5.46.30 PM.png"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 8\n  • PR reviews: 6\n  • Commits pushed: 7\n  • Linear issues completed: 1\n  • Linear issues worked on: 1\n  • Linear issues created: 2\n  • Linear replies: 11\n  • Repos: apollos-admin, apollos-cluster\n\n📝 Check-ins:\n\n  Monday: - feat: add a email for gifts still processing\n- fix: avoid redundant allowlist ...\n  Tuesday: - feat: send an email when a charge fails\n- Left comments on PRs and in Linear\n  Wednesday: - fix: make transaction counts have commas\n- feat: add Give on Web per-source to...\n  Wednesday: , April 29\nDaily\nWhat did you work on today\n4:56 PM\nJam w/ @Dylan about Giving P...\n  Tuesday: , April 28\nDaily\nWhat did you work on today\n4:22 PM\nProject update (detailed ste...\n  Monday: , April 27\nDaily\nWhat did you work on today\n5:46 PM\nLinear cleanup for Giving Po...\n",
+  "formatted_output": null
+}
