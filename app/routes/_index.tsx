@@ -7,6 +7,7 @@ import { getCachedRunSummary } from "../../lib/summary";
 import { fetchWeeklySummary } from "../../lib/github-fetch";
 import { listDailySnapshots } from "../../lib/daily-snapshot";
 import { isBasecampConfigured } from "../../lib/basecamp-post";
+import { isGranolaConfigured } from "../../lib/granola-client";
 import { TodaySection } from "~/components/TodaySection";
 import { WeeklySection } from "~/components/WeeklySection";
 import { FullSummaryFormContainer } from "~/components/FullSummaryFormContainer";
@@ -28,6 +29,7 @@ interface IndexLoaderData {
   weekly: { payload?: Payload; prevPayload?: Payload | null; error?: string };
   capturedDates: string[];
   basecampConfigured: boolean;
+  granolaConfigured: boolean;
 }
 
 export async function loader({ request }: LoaderFunctionArgs) {
@@ -39,6 +41,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
         weekly: { error: "Method not allowed" },
         capturedDates: [] as string[],
         basecampConfigured: false,
+        granolaConfigured: false,
       },
       { status: 405 }
     );
@@ -124,12 +127,19 @@ export async function loader({ request }: LoaderFunctionArgs) {
     weekly,
     capturedDates,
     basecampConfigured: isBasecampConfigured(),
+    granolaConfigured: isGranolaConfigured(),
   } satisfies IndexLoaderData);
 }
 
 export default function Index() {
-  const { today, yesterday, weekly, capturedDates, basecampConfigured } =
-    useLoaderData<typeof loader>();
+  const {
+    today,
+    yesterday,
+    weekly,
+    capturedDates,
+    basecampConfigured,
+    granolaConfigured,
+  } = useLoaderData<typeof loader>();
   const [viewMode, setViewMode] = useState<ViewMode>("today");
   const navigation = useNavigation();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -244,6 +254,7 @@ export default function Index() {
               goals={goals}
               capturedDates={capturedDates}
               basecampConfigured={basecampConfigured}
+              granolaConfigured={granolaConfigured}
             />
           )}
           {viewMode === "yesterday" && (
@@ -257,6 +268,7 @@ export default function Index() {
               goals={goals}
               capturedDates={capturedDates}
               basecampConfigured={basecampConfigured}
+              granolaConfigured={granolaConfigured}
             />
           )}
         </div>
