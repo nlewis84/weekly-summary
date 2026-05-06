@@ -6,7 +6,13 @@ vi.mock("./github-fetch.js", () => ({
   fetchWeeklySummary: vi.fn(),
 }));
 
+vi.mock("./chart-forecast.js", () => ({
+  getCurrentWeekEndingFriday: vi.fn(() => "2026-02-07"),
+  forecastMetricsFromSnapshotsForWeek: vi.fn(() => null),
+}));
+
 const { listWeeklySummaries, fetchWeeklySummary } = await import("./github-fetch.js");
+const chartForecast = await import("./chart-forecast.js");
 
 const mockPayload = (weekEnding: string, prsMerged: number, repo: string) => ({
   meta: {
@@ -24,6 +30,7 @@ const mockPayload = (weekEnding: string, prsMerged: number, repo: string) => ({
     linear_completed: 3,
     linear_worked_on: 1,
     linear_issues_created: 0,
+    linear_comments: 0,
     repos: [repo],
   },
   linear: { completed_issues: [], worked_on_issues: [], created_issues: [] },
@@ -34,6 +41,7 @@ const mockPayload = (weekEnding: string, prsMerged: number, repo: string) => ({
       repo,
       merged_at: "2026-02-01T12:00:00Z",
     })),
+    open_prs: [],
     reviews: [],
   },
   check_ins: [],
@@ -45,6 +53,12 @@ describe("getChartsData", () => {
   beforeEach(() => {
     vi.mocked(listWeeklySummaries).mockReset();
     vi.mocked(fetchWeeklySummary).mockReset();
+    vi.mocked(chartForecast.getCurrentWeekEndingFriday).mockReturnValue(
+      "2026-02-07"
+    );
+    vi.mocked(chartForecast.forecastMetricsFromSnapshotsForWeek).mockReturnValue(
+      null
+    );
   });
 
   it("returns dataPoints and repoActivity from summaries", async () => {
@@ -53,7 +67,7 @@ describe("getChartsData", () => {
       .mockResolvedValueOnce(mockPayload("2026-02-01", 3, "owner/repo-a"))
       .mockResolvedValueOnce(mockPayload("2026-01-25", 2, "owner/repo-a"));
 
-    const result = await getChartsData();
+    const result = await getChartsData({ bust: true });
 
     expect(result.dataPoints).toHaveLength(2);
     expect(result.dataPoints[0]).toMatchObject({
@@ -81,6 +95,7 @@ describe("getChartsData", () => {
           { title: "y", url: "u", repo: "owner/big", merged_at: null },
           { title: "z", url: "u", repo: "owner/big", merged_at: null },
         ],
+        open_prs: [],
         reviews: [],
       },
       stats: {
@@ -92,11 +107,12 @@ describe("getChartsData", () => {
         linear_completed: 0,
         linear_worked_on: 0,
         linear_issues_created: 0,
+        linear_comments: 0,
         repos: ["owner/small", "owner/big"],
       },
     });
 
-    const result = await getChartsData();
+    const result = await getChartsData({ bust: true });
     expect(result.repoActivity[0].repo).toBe("owner/big");
     expect(result.repoActivity[0].total_prs).toBe(2);
     expect(result.repoActivity[1].repo).toBe("owner/small");
@@ -109,8 +125,39 @@ describe("getChartsData", () => {
       .mockResolvedValueOnce(mockPayload("2026-02-01", 1, "owner/repo"))
       .mockResolvedValueOnce(null);
 
-    const result = await getChartsData();
+    const result = await getChartsData({ bust: true });
     expect(result.dataPoints).toHaveLength(1);
     expect(result.dataPoints[0].week_ending).toBe("2026-02-01");
+  });
+
+  it("appends forecast week when latest summary is before current Friday and snapshots project", async () => {
+    vi.mocked(listWeeklySummaries).mockResolvedValue(["2026-01-31"]);
+    vi.mocked(fetchWeeklySummary).mockResolvedValue(
+      mockPayload("2026-01-31", 1, "owner/repo")
+    );
+    vi.mocked(chartForecast.getCurrentWeekEndingFriday).mockReturnValue(
+      "2026-02-07"
+    );
+    vi.mocked(chartForecast.forecastMetricsFromSnapshotsForWeek).mockReturnValue({
+      prs_merged: 7,
+      pr_reviews: 0,
+      pr_comments: 0,
+      commits_pushed: 0,
+      linear_completed: 0,
+      linear_worked_on: 0,
+      linear_issues_created: 0,
+      linear_comments: 0,
+      prs_total: 7,
+      repos_count: 1,
+    });
+
+    const result = await getChartsData({ bust: true });
+    expect(result.dataPoints).toHaveLength(2);
+    const fc = result.dataPoints.find((d) => d.forecast);
+    expect(fc).toMatchObject({
+      week_ending: "2026-02-07",
+      prs_merged: 7,
+      forecast: true,
+    });
   });
 });

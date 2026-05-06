@@ -190,20 +190,6 @@ export default function Charts() {
     setSearchParams(next);
   };
 
-  const metricsData = dataPoints.map((d) => ({
-    week: formatWeek(d.week_ending),
-    "PRs merged": d.prs_merged,
-    "PR reviews": d.pr_reviews,
-    "PR comments": d.pr_comments,
-    "Commits pushed": d.commits_pushed,
-    "Linear completed": d.linear_completed,
-    "Linear worked on": d.linear_worked_on,
-    "Linear issues created": d.linear_issues_created ?? 0,
-    "Linear comments": d.linear_comments ?? 0,
-    "PRs total": d.prs_total,
-    Repos: d.repos_count,
-  }));
-
   const handleExportCsv = () => {
     if (view === "annual" && annualData) {
       const headers = [
@@ -215,6 +201,7 @@ export default function Charts() {
         "Linear completed",
         "Linear worked on",
         "Linear issues created",
+        "Forecast row",
       ];
       const rows = annualData.months.map((m) =>
         [
@@ -226,6 +213,7 @@ export default function Charts() {
           m.linear_completed,
           m.linear_worked_on,
           m.linear_issues_created,
+          m.forecast ? "yes" : "no",
         ].join(",")
       );
       const totalsRow = [
@@ -237,6 +225,7 @@ export default function Charts() {
         annualData.total_linear_completed,
         annualData.total_linear_worked_on,
         annualData.total_linear_issues_created,
+        "",
       ].join(",");
       const csv = [headers.join(","), ...rows, totalsRow].join("\n");
       const blob = new Blob([csv], { type: "text/csv" });
@@ -248,6 +237,9 @@ export default function Charts() {
       URL.revokeObjectURL(url);
       toast("CSV exported");
     } else {
+      const sortedWeeks = [...dataPoints].sort((a, b) =>
+        a.week_ending.localeCompare(b.week_ending)
+      );
       const headers = [
         "Week",
         "PRs merged",
@@ -258,18 +250,20 @@ export default function Charts() {
         "Linear worked on",
         "Linear issues created",
         "Linear comments",
+        "Forecast row",
       ];
-      const rows = metricsData.map((d) =>
+      const rows = sortedWeeks.map((d) =>
         [
-          d.week,
-          d["PRs merged"],
-          d["PR reviews"],
-          d["PR comments"],
-          d["Commits pushed"],
-          d["Linear completed"],
-          d["Linear worked on"],
-          d["Linear issues created"] ?? 0,
-          d["Linear comments"] ?? 0,
+          formatWeek(d.week_ending),
+          d.prs_merged,
+          d.pr_reviews,
+          d.pr_comments,
+          d.commits_pushed,
+          d.linear_completed,
+          d.linear_worked_on,
+          d.linear_issues_created ?? 0,
+          d.linear_comments ?? 0,
+          d.forecast ? "yes" : "no",
         ].join(",")
       );
       const csv = [headers.join(","), ...rows].join("\n");

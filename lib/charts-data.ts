@@ -6,6 +6,10 @@
 import { listWeeklySummaries, fetchWeeklySummary } from "./github-fetch.js";
 import { dataCache } from "./cache.js";
 import type { Payload } from "./types.js";
+import {
+  forecastMetricsFromSnapshotsForWeek,
+  getCurrentWeekEndingFriday,
+} from "./chart-forecast.js";
 
 export interface ChartDataPoint {
   week_ending: string;
@@ -19,6 +23,8 @@ export interface ChartDataPoint {
   linear_comments: number;
   prs_total: number;
   repos_count: number;
+  /** Synthetic row from daily snapshots when GitHub has no summary for this week yet */
+  forecast?: boolean;
 }
 
 export interface RepoActivity {
@@ -92,6 +98,31 @@ export async function getChartsData(options?: {
       return { repo, weeks, total_prs };
     })
     .sort((a, b) => b.total_prs - a.total_prs);
+
+  const sortedByWeek = [...dataPoints].sort((a, b) =>
+    a.week_ending.localeCompare(b.week_ending)
+  );
+  const latestWeek = sortedByWeek[sortedByWeek.length - 1]?.week_ending;
+  const currentFriday = getCurrentWeekEndingFriday(new Date());
+  if (!latestWeek || latestWeek < currentFriday) {
+    const fc = forecastMetricsFromSnapshotsForWeek(currentFriday);
+    if (fc) {
+      dataPoints.push({
+        week_ending: currentFriday,
+        prs_merged: fc.prs_merged,
+        pr_reviews: fc.pr_reviews,
+        pr_comments: fc.pr_comments,
+        commits_pushed: fc.commits_pushed,
+        linear_completed: fc.linear_completed,
+        linear_worked_on: fc.linear_worked_on,
+        linear_issues_created: fc.linear_issues_created,
+        linear_comments: fc.linear_comments,
+        prs_total: fc.prs_total,
+        repos_count: fc.repos_count,
+        forecast: true,
+      });
+    }
+  }
 
   const result = { dataPoints, repoActivity };
   dataCache.set(key, result);

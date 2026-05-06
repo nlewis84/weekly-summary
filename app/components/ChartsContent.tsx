@@ -21,7 +21,7 @@ import {
   type ChartConfig,
 } from "~/components/ui/chart";
 import { MetricLineChart } from "~/components/MetricLineChart";
-import type { RepoActivity } from "../../lib/charts-data";
+import type { ChartDataPoint, RepoActivity } from "../../lib/charts-data";
 
 const formatWeek = (w: string) => {
   const d = new Date(w + "T12:00:00");
@@ -29,17 +29,37 @@ const formatWeek = (w: string) => {
 };
 
 const GITHUB_METRICS = [
-  { key: "PRs merged", color: "var(--chart-1)" },
-  { key: "PR reviews", color: "var(--chart-2)" },
-  { key: "PR comments", color: "var(--chart-3)" },
-  { key: "Commits pushed", color: "var(--chart-4)" },
+  { key: "PRs merged", color: "var(--chart-1)", sumKey: "prs_merged" as const },
+  { key: "PR reviews", color: "var(--chart-2)", sumKey: "pr_reviews" as const },
+  { key: "PR comments", color: "var(--chart-3)", sumKey: "pr_comments" as const },
+  {
+    key: "Commits pushed",
+    color: "var(--chart-4)",
+    sumKey: "commits_pushed" as const,
+  },
 ] as const;
 
 const LINEAR_METRICS = [
-  { key: "Linear completed", color: "var(--chart-5)" },
-  { key: "Linear issues created", color: "var(--chart-7)" },
-  { key: "Linear comments", color: "var(--chart-8)" },
-  { key: "Linear worked on", color: "var(--chart-6)" },
+  {
+    key: "Linear completed",
+    color: "var(--chart-5)",
+    sumKey: "linear_completed" as const,
+  },
+  {
+    key: "Linear issues created",
+    color: "var(--chart-7)",
+    sumKey: "linear_issues_created" as const,
+  },
+  {
+    key: "Linear comments",
+    color: "var(--chart-8)",
+    sumKey: "linear_comments" as const,
+  },
+  {
+    key: "Linear worked on",
+    color: "var(--chart-6)",
+    sumKey: "linear_worked_on" as const,
+  },
 ] as const;
 
 const REPO_COLORS = [
@@ -56,19 +76,7 @@ const reposBarConfig = {
 } satisfies ChartConfig;
 
 interface ChartsContentProps {
-  dataPoints: {
-    week_ending: string;
-    prs_merged: number;
-    pr_reviews: number;
-    pr_comments: number;
-    commits_pushed: number;
-    linear_completed: number;
-    linear_worked_on: number;
-    linear_issues_created: number;
-    linear_comments: number;
-    prs_total: number;
-    repos_count: number;
-  }[];
+  dataPoints: ChartDataPoint[];
   repoActivity: RepoActivity[];
 }
 
@@ -83,7 +91,9 @@ export function ChartsContent({
   const sorted = [...dataPoints].sort((a, b) =>
     a.week_ending.localeCompare(b.week_ending)
   );
-  const metricsData = sorted.map((d) => ({
+  const forecastRow = sorted.find((d) => d.forecast === true);
+  const actualSorted = sorted.filter((d) => !d.forecast);
+  const metricsData = actualSorted.map((d) => ({
     week: formatWeek(d.week_ending),
     "PRs merged": d.prs_merged,
     "PR reviews": d.pr_reviews,
@@ -95,6 +105,26 @@ export function ChartsContent({
     "Linear comments": d.linear_comments,
   }));
 
+  const weekForecast = (
+    field: keyof Pick<
+      ChartDataPoint,
+      | "prs_merged"
+      | "pr_reviews"
+      | "pr_comments"
+      | "commits_pushed"
+      | "linear_completed"
+      | "linear_worked_on"
+      | "linear_issues_created"
+      | "linear_comments"
+    >
+  ): { x: string; value: number } | null =>
+    forecastRow
+      ? {
+          x: formatWeek(forecastRow.week_ending),
+          value: forecastRow[field],
+        }
+      : null;
+
   const topRepos = repoActivity.slice(0, 6);
   const reposBarData = repoActivity.slice(0, 10).map((r) => ({
     name: r.repo.split("/").pop() ?? r.repo,
@@ -102,7 +132,7 @@ export function ChartsContent({
   }));
 
   // Build over-time data: { weekLabel, repo1: n, repo2: n, ... } for top 6 repos
-  const reposOverTimeData = sorted.map((d) => {
+  const reposOverTimeData = actualSorted.map((d) => {
     const row: Record<string, number | string> = {
       weekLabel: formatWeek(d.week_ending),
     };
@@ -134,9 +164,17 @@ export function ChartsContent({
   return (
     <div>
       <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-4 sm:p-6 overflow-hidden">
-        <h3 className="text-sm font-medium text-(--color-text) mb-4">
-          PRs & Linear
-        </h3>
+        <div className="mb-4">
+          <h3 className="text-sm font-medium text-(--color-text)">
+            PRs & Linear
+          </h3>
+          {forecastRow ? (
+            <p className="text-xs text-text-muted mt-1">
+              Dashed segment uses local daily snapshots to project the current
+              week.
+            </p>
+          ) : null}
+        </div>
         <section aria-labelledby="github-metrics-heading">
           <h4
             id="github-metrics-heading"
@@ -145,7 +183,7 @@ export function ChartsContent({
             GitHub
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            {GITHUB_METRICS.map(({ key, color }) => (
+            {GITHUB_METRICS.map(({ key, color, sumKey }) => (
               <div
                 key={key}
                 className="bg-surface-elevated rounded-lg border border-(--color-border) p-3"
@@ -162,6 +200,7 @@ export function ChartsContent({
                   color={color}
                   xKey="week"
                   ariaLabel={`Line chart: ${key} over time`}
+                  forecast={weekForecast(sumKey)}
                 />
               </div>
             ))}
@@ -175,7 +214,7 @@ export function ChartsContent({
             Linear
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {LINEAR_METRICS.map(({ key, color }) => (
+            {LINEAR_METRICS.map(({ key, color, sumKey }) => (
               <div
                 key={key}
                 className="bg-surface-elevated rounded-lg border border-(--color-border) p-3"
@@ -192,6 +231,7 @@ export function ChartsContent({
                   color={color}
                   xKey="week"
                   ariaLabel={`Line chart: ${key} over time`}
+                  forecast={weekForecast(sumKey)}
                 />
               </div>
             ))}

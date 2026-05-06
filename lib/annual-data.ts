@@ -5,6 +5,19 @@
 import { listWeeklySummaries, fetchWeeklySummary } from "./github-fetch.js";
 import { dataCache } from "./cache.js";
 import type { Payload } from "./types.js";
+import { forecastMetricsFromSnapshotsForMonth } from "./chart-forecast.js";
+
+/** Snapshot-based month-end projection (totals stay actual-only). */
+export interface MonthlyForecastMetrics {
+  prs_merged: number;
+  pr_reviews: number;
+  pr_comments: number;
+  commits_pushed: number;
+  linear_completed: number;
+  linear_worked_on: number;
+  linear_issues_created: number;
+  prs_total: number;
+}
 
 export interface MonthlyAggregate {
   month: string; // YYYY-MM
@@ -18,6 +31,7 @@ export interface MonthlyAggregate {
   linear_issues_created: number;
   prs_total: number;
   week_count: number;
+  forecast?: MonthlyForecastMetrics | null;
 }
 
 export interface AnnualData {
@@ -147,6 +161,32 @@ export async function getAnnualData(
         week_count: data.count,
       };
     });
+
+  const now = new Date();
+  const currentYearStr = String(now.getFullYear());
+  const currentMonthStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+  if (year === currentYearStr) {
+    const idx = months.findIndex((m) => m.month === currentMonthStr);
+    if (idx >= 0) {
+      const fc = forecastMetricsFromSnapshotsForMonth(currentMonthStr, now);
+      if (fc) {
+        const prev = months[idx]!;
+        months[idx] = {
+          ...prev,
+          forecast: {
+            prs_merged: fc.prs_merged,
+            pr_reviews: fc.pr_reviews,
+            pr_comments: fc.pr_comments,
+            commits_pushed: fc.commits_pushed,
+            linear_completed: fc.linear_completed,
+            linear_worked_on: fc.linear_worked_on,
+            linear_issues_created: fc.linear_issues_created,
+            prs_total: fc.prs_total,
+          },
+        };
+      }
+    }
+  }
 
   const topRepos = Array.from(repoMap.entries())
     .map(([repo, prs]) => ({ repo, prs }))
