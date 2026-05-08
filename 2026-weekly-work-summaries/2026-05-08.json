@@ -1,0 +1,633 @@
+{
+  "meta": {
+    "generated_at": "2026-05-08T22:33:30.568Z",
+    "window_start": "2026-05-02T05:00:00.000Z",
+    "window_end": "2026-05-09T04:59:59.999Z",
+    "week_ending": "2026-05-08",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 7,
+    "prs_total": 11,
+    "pr_reviews": 17,
+    "pr_comments": 24,
+    "commits_pushed": 7,
+    "linear_completed": 12,
+    "linear_worked_on": 16,
+    "linear_issues_created": 10,
+    "linear_comments": 19,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-platforms"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-9060",
+        "title": "Spike: canonical platform fee source + audit Admin fee surfaces (net vs gross)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9060/spike-canonical-platform-fee-source-audit-admin-fee-surfaces-net-vs",
+        "completedAt": "2026-05-06T19:53:09.863Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8918",
+        "title": "Admin /giving/settings: per-source \"Give on Web\" toggles UI",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8918/admin-givingsettings-per-source-give-on-web-toggles-ui",
+        "completedAt": "2026-05-05T01:46:42.848Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8873",
+        "title": "Send an email when a charge fails",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8873/send-an-email-when-a-charge-fails",
+        "completedAt": "2026-05-05T01:46:43.733Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8807",
+        "title": "Add UI to Admin for configuring the Full Platform Giving people allow config",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8807/add-ui-to-admin-for-configuring-the-full-platform-giving-people-allow",
+        "completedAt": "2026-05-05T01:46:43.443Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8795",
+        "title": "Refactor Web Redirects (it's confusing code!)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8795/refactor-web-redirects-its-confusing-code",
+        "completedAt": "2026-05-05T01:46:43.146Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8738",
+        "title": "Per-entry-point \"Give on Web\" gating (cluster config + decision order)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8738/per-entry-point-give-on-web-gating-cluster-config-decision-order",
+        "completedAt": "2026-05-05T01:46:43.626Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8736",
+        "title": "Send entry-point source from every give-flow caller",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8736/send-entry-point-source-from-every-give-flow-caller",
+        "completedAt": "2026-05-05T01:46:42.764Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8232",
+        "title": "Replace Stripe embed with custom transaction detail drawer",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8232/replace-stripe-embed-with-custom-transaction-detail-drawer",
+        "completedAt": "2026-05-05T14:30:21.356Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8132",
+        "title": "Scope all customer interactions to the `stripe_platform_id`",
+        "project": "Release Blocking ACH Tasks",
+        "url": "https://linear.app/differential/issue/APO-8132/scope-all-customer-interactions-to-the-stripe-platform-id",
+        "completedAt": "2026-05-07T18:55:18.676Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8130",
+        "title": "Add a `stripe_platform_id` column to the customer table",
+        "project": "Release Blocking ACH Tasks",
+        "url": "https://linear.app/differential/issue/APO-8130/add-a-stripe-platform-id-column-to-the-customer-table",
+        "completedAt": "2026-05-07T18:11:52.675Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8128",
+        "title": "Scope Stripe customers to platform ID",
+        "project": "Release Blocking ACH Tasks",
+        "url": "https://linear.app/differential/issue/APO-8128/scope-stripe-customers-to-platform-id",
+        "completedAt": "2026-05-07T18:55:22.535Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6943",
+        "title": "[Admin- Transaction Page] Add Comma to the Count of Transactions on the Page When the Amount is Above 999",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-6943/admin-transaction-page-add-comma-to-the-count-of-transactions-on-the",
+        "completedAt": "2026-05-05T01:46:42.975Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-9060",
+        "title": "Spike: canonical platform fee source + audit Admin fee surfaces (net vs gross)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9060/spike-canonical-platform-fee-source-audit-admin-fee-surfaces-net-vs",
+        "completedAt": "2026-05-06T19:53:09.863Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9035",
+        "title": "Technical Shaping",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9035/technical-shaping",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-8918",
+        "title": "Admin /giving/settings: per-source \"Give on Web\" toggles UI",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8918/admin-givingsettings-per-source-give-on-web-toggles-ui",
+        "completedAt": "2026-05-05T01:46:42.848Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8873",
+        "title": "Send an email when a charge fails",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8873/send-an-email-when-a-charge-fails",
+        "completedAt": "2026-05-05T01:46:43.733Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8807",
+        "title": "Add UI to Admin for configuring the Full Platform Giving people allow config",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8807/add-ui-to-admin-for-configuring-the-full-platform-giving-people-allow",
+        "completedAt": "2026-05-05T01:46:43.443Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8795",
+        "title": "Refactor Web Redirects (it's confusing code!)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8795/refactor-web-redirects-its-confusing-code",
+        "completedAt": "2026-05-05T01:46:43.146Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8738",
+        "title": "Per-entry-point \"Give on Web\" gating (cluster config + decision order)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8738/per-entry-point-give-on-web-gating-cluster-config-decision-order",
+        "completedAt": "2026-05-05T01:46:43.626Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8736",
+        "title": "Send entry-point source from every give-flow caller",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8736/send-entry-point-source-from-every-give-flow-caller",
+        "completedAt": "2026-05-05T01:46:42.764Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8590",
+        "title": "Express payments fail when logged in",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8590/express-payments-fail-when-logged-in",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-8237",
+        "title": "Verify export math / net calculations after fee display changes",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8237/verify-export-math-net-calculations-after-fee-display-changes",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-8233",
+        "title": "Gross-settled: show $0 for fees in admin tables and detail views",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8233/gross-settled-show-dollar0-for-fees-in-admin-tables-and-detail-views",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-8232",
+        "title": "Replace Stripe embed with custom transaction detail drawer",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8232/replace-stripe-embed-with-custom-transaction-detail-drawer",
+        "completedAt": "2026-05-05T14:30:21.356Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8132",
+        "title": "Scope all customer interactions to the `stripe_platform_id`",
+        "project": "Release Blocking ACH Tasks",
+        "url": "https://linear.app/differential/issue/APO-8132/scope-all-customer-interactions-to-the-stripe-platform-id",
+        "completedAt": "2026-05-07T18:55:18.676Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8130",
+        "title": "Add a `stripe_platform_id` column to the customer table",
+        "project": "Release Blocking ACH Tasks",
+        "url": "https://linear.app/differential/issue/APO-8130/add-a-stripe-platform-id-column-to-the-customer-table",
+        "completedAt": "2026-05-07T18:11:52.675Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8128",
+        "title": "Scope Stripe customers to platform ID",
+        "project": "Release Blocking ACH Tasks",
+        "url": "https://linear.app/differential/issue/APO-8128/scope-stripe-customers-to-platform-id",
+        "completedAt": "2026-05-07T18:55:22.535Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-6943",
+        "title": "[Admin- Transaction Page] Add Comma to the Count of Transactions on the Page When the Amount is Above 999",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-6943/admin-transaction-page-add-comma-to-the-count-of-transactions-on-the",
+        "completedAt": "2026-05-05T01:46:42.975Z",
+        "state": "Released"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-9091",
+        "title": "Allow updating Email via completeRegistration",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9091/allow-updating-email-via-completeregistration",
+        "createdAt": "2026-05-07T21:08:45.086Z",
+        "state": "Ready for QA"
+      },
+      {
+        "identifier": "APO-9075",
+        "title": "Giving Gross Settlement Settings toggle is confusing",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9075/giving-gross-settlement-settings-toggle-is-confusing",
+        "createdAt": "2026-05-07T15:17:50.524Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-9064",
+        "title": "Remove dead / inaccurate fee metadata (writers + readers)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9064/remove-dead-inaccurate-fee-metadata-writers-readers",
+        "createdAt": "2026-05-06T19:44:48.009Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-9063",
+        "title": "Admin: transaction UI shows platform fee only (no Stripe processing fee to customers)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9063/admin-transaction-ui-shows-platform-fee-only-no-stripe-processing-fee",
+        "createdAt": "2026-05-06T19:44:46.014Z",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-9062",
+        "title": "Admin: transactions export (non-proxy) Total Fees = platform fee",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9062/admin-transactions-export-non-proxy-total-fees-platform-fee",
+        "createdAt": "2026-05-06T19:44:45.477Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-9061",
+        "title": "Cluster: transactions report Total Fees = platform fee (net settled)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9061/cluster-transactions-report-total-fees-platform-fee-net-settled",
+        "createdAt": "2026-05-06T19:44:43.063Z",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-9060",
+        "title": "Spike: canonical platform fee source + audit Admin fee surfaces (net vs gross)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9060/spike-canonical-platform-fee-source-audit-admin-fee-surfaces-net-vs",
+        "createdAt": "2026-05-06T19:44:37.501Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9035",
+        "title": "Technical Shaping",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9035/technical-shaping",
+        "createdAt": "2026-05-05T19:45:47.824Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9029",
+        "title": "Use the stripe customer index",
+        "project": "Release Blocking ACH Tasks",
+        "url": "https://linear.app/differential/issue/APO-9029/use-the-stripe-customer-index",
+        "createdAt": "2026-05-05T16:42:09.614Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-9028",
+        "title": "Add an index for stripe customers",
+        "project": "Release Blocking ACH Tasks",
+        "url": "https://linear.app/differential/issue/APO-9028/add-an-index-for-stripe-customers",
+        "createdAt": "2026-05-05T16:41:29.155Z",
+        "state": "Ready for Release"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-9061",
+        "title": "Cluster: transactions report Total Fees = platform fee (net settled)",
+        "url": "https://linear.app/differential/issue/APO-9061/cluster-transactions-report-total-fees-platform-fee-net-settled",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-9063",
+        "title": "Admin: transaction UI shows platform fee only (no Stripe processing fee to customers)",
+        "url": "https://linear.app/differential/issue/APO-9063/admin-transaction-ui-shows-platform-fee-only-no-stripe-processing-fee",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8790",
+        "title": "[Crossroads App - Production] Other Payment Methods - Location Drawer Gets Stuck at Bottom of UI",
+        "url": "https://linear.app/differential/issue/APO-8790/crossroads-app-production-other-payment-methods-location-drawer-gets",
+        "project": null,
+        "state": "Ready for QA"
+      },
+      {
+        "identifier": "APO-9091",
+        "title": "Allow updating Email via completeRegistration",
+        "url": "https://linear.app/differential/issue/APO-9091/allow-updating-email-via-completeregistration",
+        "project": null,
+        "state": "Ready for QA"
+      },
+      {
+        "identifier": "APO-9098",
+        "title": "Release paging feature to everyone in Admin",
+        "url": "https://linear.app/differential/issue/APO-9098/release-paging-feature-to-everyone-in-admin",
+        "project": null,
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-9081",
+        "title": "Media tab does not load in Admin",
+        "url": "https://linear.app/differential/issue/APO-9081/media-tab-does-not-load-in-admin",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-8668",
+        "title": "Enrich transactions with balance transaction fee data in loader",
+        "url": "https://linear.app/differential/issue/APO-8668/enrich-transactions-with-balance-transaction-fee-data-in-loader",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8237",
+        "title": "Verify export math / net calculations after fee display changes",
+        "url": "https://linear.app/differential/issue/APO-8237/verify-export-math-net-calculations-after-fee-display-changes",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-8233",
+        "title": "Gross-settled: show $0 for fees in admin tables and detail views",
+        "url": "https://linear.app/differential/issue/APO-8233/gross-settled-show-dollar0-for-fees-in-admin-tables-and-detail-views",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-8936",
+        "title": "Super admin: delete churches from Admin",
+        "url": "https://linear.app/differential/issue/APO-8936/super-admin-delete-churches-from-admin",
+        "project": null,
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-8128",
+        "title": "Scope Stripe customers to platform ID",
+        "url": "https://linear.app/differential/issue/APO-8128/scope-stripe-customers-to-platform-id",
+        "project": "Release Blocking ACH Tasks",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9064",
+        "title": "Remove dead / inaccurate fee metadata (writers + readers)",
+        "url": "https://linear.app/differential/issue/APO-9064/remove-dead-inaccurate-fee-metadata-writers-readers",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-9060",
+        "title": "Spike: canonical platform fee source + audit Admin fee surfaces (net vs gross)",
+        "url": "https://linear.app/differential/issue/APO-9060/spike-canonical-platform-fee-source-audit-admin-fee-surfaces-net-vs",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9035",
+        "title": "Technical Shaping",
+        "url": "https://linear.app/differential/issue/APO-9035/technical-shaping",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9043",
+        "title": "Attempted customer re-creation fails for existing account",
+        "url": "https://linear.app/differential/issue/APO-9043/attempted-customer-re-creation-fails-for-existing-account",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9042",
+        "title": "Add Minimum to Minimum Amount in Admin Giving Settings",
+        "url": "https://linear.app/differential/issue/APO-9042/add-minimum-to-minimum-amount-in-admin-giving-settings",
+        "project": null,
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-8904",
+        "title": "Add Success Toast When Doing an Action in Admin",
+        "url": "https://linear.app/differential/issue/APO-8904/add-success-toast-when-doing-an-action-in-admin",
+        "project": null,
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-9033",
+        "title": "OTP login flow may skip OTP entry",
+        "url": "https://linear.app/differential/issue/APO-9033/otp-login-flow-may-skip-otp-entry",
+        "project": "Giving Migrations Optimizations and QA",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8232",
+        "title": "Replace Stripe embed with custom transaction detail drawer",
+        "url": "https://linear.app/differential/issue/APO-8232/replace-stripe-embed-with-custom-transaction-detail-drawer",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Released"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "chore: add email to enum and test coverage",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3007",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-05-07T23:16:41Z"
+      },
+      {
+        "title": "refactor: cleaned up the Fee Settlement settings note/toggle",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3325",
+        "repo": "apollos-admin",
+        "merged_at": "2026-05-08T15:05:52Z"
+      },
+      {
+        "title": "refactor(giving): remove enrichWithBalanceTransactions; map cluster totalFees",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3317",
+        "repo": "apollos-admin",
+        "merged_at": "2026-05-07T14:15:48Z"
+      },
+      {
+        "title": "fix: cluster transaction export uses platform fee when Connect application_fee is missing",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2996",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-05-07T15:10:56Z"
+      },
+      {
+        "title": "feat: add index on customers (person_id, stripe_platform_id) where primary",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2988",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-05-06T16:00:44Z"
+      },
+      {
+        "title": "feat: enrich transactions with Stripe balance transaction fees and net",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3212",
+        "repo": "apollos-admin",
+        "merged_at": "2026-05-06T18:55:01Z"
+      },
+      {
+        "title": "fix: scope Stripe customer rows to platform account ID",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2853",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-05-05T20:18:30Z"
+      }
+    ],
+    "open_prs": [],
+    "reviews": [
+      {
+        "title": "APO-8937 fix content title rename saves",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3340"
+      },
+      {
+        "title": "APO-9086: Remove follow-up receipt language from ACH processing email",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3334"
+      },
+      {
+        "title": "APO-9085: Don't send ACH settlement completion email",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3333"
+      },
+      {
+        "title": "APO-9050 hide Embeddings workflow from Data dashboard",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3320"
+      },
+      {
+        "title": "Migrate 9 utility/constant files from JS to TS",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2998"
+      },
+      {
+        "title": "refactor(giving): remove enrichWithBalanceTransactions; map cluster totalFees",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3317"
+      },
+      {
+        "title": "chore: add knip for unused-code detection",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3315"
+      },
+      {
+        "title": "fix: cluster transaction export uses platform fee when Connect application_fee is missing",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2996"
+      },
+      {
+        "title": "test(web): Add Playwright Google Pay Express Checkout on give ",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3307"
+      },
+      {
+        "title": "Upgrade ESLint and related dependencies to v10",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2994"
+      },
+      {
+        "title": "ci: add PR Health Check workflow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3305"
+      },
+      {
+        "title": "APO-9011: Prevent charge re-sync from moving transactions between batches",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2986"
+      },
+      {
+        "title": "[codex] Add Bayside El Dorado events chip script",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2975"
+      },
+      {
+        "title": "Fix feature action content back stack",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6329"
+      },
+      {
+        "title": "[APO-8790] [V2] Hide App Clip banner if `source=app` is given in URL",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3297"
+      },
+      {
+        "title": "chore(schema): remove unused deprecated schema fields",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2916"
+      },
+      {
+        "title": "fix: scope Stripe customer rows to platform account ID",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2853"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- Reviewed: [codex] Add Bayside El Dorado events chip script\n- Reviewed: Fix feature action content back stack\n- Reviewed: [APO-8790] [V2] Hide App Clip banner if `source=app` is given in URL\n- Reviewed: chore(schema): remove unused deprecated schema fields\n- Left comments on PRs"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- fix: scope Stripe customer rows to platform account ID\n- Reviewed: ci: add PR Health Check workflow\n- Reviewed: fix: scope Stripe customer rows to platform account ID\n- Done: APO-8232: Replace Stripe embed with custom transaction detail drawer\n- In progress: APO-9035: Technical Shaping\n- In progress: APO-9029: Use the stripe customer index\n- In progress: APO-9028: Add an index for stripe customers\n- In progress: APO-8668: Enrich transactions with balance transaction fee data in loader\n- In progress: APO-8590: Express payments fail when logged in\n- Filed 3 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- feat: add index on customers (person_id, stripe_platform_id) where primary\n- feat: enrich transactions with Stripe balance transaction fees and net\n- Reviewed: fix: cluster transaction export uses platform fee when Connect application_fee is missing\n- Reviewed: Upgrade ESLint and related dependencies to v10\n- Reviewed: APO-9011: Prevent charge re-sync from moving transactions between batches\n- Done: APO-9060: Spike: canonical platform fee source + audit Admin fee surfaces (net vs gross)\n- In progress: APO-9063: Admin: transaction UI shows platform fee only (no Stripe processing fee to customers)\n- In progress: APO-9061: Cluster: transactions report Total Fees = platform fee (net settled)\n- In progress: APO-9035: Technical Shaping\n- Filed 5 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- refactor(giving): remove enrichWithBalanceTransactions; map cluster totalFees\n- fix: cluster transaction export uses platform fee when Connect application_fee is missing\n- Reviewed: APO-9050 hide Embeddings workflow from Data dashboard\n- Reviewed: Migrate 9 utility/constant files from JS to TS\n- Reviewed: chore: add knip for unused-code detection\n- Reviewed: test(web): Add Playwright Google Pay Express Checkout on give \n- Reviewed: [APO-8790] [V2] Hide App Clip banner if `source=app` is given in URL\n- Done: APO-8132: Scope all customer interactions to the `stripe_platform_id`\n- Done: APO-8130: Add a `stripe_platform_id` column to the customer table\n- Done: APO-8128: Scope Stripe customers to platform ID\n- In progress: APO-9091: Allow updating Email via completeRegistration\n- In progress: APO-9075: Giving Gross Settlement Settings toggle is confusing\n- In progress: APO-8237: Verify export math / net calculations after fee display changes\n- In progress: APO-8233: Gross-settled: show $0 for fees in admin tables and detail views\n- Filed 2 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- refactor: cleaned up the Fee Settlement settings note/toggle\n- Reviewed: APO-8937 fix content title rename saves\n- Reviewed: APO-9085: Don't send ACH settlement completion email\n- Replied in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": ", May 8\nDaily\nWhat did you work on today\n5:31 PM\nMerged Giving Settings copy PR\nCouple of PR reviews\nQA things w/ @Tyler\nQAing Gross Settlement project in staging\nQAing Web and Web Embed Giving flows\nScreenshot 2026-05-08 at 5.29.30 PM.png\nScreenshot 2026-05-08 at 5.29.30 PM.png"
+    },
+    {
+      "day": "Thursday",
+      "content": ", May 7\nDaily\nWhat did you work on today\n6:17 PM\nPRs merged for fees on transaction exports and in the tables in Admin\nQA all my merged PRs in staging to help them get to prod faster 😀\nFound an email update bug in Web (PR)\nPR to clean up the Gross Settlement toggle\nPR reviews!\nHuddle w/ @Shahbano and @Tyler\nRan toolbox script to get borked people fixed in Production!\nQA w/ Sensei @Tyler\nRecorded a loom on the QA dashboard I've been working on\nScreenshot 2026-05-07 at 6.16.42 PM.png\nScreenshot 2026-05-07 at 6.16.42 PM.png"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", May 6\nDaily\nWhat did you work on today\n5:48 PM\nMerged PRs to add an index on customers and enriching fees on transactions in Admin\nSlackin' w/ @Shahbano and @David about surfacing fees in Admin not working as expected\nMapped out the changes necessary to gets fees right in Admin per the convo ⬆️\nTried to figure out OTP shenanigans on Safari w/ @Conrad @Vincent @Marcelo\nMonthly DevChat\n1:1 w/ Michael\nSlackin' w/ @Dylan\nScreenshot 2026-05-06 at 5.47.17 PM.png\nScreenshot 2026-05-06 at 5.47.17 PM.png"
+    },
+    {
+      "day": "Tuesday",
+      "content": ", May 5\nDaily\nWhat did you work on today\n3:59 PM\nVerifying Gross Settlement hiding fees in Local\n1:1 w/ @Shahbano\nFixed up a stripe platform id PR\nPR to add a database index\nPR to use that index\nShaping on Stripe Transaction statuses\nScreenshot 2026-05-05 at 4.34.44 PM.png\nScreenshot 2026-05-05 at 4.34.44 PM.png"
+    },
+    {
+      "day": "Monday",
+      "content": ", May 4\nDaily\nWhat did you work on today\n5:01 PM\nSprint Kickout/Retro\n1:1 Work Coach meeting w/ @Michael\nTons of time in Stripe (and documentation) setting up platform fees, gross settlement, and such for Staging and Local devs\nPushed a small tweak and added documentation for a Gross Settlement Fees PR\nScreenshot 2026-05-04 at 5.01.48 PM.png"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 7\n  • PR reviews: 17\n  • Commits pushed: 7\n  • Linear issues completed: 12\n  • Linear issues worked on: 16\n  • Linear issues created: 10\n  • Linear replies: 19\n  • Repos: apollos-admin, apollos-cluster, apollos-platforms\n\n📝 Check-ins:\n\n  Monday: - Reviewed: [codex] Add Bayside El Dorado events chip script\n- Reviewed: Fix fea...\n  Tuesday: - fix: scope Stripe customer rows to platform account ID\n- Reviewed: ci: add PR ...\n  Wednesday: - feat: add index on customers (person_id, stripe_platform_id) where primary\n- f...\n  Thursday: - refactor(giving): remove enrichWithBalanceTransactions; map cluster totalFees\n...\n  Friday: - refactor: cleaned up the Fee Settlement settings note/toggle\n- Reviewed: APO-8...\n  Friday: , May 8\nDaily\nWhat did you work on today\n5:31 PM\nMerged Giving Settings copy PR\n...\n  Thursday: , May 7\nDaily\nWhat did you work on today\n6:17 PM\nPRs merged for fees on transact...\n  Wednesday: , May 6\nDaily\nWhat did you work on today\n5:48 PM\nMerged PRs to add an index on c...\n  Tuesday: , May 5\nDaily\nWhat did you work on today\n3:59 PM\nVerifying Gross Settlement hidi...\n  Monday: , May 4\nDaily\nWhat did you work on today\n5:01 PM\nSprint Kickout/Retro\n1:1 Work C...\n",
+  "formatted_output": null
+}
