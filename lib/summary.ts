@@ -415,7 +415,7 @@ function getCommitRepos(): { owner: string; repos: string[] } {
   const owner = process.env.GITHUB_ORG ?? "ApollosProject";
   const raw =
     process.env.GITHUB_COMMIT_REPOS ??
-    "apollos-admin,apollos-cluster,apollos-platforms,git-for-sql";
+    "apollos-admin,apollos-cluster,apollos-giving-performance-qa,apollos-platforms,git-for-sql";
   const repos = raw
     .split(",")
     .map((r) => r.trim())
@@ -428,15 +428,15 @@ async function fetchCommitsPushed(
   headers: Record<string, string>,
   windowStart: Date,
   windowEnd: Date
-): Promise<number> {
+): Promise<{ total: number; reposWithCommits: string[] }> {
   const { owner, repos } = getCommitRepos();
-  if (repos.length === 0) return 0;
+  if (repos.length === 0) return { total: 0, reposWithCommits: [] };
 
   const since = windowStart.toISOString();
   const until = windowEnd.toISOString();
 
   try {
-    const counts = await Promise.all(
+    const perRepo = await Promise.all(
       repos.map(async (repo) => {
         let total = 0;
         let page = 1;
@@ -446,18 +446,24 @@ async function fetchCommitsPushed(
         while (hasMore) {
           const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/commits?author=${username}&since=${since}&until=${until}&per_page=${perPage}&page=${page}`;
           const res = await fetch(url, { headers });
-          if (!res.ok) return 0;
-          const commits = (await res.json()) as unknown[];
+          if (!res.ok) return { repo, total: 0 };
+          const commits = (await res.json()) as unknown;
+          if (!Array.isArray(commits)) return { repo, total: 0 };
           total += commits.length;
           hasMore = commits.length === perPage;
           page += 1;
         }
-        return total;
+        return { repo, total };
       })
     );
-    return counts.reduce((a, b) => a + b, 0);
+    const total = perRepo.reduce((acc, { total: t }) => acc + t, 0);
+    const reposWithCommits = perRepo
+      .filter((r) => r.total > 0)
+      .map((r) => r.repo)
+      .sort();
+    return { total, reposWithCommits };
   } catch {
-    return 0;
+    return { total: 0, reposWithCommits: [] };
   }
 }
 
@@ -468,7 +474,14 @@ async function fetchGitHubData(
 ) {
   const token = process.env.GITHUB_TOKEN;
   const username = process.env.GITHUB_USERNAME ?? "nlewis84";
-  if (!token) return { prs: [], reviews: [], comments: 0, commits_pushed: 0 };
+  if (!token)
+    return {
+      prs: [],
+      reviews: [],
+      comments: 0,
+      commits_pushed: 0,
+      reposWithCommits: [],
+    };
 
   const headers = {
     Authorization: `Bearer ${token}`,
@@ -478,7 +491,7 @@ async function fetchGitHubData(
   const since = windowStartISO.split("T")[0];
 
   try {
-    const [prsCreatedRes, prsUpdatedRes, reviewsRes, commitsPushed] =
+    const [prsCreatedRes, prsUpdatedRes, reviewsRes, commitsResult] =
       await Promise.all([
         fetch(
           `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+created:>=${since}&per_page=100`,
@@ -573,10 +586,17 @@ async function fetchGitHubData(
       prs: prDetails,
       reviews,
       comments: totalComments,
-      commits_pushed: commitsPushed,
+      commits_pushed: commitsResult.total,
+      reposWithCommits: commitsResult.reposWithCommits,
     };
   } catch {
-    return { prs: [], reviews: [], comments: 0, commits_pushed: 0 };
+    return {
+      prs: [],
+      reviews: [],
+      comments: 0,
+      commits_pushed: 0,
+      reposWithCommits: [],
+    };
   }
 }
 
@@ -707,17 +727,20 @@ export async function runSummary(options: {
 
   const checkIns = parseCheckIns(checkInsText);
   const prCategories = categorizePRs(githubData.prs, windowStart);
-  // Include both PRs (created/updated) and reviews for "repos worked on"
+  // PRs/reviews plus any tracked repo where you pushed commits (commit-only work)
   const prsAndReviews = [...githubData.prs, ...githubData.reviews];
   const prsByRepo = groupPRsByRepo(prsAndReviews);
-  const repos = [...new Set(Object.keys(prsByRepo))].sort();
+  const commitRepos = githubData.reposWithCommits ?? [];
+  const repos = [
+    ...new Set([...Object.keys(prsByRepo), ...commitRepos]),
+  ].sort();
 
   const stats: Stats = {
     prs_merged: prCategories.merged.length,
     prs_total: githubData.prs.length,
     pr_reviews: githubData.reviews.length,
     pr_comments: githubData.comments,
-    commits_pushed: githubData.commits_pushed,
+    commits_pushed: githubData.commits_pushed ?? 0,
     linear_completed: linearData.completedIssues.length,
     linear_worked_on: linearData.workedOnIssues.length,
     linear_issues_created: linearData.createdIssues.length,
