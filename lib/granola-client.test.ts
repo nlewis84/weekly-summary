@@ -66,6 +66,7 @@ describe("granola-client", () => {
           id: noteId,
           title: "Planning",
           summary_text: "Shipped the roadmap.",
+          summary_markdown: "# Plan\n\n- Shipped the roadmap.",
         });
       }
       return Promise.reject(new Error(`unexpected fetch: ${url}`));
@@ -82,6 +83,7 @@ describe("granola-client", () => {
       id: noteId,
       title: "Planning",
       summaryText: "Shipped the roadmap.",
+      summaryMarkdown: "# Plan\n\n- Shipped the roadmap.",
     });
     expect(r.warning).toBeUndefined();
     expect(fetchMock).toHaveBeenCalled();

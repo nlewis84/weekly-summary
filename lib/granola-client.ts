@@ -23,6 +23,8 @@ export interface GranolaNoteForCheckIn {
   id: string;
   title: string | null;
   summaryText: string;
+  /** Markdown-formatted summary from Granola API; may be null. */
+  summaryMarkdown: string | null;
 }
 
 export interface FetchGranolaNotesResult {
@@ -45,6 +47,7 @@ interface GetNoteResponse {
   id: string;
   title: string | null;
   summary_text: string;
+  summary_markdown: string | null;
 }
 
 async function granolaFetch<T>(path: string): Promise<T> {
@@ -113,6 +116,7 @@ export async function fetchGranolaNotesForWindow(
           id: d.id,
           title: d.title,
           summaryText: d.summary_text ?? "",
+          summaryMarkdown: d.summary_markdown ?? null,
         });
       }
     }
