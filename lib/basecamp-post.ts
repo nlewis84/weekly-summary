@@ -53,17 +53,19 @@ export async function postCheckInToBasecamp(
   const projectId = getProjectId();
   const questionId = getCheckInQuestionId();
 
+  // Flags before body, then `--` so markdown lists (e.g. "- Item") are not parsed as CLI flags.
   return runBasecamp([
     "checkins",
     "answer",
     "create",
     questionId,
-    content,
     "--in",
     projectId,
     "--date",
     date,
     "--json",
+    "--",
+    content,
   ]);
 }
 
@@ -80,20 +82,22 @@ export async function postWeeklySummaryToBasecamp(
       "answer",
       "create",
       weeklyQuestionId,
-      markdown,
       "--in",
       projectId,
       "--json",
+      "--",
+      markdown,
     ]);
   }
 
   return runBasecamp([
     "message",
     `Weekly Summary — ${weekEnding}`,
-    markdown,
     "--in",
     projectId,
     "--no-subscribe",
     "--json",
+    "--",
+    markdown,
   ]);
 }
