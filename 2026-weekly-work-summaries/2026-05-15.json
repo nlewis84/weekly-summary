@@ -1,0 +1,502 @@
+{
+  "meta": {
+    "generated_at": "2026-05-16T00:10:29.675Z",
+    "window_start": "2026-05-09T05:00:00.000Z",
+    "window_end": "2026-05-16T04:59:59.999Z",
+    "week_ending": "2026-05-15",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 1,
+    "prs_total": 9,
+    "pr_reviews": 27,
+    "pr_comments": 13,
+    "commits_pushed": 25,
+    "linear_completed": 8,
+    "linear_worked_on": 15,
+    "linear_issues_created": 4,
+    "linear_comments": 8,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-giving-performance-qa",
+      "apollos-platforms"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-9063",
+        "title": "Admin: transaction UI shows platform fee only (no Stripe processing fee to customers)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9063/admin-transaction-ui-shows-platform-fee-only-no-stripe-processing-fee",
+        "completedAt": "2026-05-12T17:16:26.646Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9061",
+        "title": "Cluster: transactions report Total Fees = platform fee (net settled)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9061/cluster-transactions-report-total-fees-platform-fee-net-settled",
+        "completedAt": "2026-05-12T17:16:27.008Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9035",
+        "title": "Technical Shaping",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9035/technical-shaping",
+        "completedAt": "2026-05-13T14:18:52.300Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9028",
+        "title": "Add an index for stripe customers",
+        "project": "Release Blocking ACH Tasks",
+        "url": "https://linear.app/differential/issue/APO-9028/add-an-index-for-stripe-customers",
+        "completedAt": "2026-05-12T17:16:27.453Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8668",
+        "title": "Enrich transactions with balance transaction fee data in loader",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8668/enrich-transactions-with-balance-transaction-fee-data-in-loader",
+        "completedAt": "2026-05-12T17:16:27.765Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8394",
+        "title": "Display actual Stripe processing fees in transaction detail sheet",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8394/display-actual-stripe-processing-fees-in-transaction-detail-sheet",
+        "completedAt": "2026-05-12T17:16:27.874Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8237",
+        "title": "Verify export math / net calculations after fee display changes",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8237/verify-export-math-net-calculations-after-fee-display-changes",
+        "completedAt": "2026-05-15T16:02:21.166Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8233",
+        "title": "Gross-settled: show $0 for fees in admin tables and detail views",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8233/gross-settled-show-dollar0-for-fees-in-admin-tables-and-detail-views",
+        "completedAt": "2026-05-15T16:02:21.227Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-9127",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions export uses the same campus and status filters as the tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9127/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-export",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9126",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions tab status filter actually changes the results",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9126/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-tab-status",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9125",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions count and pagination stay accurate when I filter by status",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9125/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-count-and",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9124",
+        "title": "As a giving admin, I can see Pending and Failed transactions in the Transactions tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9124/as-a-giving-admin-i-can-see-pending-and-failed-transactions-in-the",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9063",
+        "title": "Admin: transaction UI shows platform fee only (no Stripe processing fee to customers)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9063/admin-transaction-ui-shows-platform-fee-only-no-stripe-processing-fee",
+        "completedAt": "2026-05-12T17:16:26.646Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9061",
+        "title": "Cluster: transactions report Total Fees = platform fee (net settled)",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9061/cluster-transactions-report-total-fees-platform-fee-net-settled",
+        "completedAt": "2026-05-12T17:16:27.008Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9035",
+        "title": "Technical Shaping",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9035/technical-shaping",
+        "completedAt": "2026-05-13T14:18:52.300Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9028",
+        "title": "Add an index for stripe customers",
+        "project": "Release Blocking ACH Tasks",
+        "url": "https://linear.app/differential/issue/APO-9028/add-an-index-for-stripe-customers",
+        "completedAt": "2026-05-12T17:16:27.453Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8958",
+        "title": "Add Status filter to Transactions tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-8958/add-status-filter-to-transactions-tab",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-8957",
+        "title": "Add Payment Method Filter to Admin Transactions Tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-8957/add-payment-method-filter-to-admin-transactions-tab",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-8668",
+        "title": "Enrich transactions with balance transaction fee data in loader",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8668/enrich-transactions-with-balance-transaction-fee-data-in-loader",
+        "completedAt": "2026-05-12T17:16:27.765Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8590",
+        "title": "Express payments fail when logged in",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8590/express-payments-fail-when-logged-in",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-8394",
+        "title": "Display actual Stripe processing fees in transaction detail sheet",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8394/display-actual-stripe-processing-fees-in-transaction-detail-sheet",
+        "completedAt": "2026-05-12T17:16:27.874Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8237",
+        "title": "Verify export math / net calculations after fee display changes",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8237/verify-export-math-net-calculations-after-fee-display-changes",
+        "completedAt": "2026-05-15T16:02:21.166Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8233",
+        "title": "Gross-settled: show $0 for fees in admin tables and detail views",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-8233/gross-settled-show-dollar0-for-fees-in-admin-tables-and-detail-views",
+        "completedAt": "2026-05-15T16:02:21.227Z",
+        "state": "Released"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-9127",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions export uses the same campus and status filters as the tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9127/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-export",
+        "createdAt": "2026-05-12T16:31:24.465Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9126",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions tab status filter actually changes the results",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9126/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-tab-status",
+        "createdAt": "2026-05-12T16:31:09.223Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9125",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions count and pagination stay accurate when I filter by status",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9125/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-count-and",
+        "createdAt": "2026-05-12T16:30:54.586Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9124",
+        "title": "As a giving admin, I can see Pending and Failed transactions in the Transactions tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9124/as-a-giving-admin-i-can-see-pending-and-failed-transactions-in-the",
+        "createdAt": "2026-05-12T16:30:35.964Z",
+        "state": "In Progress"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-6509",
+        "title": "(Encounter) Users signing up for Creator free account get error on church name/slug screen",
+        "url": "https://linear.app/differential/issue/APO-6509/encounter-users-signing-up-for-creator-free-account-get-error-on",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9190",
+        "title": "Giving asks for missing phone number twice",
+        "url": "https://linear.app/differential/issue/APO-9190/giving-asks-for-missing-phone-number-twice",
+        "project": null,
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8285",
+        "title": "Add Email Timestamps to Automated Outreach Section in Migration Timeline",
+        "url": "https://linear.app/differential/issue/APO-8285/add-email-timestamps-to-automated-outreach-section-in-migration",
+        "project": "Giving Migrations Optimizations and QA",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-9167",
+        "title": "Piedmont Baptist Church App Clip Url Will Not Resolve",
+        "url": "https://linear.app/differential/issue/APO-9167/piedmont-baptist-church-app-clip-url-will-not-resolve",
+        "project": null,
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-9075",
+        "title": "Giving Gross Settlement Settings toggle is confusing",
+        "url": "https://linear.app/differential/issue/APO-9075/giving-gross-settlement-settings-toggle-is-confusing",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8957",
+        "title": "Add Payment Method Filter to Admin Transactions Tab",
+        "url": "https://linear.app/differential/issue/APO-8957/add-payment-method-filter-to-admin-transactions-tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-8873",
+        "title": "Send an email when a charge fails",
+        "url": "https://linear.app/differential/issue/APO-8873/send-an-email-when-a-charge-fails",
+        "project": null,
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9057",
+        "title": "extra next button sometimes shows up during auth",
+        "url": "https://linear.app/differential/issue/APO-9057/extra-next-button-sometimes-shows-up-during-auth",
+        "project": null,
+        "state": "Merged"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "fix: skip empty PATCH to Rock `/People/` when only Phone is updated",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3039",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-05-14T17:53:24Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix(giving): forward campus/status to cluster transaction export",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3401",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix: Stripe totalCount for single-status transactions; strip JSON total",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3051",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat(giving): cursor-based prev/next pagination for cluster-proxy transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3398",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat: add multi-status Stripe Search fan-out with K-way merge for transactions report",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3050",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "fix(giving): forward dynamic status filter to cluster API instead of hardcoding \"succeeded\"",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3397",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat(giving): add payment method filter to transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3371",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat(giving): add status filter to transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3368",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat(giving): surface pending and failed transaction statuses in Admin transactions Table",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3362",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Clear stale orgName error when the user edits the input",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3387"
+      },
+      {
+        "title": "Add YouTube cleanup status banner",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3380"
+      },
+      {
+        "title": "APO-9105 normalize minimum amount input formatting in Giving Settings",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3378"
+      },
+      {
+        "title": "fix: recover stale APP.APPLE_APP_ID on App Clip save (APO-9180)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3377"
+      },
+      {
+        "title": "APO-9057: Drop duplicate iOS \"Next\" floating bar on IdentityEntry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6381"
+      },
+      {
+        "title": "APO-8910 async YouTube integration delete with in-progress banner",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3372"
+      },
+      {
+        "title": "APO-6649 add tag group management actions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3369"
+      },
+      {
+        "title": "[codex] Install only Chromium for e2e",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3366"
+      },
+      {
+        "title": "[codex] Stabilize add payment method route test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3365"
+      },
+      {
+        "title": "Fix showing Google Pay Express Checkout on Firefox",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3364"
+      },
+      {
+        "title": "fix: extend report polling window (APO-9041)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3363"
+      },
+      {
+        "title": "APO-9132 render ActionListFeature primaryAction on web",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3361"
+      },
+      {
+        "title": "APO-9116: Point setup-deploy church picker at cluster.apollos.app",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6376"
+      },
+      {
+        "title": "APO-9107 add Is Recurring column to Transactions Report export",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3357"
+      },
+      {
+        "title": "feat(reports): add Is Recurring column to Transactions Report export",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3026"
+      },
+      {
+        "title": "APO-8691 strip markdown code fences from AI-generated HTML",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3355"
+      },
+      {
+        "title": "APO-9103: Route \"Try Giving Again\" button to giving site",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3354"
+      },
+      {
+        "title": "APO-9094 exclude pending charges from failed transactions report",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3351"
+      },
+      {
+        "title": "APO-6447 fix App Clip header image format handling for JPGs",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3350"
+      },
+      {
+        "title": "APO-7784 enlarge ChangeIdentityLink chevron",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3349"
+      },
+      {
+        "title": "Allow non-super-admins to search Suggested Follows",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3348"
+      },
+      {
+        "title": "fix: resolve unused dependencies knip warnings",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3346"
+      },
+      {
+        "title": "APO-9042 enforce $0.50 minimum on Giving Settings minimum amount",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3345"
+      },
+      {
+        "title": "APO-7365 flush pending title save before navigating actions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3342"
+      },
+      {
+        "title": "Migration: clean up stale global customer records from test-mode churches",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2843"
+      },
+      {
+        "title": "fix: capture express checkout errors in Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3191"
+      },
+      {
+        "title": "fix: parameterize tap scan person id filter to prevent SQL injection",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2970"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- Reviewed: APO-9103: Route \"Try Giving Again\" button to giving site\n- Reviewed: Allow non-super-admins to search Suggested Follows\n- Reviewed: fix: resolve unused dependencies knip warnings\n- Reviewed: APO-9042 enforce $0.50 minimum on Giving Settings minimum amount\n- Reviewed: fix: parameterize tap scan person id filter to prevent SQL injection\n- Pushed 2 commits (no merges in this window)\n- Replied in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- Reviewed: APO-9107 add Is Recurring column to Transactions Report export\n- Done: APO-9063: Admin: transaction UI shows platform fee only (no Stripe processing fee to customers)\n- Done: APO-9061: Cluster: transactions report Total Fees = platform fee (net settled)\n- Done: APO-9028: Add an index for stripe customers\n- Done: APO-8668: Enrich transactions with balance transaction fee data in loader\n- Done: APO-8394: Display actual Stripe processing fees in transaction detail sheet\n- In progress: APO-9035: Technical Shaping\n- In progress: APO-8590: Express payments fail when logged in\n- Filed 4 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- Reviewed: [codex] Install only Chromium for e2e\n- Reviewed: [codex] Stabilize add payment method route test\n- Reviewed: Fix showing Google Pay Express Checkout on Firefox\n- Reviewed: fix: extend report polling window (APO-9041)\n- Reviewed: APO-9132 render ActionListFeature primaryAction on web\n- Reviewed: APO-9116: Point setup-deploy church picker at cluster.apollos.app\n- Reviewed: APO-9107 add Is Recurring column to Transactions Report export\n- Reviewed: APO-8691 strip markdown code fences from AI-generated HTML\n- Reviewed: APO-9094 exclude pending charges from failed transactions report\n- Reviewed: APO-6447 fix App Clip header image format handling for JPGs\n- Reviewed: Migration: clean up stale global customer records from test-mode churches\n- Done: APO-9035: Technical Shaping\n- In progress: APO-9124: As a giving admin, I can see Pending and Failed transactions in the Transactions tab\n- In progress: APO-8958: Add Status filter to Transactions tab\n- In progress: APO-8957: Add Payment Method Filter to Admin Transactions Tab\n- In progress: APO-8590: Express payments fail when logged in\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- fix: skip empty PATCH to Rock `/People/` when only Phone is updated\n- Reviewed: Add YouTube cleanup status banner\n- Reviewed: APO-9105 normalize minimum amount input formatting in Giving Settings\n- Reviewed: fix: recover stale APP.APPLE_APP_ID on App Clip save (APO-9180)\n- Reviewed: APO-9057: Drop duplicate iOS \"Next\" floating bar on IdentityEntry\n- Reviewed: APO-8910 async YouTube integration delete with in-progress banner\n- Reviewed: APO-7784 enlarge ChangeIdentityLink chevron\n- Reviewed: APO-7365 flush pending title save before navigating actions\n- Reviewed: fix: capture express checkout errors in Sentry\n- In progress: APO-8590: Express payments fail when logged in\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- Reviewed: Clear stale orgName error when the user edits the input\n- Reviewed: APO-6649 add tag group management actions\n- Done: APO-8237: Verify export math / net calculations after fee display changes\n- Done: APO-8233: Gross-settled: show $0 for fees in admin tables and detail views\n- In progress: APO-9127: As a giving admin on a cluster-proxy church, my Transactions export uses the same campus and status filters as the tab\n- In progress: APO-9126: As a giving admin on a cluster-proxy church, my Transactions tab status filter actually changes the results\n- In progress: APO-9125: As a giving admin on a cluster-proxy church, my Transactions count and pagination stay accurate when I filter by status\n- Pushed 13 commits (no merges in this window)\n- Left comments on PRs and in Linear"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 1\n  • PR reviews: 27\n  • Commits pushed: 25\n  • Linear issues completed: 8\n  • Linear issues worked on: 15\n  • Linear issues created: 4\n  • Linear replies: 8\n  • Repos: apollos-admin, apollos-cluster, apollos-giving-performance-qa, apollos-platforms\n\n📝 Check-ins:\n\n  Monday: - Reviewed: APO-9103: Route \"Try Giving Again\" button to giving site\n- Reviewed:...\n  Tuesday: - Reviewed: APO-9107 add Is Recurring column to Transactions Report export\n- Don...\n  Wednesday: - Reviewed: [codex] Install only Chromium for e2e\n- Reviewed: [codex] Stabilize ...\n  Thursday: - fix: skip empty PATCH to Rock `/People/` when only Phone is updated\n- Reviewed...\n  Friday: - Reviewed: Clear stale orgName error when the user edits the input\n- Reviewed: ...\n",
+  "formatted_output": null
+}
