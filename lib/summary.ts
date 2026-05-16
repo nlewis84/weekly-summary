@@ -423,44 +423,121 @@ function getCommitRepos(): { owner: string; repos: string[] } {
   return { owner, repos };
 }
 
+type PrRef = { repo: string; number: number };
+
+/**
+ * Count commits authored by `username` within the window across:
+ *   1. The default branch of each configured repo (`/repos/.../commits`)
+ *   2. Every branch attached to one of the user's PRs (open, draft, or merged)
+ *      via `/repos/.../pulls/{n}/commits`
+ *
+ * Commits are deduped by SHA so a commit that exists on both a PR branch and
+ * the default branch (after merge) is only counted once.
+ */
 async function fetchCommitsPushed(
   username: string,
   headers: Record<string, string>,
   windowStart: Date,
-  windowEnd: Date
+  windowEnd: Date,
+  userPRs: PrRef[]
 ): Promise<{ total: number; reposWithCommits: string[] }> {
   const { owner, repos } = getCommitRepos();
+  const trackedRepos = new Set(repos);
   if (repos.length === 0) return { total: 0, reposWithCommits: [] };
 
   const since = windowStart.toISOString();
   const until = windowEnd.toISOString();
 
+  const seen = new Map<string, string>(); // sha -> repo
+
+  const inWindow = (iso?: string | null): boolean => {
+    if (!iso) return false;
+    const t = new Date(iso).getTime();
+    return t >= windowStart.getTime() && t <= windowEnd.getTime();
+  };
+
   try {
-    const perRepo = await Promise.all(
+    const defaultBranchResults = await Promise.all(
       repos.map(async (repo) => {
-        let total = 0;
+        const collected: Array<{ sha: string; date: string | null }> = [];
         let page = 1;
         const perPage = 100;
         let hasMore = true;
-
         while (hasMore) {
           const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/commits?author=${username}&since=${since}&until=${until}&per_page=${perPage}&page=${page}`;
           const res = await fetch(url, { headers });
-          if (!res.ok) return { repo, total: 0 };
-          const commits = (await res.json()) as unknown;
-          if (!Array.isArray(commits)) return { repo, total: 0 };
-          total += commits.length;
+          if (!res.ok) return { repo, commits: collected };
+          const commits = (await res.json()) as Array<{
+            sha?: string;
+            commit?: { author?: { date?: string } };
+          }>;
+          if (!Array.isArray(commits)) return { repo, commits: collected };
+          for (const c of commits) {
+            if (c.sha)
+              collected.push({
+                sha: c.sha,
+                date: c.commit?.author?.date ?? null,
+              });
+          }
           hasMore = commits.length === perPage;
           page += 1;
         }
-        return { repo, total };
+        return { repo, commits: collected };
       })
     );
-    const total = perRepo.reduce((acc, { total: t }) => acc + t, 0);
-    const reposWithCommits = perRepo
-      .filter((r) => r.total > 0)
-      .map((r) => r.repo)
-      .sort();
+
+    for (const { repo, commits } of defaultBranchResults) {
+      for (const c of commits) {
+        if (!seen.has(c.sha)) seen.set(c.sha, repo);
+      }
+    }
+
+    const prCommitResults = await Promise.all(
+      userPRs
+        .filter((p) => trackedRepos.has(p.repo))
+        .map(async ({ repo, number }) => {
+          const collected: Array<{ sha: string; date: string | null }> = [];
+          let page = 1;
+          const perPage = 100;
+          let hasMore = true;
+          while (hasMore) {
+            const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/pulls/${number}/commits?per_page=${perPage}&page=${page}`;
+            const res = await fetch(url, { headers });
+            if (!res.ok) return { repo, commits: collected };
+            const commits = (await res.json()) as Array<{
+              sha?: string;
+              author?: { login?: string } | null;
+              commit?: {
+                author?: { name?: string; email?: string; date?: string };
+              };
+            }>;
+            if (!Array.isArray(commits))
+              return { repo, commits: collected };
+            for (const c of commits) {
+              const date = c.commit?.author?.date ?? null;
+              if (!inWindow(date)) continue;
+              const matchesUser =
+                c.author?.login === username ||
+                c.commit?.author?.email?.toLowerCase().includes(username.toLowerCase()) ||
+                c.commit?.author?.name?.toLowerCase().includes(username.toLowerCase());
+              if (!matchesUser) continue;
+              if (c.sha) collected.push({ sha: c.sha, date });
+            }
+            hasMore = commits.length === perPage;
+            page += 1;
+          }
+          return { repo, commits: collected };
+        })
+    );
+
+    for (const { repo, commits } of prCommitResults) {
+      for (const c of commits) {
+        if (!seen.has(c.sha)) seen.set(c.sha, repo);
+      }
+    }
+
+    const total = seen.size;
+    const reposWithCommits = [...new Set([...seen.values()])].sort();
     return { total, reposWithCommits };
   } catch {
     return { total: 0, reposWithCommits: [] };
@@ -491,22 +568,20 @@ async function fetchGitHubData(
   const since = windowStartISO.split("T")[0];
 
   try {
-    const [prsCreatedRes, prsUpdatedRes, reviewsRes, commitsResult] =
-      await Promise.all([
-        fetch(
-          `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+created:>=${since}&per_page=100`,
-          { headers }
-        ),
-        fetch(
-          `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+updated:>=${since}&per_page=100`,
-          { headers }
-        ),
-        fetch(
-          `${GITHUB_API_BASE}/search/issues?q=reviewed-by:${username}+type:pr+updated:>=${since}&per_page=100`,
-          { headers }
-        ),
-        fetchCommitsPushed(username, headers, windowStart, windowEnd),
-      ]);
+    const [prsCreatedRes, prsUpdatedRes, reviewsRes] = await Promise.all([
+      fetch(
+        `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+created:>=${since}&per_page=100`,
+        { headers }
+      ),
+      fetch(
+        `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+updated:>=${since}&per_page=100`,
+        { headers }
+      ),
+      fetch(
+        `${GITHUB_API_BASE}/search/issues?q=reviewed-by:${username}+type:pr+updated:>=${since}&per_page=100`,
+        { headers }
+      ),
+    ]);
 
     const [prsCreatedData, prsUpdatedData, reviewsData] = await Promise.all([
       prsCreatedRes.ok ? prsCreatedRes.json() : { items: [] },
@@ -549,14 +624,29 @@ async function fetchGitHubData(
       )
     );
 
-    const reviewCandidates = filterApollosPRs(reviewsData.items ?? []);
-    const reviews = await filterReviewsBySubmittedInWindow(
-      reviewCandidates,
-      windowStart,
-      windowEnd,
-      username,
-      headers
-    );
+    const userPrRefs: PrRef[] = prDetails
+      .map((pr: { html_url?: string }) => {
+        const m = pr.html_url?.match(
+          /ApollosProject\/([^/]+)\/pull\/(\d+)/
+        );
+        if (!m) return null;
+        return { repo: m[1], number: Number(m[2]) };
+      })
+      .filter((p): p is PrRef => p != null);
+
+    const [reviews, commitsResult] = await Promise.all([
+      (async () => {
+        const reviewCandidates = filterApollosPRs(reviewsData.items ?? []);
+        return filterReviewsBySubmittedInWindow(
+          reviewCandidates,
+          windowStart,
+          windowEnd,
+          username,
+          headers
+        );
+      })(),
+      fetchCommitsPushed(username, headers, windowStart, windowEnd, userPrRefs),
+    ]);
 
     const allForComments = [...prDetails, ...reviews].slice(0, 20) as Array<{
       comments_url?: string;
