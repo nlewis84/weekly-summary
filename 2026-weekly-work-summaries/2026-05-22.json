@@ -1,0 +1,276 @@
+{
+  "meta": {
+    "generated_at": "2026-05-22T00:38:13.715Z",
+    "window_start": "2026-05-16T05:00:00.000Z",
+    "window_end": "2026-05-22T04:59:59.999Z",
+    "week_ending": "2026-05-22",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 4,
+    "prs_total": 10,
+    "pr_reviews": 9,
+    "pr_comments": 22,
+    "commits_pushed": 16,
+    "linear_completed": 3,
+    "linear_worked_on": 7,
+    "linear_issues_created": 2,
+    "linear_comments": 3,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-platforms"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-9190",
+        "title": "Giving asks for missing phone number twice",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9190/giving-asks-for-missing-phone-number-twice",
+        "completedAt": "2026-05-19T04:43:29.317Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9091",
+        "title": "Allow updating Email via completeRegistration",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9091/allow-updating-email-via-completeregistration",
+        "completedAt": "2026-05-19T04:43:28.480Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9075",
+        "title": "Giving Gross Settlement Settings toggle is confusing",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9075/giving-gross-settlement-settings-toggle-is-confusing",
+        "completedAt": "2026-05-19T04:43:27.877Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-9286",
+        "title": "Old gratitude flow can create public posts",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9286/old-gratitude-flow-can-create-public-posts",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9190",
+        "title": "Giving asks for missing phone number twice",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9190/giving-asks-for-missing-phone-number-twice",
+        "completedAt": "2026-05-19T04:43:29.317Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9126",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions tab status filter actually changes the results",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9126/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-tab-status",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9125",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions count and pagination stay accurate when I filter by status",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9125/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-count-and",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9091",
+        "title": "Allow updating Email via completeRegistration",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9091/allow-updating-email-via-completeregistration",
+        "completedAt": "2026-05-19T04:43:28.480Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9075",
+        "title": "Giving Gross Settlement Settings toggle is confusing",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/issue/APO-9075/giving-gross-settlement-settings-toggle-is-confusing",
+        "completedAt": "2026-05-19T04:43:27.877Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8957",
+        "title": "Add Payment Method Filter to Admin Transactions Tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-8957/add-payment-method-filter-to-admin-transactions-tab",
+        "completedAt": null,
+        "state": "In Progress"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-9301",
+        "title": "Should we have a default Status when the page is initially loaded?",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9301/should-we-have-a-default-status-when-the-page-is-initially-loaded",
+        "createdAt": "2026-05-21T23:56:26.811Z",
+        "state": "Needs Review"
+      },
+      {
+        "identifier": "APO-9286",
+        "title": "Old gratitude flow can create public posts",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9286/old-gratitude-flow-can-create-public-posts",
+        "createdAt": "2026-05-20T22:38:07.781Z",
+        "state": "In Progress"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-9301",
+        "title": "Should we have a default Status when the page is initially loaded?",
+        "url": "https://linear.app/differential/issue/APO-9301/should-we-have-a-default-status-when-the-page-is-initially-loaded",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "state": "Needs Review"
+      },
+      {
+        "identifier": "APO-9286",
+        "title": "Old gratitude flow can create public posts",
+        "url": "https://linear.app/differential/issue/APO-9286/old-gratitude-flow-can-create-public-posts",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9137",
+        "title": "Technical Shaping - Rock Sync - Transactions",
+        "url": "https://linear.app/differential/issue/APO-9137/technical-shaping-rock-sync-transactions",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "state": "Released"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "chore: git4sql script to make gratitudes posts private",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3073",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-05-21T15:02:15Z"
+      },
+      {
+        "title": "fix: ShareAudienceSelector no longer defaults gratitude to public\n",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6414",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-05-21T15:03:39Z"
+      },
+      {
+        "title": "feat(giving): add status filter to transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3368",
+        "repo": "apollos-admin",
+        "merged_at": "2026-05-22T00:17:00Z"
+      },
+      {
+        "title": "feat(giving): surface pending and failed transaction statuses in Admin transactions Table",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3362",
+        "repo": "apollos-admin",
+        "merged_at": "2026-05-20T17:53:09Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix(giving): forward campus/status to cluster transaction export",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3401",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix: Stripe totalCount for single-status transactions; strip JSON total",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3051",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat(giving): cursor-based prev/next pagination for cluster-proxy transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3398",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat: platform Stripe status search for cluster proxy transaction reports\n",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3050",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "fix(giving): forward dynamic status filter to cluster API instead of hardcoding \"succeeded\"",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3397",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat(giving): add payment method filter to transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3371",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "fix: resolve unused exports knip warnings in web-embeds barrels",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3430"
+      },
+      {
+        "title": "fix: resolve App Clip subdomain AASA fallback (APO-9167)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3426"
+      },
+      {
+        "title": "[APO-8740] Keep Google Pay visible for recurring gifts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3425"
+      },
+      {
+        "title": "Migrate 3 utility files from JS to TS",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3055"
+      },
+      {
+        "title": "feat(people): snapshot email and phone into ban lists on toggleBan",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3395"
+      },
+      {
+        "title": "APO-8743 Default Transactions date filter to trailing 12 months",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3394"
+      },
+      {
+        "title": "feat(giving): add payment method filter to transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3371"
+      },
+      {
+        "title": "feat(giving): add status filter to transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3368"
+      },
+      {
+        "title": "feat(giving): surface pending and failed transaction statuses in Admin transactions Table",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3362"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Wednesday",
+      "content": "- feat(giving): surface pending and failed transaction statuses in Admin transactions Table\n- Reviewed: [APO-8740] Keep Google Pay visible for recurring gifts\n- Reviewed: Migrate 3 utility files from JS to TS\n- Reviewed: feat(people): snapshot email and phone into ban lists on toggleBan\n- Reviewed: APO-8743 Default Transactions date filter to trailing 12 months\n- Reviewed: feat(giving): add status filter to transactions\n- Reviewed: feat(giving): surface pending and failed transaction statuses in Admin transactions Table\n- In progress: APO-9126: As a giving admin on a cluster-proxy church, my Transactions tab status filter actually changes the results\n- In progress: APO-9125: As a giving admin on a cluster-proxy church, my Transactions count and pagination stay accurate when I filter by status\n- In progress: APO-8958: Add Status filter to Transactions tab\n- In progress: APO-8957: Add Payment Method Filter to Admin Transactions Tab\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- chore: git4sql script to make gratitudes posts private\n- fix: ShareAudienceSelector no longer defaults gratitude to public\n- feat(giving): add status filter to transactions\n- Reviewed: fix: resolve unused exports knip warnings in web-embeds barrels\n- Reviewed: fix: resolve App Clip subdomain AASA fallback (APO-9167)\n- Reviewed: feat(giving): add payment method filter to transactions\n- Reviewed: feat(giving): add status filter to transactions\n- In progress: APO-9286: Old gratitude flow can create public posts\n- Filed a new Linear ticket\n- Replied in Linear\nCheck-ins\n42 answers"
+    },
+    {
+      "day": "Thursday",
+      "content": ", May 21\nDaily\nWhat did you work on today\n7:34 PM\nGratitude Posts script merged and ran in staging/prod\nFix for Gratitude Posts in Mobile app\nTurned on New Gratitude for Grace 🎉\nDebugged Google Pay recurring toggle bug across local/staging/prod with the whole crew\nHuddle about the Google Pay Stripe config\nGreat convo re: project staffing and review bottleneck w/ @Michael\nScreenshot 2026-05-21 at 7.26.26 PM.png\nScreenshot 2026-05-21 at 7.26.26 PM.png"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", May 20\nDaily\nWhat did you work on today\n4:39 PM\nCaught up from OOO in NY\nFixed up PRs, tested them again, gave them a fresh look\nStarted pushing project PRs out for review\nDid some PR reviews myself\nLinear updates/comments\n1:1 w/ @Conrad\nDebugging Public Gratitude issue w/ @Casey @Conrad\nScreenshot 2026-05-20 at 4.35.50 PM.png"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 4\n  • PR reviews: 9\n  • Commits pushed: 16\n  • Linear issues completed: 3\n  • Linear issues worked on: 7\n  • Linear issues created: 2\n  • Linear replies: 3\n  • Repos: apollos-admin, apollos-cluster, apollos-platforms\n\n📝 Check-ins:\n\n  Wednesday: - feat(giving): surface pending and failed transaction statuses in Admin transac...\n  Thursday: - chore: git4sql script to make gratitudes posts private\n- fix: ShareAudienceSel...\n  Thursday: , May 21\nDaily\nWhat did you work on today\n7:34 PM\nGratitude Posts script merged ...\n  Wednesday: , May 20\nDaily\nWhat did you work on today\n4:39 PM\nCaught up from OOO in NY\nFixed...\n",
+  "formatted_output": null
+}
