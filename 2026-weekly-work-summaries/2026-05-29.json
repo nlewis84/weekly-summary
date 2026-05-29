@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "generated_at": "2026-05-29T17:12:26.609Z",
+    "window_start": "2026-05-23T04:00:00.000Z",
+    "window_end": "2026-05-30T03:59:59.999Z",
+    "week_ending": "2026-05-29",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 3,
+    "prs_total": 7,
+    "pr_reviews": 18,
+    "pr_comments": 25,
+    "commits_pushed": 13,
+    "linear_completed": 3,
+    "linear_worked_on": 7,
+    "linear_issues_created": 1,
+    "linear_comments": 3,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-platforms",
+      "apollos-shovel"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-9124",
+        "title": "As a giving admin, I can see Pending and Failed transactions in the Transactions tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9124/as-a-giving-admin-i-can-see-pending-and-failed-transactions-in-the",
+        "completedAt": "2026-05-27T03:29:41.286Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8958",
+        "title": "Add Status filter to Transactions tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-8958/add-status-filter-to-transactions-tab",
+        "completedAt": "2026-05-27T03:29:41.402Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8957",
+        "title": "Add Payment Method Filter to Admin Transactions Tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-8957/add-payment-method-filter-to-admin-transactions-tab",
+        "completedAt": "2026-05-27T03:29:41.464Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-9364",
+        "title": "Make sure that subscription transactions show up on /transactions (succeeded and failed)",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9364/make-sure-that-subscription-transactions-show-up-on-transactions",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9127",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions export uses the same campus and status filters as the tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9127/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-export",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9125",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions count and pagination stay accurate when I filter by status",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9125/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-count-and",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9124",
+        "title": "As a giving admin, I can see Pending and Failed transactions in the Transactions tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9124/as-a-giving-admin-i-can-see-pending-and-failed-transactions-in-the",
+        "completedAt": "2026-05-27T03:29:41.286Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8958",
+        "title": "Add Status filter to Transactions tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-8958/add-status-filter-to-transactions-tab",
+        "completedAt": "2026-05-27T03:29:41.402Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8957",
+        "title": "Add Payment Method Filter to Admin Transactions Tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-8957/add-payment-method-filter-to-admin-transactions-tab",
+        "completedAt": "2026-05-27T03:29:41.464Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-8590",
+        "title": "Express payments fail when logged in",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-8590/express-payments-fail-when-logged-in",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-9364",
+        "title": "Make sure that subscription transactions show up on /transactions (succeeded and failed)",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9364/make-sure-that-subscription-transactions-show-up-on-transactions",
+        "createdAt": "2026-05-27T14:35:50.398Z",
+        "state": "In Review"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-9126",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions tab status filter actually changes the results",
+        "url": "https://linear.app/differential/issue/APO-9126/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-tab-status",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "state": "Ready for QA"
+      },
+      {
+        "identifier": "APO-9382",
+        "title": "Add List of Associated Transactions to Subscription Drawer",
+        "url": "https://linear.app/differential/issue/APO-9382/add-list-of-associated-transactions-to-subscription-drawer",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-8880",
+        "title": "Use embed campus default on Give Again",
+        "url": "https://linear.app/differential/issue/APO-8880/use-embed-campus-default-on-give-again",
+        "project": "Crossroads Sprint 10",
+        "state": "Ready for Release"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat: default transactions status to succeeded",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3447",
+        "repo": "apollos-admin",
+        "merged_at": "2026-05-26T21:52:11Z"
+      },
+      {
+        "title": "feat(giving): cursor-based prev/next pagination for cluster-proxy transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3398",
+        "repo": "apollos-admin",
+        "merged_at": "2026-05-26T17:39:24Z"
+      },
+      {
+        "title": "feat: platform Stripe status search for cluster proxy transaction reports\n",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3050",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-05-28T01:34:13Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix: ensure subscription transactions can be filtered",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3108",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "fix(giving): forward campus/status to cluster transaction export",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3401",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix: Stripe totalCount for single-status transactions; strip JSON total",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3051",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: add payment intent requires action event handling",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2722",
+        "repo": "apollos-cluster",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "[APO-9396] [Crossroads] Email Revelation",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3494"
+      },
+      {
+        "title": "[APO-9393] Give flow now accepts `redirectTo` query param.",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3493"
+      },
+      {
+        "title": "perf(donation-embed): pre-warm Stripe.js chunk to speed up wallet button",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3492"
+      },
+      {
+        "title": "fix(web): keep error page \"Let's go back\" inside the church (APO-9384)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3490"
+      },
+      {
+        "title": "chore: remove stale giving-history feature flag",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3487"
+      },
+      {
+        "title": "fix(giving): enforce authorization on balance API endpoints",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3485"
+      },
+      {
+        "title": "fix(giving): default App Clip recurring gifts to Monthly to match full app",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6444"
+      },
+      {
+        "title": "fix(giving): bound deferred balance streams so the tab can't load forever",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3467"
+      },
+      {
+        "title": "[codex] Prepare church deletion requests [APO-8936]",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1493"
+      },
+      {
+        "title": "[codex] Add church deletion allowlist [APO-8936]",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1492"
+      },
+      {
+        "title": "APO-9292 refresh expired session in auth gate before redirecting to login",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3466"
+      },
+      {
+        "title": "chore: add React Router build deps",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3450"
+      },
+      {
+        "title": "chore: add React Router runtime deps",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3448"
+      },
+      {
+        "title": "chore(deps): consolidate tiptap v3 migration",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3441"
+      },
+      {
+        "title": "APO-8581 preserve feature-backed content after empty save",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3424"
+      },
+      {
+        "title": "APO-8904 toast on save on /giving/settings",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3423"
+      },
+      {
+        "title": "feat: platform Stripe status search for cluster proxy transaction reports\n",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3050"
+      },
+      {
+        "title": "[APO-9039] Admin: Edit Next Payment Date",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3326"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Tuesday",
+      "content": "- feat(giving): cursor-based prev/next pagination for cluster-proxy transactions\n- Reviewed: chore(deps): consolidate tiptap v3 migration\n- Reviewed: APO-8581 preserve feature-backed content after empty save\n- Reviewed: APO-8904 toast on save on /giving/settings\n- Reviewed: feat: platform Stripe status search for cluster proxy transaction reports\n- In progress: APO-9301: Should we have a default Status when the page is initially loaded?\n- In progress: APO-9127: As a giving admin on a cluster-proxy church, my Transactions export uses the same campus and status filters as the tab\n- Left comments on PRs"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- Reviewed: fix(giving): bound deferred balance streams so the tab can't load forever\n- Reviewed: [codex] Add church deletion allowlist [APO-8936]\n- Reviewed: APO-9292 refresh expired session in auth gate before redirecting to login\n- Reviewed: chore: add React Router runtime deps\n- In progress: APO-9364: Make sure that subscription transactions show up on /transactions (succeeded and failed)\n- In progress: APO-9126: As a giving admin on a cluster-proxy church, my Transactions tab status filter actually changes the results\n- In progress: APO-9125: As a giving admin on a cluster-proxy church, my Transactions count and pagination stay accurate when I filter by status\n- Filed a new Linear ticket\n- Pushed 3 commits (no merges in this window)\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- Reviewed: [APO-9396] [Crossroads] Email Revelation\n- Reviewed: [APO-9393] Give flow now accepts `redirectTo` query param.\n- Reviewed: perf(donation-embed): pre-warm Stripe.js chunk to speed up wallet button\n- Reviewed: fix(web): keep error page \"Let's go back\" inside the church (APO-9384)\n- Reviewed: chore: remove stale giving-history feature flag\n- Reviewed: fix(giving): enforce authorization on balance API endpoints\n- Reviewed: fix(giving): default App Clip recurring gifts to Monthly to match full app\n- Reviewed: fix(giving): bound deferred balance streams so the tab can't load forever\n- Reviewed: [codex] Prepare church deletion requests [APO-8936]\n- Reviewed: chore: add React Router build deps\n- Reviewed: [APO-9039] Admin: Edit Next Payment Date\n- In progress: APO-9364: Make sure that subscription transactions show up on /transactions (succeeded and failed)\n- In progress: APO-9125: As a giving admin on a cluster-proxy church, my Transactions count and pagination stay accurate when I filter by status\n- Pushed commits (no merges in this window)\n- Left comments on PRs and in Linear"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 3\n  • PR reviews: 18\n  • Commits pushed: 13\n  • Linear issues completed: 3\n  • Linear issues worked on: 7\n  • Linear issues created: 1\n  • Linear replies: 3\n  • Repos: apollos-admin, apollos-cluster, apollos-platforms, apollos-shovel\n\n📝 Check-ins:\n\n  Tuesday: - feat(giving): cursor-based prev/next pagination for cluster-proxy transactions...\n  Wednesday: - Reviewed: fix(giving): bound deferred balance streams so the tab can't load fo...\n  Friday: - Reviewed: [APO-9396] [Crossroads] Email Revelation\n- Reviewed: [APO-9393] Give...\n",
+  "formatted_output": null
+}
