@@ -1,0 +1,469 @@
+{
+  "meta": {
+    "generated_at": "2026-06-05T20:18:55.928Z",
+    "window_start": "2026-05-30T05:00:00.000Z",
+    "window_end": "2026-06-06T04:59:59.999Z",
+    "week_ending": "2026-06-05",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 5,
+    "prs_total": 12,
+    "pr_reviews": 37,
+    "pr_comments": 43,
+    "commits_pushed": 53,
+    "linear_completed": 6,
+    "linear_worked_on": 10,
+    "linear_issues_created": 3,
+    "linear_comments": 3,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-platforms",
+      "apollos-shovel"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-9543",
+        "title": "(Christ Fellowship) Transactions page crashes and shows HTML or timeout",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9543/christ-fellowship-transactions-page-crashes-and-shows-html-or-timeout",
+        "completedAt": "2026-06-05T19:19:43.613Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9301",
+        "title": "Set default Status filter on first load of transactions page in Admin",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9301/set-default-status-filter-on-first-load-of-transactions-page-in-admin",
+        "completedAt": "2026-06-02T04:59:28.235Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9286",
+        "title": "Old gratitude flow can create public posts",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9286/old-gratitude-flow-can-create-public-posts",
+        "completedAt": "2026-06-01T14:08:12.413Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9127",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions export uses the same campus and status filters as the tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9127/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-export",
+        "completedAt": "2026-06-02T04:59:28.548Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9126",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions tab status filter actually changes the results",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9126/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-tab-status",
+        "completedAt": "2026-06-02T04:59:28.376Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9125",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions count and pagination stay accurate when I filter by status",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9125/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-count-and",
+        "completedAt": "2026-06-02T04:59:28.507Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-9543",
+        "title": "(Christ Fellowship) Transactions page crashes and shows HTML or timeout",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9543/christ-fellowship-transactions-page-crashes-and-shows-html-or-timeout",
+        "completedAt": "2026-06-05T19:19:43.613Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9432",
+        "title": "Recurring drawer Transactions section UI",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9432/recurring-drawer-transactions-section-ui",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9431",
+        "title": "Subscription invoices API + status mapper",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9431/subscription-invoices-api-status-mapper",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9428",
+        "title": "Campus and Fund are sometimes missing in Admin Transactions table",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9428/campus-and-fund-are-sometimes-missing-in-admin-transactions-table",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9382",
+        "title": "Add List of Associated Transactions to Subscription Drawer",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9382/add-list-of-associated-transactions-to-subscription-drawer",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9301",
+        "title": "Set default Status filter on first load of transactions page in Admin",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9301/set-default-status-filter-on-first-load-of-transactions-page-in-admin",
+        "completedAt": "2026-06-02T04:59:28.235Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9286",
+        "title": "Old gratitude flow can create public posts",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9286/old-gratitude-flow-can-create-public-posts",
+        "completedAt": "2026-06-01T14:08:12.413Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9127",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions export uses the same campus and status filters as the tab",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9127/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-export",
+        "completedAt": "2026-06-02T04:59:28.548Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9126",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions tab status filter actually changes the results",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9126/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-tab-status",
+        "completedAt": "2026-06-02T04:59:28.376Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9125",
+        "title": "As a giving admin on a cluster-proxy church, my Transactions count and pagination stay accurate when I filter by status",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9125/as-a-giving-admin-on-a-cluster-proxy-church-my-transactions-count-and",
+        "completedAt": "2026-06-02T04:59:28.507Z",
+        "state": "Released"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-9432",
+        "title": "Recurring drawer Transactions section UI",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9432/recurring-drawer-transactions-section-ui",
+        "createdAt": "2026-06-01T19:59:43.308Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9431",
+        "title": "Subscription invoices API + status mapper",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9431/subscription-invoices-api-status-mapper",
+        "createdAt": "2026-06-01T19:59:40.016Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9428",
+        "title": "Campus and Fund are sometimes missing in Admin Transactions table",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9428/campus-and-fund-are-sometimes-missing-in-admin-transactions-table",
+        "createdAt": "2026-06-01T18:08:01.143Z",
+        "state": "In Review"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-9543",
+        "title": "(Christ Fellowship) Transactions page crashes and shows HTML or timeout",
+        "url": "https://linear.app/differential/issue/APO-9543/christ-fellowship-transactions-page-crashes-and-shows-html-or-timeout",
+        "project": null,
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9381",
+        "title": "Add Statuses to Recurring Tab",
+        "url": "https://linear.app/differential/issue/APO-9381/add-statuses-to-recurring-tab",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "state": "Ready for Release"
+      },
+      {
+        "identifier": "APO-8590",
+        "title": "Express payments fail when logged in",
+        "url": "https://linear.app/differential/issue/APO-8590/express-payments-fail-when-logged-in",
+        "project": null,
+        "state": "Released"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "fix(giving): skip transactions COUNT query; use LIMIT+1 hasNextPage",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3542",
+        "repo": "apollos-admin",
+        "merged_at": "2026-06-05T00:11:08Z"
+      },
+      {
+        "title": "feat(giving): add past_due status filter to recurring charges",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3513",
+        "repo": "apollos-admin",
+        "merged_at": "2026-06-02T20:32:44Z"
+      },
+      {
+        "title": "test(giving): add tests for subscription invoices loader and status utils",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3512",
+        "repo": "apollos-admin",
+        "merged_at": "2026-06-04T18:47:35Z"
+      },
+      {
+        "title": "feat(giving): add campus column to transaction table",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3500",
+        "repo": "apollos-admin",
+        "merged_at": "2026-06-01T19:55:04Z"
+      },
+      {
+        "title": "fix: Stripe totalCount for single-status transactions; strip JSON total",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3051",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-06-01T13:42:42Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix(giving): normalize subscription charge attribution at webhook ingest",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3157",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: ui for recurring gift transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3507",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat(giving): add subscription invoice status utils and API loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3504",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix: ensure subscription transactions can be filtered",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3108",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "chore: first pass at updating user facing giving embed setup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3052",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Revert \"[codex] delete simulator build workflow\"",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6509"
+      },
+      {
+        "title": "chore(mobile): migrate five components off styled-components",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6508"
+      },
+      {
+        "title": "fix(web): give error reload page a real escape, not a dead button (APO-9384)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3537"
+      },
+      {
+        "title": "Add e2e tests for email confirmation page and protected route redirects",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3536"
+      },
+      {
+        "title": "[No Ticket] Processing email improvements",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3534"
+      },
+      {
+        "title": "[No Ticket] Remove old \"Thank you\" section",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3533"
+      },
+      {
+        "title": "Add e2e tests for email verification and OTP login flows",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3531"
+      },
+      {
+        "title": "feat: bypass throng when WEB_CONCURRENCY is unset",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3158"
+      },
+      {
+        "title": "fix(giving): normalize subscription charge attribution at webhook ingest",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3157"
+      },
+      {
+        "title": "[APO-9473] Remove \"Powered BY\" section from cancellation email",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3527"
+      },
+      {
+        "title": "[HOTFIX] [Sendgrid] `Starting` to `Starting on` string.",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3525"
+      },
+      {
+        "title": "[APO-9472] Remove redundant thank you.",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3524"
+      },
+      {
+        "title": "[APO-9456] Thank you section updates",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3523"
+      },
+      {
+        "title": "[APO-9461] Email Subject Lines Update",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3522"
+      },
+      {
+        "title": "[APO-9458] Intro email updates",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3521"
+      },
+      {
+        "title": "[APO-9454] [Crossroads] Update NON-10X Push receipt",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3520"
+      },
+      {
+        "title": "fix(admin): stop Canvas autosave from persisting hydration state (APO-8581)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3519"
+      },
+      {
+        "title": "APO-9440: only show active funds when editing recurring gifts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3518"
+      },
+      {
+        "title": "perf(social-graph): batch peopleToFollow person lookups",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3145"
+      },
+      {
+        "title": "feat(giving): add subscription invoice status utils and API loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3504"
+      },
+      {
+        "title": "[APO-9172] [PT. 2] Unify email header sizes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3497"
+      },
+      {
+        "title": "fix(config): use a per-value IV for encrypted config secrets",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3134"
+      },
+      {
+        "title": "[APO-9394] Generic `your email` success message",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3496"
+      },
+      {
+        "title": "Isolate feature render failures in FeatureFeed with an error boundary",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3495"
+      },
+      {
+        "title": "Mitigate SSRF in Planning Center registration event scraping",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1519"
+      },
+      {
+        "title": "fix: resolve unlisted dependencies knip warnings",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3471"
+      },
+      {
+        "title": "[codex] Add church deletion backup streaming [APO-8936]",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1498"
+      },
+      {
+        "title": "[codex] Preflight cluster church deletion schema [APO-8936]",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1497"
+      },
+      {
+        "title": "[codex] Preflight admin church deletion schema [APO-8936]",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1496"
+      },
+      {
+        "title": "[codex] Order church-scoped cluster deletes [APO-8936]",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1495"
+      },
+      {
+        "title": "feat(auth): handle OTP RATE_LIMITED cooldown in web + web-embeds auth UI",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3465"
+      },
+      {
+        "title": "chore: add admin React Router route config",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3455"
+      },
+      {
+        "title": "chore: add dormant web route config",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3454"
+      },
+      {
+        "title": "chore: add dormant admin route config",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3453"
+      },
+      {
+        "title": "chore: add Sentry React Router packages",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3452"
+      },
+      {
+        "title": "chore: add admin router migration companion deps",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3449"
+      },
+      {
+        "title": "test: cover giving report polling window",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3376"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- feat(giving): add campus column to transaction table\n- fix: Stripe totalCount for single-status transactions; strip JSON total\n- Reviewed: feat(giving): add subscription invoice status utils and API loader\n- Reviewed: [APO-9172] [PT. 2] Unify email header sizes\n- Reviewed: [APO-9394] Generic `your email` success message\n- Reviewed: Mitigate SSRF in Planning Center registration event scraping\n- Reviewed: feat(auth): handle OTP RATE_LIMITED cooldown in web + web-embeds auth UI\n- Reviewed: chore: add admin router migration companion deps\n- Reviewed: test: cover giving report polling window\n- Done: APO-9286: Old gratitude flow can create public posts\n- In progress: APO-9432: Recurring drawer Transactions section UI\n- In progress: APO-9431: Subscription invoices API + status mapper\n- In progress: APO-9428: Campus and Fund are sometimes missing in Admin Transactions table\n- In progress: APO-9382: Add List of Associated Transactions to Subscription Drawer\n- Filed 3 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- Reviewed: fix(config): use a per-value IV for encrypted config secrets\n- Reviewed: Isolate feature render failures in FeatureFeed with an error boundary\n- Reviewed: [codex] Order church-scoped cluster deletes [APO-8936]\n- In progress: APO-9432: Recurring drawer Transactions section UI\n- In progress: APO-9431: Subscription invoices API + status mapper\n- In progress: APO-9428: Campus and Fund are sometimes missing in Admin Transactions table\n- In progress: APO-9382: Add List of Associated Transactions to Subscription Drawer\n- In progress: APO-9381: Add Statuses to Recurring Tab\n- Pushed 11 commits (no merges in this window)\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- Reviewed: feat: bypass throng when WEB_CONCURRENCY is unset\n- Reviewed: [APO-9473] Remove \"Powered BY\" section from cancellation email\n- Reviewed: [HOTFIX] [Sendgrid] `Starting` to `Starting on` string.\n- Reviewed: [APO-9472] Remove redundant thank you.\n- Reviewed: [APO-9456] Thank you section updates\n- Reviewed: [APO-9461] Email Subject Lines Update\n- Reviewed: [APO-9458] Intro email updates\n- Reviewed: [APO-9454] [Crossroads] Update NON-10X Push receipt\n- Reviewed: APO-9440: only show active funds when editing recurring gifts\n- Reviewed: perf(social-graph): batch peopleToFollow person lookups\n- Reviewed: [codex] Preflight admin church deletion schema [APO-8936]\n- Reviewed: chore: add Sentry React Router packages\n- Pushed 2 commits (no merges in this window)\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- test(giving): add tests for subscription invoices loader and status utils\n- Reviewed: Revert \"[codex] delete simulator build workflow\"\n- Reviewed: fix(web): give error reload page a real escape, not a dead button (APO-9384)\n- Reviewed: [No Ticket] Processing email improvements\n- Reviewed: [No Ticket] Remove old \"Thank you\" section\n- Reviewed: Add e2e tests for email verification and OTP login flows\n- Reviewed: fix(giving): normalize subscription charge attribution at webhook ingest\n- Reviewed: APO-9440: only show active funds when editing recurring gifts\n- Reviewed: feat(giving): add subscription invoice status utils and API loader\n- Reviewed: fix: resolve unlisted dependencies knip warnings\n- Reviewed: [codex] Preflight cluster church deletion schema [APO-8936]\n- Reviewed: chore: add dormant web route config\n- Reviewed: chore: add dormant admin route config\n- In progress: APO-9428: Campus and Fund are sometimes missing in Admin Transactions table\n- Left comments on PRs"
+    },
+    {
+      "day": "Friday",
+      "content": "- Reviewed: chore(mobile): migrate five components off styled-components\n- Reviewed: Add e2e tests for email confirmation page and protected route redirects\n- Reviewed: fix(admin): stop Canvas autosave from persisting hydration state (APO-8581)\n- Reviewed: APO-9440: only show active funds when editing recurring gifts\n- Reviewed: [codex] Add church deletion backup streaming [APO-8936]\n- Reviewed: chore: add admin React Router route config\n- Done: APO-9543: (Christ Fellowship) Transactions page crashes and shows HTML or timeout\n- Pushed commits (no merges in this window)\n- Left comments on PRs and in Linear\nCheck-ins\n43 answers"
+    },
+    {
+      "day": "Friday",
+      "content": ", June 5\nDaily\nWhat did you work on today\n2:29 PM\nRestacked and added test coverage to a project PR\nCo-work w/ Dallas folks! @Matt @Tyler @Conrad\nJammin' w/ @Tyler on yml files and QA escapades\nPoking around Figma at upcoming work\nLingering testing/ideating on CF Transaction tab in Admin issue (fixed by feature flag)\nGetting both Heathers setup and into Staging/Prod Admin\nTinkering with review agent orchestrator\nScreenshot 2026-06-05 at 2.25.11 PM.png\nScreenshot 2026-06-05 at 2.25.11 PM.png"
+    },
+    {
+      "day": "Thursday",
+      "content": ", June 4\nDaily\nWhat did you work on today\n4:24 PM\nIterating on PRs in review\nApollos Code Review Orchestrator (testing on PRs I'm waiting for reviews on, hence all the PR comments)\nWeekly Engineering Sync\nUrgent CF issue with Transaction tab in Admin\nScreenshot 2026-06-04 at 7.20.42 PM.png\nScreenshot 2026-06-04 at 7.20.42 PM.png"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", June 3\nDaily\nWhat did you work on today\n3:10 PM\nComments on PRs and in Linear\nPushed a draft cluster pr to demonstrate a different solution\nMonthly DevChat\nAI Development Workflow Changes\nProduct sense remains major AI weakness\nSlackin' w/ @Vincent\nProject update\nClaude orchestration experimentation\nScreenshot 2026-06-03 at 3.07.24 PM.png\nScreenshot 2026-06-03 at 3.07.24 PM.png"
+    },
+    {
+      "day": "Tuesday",
+      "content": ", June 2\nDaily\nWhat did you work on today\n3:20 PM\nArt Pod meeting\nCommitting a bunch to open PRs for Admin Transactions and Recurring project\nPR refactoring\nScreenshot 2026-06-02 at 3.15.39 PM.png\nScreenshot 2026-06-02 at 3.15.39 PM.png"
+    },
+    {
+      "day": "Monday",
+      "content": ", June 1\nDaily\nWhat did you work on today\n5:46 PM\nPushed a couple of lingering PRs from last week through review cycle\nTechnical derisking of new project (Transactions and Recurring in Admin)\nOpened up a couple of PRs and started work on the project\n1:1 w/ @Michael\nSprint Kickoff Retro\nScreenshot 2026-06-01 at 5.45.18 PM.png\nScreenshot 2026-06-01 at 5.45.18 PM.png"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 5\n  • PR reviews: 37\n  • Commits pushed: 53\n  • Linear issues completed: 6\n  • Linear issues worked on: 10\n  • Linear issues created: 3\n  • Linear replies: 3\n  • Repos: apollos-admin, apollos-cluster, apollos-platforms, apollos-shovel\n\n📝 Check-ins:\n\n  Monday: - feat(giving): add campus column to transaction table\n- fix: Stripe totalCount ...\n  Tuesday: - Reviewed: fix(config): use a per-value IV for encrypted config secrets\n- Revie...\n  Wednesday: - Reviewed: feat: bypass throng when WEB_CONCURRENCY is unset\n- Reviewed: [APO-9...\n  Thursday: - test(giving): add tests for subscription invoices loader and status utils\n- Re...\n  Friday: - Reviewed: chore(mobile): migrate five components off styled-components\n- Revie...\n  Friday: , June 5\nDaily\nWhat did you work on today\n2:29 PM\nRestacked and added test cover...\n  Thursday: , June 4\nDaily\nWhat did you work on today\n4:24 PM\nIterating on PRs in review\nApo...\n  Wednesday: , June 3\nDaily\nWhat did you work on today\n3:10 PM\nComments on PRs and in Linear\n...\n  Tuesday: , June 2\nDaily\nWhat did you work on today\n3:20 PM\nArt Pod meeting\nCommitting a b...\n  Monday: , June 1\nDaily\nWhat did you work on today\n5:46 PM\nPushed a couple of lingering P...\n",
+  "formatted_output": null
+}
