@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "generated_at": "2026-06-19T20:43:36.297Z",
+    "window_start": "2026-06-13T05:00:00.000Z",
+    "window_end": "2026-06-20T04:59:59.999Z",
+    "week_ending": "2026-06-19",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 2,
+    "prs_total": 9,
+    "pr_reviews": 6,
+    "pr_comments": 5,
+    "commits_pushed": 4,
+    "linear_completed": 5,
+    "linear_worked_on": 9,
+    "linear_issues_created": 1,
+    "linear_comments": 1,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-platforms",
+      "apollos-shovel"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-9584",
+        "title": "5. Fund filter fragment (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9584/5-fund-filter-fragment-dead-code",
+        "completedAt": "2026-06-15T22:36:47.595Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9583",
+        "title": "4. Campus filter fragment (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9583/4-campus-filter-fragment-dead-code",
+        "completedAt": "2026-06-15T22:36:45.778Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9582",
+        "title": "3. Date filter fragment (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9582/3-date-filter-fragment-dead-code",
+        "completedAt": "2026-06-15T22:36:43.441Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9581",
+        "title": "2. Main /transactions SQL rewrite (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9581/2-main-transactions-sql-rewrite-dead-code",
+        "completedAt": "2026-06-15T22:36:41.261Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9580",
+        "title": "1. Add a new feature flag (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9580/1-add-a-new-feature-flag-dead-code",
+        "completedAt": "2026-06-15T22:36:39.369Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-9832",
+        "title": "9589 stack 3: refund reads (additive)",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9832/9589-stack-3-refund-reads-additive",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9830",
+        "title": "9589 stack 1: mapper, charge processors, bankName",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9830/9589-stack-1-mapper-charge-processors-bankname",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9640",
+        "title": "Sequelize: model updates for new charge columns",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9640/sequelize-model-updates-for-new-charge-columns",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9588",
+        "title": "1. Schema: add first-class charge columns + refund self-FK",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9588/1-schema-add-first-class-charge-columns-refund-self-fk",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9584",
+        "title": "5. Fund filter fragment (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9584/5-fund-filter-fragment-dead-code",
+        "completedAt": "2026-06-15T22:36:47.595Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9583",
+        "title": "4. Campus filter fragment (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9583/4-campus-filter-fragment-dead-code",
+        "completedAt": "2026-06-15T22:36:45.778Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9582",
+        "title": "3. Date filter fragment (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9582/3-date-filter-fragment-dead-code",
+        "completedAt": "2026-06-15T22:36:43.441Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9581",
+        "title": "2. Main /transactions SQL rewrite (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9581/2-main-transactions-sql-rewrite-dead-code",
+        "completedAt": "2026-06-15T22:36:41.261Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9580",
+        "title": "1. Add a new feature flag (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9580/1-add-a-new-feature-flag-dead-code",
+        "completedAt": "2026-06-15T22:36:39.369Z",
+        "state": "Released"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-9984",
+        "title": "Giving history omits amount_refunded — column-based refund status missing in UI",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9984/giving-history-omits-amount-refunded-column-based-refund-status",
+        "createdAt": "2026-06-19T18:45:28.194Z",
+        "state": "Not Now"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-9969",
+        "title": "Crossroads Test Flight / Test Mode - Other Payment Methods Shows \"Unable to Load Payment Methods Please Try Again\" Screen",
+        "url": "https://linear.app/differential/issue/APO-9969/crossroads-test-flight-test-mode-other-payment-methods-shows-unable-to",
+        "project": null,
+        "state": "In Progress"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat: add source of truth columns to charges",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3241",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-06-15T20:25:05Z"
+      },
+      {
+        "title": "feat: new filters SQL for transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3565",
+        "repo": "apollos-admin",
+        "merged_at": "2026-06-19T15:30:50Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix: fail forward if ipinfo.io fetch fails",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3317",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: setup dispute ingestion and routing",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3262",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: setup new refund reads",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3261",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: setup new refund writes",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3259",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: mapper to get data to charges",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3258",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: sequelize model updates for new charge columns",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3242",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: wire up the v2 transactions sql feature flag",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3568",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "migrate Switch from src/ui-kit to new-src",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6591"
+      },
+      {
+        "title": "fix(algolia-pages): guard against large-platform URLs hanging the scrape DAG",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1560"
+      },
+      {
+        "title": "fix(features): drop non-prayer algorithm results from prayer list features (APO-9654)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3256"
+      },
+      {
+        "title": "fix: remap invalid studioc demo seed apollos_type values (APO-9642)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3254"
+      },
+      {
+        "title": "fix(mobile): dedupe Daily Habits completion events across hook instances (APO-9485)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6559"
+      },
+      {
+        "title": "Stabilize chat detail list render props (APO-9102)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6534"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Friday",
+      "content": "- feat: new filters SQL for transactions\n- Reviewed: migrate Switch from src/ui-kit to new-src\n- Reviewed: fix(algolia-pages): guard against large-platform URLs hanging the scrape DAG\n- Reviewed: fix(features): drop non-prayer algorithm results from prayer list features (APO-9654)\n- Reviewed: fix: remap invalid studioc demo seed apollos_type values (APO-9642)\n- Reviewed: fix(mobile): dedupe Daily Habits completion events across hook instances (APO-9485)\n- Reviewed: Stabilize chat detail list render props (APO-9102)\n- In progress: APO-9832: 9589 stack 3: refund reads (additive)\n- In progress: APO-9830: 9589 stack 1: mapper, charge processors, bankName\n- In progress: APO-9640: Sequelize: model updates for new charge columns\n- In progress: APO-9588: 1. Schema: add first-class charge columns + refund self-FK\n- Filed a new Linear ticket\n- Left comments on PRs and in Linear\nHere's a summary of your Slack activity today:\n#dev — debugging & troubleshooting\nWorked through a payment intent / \"Failed to create give intent\" error in staging, traced it to an IP address check (ipinfo.io) bombing out — confirmed later in the day\nInvestigated a mobile giving minimum amount bug (testflight weirdness vs. prod issue) — walked someone through a diagnostic to isolate whether it was testflight-specific\nNoted no major outage from what you saw\n#dev — AI + code review discussion (substantial thread)\nKicked off or contributed heavily to a conversation about human accountability in AI-assisted PRs\nKey points you made:\nAI is diagnosing, planning, and building without enough human input before tagging reviewers\nThe social contract that \"author understands what they're showing\" has broken down with AI authorship\nSuggested requiring a Loom walkthrough on AI-authored PRs (screen share, talk through code, demo it)\nRaised two specific gaps: who formulates the plan, and who validates the PR actually addresses the issue\nShared a concrete example where AI misidentified a Platforms bug as a Web bug, pushed a fix, closed the Linear issue — and the PR description used language no human on the team had ever used"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 2\n  • PR reviews: 6\n  • Commits pushed: 4\n  • Linear issues completed: 5\n  • Linear issues worked on: 9\n  • Linear issues created: 1\n  • Linear replies: 1\n  • Repos: apollos-admin, apollos-cluster, apollos-platforms, apollos-shovel\n\n📝 Check-ins:\n\n  Friday: - feat: new filters SQL for transactions\n- Reviewed: migrate Switch from src/ui-...\n",
+  "formatted_output": null
+}
