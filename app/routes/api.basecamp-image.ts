@@ -4,6 +4,8 @@ import { execFile } from "node:child_process";
 const ALLOWED_HOSTS = [
   "preview.3.basecamp.com",
   "storage.3.basecamp.com",
+  "preview.app.basecamp.com",
+  "storage.app.basecamp.com",
 ];
 
 /** Avoid dozens of parallel `basecamp` processes (timeouts, flaky exit 6/7). */
