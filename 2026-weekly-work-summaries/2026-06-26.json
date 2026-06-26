@@ -1,0 +1,526 @@
+{
+  "meta": {
+    "generated_at": "2026-06-26T20:34:47.778Z",
+    "window_start": "2026-06-20T05:00:00.000Z",
+    "window_end": "2026-06-27T04:59:59.999Z",
+    "week_ending": "2026-06-26",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 12,
+    "prs_total": 22,
+    "pr_reviews": 40,
+    "pr_comments": 49,
+    "commits_pushed": 30,
+    "linear_completed": 2,
+    "linear_worked_on": 12,
+    "linear_issues_created": 1,
+    "linear_comments": 9,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-platforms",
+      "toolbox"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-9639",
+        "title": "Migration: add charge columns + refund self-FK",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9639/migration-add-charge-columns-refund-self-fk",
+        "completedAt": "2026-06-23T21:36:25.647Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9431",
+        "title": "Subscription invoices API + status mapper",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9431/subscription-invoices-api-status-mapper",
+        "completedAt": "2026-06-25T14:45:44.947Z",
+        "state": "Released"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-9833",
+        "title": "9589 stack 4: disputes + GraphQL",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9833/9589-stack-4-disputes-graphql",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9832",
+        "title": "9589 stack 3: refund reads (additive)",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9832/9589-stack-3-refund-reads-additive",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9831",
+        "title": "9589 stack 2: refund writes (transfer.reversed + charge.refunded)",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9831/9589-stack-2-refund-writes-transferreversed-chargerefunded",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9639",
+        "title": "Migration: add charge columns + refund self-FK",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9639/migration-add-charge-columns-refund-self-fk",
+        "completedAt": "2026-06-23T21:36:25.647Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9591",
+        "title": "4. Completeness-audit dashboard (parity gate)",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9591/4-completeness-audit-dashboard-parity-gate",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9590",
+        "title": "3. Backfill historical charges from stripe_events",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9590/3-backfill-historical-charges-from-stripe-events",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9589",
+        "title": "2. Write path: populate new columns + link refunds + ingest disputes",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9589/2-write-path-populate-new-columns-link-refunds-ingest-disputes",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9586",
+        "title": "7. Wire flag + parity verification (feature flagged code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9586/7-wire-flag-parity-verification-feature-flagged-code",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9579",
+        "title": "Transaction Tab SQL is very slow",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9579/transaction-tab-sql-is-very-slow",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9431",
+        "title": "Subscription invoices API + status mapper",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9431/subscription-invoices-api-status-mapper",
+        "completedAt": "2026-06-25T14:45:44.947Z",
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9428",
+        "title": "Campus and Fund are sometimes missing in Admin Transactions table",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9428/campus-and-fund-are-sometimes-missing-in-admin-transactions-table",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9364",
+        "title": "Make sure that subscription transactions show up on /transactions (succeeded and failed)",
+        "project": "Admin Transaction Tab - Schema Changes & Updates",
+        "url": "https://linear.app/differential/issue/APO-9364/make-sure-that-subscription-transactions-show-up-on-transactions",
+        "completedAt": null,
+        "state": "In Progress"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-10047",
+        "title": "Rename charges.source_transfer_id to transfer_id (schema naming cleanup)",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10047/rename-chargessource-transfer-id-to-transfer-id-schema-naming-cleanup",
+        "createdAt": "2026-06-24T14:35:41.164Z",
+        "state": "Not Now"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-10054",
+        "title": "Handle partial disputes in sync",
+        "url": "https://linear.app/differential/issue/APO-10054/handle-partial-disputes-in-sync",
+        "project": null,
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-10094",
+        "title": "Hide charge events sync in admin",
+        "url": "https://linear.app/differential/issue/APO-10094/hide-charge-events-sync-in-admin",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-10090",
+        "title": "Prevent duplicate App Clip tap hosts with canonical host allocation",
+        "url": "https://linear.app/differential/issue/APO-10090/prevent-duplicate-app-clip-tap-hosts-with-canonical-host-allocation",
+        "project": null,
+        "state": "Needs Review"
+      },
+      {
+        "identifier": "APO-10092",
+        "title": "Transactions tab does nothing for Christ Fellowship",
+        "url": "https://linear.app/differential/issue/APO-10092/transactions-tab-does-nothing-for-christ-fellowship",
+        "project": null,
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-10077",
+        "title": "Creator AI Tool Completely Broken in Content Editor",
+        "url": "https://linear.app/differential/issue/APO-10077/creator-ai-tool-completely-broken-in-content-editor",
+        "project": null,
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-10069",
+        "title": "🧵Transactions Tab Timing Out/Very Slow",
+        "url": "https://linear.app/differential/issue/APO-10069/transactions-tab-timing-outvery-slow",
+        "project": null,
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-10041",
+        "title": "CRDS sync outage",
+        "url": "https://linear.app/differential/issue/APO-10041/crds-sync-outage",
+        "project": null,
+        "state": "Released"
+      },
+      {
+        "identifier": "APO-9591",
+        "title": "4. Completeness-audit dashboard (parity gate)",
+        "url": "https://linear.app/differential/issue/APO-9591/4-completeness-audit-dashboard-parity-gate",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-9985",
+        "title": "Transaction report shows error before download completes",
+        "url": "https://linear.app/differential/issue/APO-9985/transaction-report-shows-error-before-download-completes",
+        "project": null,
+        "state": "Ready for QA"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "fix: price reviews per-model with cache tokens",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/24",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-06-26T19:52:37Z"
+      },
+      {
+        "title": "feat: land self-improving learnings loop on main (recovers stranded #20)",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/23",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-06-26T17:07:43Z"
+      },
+      {
+        "title": "chore: promote 12 review learning(s)",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/22",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-06-26T17:02:06Z"
+      },
+      {
+        "title": "chore: promote 1 review learning(s)",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/21",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-06-26T17:01:37Z"
+      },
+      {
+        "title": "feat: self-improving learnings loop (#19)",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/20",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-06-26T16:58:31Z"
+      },
+      {
+        "title": "fix: set default giving transactions date range to 7 days",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3669",
+        "repo": "apollos-admin",
+        "merged_at": "2026-06-26T17:40:24Z"
+      },
+      {
+        "title": "fix: surface API-failure reviews instead of approving them (#18)",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/19",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-06-26T16:26:34Z"
+      },
+      {
+        "title": "feat: mapper to get data to charges",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3258",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-06-25T17:47:23Z"
+      },
+      {
+        "title": "feat: sequelize model updates for new charge columns",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3242",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-06-23T21:36:56Z"
+      },
+      {
+        "title": "feat: add stripe metadata backfill script",
+        "url": "https://github.com/ApollosProject/toolbox/pull/29",
+        "repo": "toolbox",
+        "merged_at": "2026-06-23T17:06:13Z"
+      },
+      {
+        "title": "feat: ui for recurring gift transactions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3507",
+        "repo": "apollos-admin",
+        "merged_at": "2026-06-25T16:39:15Z"
+      },
+      {
+        "title": "feat(giving): add subscription invoice status utils and API loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3504",
+        "repo": "apollos-admin",
+        "merged_at": "2026-06-23T16:25:20Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "feat: backfill charge source of truth columns",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3347",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: setup dispute ingestion and routing",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3262",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: setup new refund reads",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3261",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: setup new refund writes",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3259",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "feat: wire up the v2 transactions sql feature flag",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3568",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(giving): [charges-source-of-truth] normalize subscription charge attribution at webhook ingest",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3157",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "fix: [charges-source-of-truth] ensure subscription transactions can be filtered",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3108",
+        "repo": "apollos-cluster",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "fix(stripe): sync transfer reversal amount for refund rows with no Refund object",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3415"
+      },
+      {
+        "title": "[MP Giving] Scaffold finance/ministry-platform module (APO-8974)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3387"
+      },
+      {
+        "title": "fix(ai): restore AI Creator generation under the React Router runtime",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3664"
+      },
+      {
+        "title": "[codex] Fix giving dashboard deferred balances",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3663"
+      },
+      {
+        "title": "docs(giving): Phase 1/2 plan — home Stripe customers at the global-profile level (APO-10053)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3381"
+      },
+      {
+        "title": "fix(giving): reuse existing customer on multi-profile insert collision (APO-10053)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3380"
+      },
+      {
+        "title": "Strip commas from prefilled amount on web give handoff (APO-10019)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3661"
+      },
+      {
+        "title": "fix(stripe): use transfer reversal amount for disputed refunds",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3368"
+      },
+      {
+        "title": "fix(giving): use handoff IDs and guard express-checkout prefetch (APO-10021)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3657"
+      },
+      {
+        "title": "fix(giving): send receipt email for ACH one-time donations",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3653"
+      },
+      {
+        "title": "fix(ci): pin Node version across Docker and CI (APO-10042)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3355"
+      },
+      {
+        "title": "fix(giving): backfill SettledDate on transactions re-synced after Rock person merge",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3353"
+      },
+      {
+        "title": "Harden parseAmount against comma separators (APO-10019)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3645"
+      },
+      {
+        "title": "Strip commas from amount in app→web give handoff (APO-10019)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6625"
+      },
+      {
+        "title": "fix(admin): preserve header toggles when saving Daily custom settings",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3643"
+      },
+      {
+        "title": "feat: backfill charge source of truth columns",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3347"
+      },
+      {
+        "title": "chore(schema): remove zero-usage fields (GraphOS verified)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3346"
+      },
+      {
+        "title": "revert(web): revert APO-9373 giving login code change (restores implicit registration flow)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3640"
+      },
+      {
+        "title": "fix(bible): fall back to WEB when a translation's search returns empty (APO-10082)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3334"
+      },
+      {
+        "title": "[codex] Migrate web embeds Babel tooling to v8",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3637"
+      },
+      {
+        "title": "fix(web-embeds): flatten search-panel feed rendering (APO-1634)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3635"
+      },
+      {
+        "title": "Treat recurring-giving duplicate origin id collisions as recoverable",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3332"
+      },
+      {
+        "title": "fix(content-item): guard abstract type resolution against unknown apollosType",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3331"
+      },
+      {
+        "title": "fix: resolve unused devDependencies knip warnings",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3633"
+      },
+      {
+        "title": "Remove deprecated FeaturesNode, LiveNode, ScriptureNode interfaces",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3315"
+      },
+      {
+        "title": "simplify(person): replace moment-timezone with native Date",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3313"
+      },
+      {
+        "title": "simplify: replace validator with native URL for HTTPS URL validation",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3625"
+      },
+      {
+        "title": "fix(reports): resolve campus for recurring gifts in transactions report",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3308"
+      },
+      {
+        "title": "fix(give): preserve source param when redirecting to payment page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3613"
+      },
+      {
+        "title": "chore: upgrade vitest to v4",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3612"
+      },
+      {
+        "title": "fix: show friendly error when org profile slug already exists",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3610"
+      },
+      {
+        "title": "fix(admin): non-destructive feature save to preserve QuestionBlock responses",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3592"
+      },
+      {
+        "title": "fix(mobile): remove phantom left gap on ListViewItem rows without a leading image",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6572"
+      },
+      {
+        "title": "test(e2e): add missing critical flow coverage for admin auth",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3589"
+      },
+      {
+        "title": "fix(theme): raise light-mode secondary text contrast to meet WCAG AA",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6564"
+      },
+      {
+        "title": "fix(mobile): dedupe Daily Habits completion events across hook instances (APO-9485)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6559"
+      },
+      {
+        "title": "feat: wire up the v2 transactions sql feature flag",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3568"
+      },
+      {
+        "title": "Stabilize chat detail list render props (APO-9102)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6534"
+      },
+      {
+        "title": "Gate microdeposit emails by Admin environment",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3545"
+      },
+      {
+        "title": "Make tap URL handling single-owner (APO-9546)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6515"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- Reviewed: fix(bible): fall back to WEB when a translation's search returns empty (APO-9547)\n- Reviewed: [codex] Migrate web embeds Babel tooling to v8\n- Reviewed: fix(web-embeds): flatten search-panel feed rendering (APO-1634)\n- Reviewed: Treat recurring-giving duplicate origin id collisions as recoverable\n- Reviewed: fix(content-item): guard abstract type resolution against unknown apollosType\n- Reviewed: fix: resolve unused devDependencies knip warnings\n- Reviewed: Remove deprecated FeaturesNode, LiveNode, ScriptureNode interfaces\n- Reviewed: simplify(person): replace moment-timezone with native Date\n- Reviewed: simplify: replace validator with native URL for HTTPS URL validation\n- Reviewed: fix(give): preserve source param when redirecting to payment page\n- Reviewed: chore: upgrade vitest to v4\n- Reviewed: fix: show friendly error when org profile slug already exists\n- …and 7 more reviews\n- In progress: APO-9586: 7. Wire flag + parity verification (feature flagged code)\n- Left comments on PRs"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- feat: sequelize model updates for new charge columns\n- feat: add stripe metadata backfill script\n- feat(giving): add subscription invoice status utils and API loader\n- Reviewed: Harden parseAmount against comma separators (APO-10019)\n- Reviewed: Strip commas from amount in app→web give handoff (APO-10019)\n- Reviewed: revert(web): revert APO-9373 giving login code change (restores implicit registration flow)\n- Reviewed: fix(reports): resolve campus for recurring gifts in transactions report\n- Done: APO-9639: Migration: add charge columns + refund self-FK\n- In progress: APO-9830: 9589 stack 1: mapper, charge processors, bankName\n- In progress: APO-9591: 4. Completeness-audit dashboard (parity gate)\n- In progress: APO-9590: 3. Backfill historical charges from stripe_events\n- In progress: APO-9589: 2. Write path: populate new columns + link refunds + ingest disputes\n- In progress: APO-9428: Campus and Fund are sometimes missing in Admin Transactions table\n- In progress: APO-9364: Make sure that subscription transactions show up on /transactions (succeeded and failed)\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- Reviewed: docs(giving): Phase 1/2 plan — home Stripe customers at the global-profile level (APO-10053)\n- Reviewed: fix(giving): reuse existing customer on multi-profile insert collision (APO-10053)\n- Reviewed: Strip commas from prefilled amount on web give handoff (APO-10019)\n- Reviewed: fix(giving): use handoff IDs and guard express-checkout prefetch (APO-10021)\n- Reviewed: fix(ci): pin Node version across Docker and CI (APO-10042)\n- Reviewed: fix: resolve unused devDependencies knip warnings\n- Reviewed: simplify: replace validator with native URL for HTTPS URL validation\n- Reviewed: fix(reports): resolve campus for recurring gifts in transactions report\n- In progress: APO-9830: 9589 stack 1: mapper, charge processors, bankName\n- In progress: APO-9590: 3. Backfill historical charges from stripe_events\n- In progress: APO-9589: 2. Write path: populate new columns + link refunds + ingest disputes\n- Filed a new Linear ticket\n- Pushed 4 commits (no merges in this window)\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- feat: mapper to get data to charges\n- feat: ui for recurring gift transactions\n- Reviewed: fix(ai): restore AI Creator generation under the React Router runtime\n- Reviewed: [codex] Fix giving dashboard deferred balances\n- Reviewed: fix(stripe): use transfer reversal amount for disputed refunds\n- Reviewed: fix(giving): send receipt email for ACH one-time donations\n- Reviewed: fix(giving): backfill SettledDate on transactions re-synced after Rock person merge\n- Reviewed: fix(admin): preserve header toggles when saving Daily custom settings\n- Reviewed: feat: backfill charge source of truth columns\n- Reviewed: chore(schema): remove zero-usage fields (GraphOS verified)\n- Reviewed: fix(mobile): remove phantom left gap on ListViewItem rows without a leading image\n- Done: APO-9431: Subscription invoices API + status mapper\n- In progress: APO-9831: 9589 stack 2: refund writes (transfer.reversed + charge.refunded)\n- In progress: APO-9586: 7. Wire flag + parity verification (feature flagged code)\n- In progress: APO-9579: Transaction Tab SQL is very slow\n- In progress: APO-9428: Campus and Fund are sometimes missing in Admin Transactions table\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- fix: price reviews per-model with cache tokens\n- feat: land self-improving learnings loop on main (recovers stranded #20)\n- chore: promote 12 review learning(s)\n- chore: promote 1 review learning(s)\n- feat: self-improving learnings loop (#19)\n- fix: set default giving transactions date range to 7 days\n- fix: surface API-failure reviews instead of approving them (#18)\n- Reviewed: fix(stripe): sync transfer reversal amount for refund rows with no Refund object\n- Reviewed: [MP Giving] Scaffold finance/ministry-platform module (APO-8974)\n- Reviewed: feat: wire up the v2 transactions sql feature flag\n- In progress: APO-9833: 9589 stack 4: disputes + GraphQL\n- In progress: APO-9832: 9589 stack 3: refund reads (additive)\n- In progress: APO-9591: 4. Completeness-audit dashboard (parity gate)\n- Left comments on PRs and in Linear\nCharges as Source of Truth progressed — Multi-stack project (disputes, GraphQL, refund reads, completeness-audit dashboard) with multiple PRs merged and 4 commits pushed based on AI bot reviews throughout the week.\nProduction hotfixes and incident response — Fixed Christ Fellowship Transactions date range, debugged and scoped Crossroads donor identity crisis (busted people records), triaged and resolved RR7 regression and other critical issues.\nEnhanced AI Code Review tooling — Landed self-improving learnings loop on Apollos Code Reviewer bot and improved Mary PR Poppins to reduce review noise and friction.\nAuth on Web reverted to original design — Completed revert with Brandon and Jordan to restore intended behavior.\nGiving flow debugging — Worked through giving sync and login regression issues with Brandon."
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 12\n  • PR reviews: 40\n  • Commits pushed: 30\n  • Linear issues completed: 2\n  • Linear issues worked on: 12\n  • Linear issues created: 1\n  • Linear replies: 9\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-platforms, toolbox\n\n📝 Check-ins:\n\n  Monday: - Reviewed: fix(bible): fall back to WEB when a translation's search returns emp...\n  Tuesday: - feat: sequelize model updates for new charge columns\n- feat: add stripe metada...\n  Wednesday: - Reviewed: docs(giving): Phase 1/2 plan — home Stripe customers at the global-p...\n  Thursday: - feat: mapper to get data to charges\n- feat: ui for recurring gift transactions...\n  Friday: - fix: price reviews per-model with cache tokens\n- feat: land self-improving lea...\n",
+  "formatted_output": null
+}
