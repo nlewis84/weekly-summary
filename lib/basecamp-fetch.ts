@@ -97,23 +97,28 @@ export async function fetchMyCheckInAnswers(
   limit = 50
 ): Promise<CheckInAnswer[]> {
   const projectId = getProjectId();
-  const myEmail = await getMyEmail();
 
   // Fetch ALL answers (the question is answered by the whole team) and filter
   // to our own afterwards. Applying the limit at the API level would cap the
   // combined team feed before filtering, leaving only a couple weeks of our
   // own answers visible. `limit` therefore caps *our* answers, post-filter.
-  const result = await runBasecampJson<{
-    ok: boolean;
-    data: BasecampAnswerRaw[];
-  }>([
-    "checkins",
-    "answers",
-    questionId,
-    "--in",
-    projectId,
-    "--all",
-    "--json",
+  //
+  // Resolve our email concurrently with the (slow, multi-MB) answer fetch —
+  // they're independent, so there's no reason to serialize them.
+  const [myEmail, result] = await Promise.all([
+    getMyEmail(),
+    runBasecampJson<{
+      ok: boolean;
+      data: BasecampAnswerRaw[];
+    }>([
+      "checkins",
+      "answers",
+      questionId,
+      "--in",
+      projectId,
+      "--all",
+      "--json",
+    ]),
   ]);
 
   if (!result.ok || !Array.isArray(result.data)) return [];
@@ -133,10 +138,18 @@ export async function fetchMyCheckInAnswers(
     }));
 }
 
-export async function fetchMyRecentCheckIns(
-  options: { limit?: number } = {}
+// Check-in answers change at most a few times a day, but the underlying CLI
+// call pulls several MB and takes ~7s. Cache the merged result briefly so
+// navigating to the route repeatedly doesn't re-pay that cost each time.
+const CHECKIN_CACHE_TTL_MS = 5 * 60 * 1000;
+const checkInCache = new Map<
+  string,
+  { at: number; promise: Promise<CheckInAnswer[]> }
+>();
+
+async function fetchMyRecentCheckInsUncached(
+  limit: number
 ): Promise<CheckInAnswer[]> {
-  const limit = options.limit ?? 50;
   const dailyId = process.env.BASECAMP_CHECKIN_QUESTION_ID;
   const weeklyId = process.env.BASECAMP_WEEKLY_QUESTION_ID;
 
@@ -153,4 +166,29 @@ export async function fetchMyRecentCheckIns(
   const merged = results.flat();
   merged.sort((a, b) => b.date.localeCompare(a.date));
   return merged;
+}
+
+export async function fetchMyRecentCheckIns(
+  options: { limit?: number } = {}
+): Promise<CheckInAnswer[]> {
+  const limit = options.limit ?? 50;
+  const key = String(limit);
+
+  const cached = checkInCache.get(key);
+  if (cached && Date.now() - cached.at < CHECKIN_CACHE_TTL_MS) {
+    return cached.promise;
+  }
+
+  const promise = fetchMyRecentCheckInsUncached(limit);
+  checkInCache.set(key, { at: Date.now(), promise });
+
+  // If the fetch fails, drop it from the cache so the next load retries
+  // instead of serving a rejected promise for the whole TTL window.
+  promise.catch(() => {
+    if (checkInCache.get(key)?.promise === promise) {
+      checkInCache.delete(key);
+    }
+  });
+
+  return promise;
 }
