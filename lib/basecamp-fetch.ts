@@ -99,6 +99,10 @@ export async function fetchMyCheckInAnswers(
   const projectId = getProjectId();
   const myEmail = await getMyEmail();
 
+  // Fetch ALL answers (the question is answered by the whole team) and filter
+  // to our own afterwards. Applying the limit at the API level would cap the
+  // combined team feed before filtering, leaving only a couple weeks of our
+  // own answers visible. `limit` therefore caps *our* answers, post-filter.
   const result = await runBasecampJson<{
     ok: boolean;
     data: BasecampAnswerRaw[];
@@ -108,8 +112,7 @@ export async function fetchMyCheckInAnswers(
     questionId,
     "--in",
     projectId,
-    "--limit",
-    String(limit),
+    "--all",
     "--json",
   ]);
 
@@ -117,6 +120,8 @@ export async function fetchMyCheckInAnswers(
 
   return result.data
     .filter((a) => a.creator.email_address === myEmail)
+    .sort((a, b) => b.created_at.localeCompare(a.created_at))
+    .slice(0, limit)
     .map((a) => ({
       id: a.id,
       content: sanitizeBasecampHtml(a.content),
