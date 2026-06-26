@@ -70,7 +70,7 @@ let cachedEmail: string | null = null;
 async function runBasecampJson<T>(args: string[]): Promise<T> {
   const { stdout } = await execFileAsync("basecamp", args, {
     timeout: 30_000,
-    maxBuffer: 5 * 1024 * 1024,
+    maxBuffer: 100 * 1024 * 1024,
   });
   return JSON.parse(stdout) as T;
 }
