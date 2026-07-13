@@ -130,6 +130,33 @@ export function getWindowEnd(
   );
 }
 
+/**
+ * Full Sat–Fri window for a Friday week-ending date (YYYY-MM-DD).
+ */
+export function getWindowForWeekEnding(weekEnding: string): {
+  windowStart: Date;
+  windowEnd: Date;
+} {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(weekEnding)) {
+    throw new Error(
+      `Invalid week-ending date: ${weekEnding} (expected YYYY-MM-DD)`
+    );
+  }
+  const [y, m, d] = weekEnding.split("-").map(Number);
+  const windowEnd = new Date(y, m - 1, d, 23, 59, 59, 999);
+  if (Number.isNaN(windowEnd.getTime())) {
+    throw new Error(`Invalid week-ending date: ${weekEnding}`);
+  }
+  if (windowEnd.getDay() !== 5) {
+    const dayName = windowEnd.toLocaleDateString("en-US", { weekday: "long" });
+    throw new Error(
+      `--week must be a Friday (week-ending date). Got ${weekEnding} (${dayName}).`
+    );
+  }
+  const windowStart = new Date(y, m - 1, d - 6, 0, 0, 0, 0);
+  return { windowStart, windowEnd };
+}
+
 export function parseCheckIns(checkInsText: string): CheckIn[] {
   if (!checkInsText?.trim()) return [];
 
@@ -778,16 +805,19 @@ export async function getCachedRunSummary(
   options: {
     todayMode: boolean;
     yesterdayMode?: boolean;
+    weekEnding?: string;
     checkInsText: string;
     outputDir: string | null;
   } & { bust?: boolean }
 ): Promise<RunSummaryResult> {
   const { bust, ...opts } = options;
-  const key = opts.yesterdayMode
-    ? "index:yesterday"
-    : opts.todayMode
-      ? "index:today"
-      : "index:weekly";
+  const key = opts.weekEnding
+    ? `index:week:${opts.weekEnding}`
+    : opts.yesterdayMode
+      ? "index:yesterday"
+      : opts.todayMode
+        ? "index:today"
+        : "index:weekly";
 
   const cached = !bust && (dataCache.get(key) as RunSummaryResult | undefined);
   if (cached) return cached;
@@ -800,13 +830,48 @@ export async function getCachedRunSummary(
 export async function runSummary(options: {
   todayMode: boolean;
   yesterdayMode?: boolean;
+  /** Friday week-ending date (YYYY-MM-DD) for backfilling a past week */
+  weekEnding?: string;
   checkInsText: string;
   outputDir: string | null;
 }): Promise<RunSummaryResult> {
-  const { todayMode, yesterdayMode = false, checkInsText } = options;
-  const now = new Date();
-  const windowStart = getWindowStart(now, todayMode, yesterdayMode);
-  const windowEnd = getWindowEnd(now, todayMode, yesterdayMode);
+  const {
+    todayMode,
+    yesterdayMode = false,
+    weekEnding: weekEndingOpt,
+    checkInsText,
+  } = options;
+
+  let windowStart: Date;
+  let windowEnd: Date;
+  let weekEnding: string;
+
+  if (weekEndingOpt) {
+    if (todayMode || yesterdayMode) {
+      throw new Error("Cannot combine --week with --today or --yesterday");
+    }
+    const window = getWindowForWeekEnding(weekEndingOpt);
+    windowStart = window.windowStart;
+    windowEnd = window.windowEnd;
+    weekEnding = weekEndingOpt;
+  } else {
+    const now = new Date();
+    windowStart = getWindowStart(now, todayMode, yesterdayMode);
+    windowEnd = getWindowEnd(now, todayMode, yesterdayMode);
+    // Use Friday of the week (not UTC date) so filenames stay consistent across timezones
+    const refDate = yesterdayMode
+      ? (() => {
+          const d = new Date(now);
+          d.setDate(now.getDate() - 1);
+          return d;
+        })()
+      : now;
+    const weekStart = getWindowStart(refDate, false);
+    const fridayOfWeek = new Date(weekStart);
+    fridayOfWeek.setDate(weekStart.getDate() + 6);
+    weekEnding = `${fridayOfWeek.getFullYear()}-${String(fridayOfWeek.getMonth() + 1).padStart(2, "0")}-${String(fridayOfWeek.getDate()).padStart(2, "0")}`;
+  }
+
   const windowStartISO = windowStart.toISOString();
   const windowEndISO = windowEnd.toISOString();
 
@@ -845,19 +910,6 @@ export async function runSummary(options: {
     prCategories,
     repos
   );
-
-  // Use Friday of the week (not UTC date) so filenames stay consistent across timezones
-  const refDate = yesterdayMode
-    ? (() => {
-        const d = new Date(now);
-        d.setDate(now.getDate() - 1);
-        return d;
-      })()
-    : now;
-  const weekStart = getWindowStart(refDate, false);
-  const fridayOfWeek = new Date(weekStart);
-  fridayOfWeek.setDate(weekStart.getDate() + 6);
-  const weekEnding = `${fridayOfWeek.getFullYear()}-${String(fridayOfWeek.getMonth() + 1).padStart(2, "0")}-${String(fridayOfWeek.getDate()).padStart(2, "0")}`;
 
   const payload: Payload = {
     meta: {

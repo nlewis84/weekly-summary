@@ -192,3 +192,18 @@ export function formatSnapshotAsCheckIn(date: string, payload: Payload): string 
 
   return lines.join("\n").trimEnd();
 }
+
+/**
+ * Builds check-in text from all daily snapshots in the week ending on `weekEnding`.
+ */
+export function buildCheckInsFromSnapshots(weekEnding: string): string {
+  const entries = listDailySnapshots(weekEnding);
+  const parts: string[] = [];
+  for (const entry of entries) {
+    const payload = loadDailySnapshot(entry.date);
+    if (payload) {
+      parts.push(formatSnapshotAsCheckIn(entry.date, payload));
+    }
+  }
+  return parts.join("\n\n");
+}

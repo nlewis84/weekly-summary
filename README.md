@@ -9,6 +9,7 @@ Generates weekly work summaries from Linear issues, GitHub activity, and optiona
 - **6 metrics**: PRs merged, PRs created/updated, PR reviews, Linear completed, Linear worked on, repos
 - **Today mode**: `--today` / `-t` for midnight-to-now window
 - **Yesterday mode**: `--yesterday` / `-y` for yesterday's stats
+- **Week backfill**: `--week` / `-w YYYY-MM-DD` for a past Friday week-ending
 
 ## Setup
 
@@ -29,6 +30,10 @@ pnpm cli --today
 
 # Yesterday only
 pnpm cli --yesterday
+
+# Backfill a specific week (Friday week-ending date)
+pnpm cli --week 2026-07-03
+# Uses daily-snapshots/ for that week as check-ins when present
 
 # With check-ins file
 pnpm cli check-ins.txt
@@ -51,7 +56,7 @@ pnpm build && pnpm start
 | `pnpm dev`   | Start dev server              |
 | `pnpm build` | Build for production          |
 | `pnpm start` | Serve production build        |
-| `pnpm cli`   | Run CLI (supports `--today`, `--yesterday`) |
+| `pnpm cli`   | Run CLI (supports `--today`, `--yesterday`, `--week YYYY-MM-DD`) |
 | `pnpm test`  | Run unit tests                |
 | `pnpm test:e2e` | Run Playwright E2E tests  |
 | `pnpm lint`  | Run ESLint                    |

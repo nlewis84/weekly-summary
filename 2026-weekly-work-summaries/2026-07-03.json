@@ -1,0 +1,451 @@
+{
+  "meta": {
+    "generated_at": "2026-07-13T22:24:05.137Z",
+    "window_start": "2026-06-27T05:00:00.000Z",
+    "window_end": "2026-07-04T04:59:59.999Z",
+    "week_ending": "2026-07-03",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 11,
+    "prs_total": 16,
+    "pr_reviews": 21,
+    "pr_comments": 40,
+    "commits_pushed": 33,
+    "linear_completed": 7,
+    "linear_worked_on": 9,
+    "linear_issues_created": 9,
+    "linear_comments": 5,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-embeds"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-10092",
+        "title": "Transactions tab does nothing for Christ Fellowship",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-10092/transactions-tab-does-nothing-for-christ-fellowship",
+        "completedAt": "2026-06-27T14:33:14.570Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9830",
+        "title": "9589 stack 1: mapper, charge processors, bankName",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9830/9589-stack-1-mapper-charge-processors-bankname",
+        "completedAt": "2026-06-30T17:13:27.589Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9640",
+        "title": "Sequelize: model updates for new charge columns",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9640/sequelize-model-updates-for-new-charge-columns",
+        "completedAt": "2026-06-30T17:14:06.375Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9588",
+        "title": "1. Schema: add first-class charge columns + refund self-FK",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9588/1-schema-add-first-class-charge-columns-refund-self-fk",
+        "completedAt": "2026-06-30T17:48:47.469Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9585",
+        "title": "6. Remaining filters (batch) (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9585/6-remaining-filters-batch-dead-code",
+        "completedAt": "2026-07-01T13:41:55.741Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9579",
+        "title": "Transaction Tab SQL is very slow",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9579/transaction-tab-sql-is-very-slow",
+        "completedAt": "2026-07-01T13:46:29.318Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9382",
+        "title": "Add List of Associated Transactions to Subscription Drawer",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9382/add-list-of-associated-transactions-to-subscription-drawer",
+        "completedAt": "2026-06-29T18:22:14.992Z",
+        "state": "Done"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-10112",
+        "title": "9592 stack 5: cleanup — remove dead admin stripe_events SQL",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10112/9592-stack-5-cleanup-remove-dead-admin-stripe-events-sql",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-10092",
+        "title": "Transactions tab does nothing for Christ Fellowship",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-10092/transactions-tab-does-nothing-for-christ-fellowship",
+        "completedAt": "2026-06-27T14:33:14.570Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9830",
+        "title": "9589 stack 1: mapper, charge processors, bankName",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9830/9589-stack-1-mapper-charge-processors-bankname",
+        "completedAt": "2026-06-30T17:13:27.589Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9640",
+        "title": "Sequelize: model updates for new charge columns",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9640/sequelize-model-updates-for-new-charge-columns",
+        "completedAt": "2026-06-30T17:14:06.375Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9592",
+        "title": "5. Decouple admin from stripe_events",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9592/5-decouple-admin-from-stripe-events",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9588",
+        "title": "1. Schema: add first-class charge columns + refund self-FK",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9588/1-schema-add-first-class-charge-columns-refund-self-fk",
+        "completedAt": "2026-06-30T17:48:47.469Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9585",
+        "title": "6. Remaining filters (batch) (dead code)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9585/6-remaining-filters-batch-dead-code",
+        "completedAt": "2026-07-01T13:41:55.741Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9579",
+        "title": "Transaction Tab SQL is very slow",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-9579/transaction-tab-sql-is-very-slow",
+        "completedAt": "2026-07-01T13:46:29.318Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9382",
+        "title": "Add List of Associated Transactions to Subscription Drawer",
+        "project": "Admin Transaction & Recurring Tab Updates",
+        "url": "https://linear.app/differential/issue/APO-9382/add-list-of-associated-transactions-to-subscription-drawer",
+        "completedAt": "2026-06-29T18:22:14.992Z",
+        "state": "Done"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-10165",
+        "title": "Write path: stamp charges.person_id / payment_method_id at ingest (not covered by APO-9589)",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10165/write-path-stamp-chargesperson-id-payment-method-id-at-ingest-not",
+        "createdAt": "2026-06-30T21:25:33.486Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-10164",
+        "title": "Shovel: historical matchChargeToPerson for guest-only blank donors",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10164/shovel-historical-matchchargetoperson-for-guest-only-blank-donors",
+        "createdAt": "2026-06-30T21:25:22.881Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-10163",
+        "title": "Backfill 026: donor relational links (person_id / payment_method_id / payment_methods.billing_details)",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10163/backfill-026-donor-relational-links-person-id-payment-method-id",
+        "createdAt": "2026-06-30T21:25:01.244Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-10112",
+        "title": "9592 stack 5: cleanup — remove dead admin stripe_events SQL",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10112/9592-stack-5-cleanup-remove-dead-admin-stripe-events-sql",
+        "createdAt": "2026-06-29T18:33:01.780Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-10111",
+        "title": "9592 stack 4: export — flag-gated charges-native report SQL",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10111/9592-stack-4-export-flag-gated-charges-native-report-sql",
+        "createdAt": "2026-06-29T18:33:00.342Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10110",
+        "title": "9592 stack 3: dashboard — balance queries off stripe_events",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10110/9592-stack-3-dashboard-balance-queries-off-stripe-events",
+        "createdAt": "2026-06-29T18:32:59.003Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10109",
+        "title": "9592 stack 2: display — charges-native getTransactions",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10109/9592-stack-2-display-charges-native-gettransactions",
+        "createdAt": "2026-06-29T18:32:56.000Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10108",
+        "title": "9592 stack 1: display — charges-native refund CTE",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10108/9592-stack-1-display-charges-native-refund-cte",
+        "createdAt": "2026-06-29T18:32:55.518Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10107",
+        "title": "cluster-reports-proxy: audit cluster reports path for stripe_events",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10107/cluster-reports-proxy-audit-cluster-reports-path-for-stripe-events",
+        "createdAt": "2026-06-29T18:32:52.554Z",
+        "state": "Not Now"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-9592",
+        "title": "5. Decouple admin from stripe_events",
+        "url": "https://linear.app/differential/issue/APO-9592/5-decouple-admin-from-stripe-events",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-10111",
+        "title": "9592 stack 4: export — flag-gated charges-native report SQL",
+        "url": "https://linear.app/differential/issue/APO-10111/9592-stack-4-export-flag-gated-charges-native-report-sql",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9590",
+        "title": "3. Backfill historical charges from stripe_events",
+        "url": "https://linear.app/differential/issue/APO-9590/3-backfill-historical-charges-from-stripe-events",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-10047",
+        "title": "Rename charges.source_transfer_id to transfer_id (schema naming cleanup)",
+        "url": "https://linear.app/differential/issue/APO-10047/rename-chargessource-transfer-id-to-transfer-id-schema-naming-cleanup",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-10115",
+        "title": "Tell users not to refresh or press back after paying (converted to project)",
+        "url": "https://linear.app/differential/issue/APO-10115/tell-users-not-to-refresh-or-press-back-after-paying-converted-to",
+        "project": "Tell users not to refresh or press back after paying",
+        "state": "Needs Review"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat(charges): sync stripeTransactions model to TEXT columns (APO-9590)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3465",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-07-13T17:51:50Z"
+      },
+      {
+        "title": "feat(charges): widen receipt_url and failure_message to TEXT (APO-9590)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3464",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-07-13T15:50:45Z"
+      },
+      {
+        "title": "chore: promote 1 review learning(s)",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/26",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-06-30T16:20:53Z"
+      },
+      {
+        "title": "chore: promote 8 review learning(s)",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/25",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-06-30T16:18:13Z"
+      },
+      {
+        "title": "APO-10111: Flag-gated charges-native transactions export",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3695",
+        "repo": "apollos-admin",
+        "merged_at": "2026-07-10T21:21:05Z"
+      },
+      {
+        "title": "APO-10110: Dashboard fund-filter balances from charges",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3694",
+        "repo": "apollos-admin",
+        "merged_at": "2026-07-01T19:15:38Z"
+      },
+      {
+        "title": "APO-10109: Transactions tab SQL reads charges only",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3691",
+        "repo": "apollos-admin",
+        "merged_at": "2026-07-09T23:50:39Z"
+      },
+      {
+        "title": "APO-10108: Refund CTE reads charges instead of stripe_events",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3690",
+        "repo": "apollos-admin",
+        "merged_at": "2026-07-08T15:04:31Z"
+      },
+      {
+        "title": "feat: backfill charge source of truth columns",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3347",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-06-29T23:22:24Z"
+      },
+      {
+        "title": "feat: setup dispute ingestion and routing",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3262",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-06-30T17:27:13Z"
+      },
+      {
+        "title": "feat: setup new refund reads",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3261",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-06-29T20:54:05Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "APO-10112: ESLint guard + final stripe_events SQL cleanup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3696",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "fix(stripe): bill same-day recurring gifts immediately on setup intent success",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3463"
+      },
+      {
+        "title": "docs: reference per-module AGENTS_<module>.md guides in root AGENTS.md",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3455"
+      },
+      {
+        "title": "docs(person): add AGENTS_person.md for the person datasource",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3454"
+      },
+      {
+        "title": "docs(community): add AGENTS_community.md for the community datasource",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3453"
+      },
+      {
+        "title": "docs(bible): add AGENTS_bible.md for the bible datasource",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3452"
+      },
+      {
+        "title": "fix: resolve unresolved imports knip warnings for apps/admin",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3699"
+      },
+      {
+        "title": "test(admin): add e2e tests for API endpoints and error-state edge cases",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3698"
+      },
+      {
+        "title": "[codex] Migrate embeds deploy to trusted publishing",
+        "url": "https://github.com/ApollosProject/apollos-embeds/pull/272"
+      },
+      {
+        "title": "APO-10112: ESLint guard + final stripe_events SQL cleanup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3696"
+      },
+      {
+        "title": "feat(tap): canonical host schema for alias-aware FQDN routing (APO-10098)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3440"
+      },
+      {
+        "title": "fix(give): persist created Stripe intent id to URL to prevent duplicate charges (APO-10113)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3692"
+      },
+      {
+        "title": "fix(admin): use icon background in brand icon preview (APO-8682)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3689"
+      },
+      {
+        "title": "feat(i18n): improve OTP SMS message to use 'one-time passcode' phrasing (APO-8366)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3433"
+      },
+      {
+        "title": "refactor: adopt this.churchSlug getter in more data sources (APO-9568)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3423"
+      },
+      {
+        "title": "fix: resolve unused exported types and enum members knip warnings",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3675"
+      },
+      {
+        "title": "Remove fully-rolled-out suggested-follows-page feature flag",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3673"
+      },
+      {
+        "title": "simplify: .some(), date-fns differenceInYears, drop redundant isEmpty guards",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3418"
+      },
+      {
+        "title": "fix: prevent image stretching when explicit width/height attributes are present",
+        "url": "https://github.com/ApollosProject/apollos-embeds/pull/269"
+      },
+      {
+        "title": "[codex] fix settled date for late payout transaction sync",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3392"
+      },
+      {
+        "title": "fix(admin): authorize giving transactions route",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3659"
+      },
+      {
+        "title": "feat: setup new refund reads",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3261"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- feat: setup new refund reads\n- Reviewed: APO-10112 [Stack 5]: Cleanup dead admin stripe_events SQL + ESLint guard\n- Reviewed: refactor: adopt this.churchSlug getter in more data sources (APO-9568)\n- Reviewed: fix: resolve unused exported types and enum members knip warnings\n- Reviewed: Remove fully-rolled-out suggested-follows-page feature flag\n- Reviewed: simplify: .some(), date-fns differenceInYears, drop redundant isEmpty guards\n- Reviewed: fix: prevent image stretching when explicit width/height attributes are present\n- Reviewed: fix(admin): authorize giving transactions route\n- Reviewed: feat: setup new refund reads\n- Done: APO-9382: Add List of Associated Transactions to Subscription Drawer\n- In progress: APO-10112: 9592 stack 5: cleanup — remove dead admin stripe_events SQL\n- In progress: APO-10111: 9592 stack 4: export — flag-gated charges-native report SQL\n- In progress: APO-10110: 9592 stack 3: dashboard — balance queries off stripe_events\n- In progress: APO-10109: 9592 stack 2: display — charges-native getTransactions\n- In progress: APO-10108: 9592 stack 1: display — charges-native refund CTE\n- In progress: APO-9591: 4. Completeness-audit dashboard (parity gate)\n- Filed 6 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- chore: promote 1 review learning(s)\n- chore: promote 8 review learning(s)\n- feat: setup dispute ingestion and routing\n- Reviewed: docs: reference per-module AGENTS_<module>.md guides in root AGENTS.md\n- Reviewed: fix: resolve unresolved imports knip warnings for apps/admin\n- Reviewed: [codex] Migrate embeds deploy to trusted publishing\n- Reviewed: feat(tap): canonical host schema for alias-aware FQDN routing (APO-10098)\n- Reviewed: fix(give): persist created Stripe intent id to URL to prevent duplicate charges (APO-10113)\n- Reviewed: fix(admin): use icon background in brand icon preview (APO-8682)\n- Reviewed: feat(i18n): improve OTP SMS message to use 'one-time passcode' phrasing (APO-8366)\n- Reviewed: [codex] fix settled date for late payout transaction sync\n- Reviewed: fix(admin): authorize giving transactions route\n- Done: APO-9830: 9589 stack 1: mapper, charge processors, bankName\n- Done: APO-9640: Sequelize: model updates for new charge columns\n- Done: APO-9588: 1. Schema: add first-class charge columns + refund self-FK\n- In progress: APO-10112: 9592 stack 5: cleanup — remove dead admin stripe_events SQL\n- In progress: APO-10111: 9592 stack 4: export — flag-gated charges-native report SQL\n- In progress: APO-10110: 9592 stack 3: dashboard — balance queries off stripe_events\n- In progress: APO-10109: 9592 stack 2: display — charges-native getTransactions\n- In progress: APO-10108: 9592 stack 1: display — charges-native refund CTE\n- In progress: APO-9592: 5. Decouple admin from stripe_events\n- Filed 3 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- APO-10110: Dashboard fund-filter balances from charges\n- Reviewed: fix(stripe): bill same-day recurring gifts immediately on setup intent success\n- Reviewed: docs(person): add AGENTS_person.md for the person datasource\n- Reviewed: docs(community): add AGENTS_community.md for the community datasource\n- Reviewed: docs(bible): add AGENTS_bible.md for the bible datasource\n- Reviewed: test(admin): add e2e tests for API endpoints and error-state edge cases\n- Done: APO-9585: 6. Remaining filters (batch) (dead code)\n- Done: APO-9579: Transaction Tab SQL is very slow\n- In progress: APO-10112: 9592 stack 5: cleanup — remove dead admin stripe_events SQL\n- In progress: APO-10108: 9592 stack 1: display — charges-native refund CTE\n- In progress: APO-9592: 5. Decouple admin from stripe_events\n- In progress: APO-9590: 3. Backfill historical charges from stripe_events\n- Left comments on PRs and in Linear"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 11\n  • PR reviews: 21\n  • Commits pushed: 33\n  • Linear issues completed: 7\n  • Linear issues worked on: 9\n  • Linear issues created: 9\n  • Linear replies: 5\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-embeds\n\n📝 Check-ins:\n\n  Monday: - feat: setup new refund reads\n- Reviewed: APO-10112 [Stack 5]: Cleanup dead adm...\n  Tuesday: - chore: promote 1 review learning(s)\n- chore: promote 8 review learning(s)\n- fe...\n  Wednesday: - APO-10110: Dashboard fund-filter balances from charges\n- Reviewed: fix(stripe)...\n",
+  "formatted_output": null
+}

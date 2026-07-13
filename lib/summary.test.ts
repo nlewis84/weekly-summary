@@ -3,6 +3,7 @@ import {
   parseCheckIns,
   getWindowStart,
   getWindowEnd,
+  getWindowForWeekEnding,
   runSummary,
 } from "./summary";
 
@@ -95,6 +96,30 @@ describe("getWindowEnd", () => {
   });
 });
 
+describe("getWindowForWeekEnding", () => {
+  it("returns Sat–Fri window for a Friday week-ending", () => {
+    const { windowStart, windowEnd } = getWindowForWeekEnding("2026-07-03");
+    expect(windowStart.getFullYear()).toBe(2026);
+    expect(windowStart.getMonth()).toBe(5);
+    expect(windowStart.getDate()).toBe(27);
+    expect(windowStart.getDay()).toBe(6);
+    expect(windowStart.getHours()).toBe(0);
+    expect(windowEnd.getFullYear()).toBe(2026);
+    expect(windowEnd.getMonth()).toBe(6);
+    expect(windowEnd.getDate()).toBe(3);
+    expect(windowEnd.getDay()).toBe(5);
+    expect(windowEnd.getHours()).toBe(23);
+  });
+
+  it("rejects non-Friday dates", () => {
+    expect(() => getWindowForWeekEnding("2026-06-29")).toThrow(/Friday/);
+  });
+
+  it("rejects invalid format", () => {
+    expect(() => getWindowForWeekEnding("07-03-2026")).toThrow(/YYYY-MM-DD/);
+  });
+});
+
 describe("runSummary", () => {
   beforeEach(() => {
     vi.stubGlobal(
@@ -158,5 +183,23 @@ describe("runSummary", () => {
       repos: expect.any(Array),
     });
     expect(result.terminalOutput).toBeDefined();
+  });
+
+  it("uses weekEnding window when provided", async () => {
+    process.env.LINEAR_API_KEY = "lin_test";
+    process.env.GITHUB_TOKEN = "ghp_test";
+    process.env.GITHUB_USERNAME = "testuser";
+
+    const result = await runSummary({
+      todayMode: false,
+      weekEnding: "2026-07-03",
+      checkInsText: "",
+      outputDir: null,
+    });
+
+    expect(result.payload.meta.week_ending).toBe("2026-07-03");
+    const { windowStart, windowEnd } = getWindowForWeekEnding("2026-07-03");
+    expect(result.payload.meta.window_start).toBe(windowStart.toISOString());
+    expect(result.payload.meta.window_end).toBe(windowEnd.toISOString());
   });
 });
