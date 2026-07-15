@@ -67,12 +67,56 @@ interface BasecampAnswerRaw {
 
 let cachedEmail: string | null = null;
 
+interface BasecampCliError {
+  ok?: boolean;
+  error?: string;
+  code?: string;
+}
+
+function formatBasecampCliFailure(
+  args: string[],
+  err: unknown,
+  parsed?: BasecampCliError | null
+): Error {
+  const detail =
+    parsed?.error ||
+    (parsed?.code ? `code ${parsed.code}` : null) ||
+    (err instanceof Error ? err.message : "Unknown basecamp CLI error");
+  return new Error(
+    `Basecamp CLI failed (${args.join(" ")}): ${detail}. Try refreshing in a moment.`
+  );
+}
+
+function parseJsonStdout(stdout: unknown): BasecampCliError | null {
+  if (typeof stdout !== "string" || !stdout.trim()) return null;
+  try {
+    return JSON.parse(stdout) as BasecampCliError;
+  } catch {
+    return null;
+  }
+}
+
 async function runBasecampJson<T>(args: string[]): Promise<T> {
-  const { stdout } = await execFileAsync("basecamp", args, {
-    timeout: 30_000,
-    maxBuffer: 100 * 1024 * 1024,
-  });
-  return JSON.parse(stdout) as T;
+  try {
+    const { stdout } = await execFileAsync("basecamp", args, {
+      timeout: 30_000,
+      maxBuffer: 100 * 1024 * 1024,
+    });
+    const parsed = JSON.parse(stdout) as T & BasecampCliError;
+    if (parsed && typeof parsed === "object" && parsed.ok === false) {
+      throw formatBasecampCliFailure(args, null, parsed);
+    }
+    return parsed;
+  } catch (err) {
+    if (err instanceof Error && err.message.startsWith("Basecamp CLI failed")) {
+      throw err;
+    }
+    const stdout =
+      err && typeof err === "object" && "stdout" in err
+        ? (err as { stdout?: unknown }).stdout
+        : undefined;
+    throw formatBasecampCliFailure(args, err, parseJsonStdout(stdout));
+  }
 }
 
 async function getMyEmail(): Promise<string> {
@@ -81,7 +125,11 @@ async function getMyEmail(): Promise<string> {
     ok: boolean;
     data: { identity: { email_address: string } };
   }>(["me", "--json"]);
-  cachedEmail = result.data.identity.email_address;
+  const email = result.data?.identity?.email_address;
+  if (!email) {
+    throw new Error("Basecamp CLI did not return your email address");
+  }
+  cachedEmail = email;
   return cachedEmail;
 }
 
