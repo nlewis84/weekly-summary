@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "generated_at": "2026-07-24T22:13:55.172Z",
+    "window_start": "2026-07-18T05:00:00.000Z",
+    "window_end": "2026-07-25T04:59:59.999Z",
+    "week_ending": "2026-07-24",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 5,
+    "prs_total": 6,
+    "pr_reviews": 34,
+    "pr_comments": 13,
+    "commits_pushed": 12,
+    "linear_completed": 4,
+    "linear_worked_on": 7,
+    "linear_issues_created": 3,
+    "linear_comments": 2,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-embeds"
+    ]
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-10610",
+        "title": "Failed/guest charges show blank donor name+email with admin-transactions-sql-v-2 ON",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-10610/failedguest-charges-show-blank-donor-nameemail-with-admin-transactions",
+        "completedAt": "2026-07-23T00:49:21.069Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10109",
+        "title": "9592 stack 2: display — charges-native getTransactions",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-10109/9592-stack-2-display-charges-native-gettransactions",
+        "completedAt": "2026-07-20T14:00:49.547Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9592",
+        "title": "5. Decouple admin from stripe_events",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-9592/5-decouple-admin-from-stripe-events",
+        "completedAt": "2026-07-20T14:01:05.138Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9587",
+        "title": "Make `charges` a complete source of truth (stop reading from stripe_events)",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9587/make-charges-a-complete-source-of-truth-stop-reading-from-stripe",
+        "completedAt": "2026-07-20T14:01:22.365Z",
+        "state": "Done"
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-10610",
+        "title": "Failed/guest charges show blank donor name+email with admin-transactions-sql-v-2 ON",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-10610/failedguest-charges-show-blank-donor-nameemail-with-admin-transactions",
+        "completedAt": "2026-07-23T00:49:21.069Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10112",
+        "title": "9592 stack 5: cleanup — remove dead admin stripe_events SQL",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-10112/9592-stack-5-cleanup-remove-dead-admin-stripe-events-sql",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-10109",
+        "title": "9592 stack 2: display — charges-native getTransactions",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-10109/9592-stack-2-display-charges-native-gettransactions",
+        "completedAt": "2026-07-20T14:00:49.547Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9592",
+        "title": "5. Decouple admin from stripe_events",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-9592/5-decouple-admin-from-stripe-events",
+        "completedAt": "2026-07-20T14:01:05.138Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9587",
+        "title": "Make `charges` a complete source of truth (stop reading from stripe_events)",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-9587/make-charges-a-complete-source-of-truth-stop-reading-from-stripe",
+        "completedAt": "2026-07-20T14:01:22.365Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-9428",
+        "title": "Campus and Fund are sometimes missing in Admin Transactions table",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-9428/campus-and-fund-are-sometimes-missing-in-admin-transactions-table",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-9364",
+        "title": "Make sure that subscription transactions show up on /transactions (succeeded and failed)",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-9364/make-sure-that-subscription-transactions-show-up-on-transactions",
+        "completedAt": null,
+        "state": "In Progress"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-10610",
+        "title": "Failed/guest charges show blank donor name+email with admin-transactions-sql-v-2 ON",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-10610/failedguest-charges-show-blank-donor-nameemail-with-admin-transactions",
+        "createdAt": "2026-07-21T16:10:05.779Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10607",
+        "title": "Transactions \"Card\" filter drops wallet payments (Apple Pay / Google Pay) with admin-transactions-sql-v-2 ON",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "url": "https://linear.app/differential/issue/APO-10607/transactions-card-filter-drops-wallet-payments-apple-pay-google-pay",
+        "createdAt": "2026-07-21T14:48:51.426Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-10575",
+        "title": "Long campus names overflow onto Fund column in Admin Giving Transactions",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-10575/long-campus-names-overflow-onto-fund-column-in-admin-giving",
+        "createdAt": "2026-07-20T16:50:00.774Z",
+        "state": "Merged"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-10693",
+        "title": "Church-scope Cluster report status (cross-tenant download URL risk)",
+        "url": "https://linear.app/differential/issue/APO-10693/church-scope-cluster-report-status-cross-tenant-download-url-risk",
+        "project": "Universal Giving Exports",
+        "state": "Needs Review"
+      },
+      {
+        "identifier": "APO-10528",
+        "title": "QA Charges as Source of Truth",
+        "url": "https://linear.app/differential/issue/APO-10528/qa-charges-as-source-of-truth",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "state": "Done"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "chore: promote 3 review learning(s)",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/28",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-07-22T14:36:05Z"
+      },
+      {
+        "title": "fix(finance): match all unprocessed unmatched charges to people (APO-10610)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3598",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-07-22T20:43:26Z"
+      },
+      {
+        "title": "fix(admin): include wallet types in charges-native Card filter (APO-10607)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3854",
+        "repo": "apollos-admin",
+        "merged_at": "2026-07-21T19:07:47Z"
+      },
+      {
+        "title": "fix(admin): wrap long campus/fund names in transactions table (APO-10575)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3842",
+        "repo": "apollos-admin",
+        "merged_at": "2026-07-20T21:33:21Z"
+      },
+      {
+        "title": "chore: promote 2 review learning(s)",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/27",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-07-20T14:33:22Z"
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "APO-10112: ESLint guard + final stripe_events SQL cleanup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3696",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "feat(web-embeds-v2): host public demo pages on Vercel with PR previews",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3879"
+      },
+      {
+        "title": "chore(admin): remove New Editor and Polls experimental toggles (APO-10649)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3878"
+      },
+      {
+        "title": "chore(admin): remove Webview Tabs experimental toggle (APO-10649)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3877"
+      },
+      {
+        "title": "chore(admin): remove New Web Embeds experimental toggle (APO-10649)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3876"
+      },
+      {
+        "title": "chore(admin): remove Link Embed experimental toggle (APO-10649)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3875"
+      },
+      {
+        "title": "Reduce duplicate GraphQL fanout on donor give/payment loaders",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3868"
+      },
+      {
+        "title": "fix(admin): hard-fail empty Creator outlines and surface stream errors",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3866"
+      },
+      {
+        "title": "fix(admin): keep AI streaming after intermediate parse errors",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3862"
+      },
+      {
+        "title": "test(web): e2e edit and restore shared Monthly $17.59 recurring gift",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3859"
+      },
+      {
+        "title": "fix(giving): right-align Failure Reason value in transaction drawer (APO-10609)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3856"
+      },
+      {
+        "title": "fix(finance): match all unprocessed unmatched charges to people (APO-10610)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3598"
+      },
+      {
+        "title": "test(web): e2e view shared Monthly $17.59 recurring gift detail",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3855"
+      },
+      {
+        "title": "fix(admin): include wallet types in charges-native Card filter (APO-10607)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3854"
+      },
+      {
+        "title": "chore(deps): stage TipTap v3 text extensions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3849"
+      },
+      {
+        "title": "chore(deps): stage TipTap v3 core packages",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3848"
+      },
+      {
+        "title": "test(web): e2e ensure shared Monthly $17.59 recurring gift exists",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3847"
+      },
+      {
+        "title": "DB-first charge query for PushPay export rows (APO-10505)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3592"
+      },
+      {
+        "title": "fix(giving): hide zero-dollar trial invoices from transactions (APO-10569)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3846"
+      },
+      {
+        "title": "fix(giving): preserve page/filters on recurring edit redirect (APO-10574)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3844"
+      },
+      {
+        "title": "ci(deploy): add per-app good-for-release helpers for confidence gate",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3843"
+      },
+      {
+        "title": "fix(admin): add root ErrorBoundary so root-level errors show branded page (APO-10570)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3841"
+      },
+      {
+        "title": "test(web): e2e delete journey for saved payment methods",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3840"
+      },
+      {
+        "title": "fix(web): shorten migration payment method selector label",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3839"
+      },
+      {
+        "title": "Teach reportLoader to upload CSV reports (APO-10507)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3584"
+      },
+      {
+        "title": "Add e2e coverage for onboarding personal-info form submission",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3836"
+      },
+      {
+        "title": "[APO-6508] Migrate pushpay-givings flag to Web LaunchDarkly",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3833"
+      },
+      {
+        "title": "fix(livestreams): dedupe campus-specific rows in livestreams feed",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3575"
+      },
+      {
+        "title": "fix(admin): strip dataview[...] form-state fields in config action",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3832"
+      },
+      {
+        "title": "Add data-hide-trending-searches option to Search embed",
+        "url": "https://github.com/ApollosProject/apollos-embeds/pull/273"
+      },
+      {
+        "title": "Lock Bible translation selection for custom api.bible keys",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3831"
+      },
+      {
+        "title": "docs(agents): add Cursor Cloud dev environment setup notes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3825"
+      },
+      {
+        "title": "test(web): giving migration e2e smoke (UI-only, local proof first)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3779"
+      },
+      {
+        "title": "fix(donation-embed): remove overflow-y-auto so Stripe ACH overlay reaches full viewport on iOS",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3681"
+      },
+      {
+        "title": "feat(web/search): search route baseline (FTS results)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3594"
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- fix(admin): wrap long campus/fund names in transactions table (APO-10575)\n- chore: promote 2 review learning(s)\n- Reviewed: fix(giving): hide zero-dollar trial invoices from transactions (APO-10569)\n- Reviewed: ci(deploy): add per-app good-for-release helpers for confidence gate\n- Reviewed: test(web): e2e delete journey for saved payment methods\n- Reviewed: fix(web): shorten migration payment method selector label\n- Reviewed: Add e2e coverage for onboarding personal-info form submission\n- Reviewed: test(web): giving migration e2e smoke (UI-only, local proof first)\n- Done: APO-10109: 9592 stack 2: display — charges-native getTransactions\n- Done: APO-9592: 5. Decouple admin from stripe_events\n- Done: APO-9587: Make `charges` a complete source of truth (stop reading from stripe_events)\n- In progress: APO-10112: 9592 stack 5: cleanup — remove dead admin stripe_events SQL\n- Filed a new Linear ticket\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- fix(admin): include wallet types in charges-native Card filter (APO-10607)\n- Reviewed: fix(giving): right-align Failure Reason value in transaction drawer (APO-10609)\n- Reviewed: fix(finance): match all unprocessed unmatched charges to people (APO-10610)\n- Reviewed: test(web): e2e view shared Monthly $17.59 recurring gift detail\n- Reviewed: fix(admin): include wallet types in charges-native Card filter (APO-10607)\n- Reviewed: chore(deps): stage TipTap v3 core packages\n- Reviewed: test(web): e2e ensure shared Monthly $17.59 recurring gift exists\n- Reviewed: DB-first charge query for PushPay export rows (APO-10505)\n- Reviewed: fix(giving): preserve page/filters on recurring edit redirect (APO-10574)\n- Reviewed: fix(admin): add root ErrorBoundary so root-level errors show branded page (APO-10570)\n- Reviewed: Teach reportLoader to upload CSV reports (APO-10507)\n- Reviewed: [APO-6508] Migrate pushpay-givings flag to Web LaunchDarkly\n- Reviewed: docs(agents): add Cursor Cloud dev environment setup notes\n- …and 1 more reviews\n- In progress: APO-10610: Failed/guest charges show blank donor name+email with admin-transactions-sql-v-2 ON\n- Filed 2 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- chore: promote 3 review learning(s)\n- Reviewed: fix(livestreams): dedupe campus-specific rows in livestreams feed\n- Left comments on PRs"
+    },
+    {
+      "day": "Friday",
+      "content": "- Reviewed: feat(web-embeds-v2): host public demo pages on Vercel with PR previews\n- Reviewed: chore(admin): remove New Editor and Polls experimental toggles (APO-10649)\n- Reviewed: chore(admin): remove Webview Tabs experimental toggle (APO-10649)\n- Reviewed: chore(admin): remove New Web Embeds experimental toggle (APO-10649)\n- Reviewed: chore(admin): remove Link Embed experimental toggle (APO-10649)\n- Reviewed: Reduce duplicate GraphQL fanout on donor give/payment loaders\n- Reviewed: fix(admin): hard-fail empty Creator outlines and surface stream errors\n- Reviewed: fix(admin): keep AI streaming after intermediate parse errors\n- Reviewed: test(web): e2e edit and restore shared Monthly $17.59 recurring gift\n- Reviewed: chore(deps): stage TipTap v3 text extensions\n- Reviewed: fix(admin): strip dataview[...] form-state fields in config action\n- Reviewed: Add data-hide-trending-searches option to Search embed\n- …and 2 more reviews\n- Left comments on PRs and in Linear"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 5\n  • PR reviews: 34\n  • Commits pushed: 12\n  • Linear issues completed: 4\n  • Linear issues worked on: 7\n  • Linear issues created: 3\n  • Linear replies: 2\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-embeds\n\n📝 Check-ins:\n\n  Monday: - fix(admin): wrap long campus/fund names in transactions table (APO-10575)\n- ch...\n  Tuesday: - fix(admin): include wallet types in charges-native Card filter (APO-10607)\n- R...\n  Wednesday: - chore: promote 3 review learning(s)\n- Reviewed: fix(livestreams): dedupe campu...\n  Friday: - Reviewed: feat(web-embeds-v2): host public demo pages on Vercel with PR previe...\n",
+  "formatted_output": null
+}
