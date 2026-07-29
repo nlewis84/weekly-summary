@@ -241,7 +241,7 @@ export default function Index() {
         ))}
       </div>
 
-      <div className="xl:grid xl:grid-cols-[2fr_1fr_1fr] xl:gap-5 xl:items-start">
+      <div className="xl:grid xl:grid-cols-[minmax(0,1.6fr)_minmax(20rem,1fr)] xl:gap-5 xl:items-start">
         <div className="space-y-6 xl:flex xl:flex-col xl:min-h-0">
           {viewMode === "today" && (
             <TodaySection
@@ -273,25 +273,23 @@ export default function Index() {
           )}
         </div>
 
-        <div
-          id="build-summary"
-          className="xl:sticky xl:top-6 xl:flex xl:flex-col xl:items-start xl:min-h-0"
-        >
-          <FullSummaryFormContainer basecampConfigured={basecampConfigured} />
-        </div>
-
-        <div className="xl:flex xl:flex-col xl:min-h-0">
-          <WeeklySection
-            stats={weeklyPayload?.stats ?? null}
-            prevStats={
-              weekly && "prevPayload" in weekly
-                ? (weekly.prevPayload?.stats ?? null)
-                : null
-            }
-            error={weeklyError ?? null}
-            isLoading={isLoading}
-            goals={goals}
-          />
+        <div className="space-y-5 xl:flex xl:flex-col xl:min-h-0">
+          <div id="build-summary" className="xl:shrink-0">
+            <FullSummaryFormContainer basecampConfigured={basecampConfigured} />
+          </div>
+          <div className="xl:flex xl:flex-col xl:min-h-0">
+            <WeeklySection
+              stats={weeklyPayload?.stats ?? null}
+              prevStats={
+                weekly && "prevPayload" in weekly
+                  ? (weekly.prevPayload?.stats ?? null)
+                  : null
+              }
+              error={weeklyError ?? null}
+              isLoading={isLoading}
+              goals={goals}
+            />
+          </div>
         </div>
       </div>
     </div>

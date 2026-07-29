@@ -8,7 +8,6 @@ import {
   Folder,
   CaretDown,
   CaretRight,
-  Copy,
   CaretUp,
   WaveSine,
   ChatCircle,
@@ -18,8 +17,8 @@ import {
   FileMinus,
   Files,
   Timer,
+  type Icon,
 } from "phosphor-react";
-import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
 import type { Payload } from "../../lib/types";
 import type { WeeklyGoals } from "../hooks/useGoals";
@@ -31,6 +30,14 @@ interface MetricsCardProps {
   payload?: Payload | null;
   goals?: WeeklyGoals;
 }
+
+type MetricDef = {
+  key: keyof Stats;
+  label: string;
+  tooltip?: string;
+  Icon: Icon;
+  format?: "hours";
+};
 
 function TrendBadge({ delta }: { delta: number }) {
   if (delta === 0)
@@ -47,7 +54,7 @@ function TrendBadge({ delta }: { delta: number }) {
       <CaretUp
         size={12}
         weight="bold"
-        className="text-emerald-600 dark:text-emerald-400"
+        className="text-success-500"
         aria-label={`+${delta}`}
       />
     );
@@ -55,33 +62,10 @@ function TrendBadge({ delta }: { delta: number }) {
     <CaretDown
       size={12}
       weight="bold"
-      className="text-amber-600 dark:text-amber-400"
+      className="text-text-muted"
       aria-label={`${delta}`}
     />
   );
-}
-
-function formatStatsForCopy(stats: Stats): string {
-  const latency =
-    stats.median_review_latency_hours != null
-      ? `${stats.median_review_latency_hours}h`
-      : "—";
-  const parts = [
-    `PRs merged: ${stats.prs_merged}`,
-    `PR reviews: ${stats.pr_reviews}`,
-    `PR comments: ${stats.pr_comments}`,
-    `Commits pushed: ${stats.commits_pushed}`,
-    `Lines added: ${stats.lines_added ?? 0}`,
-    `Lines deleted: ${stats.lines_deleted ?? 0}`,
-    `Files changed: ${stats.files_changed ?? 0}`,
-    `Median review latency: ${latency}`,
-    `Linear completed: ${stats.linear_completed}`,
-    `Linear worked on: ${stats.linear_worked_on}`,
-    `Linear issues created: ${stats.linear_issues_created}`,
-    `Linear replies: ${stats.linear_comments}`,
-    `Repos: ${stats.repos.join(", ") || "—"}`,
-  ];
-  return parts.join(" | ");
 }
 
 type LinearIssue = {
@@ -91,87 +75,185 @@ type LinearIssue = {
   project?: string | null;
 };
 
-const METRICS = [
-  { key: "prs_merged" as const, label: "PRs merged", Icon: Package },
+/** Always shown — the day’s main signal. */
+const PRIMARY_METRICS: MetricDef[] = [
   {
-    key: "prs_total" as const,
-    label: "PRs active",
-    tooltip: "PRs created or updated",
-    Icon: PencilSimple,
-  },
-  { key: "pr_reviews" as const, label: "PR reviews", Icon: Eye },
-  { key: "pr_comments" as const, label: "PR comments", Icon: ChatCircle },
-  { key: "commits_pushed" as const, label: "Commits", tooltip: "Commits pushed", Icon: GitCommit },
-  {
-    key: "lines_added" as const,
-    label: "Lines added",
-    tooltip: "Additions across merged PRs",
-    Icon: FilePlus,
+    key: "prs_merged",
+    label: "PRs merged",
+    tooltip: "PRs merged",
+    Icon: Package,
   },
   {
-    key: "lines_deleted" as const,
-    label: "Lines deleted",
-    tooltip: "Deletions across merged PRs",
-    Icon: FileMinus,
+    key: "pr_reviews",
+    label: "PR reviews",
+    tooltip: "PR reviews",
+    Icon: Eye,
   },
   {
-    key: "files_changed" as const,
-    label: "Files changed",
-    tooltip: "Changed files across merged PRs",
-    Icon: Files,
+    key: "pr_comments",
+    label: "PR comments",
+    tooltip: "PR comments",
+    Icon: ChatCircle,
   },
   {
-    key: "median_review_latency_hours" as const,
+    key: "median_review_latency_hours",
     label: "Review time",
     tooltip: "Median hours from review request to your first review",
     Icon: Timer,
-    format: "hours" as const,
+    format: "hours",
   },
   {
-    key: "linear_completed" as const,
+    key: "linear_completed",
     label: "Linear done",
     tooltip: "Linear issues completed",
     Icon: CheckCircle,
   },
   {
-    key: "linear_worked_on" as const,
+    key: "lines_added",
+    label: "Lines added",
+    tooltip: "Additions across merged PRs",
+    Icon: FilePlus,
+  },
+];
+
+/** Shown only when non-zero — quieter inventory. */
+const SECONDARY_METRICS: MetricDef[] = [
+  {
+    key: "commits_pushed",
+    label: "Commits pushed",
+    tooltip: "Commits pushed",
+    Icon: GitCommit,
+  },
+  {
+    key: "linear_worked_on",
     label: "Linear active",
     tooltip: "Linear issues worked on",
     Icon: ArrowsClockwise,
   },
   {
-    key: "linear_issues_created" as const,
+    key: "prs_total",
+    label: "PRs active",
+    tooltip: "PRs created or updated",
+    Icon: PencilSimple,
+  },
+  {
+    key: "lines_deleted",
+    label: "Lines deleted",
+    tooltip: "Deletions across merged PRs",
+    Icon: FileMinus,
+  },
+  {
+    key: "files_changed",
+    label: "Files changed",
+    tooltip: "Changed files across merged PRs",
+    Icon: Files,
+  },
+  {
+    key: "linear_issues_created",
     label: "Linear created",
     tooltip: "Linear issues created",
     Icon: PlusCircle,
   },
   {
-    key: "linear_comments" as const,
+    key: "linear_comments",
     label: "Linear replies",
     tooltip: "Linear issues commented on",
     Icon: ChatCircle,
   },
-] as const;
-
-const TREND_METRICS = [
-  "prs_merged",
-  "prs_total",
-  "pr_reviews",
-  "pr_comments",
-  "commits_pushed",
-  "lines_added",
-  "lines_deleted",
-  "files_changed",
-  "median_review_latency_hours",
-  "linear_completed",
-  "linear_worked_on",
-  "linear_issues_created",
-  "linear_comments",
-] as const;
+];
 
 const GOAL_METRICS = ["prs_merged", "pr_reviews", "linear_completed"] as const;
 
-const iconSize = 24;
+function metricDisplay(
+  stats: Stats,
+  def: MetricDef
+): { numeric: number | null; text: string } {
+  const raw = stats[def.key];
+  const numeric = typeof raw === "number" ? raw : null;
+  if (numeric == null) return { numeric: null, text: "—" };
+  if (def.format === "hours") {
+    return { numeric, text: `${formatNumber(numeric)}h` };
+  }
+  return { numeric, text: formatNumber(numeric) };
+}
+
+function metricDelta(
+  stats: Stats,
+  prevStats: Stats | null | undefined,
+  key: keyof Stats
+): number | null {
+  if (!prevStats) return null;
+  const curr = stats[key];
+  const prev = prevStats[key];
+  if (typeof curr !== "number" || typeof prev !== "number") return null;
+  return Math.round((curr - prev) * 100) / 100;
+}
+
+function hasActivity(stats: Stats, def: MetricDef): boolean {
+  const raw = stats[def.key];
+  return typeof raw === "number" && raw !== 0;
+}
+
+function MetricCell({
+  def,
+  stats,
+  prevStats,
+  goals,
+}: {
+  def: MetricDef;
+  stats: Stats;
+  prevStats?: Stats | null;
+  goals?: WeeklyGoals;
+}) {
+  const { numeric, text } = metricDisplay(stats, def);
+  const delta = metricDelta(stats, prevStats, def.key);
+  const target =
+    goals && (GOAL_METRICS as readonly string[]).includes(def.key)
+      ? (goals[def.key as (typeof GOAL_METRICS)[number]] as number | undefined)
+      : undefined;
+  const met = target != null && numeric != null && numeric >= target;
+  const quiet = numeric == null || numeric === 0;
+  const { Icon } = def;
+
+  return (
+    <div className="flex items-center gap-2.5 min-w-0" title={def.tooltip}>
+      <Icon
+        size={20}
+        weight="regular"
+        className={`shrink-0 ${quiet ? "text-primary-500/35" : "text-primary-500"}`}
+      />
+      <div className="min-w-0">
+        <div className="flex items-baseline gap-1.5 flex-wrap">
+          <span
+            className={`text-2xl font-semibold tabular-nums leading-none ${
+              quiet ? "text-text-muted" : "text-text"
+            }`}
+          >
+            {target != null && numeric != null
+              ? `${formatNumber(numeric)}/${formatNumber(target)}`
+              : text}
+          </span>
+          {delta != null && target == null && !quiet && (
+            <span className="flex items-center gap-0.5 text-xs text-text-muted">
+              <TrendBadge delta={delta} />
+              <span>
+                {def.format === "hours"
+                  ? `${formatSignedNumber(delta)}h`
+                  : formatSignedNumber(delta)}
+              </span>
+            </span>
+          )}
+          {met && (
+            <span className="text-success-500 text-sm" title="Goal met">
+              ✓
+            </span>
+          )}
+        </div>
+        <p className="mt-1.5 text-sm text-text-muted">{def.label}</p>
+      </div>
+    </div>
+  );
+}
 
 export function MetricsCard({
   stats,
@@ -180,13 +262,6 @@ export function MetricsCard({
   goals,
 }: MetricsCardProps) {
   const [detailsOpen, setDetailsOpen] = useState(false);
-  const toast = useToast();
-
-  const handleCopy = async () => {
-    const text = formatStatsForCopy(stats);
-    await navigator.clipboard.writeText(text);
-    toast("Stats copied to clipboard");
-  };
 
   const hasDetails =
     payload &&
@@ -200,114 +275,42 @@ export function MetricsCard({
 
   return (
     <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:flex xl:flex-col xl:min-h-0">
-      <div className="flex items-center justify-between pb-4">
-        <h2 className="text-lg font-semibold text-(--color-text)">Metrics</h2>
-        <button
-          type="button"
-          onClick={handleCopy}
-          aria-label="Copy stats for standup"
-          className="flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] px-3 py-2 text-sm text-text-muted hover:text-primary-500 hover:bg-surface-elevated rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
-          title="Copy stats for standup"
-        >
-          <Copy size={16} weight="regular" />
-          Copy
-        </button>
-      </div>
+      <h2 className="text-lg font-semibold text-text pb-4">Metrics</h2>
+
       <div className="xl:flex-1 xl:min-h-0 xl:flex xl:flex-col pt-4 border-t border-(--color-border)">
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-          {METRICS.map(({ key, label, Icon, ...rest }) => {
-            const tooltip = "tooltip" in rest ? (rest as { tooltip: string }).tooltip : label;
-            const isHours = "format" in rest && rest.format === "hours";
-            const rawValue = stats[key];
-            const numericValue =
-              typeof rawValue === "number" ? rawValue : null;
-            const prevRaw = prevStats?.[key];
-            const prevNumeric =
-              typeof prevRaw === "number" ? prevRaw : null;
-            const delta =
-              prevStats &&
-              (TREND_METRICS as readonly string[]).includes(key) &&
-              numericValue != null &&
-              prevNumeric != null
-                ? Math.round((numericValue - prevNumeric) * 100) / 100
-                : null;
-            const target =
-              goals && (GOAL_METRICS as readonly string[]).includes(key)
-                ? (goals[key as (typeof GOAL_METRICS)[number]] as
-                    | number
-                    | undefined)
-                : undefined;
-            const displayValue =
-              numericValue == null
-                ? "—"
-                : isHours
-                  ? `${formatNumber(numericValue)}h`
-                  : formatNumber(numericValue);
-            const met =
-              target != null && numericValue != null && numericValue >= target;
-            return (
-              <div
-                key={key}
-                className={`flex items-center justify-between gap-3 min-w-0 overflow-hidden p-3 bg-surface-elevated rounded-lg border shadow-(--shadow-skeuo-inset) ${met ? "border-emerald-500/50" : "border-(--color-border)"}`}
-              >
-                <span className="flex items-center gap-2 min-w-0 flex-1 text-sm text-text-muted">
-                  <Icon
-                    size={iconSize}
-                    weight="regular"
-                    className="text-primary-500 shrink-0"
-                  />
-                  <span className="truncate" title={tooltip}>
-                    {label}
-                  </span>
-                </span>
-                <span className="flex items-center gap-1.5 shrink-0">
-                  <span className="text-lg font-semibold text-primary-500 tabular-nums">
-                    {target != null && numericValue != null
-                      ? `${formatNumber(numericValue)}/${formatNumber(target)}`
-                      : displayValue}
-                  </span>
-                  {delta != null && target == null && (
-                    <span
-                      className="flex items-center gap-0.5 text-xs"
-                      title={
-                        delta > 0
-                          ? `${formatSignedNumber(delta)} vs last week`
-                          : delta < 0
-                            ? `${formatSignedNumber(delta)} vs last week`
-                            : "+0 vs last week"
-                      }
-                    >
-                      <TrendBadge delta={delta} />
-                      <span>
-                        {isHours
-                          ? `${formatSignedNumber(delta)}h`
-                          : formatSignedNumber(delta)}
-                      </span>
-                    </span>
-                  )}
-                  {target != null && met && (
-                    <span
-                      className="text-emerald-600 dark:text-emerald-400 text-sm"
-                      title="Goal met"
-                    >
-                      ✓
-                    </span>
-                  )}
-                </span>
-              </div>
-            );
-          })}
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-x-6 gap-y-5">
+          {PRIMARY_METRICS.map((def) => (
+            <MetricCell
+              key={def.key}
+              def={def}
+              stats={stats}
+              prevStats={prevStats}
+              goals={goals}
+            />
+          ))}
+          {SECONDARY_METRICS.filter((def) => hasActivity(stats, def)).map(
+            (def) => (
+              <MetricCell
+                key={def.key}
+                def={def}
+                stats={stats}
+                prevStats={prevStats}
+                goals={goals}
+              />
+            )
+          )}
         </div>
-        <div className="mt-4 pt-4 border-t border-(--color-border) min-w-0">
+
+        <div className="mt-6 pt-4 border-t border-(--color-border) min-w-0">
           <span className="flex items-center gap-2 text-sm text-text-muted">
             <Folder
-              size={iconSize}
+              size={16}
               weight="regular"
               className="text-primary-500 shrink-0"
             />
             Repos worked on
           </span>
-          <p className="text-sm font-medium text-(--color-text) mt-1 truncate" title={stats.repos.length > 0 ? stats.repos.join(", ") : undefined}>
+          <p className="text-sm font-medium text-text mt-1 leading-normal">
             {stats.repos.length > 0 ? stats.repos.join(", ") : "—"}
           </p>
         </div>
@@ -336,7 +339,7 @@ export function MetricsCard({
                 >
                   {payload!.github.merged_prs.length > 0 && (
                     <div>
-                      <h3 className="font-medium text-text-muted mb-2">
+                      <h3 className="text-sm font-medium text-text-muted mb-2">
                         PRs merged
                       </h3>
                       <ul className="space-y-1">
@@ -368,7 +371,7 @@ export function MetricsCard({
                   )}
                   {(payload!.github.open_prs?.length ?? 0) > 0 && (
                     <div>
-                      <h3 className="font-medium text-text-muted mb-2">
+                      <h3 className="text-sm font-medium text-text-muted mb-2">
                         PRs active
                       </h3>
                       <ul className="space-y-1">
@@ -394,7 +397,7 @@ export function MetricsCard({
                   )}
                   {payload!.github.reviews.length > 0 && (
                     <div>
-                      <h3 className="font-medium text-text-muted mb-2">
+                      <h3 className="text-sm font-medium text-text-muted mb-2">
                         PR reviews
                       </h3>
                       <ul className="space-y-1">
@@ -414,8 +417,8 @@ export function MetricsCard({
                               </span>
                             )}
                             {r.latency_hours != null ? (
-                              <span className="text-text-muted ml-1">
-                                · {r.latency_hours}h
+                              <span className="text-text-muted ml-1 tabular-nums">
+                                · {formatNumber(r.latency_hours)}h
                               </span>
                             ) : null}
                           </li>
@@ -425,7 +428,7 @@ export function MetricsCard({
                   )}
                   {payload!.linear.completed_issues.length > 0 && (
                     <div>
-                      <h3 className="font-medium text-text-muted mb-2">
+                      <h3 className="text-sm font-medium text-text-muted mb-2">
                         Linear done
                       </h3>
                       <ul className="space-y-1">
@@ -454,7 +457,7 @@ export function MetricsCard({
                   )}
                   {payload!.linear.worked_on_issues.length > 0 && (
                     <div>
-                      <h3 className="font-medium text-text-muted mb-2">
+                      <h3 className="text-sm font-medium text-text-muted mb-2">
                         Linear active
                       </h3>
                       <ul className="space-y-1">
@@ -483,7 +486,7 @@ export function MetricsCard({
                   )}
                   {(payload!.linear.created_issues?.length ?? 0) > 0 && (
                     <div>
-                      <h3 className="font-medium text-text-muted mb-2">
+                      <h3 className="text-sm font-medium text-text-muted mb-2">
                         Linear created
                       </h3>
                       <ul className="space-y-1">
@@ -513,7 +516,7 @@ export function MetricsCard({
                   )}
                   {(payload!.linear.commented_issues?.length ?? 0) > 0 && (
                     <div>
-                      <h3 className="font-medium text-text-muted mb-2">
+                      <h3 className="text-sm font-medium text-text-muted mb-2">
                         Linear replies
                       </h3>
                       <ul className="space-y-1">

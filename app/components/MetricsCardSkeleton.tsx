@@ -3,21 +3,20 @@
  */
 export function MetricsCardSkeleton() {
   return (
-    <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6 animate-pulse">
-      <div className="flex items-center justify-between mb-4">
-        <div className="h-6 w-16 bg-surface-elevated rounded" />
-        <div className="h-8 w-12 bg-surface-elevated rounded" />
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {[1, 2, 3, 4, 5].map((i) => (
-          <div
-            key={i}
-            className="flex items-center justify-between p-3 bg-surface-elevated rounded-lg border border-(--color-border)"
-          >
-            <div className="h-4 w-24 bg-(--color-border) rounded" />
-            <div className="h-6 w-8 bg-(--color-border) rounded" />
-          </div>
-        ))}
+    <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-5 animate-pulse">
+      <div className="h-6 w-20 bg-surface-elevated rounded mb-4" />
+      <div className="pt-4 border-t border-(--color-border)">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-x-6 gap-y-5">
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div key={i} className="flex items-center gap-2.5 min-w-0">
+              <div className="size-5 rounded bg-(--color-border) shrink-0" />
+              <div className="space-y-2 min-w-0">
+                <div className="h-7 w-12 bg-surface-elevated rounded" />
+                <div className="h-3 w-20 bg-(--color-border) rounded" />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

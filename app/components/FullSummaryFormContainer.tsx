@@ -61,7 +61,7 @@ export function FullSummaryFormContainer({
   }, [navigation.state, refreshSnapshots]);
 
   return (
-    <div className="xl:w-96 xl:h-full xl:flex xl:flex-col xl:flex-nowrap xl:items-stretch xl:min-h-0">
+    <div className="w-full xl:flex xl:flex-col xl:items-stretch xl:min-h-0">
     <FullSummaryForm
       Form={fetcher.Form}
       action="/api/summary"
