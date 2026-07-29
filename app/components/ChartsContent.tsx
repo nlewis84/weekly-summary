@@ -22,6 +22,7 @@ import {
 } from "~/components/ui/chart";
 import { MetricLineChart } from "~/components/MetricLineChart";
 import type { ChartDataPoint, RepoActivity } from "../../lib/charts-data";
+import { formatNumber } from "~/lib/utils";
 
 const formatWeek = (w: string) => {
   const d = new Date(w + "T12:00:00");
@@ -36,6 +37,24 @@ const GITHUB_METRICS = [
     key: "Commits pushed",
     color: "var(--chart-4)",
     sumKey: "commits_pushed" as const,
+  },
+] as const;
+
+const VOLUME_METRICS = [
+  {
+    key: "Lines added",
+    color: "var(--chart-1)",
+    sumKey: "lines_added" as const,
+  },
+  {
+    key: "Lines deleted",
+    color: "var(--chart-3)",
+    sumKey: "lines_deleted" as const,
+  },
+  {
+    key: "Files changed",
+    color: "var(--chart-4)",
+    sumKey: "files_changed" as const,
   },
 ] as const;
 
@@ -99,6 +118,10 @@ export function ChartsContent({
     "PR reviews": d.pr_reviews,
     "PR comments": d.pr_comments,
     "Commits pushed": d.commits_pushed,
+    "Lines added": d.lines_added,
+    "Lines deleted": d.lines_deleted,
+    "Files changed": d.files_changed,
+    "Review latency (h)": d.median_review_latency_hours ?? 0,
     "Linear completed": d.linear_completed,
     "Linear worked on": d.linear_worked_on,
     "Linear issues created": d.linear_issues_created,
@@ -112,6 +135,9 @@ export function ChartsContent({
       | "pr_reviews"
       | "pr_comments"
       | "commits_pushed"
+      | "lines_added"
+      | "lines_deleted"
+      | "files_changed"
       | "linear_completed"
       | "linear_worked_on"
       | "linear_issues_created"
@@ -204,6 +230,52 @@ export function ChartsContent({
                 />
               </div>
             ))}
+          </div>
+        </section>
+        <section aria-labelledby="volume-metrics-heading">
+          <h4
+            id="volume-metrics-heading"
+            className="text-xs font-medium text-text-muted mb-3"
+          >
+            Code volume & review latency
+          </h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            {VOLUME_METRICS.map(({ key, color, sumKey }) => (
+              <div
+                key={key}
+                className="bg-surface-elevated rounded-lg border border-(--color-border) p-3"
+              >
+                <h5 className="text-xs font-medium text-text-muted mb-2 truncate">
+                  {key}
+                </h5>
+                <MetricLineChart
+                  data={metricsData.map((d) => ({
+                    x: d.week,
+                    value: d[key as keyof typeof d] as number,
+                  }))}
+                  metricKey={key}
+                  color={color}
+                  xKey="week"
+                  ariaLabel={`Line chart: ${key} over time`}
+                  forecast={weekForecast(sumKey)}
+                />
+              </div>
+            ))}
+            <div className="bg-surface-elevated rounded-lg border border-(--color-border) p-3">
+              <h5 className="text-xs font-medium text-text-muted mb-2 truncate">
+                Review latency (h)
+              </h5>
+              <MetricLineChart
+                data={actualSorted.map((d) => ({
+                  x: formatWeek(d.week_ending),
+                  value: d.median_review_latency_hours ?? 0,
+                }))}
+                metricKey="Review latency (h)"
+                color="var(--chart-2)"
+                xKey="week"
+                ariaLabel="Line chart: median review latency in hours over time"
+              />
+            </div>
           </div>
         </section>
         <section aria-labelledby="linear-metrics-heading">
@@ -324,7 +396,14 @@ export function ChartsContent({
                     accessibilityLayer
                   >
                     <CartesianGrid horizontal={false} strokeDasharray="3 3" />
-                    <XAxis type="number" tickLine={false} axisLine={false} />
+                    <XAxis
+                      type="number"
+                      tickLine={false}
+                      axisLine={false}
+                      tickFormatter={(v) =>
+                        formatNumber(typeof v === "number" ? v : Number(v))
+                      }
+                    />
                     <YAxis
                       dataKey="name"
                       type="category"
@@ -342,6 +421,7 @@ export function ChartsContent({
                         dataKey="PRs merged"
                         position="right"
                         className="fill-text-muted"
+                        formatter={(v: number) => formatNumber(v)}
                       />
                     </Bar>
                   </BarChart>
@@ -359,7 +439,7 @@ export function ChartsContent({
                 >
                   <LineChart
                     data={reposOverTimeData}
-                    margin={{ top: 8, right: 8, left: 40, bottom: 0 }}
+                    margin={{ top: 8, right: 8, left: 8, bottom: 0 }}
                     accessibilityLayer
                   >
                     <CartesianGrid vertical={false} strokeDasharray="3 3" />
@@ -374,7 +454,10 @@ export function ChartsContent({
                       tickLine={false}
                       axisLine={false}
                       tickMargin={8}
-                      width={36}
+                      width={48}
+                      tickFormatter={(v) =>
+                        formatNumber(typeof v === "number" ? v : Number(v))
+                      }
                     />
                     <ChartTooltip content={<ChartTooltipContent />} />
                     <ChartLegend content={<ChartLegendContent />} />

@@ -19,7 +19,11 @@
       "apollos-admin",
       "apollos-cluster",
       "apollos-platforms"
-    ]
+    ],
+    "lines_added": 1718,
+    "lines_deleted": 505,
+    "files_changed": 26,
+    "median_review_latency_hours": 17.85
   },
   "linear": {
     "completed_issues": [
@@ -82,63 +86,123 @@
         "title": "feat: pass churchSlug to updateStreamUserHost when managing community hosts",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2818",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-11T15:24:53Z"
+        "merged_at": "2026-02-11T15:24:53Z",
+        "additions": 56,
+        "deletions": 0,
+        "changed_files": 3
       },
       {
         "title": "fix: improve in-app browser handling for give paths and stuck browsers",
         "url": "https://github.com/ApollosProject/apollos-platforms/pull/5946",
         "repo": "apollos-platforms",
-        "merged_at": "2026-02-10T23:46:21Z"
+        "merged_at": "2026-02-10T23:46:21Z",
+        "additions": 18,
+        "deletions": 3,
+        "changed_files": 2
       },
       {
         "title": "Reapply \"refactor: new auth flow\" (#2806)",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2808",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-09T15:23:47Z"
+        "merged_at": "2026-02-09T15:23:47Z",
+        "additions": 1644,
+        "deletions": 502,
+        "changed_files": 21
       }
     ],
     "reviews": [
       {
         "title": "feat: set secured and encrypyed in terms footer",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2820"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2820",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-11T17:38:10Z",
+        "reviewed_at": "2026-02-11T19:53:54Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 2.26
       },
       {
         "title": "Fix Admin crash: Deferred estimatedACH",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2816"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2816",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-10T22:29:26Z",
+        "reviewed_at": "2026-02-11T15:20:17Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 16.85
       },
       {
         "title": "fix: improve in-app browser handling for give paths and stuck browsers",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5946"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5946",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-02-10T17:55:23Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "fix: people data discovery test",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2812"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2812",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-09T18:04:27Z",
+        "reviewed_at": "2026-02-09T18:17:41Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.22
       },
       {
         "title": "fix(web): avoid 500s on invalid slugs/ids",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2811"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2811",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-08T20:22:03Z",
+        "reviewed_at": "2026-02-09T15:13:04Z",
+        "review_state": "APPROVED",
+        "latency_hours": 18.85
       },
       {
         "title": "Fix stale tap campus resolution for tap-scan give flow",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5935"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5935",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-02-06T18:00:53Z",
+        "reviewed_at": "2026-02-09T14:55:50Z",
+        "review_state": "APPROVED",
+        "latency_hours": 68.92
       },
       {
         "title": "feat(admin): build default state views for migration tab",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2797"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2797",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-05T20:46:42Z",
+        "reviewed_at": "2026-02-09T14:54:18Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 90.13
       },
       {
         "title": "feat: preserve prefilled payment data when redirecting to external giving platforms",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2793"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2793",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "chore: optimize payment route by utilizing user data from root loader",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "Migration Assistant Admin UI",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2667"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2667",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       }
-    ]
+    ],
+    "open_prs": []
   },
   "check_ins": [
     {

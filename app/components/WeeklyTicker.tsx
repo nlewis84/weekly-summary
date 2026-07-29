@@ -12,27 +12,21 @@ import {
   ChatCircle,
   GitCommit,
   PlusCircle,
+  FilePlus,
+  FileMinus,
+  Files,
+  Timer,
 } from "phosphor-react";
 import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
 import type { WeeklyGoals } from "../hooks/useGoals";
+import { formatNumber, formatSignedNumber } from "~/lib/utils";
 
 interface WeeklyTickerProps {
   stats: Stats;
   prevStats?: Stats | null;
   goals?: WeeklyGoals;
 }
-
-const METRIC_KEYS = [
-  "prs_merged",
-  "pr_reviews",
-  "pr_comments",
-  "commits_pushed",
-  "linear_completed",
-  "linear_worked_on",
-  "linear_issues_created",
-  "linear_comments",
-] as const;
 
 function TrendBadge({ delta }: { delta: number }) {
   if (delta === 0)
@@ -64,11 +58,19 @@ function TrendBadge({ delta }: { delta: number }) {
 }
 
 function formatStatsForCopy(stats: Stats): string {
+  const latency =
+    stats.median_review_latency_hours != null
+      ? `${stats.median_review_latency_hours}h`
+      : "—";
   const parts = [
     `PRs merged: ${stats.prs_merged}`,
     `PR reviews: ${stats.pr_reviews}`,
     `PR comments: ${stats.pr_comments}`,
     `Commits pushed: ${stats.commits_pushed}`,
+    `Lines added: ${stats.lines_added ?? 0}`,
+    `Lines deleted: ${stats.lines_deleted ?? 0}`,
+    `Files changed: ${stats.files_changed ?? 0}`,
+    `Median review latency: ${latency}`,
     `Linear completed: ${stats.linear_completed}`,
     `Linear worked on: ${stats.linear_worked_on}`,
     `Linear issues created: ${stats.linear_issues_created}`,
@@ -83,6 +85,27 @@ const METRICS = [
   { key: "pr_reviews" as const, label: "PR reviews", Icon: Eye },
   { key: "pr_comments" as const, label: "PR comments", Icon: ChatCircle },
   { key: "commits_pushed" as const, label: "Commits pushed", Icon: GitCommit },
+  {
+    key: "lines_added" as const,
+    label: "Lines added",
+    Icon: FilePlus,
+  },
+  {
+    key: "lines_deleted" as const,
+    label: "Lines deleted",
+    Icon: FileMinus,
+  },
+  {
+    key: "files_changed" as const,
+    label: "Files changed",
+    Icon: Files,
+  },
+  {
+    key: "median_review_latency_hours" as const,
+    label: "Review time",
+    Icon: Timer,
+    format: "hours" as const,
+  },
   {
     key: "linear_completed" as const,
     label: "Linear completed",
@@ -115,13 +138,6 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
     toast("Stats copied to clipboard");
   };
 
-  const getDelta = (key: (typeof METRIC_KEYS)[number]) => {
-    if (!prevStats) return null;
-    const curr = stats[key] ?? 0;
-    const prev = prevStats[key] ?? 0;
-    return curr - prev;
-  };
-
   return (
     <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:flex xl:flex-col xl:min-h-0">
       <div className="flex items-center justify-between pb-4">
@@ -146,16 +162,32 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
       </div>
 
       <div className="pt-4 border-t border-(--color-border) space-y-1 xl:flex-1 xl:min-h-0">
-        {METRICS.map(({ key, label, Icon }, i) => {
-          const delta = getDelta(key);
+        {METRICS.map(({ key, label, Icon, ...rest }, i) => {
+          const isHours = "format" in rest && rest.format === "hours";
+          const rawValue = stats[key];
+          const numericValue =
+            typeof rawValue === "number" ? rawValue : null;
+          const prevRaw = prevStats?.[key];
+          const prevNumeric =
+            typeof prevRaw === "number" ? prevRaw : null;
+          const delta =
+            prevStats && numericValue != null && prevNumeric != null
+              ? Math.round((numericValue - prevNumeric) * 100) / 100
+              : null;
           const target =
-            goals && GOAL_METRICS.includes(key)
+            goals && (GOAL_METRICS as readonly string[]).includes(key)
               ? (goals[key as (typeof GOAL_METRICS)[number]] as
                   | number
                   | undefined)
               : undefined;
-          const value = stats[key];
-          const met = target != null && value >= target;
+          const displayValue =
+            numericValue == null
+              ? "—"
+              : isHours
+                ? `${formatNumber(numericValue)}h`
+                : formatNumber(numericValue);
+          const met =
+            target != null && numericValue != null && numericValue >= target;
           return (
             <div
               key={key}
@@ -172,32 +204,40 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
                 <span className="truncate">{label}</span>
               </span>
               <div className="flex items-center gap-2 shrink-0">
-                {target != null && value < target && (
+                {target != null &&
+                  numericValue != null &&
+                  numericValue < target && (
                   <div className="w-12 h-1 bg-surface rounded-full overflow-hidden">
                     <div
                       className="h-full bg-primary-500/60 rounded-full transition-all"
                       style={{
-                        width: `${Math.min(100, (value / target) * 100)}%`,
+                        width: `${Math.min(100, (numericValue / target) * 100)}%`,
                       }}
                     />
                   </div>
                 )}
                 <span className="text-base font-semibold text-(--color-text) tabular-nums">
-                  {target != null ? `${value}/${target}` : value}
+                  {target != null && numericValue != null
+                    ? `${formatNumber(numericValue)}/${formatNumber(target)}`
+                    : displayValue}
                 </span>
                 {delta != null && target == null && (
                   <span
                     className="flex items-center gap-0.5 text-xs text-text-muted"
                     title={
                       delta > 0
-                        ? `+${delta} vs last week`
+                        ? `${formatSignedNumber(delta)} vs last week`
                         : delta < 0
-                          ? `${delta} vs last week`
+                          ? `${formatSignedNumber(delta)} vs last week`
                           : "+0 vs last week"
                     }
                   >
                     <TrendBadge delta={delta} />
-                    <span>{delta > 0 ? `+${delta}` : delta === 0 ? "+0" : delta}</span>
+                    <span>
+                      {isHours
+                        ? `${formatSignedNumber(delta)}h`
+                        : formatSignedNumber(delta)}
+                    </span>
                   </span>
                 )}
                 {target != null && met && (

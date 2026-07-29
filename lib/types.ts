@@ -9,11 +9,47 @@ export interface Stats {
   linear_issues_created: number;
   linear_comments: number;
   repos: string[];
+  /** Sum of additions across merged PRs in the window */
+  lines_added?: number;
+  /** Sum of deletions across merged PRs in the window */
+  lines_deleted?: number;
+  /** Sum of changed_files across merged PRs in the window */
+  files_changed?: number;
+  /** Median hours from review_requested → first review; null if none requested */
+  median_review_latency_hours?: number | null;
 }
 
 export interface CheckIn {
   day: string;
   content: string;
+}
+
+export interface MergedPr {
+  title: string;
+  url: string;
+  repo: string | null;
+  merged_at: string | null;
+  additions?: number;
+  deletions?: number;
+  changed_files?: number;
+}
+
+export interface OpenPr {
+  title: string;
+  url: string;
+  repo: string | null;
+  state: string | null;
+}
+
+export interface ReviewEntry {
+  title: string;
+  url: string;
+  repo?: string | null;
+  requested_at?: string | null;
+  reviewed_at?: string | null;
+  review_state?: string | null;
+  /** Hours from requested_at → reviewed_at; null for drive-by reviews */
+  latency_hours?: number | null;
 }
 
 export interface Payload {
@@ -32,9 +68,9 @@ export interface Payload {
     commented_issues?: Array<Record<string, unknown>>;
   };
   github: {
-    merged_prs: Array<{ title: string; url: string; repo: string | null; merged_at: string | null }>;
-    open_prs: Array<{ title: string; url: string; repo: string | null; state: string | null }>;
-    reviews: Array<{ title: string; url: string }>;
+    merged_prs: MergedPr[];
+    open_prs: OpenPr[];
+    reviews: ReviewEntry[];
   };
   check_ins: CheckIn[];
   terminal_output: string;

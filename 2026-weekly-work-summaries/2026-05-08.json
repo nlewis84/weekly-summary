@@ -20,7 +20,11 @@
       "apollos-admin",
       "apollos-cluster",
       "apollos-platforms"
-    ]
+    ],
+    "lines_added": 946,
+    "lines_deleted": 255,
+    "files_changed": 28,
+    "median_review_latency_hours": 13.57
   },
   "linear": {
     "completed_issues": [
@@ -475,114 +479,220 @@
         "title": "chore: add email to enum and test coverage",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3007",
         "repo": "apollos-cluster",
-        "merged_at": "2026-05-07T23:16:41Z"
+        "merged_at": "2026-05-07T23:16:41Z",
+        "additions": 44,
+        "deletions": 0,
+        "changed_files": 2
       },
       {
         "title": "refactor: cleaned up the Fee Settlement settings note/toggle",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3325",
         "repo": "apollos-admin",
-        "merged_at": "2026-05-08T15:05:52Z"
+        "merged_at": "2026-05-08T15:05:52Z",
+        "additions": 43,
+        "deletions": 29,
+        "changed_files": 2
       },
       {
         "title": "refactor(giving): remove enrichWithBalanceTransactions; map cluster totalFees",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3317",
         "repo": "apollos-admin",
-        "merged_at": "2026-05-07T14:15:48Z"
+        "merged_at": "2026-05-07T14:15:48Z",
+        "additions": 124,
+        "deletions": 141,
+        "changed_files": 9
       },
       {
         "title": "fix: cluster transaction export uses platform fee when Connect application_fee is missing",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2996",
         "repo": "apollos-cluster",
-        "merged_at": "2026-05-07T15:10:56Z"
+        "merged_at": "2026-05-07T15:10:56Z",
+        "additions": 125,
+        "deletions": 20,
+        "changed_files": 3
       },
       {
         "title": "feat: add index on customers (person_id, stripe_platform_id) where primary",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2988",
         "repo": "apollos-cluster",
-        "merged_at": "2026-05-06T16:00:44Z"
+        "merged_at": "2026-05-06T16:00:44Z",
+        "additions": 25,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "feat: enrich transactions with Stripe balance transaction fees and net",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3212",
         "repo": "apollos-admin",
-        "merged_at": "2026-05-06T18:55:01Z"
+        "merged_at": "2026-05-06T18:55:01Z",
+        "additions": 176,
+        "deletions": 0,
+        "changed_files": 6
       },
       {
         "title": "fix: scope Stripe customer rows to platform account ID",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2853",
         "repo": "apollos-cluster",
-        "merged_at": "2026-05-05T20:18:30Z"
+        "merged_at": "2026-05-05T20:18:30Z",
+        "additions": 409,
+        "deletions": 65,
+        "changed_files": 5
       }
     ],
     "open_prs": [],
     "reviews": [
       {
         "title": "APO-8937 fix content title rename saves",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3340"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3340",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-08T19:42:52Z",
+        "reviewed_at": "2026-05-08T21:26:41Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.73
       },
       {
         "title": "APO-9086: Remove follow-up receipt language from ACH processing email",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3334"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3334",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-07T22:43:37Z",
+        "reviewed_at": "2026-05-07T23:54:50Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.19
       },
       {
         "title": "APO-9085: Don't send ACH settlement completion email",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3333"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3333",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-07T22:37:54Z",
+        "reviewed_at": "2026-05-08T21:23:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 22.77
       },
       {
         "title": "APO-9050 hide Embeddings workflow from Data dashboard",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3320"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3320",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-07T14:18:24Z",
+        "reviewed_at": "2026-05-07T14:33:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.25
       },
       {
         "title": "Migrate 9 utility/constant files from JS to TS",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2998"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2998",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-05-07T00:28:42Z",
+        "reviewed_at": "2026-05-07T14:04:13Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 13.59
       },
       {
         "title": "refactor(giving): remove enrichWithBalanceTransactions; map cluster totalFees",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3317"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3317",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-05-06T23:02:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "chore: add knip for unused-code detection",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3315"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3315",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-06T21:53:28Z",
+        "reviewed_at": "2026-05-07T13:58:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 16.08
       },
       {
         "title": "fix: cluster transaction export uses platform fee when Connect application_fee is missing",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2996"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2996",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-05-06T21:40:53Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "test(web): Add Playwright Google Pay Express Checkout on give ",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3307"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3307",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-07T11:55:10Z",
+        "reviewed_at": "2026-05-07T14:29:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.58
       },
       {
         "title": "Upgrade ESLint and related dependencies to v10",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2994"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2994",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-05-06T15:25:56Z",
+        "reviewed_at": "2026-05-06T18:39:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.23
       },
       {
         "title": "ci: add PR Health Check workflow",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3305"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3305",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-05T16:53:21Z",
+        "reviewed_at": "2026-05-05T19:06:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.21
       },
       {
         "title": "APO-9011: Prevent charge re-sync from moving transactions between batches",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2986"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2986",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-05-06T00:04:34Z",
+        "reviewed_at": "2026-05-06T15:20:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 15.27
       },
       {
         "title": "[codex] Add Bayside El Dorado events chip script",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2975"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2975",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-05-04T00:50:16Z",
+        "reviewed_at": "2026-05-04T14:23:12Z",
+        "review_state": "APPROVED",
+        "latency_hours": 13.55
       },
       {
         "title": "Fix feature action content back stack",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6329"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6329",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-05-03T20:01:00Z",
+        "reviewed_at": "2026-05-04T14:17:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 18.27
       },
       {
         "title": "[APO-8790] [V2] Hide App Clip banner if `source=app` is given in URL",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3297"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3297",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-01T16:04:22Z",
+        "reviewed_at": "2026-05-04T14:01:30Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 69.95
       },
       {
         "title": "chore(schema): remove unused deprecated schema fields",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2916"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2916",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-24T21:31:03Z",
+        "reviewed_at": "2026-05-04T14:08:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 232.63
       },
       {
         "title": "fix: scope Stripe customer rows to platform account ID",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2853"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2853",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-05-05T14:05:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       }
     ]
   },

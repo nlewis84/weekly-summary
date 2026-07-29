@@ -18,7 +18,11 @@
       "apollos-admin",
       "apollos-cluster"
     ],
-    "linear_issues_created": 12
+    "linear_issues_created": 12,
+    "lines_added": 0,
+    "lines_deleted": 0,
+    "files_changed": 0,
+    "median_review_latency_hours": null
   },
   "linear": {
     "completed_issues": [],
@@ -128,16 +132,23 @@
         "title": "Work (from transcript)",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/0",
         "repo": "apollos-admin",
-        "merged_at": "2026-01-02T18:00:00Z"
+        "merged_at": "2026-01-02T18:00:00Z",
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
       },
       {
         "title": "Work (from transcript)",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/0",
         "repo": "apollos-cluster",
-        "merged_at": "2026-01-02T18:00:00Z"
+        "merged_at": "2026-01-02T18:00:00Z",
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
       }
     ],
-    "reviews": []
+    "reviews": [],
+    "open_prs": []
   },
   "check_ins": [
     {

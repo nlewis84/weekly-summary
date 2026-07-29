@@ -11,6 +11,7 @@
     "cli:transcript": "tsx scripts/transcript-cli.ts",
     "fetch-pr-comments": "tsx scripts/fetch-pr-comments-by-date.ts",
     "backfill-linear-created": "tsx scripts/backfill-linear-issues-created.ts",
+    "backfill-github-metrics": "tsx scripts/backfill-github-metrics.ts",
     "typecheck": "react-router typegen && tsc",
     "lint": "eslint .",
     "format": "prettier --write \"app/**/*.{ts,tsx,css}\" \"lib/**/*.ts\" \"e2e/**/*.ts\"",

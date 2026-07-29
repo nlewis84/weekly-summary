@@ -19,7 +19,11 @@
       "apollos-admin",
       "apollos-cluster",
       "apollos-shovel"
-    ]
+    ],
+    "lines_added": 1475,
+    "lines_deleted": 142,
+    "files_changed": 24,
+    "median_review_latency_hours": 30.14
   },
   "linear": {
     "completed_issues": [
@@ -131,67 +135,132 @@
         "title": "fix: resolve Express Checkout on_behalf_of mismatch for destination charges",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2883",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-03T19:45:30Z"
+        "merged_at": "2026-03-03T19:45:30Z",
+        "additions": 330,
+        "deletions": 104,
+        "changed_files": 6
       },
       {
         "title": "feat: add reconciliation amount normalization and canonical key handling",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2481",
         "repo": "apollos-cluster",
-        "merged_at": "2026-03-05T05:31:55Z"
+        "merged_at": "2026-03-05T05:31:55Z",
+        "additions": 172,
+        "deletions": 9,
+        "changed_files": 8
       },
       {
         "title": "feat: add reconciliation job queue and cursor tracking",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2472",
         "repo": "apollos-cluster",
-        "merged_at": "2026-03-03T16:43:42Z"
+        "merged_at": "2026-03-03T16:43:42Z",
+        "additions": 973,
+        "deletions": 29,
+        "changed_files": 10
       }
     ],
     "reviews": [
       {
         "title": "Limit number of pages to embed when embedding a church website for voice qa",
-        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1367"
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1367",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-03-05T23:20:18Z",
+        "reviewed_at": "2026-03-06T16:13:04Z",
+        "review_state": "APPROVED",
+        "latency_hours": 16.88
       },
       {
         "title": "Add Docker support for admin app with GHCR publishing",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2908"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2908",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-04T20:59:38Z",
+        "reviewed_at": "2026-03-06T16:22:48Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 43.39
       },
       {
         "title": "[APO-7445] Mobile Auth Screens getting zoomed in",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2893"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2893",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-03T19:40:14Z",
+        "reviewed_at": "2026-03-03T22:54:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.23
       },
       {
         "title": "New `createOrUpdateGiveIntent` mutation",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2555"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2555",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-03-04T00:58:08Z",
+        "reviewed_at": "2026-03-04T15:48:49Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 14.84
       },
       {
         "title": "[APO-7398] Make Redis optional locally when REDIS_URL is unset",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2891"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2891",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-02T19:43:18Z",
+        "reviewed_at": "2026-03-02T23:00:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.29
       },
       {
         "title": "fix: persist canonical scripture query for scripture blocks (APO-7384)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2890"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2890",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-02T19:27:53Z",
+        "reviewed_at": "2026-03-02T23:19:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.86
       },
       {
         "title": "fix: resolve Express Checkout on_behalf_of mismatch for destination charges",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2883"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2883",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-03-02T20:33:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "feat(migrations): normalize migration admin UI for multi-source support",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2878"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2878",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-27T15:28:11Z",
+        "reviewed_at": "2026-03-03T17:05:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 97.62
       },
       {
         "title": "[APO-7205] Fallback for non CHIPS browsers",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2868"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2868",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-24T00:26:28Z",
+        "reviewed_at": "2026-03-04T17:41:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 209.26
       },
       {
         "title": "[Giving] Fix funds changing across page reloads on Transactions Tab",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2853"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2853",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-25T21:27:17Z",
+        "reviewed_at": "2026-03-02T20:59:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 119.53
       },
       {
         "title": "feat(recurring-gifts): render recurring gifts with filtering, cancel, and resume actions",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2848"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2848",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-24T16:32:09Z",
+        "reviewed_at": "2026-03-03T18:36:14Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 170.07
       }
-    ]
+    ],
+    "open_prs": []
   },
   "check_ins": [
     {

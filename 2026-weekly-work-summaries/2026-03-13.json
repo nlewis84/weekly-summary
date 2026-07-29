@@ -21,7 +21,11 @@
       "apollos-embeds",
       "apollos-platforms",
       "apollos-shovel"
-    ]
+    ],
+    "lines_added": 3069,
+    "lines_deleted": 1620,
+    "files_changed": 74,
+    "median_review_latency_hours": 14.28
   },
   "linear": {
     "completed_issues": [
@@ -189,167 +193,321 @@
         "title": "feat: set payment method accordion to default collapsed",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2983",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-13T22:08:30Z"
+        "merged_at": "2026-03-13T22:08:30Z",
+        "additions": 5,
+        "deletions": 0,
+        "changed_files": 4
       },
       {
         "title": "chore: change Give Again text to Done",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2982",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-13T22:08:30Z"
+        "merged_at": "2026-03-13T22:08:30Z",
+        "additions": 5,
+        "deletions": 5,
+        "changed_files": 3
       },
       {
         "title": "chore: use confirmSetup instead of confirmPayment in express checkout",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2955",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-11T20:05:16Z"
+        "merged_at": "2026-03-11T20:05:16Z",
+        "additions": 85,
+        "deletions": 38,
+        "changed_files": 1
       },
       {
         "title": "feat: migrate from createPaymentIntent to createOrUpdateGiveIntent for Web Giving",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2931",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-12T21:03:01Z"
+        "merged_at": "2026-03-12T21:03:01Z",
+        "additions": 1120,
+        "deletions": 401,
+        "changed_files": 26
       },
       {
         "title": "chore: remove NOW from button text",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2921",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-10T14:42:47Z"
+        "merged_at": "2026-03-10T14:42:47Z",
+        "additions": 4,
+        "deletions": 4,
+        "changed_files": 3
       },
       {
         "title": "chore: fix apollos link for web embeds opening in new window",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2920",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-09T22:01:33Z"
+        "merged_at": "2026-03-09T22:01:33Z",
+        "additions": 2,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "chore: Copy change for loading indicator",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2919",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-10T14:21:12Z"
+        "merged_at": "2026-03-10T14:21:12Z",
+        "additions": 2,
+        "deletions": 2,
+        "changed_files": 2
       },
       {
         "title": "feat: set a model for OpenAIEmbeddings",
         "url": "https://github.com/ApollosProject/apollos-shovel/pull/1366",
         "repo": "apollos-shovel",
-        "merged_at": "2026-03-10T14:22:48Z"
+        "merged_at": "2026-03-10T14:22:48Z",
+        "additions": 6,
+        "deletions": 2,
+        "changed_files": 2
       },
       {
         "title": "feat: add grace window and in-flight classification for reconciliation",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2485",
         "repo": "apollos-cluster",
-        "merged_at": "2026-03-11T16:01:54Z"
+        "merged_at": "2026-03-11T16:01:54Z",
+        "additions": 316,
+        "deletions": 35,
+        "changed_files": 6
       },
       {
         "title": "feat: add in_flight column to finance_reconciliation_items",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2484",
         "repo": "apollos-cluster",
-        "merged_at": "2026-03-10T14:00:34Z"
+        "merged_at": "2026-03-10T14:00:34Z",
+        "additions": 21,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "refactor: move reconciliation utilities to util directory",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2483",
         "repo": "apollos-cluster",
-        "merged_at": "2026-03-10T04:17:38Z"
+        "merged_at": "2026-03-10T04:17:38Z",
+        "additions": 1503,
+        "deletions": 1133,
+        "changed_files": 25
       }
     ],
     "reviews": [
       {
         "title": "[Redirect] Fix Auth Handoff from App to Web in Staging",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2626"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2626",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-03-13T20:52:43Z",
+        "reviewed_at": "2026-03-13T21:17:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.41
       },
       {
         "title": "[APO-7341] Web Embed Alignment Issues",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2977"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2977",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-12T21:41:01Z",
+        "reviewed_at": "2026-03-13T15:28:54Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 17.8
       },
       {
         "title": "feat: add requiredRoles with nested requiredSkills to hasAccess",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2957"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2957",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-11T19:50:47Z",
+        "reviewed_at": "2026-03-11T21:46:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.92
       },
       {
         "title": "Add LaunchDarkly env vars to .env.example for local devs",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2956"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2956",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-11T20:50:36Z",
+        "reviewed_at": "2026-03-11T21:38:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.8
       },
       {
         "title": "[APO-7345] Giving form reload on crash",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2951"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2951",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-11T14:39:51Z",
+        "reviewed_at": "2026-03-11T15:05:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.43
       },
       {
         "title": "Remove resume recurring subscription endpoint",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2593"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2593",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-03-11T01:54:37Z",
+        "reviewed_at": "2026-03-11T14:01:41Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.12
       },
       {
         "title": "Remove resume recurring gift functionality",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2949"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2949",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-11T01:53:19Z",
+        "reviewed_at": "2026-03-11T14:06:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.22
       },
       {
         "title": "[APO-7548] Handle OTP errors in `web` project",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2942"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2942",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-11T17:25:20Z",
+        "reviewed_at": "2026-03-11T18:48:12Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 1.38
       },
       {
         "title": "APO-7508: Update and Reuse Payment/Setup Intents: App Clip Implementation",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6026"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6026",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-03-10T22:47:49Z",
+        "reviewed_at": "2026-03-11T21:37:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 22.83
       },
       {
         "title": "Support MP3 audio in web previews",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2936"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2936",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-10T19:39:55Z",
+        "reviewed_at": "2026-03-11T14:03:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 18.39
       },
       {
         "title": "SYM-22: Support MP3 audio in legacy web embeds",
-        "url": "https://github.com/ApollosProject/apollos-embeds/pull/266"
+        "url": "https://github.com/ApollosProject/apollos-embeds/pull/266",
+        "repo": "apollos-embeds",
+        "requested_at": "2026-03-10T19:28:40Z",
+        "reviewed_at": "2026-03-10T22:23:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.91
       },
       {
         "title": "[Finance] Charge source missing from metadata",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2583"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2583",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-03-13T17:13:15Z",
+        "reviewed_at": "2026-03-13T17:14:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.02
       },
       {
         "title": "Fix duplicate initial charge for subscriptions starting today",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2578"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2578",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-03-10T06:39:06Z",
+        "reviewed_at": "2026-03-10T20:56:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 14.28
       },
       {
         "title": "createOrUpdateGiveIntent mobile implementation",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6018"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6018",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-03-12T23:07:27Z",
+        "reviewed_at": "2026-03-13T01:33:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.43
       },
       {
         "title": "feat: migrate from createPaymentIntent to createOrUpdateGiveIntent for Web Giving",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2931"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2931",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-03-10T15:58:36Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Do not copy origin metadata when duplicating content items",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2930"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2930",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-09T19:57:07Z",
+        "reviewed_at": "2026-03-10T21:50:10Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 25.88
       },
       {
         "title": "Fix historical tap tag analytics queries",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2928"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2928",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-09T17:18:53Z",
+        "reviewed_at": "2026-03-10T21:45:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 28.44
       },
       {
         "title": "[APO-6911] [V2] Full phone validation on giving",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2926"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2926",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-09T13:21:09Z",
+        "reviewed_at": "2026-03-11T13:59:28Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 48.64
       },
       {
         "title": "[APO-6852] Respect previous set giving details",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2925"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2925",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-09T12:43:57Z",
+        "reviewed_at": "2026-03-10T21:47:08Z",
+        "review_state": "APPROVED",
+        "latency_hours": 33.05
       },
       {
         "title": "[APO-6849] [Web giving] Match app min/max values",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2923"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2923",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-07T12:10:51Z",
+        "reviewed_at": "2026-03-10T21:37:51Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 81.45
       },
       {
         "title": "Use env var for LaunchDarkly client side ID, instead of hard-coding",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2922"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2922",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-10T02:31:21Z",
+        "reviewed_at": "2026-03-10T22:04:12Z",
+        "review_state": "APPROVED",
+        "latency_hours": 19.55
       },
       {
         "title": "Add Docker support for admin app with GHCR publishing",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2908"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2908",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-04T20:59:38Z",
+        "reviewed_at": "2026-03-09T18:17:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 117.3
       },
       {
         "title": "feat: add grace window and in-flight classification for reconciliation",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2485"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2485",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-03-11T15:01:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "refactor: move reconciliation utilities to util directory",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2483"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2483",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-03-09T15:53:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       }
-    ]
+    ],
+    "open_prs": []
   },
   "check_ins": [
     {

@@ -21,7 +21,11 @@
       "apollos-cluster",
       "apollos-platforms",
       "apollos-shovel"
-    ]
+    ],
+    "lines_added": 518,
+    "lines_deleted": 0,
+    "files_changed": 9,
+    "median_review_latency_hours": 67.13
   },
   "linear": {
     "completed_issues": [
@@ -166,13 +170,19 @@
         "title": "feat: add source of truth columns to charges",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3241",
         "repo": "apollos-cluster",
-        "merged_at": "2026-06-15T20:25:05Z"
+        "merged_at": "2026-06-15T20:25:05Z",
+        "additions": 191,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "feat: new filters SQL for transactions",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3565",
         "repo": "apollos-admin",
-        "merged_at": "2026-06-19T15:30:50Z"
+        "merged_at": "2026-06-19T15:30:50Z",
+        "additions": 327,
+        "deletions": 0,
+        "changed_files": 8
       }
     ],
     "open_prs": [
@@ -222,27 +232,57 @@
     "reviews": [
       {
         "title": "migrate Switch from src/ui-kit to new-src",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6591"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6591",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-06-17T15:18:20Z",
+        "reviewed_at": "2026-06-19T20:30:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 53.2
       },
       {
         "title": "fix(algolia-pages): guard against large-platform URLs hanging the scrape DAG",
-        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1560"
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1560",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-06-17T00:13:20Z",
+        "reviewed_at": "2026-06-19T19:58:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 67.76
       },
       {
         "title": "fix(features): drop non-prayer algorithm results from prayer list features (APO-9654)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3256"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3256",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-16T17:38:52Z",
+        "reviewed_at": "2026-06-19T19:45:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 74.11
       },
       {
         "title": "fix: remap invalid studioc demo seed apollos_type values (APO-9642)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3254"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3254",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-16T18:33:04Z",
+        "reviewed_at": "2026-06-19T19:50:52Z",
+        "review_state": "APPROVED",
+        "latency_hours": 73.3
       },
       {
         "title": "fix(mobile): dedupe Daily Habits completion events across hook instances (APO-9485)",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6559"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6559",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-06-17T15:02:12Z",
+        "reviewed_at": "2026-06-19T20:12:26Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 53.17
       },
       {
         "title": "Stabilize chat detail list render props (APO-9102)",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6534"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6534",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-06-17T01:37:53Z",
+        "reviewed_at": "2026-06-19T20:07:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 66.49
       }
     ]
   },

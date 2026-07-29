@@ -7,12 +7,23 @@ import { Suspense } from "react";
 import { CalendarBlank } from "phosphor-react";
 import { AnnualChartsContent } from "./AnnualChartsContent";
 import type { AnnualData } from "../../lib/annual-data";
+import { formatNumber } from "~/lib/utils";
 
-function MetricCard({ label, value }: { label: string; value: number }) {
+function MetricCard({
+  label,
+  value,
+}: {
+  label: string;
+  value: number | string;
+}) {
+  const display =
+    typeof value === "number" ? formatNumber(value) : value;
   return (
     <div className="bg-surface rounded-xl border border-(--color-border) p-4">
       <p className="text-xs text-text-muted">{label}</p>
-      <p className="text-xl font-semibold text-primary-500">{value}</p>
+      <p className="text-xl font-semibold text-primary-500 tabular-nums">
+        {display}
+      </p>
     </div>
   );
 }
@@ -35,6 +46,8 @@ function CompareTotals({
     { key: "total_pr_reviews", label: "PR reviews" },
     { key: "total_pr_comments", label: "PR comments" },
     { key: "total_commits_pushed", label: "Commits pushed" },
+    { key: "total_lines_added", label: "Lines added" },
+    { key: "total_lines_deleted", label: "Lines deleted" },
     { key: "total_linear_completed", label: "Linear completed" },
     { key: "total_linear_worked_on", label: "Linear worked on" },
     { key: "total_linear_issues_created", label: "Linear issues created" },
@@ -54,10 +67,12 @@ function CompareTotals({
           >
             <p className="text-xs text-text-muted">{label}</p>
             <div className="flex items-baseline gap-2 flex-wrap">
-              <span className="text-xl font-semibold text-primary-500">
-                {a}
+              <span className="text-xl font-semibold text-primary-500 tabular-nums">
+                {formatNumber(a)}
               </span>
-              <span className="text-sm text-text-muted">vs {b}</span>
+              <span className="text-sm text-text-muted tabular-nums">
+                vs {formatNumber(b)}
+              </span>
               <span
                 className={`text-xs font-medium ${
                   isUp
@@ -154,7 +169,7 @@ export function AnnualChartsSection({
       {compareData ? (
         <CompareTotals primary={annualData} compare={compareData} />
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           <MetricCard label="PRs merged" value={annualData.total_prs_merged} />
           <MetricCard label="PR reviews" value={annualData.total_pr_reviews} />
           <MetricCard
@@ -164,6 +179,26 @@ export function AnnualChartsSection({
           <MetricCard
             label="Commits pushed"
             value={annualData.total_commits_pushed}
+          />
+          <MetricCard
+            label="Lines added"
+            value={annualData.total_lines_added}
+          />
+          <MetricCard
+            label="Lines deleted"
+            value={annualData.total_lines_deleted}
+          />
+          <MetricCard
+            label="Files changed"
+            value={annualData.total_files_changed}
+          />
+          <MetricCard
+            label="Avg review latency (h)"
+            value={
+              annualData.avg_review_latency_hours != null
+                ? annualData.avg_review_latency_hours
+                : "—"
+            }
           />
           <MetricCard
             label="Linear completed"
@@ -204,7 +239,9 @@ export function AnnualChartsSection({
             {annualData.topRepos.slice(0, 10).map(({ repo, prs }) => (
               <li key={repo} className="flex justify-between text-sm">
                 <span className="text-(--color-text)">{repo}</span>
-                <span className="text-text-muted">{prs}</span>
+                <span className="text-text-muted tabular-nums">
+                  {formatNumber(prs)}
+                </span>
               </li>
             ))}
           </ul>
@@ -219,8 +256,8 @@ export function AnnualChartsSection({
                 <span className="text-(--color-text) truncate max-w-[200px]">
                   {project}
                 </span>
-                <span className="text-text-muted shrink-0">
-                  {issues}
+                <span className="text-text-muted shrink-0 tabular-nums">
+                  {formatNumber(issues)}
                 </span>
               </li>
             ))}

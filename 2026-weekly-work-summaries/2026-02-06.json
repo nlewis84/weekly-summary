@@ -20,7 +20,11 @@
       "apollos-platforms",
       "git-for-sql"
     ],
-    "linear_issues_created": 7
+    "linear_issues_created": 7,
+    "lines_added": 2979,
+    "lines_deleted": 628,
+    "files_changed": 48,
+    "median_review_latency_hours": 2
   },
   "linear": {
     "completed_issues": [
@@ -204,133 +208,258 @@
         "title": "test: add tests for updateAlgorithmAndFeatureState function",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2800",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-05T22:23:15Z"
+        "merged_at": "2026-02-05T22:23:15Z",
+        "additions": 538,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "feat: handle content_completed conflicts during user profile merges",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2799",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-05T16:00:31Z"
+        "merged_at": "2026-02-05T16:00:31Z",
+        "additions": 293,
+        "deletions": 2,
+        "changed_files": 2
       },
       {
         "title": "fix: update default Apollos web URL to apollos.com",
         "url": "https://github.com/ApollosProject/apollos-platforms/pull/5932",
         "repo": "apollos-platforms",
-        "merged_at": "2026-02-05T20:19:23Z"
+        "merged_at": "2026-02-05T20:19:23Z",
+        "additions": 3,
+        "deletions": 3,
+        "changed_files": 2
       },
       {
         "title": "fix: no double encoding of redirect URL in GivingScreen",
         "url": "https://github.com/ApollosProject/apollos-platforms/pull/5927",
         "repo": "apollos-platforms",
-        "merged_at": "2026-02-03T17:24:14Z"
+        "merged_at": "2026-02-03T17:24:14Z",
+        "additions": 1,
+        "deletions": 9,
+        "changed_files": 1
       },
       {
         "title": "feat: add ability to move Apollos data between user profiles",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2779",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-04T23:21:06Z"
+        "merged_at": "2026-02-04T23:21:06Z",
+        "additions": 368,
+        "deletions": 15,
+        "changed_files": 5
       },
       {
         "title": "fix: replace with cloudinary url with s3 in seeds/tests",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2425",
         "repo": "apollos-cluster",
-        "merged_at": "2026-02-04T19:57:35Z"
+        "merged_at": "2026-02-04T19:57:35Z",
+        "additions": 98,
+        "deletions": 97,
+        "changed_files": 13
       },
       {
         "title": "feat: activate inactive global profile when church user logs in",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2418",
         "repo": "apollos-cluster",
-        "merged_at": "2026-02-05T15:12:47Z"
+        "merged_at": "2026-02-05T15:12:47Z",
+        "additions": 81,
+        "deletions": 0,
+        "changed_files": 3
       },
       {
         "title": "refactor: new auth flow",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2718",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-05T19:49:27Z"
+        "merged_at": "2026-02-05T19:49:27Z",
+        "additions": 1597,
+        "deletions": 502,
+        "changed_files": 21
       }
     ],
     "reviews": [
       {
         "title": "Fix search state not preserved on back navigation",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2802"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2802",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-05T19:19:40Z",
+        "reviewed_at": "2026-02-05T19:27:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.14
       },
       {
         "title": "feat: add schema discovery for person data migration conflicts",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2801"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2801",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-02-05T17:08:58Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "feat: handle content_completed conflicts during user profile merges",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2799"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2799",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-02-05T15:28:31Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "support jsonb values in query results column",
-        "url": "https://github.com/ApollosProject/git-for-sql/pull/6"
+        "url": "https://github.com/ApollosProject/git-for-sql/pull/6",
+        "repo": "git-for-sql",
+        "requested_at": "2026-02-04T15:39:59Z",
+        "reviewed_at": "2026-02-04T15:48:21Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.14
       },
       {
         "title": "Remove Cursor note from AGENTS.md",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2781"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2781",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-03T00:42:45Z",
+        "reviewed_at": "2026-02-03T16:56:54Z",
+        "review_state": "APPROVED",
+        "latency_hours": 16.24
       },
       {
         "title": "Fix static link image updates in feed editor",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2780"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2780",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-02T23:58:50Z",
+        "reviewed_at": "2026-02-05T15:47:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 63.81
       },
       {
         "title": "feat: add ability to move Apollos data between user profiles",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2779"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2779",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-02-03T16:58:18Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "fix: replace with cloudinary url with s3 in seeds/tests",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2425"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2425",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-02-02T18:17:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Fix unhandled rejections in ConnectButtonFeature",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2769"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2769",
+        "repo": "apollos-admin",
+        "requested_at": "2026-01-30T20:22:35Z",
+        "reviewed_at": "2026-02-02T16:15:50Z",
+        "review_state": "APPROVED",
+        "latency_hours": 67.89
       },
       {
         "title": "Bump Vite 5.x to patched version",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2763"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2763",
+        "repo": "apollos-admin",
+        "requested_at": "2026-01-30T03:29:57Z",
+        "reviewed_at": "2026-02-02T16:13:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 84.72
       },
       {
         "title": "chore: optimize payment route by utilizing user data from root loader",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "Inline Iframe Embed",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2757"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2757",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-02T14:54:36Z",
+        "reviewed_at": "2026-02-02T16:56:51Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.04
       },
       {
         "title": "feat(web): add back and fullscreen to modal",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2756"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2756",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-02T14:50:19Z",
+        "reviewed_at": "2026-02-02T16:50:32Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2
       },
       {
         "title": "feat(web-embeds-v2): add embed context detection with postMessage handshake",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2737"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2737",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-02-02T16:38:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
       },
       {
         "title": "feat(web-embeds-v2): add theme mode support with light/dark/auto options",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2736"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2736",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-02T14:50:02Z",
+        "reviewed_at": "2026-02-02T16:33:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.72
       },
       {
         "title": "Implement tailwind preset",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2735"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2735",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-02T14:49:40Z",
+        "reviewed_at": "2026-02-02T16:30:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.68
       },
       {
         "title": "Initialize web-embeds-v2 project with project scaffolding",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2732"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2732",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-02T14:49:51Z",
+        "reviewed_at": "2026-02-02T16:24:46Z",
+        "review_state": "DISMISSED",
+        "latency_hours": 1.58
       },
       {
         "title": "Web Embeds V2 PRD",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2731"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2731",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "refactor: new auth flow",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2718"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2718",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "Migration Assistant Admin UI",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2667"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2667",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       }
-    ]
+    ],
+    "open_prs": []
   },
   "check_ins": [
     {

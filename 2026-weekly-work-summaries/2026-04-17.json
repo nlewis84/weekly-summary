@@ -19,7 +19,11 @@
     "repos": [
       "apollos-admin",
       "apollos-cluster"
-    ]
+    ],
+    "lines_added": 1905,
+    "lines_deleted": 559,
+    "files_changed": 51,
+    "median_review_latency_hours": 5.69
   },
   "linear": {
     "completed_issues": [
@@ -296,109 +300,163 @@
         "title": "fix: pagination controls to Transactions should be outside the parent div",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3208",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-17T14:48:30Z"
+        "merged_at": "2026-04-17T14:48:30Z",
+        "additions": 186,
+        "deletions": 109,
+        "changed_files": 4
       },
       {
         "title": "fix: redirect non-full-platform churches before auth check on payment page",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3203",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-16T20:05:07Z"
+        "merged_at": "2026-04-16T20:05:07Z",
+        "additions": 92,
+        "deletions": 1,
+        "changed_files": 2
       },
       {
         "title": "feat: add stripe_platform_id column to customers table",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2833",
         "repo": "apollos-cluster",
-        "merged_at": "2026-04-16T15:30:19Z"
+        "merged_at": "2026-04-16T15:30:19Z",
+        "additions": 14,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "fix: skip spawning report generation when one is already processing",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2828",
         "repo": "apollos-cluster",
-        "merged_at": "2026-04-15T20:04:52Z"
+        "merged_at": "2026-04-15T20:04:52Z",
+        "additions": 53,
+        "deletions": 0,
+        "changed_files": 2
       },
       {
         "title": "fix: poll cluster status endpoint instead of re-firing export",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3189",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-15T20:05:03Z"
+        "merged_at": "2026-04-15T20:05:03Z",
+        "additions": 377,
+        "deletions": 6,
+        "changed_files": 6
       },
       {
         "title": "chore: move settings cog inline with header and hamburger on mobile",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3186",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-15T16:17:42Z"
+        "merged_at": "2026-04-15T16:17:42Z",
+        "additions": 133,
+        "deletions": 15,
+        "changed_files": 3
       },
       {
         "title": "chore: simplify admin e2e workflow and reduce permissions",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3176",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-14T21:44:00Z"
+        "merged_at": "2026-04-14T21:44:00Z",
+        "additions": 31,
+        "deletions": 283,
+        "changed_files": 1
       },
       {
         "title": "fix: make sure confirmation dialog get top billing",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3175",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-14T19:29:59Z"
+        "merged_at": "2026-04-14T19:29:59Z",
+        "additions": 1,
+        "deletions": 1,
+        "changed_files": 1
       },
       {
         "title": "chore: add tests for DatePickerInput component",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3174",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-14T21:35:23Z"
+        "merged_at": "2026-04-14T21:35:23Z",
+        "additions": 47,
+        "deletions": 0,
+        "changed_files": 2
       },
       {
         "title": "fix: move handleFieldChange from onChange to onBlur in DatePickerInput",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3172",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-14T22:08:16Z"
+        "merged_at": "2026-04-14T22:08:16Z",
+        "additions": 51,
+        "deletions": 4,
+        "changed_files": 3
       },
       {
         "title": "chore: remove whitespace after 2 Samuel",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3169",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-14T16:57:55Z"
+        "merged_at": "2026-04-14T16:57:55Z",
+        "additions": 1,
+        "deletions": 1,
+        "changed_files": 1
       },
       {
         "title": "feat: zero fees in payouts report when church is gross-settled",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2803",
         "repo": "apollos-cluster",
-        "merged_at": "2026-04-15T16:09:40Z"
+        "merged_at": "2026-04-15T16:09:40Z",
+        "additions": 40,
+        "deletions": 3,
+        "changed_files": 2
       },
       {
         "title": "feat: zero fees in finance reports when church is gross-settled",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2802",
         "repo": "apollos-cluster",
-        "merged_at": "2026-04-15T16:09:09Z"
+        "merged_at": "2026-04-15T16:09:09Z",
+        "additions": 122,
+        "deletions": 4,
+        "changed_files": 2
       },
       {
         "title": "chore: fix Sheet footer and add zindex fix",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3160",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-13T22:04:12Z"
+        "merged_at": "2026-04-13T22:04:12Z",
+        "additions": 303,
+        "deletions": 64,
+        "changed_files": 11
       },
       {
         "title": "fix: update TransactionTable menu to open in a portal",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3159",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-13T17:00:08Z"
+        "merged_at": "2026-04-13T17:00:08Z",
+        "additions": 51,
+        "deletions": 57,
+        "changed_files": 1
       },
       {
         "title": "feat: replace application fee with Stripe balance transaction data for accurate fee display",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3158",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-13T22:07:41Z"
+        "merged_at": "2026-04-13T22:07:41Z",
+        "additions": 253,
+        "deletions": 6,
+        "changed_files": 5
       },
       {
         "title": "chore: use Stripe Connect payment details modal on transaction table",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3156",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-13T19:35:41Z"
+        "merged_at": "2026-04-13T19:35:41Z",
+        "additions": 128,
+        "deletions": 5,
+        "changed_files": 2
       },
       {
         "title": "docs: add local Stripe webhook setup instructions",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3140",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-13T14:05:56Z"
+        "merged_at": "2026-04-13T14:05:56Z",
+        "additions": 22,
+        "deletions": 0,
+        "changed_files": 2
       }
     ],
     "open_prs": [
@@ -424,103 +482,228 @@
     "reviews": [
       {
         "title": "feat: default status filter on recurring tab ",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3209"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3209",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-17T05:16:50Z",
+        "reviewed_at": "2026-04-17T13:26:57Z",
+        "review_state": "APPROVED",
+        "latency_hours": 8.17
       },
       {
         "title": "[APO-8156] Allow Administrators to Edit a Donor's Recurring Gift",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2855"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2855",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-16T20:43:45Z",
+        "reviewed_at": "2026-04-17T13:22:33Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 16.65
       },
       {
         "title": "fix: scope Stripe customers by platform account ID instead of church slug",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2853"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2853",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-04-17T13:54:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "feat: add subscription frequency/amount/date filters",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2847"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2847",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-17T20:31:52Z",
+        "reviewed_at": "2026-04-17T20:53:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.36
       },
       {
         "title": "feat: Subscription fund/campus/search Filters",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2846"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2846",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-17T00:18:56Z",
+        "reviewed_at": "2026-04-17T13:48:59Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 13.5
       },
       {
         "title": "feat: add core subscription report data generation",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2845"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2845",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-16T23:07:31Z",
+        "reviewed_at": "2026-04-17T13:43:04Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 14.59
       },
       {
         "title": "feat: add subscription Stripe search query builder and fetcher",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2844"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2844",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-16T18:14:18Z",
+        "reviewed_at": "2026-04-16T19:19:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.09
       },
       {
         "title": "refactor: Abstract TransactionExportButton to generic ExportButton  - RT2",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3194"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3194",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-16T13:18:37Z",
+        "reviewed_at": "2026-04-16T16:13:08Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.91
       },
       {
         "title": "utility: Frequency Label -> Interval Object  - RT1",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3193"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3193",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-16T13:18:18Z",
+        "reviewed_at": "2026-04-16T16:30:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.2
       },
       {
         "title": "feat: add stripe_platform_id column to customers table",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2833"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2833",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-04-16T00:49:38Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "feat: expose givingMinimumAllowedCents on Church type",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2822"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2822",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-15T03:31:05Z",
+        "reviewed_at": "2026-04-15T14:41:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 11.17
       },
       {
         "title": "fix: improve giving onboarding page mobile responsiveness",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3182"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3182",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-15T04:01:54Z",
+        "reviewed_at": "2026-04-15T14:53:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 10.86
       },
       {
         "title": "Add configurable minimum payment field in Giving Settings",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3181"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3181",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-15T03:18:51Z",
+        "reviewed_at": "2026-04-15T14:51:51Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 11.55
       },
       {
         "title": "APO-8062: Move funds and payouts pagination outside table cards",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3179"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3179",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-14T21:21:01Z",
+        "reviewed_at": "2026-04-14T21:34:44Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.23
       },
       {
         "title": "Ensure inline embed iframes delegate payment permission (allow=\"payment *\")",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3178"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3178",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-14T20:51:00Z",
+        "reviewed_at": "2026-04-15T14:31:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 17.68
       },
       {
         "title": "[APO-8194 ]Do not show incomplete_expired subscriptions in the Admin",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3173"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3173",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-14T18:18:02Z",
+        "reviewed_at": "2026-04-14T18:50:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.54
       },
       {
         "title": "Remove admin preview health check and rename Playwright job to admin",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3171"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3171",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-14T18:04:50Z",
+        "reviewed_at": "2026-04-14T19:04:10Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.99
       },
       {
         "title": "Add Playwright coverage for web giving history routes",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3170"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3170",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-14T17:34:02Z",
+        "reviewed_at": "2026-04-14T18:48:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.24
       },
       {
         "title": "[APO-8074] Add Most Recent Transaction Date to Recurring Gift Detail",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3167"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3167",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-13T22:31:10Z",
+        "reviewed_at": "2026-04-14T14:03:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 15.53
       },
       {
         "title": "[APO-7962] Add Cancelled Date to Recurring Gift Detail for Cancelled Gifts",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3166"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3166",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-13T22:17:09Z",
+        "reviewed_at": "2026-04-14T14:02:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 15.75
       },
       {
         "title": "fix: include localizations when updating app clip header image [APO-8293]",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3155"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3155",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-13T13:33:24Z",
+        "reviewed_at": "2026-04-13T13:59:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.44
       },
       {
         "title": "feat: Filter and Paginate Transaction Report Data",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2782"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2782",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-15T16:44:16Z",
+        "reviewed_at": "2026-04-15T18:35:53Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 1.86
       },
       {
         "title": "feat: Transaction Tab -> Cluster Stripe Data",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3145"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3145",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-04-15T18:28:17Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": null
       },
       {
         "title": "refactor: Giving Filters And Search",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3144"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3144",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-10T08:31:39Z",
+        "reviewed_at": "2026-04-12T13:18:18Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 52.78
       },
       {
         "title": "Lock down Communities group sync controls for Go customers",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3125"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3125",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-14T19:07:43Z",
+        "reviewed_at": "2026-04-14T19:26:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.31
       }
     ]
   },

@@ -21,7 +21,11 @@
       "apollos-cluster",
       "apollos-shovel",
       "git-for-sql"
-    ]
+    ],
+    "lines_added": 965,
+    "lines_deleted": 289,
+    "files_changed": 39,
+    "median_review_latency_hours": 1.13
   },
   "linear": {
     "completed_issues": [
@@ -293,73 +297,109 @@
         "title": "feat: feature flagged email for manual ach verification",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3059",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-26T19:36:01Z"
+        "merged_at": "2026-03-26T19:36:01Z",
+        "additions": 518,
+        "deletions": 0,
+        "changed_files": 4
       },
       {
         "title": "feat: add Vimeo support to media URL validation",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3057",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-26T14:28:08Z"
+        "merged_at": "2026-03-26T14:28:08Z",
+        "additions": 17,
+        "deletions": 9,
+        "changed_files": 3
       },
       {
         "title": "chore: set dark color scheme on canvas select",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3053",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-25T20:16:36Z"
+        "merged_at": "2026-03-25T20:16:36Z",
+        "additions": 22,
+        "deletions": 0,
+        "changed_files": 2
       },
       {
         "title": "refactor: adjust to utilize people_merge_records for suggested_follows",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2716",
         "repo": "apollos-cluster",
-        "merged_at": "2026-03-25T21:07:25Z"
+        "merged_at": "2026-03-25T21:07:25Z",
+        "additions": 75,
+        "deletions": 17,
+        "changed_files": 1
       },
       {
         "title": "feat: pass zero application fee to Rock when STRIPE.FEE_SETTLEMENT is gross",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2693",
         "repo": "apollos-cluster",
-        "merged_at": "2026-03-24T19:19:19Z"
+        "merged_at": "2026-03-24T19:19:19Z",
+        "additions": 83,
+        "deletions": 2,
+        "changed_files": 2
       },
       {
         "title": "chore: use hook to target styles better",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3041",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-24T14:18:47Z"
+        "merged_at": "2026-03-24T14:18:47Z",
+        "additions": 5,
+        "deletions": 3,
+        "changed_files": 2
       },
       {
         "title": "feat: add focus ring styles to buttons and links",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3038",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-24T14:03:10Z"
+        "merged_at": "2026-03-24T14:03:10Z",
+        "additions": 120,
+        "deletions": 136,
+        "changed_files": 14
       },
       {
         "title": "chore: parallelize some stripe api calls",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2692",
         "repo": "apollos-cluster",
-        "merged_at": "2026-03-23T23:26:05Z"
+        "merged_at": "2026-03-23T23:26:05Z",
+        "additions": 31,
+        "deletions": 24,
+        "changed_files": 1
       },
       {
         "title": "chore: always show cents on giving history",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3035",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-23T14:20:48Z"
+        "merged_at": "2026-03-23T14:20:48Z",
+        "additions": 18,
+        "deletions": 30,
+        "changed_files": 4
       },
       {
         "title": "fix: strip non-digits from phone field in payment form",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3033",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-23T14:03:42Z"
+        "merged_at": "2026-03-23T14:03:42Z",
+        "additions": 1,
+        "deletions": 1,
+        "changed_files": 1
       },
       {
         "title": "refactor: redesign recurring gift confirmation email template to match Donation Receipt email template",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3023",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-23T14:03:26Z"
+        "merged_at": "2026-03-23T14:03:26Z",
+        "additions": 65,
+        "deletions": 65,
+        "changed_files": 1
       },
       {
         "title": "Revert \"Revert \"chore: add source \"WEB\" to createOrUpdateGiveIntent calls\"\"",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3014",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-23T15:51:45Z"
+        "merged_at": "2026-03-23T15:51:45Z",
+        "additions": 10,
+        "deletions": 2,
+        "changed_files": 4
       }
     ],
     "open_prs": [
@@ -403,55 +443,120 @@
     "reviews": [
       {
         "title": "Send recurring cancellation emails from admin Stripe webhooks",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3062"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3062",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-27T17:01:55Z",
+        "reviewed_at": "2026-03-27T17:43:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.7
       },
       {
         "title": "fix: improve press and hover effects on recurring charges and charges",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3058"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3058",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-26T16:29:11Z",
+        "reviewed_at": "2026-03-26T16:46:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.29
       },
       {
         "title": "temporarily disable editing payment method on recurring giving",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3055"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3055",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-26T13:23:14Z",
+        "reviewed_at": "2026-03-26T13:40:36Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.29
       },
       {
         "title": "Drop finance reconciliation tables via new migration",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2700"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2700",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-03-24T19:09:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
       },
       {
         "title": "Revert financial reconciliation system with tests",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2699"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2699",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-03-24T19:01:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
       },
       {
         "title": "Revert reconciliation job queue and cursor tracking",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2698"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2698",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-03-24T18:59:12Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
       },
       {
         "title": "Revert reconciliation amount normalization and canonical key",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2697"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2697",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-03-24T18:58:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
       },
       {
         "title": "Revert move reconciliation utilities to util directory",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2696"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2696",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-03-24T18:58:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
       },
       {
         "title": "Remove in_flight column from finance_reconciliation_items via new migration",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2695"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2695",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-03-24T18:56:20Z",
+        "review_state": "DISMISSED",
+        "latency_hours": null
       },
       {
         "title": "Revert grace window and in-flight classification",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2694"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2694",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-03-24T16:04:10Z",
+        "reviewed_at": "2026-03-24T18:55:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.86
       },
       {
         "title": "chore: always show cents on giving history",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3035"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3035",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-03-23T13:58:49Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Add SQL migration to clean stale IDs from SUGGESTED_FOLLOWS config",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2680"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2680",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-03-24T14:26:24Z",
+        "reviewed_at": "2026-03-25T14:27:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 24.03
       },
       {
         "title": "Limit root loader data to prevent leaking store credentials and TIPTAP tokens",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2980"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2980",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-23T14:23:12Z",
+        "reviewed_at": "2026-03-23T15:56:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.55
       }
     ]
   },

@@ -83,6 +83,7 @@ const DEFAULT_STATS: Stats = {
   linear_completed: 0,
   linear_worked_on: 0,
   linear_issues_created: 0,
+  linear_comments: 0,
   repos: ["apollos-admin"],
 };
 
@@ -125,6 +126,7 @@ export function parseTranscriptToPayload(content: string): Payload | null {
     },
     github: {
       merged_prs: [],
+      open_prs: [],
       reviews: [],
     },
     check_ins: [{ day: "Week in review", content: narrative }],

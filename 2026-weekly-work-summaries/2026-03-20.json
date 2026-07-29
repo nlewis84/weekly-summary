@@ -19,7 +19,11 @@
       "apollos-admin",
       "apollos-cluster",
       "apollos-platforms"
-    ]
+    ],
+    "lines_added": 1039,
+    "lines_deleted": 113,
+    "files_changed": 33,
+    "median_review_latency_hours": 1.53
   },
   "linear": {
     "completed_issues": [
@@ -163,49 +167,73 @@
         "title": "chore: mock imports and no dynamic import for handle/give/payment test file",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3025",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-19T18:49:19Z"
+        "merged_at": "2026-03-19T18:49:19Z",
+        "additions": 43,
+        "deletions": 7,
+        "changed_files": 1
       },
       {
         "title": "feat: add environment variable overrides for redirect service and web",
         "url": "https://github.com/ApollosProject/apollos-platforms/pull/6045",
         "repo": "apollos-platforms",
-        "merged_at": "2026-03-19T14:44:51Z"
+        "merged_at": "2026-03-19T14:44:51Z",
+        "additions": 13,
+        "deletions": 3,
+        "changed_files": 3
       },
       {
         "title": "chore: improved performance on the redirect from web to /give/payment",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3018",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-19T02:24:44Z"
+        "merged_at": "2026-03-19T02:24:44Z",
+        "additions": 81,
+        "deletions": 45,
+        "changed_files": 3
       },
       {
         "title": "feat: user can save name, phone, email in /give/payment",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3005",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-20T14:32:45Z"
+        "merged_at": "2026-03-20T14:32:45Z",
+        "additions": 200,
+        "deletions": 12,
+        "changed_files": 9
       },
       {
         "title": "chore: remove old cluster code preventing updating phone/email",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2662",
         "repo": "apollos-cluster",
-        "merged_at": "2026-03-19T04:08:54Z"
+        "merged_at": "2026-03-19T04:08:54Z",
+        "additions": 0,
+        "deletions": 4,
+        "changed_files": 1
       },
       {
         "title": "fix: if signing up with existing, do not send to match",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3001",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-18T21:09:53Z"
+        "merged_at": "2026-03-18T21:09:53Z",
+        "additions": 94,
+        "deletions": 10,
+        "changed_files": 4
       },
       {
         "title": "chore: add source \"WEB\" to createOrUpdateGiveIntent calls",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2981",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-16T20:53:07Z"
+        "merged_at": "2026-03-16T20:53:07Z",
+        "additions": 11,
+        "deletions": 2,
+        "changed_files": 5
       },
       {
         "title": "feat: gate /give redirect for non-full-platform on LD flag",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2910",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-20T14:00:24Z"
+        "merged_at": "2026-03-20T14:00:24Z",
+        "additions": 597,
+        "deletions": 30,
+        "changed_files": 7
       }
     ],
     "open_prs": [
@@ -237,75 +265,165 @@
     "reviews": [
       {
         "title": "[APO-7893] Logout on `refreshSessionQuery` error.",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3034"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3034",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-20T17:34:23Z",
+        "reviewed_at": "2026-03-20T17:36:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.04
       },
       {
         "title": "[APO-7887] Campus and Fund modals now shrink.",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3032"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3032",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-20T16:31:44Z",
+        "reviewed_at": "2026-03-20T17:04:47Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.55
       },
       {
         "title": "Handle local Astro auth token flow",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3031"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3031",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-20T03:10:35Z",
+        "reviewed_at": "2026-03-20T15:10:54Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.01
       },
       {
         "title": "Fix pagination inconsistency and add archived migration filters",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3028"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3028",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-19T21:07:58Z",
+        "reviewed_at": "2026-03-20T15:53:09Z",
+        "review_state": "APPROVED",
+        "latency_hours": 18.75
       },
       {
         "title": "Synchronize migration panel and filter dropdown state",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3026"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3026",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-19T20:21:35Z",
+        "reviewed_at": "2026-03-20T15:44:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 19.39
       },
       {
         "title": "[APO-6722] Auto-focus email field if email is invalid.",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3024"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3024",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-19T17:43:03Z",
+        "reviewed_at": "2026-03-20T15:13:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 21.51
       },
       {
         "title": "Improved image deploy pipeline",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3020"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3020",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-19T13:34:14Z",
+        "reviewed_at": "2026-03-19T14:08:46Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.58
       },
       {
         "title": "Tag images and trigger workflow on deploy",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3019"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3019",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-18T20:27:23Z",
+        "reviewed_at": "2026-03-18T20:48:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.35
       },
       {
         "title": "[Tap-Linking] Get working in staging",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3016"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3016",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-18T17:28:31Z",
+        "reviewed_at": "2026-03-18T20:38:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.16
       },
       {
         "title": "[APO-7537] [Web] Add church favicon",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3013"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3013",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-18T13:35:32Z",
+        "reviewed_at": "2026-03-18T14:55:16Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 1.33
       },
       {
         "title": "Fix recurring gifts pagination layout",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3010"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3010",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-18T19:13:03Z",
+        "reviewed_at": "2026-03-18T20:56:40Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.73
       },
       {
         "title": "feat: user can save name, phone, email in /give/payment",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3005"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3005",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-03-19T18:04:23Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "[APO-7806] Phone Number not deleting last number FIX",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3000"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3000",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-17T17:31:43Z",
+        "reviewed_at": "2026-03-17T18:00:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.47
       },
       {
         "title": "feat: add search bars to Fund and Location filter dropdowns",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2998"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2998",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-17T16:49:50Z",
+        "reviewed_at": "2026-03-17T17:22:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.55
       },
       {
         "title": "[APO-7545] Add embedPreferClose handle to show close button instead of back button",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2992"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2992",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-17T21:36:42Z",
+        "reviewed_at": "2026-03-18T15:23:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 17.78
       },
       {
         "title": "[APO-7719] [iOS Chrome] Scroll dimensions fix.",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2991"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2991",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-16T10:30:15Z",
+        "reviewed_at": "2026-03-17T14:44:38Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 28.24
       },
       {
         "title": "feat: gate /give redirect for non-full-platform on LD flag",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2910"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2910",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-03-19T17:56:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Disable Amplitude for web + web-embeds",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2814"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2814",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-18T14:15:41Z",
+        "reviewed_at": "2026-03-18T15:21:01Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.09
       }
     ]
   },

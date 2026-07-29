@@ -7,6 +7,7 @@ import { listWeeklySummaries } from "../../lib/github-fetch";
 import { ArrowLeft, CaretUp, CaretDown, Minus } from "phosphor-react";
 import { ErrorBanner } from "../components/ErrorBanner";
 import type { Payload } from "../../lib/types";
+import { formatNumber, formatSignedNumber } from "~/lib/utils";
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const url = new URL(request.url);
@@ -174,14 +175,20 @@ export default function HistoryCompare() {
                   return (
                     <tr key={key} className="border-b border-(--color-border) last:border-0">
                       <td className="py-3 px-4 text-text-muted">{METRIC_LABELS[key]}</td>
-                      <td className="py-3 px-4 text-right font-medium text-(--color-text)">{v1}</td>
-                      <td className="py-3 px-4 text-right font-medium text-(--color-text)">{v2}</td>
+                      <td className="py-3 px-4 text-right font-medium text-(--color-text) tabular-nums">
+                        {formatNumber(v1)}
+                      </td>
+                      <td className="py-3 px-4 text-right font-medium text-(--color-text) tabular-nums">
+                        {formatNumber(v2)}
+                      </td>
                       <td className="py-3 px-4 text-right">
                         <span className="inline-flex items-center gap-1">
                           <DeltaBadge delta={delta} />
                           {delta !== 0 && (
-                            <span className={delta > 0 ? "text-emerald-600 dark:text-emerald-400" : "text-amber-600 dark:text-amber-400"}>
-                              {delta > 0 ? `+${delta}` : delta}
+                            <span
+                              className={`tabular-nums ${delta > 0 ? "text-emerald-600 dark:text-emerald-400" : "text-amber-600 dark:text-amber-400"}`}
+                            >
+                              {formatSignedNumber(delta)}
                             </span>
                           )}
                         </span>

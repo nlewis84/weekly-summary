@@ -12,6 +12,8 @@ export function buildMarkdownSummary(payload: Payload): string {
   if (meta.source_of_truth) md += `## Source of truth\n\n${meta.source_of_truth}\n\n`;
   md += `## Stats\n\n`;
   md += `- PRs merged: ${stats.prs_merged} | Total PRs: ${stats.prs_total} | Reviews: ${stats.pr_reviews} | Comments: ${stats.pr_comments} | Commits: ${stats.commits_pushed ?? 0}\n`;
+  md += `- Code volume: +${stats.lines_added ?? 0} / -${stats.lines_deleted ?? 0} | Files changed: ${stats.files_changed ?? 0}\n`;
+  md += `- Median review latency: ${stats.median_review_latency_hours != null ? `${stats.median_review_latency_hours}h` : "—"}\n`;
   md += `- Linear completed: ${stats.linear_completed} | Worked on: ${stats.linear_worked_on} | Created: ${stats.linear_issues_created ?? 0} | Replies: ${stats.linear_comments ?? 0}\n`;
   md += `- Repos: ${stats.repos.join(", ") || "—"}\n\n`;
   md += `## Linear — Completed\n\n`;
@@ -43,7 +45,17 @@ export function buildMarkdownSummary(payload: Payload): string {
   }
   md += `\n## GitHub — Merged PRs\n\n`;
   for (const pr of github.merged_prs) {
-    md += `- [${pr.title}](${pr.url}) — ${pr.repo ?? ""} ${pr.merged_at ? pr.merged_at.slice(0, 10) : ""}\n`;
+    const vol =
+      pr.additions != null || pr.deletions != null
+        ? ` (+${pr.additions ?? 0}/-${pr.deletions ?? 0})`
+        : "";
+    md += `- [${pr.title}](${pr.url}) — ${pr.repo ?? ""} ${pr.merged_at ? pr.merged_at.slice(0, 10) : ""}${vol}\n`;
+  }
+  md += `\n## GitHub — Reviews\n\n`;
+  for (const r of github.reviews ?? []) {
+    const latency =
+      r.latency_hours != null ? `${r.latency_hours}h` : "drive-by";
+    md += `- [${r.title}](${r.url})${r.repo ? ` — ${r.repo}` : ""} (${latency})\n`;
   }
   md += `\n## Check-ins\n\n`;
   for (const e of check_ins ?? []) {
@@ -79,7 +91,11 @@ export function buildBasecampSummary(payload: Payload): string {
     sections.push(
       buildSection(
         "PR reviews",
-        reviews.map((pr) => formatPrLine(pr.title, undefined, pr.url))
+        reviews.map((pr) => {
+          const base = formatPrLine(pr.title, pr.repo, pr.url);
+          if (pr.latency_hours != null) return `${base} (${pr.latency_hours}h)`;
+          return base;
+        })
       )
     );
   }

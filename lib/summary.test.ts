@@ -181,6 +181,10 @@ describe("runSummary", () => {
       linear_issues_created: expect.any(Number),
       linear_comments: expect.any(Number),
       repos: expect.any(Array),
+      lines_added: expect.any(Number),
+      lines_deleted: expect.any(Number),
+      files_changed: expect.any(Number),
+      median_review_latency_hours: null,
     });
     expect(result.terminalOutput).toBeDefined();
   });

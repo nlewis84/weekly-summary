@@ -22,7 +22,11 @@
       "apollos-code-reviewer",
       "apollos-platforms",
       "toolbox"
-    ]
+    ],
+    "lines_added": 4347,
+    "lines_deleted": 125,
+    "files_changed": 77,
+    "median_review_latency_hours": 16.64
   },
   "linear": {
     "completed_issues": [
@@ -223,73 +227,109 @@
         "title": "fix: price reviews per-model with cache tokens",
         "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/24",
         "repo": "apollos-code-reviewer",
-        "merged_at": "2026-06-26T19:52:37Z"
+        "merged_at": "2026-06-26T19:52:37Z",
+        "additions": 127,
+        "deletions": 7,
+        "changed_files": 5
       },
       {
         "title": "feat: land self-improving learnings loop on main (recovers stranded #20)",
         "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/23",
         "repo": "apollos-code-reviewer",
-        "merged_at": "2026-06-26T17:07:43Z"
+        "merged_at": "2026-06-26T17:07:43Z",
+        "additions": 1158,
+        "deletions": 22,
+        "changed_files": 18
       },
       {
         "title": "chore: promote 12 review learning(s)",
         "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/22",
         "repo": "apollos-code-reviewer",
-        "merged_at": "2026-06-26T17:02:06Z"
+        "merged_at": "2026-06-26T17:02:06Z",
+        "additions": 60,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "chore: promote 1 review learning(s)",
         "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/21",
         "repo": "apollos-code-reviewer",
-        "merged_at": "2026-06-26T17:01:37Z"
+        "merged_at": "2026-06-26T17:01:37Z",
+        "additions": 7,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "feat: self-improving learnings loop (#19)",
         "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/20",
         "repo": "apollos-code-reviewer",
-        "merged_at": "2026-06-26T16:58:31Z"
+        "merged_at": "2026-06-26T16:58:31Z",
+        "additions": 1156,
+        "deletions": 21,
+        "changed_files": 18
       },
       {
         "title": "fix: set default giving transactions date range to 7 days",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3669",
         "repo": "apollos-admin",
-        "merged_at": "2026-06-26T17:40:24Z"
+        "merged_at": "2026-06-26T17:40:24Z",
+        "additions": 3,
+        "deletions": 3,
+        "changed_files": 3
       },
       {
         "title": "fix: surface API-failure reviews instead of approving them (#18)",
         "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/19",
         "repo": "apollos-code-reviewer",
-        "merged_at": "2026-06-26T16:26:34Z"
+        "merged_at": "2026-06-26T16:26:34Z",
+        "additions": 238,
+        "deletions": 25,
+        "changed_files": 7
       },
       {
         "title": "feat: mapper to get data to charges",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3258",
         "repo": "apollos-cluster",
-        "merged_at": "2026-06-25T17:47:23Z"
+        "merged_at": "2026-06-25T17:47:23Z",
+        "additions": 358,
+        "deletions": 27,
+        "changed_files": 9
       },
       {
         "title": "feat: sequelize model updates for new charge columns",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3242",
         "repo": "apollos-cluster",
-        "merged_at": "2026-06-23T21:36:56Z"
+        "merged_at": "2026-06-23T21:36:56Z",
+        "additions": 25,
+        "deletions": 0,
+        "changed_files": 2
       },
       {
         "title": "feat: add stripe metadata backfill script",
         "url": "https://github.com/ApollosProject/toolbox/pull/29",
         "repo": "toolbox",
-        "merged_at": "2026-06-23T17:06:13Z"
+        "merged_at": "2026-06-23T17:06:13Z",
+        "additions": 492,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "feat: ui for recurring gift transactions",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3507",
         "repo": "apollos-admin",
-        "merged_at": "2026-06-25T16:39:15Z"
+        "merged_at": "2026-06-25T16:39:15Z",
+        "additions": 328,
+        "deletions": 20,
+        "changed_files": 7
       },
       {
         "title": "feat(giving): add subscription invoice status utils and API loader",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3504",
         "repo": "apollos-admin",
-        "merged_at": "2026-06-23T16:25:20Z"
+        "merged_at": "2026-06-23T16:25:20Z",
+        "additions": 395,
+        "deletions": 0,
+        "changed_files": 5
       }
     ],
     "open_prs": [
@@ -339,163 +379,363 @@
     "reviews": [
       {
         "title": "fix(stripe): sync transfer reversal amount for refund rows with no Refund object",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3415"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3415",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-26T17:36:53Z",
+        "reviewed_at": "2026-06-26T17:44:29Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.13
       },
       {
         "title": "[MP Giving] Scaffold finance/ministry-platform module (APO-8974)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3387"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3387",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-25T22:06:04Z",
+        "reviewed_at": "2026-06-26T13:42:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 15.61
       },
       {
         "title": "fix(ai): restore AI Creator generation under the React Router runtime",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3664"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3664",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-25T15:58:07Z",
+        "reviewed_at": "2026-06-25T16:00:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.03
       },
       {
         "title": "[codex] Fix giving dashboard deferred balances",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3663"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3663",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-25T16:15:56Z",
+        "reviewed_at": "2026-06-25T16:18:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.04
       },
       {
         "title": "docs(giving): Phase 1/2 plan — home Stripe customers at the global-profile level (APO-10053)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3381"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3381",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-24T22:28:12Z",
+        "reviewed_at": "2026-06-24T22:36:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.14
       },
       {
         "title": "fix(giving): reuse existing customer on multi-profile insert collision (APO-10053)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3380"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3380",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-24T21:33:11Z",
+        "reviewed_at": "2026-06-24T22:25:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.87
       },
       {
         "title": "Strip commas from prefilled amount on web give handoff (APO-10019)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3661"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3661",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-24T20:41:45Z",
+        "reviewed_at": "2026-06-24T20:42:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.01
       },
       {
         "title": "fix(stripe): use transfer reversal amount for disputed refunds",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3368"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3368",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-25T21:07:57Z",
+        "reviewed_at": "2026-06-25T22:26:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.3
       },
       {
         "title": "fix(giving): use handoff IDs and guard express-checkout prefetch (APO-10021)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3657"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3657",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-24T19:37:13Z",
+        "reviewed_at": "2026-06-24T20:01:42Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.41
       },
       {
         "title": "fix(giving): send receipt email for ACH one-time donations",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3653"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3653",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-24T12:50:28Z",
+        "reviewed_at": "2026-06-25T16:05:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 27.25
       },
       {
         "title": "fix(ci): pin Node version across Docker and CI (APO-10042)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3355"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3355",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-24T14:16:06Z",
+        "reviewed_at": "2026-06-24T14:17:06Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.02
       },
       {
         "title": "fix(giving): backfill SettledDate on transactions re-synced after Rock person merge",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3353"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3353",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-24T00:49:41Z",
+        "reviewed_at": "2026-06-25T16:31:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 39.7
       },
       {
         "title": "Harden parseAmount against comma separators (APO-10019)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3645"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3645",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-23T19:27:48Z",
+        "reviewed_at": "2026-06-23T21:25:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.96
       },
       {
         "title": "Strip commas from amount in app→web give handoff (APO-10019)",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6625"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6625",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-06-23T19:27:17Z",
+        "reviewed_at": "2026-06-23T21:25:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.97
       },
       {
         "title": "fix(admin): preserve header toggles when saving Daily custom settings",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3643"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3643",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-23T17:57:01Z",
+        "reviewed_at": "2026-06-25T16:29:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 46.54
       },
       {
         "title": "feat: backfill charge source of truth columns",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3347"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3347",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-06-25T14:25:32Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "chore(schema): remove zero-usage fields (GraphOS verified)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3346"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3346",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-24T22:49:57Z",
+        "reviewed_at": "2026-06-25T16:30:19Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 17.67
       },
       {
         "title": "revert(web): revert APO-9373 giving login code change (restores implicit registration flow)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3640"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3640",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-23T01:13:36Z",
+        "reviewed_at": "2026-06-23T12:39:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 11.43
       },
       {
         "title": "fix(bible): fall back to WEB when a translation's search returns empty (APO-10082)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3334"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3334",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-22T19:55:47Z",
+        "reviewed_at": "2026-06-22T20:50:28Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.91
       },
       {
         "title": "[codex] Migrate web embeds Babel tooling to v8",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3637"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3637",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-22T16:33:42Z",
+        "reviewed_at": "2026-06-22T20:33:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4
       },
       {
         "title": "fix(web-embeds): flatten search-panel feed rendering (APO-1634)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3635"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3635",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-22T15:36:33Z",
+        "reviewed_at": "2026-06-22T20:35:14Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.98
       },
       {
         "title": "Treat recurring-giving duplicate origin id collisions as recoverable",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3332"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3332",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-22T16:21:19Z",
+        "reviewed_at": "2026-06-22T20:30:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.15
       },
       {
         "title": "fix(content-item): guard abstract type resolution against unknown apollosType",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3331"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3331",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-21T11:31:41Z",
+        "reviewed_at": "2026-06-22T20:21:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 32.84
       },
       {
         "title": "fix: resolve unused devDependencies knip warnings",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3633"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3633",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-20T20:24:31Z",
+        "reviewed_at": "2026-06-22T20:19:34Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 47.92
       },
       {
         "title": "Remove deprecated FeaturesNode, LiveNode, ScriptureNode interfaces",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3315"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3315",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-19T14:56:54Z",
+        "reviewed_at": "2026-06-22T16:30:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 73.57
       },
       {
         "title": "simplify(person): replace moment-timezone with native Date",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3313"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3313",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-19T00:57:33Z",
+        "reviewed_at": "2026-06-22T16:30:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 87.55
       },
       {
         "title": "simplify: replace validator with native URL for HTTPS URL validation",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3625"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3625",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-18T23:56:53Z",
+        "reviewed_at": "2026-06-22T16:16:27Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 88.33
       },
       {
         "title": "fix(reports): resolve campus for recurring gifts in transactions report",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3308"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3308",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-23T13:42:23Z",
+        "reviewed_at": "2026-06-23T16:27:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.76
       },
       {
         "title": "fix(give): preserve source param when redirecting to payment page",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3613"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3613",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-22T19:23:21Z",
+        "reviewed_at": "2026-06-22T20:40:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.29
       },
       {
         "title": "chore: upgrade vitest to v4",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3612"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3612",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-18T01:25:25Z",
+        "reviewed_at": "2026-06-22T16:09:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 110.73
       },
       {
         "title": "fix: show friendly error when org profile slug already exists",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3610"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3610",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-20T15:51:19Z",
+        "reviewed_at": "2026-06-22T20:10:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 52.31
       },
       {
         "title": "fix(admin): non-destructive feature save to preserve QuestionBlock responses",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3592"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3592",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-17T03:08:21Z",
+        "reviewed_at": "2026-06-22T16:28:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 133.33
       },
       {
         "title": "fix(mobile): remove phantom left gap on ListViewItem rows without a leading image",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6572"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6572",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-06-23T15:37:43Z",
+        "reviewed_at": "2026-06-25T16:02:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 48.42
       },
       {
         "title": "test(e2e): add missing critical flow coverage for admin auth",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3589"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3589",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-18T02:47:54Z",
+        "reviewed_at": "2026-06-22T16:11:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 109.39
       },
       {
         "title": "fix(theme): raise light-mode secondary text contrast to meet WCAG AA",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6564"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6564",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-06-17T21:04:44Z",
+        "reviewed_at": "2026-06-22T16:02:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 114.96
       },
       {
         "title": "fix(mobile): dedupe Daily Habits completion events across hook instances (APO-9485)",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6559"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6559",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-06-17T15:02:12Z",
+        "reviewed_at": "2026-06-22T19:58:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 124.93
       },
       {
         "title": "feat: wire up the v2 transactions sql feature flag",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3568"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3568",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-06-26T12:43:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Stabilize chat detail list render props (APO-9102)",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6534"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6534",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-06-17T01:37:53Z",
+        "reviewed_at": "2026-06-22T20:09:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 138.52
       },
       {
         "title": "Gate microdeposit emails by Admin environment",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3545"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3545",
+        "repo": "apollos-admin",
+        "requested_at": "2026-06-12T13:22:36Z",
+        "reviewed_at": "2026-06-22T16:35:29Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 243.21
       },
       {
         "title": "Make tap URL handling single-owner (APO-9546)",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6515"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6515",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-06-19T15:22:09Z",
+        "reviewed_at": "2026-06-22T19:54:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 76.55
       }
     ]
   },

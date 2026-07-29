@@ -23,6 +23,11 @@ export interface ChartDataPoint {
   linear_comments: number;
   prs_total: number;
   repos_count: number;
+  lines_added: number;
+  lines_deleted: number;
+  files_changed: number;
+  /** null when no requested reviews that week */
+  median_review_latency_hours: number | null;
   /** Synthetic row from daily snapshots when GitHub has no summary for this week yet */
   forecast?: boolean;
 }
@@ -74,6 +79,10 @@ export async function getChartsData(options?: {
         linear_comments: s.linear_comments ?? 0,
         prs_total: s.prs_total,
         repos_count: s.repos.length,
+        lines_added: s.lines_added ?? 0,
+        lines_deleted: s.lines_deleted ?? 0,
+        files_changed: s.files_changed ?? 0,
+        median_review_latency_hours: s.median_review_latency_hours ?? null,
       };
     }
   );
@@ -119,6 +128,10 @@ export async function getChartsData(options?: {
         linear_comments: fc.linear_comments,
         prs_total: fc.prs_total,
         repos_count: fc.repos_count,
+        lines_added: fc.lines_added,
+        lines_deleted: fc.lines_deleted,
+        files_changed: fc.files_changed,
+        median_review_latency_hours: fc.median_review_latency_hours,
         forecast: true,
       });
     }

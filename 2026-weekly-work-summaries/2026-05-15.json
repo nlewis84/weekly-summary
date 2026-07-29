@@ -21,7 +21,11 @@
       "apollos-cluster",
       "apollos-giving-performance-qa",
       "apollos-platforms"
-    ]
+    ],
+    "lines_added": 8,
+    "lines_deleted": 1,
+    "files_changed": 2,
+    "median_review_latency_hours": 1.78
   },
   "linear": {
     "completed_issues": [
@@ -311,7 +315,10 @@
         "title": "fix: skip empty PATCH to Rock `/People/` when only Phone is updated",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3039",
         "repo": "apollos-cluster",
-        "merged_at": "2026-05-14T17:53:24Z"
+        "merged_at": "2026-05-14T17:53:24Z",
+        "additions": 8,
+        "deletions": 1,
+        "changed_files": 2
       }
     ],
     "open_prs": [
@@ -367,111 +374,246 @@
     "reviews": [
       {
         "title": "Clear stale orgName error when the user edits the input",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3387"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3387",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-15T12:57:33Z",
+        "reviewed_at": "2026-05-15T15:15:07Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.29
       },
       {
         "title": "Add YouTube cleanup status banner",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3380"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3380",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-14T17:04:04Z",
+        "reviewed_at": "2026-05-14T19:45:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.68
       },
       {
         "title": "APO-9105 normalize minimum amount input formatting in Giving Settings",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3378"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3378",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-14T18:48:31Z",
+        "reviewed_at": "2026-05-14T19:48:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.99
       },
       {
         "title": "fix: recover stale APP.APPLE_APP_ID on App Clip save (APO-9180)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3377"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3377",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-14T20:59:21Z",
+        "reviewed_at": "2026-05-14T21:36:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.61
       },
       {
         "title": "APO-9057: Drop duplicate iOS \"Next\" floating bar on IdentityEntry",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6381"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6381",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-05-14T19:51:49Z",
+        "reviewed_at": "2026-05-14T19:56:54Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.08
       },
       {
         "title": "APO-8910 async YouTube integration delete with in-progress banner",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3372"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3372",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-14T13:32:30Z",
+        "reviewed_at": "2026-05-14T15:19:47Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.79
       },
       {
         "title": "APO-6649 add tag group management actions",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3369"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3369",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-15T12:59:14Z",
+        "reviewed_at": "2026-05-15T15:21:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.37
       },
       {
         "title": "[codex] Install only Chromium for e2e",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3366"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3366",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-13T18:58:17Z",
+        "reviewed_at": "2026-05-13T19:02:22Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.07
       },
       {
         "title": "[codex] Stabilize add payment method route test",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3365"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3365",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-13T18:46:00Z",
+        "reviewed_at": "2026-05-13T18:57:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.19
       },
       {
         "title": "Fix showing Google Pay Express Checkout on Firefox",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3364"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3364",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-13T17:42:33Z",
+        "reviewed_at": "2026-05-13T18:51:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.15
       },
       {
         "title": "fix: extend report polling window (APO-9041)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3363"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3363",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-05-13T17:41:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "APO-9132 render ActionListFeature primaryAction on web",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3361"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3361",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-13T18:26:56Z",
+        "reviewed_at": "2026-05-13T18:52:41Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.43
       },
       {
         "title": "APO-9116: Point setup-deploy church picker at cluster.apollos.app",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6376"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6376",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-05-13T11:40:46Z",
+        "reviewed_at": "2026-05-13T11:45:50Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.08
       },
       {
         "title": "APO-9107 add Is Recurring column to Transactions Report export",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3357"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3357",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-12T13:53:59Z",
+        "reviewed_at": "2026-05-12T14:38:18Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.74
       },
       {
         "title": "feat(reports): add Is Recurring column to Transactions Report export",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3026"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3026",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-05-12T14:52:03Z",
+        "reviewed_at": "2026-05-12T23:42:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 8.83
       },
       {
         "title": "APO-8691 strip markdown code fences from AI-generated HTML",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3355"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3355",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-13T11:46:04Z",
+        "reviewed_at": "2026-05-13T18:37:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.87
       },
       {
         "title": "APO-9103: Route \"Try Giving Again\" button to giving site",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3354"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3354",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-11T20:33:41Z",
+        "reviewed_at": "2026-05-11T20:35:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.03
       },
       {
         "title": "APO-9094 exclude pending charges from failed transactions report",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3351"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3351",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-13T16:58:21Z",
+        "reviewed_at": "2026-05-13T18:44:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.77
       },
       {
         "title": "APO-6447 fix App Clip header image format handling for JPGs",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3350"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3350",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-12T22:08:08Z",
+        "reviewed_at": "2026-05-13T18:30:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 20.37
       },
       {
         "title": "APO-7784 enlarge ChangeIdentityLink chevron",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3349"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3349",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-14T17:52:05Z",
+        "reviewed_at": "2026-05-14T19:45:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.9
       },
       {
         "title": "Allow non-super-admins to search Suggested Follows",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3348"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3348",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-09T19:17:04Z",
+        "reviewed_at": "2026-05-11T14:17:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 43.01
       },
       {
         "title": "fix: resolve unused dependencies knip warnings",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3346"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3346",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-09T15:46:15Z",
+        "reviewed_at": "2026-05-11T14:22:01Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 46.6
       },
       {
         "title": "APO-9042 enforce $0.50 minimum on Giving Settings minimum amount",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3345"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3345",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-09T11:22:42Z",
+        "reviewed_at": "2026-05-11T14:00:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 50.63
       },
       {
         "title": "APO-7365 flush pending title save before navigating actions",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3342"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3342",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-14T15:11:01Z",
+        "reviewed_at": "2026-05-14T15:43:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.53
       },
       {
         "title": "Migration: clean up stale global customer records from test-mode churches",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2843"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2843",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-05-13T17:12:56Z",
+        "reviewed_at": "2026-05-13T17:52:47Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.66
       },
       {
         "title": "fix: capture express checkout errors in Sentry",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3191"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3191",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-13T22:43:01Z",
+        "reviewed_at": "2026-05-14T14:54:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 16.19
       },
       {
         "title": "fix: parameterize tap scan person id filter to prevent SQL injection",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2970"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2970",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-10T18:23:27Z",
+        "reviewed_at": "2026-05-11T14:30:53Z",
+        "review_state": "APPROVED",
+        "latency_hours": 20.12
       }
     ]
   },

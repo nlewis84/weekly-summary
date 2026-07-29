@@ -19,7 +19,11 @@
     "repos": [
       "apollos-admin",
       "apollos-cluster"
-    ]
+    ],
+    "lines_added": 2745,
+    "lines_deleted": 41,
+    "files_changed": 37,
+    "median_review_latency_hours": 2.38
   },
   "linear": {
     "completed_issues": [
@@ -146,49 +150,73 @@
         "title": "fix: make transaction counts have commas",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3277",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-29T20:58:01Z"
+        "merged_at": "2026-04-29T20:58:01Z",
+        "additions": 1,
+        "deletions": 1,
+        "changed_files": 1
       },
       {
         "title": "feat: send an email when a charge fails",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3263",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-28T20:48:51Z"
+        "merged_at": "2026-04-28T20:48:51Z",
+        "additions": 623,
+        "deletions": 0,
+        "changed_files": 4
       },
       {
         "title": "feat: add Give on Web per-source toggle UI to giving settings",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3257",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-29T21:23:08Z"
+        "merged_at": "2026-04-29T21:23:08Z",
+        "additions": 930,
+        "deletions": 5,
+        "changed_files": 5
       },
       {
         "title": "feat: gate full platform giving by source",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3256",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-29T20:31:50Z"
+        "merged_at": "2026-04-29T20:31:50Z",
+        "additions": 231,
+        "deletions": 3,
+        "changed_files": 7
       },
       {
         "title": "feat: add a email for gifts still processing",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3254",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-27T19:59:17Z"
+        "merged_at": "2026-04-27T19:59:17Z",
+        "additions": 561,
+        "deletions": 2,
+        "changed_files": 4
       },
       {
         "title": "fix: avoid redundant allowlist call on payment page loader",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3247",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-27T13:34:35Z"
+        "merged_at": "2026-04-27T13:34:35Z",
+        "additions": 32,
+        "deletions": 10,
+        "changed_files": 4
       },
       {
         "title": "feat: add giveOnWebAllowedSources field to Church schema",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2911",
         "repo": "apollos-cluster",
-        "merged_at": "2026-04-27T23:20:39Z"
+        "merged_at": "2026-04-27T23:20:39Z",
+        "additions": 150,
+        "deletions": 0,
+        "changed_files": 4
       },
       {
         "title": "feat: send entry-point source for giving flow",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3229",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-27T21:48:12Z"
+        "merged_at": "2026-04-27T21:48:12Z",
+        "additions": 217,
+        "deletions": 20,
+        "changed_files": 8
       }
     ],
     "open_prs": [
@@ -202,27 +230,57 @@
     "reviews": [
       {
         "title": "fix(canvas-ui-web): Church mocks include giveOnWebAllowedSources",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3267"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3267",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-28T22:13:34Z",
+        "reviewed_at": "2026-04-28T22:16:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.05
       },
       {
         "title": "fix: Replace Routes During Login/Signup Flow [APO-8677]",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3250"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3250",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-27T22:32:36Z",
+        "reviewed_at": "2026-04-27T22:45:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.21
       },
       {
         "title": "fix: send app clip localizations inline",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3248"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3248",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-25T04:30:21Z",
+        "reviewed_at": "2026-04-29T14:29:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 105.99
       },
       {
         "title": "chore(schema): remove unused deprecated schema fields",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2916"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2916",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-24T21:31:03Z",
+        "reviewed_at": "2026-04-29T14:09:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 112.64
       },
       {
         "title": "feat: add giveOnWebAllowedSources field to Church schema",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2911"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2911",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-04-28T23:22:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Allow admins to delete tag groups in Admin",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2764"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2764",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-29T14:57:43Z",
+        "reviewed_at": "2026-04-29T17:20:49Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 2.38
       }
     ]
   },

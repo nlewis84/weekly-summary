@@ -20,7 +20,11 @@
       "apollos-admin",
       "apollos-cluster",
       "apollos-platforms"
-    ]
+    ],
+    "lines_added": 283,
+    "lines_deleted": 13,
+    "files_changed": 6,
+    "median_review_latency_hours": 66.37
   },
   "linear": {
     "completed_issues": [
@@ -265,25 +269,37 @@
         "title": "fix(finance): set refund row amount on transfer.reversed",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3553",
         "repo": "apollos-cluster",
-        "merged_at": "2026-07-14T21:50:07Z"
+        "merged_at": "2026-07-14T21:50:07Z",
+        "additions": 204,
+        "deletions": 4,
+        "changed_files": 3
       },
       {
         "title": "fix(finance): backfill refund row amount for dispute/reversal rows",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3551",
         "repo": "apollos-cluster",
-        "merged_at": "2026-07-14T20:49:48Z"
+        "merged_at": "2026-07-14T20:49:48Z",
+        "additions": 28,
+        "deletions": 7,
+        "changed_files": 1
       },
       {
         "title": "feat(charges): sync stripeTransactions model to TEXT columns (APO-9590)",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3465",
         "repo": "apollos-cluster",
-        "merged_at": "2026-07-13T17:51:50Z"
+        "merged_at": "2026-07-13T17:51:50Z",
+        "additions": 2,
+        "deletions": 2,
+        "changed_files": 1
       },
       {
         "title": "feat(charges): widen receipt_url and failure_message to TEXT (APO-9590)",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3464",
         "repo": "apollos-cluster",
-        "merged_at": "2026-07-13T15:50:45Z"
+        "merged_at": "2026-07-13T15:50:45Z",
+        "additions": 49,
+        "deletions": 0,
+        "changed_files": 1
       }
     ],
     "open_prs": [
@@ -297,127 +313,282 @@
     "reviews": [
       {
         "title": "fix(finance): stop migration probe re-nudging donors who confirmed a payment method (APO-10516)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3572"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3572",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-07-17T04:27:44Z",
+        "reviewed_at": "2026-07-17T13:09:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 8.7
       },
       {
         "title": "[APO-6508] Migrate push-pay-migrations flag to Web LaunchDarkly",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3828"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3828",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-16T20:09:40Z",
+        "reviewed_at": "2026-07-17T02:58:22Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.81
       },
       {
         "title": "fix(finance): resolve isRecurring at event time for transactions report (APO-10492)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3563"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3563",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-07-16T15:27:08Z",
+        "reviewed_at": "2026-07-17T02:50:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 11.39
       },
       {
         "title": "feat(seed): deterministic giving + migration fixtures for appstoretester",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3554"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3554",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-07-17T16:10:12Z",
+        "reviewed_at": "2026-07-17T22:44:05Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 6.56
       },
       {
         "title": "fix(admin): clear Data-tab loading bar for churches with no workflows",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3817"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3817",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-14T23:24:07Z",
+        "reviewed_at": "2026-07-15T00:06:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.71
       },
       {
         "title": "[APO-6508] Migrate 1st and 15th flag to Web LaunchDarkly",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3816"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3816",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-14T20:41:19Z",
+        "reviewed_at": "2026-07-14T21:05:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.41
       },
       {
         "title": "fix(finance): set refund row amount on transfer.reversed",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3553"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3553",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-07-14T21:12:13Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "fix(giving): restore failure/refund reason wiring lost in APO-10109 merge (CUS-191)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3815"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3815",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-14T17:46:24Z",
+        "reviewed_at": "2026-07-14T17:55:47Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.16
       },
       {
         "title": "fix(web): stop auto-attaching subsequent payment methods in migration flow",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3814"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3814",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-15T18:09:22Z",
+        "reviewed_at": "2026-07-16T14:47:32Z",
+        "review_state": "APPROVED",
+        "latency_hours": 20.64
       },
       {
         "title": "fix(admin): backfill Ministry Platform group-type config connection (APO-3972)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3813"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3813",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-14T01:42:36Z",
+        "reviewed_at": "2026-07-14T19:56:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 18.23
       },
       {
         "title": "chore: standardize Node 24 policy",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3812"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3812",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-13T22:42:07Z",
+        "reviewed_at": "2026-07-14T20:06:23Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 21.4
       },
       {
         "title": "fix(finance): typed not-found rejection when selecting a recurring payment method",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3541"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3541",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-07-13T16:35:30Z",
+        "reviewed_at": "2026-07-13T17:51:47Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.27
       },
       {
         "title": "perf(notifications): batch per-person language lookups in notification fan-out",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3533"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3533",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-07-14T00:39:36Z",
+        "reviewed_at": "2026-07-14T19:25:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 18.76
       },
       {
         "title": "fix(giving): show ACH bank name on charges when source-of-truth flag is on (APO-10354)",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3530"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3530",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-07-13T13:40:00Z",
+        "reviewed_at": "2026-07-13T13:41:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.02
       },
       {
         "title": "fix(web-embeds): migration probe no longer self-destructs on a timer (APO-10395)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3798"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3798",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-10T23:27:18Z",
+        "reviewed_at": "2026-07-13T17:49:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 66.37
       },
       {
         "title": "fix(web-embeds): migration popup follows the church's brand colors (APO-9321)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3797"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3797",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-10T22:03:47Z",
+        "reviewed_at": "2026-07-13T17:30:14Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 67.44
       },
       {
         "title": "Run release deploys from the main control plane",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3795"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3795",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-10T19:48:05Z",
+        "reviewed_at": "2026-07-13T17:17:33Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 69.49
       },
       {
         "title": "fix(admin): warn TV customers about YouTube/Vimeo links (APO-10396)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3794"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3794",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-11T00:01:36Z",
+        "reviewed_at": "2026-07-13T17:20:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 65.32
       },
       {
         "title": "fix(web): drop duplicate Stripe pre-validation from migrate confirm action",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3784"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3784",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-09T20:33:55Z",
+        "reviewed_at": "2026-07-13T17:19:40Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 92.76
       },
       {
         "title": "fix(web): drop duplicate payment-method pre-validation in select-payment-method",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3780"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3780",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-09T16:31:00Z",
+        "reviewed_at": "2026-07-13T14:57:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 94.44
       },
       {
         "title": "test(web-embeds): e2e for Crossroads migration toast auth flows",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3777"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3777",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-10T15:28:18Z",
+        "reviewed_at": "2026-07-13T17:48:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 74.34
       },
       {
         "title": "feat(connect-button): duplicate profile check in OTP flow (APO-5217)",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6688"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6688",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-07-09T00:29:43Z",
+        "reviewed_at": "2026-07-13T14:47:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 110.29
       },
       {
         "title": "[APO-6508] Add LaunchDarkly web migration routing",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3757"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3757",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-06T21:15:23Z",
+        "reviewed_at": "2026-07-13T14:33:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 161.29
       },
       {
         "title": "fix: resolve unused files knip warnings",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3748"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3748",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-04T03:52:55Z",
+        "reviewed_at": "2026-07-13T14:15:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 226.38
       },
       {
         "title": "test(web): add e2e coverage for the add-payment-method flow",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3725"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3725",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-08T15:29:42Z",
+        "reviewed_at": "2026-07-13T14:34:08Z",
+        "review_state": "APPROVED",
+        "latency_hours": 119.07
       },
       {
         "title": "feat(admin): duplicate a feed",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3724"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3724",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-09T01:12:17Z",
+        "reviewed_at": "2026-07-13T14:55:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 109.72
       },
       {
         "title": "docs(bible): add AGENTS_bible.md for the bible datasource",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3452"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3452",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-07-01T16:44:50Z",
+        "reviewed_at": "2026-07-16T16:26:53Z",
+        "review_state": "APPROVED",
+        "latency_hours": 359.7
       },
       {
         "title": "perf: reorder Dockerfile COPY/install layers for better cache reuse",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3678"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3678",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-09T14:55:18Z",
+        "reviewed_at": "2026-07-13T14:49:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 95.9
       },
       {
         "title": "fix(canvas): scripture modal inserts trigger immediate Cluster save",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3677"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3677",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-09T02:48:39Z",
+        "reviewed_at": "2026-07-13T14:41:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 107.89
       },
       {
         "title": "chore: migrate admin UI router imports",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3458"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3458",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-07-16T14:41:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
       },
       {
         "title": "Migration: clean up stale global customer records from test-mode churches",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2843"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2843",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-05-13T17:12:56Z",
+        "reviewed_at": "2026-07-15T22:16:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1517.06
       }
     ]
   },

@@ -18,6 +18,26 @@ const METRICS = [
     sumKey: "commits_pushed" as const,
   },
   {
+    key: "Lines added",
+    color: "var(--chart-1)",
+    sumKey: "lines_added" as const,
+  },
+  {
+    key: "Lines deleted",
+    color: "var(--chart-3)",
+    sumKey: "lines_deleted" as const,
+  },
+  {
+    key: "Files changed",
+    color: "var(--chart-4)",
+    sumKey: "files_changed" as const,
+  },
+  {
+    key: "Review latency (h)",
+    color: "var(--chart-2)",
+    sumKey: "median_review_latency_hours" as const,
+  },
+  {
     key: "Linear completed",
     color: "var(--chart-5)",
     sumKey: "linear_completed" as const,
@@ -45,6 +65,10 @@ function rowFromMonth(m: MonthlyAggregate) {
     "PR reviews": m.pr_reviews,
     "PR comments": m.pr_comments,
     "Commits pushed": m.commits_pushed,
+    "Lines added": m.lines_added,
+    "Lines deleted": m.lines_deleted,
+    "Files changed": m.files_changed,
+    "Review latency (h)": m.median_review_latency_hours ?? 0,
     "Linear completed": m.linear_completed,
     "Linear worked on": m.linear_worked_on,
     "Linear issues created": m.linear_issues_created,
@@ -59,10 +83,12 @@ export function AnnualChartsContent({ months }: AnnualChartsContentProps) {
 
   const monthForecast = (
     sumKey: keyof MonthlyForecastMetrics
-  ): { x: string; value: number } | null =>
-    hasForecast && last?.forecast
-      ? { x: last.label, value: last.forecast[sumKey] }
-      : null;
+  ): { x: string; value: number } | null => {
+    if (!hasForecast || !last?.forecast) return null;
+    const value = last.forecast[sumKey];
+    if (typeof value !== "number") return null;
+    return { x: last.label, value };
+  };
 
   return (
     <div>

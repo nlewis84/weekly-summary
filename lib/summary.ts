@@ -6,9 +6,24 @@
 
 import { mkdirSync, existsSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import type { Payload, RunSummaryResult, CheckIn, Stats } from "./types.js";
+import type {
+  Payload,
+  RunSummaryResult,
+  CheckIn,
+  Stats,
+  ReviewEntry,
+} from "./types.js";
 import { buildMarkdownSummary } from "./markdown.js";
 import { dataCache } from "./cache.js";
+import { fetchWithRetry } from "./github-api.js";
+import {
+  computeLatencyHours,
+  findRequestedAt,
+  median,
+  parsePrRef,
+  sumVolume,
+  type TimelineEvent,
+} from "./github-metrics.js";
 
 const SUMMARY_README = `# Weekly Work Summaries
 
@@ -396,11 +411,21 @@ function filterApollosPRs(items: Array<{ html_url?: string }>) {
   return (items ?? []).filter((pr) => pr.html_url?.includes("ApollosProject"));
 }
 
-type CandidateReviewPR = { pull_request?: { url?: string }; html_url?: string; [k: string]: unknown };
+type CandidateReviewPR = {
+  pull_request?: { url?: string };
+  html_url?: string;
+  title?: string;
+  [k: string]: unknown;
+};
+
+export type ReviewedPR = CandidateReviewPR & {
+  reviewed_at: string;
+  review_state: string;
+};
 
 /**
  * Keeps only PRs where the user submitted a review (comment, request changes, or approve) within the time window.
- * Fixes the issue where PRs updated in the window but reviewed earlier were incorrectly counted.
+ * Attaches reviewed_at (first non-PENDING submitted_at by user in window) and review_state.
  */
 async function filterReviewsBySubmittedInWindow(
   candidatePRs: CandidateReviewPR[],
@@ -408,34 +433,103 @@ async function filterReviewsBySubmittedInWindow(
   windowEnd: Date,
   username: string,
   headers: HeadersInit
-): Promise<CandidateReviewPR[]> {
+): Promise<ReviewedPR[]> {
   const results = await Promise.all(
     candidatePRs.map(async (pr) => {
-      const reviewsUrl = pr.pull_request?.url ? `${pr.pull_request.url}/reviews` : null;
+      const reviewsUrl = pr.pull_request?.url
+        ? `${pr.pull_request.url}/reviews`
+        : null;
       if (!reviewsUrl) return null;
       try {
-        const res = await fetch(reviewsUrl, { headers });
+        const res = await fetchWithRetry(reviewsUrl, { headers });
         if (!res.ok) return null;
         const reviews = (await res.json()) as Array<{
           user?: { login?: string };
           state?: string;
           submitted_at?: string | null;
         }>;
-        const hasReviewInWindow = reviews.some(
-          (r) =>
-            r.user?.login === username &&
-            r.submitted_at != null &&
-            r.state !== "PENDING" &&
-            new Date(r.submitted_at) >= windowStart &&
-            new Date(r.submitted_at) <= windowEnd
-        );
-        return hasReviewInWindow ? pr : null;
+        const mine = reviews
+          .filter(
+            (r) =>
+              r.user?.login === username &&
+              r.submitted_at != null &&
+              r.state !== "PENDING" &&
+              new Date(r.submitted_at) >= windowStart &&
+              new Date(r.submitted_at) <= windowEnd
+          )
+          .sort(
+            (a, b) =>
+              new Date(a.submitted_at!).getTime() -
+              new Date(b.submitted_at!).getTime()
+          );
+        const first = mine[0];
+        if (!first?.submitted_at) return null;
+        return {
+          ...pr,
+          reviewed_at: first.submitted_at,
+          review_state: first.state ?? "COMMENTED",
+        };
       } catch {
         return null;
       }
     })
   );
-  return results.filter((pr): pr is CandidateReviewPR => pr != null);
+  return results.filter((pr): pr is ReviewedPR => pr != null);
+}
+
+/**
+ * Fetch issue timeline and return earliest review_requested for username
+ * that precedes reviewedAt. Null for drive-by reviews.
+ */
+async function fetchRequestedAt(
+  htmlUrl: string | undefined,
+  username: string,
+  reviewedAt: string,
+  headers: HeadersInit
+): Promise<string | null> {
+  const ref = parsePrRef(htmlUrl);
+  if (!ref) return null;
+  const url = `https://api.github.com/repos/${ref.owner}/${ref.repo}/issues/${ref.number}/timeline?per_page=100`;
+  try {
+    const res = await fetchWithRetry(url, {
+      headers: {
+        ...(headers as Record<string, string>),
+        Accept: "application/vnd.github.mockingbird-preview+json",
+      },
+    });
+    if (!res.ok) return null;
+    const events = (await res.json()) as TimelineEvent[];
+    return findRequestedAt(events, username, reviewedAt);
+  } catch {
+    return null;
+  }
+}
+
+async function enrichReviewsWithLatency(
+  reviews: ReviewedPR[],
+  username: string,
+  headers: HeadersInit
+): Promise<ReviewEntry[]> {
+  return Promise.all(
+    reviews.map(async (pr) => {
+      const ref = parsePrRef(pr.html_url);
+      const requested_at = await fetchRequestedAt(
+        pr.html_url,
+        username,
+        pr.reviewed_at,
+        headers
+      );
+      return {
+        title: pr.title ?? "",
+        url: pr.html_url ?? "",
+        repo: ref?.repo ?? null,
+        requested_at,
+        reviewed_at: pr.reviewed_at,
+        review_state: pr.review_state,
+        latency_hours: computeLatencyHours(requested_at, pr.reviewed_at),
+      };
+    })
+  );
 }
 
 function getCommitRepos(): { owner: string; repos: string[] } {
@@ -634,13 +728,23 @@ async function fetchGitHubData(
           html_url?: string;
           merged_at?: string;
           state?: string;
+          additions?: number;
+          deletions?: number;
+          changed_files?: number;
         }) => {
           if (pr.pull_request?.url) {
             try {
-              const r = await fetch(pr.pull_request.url, { headers });
+              const r = await fetchWithRetry(pr.pull_request.url, { headers });
               if (r.ok) {
                 const d = await r.json();
-                return { ...pr, merged_at: d.merged_at, state: d.state };
+                return {
+                  ...pr,
+                  merged_at: d.merged_at,
+                  state: d.state,
+                  additions: d.additions ?? 0,
+                  deletions: d.deletions ?? 0,
+                  changed_files: d.changed_files ?? 0,
+                };
               }
             } catch {
               /* fetch failed, use original pr */
@@ -661,7 +765,7 @@ async function fetchGitHubData(
       })
       .filter((p): p is PrRef => p != null);
 
-    const [reviews, commitsResult] = await Promise.all([
+    const [reviewedPRs, commitsResult] = await Promise.all([
       (async () => {
         const reviewCandidates = filterApollosPRs(reviewsData.items ?? []);
         return filterReviewsBySubmittedInWindow(
@@ -675,7 +779,13 @@ async function fetchGitHubData(
       fetchCommitsPushed(username, headers, windowStart, windowEnd, userPrRefs),
     ]);
 
-    const allForComments = [...prDetails, ...reviews].slice(0, 20) as Array<{
+    const reviews = await enrichReviewsWithLatency(
+      reviewedPRs,
+      username,
+      headers
+    );
+
+    const allForComments = [...prDetails, ...reviewedPRs].slice(0, 20) as Array<{
       comments_url?: string;
       created_at?: string;
     }>;
@@ -683,7 +793,7 @@ async function fetchGitHubData(
       allForComments.map(async (pr) => {
         try {
           if (!pr.comments_url) return 0;
-          const r = await fetch(pr.comments_url, { headers });
+          const r = await fetchWithRetry(pr.comments_url, { headers });
           if (!r.ok) return 0;
           const comments = await r.json();
           return comments.filter(
@@ -717,10 +827,9 @@ async function fetchGitHubData(
   }
 }
 
-function categorizePRs(
-  prs: Array<{ merged_at?: string | null; state?: string }>,
-  windowStart: Date
-) {
+function categorizePRs<
+  T extends { merged_at?: string | null; state?: string },
+>(prs: T[], windowStart: Date): { merged: T[]; open: T[] } {
   const merged = prs.filter(
     (pr) => pr.merged_at && new Date(pr.merged_at) >= windowStart
   );
@@ -728,11 +837,13 @@ function categorizePRs(
   return { merged, open };
 }
 
-function groupPRsByRepo(prs: Array<{ html_url?: string }>) {
+function groupPRsByRepo(
+  prs: Array<{ html_url?: string; url?: string; repo?: string | null }>
+) {
   const grouped: Record<string, unknown[]> = {};
   for (const pr of prs) {
-    const m = pr.html_url?.match(/ApollosProject\/([^/]+)/);
-    const repo = m ? m[1] : "unknown";
+    const m = (pr.html_url ?? pr.url)?.match(/ApollosProject\/([^/]+)/);
+    const repo = pr.repo ?? (m ? m[1] : "unknown");
     if (!grouped[repo]) grouped[repo] = [];
     grouped[repo].push(pr);
   }
@@ -746,10 +857,22 @@ function buildTerminalOutput(
     createdIssues: unknown[];
     commentedIssues: unknown[];
   },
-  githubData: { prs: unknown[]; reviews: unknown[]; commits_pushed?: number },
+  githubData: {
+    prs: unknown[];
+    reviews: ReviewEntry[];
+    commits_pushed?: number;
+  },
   checkIns: CheckIn[],
-  prCategories: { merged: unknown[] },
-  repos: string[]
+  prCategories: {
+    merged: Array<{
+      additions?: number;
+      deletions?: number;
+      changed_files?: number;
+    }>;
+  },
+  repos: string[],
+  volume: { lines_added: number; lines_deleted: number; files_changed: number },
+  medianLatency: number | null
 ): string {
   let out = "\n╔══════════════════════════════════════════════════════════╗\n";
   out += "║     Weekly Work Summary                                  ║\n";
@@ -759,6 +882,8 @@ function buildTerminalOutput(
   out += `  • PRs merged: ${prCategories.merged.length}\n`;
   out += `  • PR reviews: ${githubData.reviews.length}\n`;
   out += `  • Commits pushed: ${githubData.commits_pushed ?? 0}\n`;
+  out += `  • Code volume: +${volume.lines_added} / -${volume.lines_deleted} (${volume.files_changed} files)\n`;
+  out += `  • Median review latency: ${medianLatency != null ? `${medianLatency}h` : "—"}\n`;
   out += `  • Linear issues completed: ${linearData.completedIssues.length}\n`;
   out += `  • Linear issues worked on: ${linearData.workedOnIssues.length}\n`;
   out += `  • Linear issues created: ${linearData.createdIssues.length}\n`;
@@ -881,14 +1006,32 @@ export async function runSummary(options: {
   ]);
 
   const checkIns = parseCheckIns(checkInsText);
-  const prCategories = categorizePRs(githubData.prs, windowStart);
+  const prCategories = categorizePRs(
+    githubData.prs as Array<{
+      merged_at?: string | null;
+      state?: string;
+      additions?: number;
+      deletions?: number;
+      changed_files?: number;
+    }>,
+    windowStart
+  );
   // PRs/reviews plus any tracked repo where you pushed commits (commit-only work)
-  const prsAndReviews = [...githubData.prs, ...githubData.reviews];
+  const prsAndReviews = [
+    ...githubData.prs,
+    ...githubData.reviews,
+  ] as Array<{ html_url?: string; url?: string; repo?: string | null }>;
   const prsByRepo = groupPRsByRepo(prsAndReviews);
   const commitRepos = githubData.reposWithCommits ?? [];
   const repos = [
     ...new Set([...Object.keys(prsByRepo), ...commitRepos]),
   ].sort();
+
+  const volume = sumVolume(prCategories.merged);
+  const latencyValues = githubData.reviews
+    .map((r: ReviewEntry) => r.latency_hours)
+    .filter((h): h is number => typeof h === "number");
+  const medianLatency = median(latencyValues);
 
   const stats: Stats = {
     prs_merged: prCategories.merged.length,
@@ -901,6 +1044,10 @@ export async function runSummary(options: {
     linear_issues_created: linearData.createdIssues.length,
     linear_comments: linearData.commentedIssues.length,
     repos,
+    lines_added: volume.lines_added,
+    lines_deleted: volume.lines_deleted,
+    files_changed: volume.files_changed,
+    median_review_latency_hours: medianLatency,
   };
 
   const terminalOutput = buildTerminalOutput(
@@ -908,7 +1055,9 @@ export async function runSummary(options: {
     githubData,
     checkIns,
     prCategories,
-    repos
+    repos,
+    volume,
+    medianLatency
   );
 
   const payload: Payload = {
@@ -981,6 +1130,9 @@ export async function runSummary(options: {
           title?: string;
           html_url?: string;
           merged_at?: string | null;
+          additions?: number;
+          deletions?: number;
+          changed_files?: number;
         }) => {
           const m = pr.html_url?.match(/ApollosProject\/([^/]+)/);
           return {
@@ -988,6 +1140,9 @@ export async function runSummary(options: {
             url: pr.html_url ?? "",
             repo: m ? m[1] : null,
             merged_at: pr.merged_at ?? null,
+            additions: pr.additions ?? 0,
+            deletions: pr.deletions ?? 0,
+            changed_files: pr.changed_files ?? 0,
           };
         }
       ),
@@ -1006,12 +1161,7 @@ export async function runSummary(options: {
           };
         }
       ),
-      reviews: githubData.reviews.map(
-        (pr: { title?: string; html_url?: string }) => ({
-          title: pr.title ?? "",
-          url: pr.html_url ?? "",
-        })
-      ),
+      reviews: githubData.reviews as ReviewEntry[],
     },
     check_ins: checkIns,
     terminal_output: terminalOutput,

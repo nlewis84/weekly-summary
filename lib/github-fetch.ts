@@ -1,9 +1,13 @@
 /**
  * Fetch historical weekly summaries from GitHub repo via REST API.
+ * Prefers local files under GITHUB_SUMMARY_PATHS when present (so backfills
+ * and unsynced local edits show up without pushing).
  * Supports multiple paths via GITHUB_SUMMARY_PATHS (comma-separated).
  * Default: 2026-weekly-work-summaries. Add 2025-weekly-work-summaries etc. for earlier years.
  */
 
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import type { Payload } from "./types.js";
 import { fetchWithRetry } from "./github-api.js";
 import { dataCache } from "./cache.js";
@@ -42,10 +46,54 @@ interface GhContentItem {
   sha?: string;
 }
 
+function listLocalWeeks(basePath: string): string[] {
+  const dir = join(process.cwd(), basePath);
+  if (!existsSync(dir)) return [];
+  const weeks: string[] = [];
+  for (const name of readdirSync(dir)) {
+    if (name.endsWith(".json")) {
+      const week = name.replace(/\.json$/, "");
+      if (/^\d{4}-\d{2}-\d{2}$/.test(week)) weeks.push(week);
+    } else if (name.endsWith("-week-in-review.md")) {
+      const match = name.match(/^(\d{4}-\d{2}-\d{2})-week-in-review\.md$/);
+      if (match) weeks.push(match[1]!);
+    }
+  }
+  return weeks;
+}
+
+function loadLocalJson(basePath: string, weekEnding: string): Payload | null {
+  const filePath = join(process.cwd(), basePath, `${weekEnding}.json`);
+  if (!existsSync(filePath)) return null;
+  try {
+    return JSON.parse(readFileSync(filePath, "utf8")) as Payload;
+  } catch {
+    return null;
+  }
+}
+
+function loadLocalWeekInReview(
+  basePath: string,
+  weekEnding: string
+): string | null {
+  const filePath = join(
+    process.cwd(),
+    basePath,
+    `${weekEnding}-week-in-review.md`
+  );
+  if (!existsSync(filePath)) return null;
+  try {
+    return readFileSync(filePath, "utf8");
+  } catch {
+    return null;
+  }
+}
+
 /**
  * List all JSON and week-in-review MD files across configured summary paths.
  * Returns week_ending strings (e.g. "2026-01-31") sorted descending, deduplicated.
  * Includes: *.json (YYYY-MM-DD.json) and *-week-in-review.md (YYYY-MM-DD-week-in-review.md)
+ * Local dirs are merged with GitHub so unsynced local weeks appear.
  */
 export async function listWeeklySummaries(options?: {
   bust?: boolean;
@@ -57,29 +105,44 @@ export async function listWeeklySummaries(options?: {
     if (cached) return cached;
   }
 
-  const { owner, repo } = getRepoSpec();
   const paths = getSummaryPaths();
   const allWeeks = new Set<string>();
 
   for (const basePath of paths) {
-    const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${basePath}`;
-    const res = await fetchWithRetry(url, { headers: getAuthHeaders() });
-    if (res.status === 404) continue;
-    if (!res.ok) {
-      const err = (await res.json().catch(() => ({}))) as { message?: string };
-      throw new Error(err.message ?? `GitHub API: ${res.status}`);
+    for (const week of listLocalWeeks(basePath)) {
+      allWeeks.add(week);
     }
-    const items = (await res.json()) as GhContentItem[];
-    for (const f of items) {
-      if (f.type !== "file") continue;
-      if (f.name.endsWith(".json")) {
-        const name = f.name.replace(/\.json$/, "");
-        if (/^\d{4}-\d{2}-\d{2}$/.test(name)) allWeeks.add(name);
-      } else if (f.name.endsWith("-week-in-review.md")) {
-        const match = f.name.match(/^(\d{4}-\d{2}-\d{2})-week-in-review\.md$/);
-        if (match) allWeeks.add(match[1]);
+  }
+
+  try {
+    const { owner, repo } = getRepoSpec();
+    for (const basePath of paths) {
+      const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${basePath}`;
+      const res = await fetchWithRetry(url, { headers: getAuthHeaders() });
+      if (res.status === 404) continue;
+      if (!res.ok) {
+        const err = (await res.json().catch(() => ({}))) as {
+          message?: string;
+        };
+        throw new Error(err.message ?? `GitHub API: ${res.status}`);
+      }
+      const items = (await res.json()) as GhContentItem[];
+      for (const f of items) {
+        if (f.type !== "file") continue;
+        if (f.name.endsWith(".json")) {
+          const name = f.name.replace(/\.json$/, "");
+          if (/^\d{4}-\d{2}-\d{2}$/.test(name)) allWeeks.add(name);
+        } else if (f.name.endsWith("-week-in-review.md")) {
+          const match = f.name.match(
+            /^(\d{4}-\d{2}-\d{2})-week-in-review\.md$/
+          );
+          if (match) allWeeks.add(match[1]!);
+        }
       }
     }
+  } catch (err) {
+    // If we have local weeks, still return them when GitHub fails
+    if (allWeeks.size === 0) throw err;
   }
 
   const result = [...allWeeks].sort((a, b) => b.localeCompare(a));
@@ -107,6 +170,7 @@ export async function fetchWeeklySummary(
 
 /**
  * Fetch weekly summary as Payload or raw markdown. Use for History page to show both.
+ * Prefers local filesystem over GitHub so backfilled/unsynced data is visible.
  */
 export async function fetchWeeklySummaryRaw(
   weekEnding: string,
@@ -119,7 +183,6 @@ export async function fetchWeeklySummaryRaw(
     if (cached !== undefined) return cached;
   }
 
-  const { owner, repo } = getRepoSpec();
   const paths = getSummaryPaths();
   const year = weekEnding.slice(0, 4);
   const yearPath = `${year}-weekly-work-summaries`;
@@ -127,6 +190,28 @@ export async function fetchWeeklySummaryRaw(
     ? [yearPath, ...paths.filter((p) => p !== yearPath)]
     : paths;
 
+  for (const basePath of orderedPaths) {
+    const local = loadLocalJson(basePath, weekEnding);
+    if (local) {
+      dataCache.set(key, local);
+      return local;
+    }
+  }
+
+  for (const basePath of orderedPaths) {
+    const md = loadLocalWeekInReview(basePath, weekEnding);
+    if (md) {
+      const result = {
+        type: "markdown" as const,
+        week_ending: weekEnding,
+        content: md,
+      };
+      dataCache.set(key, result);
+      return result;
+    }
+  }
+
+  const { owner, repo } = getRepoSpec();
   for (const basePath of orderedPaths) {
     const jsonPath = `${basePath}/${weekEnding}.json`;
     const jsonUrl = `${GITHUB_API}/repos/${owner}/${repo}/contents/${jsonPath}`;

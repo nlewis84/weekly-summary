@@ -149,6 +149,10 @@ describe("getChartsData", () => {
       linear_comments: 0,
       prs_total: 7,
       repos_count: 1,
+      lines_added: 100,
+      lines_deleted: 20,
+      files_changed: 5,
+      median_review_latency_hours: null,
     });
 
     const result = await getChartsData({ bust: true });

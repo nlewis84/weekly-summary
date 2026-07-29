@@ -14,6 +14,7 @@ import {
   ChartTooltip,
   type ChartConfig,
 } from "~/components/ui/chart";
+import { formatNumber } from "~/lib/utils";
 
 const FORECAST_DASH_KEY = "forecastDash";
 
@@ -148,7 +149,12 @@ export function MetricLineChart({
     avgSource.length > 0
       ? avgSource.reduce((sum, d) => sum + d.value, 0) / avgSource.length
       : 0;
-  const avgDisplay = Number.isInteger(avg) ? avg.toString() : avg.toFixed(1);
+  const avgDisplay = Number.isInteger(avg)
+    ? formatNumber(avg)
+    : avg.toLocaleString("en-US", {
+        minimumFractionDigits: 1,
+        maximumFractionDigits: 1,
+      });
 
   const forecastX = hasForecast ? forecast!.x : null;
 
@@ -157,7 +163,7 @@ export function MetricLineChart({
       <ChartContainer config={config} className="h-full w-full min-h-[224px]">
         <LineChart
           data={chartData}
-          margin={{ top: 8, right: 8, left: 40, bottom: 0 }}
+          margin={{ top: 8, right: 8, left: 8, bottom: 0 }}
           accessibilityLayer
         >
           <CartesianGrid vertical={false} strokeDasharray="3 3" />
@@ -173,7 +179,8 @@ export function MetricLineChart({
             tickLine={false}
             axisLine={false}
             tickMargin={8}
-            width={36}
+            width={48}
+            tickFormatter={(v) => formatNumber(typeof v === "number" ? v : Number(v))}
           />
           <ChartTooltip
             content={({ active, payload, label }) => {
@@ -194,7 +201,7 @@ export function MetricLineChart({
                     {isBridge ? "Forecast" : label}
                   </p>
                   <p className="text-base font-semibold text-(--color-text)">
-                    {value}
+                    {formatNumber(value)}
                   </p>
                   {isFcRow ? (
                     <p className="text-xs text-text-muted mt-0.5">Forecast</p>

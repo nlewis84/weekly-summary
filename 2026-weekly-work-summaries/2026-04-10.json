@@ -21,7 +21,11 @@
       "apollos-cluster",
       "apollos-infrastructure",
       "apollos-platforms"
-    ]
+    ],
+    "lines_added": 2102,
+    "lines_deleted": 43,
+    "files_changed": 22,
+    "median_review_latency_hours": 7.15
   },
   "linear": {
     "completed_issues": [
@@ -230,43 +234,64 @@
         "title": "feat: add sandbox.pushpay.io support to giving URL utility",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3138",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-08T18:42:25Z"
+        "merged_at": "2026-04-08T18:42:25Z",
+        "additions": 50,
+        "deletions": 14,
+        "changed_files": 2
       },
       {
         "title": "Set base URL programmatically for preview apps",
         "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/10",
         "repo": "apollos-infrastructure",
-        "merged_at": "2026-04-08T17:00:49Z"
+        "merged_at": "2026-04-08T17:00:49Z",
+        "additions": 1,
+        "deletions": 1,
+        "changed_files": 1
       },
       {
         "title": "chore: add tests for transactions side modal",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3122",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-08T20:47:46Z"
+        "merged_at": "2026-04-08T20:47:46Z",
+        "additions": 560,
+        "deletions": 7,
+        "changed_files": 4
       },
       {
         "title": "chore: remove unused import",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3118",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-07T15:14:34Z"
+        "merged_at": "2026-04-07T15:14:34Z",
+        "additions": 2,
+        "deletions": 2,
+        "changed_files": 1
       },
       {
         "title": "chore: add test coverage for giving settings page",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3116",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-07T14:57:58Z"
+        "merged_at": "2026-04-07T14:57:58Z",
+        "additions": 339,
+        "deletions": 0,
+        "changed_files": 3
       },
       {
         "title": "feat: add giving settings page",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3113",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-07T15:27:49Z"
+        "merged_at": "2026-04-07T15:27:49Z",
+        "additions": 549,
+        "deletions": 4,
+        "changed_files": 7
       },
       {
         "title": "fix: add missing setup intent handling to payment flow",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3095",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-07T15:49:51Z"
+        "merged_at": "2026-04-07T15:49:51Z",
+        "additions": 601,
+        "deletions": 15,
+        "changed_files": 4
       }
     ],
     "open_prs": [
@@ -298,55 +323,120 @@
     "reviews": [
       {
         "title": "Ensure decimal-point amounts in giving history",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3135"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3135",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-08T15:19:52Z",
+        "reviewed_at": "2026-04-08T16:21:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.02
       },
       {
         "title": "[codex] Fix chat link preview fallback",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6126"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6126",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-04-08T16:09:44Z",
+        "reviewed_at": "2026-04-08T16:20:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.18
       },
       {
         "title": "[codex] Restrict admin OTP bypass to dev apps account",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3133"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3133",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-08T13:22:08Z",
+        "reviewed_at": "2026-04-08T14:16:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.9
       },
       {
         "title": "[APO-8152] Restore payment method editing, fix list not updating",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3129"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3129",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-07T22:45:01Z",
+        "reviewed_at": "2026-04-08T14:09:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 15.41
       },
       {
         "title": "feat: add transaction detail sheet and refund functionality to giving",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3121"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3121",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-04-07T16:45:22Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "feat: add giving settings page",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3113"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3113",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-04-06T21:41:48Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Switch e2e workflow from Heroku to AWS review apps",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3112"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3112",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-07T13:48:45Z",
+        "reviewed_at": "2026-04-07T13:56:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.13
       },
       {
         "title": "Fix cancellation confirmation email logo contrast",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3108"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3108",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-06T14:19:51Z",
+        "reviewed_at": "2026-04-06T14:33:36Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.23
       },
       {
         "title": "fix: Audit False Positive - Batch ranges not fully contained",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2767"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2767",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-06T14:42:00Z",
+        "reviewed_at": "2026-04-06T21:51:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 7.15
       },
       {
         "title": "test(web): add baseline give route component coverage",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3107"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3107",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-04T00:30:18Z",
+        "reviewed_at": "2026-04-06T14:34:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 62.07
       },
       {
         "title": "fix(ci): stabilize admin seed bootstrap and web e2e preview lookup",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3106"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3106",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-04T00:23:46Z",
+        "reviewed_at": "2026-04-06T14:36:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 62.21
       },
       {
         "title": "Simplify web-embeds v1 by removing donation support",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3105"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3105",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-03T22:34:58Z",
+        "reviewed_at": "2026-04-06T14:15:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 63.67
       },
       {
         "title": "APO-8075: Add express checkout and hide back arrow in migration payment flow",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3098"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3098",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-07T19:01:21Z",
+        "reviewed_at": "2026-04-08T14:00:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 18.98
       }
     ]
   },

@@ -21,7 +21,11 @@
       "apollos-giving-alerts-dashboard",
       "apollos-platforms",
       "apollos-shovel"
-    ]
+    ],
+    "lines_added": 750,
+    "lines_deleted": 53,
+    "files_changed": 23,
+    "median_review_latency_hours": 67.61
   },
   "linear": {
     "completed_issues": [
@@ -381,145 +385,276 @@
         "title": "Revert \"Use partitioned cookies\"",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2860",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-20T17:59:23Z"
+        "merged_at": "2026-02-20T17:59:23Z",
+        "additions": 2,
+        "deletions": 3,
+        "changed_files": 1
       },
       {
         "title": "chore: basic auth",
         "url": "https://github.com/ApollosProject/apollos-giving-alerts-dashboard/pull/1",
         "repo": "apollos-giving-alerts-dashboard",
-        "merged_at": "2026-02-19T20:38:23Z"
+        "merged_at": "2026-02-19T20:38:23Z",
+        "additions": 126,
+        "deletions": 34,
+        "changed_files": 9
       },
       {
         "title": "feat: use church from URL params in authorizeAndGetChurchSlugAndUser",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2851",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-18T20:24:26Z"
+        "merged_at": "2026-02-18T20:24:26Z",
+        "additions": 70,
+        "deletions": 0,
+        "changed_files": 2
       },
       {
         "title": "feat: create finance reconciliation tables for tracking payment data",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2470",
         "repo": "apollos-cluster",
-        "merged_at": "2026-02-20T15:06:24Z"
+        "merged_at": "2026-02-20T15:06:24Z",
+        "additions": 222,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "chore: trim whitespace due to apple pay",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2468",
         "repo": "apollos-cluster",
-        "merged_at": "2026-02-16T20:23:22Z"
+        "merged_at": "2026-02-16T20:23:22Z",
+        "additions": 1,
+        "deletions": 1,
+        "changed_files": 1
       },
       {
         "title": "chore: hide the export button",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2839",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-16T18:53:54Z"
+        "merged_at": "2026-02-16T18:53:54Z",
+        "additions": 2,
+        "deletions": 2,
+        "changed_files": 1
       },
       {
         "title": "feat: add test coverage for success redirects",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2837",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-16T16:58:00Z"
+        "merged_at": "2026-02-16T16:58:00Z",
+        "additions": 94,
+        "deletions": 7,
+        "changed_files": 2
       },
       {
         "title": "fix: update Apollos URL from apollos.app to apollos.com",
         "url": "https://github.com/ApollosProject/apollos-platforms/pull/5947",
         "repo": "apollos-platforms",
-        "merged_at": "2026-02-19T17:58:22Z"
+        "merged_at": "2026-02-19T17:58:22Z",
+        "additions": 1,
+        "deletions": 1,
+        "changed_files": 1
       },
       {
         "title": "feat: skip Android Chrome redirect for churches with full-platform giving",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2815",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-16T17:35:18Z"
+        "merged_at": "2026-02-16T17:35:18Z",
+        "additions": 12,
+        "deletions": 4,
+        "changed_files": 1
       },
       {
         "title": "feat: preserve prefilled payment data when redirecting to external giving platforms",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2793",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-20T19:20:34Z"
+        "merged_at": "2026-02-20T19:20:34Z",
+        "additions": 220,
+        "deletions": 1,
+        "changed_files": 4
       }
     ],
     "reviews": [
       {
         "title": "[APO-7214] Fix selected date styling",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2864"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2864",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-20T20:11:20Z",
+        "reviewed_at": "2026-02-20T20:20:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.14
       },
       {
         "title": "Always use target origin id when merging",
-        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1332"
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1332",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-02-20T13:50:49Z",
+        "reviewed_at": "2026-02-20T14:58:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.13
       },
       {
         "title": "feat(admin): add Apollos user check icon to person detail page",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2857"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2857",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-20T03:32:51Z",
+        "reviewed_at": "2026-02-20T03:34:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.03
       },
       {
         "title": "[APO-7123] Change start date display format, fix calendar hover state issue",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2847"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2847",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-18T22:38:28Z",
+        "reviewed_at": "2026-02-19T18:46:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 20.14
       },
       {
         "title": "Merge active apollos users in the shovel - when no chat + identities match.",
-        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1327"
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1327",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-02-19T18:33:26Z",
+        "reviewed_at": "2026-02-19T18:35:44Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.04
       },
       {
         "title": "feat: add financial reconciliation system with tests",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2471"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2471",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-02-18T15:32:47Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "use dark mode + accordion view w bank first",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2836"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2836",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-13T20:15:20Z",
+        "reviewed_at": "2026-02-16T15:51:52Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 67.61
       },
       {
         "title": "[APO-7041] Use react-day-picker for start date",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2834"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2834",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-13T19:58:10Z",
+        "reviewed_at": "2026-02-16T16:37:07Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 68.65
       },
       {
         "title": "APO-7015: Bypass transactions report cache for Rock giving exports",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2831"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2831",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-13T04:24:07Z",
+        "reviewed_at": "2026-02-16T16:20:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 83.95
       },
       {
         "title": "Add ngrok domains to allowed hosts",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2828"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2828",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-12T20:19:19Z",
+        "reviewed_at": "2026-02-16T16:11:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 91.87
       },
       {
         "title": "[APO-7026] No /success redirect after ExpressCheckout submission",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2825"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2825",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-12T00:02:20Z",
+        "reviewed_at": "2026-02-16T15:55:18Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 111.88
       },
       {
         "title": "feat: issue refund email",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2823"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2823",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-11T18:56:21Z",
+        "reviewed_at": "2026-02-16T16:33:31Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 117.62
       },
       {
         "title": "feat: extract and persist fundId, amount, and campusId from Stripe charge metadata",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2448"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2448",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-02-20T17:44:32Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "feat(admin): build default state views for migration tab",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2797"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2797",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "feat: preserve prefilled payment data when redirecting to external giving platforms",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2793"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2793",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "feat: handle Stripe payment redirect flow and improve error messages",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2776"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2776",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-02-16T16:47:33Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "chore: optimize payment route by utilizing user data from root loader",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "Implement tailwind preset",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2735"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2735",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "Initialize web-embeds-v2 project with project scaffolding",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2732"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2732",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "fix: use cluster endpoint for /ask in web and web embeds",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2413"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2413",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       }
-    ]
+    ],
+    "open_prs": []
   },
   "check_ins": [
     {

@@ -20,7 +20,11 @@
       "apollos-admin",
       "apollos-cluster",
       "apollos-platforms"
-    ]
+    ],
+    "lines_added": 761,
+    "lines_deleted": 41,
+    "files_changed": 16,
+    "median_review_latency_hours": 36.64
   },
   "linear": {
     "completed_issues": [
@@ -155,25 +159,37 @@
         "title": "chore: git4sql script to make gratitudes posts private",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3073",
         "repo": "apollos-cluster",
-        "merged_at": "2026-05-21T15:02:15Z"
+        "merged_at": "2026-05-21T15:02:15Z",
+        "additions": 47,
+        "deletions": 0,
+        "changed_files": 1
       },
       {
         "title": "fix: ShareAudienceSelector no longer defaults gratitude to public\n",
         "url": "https://github.com/ApollosProject/apollos-platforms/pull/6414",
         "repo": "apollos-platforms",
-        "merged_at": "2026-05-21T15:03:39Z"
+        "merged_at": "2026-05-21T15:03:39Z",
+        "additions": 94,
+        "deletions": 3,
+        "changed_files": 2
       },
       {
         "title": "feat(giving): add status filter to transactions",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3368",
         "repo": "apollos-admin",
-        "merged_at": "2026-05-22T00:17:00Z"
+        "merged_at": "2026-05-22T00:17:00Z",
+        "additions": 438,
+        "deletions": 24,
+        "changed_files": 9
       },
       {
         "title": "feat(giving): surface pending and failed transaction statuses in Admin transactions Table",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3362",
         "repo": "apollos-admin",
-        "merged_at": "2026-05-20T17:53:09Z"
+        "merged_at": "2026-05-20T17:53:09Z",
+        "additions": 182,
+        "deletions": 14,
+        "changed_files": 4
       }
     ],
     "open_prs": [
@@ -217,39 +233,84 @@
     "reviews": [
       {
         "title": "fix: resolve unused exports knip warnings in web-embeds barrels",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3430"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3430",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-21T14:03:50Z",
+        "reviewed_at": "2026-05-21T16:48:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.74
       },
       {
         "title": "fix: resolve App Clip subdomain AASA fallback (APO-9167)",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3426"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3426",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-21T21:17:31Z",
+        "reviewed_at": "2026-05-22T00:24:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.12
       },
       {
         "title": "[APO-8740] Keep Google Pay visible for recurring gifts",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3425"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3425",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-20T16:56:16Z",
+        "reviewed_at": "2026-05-20T21:03:38Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.12
       },
       {
         "title": "Migrate 3 utility files from JS to TS",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3055"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3055",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-05-17T19:25:46Z",
+        "reviewed_at": "2026-05-20T16:35:12Z",
+        "review_state": "APPROVED",
+        "latency_hours": 69.16
       },
       {
         "title": "feat(people): snapshot email and phone into ban lists on toggleBan",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3395"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3395",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-15T16:34:36Z",
+        "reviewed_at": "2026-05-20T16:34:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 120
       },
       {
         "title": "APO-8743 Default Transactions date filter to trailing 12 months",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3394"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3394",
+        "repo": "apollos-admin",
+        "requested_at": "2026-05-15T16:52:49Z",
+        "reviewed_at": "2026-05-20T16:42:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 119.82
       },
       {
         "title": "feat(giving): add payment method filter to transactions",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3371"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3371",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-05-22T00:00:21Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "feat(giving): add status filter to transactions",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3368"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3368",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-05-20T20:44:20Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "feat(giving): surface pending and failed transaction statuses in Admin transactions Table",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3362"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3362",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-05-20T16:29:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       }
     ]
   },

@@ -14,11 +14,16 @@ import {
   ChatCircle,
   GitCommit,
   PlusCircle,
+  FilePlus,
+  FileMinus,
+  Files,
+  Timer,
 } from "phosphor-react";
 import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
 import type { Payload } from "../../lib/types";
 import type { WeeklyGoals } from "../hooks/useGoals";
+import { formatNumber, formatSignedNumber } from "~/lib/utils";
 
 interface MetricsCardProps {
   stats: Stats;
@@ -57,11 +62,19 @@ function TrendBadge({ delta }: { delta: number }) {
 }
 
 function formatStatsForCopy(stats: Stats): string {
+  const latency =
+    stats.median_review_latency_hours != null
+      ? `${stats.median_review_latency_hours}h`
+      : "—";
   const parts = [
     `PRs merged: ${stats.prs_merged}`,
     `PR reviews: ${stats.pr_reviews}`,
     `PR comments: ${stats.pr_comments}`,
     `Commits pushed: ${stats.commits_pushed}`,
+    `Lines added: ${stats.lines_added ?? 0}`,
+    `Lines deleted: ${stats.lines_deleted ?? 0}`,
+    `Files changed: ${stats.files_changed ?? 0}`,
+    `Median review latency: ${latency}`,
     `Linear completed: ${stats.linear_completed}`,
     `Linear worked on: ${stats.linear_worked_on}`,
     `Linear issues created: ${stats.linear_issues_created}`,
@@ -89,6 +102,31 @@ const METRICS = [
   { key: "pr_reviews" as const, label: "PR reviews", Icon: Eye },
   { key: "pr_comments" as const, label: "PR comments", Icon: ChatCircle },
   { key: "commits_pushed" as const, label: "Commits", tooltip: "Commits pushed", Icon: GitCommit },
+  {
+    key: "lines_added" as const,
+    label: "Lines added",
+    tooltip: "Additions across merged PRs",
+    Icon: FilePlus,
+  },
+  {
+    key: "lines_deleted" as const,
+    label: "Lines deleted",
+    tooltip: "Deletions across merged PRs",
+    Icon: FileMinus,
+  },
+  {
+    key: "files_changed" as const,
+    label: "Files changed",
+    tooltip: "Changed files across merged PRs",
+    Icon: Files,
+  },
+  {
+    key: "median_review_latency_hours" as const,
+    label: "Review time",
+    tooltip: "Median hours from review request to your first review",
+    Icon: Timer,
+    format: "hours" as const,
+  },
   {
     key: "linear_completed" as const,
     label: "Linear done",
@@ -121,6 +159,10 @@ const TREND_METRICS = [
   "pr_reviews",
   "pr_comments",
   "commits_pushed",
+  "lines_added",
+  "lines_deleted",
+  "files_changed",
+  "median_review_latency_hours",
   "linear_completed",
   "linear_worked_on",
   "linear_issues_created",
@@ -175,18 +217,34 @@ export function MetricsCard({
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
           {METRICS.map(({ key, label, Icon, ...rest }) => {
             const tooltip = "tooltip" in rest ? (rest as { tooltip: string }).tooltip : label;
+            const isHours = "format" in rest && rest.format === "hours";
+            const rawValue = stats[key];
+            const numericValue =
+              typeof rawValue === "number" ? rawValue : null;
+            const prevRaw = prevStats?.[key];
+            const prevNumeric =
+              typeof prevRaw === "number" ? prevRaw : null;
             const delta =
-              prevStats && TREND_METRICS.includes(key)
-                ? (stats[key] ?? 0) - (prevStats[key] ?? 0)
+              prevStats &&
+              (TREND_METRICS as readonly string[]).includes(key) &&
+              numericValue != null &&
+              prevNumeric != null
+                ? Math.round((numericValue - prevNumeric) * 100) / 100
                 : null;
             const target =
-              goals && GOAL_METRICS.includes(key)
+              goals && (GOAL_METRICS as readonly string[]).includes(key)
                 ? (goals[key as (typeof GOAL_METRICS)[number]] as
                     | number
                     | undefined)
                 : undefined;
-            const value = stats[key];
-            const met = target != null && value >= target;
+            const displayValue =
+              numericValue == null
+                ? "—"
+                : isHours
+                  ? `${formatNumber(numericValue)}h`
+                  : formatNumber(numericValue);
+            const met =
+              target != null && numericValue != null && numericValue >= target;
             return (
               <div
                 key={key}
@@ -204,21 +262,27 @@ export function MetricsCard({
                 </span>
                 <span className="flex items-center gap-1.5 shrink-0">
                   <span className="text-lg font-semibold text-primary-500 tabular-nums">
-                    {target != null ? `${value}/${target}` : value}
+                    {target != null && numericValue != null
+                      ? `${formatNumber(numericValue)}/${formatNumber(target)}`
+                      : displayValue}
                   </span>
                   {delta != null && target == null && (
                     <span
                       className="flex items-center gap-0.5 text-xs"
                       title={
                         delta > 0
-                          ? `+${delta} vs last week`
+                          ? `${formatSignedNumber(delta)} vs last week`
                           : delta < 0
-                            ? `${delta} vs last week`
+                            ? `${formatSignedNumber(delta)} vs last week`
                             : "+0 vs last week"
                       }
                     >
                       <TrendBadge delta={delta} />
-                      <span>{delta > 0 ? `+${delta}` : delta === 0 ? "+0" : delta}</span>
+                      <span>
+                        {isHours
+                          ? `${formatSignedNumber(delta)}h`
+                          : formatSignedNumber(delta)}
+                      </span>
                     </span>
                   )}
                   {target != null && met && (
@@ -291,6 +355,12 @@ export function MetricsCard({
                                 ({pr.repo})
                               </span>
                             )}
+                            {pr.additions != null || pr.deletions != null ? (
+                              <span className="text-text-muted ml-1 tabular-nums">
+                                · +{formatNumber(pr.additions ?? 0)}/-
+                                {formatNumber(pr.deletions ?? 0)}
+                              </span>
+                            ) : null}
                           </li>
                         ))}
                       </ul>
@@ -338,6 +408,16 @@ export function MetricsCard({
                             >
                               {r.title}
                             </a>
+                            {r.repo && (
+                              <span className="text-text-muted ml-1">
+                                ({r.repo})
+                              </span>
+                            )}
+                            {r.latency_hours != null ? (
+                              <span className="text-text-muted ml-1">
+                                · {r.latency_hours}h
+                              </span>
+                            ) : null}
                           </li>
                         ))}
                       </ul>

@@ -20,7 +20,11 @@
       "apollos-admin",
       "apollos-cluster",
       "apollos-platforms"
-    ]
+    ],
+    "lines_added": 15302,
+    "lines_deleted": 225,
+    "files_changed": 133,
+    "median_review_latency_hours": 1.49
   },
   "linear": {
     "completed_issues": [
@@ -327,85 +331,127 @@
         "title": "feat: add image dimension constraints to ImageUpload component",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3097",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-02T23:38:54Z"
+        "merged_at": "2026-04-02T23:38:54Z",
+        "additions": 179,
+        "deletions": 0,
+        "changed_files": 4
       },
       {
         "title": "feat: add test coverage configuration for web-embeds and canvas-ui-web",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3089",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-01T19:06:49Z"
+        "merged_at": "2026-04-01T19:06:49Z",
+        "additions": 53,
+        "deletions": 6,
+        "changed_files": 5
       },
       {
         "title": "feat: add code coverage to tap linking files",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3086",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-01T17:11:20Z"
+        "merged_at": "2026-04-01T17:11:20Z",
+        "additions": 457,
+        "deletions": 0,
+        "changed_files": 5
       },
       {
         "title": "feat: add test coverage for admin auth middleware utils",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3085",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-01T17:10:58Z"
+        "merged_at": "2026-04-01T17:10:58Z",
+        "additions": 621,
+        "deletions": 0,
+        "changed_files": 4
       },
       {
         "title": "feat: code coverage for admin routes",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3084",
         "repo": "apollos-admin",
-        "merged_at": "2026-04-01T17:31:28Z"
+        "merged_at": "2026-04-01T17:31:28Z",
+        "additions": 1337,
+        "deletions": 0,
+        "changed_files": 6
       },
       {
         "title": "chore: make ai insights page only for the current church",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3079",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-31T19:30:17Z"
+        "merged_at": "2026-03-31T19:30:17Z",
+        "additions": 57,
+        "deletions": 14,
+        "changed_files": 4
       },
       {
         "title": "feat: add web embeds v1 test coverage",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3078",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-31T19:44:51Z"
+        "merged_at": "2026-03-31T19:44:51Z",
+        "additions": 1253,
+        "deletions": 0,
+        "changed_files": 12
       },
       {
         "title": "feat: add canvas ui web test coverage",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3076",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-31T18:04:43Z"
+        "merged_at": "2026-03-31T18:04:43Z",
+        "additions": 1068,
+        "deletions": 2,
+        "changed_files": 14
       },
       {
         "title": "feat: add langgraph test coverage",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3075",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-31T16:45:29Z"
+        "merged_at": "2026-03-31T16:45:29Z",
+        "additions": 1865,
+        "deletions": 0,
+        "changed_files": 10
       },
       {
         "title": "feat: added test coverage to cluster model files",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3074",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-31T16:04:12Z"
+        "merged_at": "2026-03-31T16:04:12Z",
+        "additions": 2127,
+        "deletions": 22,
+        "changed_files": 20
       },
       {
         "title": "feat: add test coverage for admin models",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3071",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-30T22:48:02Z"
+        "merged_at": "2026-03-30T22:48:02Z",
+        "additions": 2301,
+        "deletions": 0,
+        "changed_files": 9
       },
       {
         "title": "fix: the event block edit modal was borked",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3069",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-30T18:13:10Z"
+        "merged_at": "2026-03-30T18:13:10Z",
+        "additions": 1023,
+        "deletions": 167,
+        "changed_files": 18
       },
       {
         "title": "chore: added test coverage to web auth pages",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3061",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-30T18:33:29Z"
+        "merged_at": "2026-03-30T18:33:29Z",
+        "additions": 2815,
+        "deletions": 2,
+        "changed_files": 18
       },
       {
         "title": "feat: show the embed version on the page with a badge",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3051",
         "repo": "apollos-admin",
-        "merged_at": "2026-03-30T13:51:38Z"
+        "merged_at": "2026-03-30T13:51:38Z",
+        "additions": 146,
+        "deletions": 12,
+        "changed_files": 4
       }
     ],
     "open_prs": [
@@ -425,67 +471,147 @@
     "reviews": [
       {
         "title": "refactor: reorganize finance reports to match standard module pattern",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2758"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2758",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-02T22:41:27Z",
+        "reviewed_at": "2026-04-02T23:24:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.71
       },
       {
         "title": "fix: add missing setup intent handling to payment flow",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3095"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3095",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-04-02T19:13:58Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "[APO-8118] Setting min value for tap tag range to 0 instead of 1 in web form.",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3094"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3094",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-02T15:03:56Z",
+        "reviewed_at": "2026-04-02T15:05:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.02
       },
       {
         "title": "[APO-7261] Remove embedMode=inline param, add it automatically",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3090"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3090",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-01T20:53:38Z",
+        "reviewed_at": "2026-04-01T21:36:46Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.72
       },
       {
         "title": "[Giving] Do not prefetch Giving intent if Giving drawer is not visible",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6096"
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6096",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-04-01T14:59:19Z",
+        "reviewed_at": "2026-04-01T18:51:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.88
       },
       {
         "title": "[Tap-Linking] Get local URLs working",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3081"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3081",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-01T14:42:03Z",
+        "reviewed_at": "2026-04-01T18:39:09Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.95
       },
       {
         "title": "[APO-8055] Use Stripe as transaction existence source of truth",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2748"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2748",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-01T18:46:34Z",
+        "reviewed_at": "2026-04-01T18:58:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.21
       },
       {
         "title": "Add database indexes for GenerationOccurrence",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3080"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3080",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-31T19:15:06Z",
+        "reviewed_at": "2026-03-31T19:18:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.06
       },
       {
         "title": "[APO-7351] Start date calendar horizontal scroll",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3077"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3077",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-31T18:16:22Z",
+        "reviewed_at": "2026-03-31T19:23:22Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.12
       },
       {
         "title": "fix: use Stripe API as source of truth for payout reports",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2746"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2746",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-03-31T00:00:09Z",
+        "reviewed_at": "2026-03-31T19:48:53Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 19.81
       },
       {
         "title": "[codex] Fix super admin access sync",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3070"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3070",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-30T16:14:40Z",
+        "reviewed_at": "2026-03-30T17:44:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.49
       },
       {
         "title": "Prevent duplicate recurring cancellation emails",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/3068"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3068",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-29T22:56:44Z",
+        "reviewed_at": "2026-03-30T15:05:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 16.14
       },
       {
         "title": "feat: Finance audit algorithm with Slack/Sentry reporting",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2738"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2738",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-01T14:33:29Z",
+        "reviewed_at": "2026-04-01T18:33:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4
       },
       {
         "title": "feat: make finance reports CHMS agnostic via ExternalDataBridge",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2737"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2737",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-04-02T04:48:53Z",
+        "reviewed_at": "2026-04-02T18:55:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 14.11
       },
       {
         "title": "fix: show friendly error when org profile slug already exists",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2990"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2990",
+        "repo": "apollos-admin",
+        "requested_at": "2026-03-30T19:41:45Z",
+        "reviewed_at": "2026-03-30T19:42:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.01
       },
       {
         "title": "refactor: Replace local report generation with cluster API proxy",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2989"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2989",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-02T03:35:27Z",
+        "reviewed_at": "2026-04-02T18:51:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 15.26
       }
     ]
   },

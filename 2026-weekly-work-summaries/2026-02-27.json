@@ -19,7 +19,11 @@
       "apollos-admin",
       "apollos-cluster",
       "apollos-shovel"
-    ]
+    ],
+    "lines_added": 2974,
+    "lines_deleted": 86,
+    "files_changed": 38,
+    "median_review_latency_hours": 12.91
   },
   "linear": {
     "completed_issues": [
@@ -299,119 +303,231 @@
         "title": "Revert \"debug: add logs for x-church issues\"",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2511",
         "repo": "apollos-cluster",
-        "merged_at": "2026-02-23T21:00:10Z"
+        "merged_at": "2026-02-23T21:00:10Z",
+        "additions": 0,
+        "deletions": 23,
+        "changed_files": 2
       },
       {
         "title": "debug: add logs for x-church issues",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2510",
         "repo": "apollos-cluster",
-        "merged_at": "2026-02-23T20:43:38Z"
+        "merged_at": "2026-02-23T20:43:38Z",
+        "additions": 23,
+        "deletions": 0,
+        "changed_files": 2
       },
       {
         "title": "feat: add financial reconciliation system with tests",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2471",
         "repo": "apollos-cluster",
-        "merged_at": "2026-02-24T15:20:56Z"
+        "merged_at": "2026-02-24T15:20:56Z",
+        "additions": 1856,
+        "deletions": 0,
+        "changed_files": 18
       },
       {
         "title": "feat: extract and persist fundId, amount, and campusId from Stripe charge metadata",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2448",
         "repo": "apollos-cluster",
-        "merged_at": "2026-02-23T15:02:25Z"
+        "merged_at": "2026-02-23T15:02:25Z",
+        "additions": 89,
+        "deletions": 4,
+        "changed_files": 3
       },
       {
         "title": "feat: prioritize charges.fund_id for fund name in transactions",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2822",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-23T15:10:25Z"
+        "merged_at": "2026-02-23T15:10:25Z",
+        "additions": 44,
+        "deletions": 4,
+        "changed_files": 4
       },
       {
         "title": "feat: handle Stripe payment redirect flow and improve error messages",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2776",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-27T22:02:08Z"
+        "merged_at": "2026-02-27T22:02:08Z",
+        "additions": 938,
+        "deletions": 45,
+        "changed_files": 5
       },
       {
         "title": "fix: add type assertions to form validators and refs",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2742",
         "repo": "apollos-admin",
-        "merged_at": "2026-02-23T22:38:21Z"
+        "merged_at": "2026-02-23T22:38:21Z",
+        "additions": 24,
+        "deletions": 10,
+        "changed_files": 4
       }
     ],
     "reviews": [
       {
         "title": "Use new apollos merge utils for PCO",
-        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1340"
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1340",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-02-26T22:00:19Z",
+        "reviewed_at": "2026-02-26T22:52:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.86
       },
       {
         "title": "Refactor: Create Subscriptions After Confirmation",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2526"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2526",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-02-27T21:54:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Merge people w/ non matching identities",
-        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1337"
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1337",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-02-25T16:40:23Z",
+        "reviewed_at": "2026-02-25T17:10:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.5
       },
       {
         "title": "fix: update Stripe Connect integration to use stripeAccount parameter",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2518"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2518",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-02-24T21:56:29Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "[APO-7255] Restore fixed footers for modals",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2874"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2874",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-24T19:05:11Z",
+        "reviewed_at": "2026-02-25T15:26:44Z",
+        "review_state": "APPROVED",
+        "latency_hours": 20.36
       },
       {
         "title": "APO-7265: Enforce 70-char max for Apple Marketing URL",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2869"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2869",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-24T00:53:39Z",
+        "reviewed_at": "2026-02-24T01:02:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.14
       },
       {
         "title": "[APO-7205] Fallback for non CHIPS browsers",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2868"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2868",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-24T00:26:28Z",
+        "reviewed_at": "2026-02-25T15:34:22Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 39.13
       },
       {
         "title": "Support deep-links in Web Embeds",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2867"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2867",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-23T16:48:23Z",
+        "reviewed_at": "2026-02-23T22:16:09Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.46
       },
       {
         "title": "[APO-7110] Auto grow sometimes doesn't account for Apple Pay button",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2863"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2863",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-20T19:47:20Z",
+        "reviewed_at": "2026-02-23T16:47:46Z",
+        "review_state": "APPROVED",
+        "latency_hours": 69.01
       },
       {
         "title": "feat(recurring-gifts): render recurring gifts with filtering, cancel, and resume actions",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2848"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2848",
+        "repo": "apollos-admin",
+        "requested_at": "2026-02-24T16:32:09Z",
+        "reviewed_at": "2026-02-25T15:52:42Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 23.34
       },
       {
         "title": "Fix Recurring Gift Confirmation Email for post_subscription_refactor",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2845"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2845",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-02-27T16:12:41Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Merge active apollos users in the shovel - when no chat + identities match.",
-        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1327"
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1327",
+        "repo": "apollos-shovel",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "feat: add reconciliation job queue and cursor tracking",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2472"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2472",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-02-25T15:54:45Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "feat: add financial reconciliation system with tests",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2471"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2471",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "feat: extract and persist fundId, amount, and campusId from Stripe charge metadata",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2448"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2448",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "feat: handle Stripe payment redirect flow and improve error messages",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2776"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2776",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "fix: use cluster endpoint for /ask in web and web embeds",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2413"
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2413",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       },
       {
         "title": "port admin ask endpoint and suggested searches to cluster",
-        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2210"
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/2210",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": null,
+        "review_state": null,
+        "latency_hours": null
       }
-    ]
+    ],
+    "open_prs": []
   },
   "check_ins": [
     {

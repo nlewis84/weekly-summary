@@ -6,6 +6,7 @@ import { listWeeklySummaries, fetchWeeklySummary } from "./github-fetch.js";
 import { dataCache } from "./cache.js";
 import type { Payload } from "./types.js";
 import { forecastMetricsFromSnapshotsForMonth } from "./chart-forecast.js";
+import { median } from "./github-metrics.js";
 
 /** Snapshot-based month-end projection (totals stay actual-only). */
 export interface MonthlyForecastMetrics {
@@ -17,6 +18,10 @@ export interface MonthlyForecastMetrics {
   linear_worked_on: number;
   linear_issues_created: number;
   prs_total: number;
+  lines_added: number;
+  lines_deleted: number;
+  files_changed: number;
+  median_review_latency_hours: number | null;
 }
 
 export interface MonthlyAggregate {
@@ -30,6 +35,11 @@ export interface MonthlyAggregate {
   linear_worked_on: number;
   linear_issues_created: number;
   prs_total: number;
+  lines_added: number;
+  lines_deleted: number;
+  files_changed: number;
+  /** Average of weekly medians for the month (noted: not a true monthly median of all reviews) */
+  median_review_latency_hours: number | null;
   week_count: number;
   forecast?: MonthlyForecastMetrics | null;
 }
@@ -44,6 +54,11 @@ export interface AnnualData {
   total_linear_completed: number;
   total_linear_worked_on: number;
   total_linear_issues_created: number;
+  total_lines_added: number;
+  total_lines_deleted: number;
+  total_files_changed: number;
+  /** Average of monthly average-of-weekly-medians */
+  avg_review_latency_hours: number | null;
   topRepos: { repo: string; prs: number }[];
   topProjects: { project: string; issues: number }[];
   weeks: string[];
@@ -98,6 +113,10 @@ export async function getAnnualData(
       linear_worked_on: number;
       linear_issues_created: number;
       prs_total: number;
+      lines_added: number;
+      lines_deleted: number;
+      files_changed: number;
+      latency_weeks: number[];
       count: number;
     }
   >();
@@ -116,6 +135,10 @@ export async function getAnnualData(
       linear_worked_on: 0,
       linear_issues_created: 0,
       prs_total: 0,
+      lines_added: 0,
+      lines_deleted: 0,
+      files_changed: 0,
+      latency_weeks: [] as number[],
       count: 0,
     };
     curr.prs_merged += s.prs_merged;
@@ -126,6 +149,15 @@ export async function getAnnualData(
     curr.linear_worked_on += s.linear_worked_on;
     curr.linear_issues_created += s.linear_issues_created ?? 0;
     curr.prs_total += s.prs_total;
+    curr.lines_added += s.lines_added ?? 0;
+    curr.lines_deleted += s.lines_deleted ?? 0;
+    curr.files_changed += s.files_changed ?? 0;
+    if (
+      typeof s.median_review_latency_hours === "number" &&
+      Number.isFinite(s.median_review_latency_hours)
+    ) {
+      curr.latency_weeks.push(s.median_review_latency_hours);
+    }
     curr.count += 1;
     monthMap.set(month, curr);
 
@@ -147,6 +179,15 @@ export async function getAnnualData(
     .map(([month, data]) => {
       const [y, m] = month.split("-").map(Number);
       const label = `${MONTH_LABELS[m - 1]} ${y}`;
+      // Average of weekly medians (not a true monthly median of all reviews)
+      const avgLatency =
+        data.latency_weeks.length > 0
+          ? Math.round(
+              (data.latency_weeks.reduce((a, b) => a + b, 0) /
+                data.latency_weeks.length) *
+                100
+            ) / 100
+          : null;
       return {
         month,
         label,
@@ -158,6 +199,10 @@ export async function getAnnualData(
         linear_worked_on: data.linear_worked_on,
         linear_issues_created: data.linear_issues_created,
         prs_total: data.prs_total,
+        lines_added: data.lines_added,
+        lines_deleted: data.lines_deleted,
+        files_changed: data.files_changed,
+        median_review_latency_hours: avgLatency,
         week_count: data.count,
       };
     });
@@ -182,6 +227,10 @@ export async function getAnnualData(
             linear_worked_on: fc.linear_worked_on,
             linear_issues_created: fc.linear_issues_created,
             prs_total: fc.prs_total,
+            lines_added: fc.lines_added,
+            lines_deleted: fc.lines_deleted,
+            files_changed: fc.files_changed,
+            median_review_latency_hours: fc.median_review_latency_hours,
           },
         };
       }
@@ -208,6 +257,9 @@ export async function getAnnualData(
       linear_worked_on: acc.linear_worked_on + m.linear_worked_on,
       linear_issues_created:
         acc.linear_issues_created + m.linear_issues_created,
+      lines_added: acc.lines_added + m.lines_added,
+      lines_deleted: acc.lines_deleted + m.lines_deleted,
+      files_changed: acc.files_changed + m.files_changed,
     }),
     {
       prs_merged: 0,
@@ -217,8 +269,15 @@ export async function getAnnualData(
       linear_completed: 0,
       linear_worked_on: 0,
       linear_issues_created: 0,
+      lines_added: 0,
+      lines_deleted: 0,
+      files_changed: 0,
     }
   );
+
+  const monthLatencies = months
+    .map((m) => m.median_review_latency_hours)
+    .filter((h): h is number => typeof h === "number");
 
   const result = {
     year,
@@ -230,6 +289,10 @@ export async function getAnnualData(
     total_linear_completed: totals.linear_completed,
     total_linear_worked_on: totals.linear_worked_on,
     total_linear_issues_created: totals.linear_issues_created,
+    total_lines_added: totals.lines_added,
+    total_lines_deleted: totals.lines_deleted,
+    total_files_changed: totals.files_changed,
+    avg_review_latency_hours: median(monthLatencies),
     topRepos,
     topProjects,
     weeks: yearWeeks.sort(),

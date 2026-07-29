@@ -80,6 +80,10 @@ export interface ForecastChartMetrics {
   linear_comments: number;
   prs_total: number;
   repos_count: number;
+  lines_added: number;
+  lines_deleted: number;
+  files_changed: number;
+  median_review_latency_hours: number | null;
 }
 
 function emptySums(): ForecastChartMetrics {
@@ -94,6 +98,10 @@ function emptySums(): ForecastChartMetrics {
     linear_comments: 0,
     prs_total: 0,
     repos_count: 0,
+    lines_added: 0,
+    lines_deleted: 0,
+    files_changed: 0,
+    median_review_latency_hours: null,
   };
 }
 
@@ -108,6 +116,10 @@ function addStats(sums: ForecastChartMetrics, s: Stats): void {
   sums.linear_comments += s.linear_comments ?? 0;
   sums.prs_total += s.prs_total;
   sums.repos_count += s.repos?.length ?? 0;
+  sums.lines_added += s.lines_added ?? 0;
+  sums.lines_deleted += s.lines_deleted ?? 0;
+  sums.files_changed += s.files_changed ?? 0;
+  // Latency is not paced from daily snapshots; leave null in forecast
 }
 
 /**
@@ -140,6 +152,10 @@ export function projectMetricsFromSnapshotDates(
     linear_comments: Math.round(sums.linear_comments * factor),
     prs_total: Math.round(sums.prs_total * factor),
     repos_count: Math.max(0, Math.round(sums.repos_count * factor)),
+    lines_added: Math.round(sums.lines_added * factor),
+    lines_deleted: Math.round(sums.lines_deleted * factor),
+    files_changed: Math.round(sums.files_changed * factor),
+    median_review_latency_hours: null,
   };
 }
 

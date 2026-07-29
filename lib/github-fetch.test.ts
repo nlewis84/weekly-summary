@@ -19,7 +19,7 @@ const mockPayload = {
     repos: ["owner/repo1"],
   },
   linear: { completed_issues: [], worked_on_issues: [], created_issues: [] },
-  github: { merged_prs: [], reviews: [] },
+  github: { merged_prs: [], open_prs: [], reviews: [] },
   check_ins: [],
   terminal_output: "",
   formatted_output: null,
@@ -34,7 +34,8 @@ describe("listWeeklySummaries", () => {
       ...originalEnv,
       GITHUB_TOKEN: "test-token",
       GITHUB_REPO: "owner/repo",
-      GITHUB_SUMMARY_PATHS: "2026-weekly-work-summaries",
+      // Nonexistent path so tests exercise GitHub, not local workspace files
+      GITHUB_SUMMARY_PATHS: "__vitest_no_local_summaries__",
     };
   });
 
@@ -95,7 +96,7 @@ describe("fetchWeeklySummary", () => {
       ...originalEnv,
       GITHUB_TOKEN: "test-token",
       GITHUB_REPO: "owner/repo",
-      GITHUB_SUMMARY_PATHS: "2026-weekly-work-summaries",
+      GITHUB_SUMMARY_PATHS: "__vitest_no_local_summaries__",
     };
   });
 
