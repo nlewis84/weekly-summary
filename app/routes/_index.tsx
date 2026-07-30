@@ -251,7 +251,6 @@ export default function Index() {
               onRefresh={handleRefresh}
               refreshIntervalLabel={label}
               title="Today"
-              goals={goals}
               capturedDates={capturedDates}
               basecampConfigured={basecampConfigured}
               granolaConfigured={granolaConfigured}
@@ -265,7 +264,6 @@ export default function Index() {
               onRefresh={handleRefresh}
               refreshIntervalLabel={label}
               title="Yesterday"
-              goals={goals}
               capturedDates={capturedDates}
               basecampConfigured={basecampConfigured}
               granolaConfigured={granolaConfigured}

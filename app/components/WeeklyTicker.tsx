@@ -16,6 +16,7 @@ import {
   FileMinus,
   Files,
   Timer,
+  type Icon,
 } from "phosphor-react";
 import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
@@ -128,7 +129,96 @@ const METRICS = [
   },
 ] as const;
 
-const GOAL_METRICS = ["prs_merged", "pr_reviews", "linear_completed"] as const;
+const GOAL_METRICS = [
+  { key: "prs_merged" as const, label: "PRs merged", Icon: Package },
+  { key: "pr_reviews" as const, label: "PR reviews", Icon: Eye },
+  {
+    key: "linear_completed" as const,
+    label: "Linear completed",
+    Icon: CheckCircle,
+  },
+] as const;
+
+const RING_SIZE = 72;
+const RING_STROKE = 6;
+
+function GoalRing({
+  value,
+  target,
+  label,
+  Icon,
+}: {
+  value: number;
+  target: number;
+  label: string;
+  Icon: Icon;
+}) {
+  const pct = Math.min(100, (value / target) * 100);
+  const met = value >= target;
+  const radius = (RING_SIZE - RING_STROKE) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (pct / 100) * circumference;
+
+  return (
+    <div className="flex flex-col items-center gap-2 min-w-0">
+      <div
+        className="relative"
+        style={{ width: RING_SIZE, height: RING_SIZE }}
+        title={`${formatNumber(value)} of ${formatNumber(target)} ${label}`}
+      >
+        <svg
+          width={RING_SIZE}
+          height={RING_SIZE}
+          className="-rotate-90"
+          aria-hidden
+        >
+          <circle
+            cx={RING_SIZE / 2}
+            cy={RING_SIZE / 2}
+            r={radius}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={RING_STROKE}
+            className="text-surface-elevated"
+          />
+          <circle
+            cx={RING_SIZE / 2}
+            cy={RING_SIZE / 2}
+            r={radius}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={RING_STROKE}
+            strokeLinecap="round"
+            strokeDasharray={circumference}
+            strokeDashoffset={offset}
+            className={`transition-[stroke-dashoffset] duration-500 ${
+              met
+                ? "text-emerald-600 dark:text-emerald-400"
+                : "text-primary-500"
+            }`}
+          />
+        </svg>
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <Icon
+            size={14}
+            weight="regular"
+            className={`mb-0.5 ${
+              met
+                ? "text-emerald-600 dark:text-emerald-400"
+                : "text-primary-500"
+            }`}
+          />
+          <span className="text-xs font-semibold tabular-nums text-(--color-text) leading-none">
+            {formatNumber(value)}/{formatNumber(target)}
+          </span>
+        </div>
+      </div>
+      <span className="text-xs text-text-muted text-center leading-tight truncate max-w-full">
+        {label}
+      </span>
+    </div>
+  );
+}
 
 export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
   const toast = useToast();
@@ -137,6 +227,10 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
     await navigator.clipboard.writeText(formatStatsForCopy(stats));
     toast("Stats copied to clipboard");
   };
+
+  const activeGoals = GOAL_METRICS.filter(
+    ({ key }) => typeof goals?.[key] === "number" && goals[key]! > 0
+  );
 
   return (
     <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:flex xl:flex-col xl:min-h-0">
@@ -161,97 +255,87 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
         </button>
       </div>
 
-      <div className="pt-4 border-t border-(--color-border) space-y-1 xl:flex-1 xl:min-h-0">
-        {METRICS.map(({ key, label, Icon, ...rest }, i) => {
-          const isHours = "format" in rest && rest.format === "hours";
-          const rawValue = stats[key];
-          const numericValue =
-            typeof rawValue === "number" ? rawValue : null;
-          const prevRaw = prevStats?.[key];
-          const prevNumeric =
-            typeof prevRaw === "number" ? prevRaw : null;
-          const delta =
-            prevStats && numericValue != null && prevNumeric != null
-              ? Math.round((numericValue - prevNumeric) * 100) / 100
-              : null;
-          const target =
-            goals && (GOAL_METRICS as readonly string[]).includes(key)
-              ? (goals[key as (typeof GOAL_METRICS)[number]] as
-                  | number
-                  | undefined)
-              : undefined;
-          const displayValue =
-            numericValue == null
-              ? "—"
-              : isHours
-                ? `${formatNumber(numericValue)}h`
-                : formatNumber(numericValue);
-          const met =
-            target != null && numericValue != null && numericValue >= target;
-          return (
-            <div
-              key={key}
-              className={`flex items-center justify-between gap-4 py-2.5 px-3 rounded-lg transition-colors ${
-                i % 2 === 1 ? "bg-surface-elevated/60" : ""
-              } hover:bg-surface-elevated`}
-            >
-              <span className="flex items-center gap-2 text-sm text-text-muted min-w-0">
-                <Icon
-                  size={16}
-                  weight="regular"
-                  className="text-primary-500 shrink-0"
+      <div className="pt-4 border-t border-(--color-border) space-y-4 xl:flex-1 xl:min-h-0">
+        {activeGoals.length > 0 && (
+          <div className="grid grid-cols-3 gap-3 pb-4 border-b border-(--color-border)">
+            {activeGoals.map(({ key, label, Icon }) => {
+              const raw = stats[key];
+              const value = typeof raw === "number" ? raw : 0;
+              return (
+                <GoalRing
+                  key={key}
+                  value={value}
+                  target={goals![key]!}
+                  label={label}
+                  Icon={Icon}
                 />
-                <span className="truncate">{label}</span>
-              </span>
-              <div className="flex items-center gap-2 shrink-0">
-                {target != null &&
-                  numericValue != null &&
-                  numericValue < target && (
-                  <div className="w-12 h-1 bg-surface rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary-500/60 rounded-full transition-all"
-                      style={{
-                        width: `${Math.min(100, (numericValue / target) * 100)}%`,
-                      }}
-                    />
-                  </div>
-                )}
-                <span className="text-base font-semibold text-(--color-text) tabular-nums">
-                  {target != null && numericValue != null
-                    ? `${formatNumber(numericValue)}/${formatNumber(target)}`
-                    : displayValue}
+              );
+            })}
+          </div>
+        )}
+
+        <div className="space-y-1">
+          {METRICS.map(({ key, label, Icon, ...rest }, i) => {
+            const isHours = "format" in rest && rest.format === "hours";
+            const rawValue = stats[key];
+            const numericValue =
+              typeof rawValue === "number" ? rawValue : null;
+            const prevRaw = prevStats?.[key];
+            const prevNumeric =
+              typeof prevRaw === "number" ? prevRaw : null;
+            const delta =
+              prevStats && numericValue != null && prevNumeric != null
+                ? Math.round((numericValue - prevNumeric) * 100) / 100
+                : null;
+            const displayValue =
+              numericValue == null
+                ? "—"
+                : isHours
+                  ? `${formatNumber(numericValue)}h`
+                  : formatNumber(numericValue);
+            return (
+              <div
+                key={key}
+                className={`flex items-center justify-between gap-4 py-2.5 px-3 rounded-lg transition-colors ${
+                  i % 2 === 1 ? "bg-surface-elevated/60" : ""
+                } hover:bg-surface-elevated`}
+              >
+                <span className="flex items-center gap-2 text-sm text-text-muted min-w-0">
+                  <Icon
+                    size={16}
+                    weight="regular"
+                    className="text-primary-500 shrink-0"
+                  />
+                  <span className="truncate">{label}</span>
                 </span>
-                {delta != null && target == null && (
-                  <span
-                    className="flex items-center gap-0.5 text-xs text-text-muted"
-                    title={
-                      delta > 0
-                        ? `${formatSignedNumber(delta)} vs last week`
-                        : delta < 0
+                <div className="flex items-center gap-2 shrink-0">
+                  <span className="text-base font-semibold text-(--color-text) tabular-nums">
+                    {displayValue}
+                  </span>
+                  {delta != null && (
+                    <span
+                      className="flex items-center gap-0.5 text-xs text-text-muted"
+                      title={
+                        delta > 0
                           ? `${formatSignedNumber(delta)} vs last week`
-                          : "+0 vs last week"
-                    }
-                  >
-                    <TrendBadge delta={delta} />
-                    <span>
-                      {isHours
-                        ? `${formatSignedNumber(delta)}h`
-                        : formatSignedNumber(delta)}
+                          : delta < 0
+                            ? `${formatSignedNumber(delta)} vs last week`
+                            : "+0 vs last week"
+                      }
+                    >
+                      <TrendBadge delta={delta} />
+                      <span>
+                        {isHours
+                          ? `${formatSignedNumber(delta)}h`
+                          : formatSignedNumber(delta)}
+                      </span>
                     </span>
-                  </span>
-                )}
-                {target != null && met && (
-                  <span
-                    className="text-emerald-600 dark:text-emerald-400 text-sm"
-                    title="Goal met"
-                  >
-                    ✓
-                  </span>
-                )}
+                  )}
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
 
       <p className="mt-3 pt-3 text-xs text-text-muted flex items-center gap-1.5">

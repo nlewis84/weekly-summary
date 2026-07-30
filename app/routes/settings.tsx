@@ -174,8 +174,8 @@ export default function Settings() {
               Weekly goals
             </h3>
             <p className="text-sm text-text-muted">
-              Optional targets for key metrics. Progress shows as
-              &quot;12/20&quot; in the weekly ticker. Leave blank to hide.
+              Optional targets for key metrics. Progress shows as circular
+              rings on This week. Leave blank to hide.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 xl:gap-3">
               {GOAL_KEYS.map(({ key, label }) => (
