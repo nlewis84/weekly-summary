@@ -8,7 +8,6 @@ import { RefreshButton } from "./RefreshButton";
 import { ErrorBanner } from "./ErrorBanner";
 import { useToast } from "./Toast";
 import type { Payload } from "../../lib/types";
-import type { WeeklyGoals } from "../hooks/useGoals";
 
 type SnapshotFetcherData =
   | {
@@ -56,7 +55,6 @@ interface TodaySectionProps {
   onRefresh: () => void;
   refreshIntervalLabel?: string;
   title?: string;
-  goals?: WeeklyGoals;
   capturedDates?: string[];
   basecampConfigured?: boolean;
   granolaConfigured?: boolean;
@@ -69,7 +67,6 @@ export function TodaySection({
   onRefresh,
   refreshIntervalLabel,
   title = "Today",
-  goals,
   capturedDates = [],
   basecampConfigured = false,
   granolaConfigured = false,
@@ -297,7 +294,7 @@ export function TodaySection({
             isLoading ? "opacity-90" : "opacity-100"
           }`}
         >
-          <MetricsCard stats={stats} payload={payload} goals={goals} />
+          <MetricsCard stats={stats} payload={payload} />
         </div>
       ) : isLoading && !stats ? (
         <div className="xl:flex-1 xl:min-h-0">

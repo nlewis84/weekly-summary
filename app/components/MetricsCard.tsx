@@ -21,14 +21,12 @@ import {
 } from "phosphor-react";
 import type { Stats } from "../../lib/types";
 import type { Payload } from "../../lib/types";
-import type { WeeklyGoals } from "../hooks/useGoals";
 import { formatNumber, formatSignedNumber } from "~/lib/utils";
 
 interface MetricsCardProps {
   stats: Stats;
   prevStats?: Stats | null;
   payload?: Payload | null;
-  goals?: WeeklyGoals;
 }
 
 type MetricDef = {
@@ -162,8 +160,6 @@ const SECONDARY_METRICS: MetricDef[] = [
   },
 ];
 
-const GOAL_METRICS = ["prs_merged", "pr_reviews", "linear_completed"] as const;
-
 function metricDisplay(
   stats: Stats,
   def: MetricDef
@@ -198,20 +194,13 @@ function MetricCell({
   def,
   stats,
   prevStats,
-  goals,
 }: {
   def: MetricDef;
   stats: Stats;
   prevStats?: Stats | null;
-  goals?: WeeklyGoals;
 }) {
   const { numeric, text } = metricDisplay(stats, def);
   const delta = metricDelta(stats, prevStats, def.key);
-  const target =
-    goals && (GOAL_METRICS as readonly string[]).includes(def.key)
-      ? (goals[def.key as (typeof GOAL_METRICS)[number]] as number | undefined)
-      : undefined;
-  const met = target != null && numeric != null && numeric >= target;
   const quiet = numeric == null || numeric === 0;
   const { Icon } = def;
 
@@ -229,11 +218,9 @@ function MetricCell({
               quiet ? "text-text-muted" : "text-text"
             }`}
           >
-            {target != null && numeric != null
-              ? `${formatNumber(numeric)}/${formatNumber(target)}`
-              : text}
+            {text}
           </span>
-          {delta != null && target == null && !quiet && (
+          {delta != null && !quiet && (
             <span className="flex items-center gap-0.5 text-xs text-text-muted">
               <TrendBadge delta={delta} />
               <span>
@@ -241,11 +228,6 @@ function MetricCell({
                   ? `${formatSignedNumber(delta)}h`
                   : formatSignedNumber(delta)}
               </span>
-            </span>
-          )}
-          {met && (
-            <span className="text-success-500 text-sm" title="Goal met">
-              ✓
             </span>
           )}
         </div>
@@ -259,7 +241,6 @@ export function MetricsCard({
   stats,
   prevStats,
   payload,
-  goals,
 }: MetricsCardProps) {
   const [detailsOpen, setDetailsOpen] = useState(false);
 
@@ -285,7 +266,6 @@ export function MetricsCard({
               def={def}
               stats={stats}
               prevStats={prevStats}
-              goals={goals}
             />
           ))}
           {SECONDARY_METRICS.filter((def) => hasActivity(stats, def)).map(
@@ -295,7 +275,6 @@ export function MetricsCard({
                 def={def}
                 stats={stats}
                 prevStats={prevStats}
-                goals={goals}
               />
             )
           )}
