@@ -23,7 +23,10 @@ function MetricCard({
   label: string;
   value: number | string;
 }) {
-  const display = typeof value === "number" ? formatNumber(value) : value;
+  // formatNumber renders "—" for null/undefined, so a metric missing from an
+  // older cached payload degrades to a dash instead of an empty tile.
+  const display =
+    typeof value === "string" ? value : formatNumber(value as number);
   return (
     <div className="bg-surface rounded-xl border border-(--color-border) p-4">
       <p className="text-xs text-text-muted">{label}</p>
@@ -62,8 +65,8 @@ function CompareTotals({
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
       {metrics.map(({ key, label }) => {
-        const a = primary[key] as number;
-        const b = compare[key] as number;
+        const a = (primary[key] as number) ?? 0;
+        const b = (compare[key] as number) ?? 0;
         const delta = formatDelta(a, b);
         const isUp = a > b;
         const isDown = a < b;
@@ -135,7 +138,7 @@ function ProjectsShippedRoster({
           return (
             <li
               key={entry.url ?? `${entry.week}-${idx}`}
-              className={`flex gap-4 ${idx === 0 ? "pb-3" : "py-3"} last:pb-0`}
+              className={`flex items-center gap-4 ${idx === 0 ? "pb-3" : "py-3"} last:pb-0`}
             >
               <Link
                 to={`/history/${entry.week}`}
@@ -299,7 +302,7 @@ export function AnnualChartsSection({
           />
           <MetricCard
             label="Projects shipped"
-            value={annualData.total_projects_completed}
+            value={annualData.total_projects_completed ?? 0}
           />
         </div>
       )}

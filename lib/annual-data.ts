@@ -81,6 +81,13 @@ export interface AnnualData {
   weeks: string[];
 }
 
+/**
+ * Bump when the AnnualData shape changes. The cache lives 15 minutes, so without
+ * this a running server keeps serving an object built by the previous shape and
+ * new fields read as undefined (blank metric tiles, missing sections).
+ */
+const ANNUAL_CACHE_VERSION = 2;
+
 const MONTH_LABELS = [
   "Jan",
   "Feb",
@@ -101,7 +108,7 @@ export async function getAnnualData(
   options?: { bust?: boolean }
 ): Promise<AnnualData> {
   const bust = options?.bust ?? false;
-  const key = `charts:annual:${year}`;
+  const key = `charts:annual:v${ANNUAL_CACHE_VERSION}:${year}`;
   if (!bust) {
     const cached = dataCache.get(key) as AnnualData | null;
     if (cached) return cached;
