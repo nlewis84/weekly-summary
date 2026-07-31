@@ -1,17 +1,29 @@
 import { useEffect } from "react";
-import { useLoaderData, Link, useRevalidator, useSearchParams } from "react-router";
+import {
+  useLoaderData,
+  Link,
+  useRevalidator,
+  useSearchParams,
+} from "react-router";
 import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
 import {
   fetchWeeklySummaryRaw,
   fetchWeeklySummary,
+  listWeeklySummaries,
 } from "../../lib/github-fetch";
 import { buildMarkdownSummary } from "../../lib/markdown";
 import { MetricsCard } from "~/components/MetricsCard";
 import { ProjectsShippedCard } from "~/components/ProjectsShippedCard";
 import { ErrorBanner } from "~/components/ErrorBanner";
 import { useToast } from "~/components/Toast";
-import { ArrowLeft, Copy, FilePdf } from "phosphor-react";
+import {
+  ArrowLeft,
+  CaretLeft,
+  CaretRight,
+  Copy,
+  FilePdf,
+} from "phosphor-react";
 
 export async function loader({ request, params }: LoaderFunctionArgs) {
   if (request.method !== "GET") {
@@ -28,6 +40,8 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
       payload: null,
       prevPayload: null,
       markdown: null,
+      olderWeek: null,
+      newerWeek: null,
     });
   }
 
@@ -50,11 +64,29 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
     } catch {
       // No previous week
     }
+
+    // Neighbours come from the saved weeks rather than ±7 days, so navigation
+    // hops over gaps (there is no 2026-07-10) and stops at the real ends.
+    let olderWeek: string | null = null;
+    let newerWeek: string | null = null;
+    try {
+      const weeks = await listWeeklySummaries({ bust }); // newest first
+      const idx = weeks.indexOf(week);
+      if (idx !== -1) {
+        olderWeek = weeks[idx + 1] ?? null;
+        newerWeek = idx > 0 ? (weeks[idx - 1] ?? null) : null;
+      }
+    } catch {
+      // Navigation is optional — the page still renders without it.
+    }
+
     return data({
       payload,
       prevPayload,
       markdown,
       week,
+      olderWeek,
+      newerWeek,
       error: null as string | null,
     });
   } catch (err) {
@@ -65,6 +97,8 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
       prevPayload: null,
       markdown: null,
       week,
+      olderWeek: null,
+      newerWeek: null,
     });
   }
 }
@@ -78,18 +112,59 @@ function formatWeekLabel(weekEnding: string): string {
   });
 }
 
+/**
+ * One step through the saved weeks. Renders a disabled-looking placeholder at
+ * the ends so the heading doesn't shift position between weeks.
+ */
+function WeekStep({
+  week,
+  direction,
+}: {
+  week: string | null | undefined;
+  direction: "older" | "newer";
+}) {
+  const Icon = direction === "older" ? CaretLeft : CaretRight;
+  const shared =
+    "flex items-center justify-center size-9 rounded-lg transition-colors";
+
+  if (!week) {
+    return (
+      <span
+        aria-hidden="true"
+        className={`${shared} text-text-muted/30 cursor-default`}
+      >
+        <Icon size={18} weight="bold" />
+      </span>
+    );
+  }
+
+  const label = `${direction === "older" ? "Previous" : "Next"} week — ending ${formatWeekLabel(week)}`;
+  return (
+    <Link
+      to={`/history/${week}`}
+      prefetch="intent"
+      aria-label={label}
+      title={label}
+      className={`${shared} text-text-muted hover:text-primary-500 hover:bg-surface-elevated`}
+    >
+      <Icon size={18} weight="bold" />
+    </Link>
+  );
+}
+
 export default function HistoryWeek() {
   const revalidator = useRevalidator();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { payload, prevPayload, markdown, error, week } = useLoaderData<
-    typeof loader
-  >() as {
-    payload: import("../../lib/types").Payload | null;
-    prevPayload?: import("../../lib/types").Payload | null;
-    markdown: string | null;
-    error: string | null;
-    week: string;
-  };
+  const { payload, prevPayload, markdown, error, week, olderWeek, newerWeek } =
+    useLoaderData<typeof loader>() as {
+      payload: import("../../lib/types").Payload | null;
+      prevPayload?: import("../../lib/types").Payload | null;
+      markdown: string | null;
+      error: string | null;
+      week: string;
+      olderWeek?: string | null;
+      newerWeek?: string | null;
+    };
   const toast = useToast();
 
   // Strip _bust from URL after load to keep URL clean
@@ -159,9 +234,13 @@ export default function HistoryWeek() {
       </Link>
 
       <div className="flex items-center justify-between gap-4">
-        <h2 className="text-lg font-semibold text-(--color-text)">
-          Week ending {week ? formatWeekLabel(week) : "—"}
-        </h2>
+        <div className="flex items-center gap-1 min-w-0">
+          <WeekStep week={olderWeek} direction="older" />
+          <h2 className="text-lg font-semibold text-(--color-text) truncate">
+            Week ending {week ? formatWeekLabel(week) : "—"}
+          </h2>
+          <WeekStep week={newerWeek} direction="newer" />
+        </div>
         {(payload || markdown) && (
           <div className="flex flex-wrap items-center gap-2">
             <button
