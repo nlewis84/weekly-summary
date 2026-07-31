@@ -12,7 +12,7 @@
     "pr_reviews": 34,
     "pr_comments": 13,
     "commits_pushed": 12,
-    "linear_completed": 5,
+    "linear_completed": 6,
     "linear_worked_on": 7,
     "linear_issues_created": 3,
     "linear_comments": 2,
@@ -60,6 +60,14 @@
         "project": "Charges as source of truth (decouple from stripe_events)",
         "url": "https://linear.app/differential/issue/APO-9587/make-charges-a-complete-source-of-truth-stop-reading-from-stripe",
         "completedAt": "2026-07-20T14:01:22.365Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10501",
+        "title": "Follow up on unresolved OTT livestream playback issue",
+        "project": "Crossroads Livestream Contentful Sync",
+        "url": "https://linear.app/differential/issue/APO-10501/follow-up-on-unresolved-ott-livestream-playback-issue",
+        "completedAt": "2026-07-24T15:19:31.297Z",
         "state": "Done"
       }
     ],

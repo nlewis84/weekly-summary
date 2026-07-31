@@ -12,7 +12,7 @@
     "pr_reviews": 0,
     "pr_comments": 12,
     "commits_pushed": 7,
-    "linear_completed": 0,
+    "linear_completed": 5,
     "linear_worked_on": 0,
     "repos": [
       "apollos-admin",
@@ -26,7 +26,48 @@
     "linear_projects_completed": 0
   },
   "linear": {
-    "completed_issues": [],
+    "completed_issues": [
+      {
+        "identifier": "APO-5982",
+        "title": "Updates to Sign In / Sign Up screen",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-5982/updates-to-sign-in-sign-up-screen",
+        "completedAt": "2025-12-30T20:35:26.450Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5957",
+        "title": "Logging in does not redirect correctly in all cases",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-5957/logging-in-does-not-redirect-correctly-in-all-cases",
+        "completedAt": "2025-12-29T21:27:46.776Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5956",
+        "title": "Cursor on OTP screen should work in dark mode (it is black instead of white)",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-5956/cursor-on-otp-screen-should-work-in-dark-mode-it-is-black-instead-of",
+        "completedAt": "2025-12-29T21:27:49.275Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5955",
+        "title": "You can get an error state on the login inputs without even typing anything",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-5955/you-can-get-an-error-state-on-the-login-inputs-without-even-typing",
+        "completedAt": "2025-12-29T21:27:51.116Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-5861",
+        "title": "UI Zooms in when selecting phone number",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-5861/ui-zooms-in-when-selecting-phone-number",
+        "completedAt": "2025-12-29T21:27:53.308Z",
+        "state": "Done"
+      }
+    ],
     "worked_on_issues": [],
     "created_issues": [
       {

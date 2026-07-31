@@ -12,7 +12,7 @@
     "pr_reviews": 31,
     "pr_comments": 14,
     "commits_pushed": 8,
-    "linear_completed": 10,
+    "linear_completed": 11,
     "linear_worked_on": 15,
     "linear_issues_created": 0,
     "linear_comments": 4,
@@ -107,6 +107,14 @@
         "project": "Charges as source of truth (decouple from stripe_events)",
         "url": "https://linear.app/differential/issue/APO-9589/2-write-path-populate-new-columns-link-refunds-ingest-disputes",
         "completedAt": "2026-07-13T13:25:55.438Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10354",
+        "title": "ACH bank name missing in transaction detail flyout",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/issue/APO-10354/ach-bank-name-missing-in-transaction-detail-flyout",
+        "completedAt": "2026-07-13T21:47:11.906Z",
         "state": "Done"
       }
     ],

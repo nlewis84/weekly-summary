@@ -197,8 +197,11 @@ async function main() {
     payload.stats.linear_completed = issueBaseline + completedProjects.length;
 
     writeFileSync(path, JSON.stringify(payload, null, 2), "utf8");
+    // Pair the .md with the .json by filename: a couple of files carry a
+    // meta.week_ending that differs from their own name (2026-01-30.json says
+    // 2026-01-31), and keying off meta would write to the wrong sibling.
     writeFileSync(
-      join(summariesDir, `${weekEnding}.md`),
+      path.replace(/\.json$/, ".md"),
       buildMarkdownSummary(payload),
       "utf8"
     );

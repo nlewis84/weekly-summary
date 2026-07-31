@@ -12,7 +12,7 @@
     "pr_reviews": 18,
     "pr_comments": 44,
     "commits_pushed": 3,
-    "linear_completed": 3,
+    "linear_completed": 5,
     "linear_worked_on": 7,
     "repos": [
       "apollos-cluster",
@@ -49,6 +49,22 @@
         "project": "Web Giving - ACH, Credit Card, and Apple Pay",
         "url": "https://linear.app/differential/issue/APO-6495/investigate-time-to-paint-when-coming-from-mobile-give-other-payment",
         "completedAt": "2026-01-27T21:44:09.186Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6673",
+        "title": "Improve skeletons / loading for Stripe payment element",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6673/improve-skeletons-loading-for-stripe-payment-element",
+        "completedAt": "2026-01-30T15:40:12.845Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-6541",
+        "title": "Vercel web timeout issues",
+        "project": "Web Giving",
+        "url": "https://linear.app/differential/issue/APO-6541/vercel-web-timeout-issues",
+        "completedAt": "2026-01-26T17:07:15.431Z",
         "state": "Done"
       }
     ],
