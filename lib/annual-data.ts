@@ -44,6 +44,20 @@ export interface MonthlyAggregate {
   forecast?: MonthlyForecastMetrics | null;
 }
 
+/** A project completed during the year, with the week whose summary recorded it. */
+export interface ShippedProjectEntry {
+  week: string;
+  title: string;
+  url: string | null;
+  description: string | null;
+  completedAt: string | null;
+  startedAt: string | null;
+  targetDate: string | null;
+  lead: string | null;
+  issue_count: number;
+  completed_issue_count: number;
+}
+
 export interface AnnualData {
   year: string;
   months: MonthlyAggregate[];
@@ -57,10 +71,13 @@ export interface AnnualData {
   total_lines_added: number;
   total_lines_deleted: number;
   total_files_changed: number;
+  total_projects_completed: number;
   /** Average of monthly average-of-weekly-medians */
   avg_review_latency_hours: number | null;
   topRepos: { repo: string; prs: number }[];
   topProjects: { project: string; issues: number }[];
+  /** Completed projects, newest first — too few per year to chart, so listed. */
+  projectsShipped: ShippedProjectEntry[];
   weeks: string[];
 }
 
@@ -122,6 +139,7 @@ export async function getAnnualData(
   >();
   const repoMap = new Map<string, number>();
   const projectMap = new Map<string, number>();
+  const projectsShipped: ShippedProjectEntry[] = [];
 
   for (const { week, payload } of payloads) {
     const month = week.slice(0, 7); // YYYY-MM
@@ -172,7 +190,30 @@ export async function getAnnualData(
       const proj = (i.project as string) ?? "—";
       projectMap.set(proj, (projectMap.get(proj) ?? 0) + 1);
     }
+
+    for (const p of payload.linear?.completed_projects ?? []) {
+      projectsShipped.push({
+        week,
+        title: (p.title as string) ?? "",
+        url: (p.url as string | null) ?? null,
+        description: (p.description as string | null) ?? null,
+        completedAt: (p.completedAt as string | null) ?? null,
+        startedAt: (p.startedAt as string | null) ?? null,
+        targetDate: (p.targetDate as string | null) ?? null,
+        lead: (p.lead as string | null) ?? null,
+        issue_count: typeof p.issue_count === "number" ? p.issue_count : 0,
+        completed_issue_count:
+          typeof p.completed_issue_count === "number"
+            ? p.completed_issue_count
+            : 0,
+      });
+    }
   }
+
+  // Newest first; undated entries sink to the bottom rather than disappearing.
+  projectsShipped.sort((a, b) =>
+    (b.completedAt ?? "").localeCompare(a.completedAt ?? "")
+  );
 
   const months: MonthlyAggregate[] = Array.from(monthMap.entries())
     .sort(([a], [b]) => a.localeCompare(b))
@@ -292,9 +333,11 @@ export async function getAnnualData(
     total_lines_added: totals.lines_added,
     total_lines_deleted: totals.lines_deleted,
     total_files_changed: totals.files_changed,
+    total_projects_completed: projectsShipped.length,
     avg_review_latency_hours: median(monthLatencies),
     topRepos,
     topProjects,
+    projectsShipped,
     weeks: yearWeeks.sort(),
   };
   dataCache.set(key, result);

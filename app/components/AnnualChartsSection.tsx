@@ -4,10 +4,17 @@
  */
 import { Link } from "react-router";
 import { Suspense } from "react";
-import { CalendarBlank } from "phosphor-react";
+import { ArrowUpRight, CalendarBlank, RocketLaunch } from "phosphor-react";
 import { AnnualChartsContent } from "./AnnualChartsContent";
-import type { AnnualData } from "../../lib/annual-data";
+import type { AnnualData, ShippedProjectEntry } from "../../lib/annual-data";
 import { formatNumber } from "~/lib/utils";
+import {
+  durationLabel,
+  formatProjectDate,
+  issuesLabel,
+  readProject,
+  targetLabel,
+} from "~/lib/project-facts";
 
 function MetricCard({
   label,
@@ -16,8 +23,7 @@ function MetricCard({
   label: string;
   value: number | string;
 }) {
-  const display =
-    typeof value === "number" ? formatNumber(value) : value;
+  const display = typeof value === "number" ? formatNumber(value) : value;
   return (
     <div className="bg-surface rounded-xl border border-(--color-border) p-4">
       <p className="text-xs text-text-muted">{label}</p>
@@ -51,6 +57,7 @@ function CompareTotals({
     { key: "total_linear_completed", label: "Linear completed" },
     { key: "total_linear_worked_on", label: "Linear worked on" },
     { key: "total_linear_issues_created", label: "Linear issues created" },
+    { key: "total_projects_completed", label: "Projects shipped" },
   ];
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -88,6 +95,84 @@ function CompareTotals({
           </div>
         );
       })}
+    </div>
+  );
+}
+
+/**
+ * The year's shipped projects as a roster, not a chart: a handful of entries a
+ * year plots as an empty grid, and what matters is which project and how it went.
+ */
+function ProjectsShippedRoster({
+  projects,
+}: {
+  projects: ShippedProjectEntry[];
+}) {
+  if (projects.length === 0) return null;
+
+  return (
+    <div className="bg-surface rounded-xl border border-(--color-border) p-4 sm:p-6">
+      <div className="flex items-center gap-2 mb-4">
+        <RocketLaunch size={18} weight="fill" className="text-primary-500" />
+        <h4 className="text-sm font-medium text-(--color-text)">
+          Projects shipped
+        </h4>
+        <span className="text-sm text-text-muted tabular-nums">
+          {projects.length}
+        </span>
+      </div>
+
+      <ul className="divide-y divide-(--color-border)">
+        {projects.map((entry, idx) => {
+          const project = readProject(
+            entry as unknown as Record<string, unknown>
+          );
+          const facts = [
+            durationLabel(project),
+            issuesLabel(project),
+            targetLabel(project),
+          ].filter(Boolean);
+          return (
+            <li
+              key={entry.url ?? `${entry.week}-${idx}`}
+              className={`flex gap-4 ${idx === 0 ? "pb-3" : "py-3"} last:pb-0`}
+            >
+              <Link
+                to={`/history/${entry.week}`}
+                prefetch="intent"
+                title={`Week ending ${entry.week}`}
+                className="w-14 shrink-0 text-sm tabular-nums text-text-muted hover:text-primary-500 transition-colors"
+              >
+                {formatProjectDate(entry.completedAt) ?? entry.week.slice(5)}
+              </Link>
+              <div className="min-w-0">
+                {project.url ? (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-baseline gap-1 font-medium text-(--color-text) hover:text-primary-500 transition-colors"
+                  >
+                    {project.title}
+                    <ArrowUpRight
+                      size={12}
+                      weight="bold"
+                      className="shrink-0 text-primary-500"
+                    />
+                  </a>
+                ) : (
+                  <span className="font-medium text-(--color-text)">
+                    {project.title}
+                  </span>
+                )}
+                {facts.length > 0 && (
+                  <p className="text-sm text-text-muted">{facts.join(" · ")}</p>
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
@@ -212,8 +297,14 @@ export function AnnualChartsSection({
             label="Linear issues created"
             value={annualData.total_linear_issues_created}
           />
+          <MetricCard
+            label="Projects shipped"
+            value={annualData.total_projects_completed}
+          />
         </div>
       )}
+
+      <ProjectsShippedRoster projects={annualData.projectsShipped ?? []} />
 
       {annualData.months.length > 0 && (
         <div className="bg-surface rounded-xl border border-(--color-border) p-4 sm:p-6 overflow-hidden">
