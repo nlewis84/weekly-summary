@@ -3,6 +3,7 @@ import "dotenv/config";
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { buildMarkdownSummary } from "../lib/markdown";
+import { isDeliveredProject } from "../lib/summary";
 import type { Payload } from "../lib/types";
 
 /**
@@ -166,12 +167,11 @@ async function main() {
       continue;
     }
 
-    const projects = await fetchCompletedProjects(
-      headers,
-      userId,
-      windowStart,
-      windowEnd
-    );
+    // "Incomplete" is a completed-type status in Linear, so completedAt alone
+    // would count abandoned work as shipped.
+    const projects = (
+      await fetchCompletedProjects(headers, userId, windowStart, windowEnd)
+    ).filter(isDeliveredProject);
     const completedProjects = toPayloadFormat(projects);
     if (projects.length > 0) weeksWithProjects.push(weekEnding);
 

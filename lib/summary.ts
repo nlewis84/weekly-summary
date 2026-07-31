@@ -391,6 +391,26 @@ async function softFetchLinear<T>(
 }
 
 /**
+ * Project statuses that close a project without delivering it. Linear types these
+ * as `completed` (so completedAt gets set) even though nothing shipped — this
+ * workspace has both "Complete" and "Incomplete" under that type, and only the
+ * former counts as done.
+ */
+const UNDELIVERED_PROJECT_STATUS = /^(incomplete|cancell?ed|abandoned|won'?t\s*do)$/i;
+
+/** True when the project's status means it actually shipped, not just closed. */
+export function isDeliveredProject(project: {
+  status?: { name?: string; type?: string } | null;
+}): boolean {
+  const type = project.status?.type;
+  if (type && type !== "completed") return false;
+  const name = project.status?.name?.trim();
+  // No custom status vocabulary — completedAt is the only signal available.
+  if (!name) return true;
+  return !UNDELIVERED_PROJECT_STATUS.test(name);
+}
+
+/**
  * The user who made the issue's most recent move into a completed state.
  * History comes back newest-first, so the first completed transition is the latest.
  * Returns null when that transition isn't in the fetched history (or had no actor).
@@ -527,6 +547,10 @@ async function fetchLinearData(
       ),
     ]);
 
+    // Only projects that actually shipped — "Incomplete" is a completed-type
+    // status in Linear, so completedAt alone would count abandoned work.
+    const deliveredProjects = completedProjects.filter(isDeliveredProject);
+
     // Issues you moved to Done yourself, whoever they were assigned to.
     const seenCompletedIds = new Set(
       assignedCompleted.map((i) => i.id).filter(Boolean) as string[]
@@ -571,7 +595,7 @@ async function fetchLinearData(
 
     return {
       completedIssues,
-      completedProjects,
+      completedProjects: deliveredProjects,
       workedOnIssues,
       createdIssues,
       commentedIssues,

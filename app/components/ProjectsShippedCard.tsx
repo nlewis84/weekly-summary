@@ -103,7 +103,27 @@ function Fact({
   );
 }
 
-function ProjectBlock({ project }: { project: ShippedProject }) {
+function LinearLink({ url }: { url: string }) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noreferrer"
+      className="shrink-0 inline-flex items-center gap-1 text-sm font-medium text-primary-500 hover:text-primary-400 transition-colors"
+    >
+      Linear
+      <ArrowUpRight size={14} weight="bold" />
+    </a>
+  );
+}
+
+function ProjectBlock({
+  project,
+  showLink,
+}: {
+  project: ShippedProject;
+  showLink: boolean;
+}) {
   const duration = durationLabel(project);
   const target = targetLabel(project);
   const completedOn = formatDate(project.completedAt);
@@ -120,16 +140,10 @@ function ProjectBlock({ project }: { project: ShippedProject }) {
         <h3 className="text-2xl sm:text-3xl font-semibold text-(--color-text) leading-tight tracking-tight">
           {project.title}
         </h3>
-        {project.url && (
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noreferrer"
-            className="shrink-0 inline-flex items-center gap-1 mt-1 text-sm font-medium text-primary-500 hover:text-primary-400 transition-colors"
-          >
-            Linear
-            <ArrowUpRight size={14} weight="bold" />
-          </a>
+        {showLink && project.url && (
+          <div className="mt-1">
+            <LinearLink url={project.url} />
+          </div>
         )}
       </div>
 
@@ -161,6 +175,7 @@ export function ProjectsShippedCard({ projects }: ProjectsShippedCardProps) {
   if (projects.length === 0) return null;
 
   const parsed = projects.map(readProject);
+  const single = parsed.length === 1;
 
   return (
     <section
@@ -172,13 +187,16 @@ export function ProjectsShippedCard({ projects }: ProjectsShippedCardProps) {
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-primary-500/60"
       />
 
-      <div className="flex items-center gap-2 pb-5">
-        <RocketLaunch size={22} weight="fill" className="text-primary-500" />
-        <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-500">
-          {parsed.length === 1
-            ? "Project shipped"
-            : `${parsed.length} projects shipped`}
-        </h2>
+      {/* With one project the link belongs in the card's top-right corner; with
+          several, each block carries its own beside its title. */}
+      <div className="flex items-center justify-between gap-4 pb-5">
+        <div className="flex items-center gap-2 min-w-0">
+          <RocketLaunch size={22} weight="fill" className="text-primary-500" />
+          <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-500">
+            {single ? "Project shipped" : `${parsed.length} projects shipped`}
+          </h2>
+        </div>
+        {single && parsed[0].url && <LinearLink url={parsed[0].url} />}
       </div>
 
       <div className="divide-y divide-primary-500/20">
@@ -187,7 +205,7 @@ export function ProjectsShippedCard({ projects }: ProjectsShippedCardProps) {
             key={project.url ?? idx}
             className={idx > 0 ? "pt-6" : undefined}
           >
-            <ProjectBlock project={project} />
+            <ProjectBlock project={project} showLink={!single} />
           </div>
         ))}
       </div>

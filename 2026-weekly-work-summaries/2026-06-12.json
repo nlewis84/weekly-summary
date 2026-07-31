@@ -12,7 +12,7 @@
     "pr_reviews": 40,
     "pr_comments": 39,
     "commits_pushed": 52,
-    "linear_completed": 4,
+    "linear_completed": 3,
     "linear_worked_on": 13,
     "linear_issues_created": 24,
     "linear_comments": 13,
@@ -29,7 +29,7 @@
     "lines_deleted": 293,
     "files_changed": 87,
     "median_review_latency_hours": 17.51,
-    "linear_projects_completed": 1
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [
@@ -451,22 +451,7 @@
         "state": "Released"
       }
     ],
-    "completed_projects": [
-      {
-        "identifier": "Project",
-        "title": "Admin Transaction Tab - Schema Changes & Updates",
-        "project": "Admin Transaction Tab - Schema Changes & Updates",
-        "url": "https://linear.app/differential/project/admin-transaction-tab-schema-changes-and-updates-c495b1abe35b",
-        "completedAt": "2026-06-09T15:56:52.997Z",
-        "state": "Incomplete",
-        "description": "Status schema updates & other related tasks in admin",
-        "startedAt": "2026-05-16T00:17:45.995Z",
-        "targetDate": "2026-06-26",
-        "lead": "Vincent Wilson",
-        "issue_count": 9,
-        "completed_issue_count": 9
-      }
-    ]
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [

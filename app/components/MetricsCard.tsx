@@ -29,15 +29,23 @@ interface MetricsCardProps {
   payload?: Payload | null;
 }
 
+/**
+ * Which direction of change is an improvement.
+ * "up" is the default; "down" for metrics where a bigger number is worse (review
+ * latency); "none" for volume counts where neither direction is good or bad.
+ */
+type Better = "up" | "down" | "none";
+
 type MetricDef = {
   key: keyof Stats;
   label: string;
   tooltip?: string;
   Icon: Icon;
   format?: "hours";
+  better?: Better;
 };
 
-function TrendBadge({ delta }: { delta: number }) {
+function TrendBadge({ delta, better }: { delta: number; better: Better }) {
   if (delta === 0)
     return (
       <WaveSine
@@ -47,21 +55,15 @@ function TrendBadge({ delta }: { delta: number }) {
         aria-label="no change"
       />
     );
-  if (delta > 0)
-    return (
-      <CaretUp
-        size={12}
-        weight="bold"
-        className="text-success-500"
-        aria-label={`+${delta}`}
-      />
-    );
+  const good = better === "up" ? delta > 0 : delta < 0;
+  const tone = good ? "text-success-500" : "text-error-500";
+  const Caret = delta > 0 ? CaretUp : CaretDown;
   return (
-    <CaretDown
+    <Caret
       size={12}
       weight="bold"
-      className="text-text-muted"
-      aria-label={`${delta}`}
+      className={tone}
+      aria-label={`${delta > 0 ? "+" : ""}${delta}, ${good ? "better" : "worse"}`}
     />
   );
 }
@@ -99,6 +101,7 @@ const PRIMARY_METRICS: MetricDef[] = [
     tooltip: "Median hours from review request to your first review",
     Icon: Timer,
     format: "hours",
+    better: "down",
   },
   {
     key: "linear_completed",
@@ -111,6 +114,7 @@ const PRIMARY_METRICS: MetricDef[] = [
     label: "Lines added",
     tooltip: "Additions across merged PRs",
     Icon: FilePlus,
+    better: "none",
   },
 ];
 
@@ -139,12 +143,14 @@ const SECONDARY_METRICS: MetricDef[] = [
     label: "Lines deleted",
     tooltip: "Deletions across merged PRs",
     Icon: FileMinus,
+    better: "none",
   },
   {
     key: "files_changed",
     label: "Files changed",
     tooltip: "Changed files across merged PRs",
     Icon: Files,
+    better: "none",
   },
   {
     key: "linear_issues_created",
@@ -219,6 +225,7 @@ function MetricCell({
   const delta = metricDelta(stats, prevStats, def.key);
   const quiet = numeric == null || numeric === 0;
   const { Icon } = def;
+  const better = def.better ?? "up";
 
   return (
     <div className="flex items-center gap-2.5 min-w-0" title={def.tooltip}>
@@ -240,7 +247,9 @@ function MetricCell({
           </span>
           {delta != null && !quiet && (
             <span className="flex items-center gap-0.5 text-xs text-text-muted whitespace-nowrap">
-              <TrendBadge delta={delta} />
+              {better !== "none" && (
+                <TrendBadge delta={delta} better={better} />
+              )}
               <span>
                 {def.format === "hours"
                   ? formatSignedHours(delta)

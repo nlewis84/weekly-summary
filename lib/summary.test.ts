@@ -4,8 +4,40 @@ import {
   getWindowStart,
   getWindowEnd,
   getWindowForWeekEnding,
+  isDeliveredProject,
   runSummary,
 } from "./summary";
+
+describe("isDeliveredProject", () => {
+  it("counts a project whose status means done", () => {
+    expect(
+      isDeliveredProject({ status: { name: "Complete", type: "completed" } })
+    ).toBe(true);
+  });
+
+  it("rejects completed-type statuses that mean it never shipped", () => {
+    // Linear types "Incomplete" as completed, so completedAt is set regardless.
+    expect(
+      isDeliveredProject({ status: { name: "Incomplete", type: "completed" } })
+    ).toBe(false);
+    expect(
+      isDeliveredProject({ status: { name: "Canceled", type: "canceled" } })
+    ).toBe(false);
+  });
+
+  it("rejects projects still in flight", () => {
+    expect(
+      isDeliveredProject({
+        status: { name: "In Development", type: "started" },
+      })
+    ).toBe(false);
+  });
+
+  it("falls back to completedAt when the workspace has no status vocabulary", () => {
+    expect(isDeliveredProject({})).toBe(true);
+    expect(isDeliveredProject({ status: null })).toBe(true);
+  });
+});
 
 describe("parseCheckIns", () => {
   it("returns empty array for empty input", () => {
@@ -135,7 +167,9 @@ describe("runSummary", () => {
               data: isViewer
                 ? { viewer: { id: "user-1", name: "Test User" } }
                 : isComments
-                  ? { comments: { nodes: [], pageInfo: { hasNextPage: false } } }
+                  ? {
+                      comments: { nodes: [], pageInfo: { hasNextPage: false } },
+                    }
                   : { issues: { nodes: [], pageInfo: { hasNextPage: false } } },
             }),
             { headers: { "Content-Type": "application/json" } }
@@ -143,14 +177,17 @@ describe("runSummary", () => {
         }
         if (url.includes("github.com")) {
           if (url.includes("/events")) {
-            return new Response(JSON.stringify([]), { headers: { "Content-Type": "application/json" } });
+            return new Response(JSON.stringify([]), {
+              headers: { "Content-Type": "application/json" },
+            });
           }
-          return new Response(
-            JSON.stringify({ items: [], total_count: 0 }),
-            { headers: { "Content-Type": "application/json" } }
-          );
+          return new Response(JSON.stringify({ items: [], total_count: 0 }), {
+            headers: { "Content-Type": "application/json" },
+          });
         }
-        return new Response("{}", { headers: { "Content-Type": "application/json" } });
+        return new Response("{}", {
+          headers: { "Content-Type": "application/json" },
+        });
       })
     );
   });
