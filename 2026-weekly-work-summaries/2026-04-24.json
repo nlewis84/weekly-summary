@@ -25,7 +25,8 @@
     "lines_added": 2362,
     "lines_deleted": 315,
     "files_changed": 26,
-    "median_review_latency_hours": 21.99
+    "median_review_latency_hours": 21.99,
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [
@@ -484,7 +485,8 @@
         "project": "Giving Polish & Fixes",
         "state": "To Do"
       }
-    ]
+    ],
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [

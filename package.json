@@ -11,6 +11,7 @@
     "cli:transcript": "tsx scripts/transcript-cli.ts",
     "fetch-pr-comments": "tsx scripts/fetch-pr-comments-by-date.ts",
     "backfill-linear-created": "tsx scripts/backfill-linear-issues-created.ts",
+    "backfill-linear-projects": "tsx scripts/backfill-linear-projects.ts",
     "backfill-github-metrics": "tsx scripts/backfill-github-metrics.ts",
     "typecheck": "react-router typegen && tsc",
     "lint": "eslint .",

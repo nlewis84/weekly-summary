@@ -4,7 +4,10 @@ export interface Stats {
   pr_reviews: number;
   pr_comments: number;
   commits_pushed: number;
+  /** Issues you completed plus projects you completed */
   linear_completed: number;
+  /** Projects completed — the project share of linear_completed */
+  linear_projects_completed?: number;
   linear_worked_on: number;
   linear_issues_created: number;
   linear_comments: number;
@@ -63,6 +66,7 @@ export interface Payload {
   stats: Stats;
   linear: {
     completed_issues: Array<Record<string, unknown>>;
+    completed_projects?: Array<Record<string, unknown>>;
     worked_on_issues: Array<Record<string, unknown>>;
     created_issues?: Array<Record<string, unknown>>;
     commented_issues?: Array<Record<string, unknown>>;

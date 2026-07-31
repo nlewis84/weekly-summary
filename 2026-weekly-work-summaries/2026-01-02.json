@@ -22,7 +22,8 @@
     "lines_added": 0,
     "lines_deleted": 0,
     "files_changed": 0,
-    "median_review_latency_hours": null
+    "median_review_latency_hours": null,
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [],
@@ -124,7 +125,8 @@
         "createdAt": "2025-12-29T15:39:48.134Z",
         "state": "Done"
       }
-    ]
+    ],
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [

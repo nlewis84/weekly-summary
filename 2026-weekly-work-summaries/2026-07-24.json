@@ -12,7 +12,7 @@
     "pr_reviews": 34,
     "pr_comments": 13,
     "commits_pushed": 12,
-    "linear_completed": 4,
+    "linear_completed": 5,
     "linear_worked_on": 7,
     "linear_issues_created": 3,
     "linear_comments": 2,
@@ -25,7 +25,8 @@
     "lines_added": 229,
     "lines_deleted": 63,
     "files_changed": 12,
-    "median_review_latency_hours": 10.73
+    "median_review_latency_hours": 10.73,
+    "linear_projects_completed": 1
   },
   "linear": {
     "completed_issues": [
@@ -160,6 +161,22 @@
         "url": "https://linear.app/differential/issue/APO-10528/qa-charges-as-source-of-truth",
         "project": "Charges as source of truth (decouple from stripe_events)",
         "state": "Done"
+      }
+    ],
+    "completed_projects": [
+      {
+        "identifier": "Project",
+        "title": "Charges as source of truth (decouple from stripe_events)",
+        "project": "Charges as source of truth (decouple from stripe_events)",
+        "url": "https://linear.app/differential/project/charges-as-source-of-truth-decouple-from-stripe-events-24adeb5fb56e",
+        "completedAt": "2026-07-21T21:14:26.669Z",
+        "state": "Complete",
+        "description": "Make the charges table a complete first-class source of truth so admin never queries stripe_events directly.",
+        "startedAt": "2026-06-09T15:58:31.882Z",
+        "targetDate": "2026-07-21",
+        "lead": "Nathan Lewis",
+        "issue_count": 14,
+        "completed_issue_count": 14
       }
     ]
   },

@@ -25,7 +25,8 @@
     "lines_added": 913,
     "lines_deleted": 103,
     "files_changed": 16,
-    "median_review_latency_hours": 15.03
+    "median_review_latency_hours": 15.03,
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [
@@ -144,7 +145,8 @@
         "project": "Crossroads Sprint 10",
         "state": "Ready for Release"
       }
-    ]
+    ],
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [

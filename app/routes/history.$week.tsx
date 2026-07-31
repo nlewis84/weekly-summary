@@ -8,6 +8,7 @@ import {
 } from "../../lib/github-fetch";
 import { buildMarkdownSummary } from "../../lib/markdown";
 import { MetricsCard } from "~/components/MetricsCard";
+import { ProjectsShippedCard } from "~/components/ProjectsShippedCard";
 import { ErrorBanner } from "~/components/ErrorBanner";
 import { useToast } from "~/components/Toast";
 import { ArrowLeft, Copy, FilePdf } from "phosphor-react";
@@ -199,11 +200,16 @@ export default function HistoryWeek() {
       )}
 
       {payload ? (
-        <MetricsCard
-          stats={payload.stats}
-          prevStats={prevPayload?.stats ?? null}
-          payload={payload}
-        />
+        <>
+          <ProjectsShippedCard
+            projects={payload.linear.completed_projects ?? []}
+          />
+          <MetricsCard
+            stats={payload.stats}
+            prevStats={prevPayload?.stats ?? null}
+            payload={payload}
+          />
+        </>
       ) : markdown ? (
         <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6">
           <p className="text-sm text-text-muted mb-4">

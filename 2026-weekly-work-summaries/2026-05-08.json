@@ -24,7 +24,8 @@
     "lines_added": 946,
     "lines_deleted": 255,
     "files_changed": 28,
-    "median_review_latency_hours": 13.57
+    "median_review_latency_hours": 13.57,
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [
@@ -471,7 +472,8 @@
         "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
         "state": "Released"
       }
-    ]
+    ],
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [

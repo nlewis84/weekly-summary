@@ -26,7 +26,8 @@
     "lines_added": 4347,
     "lines_deleted": 125,
     "files_changed": 77,
-    "median_review_latency_hours": 16.64
+    "median_review_latency_hours": 16.64,
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [
@@ -219,7 +220,8 @@
         "project": null,
         "state": "Ready for QA"
       }
-    ]
+    ],
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [

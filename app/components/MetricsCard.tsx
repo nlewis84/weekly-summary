@@ -103,7 +103,7 @@ const PRIMARY_METRICS: MetricDef[] = [
   {
     key: "linear_completed",
     label: "Linear done",
-    tooltip: "Linear issues completed",
+    tooltip: "Linear issues + projects you completed",
     Icon: CheckCircle,
   },
   {
@@ -160,6 +160,22 @@ const SECONDARY_METRICS: MetricDef[] = [
   },
 ];
 
+/**
+ * Hours compact enough to sit beside a delta badge on one line:
+ * one decimal under 10h, whole hours above it (10.73 → "11h", 2.84 → "2.8h").
+ */
+function formatHours(value: number): string {
+  const rounded =
+    Math.abs(value) >= 10 ? Math.round(value) : Math.round(value * 10) / 10;
+  return `${formatNumber(rounded)}h`;
+}
+
+function formatSignedHours(value: number): string {
+  const rounded =
+    Math.abs(value) >= 10 ? Math.round(value) : Math.round(value * 10) / 10;
+  return `${formatSignedNumber(rounded)}h`;
+}
+
 function metricDisplay(
   stats: Stats,
   def: MetricDef
@@ -168,7 +184,7 @@ function metricDisplay(
   const numeric = typeof raw === "number" ? raw : null;
   if (numeric == null) return { numeric: null, text: "—" };
   if (def.format === "hours") {
-    return { numeric, text: `${formatNumber(numeric)}h` };
+    return { numeric, text: formatHours(numeric) };
   }
   return { numeric, text: formatNumber(numeric) };
 }
@@ -212,7 +228,9 @@ function MetricCell({
         className={`shrink-0 ${quiet ? "text-primary-500/35" : "text-primary-500"}`}
       />
       <div className="min-w-0">
-        <div className="flex items-baseline gap-1.5 flex-wrap">
+        {/* One line, always: a wrapped delta badge pushes the label down and
+            breaks the row's baseline against its neighbours. */}
+        <div className="flex items-baseline gap-1.5 min-w-0">
           <span
             className={`text-2xl font-semibold tabular-nums leading-none ${
               quiet ? "text-text-muted" : "text-text"
@@ -221,11 +239,11 @@ function MetricCell({
             {text}
           </span>
           {delta != null && !quiet && (
-            <span className="flex items-center gap-0.5 text-xs text-text-muted">
+            <span className="flex items-center gap-0.5 text-xs text-text-muted whitespace-nowrap">
               <TrendBadge delta={delta} />
               <span>
                 {def.format === "hours"
-                  ? `${formatSignedNumber(delta)}h`
+                  ? formatSignedHours(delta)
                   : formatSignedNumber(delta)}
               </span>
             </span>
@@ -237,11 +255,7 @@ function MetricCell({
   );
 }
 
-export function MetricsCard({
-  stats,
-  prevStats,
-  payload,
-}: MetricsCardProps) {
+export function MetricsCard({ stats, prevStats, payload }: MetricsCardProps) {
   const [detailsOpen, setDetailsOpen] = useState(false);
 
   const hasDetails =
@@ -250,6 +264,7 @@ export function MetricsCard({
       (payload.github.open_prs?.length ?? 0) > 0 ||
       payload.github.reviews.length > 0 ||
       payload.linear.completed_issues.length > 0 ||
+      (payload.linear.completed_projects?.length ?? 0) > 0 ||
       payload.linear.worked_on_issues.length > 0 ||
       (payload.linear.created_issues?.length ?? 0) > 0 ||
       (payload.linear.commented_issues?.length ?? 0) > 0);
@@ -405,32 +420,51 @@ export function MetricsCard({
                       </ul>
                     </div>
                   )}
-                  {payload!.linear.completed_issues.length > 0 && (
+                  {(payload!.linear.completed_issues.length > 0 ||
+                    (payload!.linear.completed_projects?.length ?? 0) > 0) && (
                     <div>
                       <h3 className="text-sm font-medium text-text-muted mb-2">
                         Linear done
                       </h3>
                       <ul className="space-y-1">
-                        {(
-                          payload!.linear.completed_issues as LinearIssue[]
-                        ).map((i, idx) => (
-                          <li key={idx}>
-                            {i.url ? (
-                              <a
-                                href={i.url}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="text-primary-500 hover:underline"
-                              >
-                                {i.identifier} {i.title}
-                              </a>
-                            ) : (
-                              <span>
-                                {i.identifier} {i.title}
+                        {[
+                          ...(
+                            (payload!.linear.completed_projects ??
+                              []) as LinearIssue[]
+                          ).map((item) => ({ item, isProject: true })),
+                          ...(
+                            payload!.linear.completed_issues as LinearIssue[]
+                          ).map((item) => ({ item, isProject: false })),
+                        ].map(({ item, isProject }, idx) => {
+                          const label = isProject ? (
+                            <>
+                              <span className="mr-1.5 px-1.5 py-0.5 text-xs font-medium rounded bg-primary-500/15 text-primary-500">
+                                Project
                               </span>
-                            )}
-                          </li>
-                        ))}
+                              {item.title}
+                            </>
+                          ) : (
+                            <>
+                              {item.identifier} {item.title}
+                            </>
+                          );
+                          return (
+                            <li key={idx}>
+                              {item.url ? (
+                                <a
+                                  href={item.url}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="text-primary-500 hover:underline"
+                                >
+                                  {label}
+                                </a>
+                              ) : (
+                                <span>{label}</span>
+                              )}
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   )}

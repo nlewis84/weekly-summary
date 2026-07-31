@@ -25,7 +25,8 @@
     "lines_added": 2543,
     "lines_deleted": 1181,
     "files_changed": 66,
-    "median_review_latency_hours": 14.52
+    "median_review_latency_hours": 14.52,
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [
@@ -270,7 +271,8 @@
         "project": "Tell users not to refresh or press back after paying",
         "state": "Needs Review"
       }
-    ]
+    ],
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [

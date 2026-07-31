@@ -189,6 +189,116 @@ describe("runSummary", () => {
     expect(result.terminalOutput).toBeDefined();
   });
 
+  it("counts issues you moved to Done and projects you completed", async () => {
+    process.env.LINEAR_API_KEY = "lin_test";
+    process.env.GITHUB_TOKEN = "ghp_test";
+    process.env.GITHUB_USERNAME = "testuser";
+
+    const nowISO = new Date().toISOString();
+    const completedByMe = {
+      id: "issue-mine",
+      identifier: "APO-1",
+      title: "Closed by me, assigned to someone else",
+      state: { name: "Done", type: "completed" },
+      url: "https://linear.app/x/APO-1",
+      completedAt: nowISO,
+      assignee: { id: "user-2" },
+      history: {
+        nodes: [
+          {
+            createdAt: nowISO,
+            actor: { id: "user-1" },
+            toState: { type: "completed" },
+          },
+        ],
+      },
+    };
+    const completedBySomeoneElse = {
+      ...completedByMe,
+      id: "issue-theirs",
+      identifier: "APO-2",
+      title: "Closed by a teammate",
+      history: {
+        nodes: [
+          {
+            createdAt: nowISO,
+            actor: { id: "user-2" },
+            toState: { type: "completed" },
+          },
+        ],
+      },
+    };
+
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (url: string, init?: RequestInit) => {
+        if (url.includes("linear.app")) {
+          const queryStr = String(
+            (init?.body ? JSON.parse(init.body as string) : {}).query || ""
+          );
+          let data: unknown = {
+            issues: { nodes: [], pageInfo: { hasNextPage: false } },
+          };
+          if (queryStr.includes("GetViewer")) {
+            data = { viewer: { id: "user-1", name: "Test User" } };
+          } else if (queryStr.includes("GetUserComments")) {
+            data = {
+              comments: { nodes: [], pageInfo: { hasNextPage: false } },
+            };
+          } else if (queryStr.includes("GetWindowCompletedIssues")) {
+            data = {
+              issues: {
+                nodes: [completedByMe, completedBySomeoneElse],
+                pageInfo: { hasNextPage: false },
+              },
+            };
+          } else if (queryStr.includes("GetCompletedProjects")) {
+            data = {
+              projects: {
+                nodes: [
+                  {
+                    id: "project-1",
+                    name: "Crossroads Livestream Contentful Sync",
+                    url: "https://linear.app/x/project-1",
+                    completedAt: nowISO,
+                    status: { name: "Complete", type: "completed" },
+                    lead: { id: "user-1" },
+                  },
+                ],
+                pageInfo: { hasNextPage: false },
+              },
+            };
+          }
+          return new Response(JSON.stringify({ data }), {
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        if (url.includes("/events")) {
+          return new Response(JSON.stringify([]), {
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        return new Response(JSON.stringify({ items: [], total_count: 0 }), {
+          headers: { "Content-Type": "application/json" },
+        });
+      })
+    );
+
+    const result = await runSummary({
+      todayMode: true,
+      checkInsText: "",
+      outputDir: null,
+    });
+
+    // 1 issue you moved to Done (teammate's stays out) + 1 completed project
+    expect(result.payload.stats.linear_completed).toBe(2);
+    expect(result.payload.stats.linear_projects_completed).toBe(1);
+    expect(
+      result.payload.linear.completed_issues.map((i) => i.identifier)
+    ).toEqual(["APO-1"]);
+    expect(result.payload.linear.completed_projects).toHaveLength(1);
+  });
+
   it("uses weekEnding window when provided", async () => {
     process.env.LINEAR_API_KEY = "lin_test";
     process.env.GITHUB_TOKEN = "ghp_test";

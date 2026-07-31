@@ -146,6 +146,11 @@ export function formatSnapshotAsCheckIn(date: string, payload: Payload): string 
     }
   }
 
+  for (const p of linear.completed_projects ?? []) {
+    const name = (p.title as string) ?? "";
+    if (name) lines.push(`- Wrapped up project: ${name}`);
+  }
+
   if (workedPhrases.length > 0) {
     const completedSet = new Set(completedPhrases);
     const onlyWorked = workedPhrases.filter((p) => !completedSet.has(p));

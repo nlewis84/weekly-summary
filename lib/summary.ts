@@ -48,6 +48,48 @@ const LINEAR_COMPLETED_QUERY = `
   }
 `;
 
+/**
+ * Every issue in the workspace completed during the window, with recent state
+ * history attached. Linear has no filter for "who moved it to Done", so we pull
+ * the window's completions and match the actor ourselves — closing out a ticket
+ * assigned to someone else still counts as your completion.
+ */
+const LINEAR_COMPLETED_BY_ACTOR_QUERY = `
+  query GetWindowCompletedIssues($completedAfter: DateTimeOrDuration!, $completedBefore: DateTimeOrDuration!, $after: String) {
+    issues(filter: { completedAt: { gte: $completedAfter, lte: $completedBefore } }, first: 50, after: $after) {
+      nodes {
+        id identifier title state { name type } url completedAt project { name }
+        assignee { id }
+        history(first: 20) { nodes { createdAt actor { id } toState { type } } }
+      }
+      pageInfo { hasNextPage endCursor }
+    }
+  }
+`;
+
+/**
+ * Projects you lead or belong to that moved to a completed status in the window.
+ * Pulls the shipping context too (description, dates, issue counts) — a finished
+ * project is a headline deliverable, not a one-line row.
+ *
+ * Counts come from Linear's own `scope`/`progress` rather than a nested issues
+ * connection: paging issues inside projects both caps big projects at the page
+ * size and blows the 10,000-complexity ceiling on a single query.
+ */
+const LINEAR_COMPLETED_PROJECTS_QUERY = `
+  query GetCompletedProjects($userId: ID!, $completedAfter: DateTimeOrDuration!, $completedBefore: DateTimeOrDuration!, $after: String) {
+    projects(filter: { completedAt: { gte: $completedAfter, lte: $completedBefore }, or: [{ lead: { id: { eq: $userId } } }, { members: { id: { eq: $userId } } }] }, first: 50, after: $after) {
+      nodes {
+        id name url description completedAt startedAt startDate targetDate
+        scope progress
+        status { name type }
+        lead { id name }
+      }
+      pageInfo { hasNextPage endCursor }
+    }
+  }
+`;
+
 const LINEAR_WORKED_ON_QUERY = `
   query GetWorkedOnIssues($assigneeId: ID, $updatedAfter: DateTimeOrDuration!, $after: String) {
     issues(filter: { assignee: { id: { eq: $assigneeId } }, updatedAt: { gte: $updatedAfter } }, first: 100, after: $after) {
@@ -239,6 +281,42 @@ async function fetchLinearPage(
   return data.data;
 }
 
+type LinearIssueNode = {
+  id?: string;
+  identifier?: string;
+  title?: string;
+  url?: string | null;
+  state?: { name?: string; type?: string };
+  completedAt?: string | null;
+  createdAt?: string | null;
+  project?: { name?: string } | null;
+  assignee?: { id?: string } | null;
+  history?: {
+    nodes?: Array<{
+      createdAt?: string;
+      actor?: { id?: string } | null;
+      toState?: { type?: string } | null;
+    }>;
+  };
+};
+
+type LinearProjectNode = {
+  id?: string;
+  name?: string;
+  url?: string | null;
+  description?: string | null;
+  completedAt?: string | null;
+  startedAt?: string | null;
+  startDate?: string | null;
+  targetDate?: string | null;
+  status?: { name?: string; type?: string } | null;
+  lead?: { id?: string; name?: string } | null;
+  /** Total countable issues in the project, per Linear. */
+  scope?: number | null;
+  /** Fraction of scope completed (0–1). */
+  progress?: number | null;
+};
+
 async function fetchAllLinearIssues(
   headers: Record<string, string>,
   query: string,
@@ -263,10 +341,72 @@ async function fetchAllLinearIssues(
     if (!conn.pageInfo?.hasNextPage) break;
     after = conn.pageInfo?.endCursor ?? null;
   } while (after !== null);
-  return all as Array<{
-    state?: { name?: string; type?: string };
-    completedAt?: string | null;
-  }>;
+  return all as LinearIssueNode[];
+}
+
+async function fetchAllLinearProjects(
+  headers: Record<string, string>,
+  query: string,
+  variables: Record<string, unknown>
+): Promise<LinearProjectNode[]> {
+  const all: LinearProjectNode[] = [];
+  let after: string | null = null;
+  const base = { ...variables };
+  do {
+    const vars = { ...base, after };
+    const data = await fetchLinearPage(headers, query, vars);
+    const conn = (
+      data as {
+        projects?: {
+          nodes: LinearProjectNode[];
+          pageInfo?: { hasNextPage?: boolean; endCursor?: string };
+        };
+      }
+    )?.projects;
+    if (!conn?.nodes) break;
+    all.push(...conn.nodes);
+    if (!conn.pageInfo?.hasNextPage) break;
+    after = conn.pageInfo?.endCursor ?? null;
+  } while (after !== null);
+  return all;
+}
+
+/**
+ * Runs one Linear sub-query, degrading to an empty list on failure.
+ * Without this a single rejected query (complexity, rate limit, a schema change)
+ * takes down every Linear stat at once and the summary quietly reports zeros.
+ */
+async function softFetchLinear<T>(
+  label: string,
+  fetcher: () => Promise<T[]>
+): Promise<T[]> {
+  try {
+    return await fetcher();
+  } catch (err) {
+    console.error(
+      `⚠️  Linear ${label} query failed: ${(err as Error).message}`
+    );
+    return [];
+  }
+}
+
+/**
+ * The user who made the issue's most recent move into a completed state.
+ * History comes back newest-first, so the first completed transition is the latest.
+ * Returns null when that transition isn't in the fetched history (or had no actor).
+ */
+function completedByActorId(
+  issue: LinearIssueNode,
+  windowStart: Date,
+  windowEnd: Date
+): string | null {
+  const entry = (issue.history?.nodes ?? []).find(
+    (h) => h.toState?.type === "completed"
+  );
+  if (!entry?.createdAt || !entry.actor?.id) return null;
+  const at = new Date(entry.createdAt);
+  if (at < windowStart || at > windowEnd) return null;
+  return entry.actor.id;
 }
 
 type LinearComment = {
@@ -319,6 +459,7 @@ async function fetchLinearData(
   if (!key)
     return {
       completedIssues: [],
+      completedProjects: [],
       workedOnIssues: [],
       createdIssues: [],
       commentedIssues: [],
@@ -336,28 +477,67 @@ async function fetchLinearData(
     const userName =
       (userData as { viewer?: { name?: string } })?.viewer?.name ?? null;
 
-    const [completedIssues, rawWorkedOn, createdIssues, rawComments] =
-      await Promise.all([
+    const [
+      assignedCompleted,
+      windowCompleted,
+      completedProjects,
+      rawWorkedOn,
+      createdIssues,
+      rawComments,
+    ] = await Promise.all([
+      softFetchLinear("assigned completed issues", () =>
         fetchAllLinearIssues(headers, LINEAR_COMPLETED_QUERY, {
           assigneeId: userId,
           completedAfter: windowStartISO,
           completedBefore: windowEndISO,
-        }),
+        })
+      ),
+      softFetchLinear("issues completed in window", () =>
+        fetchAllLinearIssues(headers, LINEAR_COMPLETED_BY_ACTOR_QUERY, {
+          completedAfter: windowStartISO,
+          completedBefore: windowEndISO,
+        })
+      ),
+      softFetchLinear("completed projects", () =>
+        fetchAllLinearProjects(headers, LINEAR_COMPLETED_PROJECTS_QUERY, {
+          userId,
+          completedAfter: windowStartISO,
+          completedBefore: windowEndISO,
+        })
+      ),
+      softFetchLinear("worked-on issues", () =>
         fetchAllLinearIssues(headers, LINEAR_WORKED_ON_QUERY, {
           assigneeId: userId,
           updatedAfter: windowStartISO,
-        }),
+        })
+      ),
+      softFetchLinear("created issues", () =>
         fetchAllLinearIssues(headers, LINEAR_CREATED_QUERY, {
           creatorId: userId,
           createdAfter: windowStartISO,
           createdBefore: windowEndISO,
-        }),
+        })
+      ),
+      softFetchLinear("comments", () =>
         fetchAllLinearComments(headers, LINEAR_COMMENTS_QUERY, {
           userId,
           createdAfter: windowStartISO,
           createdBefore: windowEndISO,
-        }),
-      ]);
+        })
+      ),
+    ]);
+
+    // Issues you moved to Done yourself, whoever they were assigned to.
+    const seenCompletedIds = new Set(
+      assignedCompleted.map((i) => i.id).filter(Boolean) as string[]
+    );
+    const completedIssues = [
+      ...assignedCompleted,
+      ...windowCompleted.filter((issue) => {
+        if (issue.id && seenCompletedIds.has(issue.id)) return false;
+        return completedByActorId(issue, windowStart, windowEnd) === userId;
+      }),
+    ];
 
     const workedOnIssues = rawWorkedOn.filter((issue) => {
       const stateName = issue.state?.name ?? "";
@@ -391,6 +571,7 @@ async function fetchLinearData(
 
     return {
       completedIssues,
+      completedProjects,
       workedOnIssues,
       createdIssues,
       commentedIssues,
@@ -399,6 +580,7 @@ async function fetchLinearData(
   } catch {
     return {
       completedIssues: [],
+      completedProjects: [],
       workedOnIssues: [],
       createdIssues: [],
       commentedIssues: [],
@@ -853,6 +1035,7 @@ function groupPRsByRepo(
 function buildTerminalOutput(
   linearData: {
     completedIssues: unknown[];
+    completedProjects: unknown[];
     workedOnIssues: unknown[];
     createdIssues: unknown[];
     commentedIssues: unknown[];
@@ -885,6 +1068,7 @@ function buildTerminalOutput(
   out += `  • Code volume: +${volume.lines_added} / -${volume.lines_deleted} (${volume.files_changed} files)\n`;
   out += `  • Median review latency: ${medianLatency != null ? `${medianLatency}h` : "—"}\n`;
   out += `  • Linear issues completed: ${linearData.completedIssues.length}\n`;
+  out += `  • Linear projects completed: ${linearData.completedProjects.length}\n`;
   out += `  • Linear issues worked on: ${linearData.workedOnIssues.length}\n`;
   out += `  • Linear issues created: ${linearData.createdIssues.length}\n`;
   out += `  • Linear replies: ${linearData.commentedIssues.length}\n`;
@@ -1039,7 +1223,9 @@ export async function runSummary(options: {
     pr_reviews: githubData.reviews.length,
     pr_comments: githubData.comments,
     commits_pushed: githubData.commits_pushed ?? 0,
-    linear_completed: linearData.completedIssues.length,
+    linear_completed:
+      linearData.completedIssues.length + linearData.completedProjects.length,
+    linear_projects_completed: linearData.completedProjects.length,
     linear_worked_on: linearData.workedOnIssues.length,
     linear_issues_created: linearData.createdIssues.length,
     linear_comments: linearData.commentedIssues.length,
@@ -1072,14 +1258,7 @@ export async function runSummary(options: {
     stats,
     linear: {
       completed_issues: linearData.completedIssues.map(
-        (i: {
-          identifier?: string;
-          title?: string;
-          project?: { name?: string };
-          url?: string;
-          completedAt?: string | null;
-          state?: { name?: string; type?: string };
-        }) => ({
+        (i: LinearIssueNode) => ({
           identifier: i.identifier ?? "",
           title: i.title ?? "",
           project: i.project?.name ?? null,
@@ -1088,40 +1267,39 @@ export async function runSummary(options: {
           state: i.state?.name ?? i.state?.type ?? null,
         })
       ),
-      worked_on_issues: linearData.workedOnIssues.map(
-        (i: {
-          identifier?: string;
-          title?: string;
-          project?: { name?: string };
-          url?: string;
-          completedAt?: string | null;
-          state?: { name?: string; type?: string };
-        }) => ({
-          identifier: i.identifier ?? "",
-          title: i.title ?? "",
-          project: i.project?.name ?? null,
-          url: i.url ?? null,
-          completedAt: i.completedAt ?? null,
-          state: i.state?.name ?? i.state?.type ?? null,
-        })
-      ),
-      created_issues: linearData.createdIssues.map(
-        (i: {
-          identifier?: string;
-          title?: string;
-          project?: { name?: string };
-          url?: string;
-          createdAt?: string | null;
-          state?: { name?: string; type?: string };
-        }) => ({
-          identifier: i.identifier ?? "",
-          title: i.title ?? "",
-          project: i.project?.name ?? null,
-          url: i.url ?? null,
-          createdAt: i.createdAt ?? null,
-          state: i.state?.name ?? i.state?.type ?? null,
-        })
-      ),
+      completed_projects: linearData.completedProjects.map((p) => {
+        const scope = Math.round(p.scope ?? 0);
+        return {
+          identifier: "Project",
+          title: p.name ?? "",
+          project: p.name ?? null,
+          url: p.url ?? null,
+          completedAt: p.completedAt ?? null,
+          state: p.status?.name ?? p.status?.type ?? null,
+          description: p.description ?? null,
+          startedAt: p.startedAt ?? p.startDate ?? null,
+          targetDate: p.targetDate ?? null,
+          lead: p.lead?.name ?? null,
+          issue_count: scope,
+          completed_issue_count: Math.round(scope * (p.progress ?? 0)),
+        };
+      }),
+      worked_on_issues: linearData.workedOnIssues.map((i: LinearIssueNode) => ({
+        identifier: i.identifier ?? "",
+        title: i.title ?? "",
+        project: i.project?.name ?? null,
+        url: i.url ?? null,
+        completedAt: i.completedAt ?? null,
+        state: i.state?.name ?? i.state?.type ?? null,
+      })),
+      created_issues: linearData.createdIssues.map((i: LinearIssueNode) => ({
+        identifier: i.identifier ?? "",
+        title: i.title ?? "",
+        project: i.project?.name ?? null,
+        url: i.url ?? null,
+        createdAt: i.createdAt ?? null,
+        state: i.state?.name ?? i.state?.type ?? null,
+      })),
       commented_issues: linearData.commentedIssues,
     },
     github: {

@@ -24,7 +24,8 @@
     "lines_added": 283,
     "lines_deleted": 13,
     "files_changed": 6,
-    "median_review_latency_hours": 66.37
+    "median_review_latency_hours": 66.37,
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [
@@ -261,7 +262,8 @@
         "project": "Charges as source of truth (decouple from stripe_events)",
         "state": "Done"
       }
-    ]
+    ],
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [

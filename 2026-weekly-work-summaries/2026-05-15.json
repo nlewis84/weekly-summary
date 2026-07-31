@@ -12,7 +12,7 @@
     "pr_reviews": 27,
     "pr_comments": 13,
     "commits_pushed": 25,
-    "linear_completed": 8,
+    "linear_completed": 9,
     "linear_worked_on": 15,
     "linear_issues_created": 4,
     "linear_comments": 8,
@@ -25,7 +25,8 @@
     "lines_added": 8,
     "lines_deleted": 1,
     "files_changed": 2,
-    "median_review_latency_hours": 1.78
+    "median_review_latency_hours": 1.78,
+    "linear_projects_completed": 1
   },
   "linear": {
     "completed_issues": [
@@ -306,6 +307,22 @@
         "url": "https://linear.app/differential/issue/APO-9057/extra-next-button-sometimes-shows-up-during-auth",
         "project": null,
         "state": "Merged"
+      }
+    ],
+    "completed_projects": [
+      {
+        "identifier": "Project",
+        "title": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "project": "Hide Fees for Gross-Settled Churches in Admin Dashboard & Exports",
+        "url": "https://linear.app/differential/project/hide-fees-for-gross-settled-churches-in-admin-dashboard-and-exports-02ef85f58a56",
+        "completedAt": "2026-05-16T00:13:13.959Z",
+        "state": "Complete",
+        "description": "",
+        "startedAt": "2026-04-06T18:37:43.811Z",
+        "targetDate": "2026-05-15",
+        "lead": "Nathan Lewis",
+        "issue_count": 11,
+        "completed_issue_count": 11
       }
     ]
   },

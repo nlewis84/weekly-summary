@@ -23,7 +23,8 @@
     "lines_added": 1475,
     "lines_deleted": 142,
     "files_changed": 24,
-    "median_review_latency_hours": 30.14
+    "median_review_latency_hours": 30.14,
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [
@@ -127,7 +128,8 @@
         "createdAt": "2026-03-04T16:52:17.786Z",
         "state": "Not Now"
       }
-    ]
+    ],
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [

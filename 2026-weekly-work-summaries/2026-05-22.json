@@ -24,7 +24,8 @@
     "lines_added": 761,
     "lines_deleted": 41,
     "files_changed": 16,
-    "median_review_latency_hours": 36.64
+    "median_review_latency_hours": 36.64,
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [
@@ -151,7 +152,8 @@
         "project": "Admin Transaction Tab - Schema Changes & Updates",
         "state": "Released"
       }
-    ]
+    ],
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [

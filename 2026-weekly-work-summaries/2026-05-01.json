@@ -23,7 +23,8 @@
     "lines_added": 2745,
     "lines_deleted": 41,
     "files_changed": 37,
-    "median_review_latency_hours": 2.38
+    "median_review_latency_hours": 2.38,
+    "linear_projects_completed": 0
   },
   "linear": {
     "completed_issues": [
@@ -142,7 +143,8 @@
         "project": "Giving Polish & Fixes",
         "state": "Canceled"
       }
-    ]
+    ],
+    "completed_projects": []
   },
   "github": {
     "merged_prs": [
