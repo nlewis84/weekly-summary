@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Sun, Moon, Monitor } from "phosphor-react";
+import { readPref, writePref } from "~/lib/prefs-storage";
 
 type Theme = "light" | "dark" | "system";
 
@@ -26,7 +27,7 @@ export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
+    const stored = readPref(STORAGE_KEY) as Theme | null;
     const initial = stored && ["light", "dark", "system"].includes(stored) ? stored : "system";
     setTheme(initial);
     applyTheme(getEffectiveTheme(initial));
@@ -55,7 +56,7 @@ export function ThemeToggle() {
   const cycle = () => {
     const next: Theme = theme === "dark" ? "light" : theme === "light" ? "system" : "dark";
     setTheme(next);
-    localStorage.setItem(STORAGE_KEY, next);
+    writePref(STORAGE_KEY, next);
     applyTheme(getEffectiveTheme(next));
   };
 

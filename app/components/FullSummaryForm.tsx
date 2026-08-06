@@ -5,6 +5,7 @@ import { LottieIcon } from "./LottieIcon";
 import { MetricsCard } from "./MetricsCard";
 import { ErrorBanner } from "./ErrorBanner";
 import type { Payload } from "../../lib/types";
+import { readPref, writePref } from "~/lib/prefs-storage";
 
 const LAST_BUILT_KEY = "weekly-summary-last-built";
 
@@ -13,7 +14,7 @@ function readLastBuiltFromStorage(): {
   weekEnding: string;
 } | null {
   try {
-    const raw = localStorage.getItem(LAST_BUILT_KEY);
+    const raw = readPref(LAST_BUILT_KEY);
     if (!raw) return null;
     const parsed = JSON.parse(raw) as { builtAt?: string; weekEnding?: string };
     return parsed?.builtAt && parsed?.weekEnding
@@ -112,11 +113,7 @@ export function FullSummaryForm({
       const entry = { builtAt, weekEnding };
       setLastBuilt(entry);
       setIsFormExpanded(false);
-      try {
-        localStorage.setItem(LAST_BUILT_KEY, JSON.stringify(entry));
-      } catch {
-        /* ignore */
-      }
+      writePref(LAST_BUILT_KEY, JSON.stringify(entry));
     }
     if (!saved) savedRef.current = false;
   }, [saved, builtAt, weekEnding, basecampPosted, basecampError, toast]);

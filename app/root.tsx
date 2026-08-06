@@ -79,7 +79,7 @@ export default function App() {
         <meta name="color-scheme" content="dark light" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem("weekly-summary-theme");var e="system";if(t&&["light","dark","system"].includes(t))e=t;var r=e==="dark"||(e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.add(r?"dark":"light");document.documentElement.style.colorScheme=r?"dark":"light";})();`,
+            __html: `(function(){var k="weekly-summary-theme";var t=null;try{var m=document.cookie.match(/(?:^|; )weekly-summary-theme=([^;]*)/);t=m?decodeURIComponent(m[1]):localStorage.getItem(k);}catch(_){}var e="system";if(t&&["light","dark","system"].includes(t))e=t;var r=e==="dark"||(e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.add(r?"dark":"light");document.documentElement.style.colorScheme=r?"dark":"light";})();`,
           }}
         />
         {(() => {

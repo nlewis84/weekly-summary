@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { readPref, writePref } from "~/lib/prefs-storage";
 
 const STORAGE_KEY = "weekly-summary-refresh-interval";
 
@@ -19,11 +20,11 @@ function parseStored(value: string | null): (typeof REFRESH_OPTIONS)[number] {
 export function useRefreshInterval() {
   const [option, setOption] = useState<(typeof REFRESH_OPTIONS)[number]>(() => {
     if (typeof window === "undefined") return REFRESH_OPTIONS[0];
-    return parseStored(localStorage.getItem(STORAGE_KEY));
+    return parseStored(readPref(STORAGE_KEY));
   });
 
   useEffect(() => {
-    const stored = parseStored(localStorage.getItem(STORAGE_KEY));
+    const stored = parseStored(readPref(STORAGE_KEY));
     setOption(stored);
   }, []);
 
@@ -34,7 +35,7 @@ export function useRefreshInterval() {
       }
     };
     const onCustom = () => {
-      setOption(parseStored(localStorage.getItem(STORAGE_KEY)));
+      setOption(parseStored(readPref(STORAGE_KEY)));
     };
     window.addEventListener("storage", onStorage);
     window.addEventListener("weekly-summary-refresh-interval-changed", onCustom);
@@ -54,13 +55,13 @@ export function useRefreshInterval() {
 export function setRefreshInterval(value: string) {
   const parsed = REFRESH_OPTIONS.find((o) => o.value === value) ?? REFRESH_OPTIONS[0];
   const enforced = parsed.ms !== null && parsed.ms < MIN_MS ? REFRESH_OPTIONS[0] : parsed;
-  localStorage.setItem(STORAGE_KEY, enforced.value);
+  writePref(STORAGE_KEY, enforced.value);
   window.dispatchEvent(new CustomEvent("weekly-summary-refresh-interval-changed"));
 }
 
 export function getStoredRefreshInterval(): string {
   if (typeof window === "undefined") return REFRESH_OPTIONS[0].value;
-  const v = localStorage.getItem(STORAGE_KEY);
+  const v = readPref(STORAGE_KEY);
   const parsed = parseStored(v);
   return parsed.value;
 }

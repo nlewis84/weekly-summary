@@ -1,9 +1,10 @@
 /**
  * Weekly goals - optional targets for key metrics.
- * Persisted in localStorage. Goals apply to the current week.
+ * Persisted in the browser. Goals apply to the current week.
  */
 
 import { useState, useEffect, useCallback } from "react";
+import { readPref, writePref } from "~/lib/prefs-storage";
 
 export interface WeeklyGoals {
   prs_merged?: number;
@@ -17,7 +18,7 @@ const GOALS_CHANGED_EVENT = "weekly-summary-goals-changed";
 function loadGoals(): WeeklyGoals {
   if (typeof window === "undefined") return {};
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = readPref(STORAGE_KEY);
     if (!raw) return {};
     const parsed = JSON.parse(raw) as Record<string, unknown>;
     const goals: WeeklyGoals = {};
@@ -32,7 +33,7 @@ function loadGoals(): WeeklyGoals {
 
 function saveGoals(goals: WeeklyGoals) {
   if (typeof window === "undefined") return;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(goals));
+  writePref(STORAGE_KEY, JSON.stringify(goals));
   window.dispatchEvent(new CustomEvent(GOALS_CHANGED_EVENT, { detail: goals }));
 }
 

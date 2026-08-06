@@ -8,6 +8,7 @@ import {
   getStoredRefreshInterval,
 } from "../hooks/useRefreshInterval";
 import { useGoals, type WeeklyGoals } from "../hooks/useGoals";
+import { readPref, writePref } from "~/lib/prefs-storage";
 
 type Theme = "light" | "dark" | "system";
 
@@ -44,7 +45,7 @@ export default function Settings() {
   const { goals, setGoals, clearGoals } = useGoals();
 
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
+    const stored = readPref(STORAGE_KEY) as Theme | null;
     const initial =
       stored && ["light", "dark", "system"].includes(stored)
         ? stored
@@ -56,7 +57,7 @@ export default function Settings() {
 
   const handleThemeChange = (next: Theme) => {
     setTheme(next);
-    localStorage.setItem(STORAGE_KEY, next);
+    writePref(STORAGE_KEY, next);
     applyTheme(getEffectiveTheme(next));
     window.dispatchEvent(
       new CustomEvent("weekly-summary-theme-changed", { detail: next })
