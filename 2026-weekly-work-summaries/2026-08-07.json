@@ -1,0 +1,783 @@
+{
+  "meta": {
+    "generated_at": "2026-08-07T18:43:36.810Z",
+    "window_start": "2026-08-01T05:00:00.000Z",
+    "window_end": "2026-08-08T04:59:59.999Z",
+    "week_ending": "2026-08-07",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 19,
+    "prs_total": 22,
+    "pr_reviews": 43,
+    "pr_comments": 15,
+    "commits_pushed": 54,
+    "linear_completed": 3,
+    "linear_projects_completed": 0,
+    "linear_worked_on": 3,
+    "linear_issues_created": 6,
+    "linear_comments": 6,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-infrastructure",
+      "apollos-platforms"
+    ],
+    "lines_added": 4856,
+    "lines_deleted": 708,
+    "files_changed": 116,
+    "median_review_latency_hours": 3.07
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-11062",
+        "title": "Give tab WebView auth handoff fails when give URL host is not in hardcoded allowlist",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11062/give-tab-webview-auth-handoff-fails-when-give-url-host-is-not-in",
+        "completedAt": "2026-08-07T11:12:19.550Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10819",
+        "title": "Give tab card",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-10819/give-tab-card",
+        "completedAt": "2026-08-03T16:12:17.546Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10817",
+        "title": "give-tab flag + lead-gen modal",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-10817/give-tab-flag-lead-gen-modal",
+        "completedAt": "2026-08-03T16:12:17.828Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-11062",
+        "title": "Give tab WebView auth handoff fails when give URL host is not in hardcoded allowlist",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11062/give-tab-webview-auth-handoff-fails-when-give-url-host-is-not-in",
+        "completedAt": "2026-08-07T11:12:19.550Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10819",
+        "title": "Give tab card",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-10819/give-tab-card",
+        "completedAt": "2026-08-03T16:12:17.546Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10817",
+        "title": "give-tab flag + lead-gen modal",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-10817/give-tab-flag-lead-gen-modal",
+        "completedAt": "2026-08-03T16:12:17.828Z",
+        "state": "Done"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-11062",
+        "title": "Give tab WebView auth handoff fails when give URL host is not in hardcoded allowlist",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11062/give-tab-webview-auth-handoff-fails-when-give-url-host-is-not-in",
+        "createdAt": "2026-08-05T19:47:54.395Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11056",
+        "title": "Disable Android Give-tab WebView toolbar back from flow root into success/payment",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11056/disable-android-give-tab-webview-toolbar-back-from-flow-root-into",
+        "createdAt": "2026-08-05T18:01:52.996Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-11055",
+        "title": "Hide give-form back button after success on mobile web viewport",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11055/hide-give-form-back-button-after-success-on-mobile-web-viewport",
+        "createdAt": "2026-08-05T18:01:48.628Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-10992",
+        "title": "Hide Display toggles on Give tab",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-10992/hide-display-toggles-on-give-tab",
+        "createdAt": "2026-08-04T19:08:22.717Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-10991",
+        "title": "+1 ~ Android Give tab: full-bleed webview (no header)",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-10991/1-android-give-tab-full-bleed-webview-no-header",
+        "createdAt": "2026-08-04T19:08:22.474Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-10945",
+        "title": "Give tab: web Done returns with amount/campus/fund still set",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-10945/give-tab-web-done-returns-with-amountcampusfund-still-set",
+        "createdAt": "2026-08-03T15:03:59.243Z",
+        "state": "Merged"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-10823",
+        "title": "QA pass: Give tab",
+        "url": "https://linear.app/differential/issue/APO-10823/qa-pass-give-tab",
+        "project": "Give Tab",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-11064",
+        "title": "Clarify how giving links are created and mapped",
+        "url": "https://linear.app/differential/issue/APO-11064/clarify-how-giving-links-are-created-and-mapped",
+        "project": "Giving Campaign Links",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10827",
+        "title": "Create an admin endpoint in Apollos to accept incoming verified identities from Anywhere",
+        "url": "https://linear.app/differential/issue/APO-10827/create-an-admin-endpoint-in-apollos-to-accept-incoming-verified",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-10959",
+        "title": "Cluster: port admin's exact-address matching to the email guard allow-list",
+        "url": "https://linear.app/differential/issue/APO-10959/cluster-port-admins-exact-address-matching-to-the-email-guard-allow",
+        "project": "Prevent Erroneous Emails from being sent from Staging",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10882",
+        "title": "Fees Showing Up in Crossroads Transactions Report in Staging",
+        "url": "https://linear.app/differential/issue/APO-10882/fees-showing-up-in-crossroads-transactions-report-in-staging",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10832",
+        "title": "Give tab: Done on thank-you screen fails",
+        "url": "https://linear.app/differential/issue/APO-10832/give-tab-done-on-thank-you-screen-fails",
+        "project": "Give Tab",
+        "state": "Canceled"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "fix(dashboard): name platforms deploy lanes by the build you can install",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/53",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-08-06T19:52:50Z",
+        "additions": 170,
+        "deletions": 46,
+        "changed_files": 4
+      },
+      {
+        "title": "feat: keep issue comments brief; leave detail on inline findings",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/50",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-08-06T16:25:21Z",
+        "additions": 35,
+        "deletions": 29,
+        "changed_files": 3
+      },
+      {
+        "title": "feat: action-oriented severity labels and sensitivity-aware model routing",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/49",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-08-06T16:13:05Z",
+        "additions": 101,
+        "deletions": 18,
+        "changed_files": 8
+      },
+      {
+        "title": "feat: Cloudflare-style review comments with concise LGTM sections",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/48",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-08-06T15:22:14Z",
+        "additions": 771,
+        "deletions": 159,
+        "changed_files": 14
+      },
+      {
+        "title": "feat: $2 review spend limit + money formatting",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/47",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-08-06T00:45:55Z",
+        "additions": 333,
+        "deletions": 18,
+        "changed_files": 16
+      },
+      {
+        "title": "fix(redirect): recognize configured Apollos web hosts for Give tab auth handoff",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3765",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-08-05T23:54:13Z",
+        "additions": 177,
+        "deletions": 9,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(mobile): disable Give-tab WebView toolbar back (APO-11056)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6859",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-08-06T12:00:35Z",
+        "additions": 49,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(web): stop the give form offering a back arrow into a finished gift (APO-11055)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3990",
+        "repo": "apollos-admin",
+        "merged_at": "2026-08-05T23:41:38Z",
+        "additions": 82,
+        "deletions": 19,
+        "changed_files": 8
+      },
+      {
+        "title": "chore: add 1 review learning(s)",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/46",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-08-05T16:11:37Z",
+        "additions": 5,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "Android Give tab: full-bleed webview, no header (APO-10991)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6852",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-08-05T13:33:07Z",
+        "additions": 120,
+        "deletions": 12,
+        "changed_files": 6
+      },
+      {
+        "title": "Hide Display header toggles on Give tabs (APO-10992)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3951",
+        "repo": "apollos-admin",
+        "merged_at": "2026-08-05T12:18:42Z",
+        "additions": 161,
+        "deletions": 55,
+        "changed_files": 2
+      },
+      {
+        "title": "feat(dashboard): track apollos-platforms release tags and OTA status",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/51",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-08-05T01:13:04Z",
+        "additions": 923,
+        "deletions": 37,
+        "changed_files": 11
+      },
+      {
+        "title": "test(mobile): Maestro e2e for Give tab (APO-10821)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6831",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-08-04T20:00:11Z",
+        "additions": 83,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "Admin: Playwright e2e for Give tab (APO-10822)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3936",
+        "repo": "apollos-admin",
+        "merged_at": "2026-08-05T14:16:39Z",
+        "additions": 179,
+        "deletions": 8,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(admin): keep the Fee Settlement toggle label static",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3932",
+        "repo": "apollos-admin",
+        "merged_at": "2026-08-03T18:30:37Z",
+        "additions": 10,
+        "deletions": 22,
+        "changed_files": 2
+      },
+      {
+        "title": "fix: clear Give tab after web Done and Apple Pay thank-you",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6824",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-08-03T19:41:39Z",
+        "additions": 128,
+        "deletions": 40,
+        "changed_files": 3
+      },
+      {
+        "title": "Mobile: keep giving history button visible while sheets open (APO-10829)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6799",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-08-04T15:26:02Z",
+        "additions": 194,
+        "deletions": 103,
+        "changed_files": 7
+      },
+      {
+        "title": "Mobile: render the Give tab (APO-10820)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6798",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-08-03T14:59:14Z",
+        "additions": 180,
+        "deletions": 67,
+        "changed_files": 10
+      },
+      {
+        "title": "feat(dashboard): track Crossroads mobile and API deployments",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/45",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-08-04T17:54:32Z",
+        "additions": 1155,
+        "deletions": 63,
+        "changed_files": 11
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "APO-10112: ESLint guard + final stripe_events SQL cleanup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3696",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix: [charges-source-of-truth] ensure subscription transactions can be filtered",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3108",
+        "repo": "apollos-cluster",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "feat(admin): add Giving Overview permission",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4003",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-07T17:54:37Z",
+        "reviewed_at": "2026-08-07T17:58:35Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.07
+      },
+      {
+        "title": "feat(admin): export Migration Started tab as filtered xlsx",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4001",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-07T15:15:50Z",
+        "reviewed_at": "2026-08-07T15:49:25Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "fix: prefill Radiant Pushpay campus fund",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4000",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-07T12:30:13Z",
+        "reviewed_at": "2026-08-07T15:48:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.31
+      },
+      {
+        "title": "feat: action-oriented severity labels and sensitivity-aware model routing",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/49",
+        "repo": "apollos-code-reviewer",
+        "requested_at": null,
+        "reviewed_at": "2026-08-06T16:11:52Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(web-embeds-v2): merge fullscreen and autoplay allow on inline iframes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3995",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-06T12:17:26Z",
+        "reviewed_at": "2026-08-06T15:07:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.84
+      },
+      {
+        "title": "Fix cumulative Linear hotfix release sync",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3994",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T21:24:44Z",
+        "reviewed_at": "2026-08-05T23:43:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.32
+      },
+      {
+        "title": "fix(redirect): recognize configured Apollos web hosts for Give tab auth handoff",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3765",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-08-05T20:00:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "refactor: flatten Web giving routes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3974",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-07T15:49:31Z",
+        "reviewed_at": "2026-08-07T15:58:27Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.15
+      },
+      {
+        "title": "refactor: flatten Web auth and profile routes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3973",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-06T16:17:10Z",
+        "reviewed_at": "2026-08-06T19:58:17Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.69
+      },
+      {
+        "title": "chore: remove unused MessageList, auth-verify-validator, getGraphqlErrorMessage (APO-11053)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3972",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T17:14:33Z",
+        "reviewed_at": "2026-08-05T18:57:44Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 1.72
+      },
+      {
+        "title": "refactor: remove Remix from Tap Linking and Storybook",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3971",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T20:29:25Z",
+        "reviewed_at": "2026-08-05T23:47:42Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 3.3
+      },
+      {
+        "title": "fix(web): pass church Amplitude key into AnalyticsProvider",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3970",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T18:40:53Z",
+        "reviewed_at": "2026-08-05T23:36:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.93
+      },
+      {
+        "title": "test(web): W2 auth edge paths + ACH bank link for money-route gate",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3969",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T23:27:12Z",
+        "reviewed_at": "2026-08-05T23:48:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.36
+      },
+      {
+        "title": "test(admin): A2 Giving authenticated page-load smokes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3968",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T23:27:11Z",
+        "reviewed_at": "2026-08-06T19:59:01Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 20.53
+      },
+      {
+        "title": "test(admin): A1 un-fixme authenticated shell + Giving transactions/reports",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3967",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T23:27:10Z",
+        "reviewed_at": "2026-08-06T00:12:47Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.76
+      },
+      {
+        "title": "test(web): W1 money-path harden + recurring cancel in default gate",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3966",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T23:27:09Z",
+        "reviewed_at": "2026-08-05T23:53:07Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.43
+      },
+      {
+        "title": "fix(web-embeds-v2): delegate fullscreen and autoplay on the modal iframe",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3965",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T15:46:33Z",
+        "reviewed_at": "2026-08-05T15:59:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.21
+      },
+      {
+        "title": "fix(admin): guard empty Question Block content in Novel editor",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3962",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T10:15:17Z",
+        "reviewed_at": "2026-08-05T15:23:14Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 5.13
+      },
+      {
+        "title": "fix(admin): exclude aiWriter nodes from AI context",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3961",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T13:26:17Z",
+        "reviewed_at": "2026-08-05T15:21:38Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.92
+      },
+      {
+        "title": "fix(admin): land non-super-admins on a real Giving tab",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3945",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-05T15:20:11Z",
+        "reviewed_at": "2026-08-05T15:33:49Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.23
+      },
+      {
+        "title": "fix(web): return JSON 401 from api.profile on query Response",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3944",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-04T20:18:49Z",
+        "reviewed_at": "2026-08-05T14:56:48Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 18.63
+      },
+      {
+        "title": "fix(web): narrow query() Response at content and loader call sites",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3943",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-04T20:23:35Z",
+        "reviewed_at": "2026-08-05T15:08:54Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 18.76
+      },
+      {
+        "title": "fix(web-embeds-v2): let a preview's own web deploy win over the base-URL override",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3942",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-04T14:03:26Z",
+        "reviewed_at": "2026-08-04T14:41:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.64
+      },
+      {
+        "title": "chore(web): lint the whole apps/web workspace, not just ./app",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3941",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-04T13:55:53Z",
+        "reviewed_at": "2026-08-04T14:36:19Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.67
+      },
+      {
+        "title": "fix(finance): backfill charges.fund_id/campus_id from recurring_charges (APO-10969)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3730",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-08-04T04:22:28Z",
+        "reviewed_at": "2026-08-04T13:12:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 8.84
+      },
+      {
+        "title": "fix(web): don't log a donor out when the refresh call can't reach cluster",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3939",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-04T03:24:16Z",
+        "reviewed_at": "2026-08-04T13:56:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 10.54
+      },
+      {
+        "title": "fix(finance): fall back to recurring_charges fund/campus on charge webhooks (APO-10969)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3729",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-08-04T04:12:01Z",
+        "reviewed_at": "2026-08-04T13:14:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 9.05
+      },
+      {
+        "title": "fix(admin): stop rendering failed Giving balance requests as $0.00",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3938",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-04T01:41:59Z",
+        "reviewed_at": "2026-08-04T14:04:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.37
+      },
+      {
+        "title": "ci(web-embeds): serialize the shared staging-fixture job",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3937",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-04T02:09:06Z",
+        "reviewed_at": "2026-08-04T14:31:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.37
+      },
+      {
+        "title": "test(mobile): Maestro e2e for Give tab (APO-10821)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6831",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-08-04T13:43:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Admin: Playwright e2e for Give tab (APO-10822)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3936",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-08-04T13:44:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Harden prerelease tag creation",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3934",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-03T17:09:33Z",
+        "reviewed_at": "2026-08-03T18:56:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.78
+      },
+      {
+        "title": "fix(web): keep query() recovery responses in tuple shape (APO-10947)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3933",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-03T17:34:55Z",
+        "reviewed_at": "2026-08-03T19:17:40Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.71
+      },
+      {
+        "title": "fix(tap-linking): clear apps/tap-linking typecheck errors",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3920",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-03T15:09:22Z",
+        "reviewed_at": "2026-08-03T18:50:51Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.69
+      },
+      {
+        "title": "fix(web): narrow query() Response at auth and OTP call sites",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3918",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-03T13:41:11Z",
+        "reviewed_at": "2026-08-03T18:48:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 5.12
+      },
+      {
+        "title": "Mobile: keep giving history button visible while sheets open (APO-10829)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6799",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-08-03T19:25:41Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Mobile: render the Give tab (APO-10820)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6798",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-08-03T13:51:19Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): hard-fail empty Creator outlines and surface stream errors",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3866",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-23T22:26:13Z",
+        "reviewed_at": "2026-08-05T14:30:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 304.07
+      },
+      {
+        "title": "feat(web): inline embed transparency, height, and loader skeleton (4/4)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3746",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-25T02:03:23Z",
+        "reviewed_at": "2026-08-04T14:39:38Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 252.6
+      },
+      {
+        "title": "APO-10112: ESLint guard + final stripe_events SQL cleanup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3696",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-08-03T19:57:17Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(web/search): streamed AI answer + citations",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3598",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-04T13:53:02Z",
+        "reviewed_at": "2026-08-04T14:32:14Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.65
+      },
+      {
+        "title": "chore: remove obsolete Remix router compatibility shims",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3464",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-08-04T14:27:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
+      },
+      {
+        "title": "chore: migrate canvas web router imports",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3463",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-08-03T18:47:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- fix(admin): keep the Fee Settlement toggle label static\n- fix: clear Give tab after web Done and Apple Pay thank-you\n- Mobile: render the Give tab (APO-10820)\n- Reviewed: Harden prerelease tag creation\n- Reviewed: fix(web): keep query() recovery responses in tuple shape (APO-10947)\n- Reviewed: fix(tap-linking): clear apps/tap-linking typecheck errors\n- Reviewed: fix(web): narrow query() T | Response at call sites\n- Reviewed: Mobile: keep giving history button visible while sheets open (APO-10829)\n- Reviewed: Mobile: render the Give tab (APO-10820)\n- Reviewed: APO-10112: ESLint guard + final stripe_events SQL cleanup\n- Reviewed: chore: migrate canvas web router imports\n- Done: APO-10819: Give tab card\n- Done: APO-10817: give-tab flag + lead-gen modal\n- In progress: APO-10945: Give tab: web Done returns with amount/campus/fund still set\n- In progress: APO-10829: Keep history button visible while sheets open\n- In progress: APO-10822: E2E: Give tab\n- In progress: APO-10821: E2E: Give tab\n- Filed a new Linear ticket\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- feat(dashboard): track apollos-platforms release tags and OTA status\n- test(mobile): Maestro e2e for Give tab (APO-10821)\n- Mobile: keep giving history button visible while sheets open (APO-10829)\n- feat(dashboard): track Crossroads mobile and API deployments\n- Reviewed: fix(web-embeds-v2): let a preview's own web deploy win over the base-URL override\n- Reviewed: chore(web): lint the whole apps/web workspace, not just ./app\n- Reviewed: fix(finance): backfill charges.fund_id/campus_id from recurring_charges (APO-10969)\n- Reviewed: fix(web): don't log a donor out when the refresh call can't reach cluster\n- Reviewed: fix(finance): fall back to recurring_charges fund/campus on charge webhooks (APO-10969)\n- Reviewed: fix(admin): stop rendering failed Giving balance requests as $0.00\n- Reviewed: ci(web-embeds): serialize the shared staging-fixture job\n- Reviewed: test(mobile): Maestro e2e for Give tab (APO-10821)\n- Reviewed: Admin: Playwright e2e for Give tab (APO-10822)\n- Reviewed: feat(web): inline embed transparency, height, and loader skeleton (4/4)\n- Reviewed: feat(web/search): streamed AI answer + citations\n- Reviewed: chore: remove obsolete Remix router compatibility shims\n- In progress: APO-10992: Hide Display toggles on Give tab\n- In progress: APO-10991: +1 ~ Android Give tab: full-bleed webview (no header)\n- In progress: APO-10822: E2E: Give tab\n- Filed 2 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- feat: $2 review spend limit + money formatting\n- fix(redirect): recognize configured Apollos web hosts for Give tab auth handoff\n- fix(web): stop the give form offering a back arrow into a finished gift (APO-11055)\n- chore: add 1 review learning(s)\n- Android Give tab: full-bleed webview, no header (APO-10991)\n- Hide Display header toggles on Give tabs (APO-10992)\n- Admin: Playwright e2e for Give tab (APO-10822)\n- Reviewed: Fix cumulative Linear hotfix release sync\n- Reviewed: fix(redirect): recognize configured Apollos web hosts for Give tab auth handoff\n- Reviewed: chore: remove unused MessageList, auth-verify-validator, getGraphqlErrorMessage (APO-11053)\n- Reviewed: refactor: remove Remix from Tap Linking and Storybook\n- Reviewed: fix(web): pass church Amplitude key into AnalyticsProvider\n- Reviewed: test(web): W2 auth edge paths + ACH bank link for money-route gate\n- Reviewed: test(admin): A1 un-fixme authenticated shell + Giving transactions/reports\n- Reviewed: test(web): W1 money-path harden + recurring cancel in default gate\n- Reviewed: fix(web-embeds-v2): delegate fullscreen and autoplay on the modal iframe\n- Reviewed: fix(admin): guard empty Question Block content in Novel editor\n- Reviewed: fix(admin): exclude aiWriter nodes from AI context\n- Reviewed: fix(admin): land non-super-admins on a real Giving tab\n- …and 5 more reviews\n- In progress: APO-11056: Disable Android Give-tab WebView toolbar back from flow root into success/payment\n- Filed 3 new Linear tickets\n- Left comments on PRs"
+    },
+    {
+      "day": "Thursday",
+      "content": "- fix(dashboard): name platforms deploy lanes by the build you can install\n- feat: keep issue comments brief; leave detail on inline findings\n- feat: action-oriented severity labels and sensitivity-aware model routing\n- feat: Cloudflare-style review comments with concise LGTM sections\n- fix(mobile): disable Give-tab WebView toolbar back (APO-11056)\n- Reviewed: feat: action-oriented severity labels and sensitivity-aware model routing\n- Reviewed: fix(web-embeds-v2): merge fullscreen and autoplay allow on inline iframes\n- Reviewed: refactor: flatten Web auth and profile routes\n- Reviewed: refactor: remove Remix from Tap Linking and Storybook\n- Reviewed: test(admin): A2 Giving authenticated page-load smokes\n- Reviewed: feat(web/search): streamed AI answer + citations\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- Reviewed: feat(admin): add Giving Overview permission\n- Reviewed: feat(admin): export Migration Started tab as filtered xlsx\n- Reviewed: fix: prefill Radiant Pushpay campus fund\n- Reviewed: refactor: flatten Web giving routes\n- Done: APO-11062: Give tab WebView auth handoff fails when give URL host is not in hardcoded allowlist\n- Left comments on PRs"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 19\n  • PR reviews: 43\n  • Commits pushed: 54\n  • Code volume: +4856 / -708 (116 files)\n  • Median review latency: 3.07h\n  • Linear issues completed: 3\n  • Linear projects completed: 0\n  • Linear issues worked on: 3\n  • Linear issues created: 6\n  • Linear replies: 6\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-infrastructure, apollos-platforms\n\n📝 Check-ins:\n\n  Monday: - fix(admin): keep the Fee Settlement toggle label static\n- fix: clear Give tab ...\n  Tuesday: - feat(dashboard): track apollos-platforms release tags and OTA status\n- test(mo...\n  Wednesday: - feat: $2 review spend limit + money formatting\n- fix(redirect): recognize conf...\n  Thursday: - fix(dashboard): name platforms deploy lanes by the build you can install\n- fea...\n  Friday: - Reviewed: feat(admin): add Giving Overview permission\n- Reviewed: feat(admin):...\n",
+  "formatted_output": null
+}
