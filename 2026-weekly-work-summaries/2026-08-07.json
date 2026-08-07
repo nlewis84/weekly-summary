@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-07T18:43:36.810Z",
+    "generated_at": "2026-08-07T19:05:41.864Z",
     "window_start": "2026-08-01T05:00:00.000Z",
     "window_end": "2026-08-08T04:59:59.999Z",
     "week_ending": "2026-08-07",
@@ -9,7 +9,7 @@
   "stats": {
     "prs_merged": 19,
     "prs_total": 22,
-    "pr_reviews": 43,
+    "pr_reviews": 44,
     "pr_comments": 15,
     "commits_pushed": 54,
     "linear_completed": 3,
@@ -27,7 +27,7 @@
     "lines_added": 4856,
     "lines_deleted": 708,
     "files_changed": 116,
-    "median_review_latency_hours": 3.07
+    "median_review_latency_hours": 2.84
   },
   "linear": {
     "completed_issues": [
@@ -367,6 +367,15 @@
       }
     ],
     "reviews": [
+      {
+        "title": "feat(admin): Reminder Email and Payment Method filters on Migration Started",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4004",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-07T18:55:20Z",
+        "reviewed_at": "2026-08-07T19:04:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.16
+      },
       {
         "title": "feat(admin): add Giving Overview permission",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4003",
@@ -778,6 +787,6 @@
       "content": "- Reviewed: feat(admin): add Giving Overview permission\n- Reviewed: feat(admin): export Migration Started tab as filtered xlsx\n- Reviewed: fix: prefill Radiant Pushpay campus fund\n- Reviewed: refactor: flatten Web giving routes\n- Done: APO-11062: Give tab WebView auth handoff fails when give URL host is not in hardcoded allowlist\n- Left comments on PRs"
     }
   ],
-  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 19\n  • PR reviews: 43\n  • Commits pushed: 54\n  • Code volume: +4856 / -708 (116 files)\n  • Median review latency: 3.07h\n  • Linear issues completed: 3\n  • Linear projects completed: 0\n  • Linear issues worked on: 3\n  • Linear issues created: 6\n  • Linear replies: 6\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-infrastructure, apollos-platforms\n\n📝 Check-ins:\n\n  Monday: - fix(admin): keep the Fee Settlement toggle label static\n- fix: clear Give tab ...\n  Tuesday: - feat(dashboard): track apollos-platforms release tags and OTA status\n- test(mo...\n  Wednesday: - feat: $2 review spend limit + money formatting\n- fix(redirect): recognize conf...\n  Thursday: - fix(dashboard): name platforms deploy lanes by the build you can install\n- fea...\n  Friday: - Reviewed: feat(admin): add Giving Overview permission\n- Reviewed: feat(admin):...\n",
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 19\n  • PR reviews: 44\n  • Commits pushed: 54\n  • Code volume: +4856 / -708 (116 files)\n  • Median review latency: 2.84h\n  • Linear issues completed: 3\n  • Linear projects completed: 0\n  • Linear issues worked on: 3\n  • Linear issues created: 6\n  • Linear replies: 6\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-infrastructure, apollos-platforms\n\n📝 Check-ins:\n\n  Monday: - fix(admin): keep the Fee Settlement toggle label static\n- fix: clear Give tab ...\n  Tuesday: - feat(dashboard): track apollos-platforms release tags and OTA status\n- test(mo...\n  Wednesday: - feat: $2 review spend limit + money formatting\n- fix(redirect): recognize conf...\n  Thursday: - fix(dashboard): name platforms deploy lanes by the build you can install\n- fea...\n  Friday: - Reviewed: feat(admin): add Giving Overview permission\n- Reviewed: feat(admin):...\n",
   "formatted_output": null
 }
