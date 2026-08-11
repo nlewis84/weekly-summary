@@ -29,7 +29,14 @@ interface WeeklyTickerProps {
   goals?: WeeklyGoals;
 }
 
-function TrendBadge({ delta }: { delta: number }) {
+/**
+ * Which direction of change is an improvement.
+ * "up" is the default; "down" for metrics where a bigger number is worse (review
+ * latency); "none" for volume counts where neither direction is good or bad.
+ */
+type Better = "up" | "down" | "none";
+
+function TrendBadge({ delta, better }: { delta: number; better: Better }) {
   if (delta === 0)
     return (
       <WaveSine
@@ -39,21 +46,15 @@ function TrendBadge({ delta }: { delta: number }) {
         aria-label="no change"
       />
     );
-  if (delta > 0)
-    return (
-      <CaretUp
-        size={12}
-        weight="bold"
-        className="text-emerald-600 dark:text-emerald-400"
-        aria-label={`+${delta}`}
-      />
-    );
+  const good = better === "up" ? delta > 0 : delta < 0;
+  const tone = good ? "text-success-500" : "text-error-500";
+  const Caret = delta > 0 ? CaretUp : CaretDown;
   return (
-    <CaretDown
+    <Caret
       size={12}
       weight="bold"
-      className="text-amber-600 dark:text-amber-400"
-      aria-label={`${delta}`}
+      className={tone}
+      aria-label={`${delta > 0 ? "+" : ""}${delta}, ${good ? "better" : "worse"}`}
     />
   );
 }
@@ -81,53 +82,63 @@ function formatStatsForCopy(stats: Stats): string {
   return parts.join(" | ");
 }
 
-const METRICS = [
-  { key: "prs_merged" as const, label: "PRs merged", Icon: Package },
-  { key: "pr_reviews" as const, label: "PR reviews", Icon: Eye },
-  { key: "pr_comments" as const, label: "PR comments", Icon: ChatCircle },
-  { key: "commits_pushed" as const, label: "Commits pushed", Icon: GitCommit },
+const METRICS: {
+  key: keyof Stats;
+  label: string;
+  Icon: Icon;
+  format?: "hours";
+  better?: Better;
+}[] = [
+  { key: "prs_merged", label: "PRs merged", Icon: Package },
+  { key: "pr_reviews", label: "PR reviews", Icon: Eye },
+  { key: "pr_comments", label: "PR comments", Icon: ChatCircle },
+  { key: "commits_pushed", label: "Commits pushed", Icon: GitCommit },
   {
-    key: "lines_added" as const,
+    key: "lines_added",
     label: "Lines added",
     Icon: FilePlus,
+    better: "none",
   },
   {
-    key: "lines_deleted" as const,
+    key: "lines_deleted",
     label: "Lines deleted",
     Icon: FileMinus,
+    better: "none",
   },
   {
-    key: "files_changed" as const,
+    key: "files_changed",
     label: "Files changed",
     Icon: Files,
+    better: "none",
   },
   {
-    key: "median_review_latency_hours" as const,
+    key: "median_review_latency_hours",
     label: "Review time",
     Icon: Timer,
-    format: "hours" as const,
+    format: "hours",
+    better: "down",
   },
   {
-    key: "linear_completed" as const,
+    key: "linear_completed",
     label: "Linear completed",
     Icon: CheckCircle,
   },
   {
-    key: "linear_worked_on" as const,
+    key: "linear_worked_on",
     label: "Linear worked on",
     Icon: ArrowsClockwise,
   },
   {
-    key: "linear_issues_created" as const,
+    key: "linear_issues_created",
     label: "Issues created",
     Icon: PlusCircle,
   },
   {
-    key: "linear_comments" as const,
+    key: "linear_comments",
     label: "Linear replies",
     Icon: ChatCircle,
   },
-] as const;
+];
 
 const GOAL_METRICS = [
   { key: "prs_merged" as const, label: "PRs merged", Icon: Package },
@@ -275,7 +286,7 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
         )}
 
         <div className="space-y-1">
-          {METRICS.map(({ key, label, Icon, ...rest }, i) => {
+          {METRICS.map(({ key, label, Icon, better = "up", ...rest }, i) => {
             const isHours = "format" in rest && rest.format === "hours";
             const rawValue = stats[key];
             const numericValue =
@@ -323,7 +334,9 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
                             : "+0 vs last week"
                       }
                     >
-                      <TrendBadge delta={delta} />
+                      {better !== "none" && (
+                        <TrendBadge delta={delta} better={better} />
+                      )}
                       <span>
                         {isHours
                           ? `${formatSignedNumber(delta)}h`
