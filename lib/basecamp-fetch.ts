@@ -13,6 +13,9 @@ export interface CheckInAnswer {
   appUrl: string;
 }
 
+/** Which check-in question feeds to pull. Default is daily-only. */
+export type CheckInKind = "daily" | "weekly" | "all";
+
 /**
  * Transform Basecamp-specific HTML into renderable content.
  *
@@ -196,17 +199,18 @@ const checkInCache = new Map<
 >();
 
 async function fetchMyRecentCheckInsUncached(
-  limit: number
+  limit: number,
+  kind: CheckInKind
 ): Promise<CheckInAnswer[]> {
   const dailyId = process.env.BASECAMP_CHECKIN_QUESTION_ID;
   const weeklyId = process.env.BASECAMP_WEEKLY_QUESTION_ID;
 
   const fetches: Promise<CheckInAnswer[]>[] = [];
 
-  if (dailyId) {
+  if ((kind === "daily" || kind === "all") && dailyId) {
     fetches.push(fetchMyCheckInAnswers(dailyId, "daily", limit));
   }
-  if (weeklyId) {
+  if ((kind === "weekly" || kind === "all") && weeklyId) {
     fetches.push(fetchMyCheckInAnswers(weeklyId, "weekly", limit));
   }
 
@@ -217,17 +221,18 @@ async function fetchMyRecentCheckInsUncached(
 }
 
 export async function fetchMyRecentCheckIns(
-  options: { limit?: number } = {}
+  options: { limit?: number; kind?: CheckInKind } = {}
 ): Promise<CheckInAnswer[]> {
   const limit = options.limit ?? 50;
-  const key = String(limit);
+  const kind = options.kind ?? "daily";
+  const key = `${kind}:${limit}`;
 
   const cached = checkInCache.get(key);
   if (cached && Date.now() - cached.at < CHECKIN_CACHE_TTL_MS) {
     return cached.promise;
   }
 
-  const promise = fetchMyRecentCheckInsUncached(limit);
+  const promise = fetchMyRecentCheckInsUncached(limit, kind);
   checkInCache.set(key, { at: Date.now(), promise });
 
   // If the fetch fails, drop it from the cache so the next load retries

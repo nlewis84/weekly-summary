@@ -1,15 +1,34 @@
-import { useLoaderData } from "react-router";
+import {
+  useLoaderData,
+  useSearchParams,
+  useNavigation,
+} from "react-router";
 import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
 import { useState, useCallback, useEffect, useRef } from "react";
 import { ArrowSquareOut, CalendarBlank, Clock, X } from "phosphor-react";
 import { isBasecampConfigured } from "../../lib/basecamp-post";
-import { fetchMyRecentCheckIns } from "../../lib/basecamp-fetch";
-import type { CheckInAnswer } from "../../lib/basecamp-fetch";
+import {
+  fetchMyRecentCheckIns,
+  type CheckInAnswer,
+  type CheckInKind,
+} from "../../lib/basecamp-fetch";
 import { ErrorBanner } from "../components/ErrorBanner";
+
+const VIEW_OPTIONS: { value: CheckInKind; label: string }[] = [
+  { value: "daily", label: "Daily" },
+  { value: "weekly", label: "Weekly" },
+  { value: "all", label: "All" },
+];
+
+function parseView(raw: string | null): CheckInKind {
+  if (raw === "weekly" || raw === "all" || raw === "daily") return raw;
+  return "daily";
+}
 
 interface LoaderData {
   answers: CheckInAnswer[];
+  view: CheckInKind;
   configured: boolean;
   error: string | null;
 }
@@ -17,26 +36,41 @@ interface LoaderData {
 export async function loader({ request }: LoaderFunctionArgs) {
   if (request.method !== "GET") {
     return data(
-      { answers: [], configured: false, error: "Method not allowed" } satisfies LoaderData,
+      {
+        answers: [],
+        view: "daily" as CheckInKind,
+        configured: false,
+        error: "Method not allowed",
+      } satisfies LoaderData,
       { status: 405 }
     );
   }
 
+  const url = new URL(request.url);
+  const view = parseView(url.searchParams.get("view"));
+
   if (!isBasecampConfigured()) {
     return data({
       answers: [],
+      view,
       configured: false,
       error: null,
     } satisfies LoaderData);
   }
 
   try {
-    const answers = await fetchMyRecentCheckIns({ limit: 50 });
-    return data({ answers, configured: true, error: null } satisfies LoaderData);
+    const answers = await fetchMyRecentCheckIns({ limit: 50, kind: view });
+    return data({
+      answers,
+      view,
+      configured: true,
+      error: null,
+    } satisfies LoaderData);
   } catch (err) {
     console.error("Check-ins loader error:", err);
     return data({
       answers: [],
+      view,
       configured: true,
       error: (err as Error).message,
     } satisfies LoaderData);
@@ -131,11 +165,26 @@ function Lightbox({
 }
 
 export default function CheckIns() {
-  const { answers, configured, error } = useLoaderData<typeof loader>() as LoaderData;
+  const { answers, view, configured, error } = useLoaderData<
+    typeof loader
+  >() as LoaderData;
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
   const [lightbox, setLightbox] = useState<{
     src: string;
     alt: string;
   } | null>(null);
+
+  const setView = useCallback(
+    (nextView: CheckInKind) => {
+      const next = new URLSearchParams(searchParams);
+      if (nextView === "daily") next.delete("view");
+      else next.set("view", nextView);
+      setSearchParams(next);
+    },
+    [searchParams, setSearchParams]
+  );
 
   const handleContentClick = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
@@ -161,8 +210,8 @@ export default function CheckIns() {
           <p>Basecamp is not configured.</p>
           <p className="text-sm mt-2">
             Set <code className="text-primary-500">BASECAMP_PROJECT_ID</code> and{" "}
-            <code className="text-primary-500">BASECAMP_CHECKIN_QUESTION_ID</code> in your{" "}
-            <code>.env</code> to enable check-in browsing.
+            <code className="text-primary-500">BASECAMP_CHECKIN_QUESTION_ID</code>{" "}
+            in your <code>.env</code> to enable check-in browsing.
           </p>
         </div>
       </div>
@@ -173,8 +222,34 @@ export default function CheckIns() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold text-(--color-text)">Check-ins</h2>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-4">
+          <h2 className="text-lg font-semibold text-(--color-text)">Check-ins</h2>
+          <div
+            role="tablist"
+            aria-label="Check-in type"
+            className="flex w-fit rounded-lg border border-(--color-border) p-0.5 bg-surface-elevated"
+          >
+            {VIEW_OPTIONS.map(({ value, label }) => (
+              <button
+                key={value}
+                type="button"
+                role="tab"
+                aria-selected={view === value}
+                aria-controls="checkins-panel"
+                id={`checkins-tab-${value}`}
+                onClick={() => setView(value)}
+                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 ${
+                  view === value
+                    ? "bg-primary-600 text-white shadow-sm hover:bg-primary-500"
+                    : "text-text-muted hover:text-(--color-text)"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
         {answers.length > 0 && (
           <span className="text-xs text-text-muted tabular-nums">
             {answers.length} answer{answers.length === 1 ? "" : "s"}
@@ -184,65 +259,82 @@ export default function CheckIns() {
 
       {error && <ErrorBanner message={error} />}
 
-      {answers.length === 0 && !error && (
-        <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-text-muted border border-(--color-border)">
-          No check-in answers found.
-        </div>
-      )}
+      <div
+        id="checkins-panel"
+        role="tabpanel"
+        aria-labelledby={`checkins-tab-${view}`}
+        className={isLoading ? "opacity-60 transition-opacity" : undefined}
+      >
+        {answers.length === 0 && !error && (
+          <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) p-8 text-center text-text-muted border border-(--color-border)">
+            No{" "}
+            {view === "all"
+              ? ""
+              : view === "daily"
+                ? "daily "
+                : "weekly "}
+            check-in answers found.
+          </div>
+        )}
 
-      {grouped.map(([date, dayAnswers]) => (
-        <section key={date} className="space-y-3">
-          <h3 className="flex items-center gap-2 text-sm font-semibold text-text-muted uppercase tracking-wide">
-            <CalendarBlank size={16} weight="regular" className="text-primary-500" />
-            {formatDateHeading(date)}
-          </h3>
-
-          {dayAnswers.map((answer) => (
-            <article
-              key={answer.id}
-              className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) overflow-hidden"
-            >
-              <div className="flex items-center justify-between gap-3 px-4 py-2.5 bg-surface-elevated/50 border-b border-(--color-border)">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span
-                        className={`shrink-0 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider rounded ${
-                      answer.questionType === "weekly"
-                        ? "bg-primary-600/20 text-primary-400"
-                        : "bg-gray-200/50 text-text-muted"
-                    }`}
-                  >
-                    {answer.questionType === "weekly" ? "Weekly" : "Daily"}
-                  </span>
-                  <span className="text-xs text-text-muted truncate">
-                    {shortQuestionLabel(answer.questionTitle)}
-                  </span>
-                </div>
-                <div className="flex items-center gap-2.5 shrink-0 text-text-muted">
-                  <span className="flex items-center gap-1 text-xs tabular-nums">
-                    <Clock size={12} weight="regular" />
-                    {formatTime(answer.createdAt)}
-                  </span>
-                  <a
-                    href={answer.appUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary-500 transition-colors"
-                    title="Open in Basecamp"
-                  >
-                    <ArrowSquareOut size={14} weight="regular" />
-                  </a>
-                </div>
-              </div>
-
-              <div
-                className="checkin-content px-4 py-3 text-sm leading-relaxed text-(--color-text)"
-                dangerouslySetInnerHTML={{ __html: answer.content }}
-                onClick={handleContentClick}
+        {grouped.map(([date, dayAnswers]) => (
+          <section key={date} className="space-y-3 mb-6 last:mb-0">
+            <h3 className="flex items-center gap-2 text-sm font-semibold text-text-muted uppercase tracking-wide">
+              <CalendarBlank
+                size={16}
+                weight="regular"
+                className="text-primary-500"
               />
-            </article>
-          ))}
-        </section>
-      ))}
+              {formatDateHeading(date)}
+            </h3>
+
+            {dayAnswers.map((answer) => (
+              <article
+                key={answer.id}
+                className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) overflow-hidden"
+              >
+                <div className="flex items-center justify-between gap-3 px-4 py-2.5 bg-surface-elevated/50 border-b border-(--color-border)">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span
+                      className={`shrink-0 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider rounded ${
+                        answer.questionType === "weekly"
+                          ? "bg-primary-600/20 text-primary-400"
+                          : "bg-gray-200/50 text-text-muted"
+                      }`}
+                    >
+                      {answer.questionType === "weekly" ? "Weekly" : "Daily"}
+                    </span>
+                    <span className="text-xs text-text-muted truncate">
+                      {shortQuestionLabel(answer.questionTitle)}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2.5 shrink-0 text-text-muted">
+                    <span className="flex items-center gap-1 text-xs tabular-nums">
+                      <Clock size={12} weight="regular" />
+                      {formatTime(answer.createdAt)}
+                    </span>
+                    <a
+                      href={answer.appUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary-500 transition-colors"
+                      title="Open in Basecamp"
+                    >
+                      <ArrowSquareOut size={14} weight="regular" />
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  className="checkin-content px-4 py-3 text-sm leading-relaxed text-(--color-text)"
+                  dangerouslySetInnerHTML={{ __html: answer.content }}
+                  onClick={handleContentClick}
+                />
+              </article>
+            ))}
+          </section>
+        ))}
+      </div>
 
       {lightbox && (
         <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={closeLightbox} />
