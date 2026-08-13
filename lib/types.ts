@@ -18,7 +18,10 @@ export interface Stats {
   lines_deleted?: number;
   /** Sum of changed_files across merged PRs in the window */
   files_changed?: number;
-  /** Median hours from review_requested → first review; null if none requested */
+  /**
+   * Median *business* hours (Mon–Fri, 9am–5pm) from review_requested → first
+   * review; null if none requested. Nights and weekends are excluded.
+   */
   median_review_latency_hours?: number | null;
 }
 
@@ -51,7 +54,7 @@ export interface ReviewEntry {
   requested_at?: string | null;
   reviewed_at?: string | null;
   review_state?: string | null;
-  /** Hours from requested_at → reviewed_at; null for drive-by reviews */
+  /** Business hours from requested_at → reviewed_at; null for drive-by reviews */
   latency_hours?: number | null;
 }
 

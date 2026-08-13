@@ -23,6 +23,67 @@ export function computeLatencyHours(
   return Math.round(((end - start) / 3_600_000) * 100) / 100;
 }
 
+/** Working day bounds, in local time, used for review-time measurement. */
+export const BUSINESS_DAY_START_HOUR = 9;
+export const BUSINESS_DAY_END_HOUR = 17;
+
+/** Human-readable form of the working window, for UI labels and tooltips. */
+export const BUSINESS_HOURS_LABEL = "Mon–Fri, 9am–5pm";
+
+/**
+ * Working hours from requested → reviewed, counting only Mon–Fri between
+ * BUSINESS_DAY_START_HOUR and BUSINESS_DAY_END_HOUR local time.
+ *
+ * Raw wall-clock time makes an evening request answered first thing the next
+ * morning look like a 16-hour delay, which buries the same-day turnarounds it
+ * gets averaged with. Excluding nights and weekends keeps the number tied to
+ * time actually available to review in.
+ */
+export function computeBusinessLatencyHours(
+  requestedAt: string | null | undefined,
+  reviewedAt: string | null | undefined
+): number | null {
+  if (!requestedAt || !reviewedAt) return null;
+  const start = new Date(requestedAt);
+  const end = new Date(reviewedAt);
+  const startMs = start.getTime();
+  const endMs = end.getTime();
+  if (!Number.isFinite(startMs) || !Number.isFinite(endMs) || endMs < startMs) {
+    return null;
+  }
+
+  let totalMs = 0;
+  const cursor = new Date(
+    start.getFullYear(),
+    start.getMonth(),
+    start.getDate()
+  );
+
+  while (cursor.getTime() <= endMs) {
+    const weekday = cursor.getDay();
+    if (weekday !== 0 && weekday !== 6) {
+      const open = new Date(
+        cursor.getFullYear(),
+        cursor.getMonth(),
+        cursor.getDate(),
+        BUSINESS_DAY_START_HOUR
+      ).getTime();
+      const close = new Date(
+        cursor.getFullYear(),
+        cursor.getMonth(),
+        cursor.getDate(),
+        BUSINESS_DAY_END_HOUR
+      ).getTime();
+      const from = Math.max(open, startMs);
+      const to = Math.min(close, endMs);
+      if (to > from) totalMs += to - from;
+    }
+    cursor.setDate(cursor.getDate() + 1);
+  }
+
+  return Math.round((totalMs / 3_600_000) * 100) / 100;
+}
+
 /**
  * Median of a numeric list. Returns null for empty input.
  */

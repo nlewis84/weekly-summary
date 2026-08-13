@@ -21,6 +21,7 @@ import {
 import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
 import type { WeeklyGoals } from "../hooks/useGoals";
+import { BUSINESS_HOURS_LABEL } from "../../lib/github-metrics";
 import { formatNumber, formatSignedNumber } from "~/lib/utils";
 
 interface WeeklyTickerProps {
@@ -72,7 +73,7 @@ function formatStatsForCopy(stats: Stats): string {
     `Lines added: ${stats.lines_added ?? 0}`,
     `Lines deleted: ${stats.lines_deleted ?? 0}`,
     `Files changed: ${stats.files_changed ?? 0}`,
-    `Median review latency: ${latency}`,
+    `Median review latency (business hrs): ${latency}`,
     `Linear completed: ${stats.linear_completed}`,
     `Linear worked on: ${stats.linear_worked_on}`,
     `Linear issues created: ${stats.linear_issues_created}`,
@@ -85,6 +86,7 @@ function formatStatsForCopy(stats: Stats): string {
 const METRICS: {
   key: keyof Stats;
   label: string;
+  tooltip?: string;
   Icon: Icon;
   format?: "hours";
   better?: Better;
@@ -113,7 +115,8 @@ const METRICS: {
   },
   {
     key: "median_review_latency_hours",
-    label: "Review time",
+    label: "Review time (biz hrs)",
+    tooltip: `Median working hours (${BUSINESS_HOURS_LABEL}) from review request to your first review. Nights and weekends are excluded.`,
     Icon: Timer,
     format: "hours",
     better: "down",
@@ -286,7 +289,7 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
         )}
 
         <div className="space-y-1">
-          {METRICS.map(({ key, label, Icon, better = "up", ...rest }, i) => {
+          {METRICS.map(({ key, label, tooltip, Icon, better = "up", ...rest }, i) => {
             const isHours = "format" in rest && rest.format === "hours";
             const rawValue = stats[key];
             const numericValue =
@@ -307,6 +310,7 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
             return (
               <div
                 key={key}
+                title={tooltip}
                 className={`flex items-center justify-between gap-4 py-2.5 px-3 rounded-lg transition-colors ${
                   i % 2 === 1 ? "bg-surface-elevated/60" : ""
                 } hover:bg-surface-elevated`}

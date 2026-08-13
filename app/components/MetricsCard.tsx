@@ -21,6 +21,7 @@ import {
 } from "phosphor-react";
 import type { Stats } from "../../lib/types";
 import type { Payload } from "../../lib/types";
+import { BUSINESS_HOURS_LABEL } from "../../lib/github-metrics";
 import { formatNumber, formatSignedNumber } from "~/lib/utils";
 
 interface MetricsCardProps {
@@ -97,8 +98,8 @@ const PRIMARY_METRICS: MetricDef[] = [
   },
   {
     key: "median_review_latency_hours",
-    label: "Review time",
-    tooltip: "Median hours from review request to your first review",
+    label: "Review time (biz hrs)",
+    tooltip: `Median working hours (${BUSINESS_HOURS_LABEL}) from review request to your first review. Nights and weekends are excluded, so an evening request answered next morning counts as minutes, not overnight.`,
     Icon: Timer,
     format: "hours",
     better: "down",

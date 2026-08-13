@@ -13,7 +13,7 @@ export function buildMarkdownSummary(payload: Payload): string {
   md += `## Stats\n\n`;
   md += `- PRs merged: ${stats.prs_merged} | Total PRs: ${stats.prs_total} | Reviews: ${stats.pr_reviews} | Comments: ${stats.pr_comments} | Commits: ${stats.commits_pushed ?? 0}\n`;
   md += `- Code volume: +${stats.lines_added ?? 0} / -${stats.lines_deleted ?? 0} | Files changed: ${stats.files_changed ?? 0}\n`;
-  md += `- Median review latency: ${stats.median_review_latency_hours != null ? `${stats.median_review_latency_hours}h` : "—"}\n`;
+  md += `- Median review latency (business hrs): ${stats.median_review_latency_hours != null ? `${stats.median_review_latency_hours}h` : "—"}\n`;
   md += `- Linear completed: ${stats.linear_completed}${stats.linear_projects_completed ? ` (incl. ${stats.linear_projects_completed} project${stats.linear_projects_completed === 1 ? "" : "s"})` : ""} | Worked on: ${stats.linear_worked_on} | Created: ${stats.linear_issues_created ?? 0} | Replies: ${stats.linear_comments ?? 0}\n`;
   md += `- Repos: ${stats.repos.join(", ") || "—"}\n\n`;
   md += `## Linear — Completed\n\n`;

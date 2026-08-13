@@ -21,7 +21,7 @@ import {
   localDateString,
 } from "./daily-snapshot.js";
 import {
-  computeLatencyHours,
+  computeBusinessLatencyHours,
   findRequestedAt,
   median,
   parsePrRef,
@@ -769,7 +769,10 @@ async function enrichReviewsWithLatency(
         requested_at,
         reviewed_at: pr.reviewed_at,
         review_state: pr.review_state,
-        latency_hours: computeLatencyHours(requested_at, pr.reviewed_at),
+        latency_hours: computeBusinessLatencyHours(
+          requested_at,
+          pr.reviewed_at
+        ),
       };
     })
   );
@@ -1127,7 +1130,7 @@ function buildTerminalOutput(
   out += `  • PR reviews: ${githubData.reviews.length}\n`;
   out += `  • Commits pushed: ${githubData.commits_pushed ?? 0}\n`;
   out += `  • Code volume: +${volume.lines_added} / -${volume.lines_deleted} (${volume.files_changed} files)\n`;
-  out += `  • Median review latency: ${medianLatency != null ? `${medianLatency}h` : "—"}\n`;
+  out += `  • Median review latency (business hrs): ${medianLatency != null ? `${medianLatency}h` : "—"}\n`;
   out += `  • Linear issues completed: ${linearData.completedIssues.length}\n`;
   out += `  • Linear projects completed: ${linearData.completedProjects.length}\n`;
   out += `  • Linear issues worked on: ${linearData.workedOnIssues.length}\n`;
