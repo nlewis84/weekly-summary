@@ -5,8 +5,10 @@ import {
   getWindowEnd,
   getWindowForWeekEnding,
   isDeliveredProject,
+  resolveTodayWindow,
   runSummary,
 } from "./summary";
+import * as dailySnapshot from "./daily-snapshot";
 
 describe("isDeliveredProject", () => {
   it("counts a project whose status means done", () => {
@@ -107,7 +109,13 @@ describe("getWindowStart", () => {
 });
 
 describe("getWindowEnd", () => {
-  it("returns end of given day", () => {
+  it("returns now for todayMode (open capture period)", () => {
+    const now = new Date(2026, 1, 5, 14, 0, 0);
+    const end = getWindowEnd(now, true);
+    expect(end.getTime()).toBe(now.getTime());
+  });
+
+  it("returns end of given day for weekly mode", () => {
     const now = new Date(2026, 1, 5, 14, 0, 0);
     const end = getWindowEnd(now);
     expect(end.getFullYear()).toBe(2026);
@@ -125,6 +133,64 @@ describe("getWindowEnd", () => {
     expect(end.getDate()).toBe(4);
     expect(end.getHours()).toBe(23);
     expect(end.getMinutes()).toBe(59);
+  });
+});
+
+describe("resolveTodayWindow", () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it("falls back to local midnight when there is no prior capture", () => {
+    vi.spyOn(dailySnapshot, "getMostRecentSnapshot").mockReturnValue(null);
+    const now = new Date(2026, 7, 12, 16, 0, 0);
+    const { windowStart, windowEnd } = resolveTodayWindow(now);
+    expect(windowStart.getTime()).toBe(
+      new Date(2026, 7, 12, 0, 0, 0, 0).getTime()
+    );
+    expect(windowEnd.getTime()).toBe(now.getTime());
+  });
+
+  it("starts live Today at the most recent capture", () => {
+    const capturedAt = new Date(2026, 7, 11, 15, 19, 0);
+    vi.spyOn(dailySnapshot, "getMostRecentSnapshot").mockReturnValue({
+      date: "2026-08-11",
+      capturedAt,
+      payload: {
+        meta: { generated_at: capturedAt.toISOString() },
+      },
+    } as dailySnapshot.RecentSnapshot);
+    const now = new Date(2026, 7, 12, 16, 0, 0);
+    const { windowStart, windowEnd } = resolveTodayWindow(now);
+    expect(windowStart.getTime()).toBe(capturedAt.getTime());
+    expect(windowEnd.getTime()).toBe(now.getTime());
+  });
+
+  it("for capture, starts at the previous day's capture even if today was already captured", () => {
+    const prevCapture = new Date(2026, 7, 11, 15, 19, 0);
+    vi.spyOn(dailySnapshot, "getMostRecentSnapshot").mockImplementation(
+      (beforeDate?: string) => {
+        if (beforeDate === "2026-08-12") {
+          return {
+            date: "2026-08-11",
+            capturedAt: prevCapture,
+            payload: { meta: { generated_at: prevCapture.toISOString() } },
+          } as dailySnapshot.RecentSnapshot;
+        }
+        return {
+          date: "2026-08-12",
+          capturedAt: new Date(2026, 7, 12, 15, 58, 0),
+          payload: {
+            meta: {
+              generated_at: new Date(2026, 7, 12, 15, 58, 0).toISOString(),
+            },
+          },
+        } as dailySnapshot.RecentSnapshot;
+      }
+    );
+    const now = new Date(2026, 7, 12, 16, 5, 0);
+    const { windowStart } = resolveTodayWindow(now, { forCapture: true });
+    expect(windowStart.getTime()).toBe(prevCapture.getTime());
   });
 });
 

@@ -1,7 +1,10 @@
 import { data } from "react-router";
 import type { ActionFunctionArgs } from "react-router";
 import { buildDailyCheckInDraft } from "../../lib/checkin-draft";
-import { saveDailySnapshot } from "../../lib/daily-snapshot";
+import {
+  localDateString,
+  saveDailySnapshot,
+} from "../../lib/daily-snapshot";
 import {
   fetchGranolaNotesForWindow,
   isGranolaConfigured,
@@ -31,10 +34,12 @@ export async function action({ request }: ActionFunctionArgs) {
         yesterdayMode: isYesterday,
         checkInsText: "",
         outputDir: null,
+        forCapture: !isYesterday,
+        bust: true,
       });
 
       const snapshotDate =
-        dateOverride || result.payload.meta.window_start.slice(0, 10);
+        dateOverride || localDateString(result.payload.meta.window_end);
 
       let granolaWarning: string | undefined;
       let meetingNotes: Awaited<
@@ -70,10 +75,12 @@ export async function action({ request }: ActionFunctionArgs) {
       yesterdayMode: isYesterday,
       checkInsText: "",
       outputDir: null,
+      forCapture: !isYesterday,
+      bust: true,
     });
 
     const snapshotDate =
-      dateOverride || result.payload.meta.window_start.slice(0, 10);
+      dateOverride || localDateString(result.payload.meta.window_end);
     saveDailySnapshot(snapshotDate, result.payload);
 
     let basecampPosted = false;
