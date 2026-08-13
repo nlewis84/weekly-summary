@@ -78,6 +78,54 @@ export function loadDailySnapshot(date: string): Payload | null {
   }
 }
 
+/** Local calendar date (YYYY-MM-DD) for an instant. */
+export function localDateString(instant: Date | string = new Date()): string {
+  const d = typeof instant === "string" ? new Date(instant) : instant;
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+export interface RecentSnapshot {
+  date: string;
+  payload: Payload;
+  /** When the capture was taken — boundary for the next open period. */
+  capturedAt: Date;
+}
+
+function snapshotCapturedAt(payload: Payload): Date {
+  // generated_at is the real capture moment. Older snapshots used end-of-day
+  // window_end, which is not when the user turned in their check-in.
+  return new Date(payload.meta.generated_at);
+}
+
+/**
+ * Most recent daily snapshot by filename date, optionally strictly before
+ * `beforeDate` (YYYY-MM-DD). Used to bound capture-to-capture windows.
+ */
+export function getMostRecentSnapshot(
+  beforeDate?: string
+): RecentSnapshot | null {
+  if (!existsSync(SNAPSHOT_DIR)) return null;
+
+  const files = readdirSync(SNAPSHOT_DIR)
+    .filter((f) => f.endsWith(".json"))
+    .map((f) => f.replace(/\.json$/, ""))
+    .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(date))
+    .filter((date) => (beforeDate ? date < beforeDate : true))
+    .sort((a, b) => b.localeCompare(a));
+
+  for (const date of files) {
+    const payload = loadDailySnapshot(date);
+    if (!payload?.meta?.generated_at) continue;
+    const capturedAt = snapshotCapturedAt(payload);
+    if (Number.isNaN(capturedAt.getTime())) continue;
+    return { date, payload, capturedAt };
+  }
+  return null;
+}
+
 const MAX_BULLETS_PER_SECTION = 12;
 
 function linearIssuePhrase(issue: Record<string, unknown>): string {

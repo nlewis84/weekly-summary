@@ -17,6 +17,10 @@ import { buildMarkdownSummary } from "./markdown.js";
 import { dataCache } from "./cache.js";
 import { fetchWithRetry } from "./github-api.js";
 import {
+  getMostRecentSnapshot,
+  localDateString,
+} from "./daily-snapshot.js";
+import {
   computeLatencyHours,
   findRequestedAt,
   median,
@@ -121,6 +125,50 @@ const LINEAR_COMMENTS_QUERY = `
   }
 `;
 
+/**
+ * Local midnight for the calendar day of `now`.
+ */
+export function startOfLocalDay(now: Date): Date {
+  return new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate(),
+    0,
+    0,
+    0,
+    0
+  );
+}
+
+/**
+ * Resolve the Today window as capture-to-capture:
+ * - Live view: since the most recent capture → now
+ * - Capture / re-capture: since the previous day's capture → now
+ *   (so updating today's snapshot refreshes the full open period)
+ * Falls back to local midnight when there is no prior capture.
+ */
+export function resolveTodayWindow(
+  now: Date,
+  options: { forCapture?: boolean } = {}
+): { windowStart: Date; windowEnd: Date } {
+  const windowEnd = now;
+  const today = localDateString(now);
+
+  if (options.forCapture) {
+    const prev = getMostRecentSnapshot(today);
+    if (prev) {
+      return { windowStart: prev.capturedAt, windowEnd };
+    }
+    return { windowStart: startOfLocalDay(now), windowEnd };
+  }
+
+  const latest = getMostRecentSnapshot();
+  if (latest) {
+    return { windowStart: latest.capturedAt, windowEnd };
+  }
+  return { windowStart: startOfLocalDay(now), windowEnd };
+}
+
 export function getWindowStart(
   now: Date,
   todayMode: boolean,
@@ -129,26 +177,12 @@ export function getWindowStart(
   if (yesterdayMode) {
     const yesterday = new Date(now);
     yesterday.setDate(now.getDate() - 1);
-    return new Date(
-      yesterday.getFullYear(),
-      yesterday.getMonth(),
-      yesterday.getDate(),
-      0,
-      0,
-      0,
-      0
-    );
+    return startOfLocalDay(yesterday);
   }
   if (todayMode) {
-    return new Date(
-      now.getFullYear(),
-      now.getMonth(),
-      now.getDate(),
-      0,
-      0,
-      0,
-      0
-    );
+    // Prefer resolveTodayWindow for capture-to-capture; this remains the
+    // calendar-day fallback used by weekly math and tests.
+    return startOfLocalDay(now);
   }
   const day = now.getDay();
   const daysSinceSaturday = (day + 1) % 7;
@@ -175,6 +209,9 @@ export function getWindowEnd(
       59,
       999
     );
+  }
+  if (todayMode) {
+    return now;
   }
   return new Date(
     now.getFullYear(),
@@ -1141,21 +1178,24 @@ export async function getCachedRunSummary(
     weekEnding?: string;
     checkInsText: string;
     outputDir: string | null;
+    /** When capturing a snapshot, bound the window from the prior capture. */
+    forCapture?: boolean;
   } & { bust?: boolean }
 ): Promise<RunSummaryResult> {
-  const { bust, ...opts } = options;
+  const { bust, forCapture, ...opts } = options;
+  const latest = opts.todayMode ? getMostRecentSnapshot() : null;
   const key = opts.weekEnding
     ? `index:week:${opts.weekEnding}`
     : opts.yesterdayMode
       ? "index:yesterday"
       : opts.todayMode
-        ? "index:today"
+        ? `index:today:${forCapture ? "capture:" : ""}${latest?.payload.meta.generated_at ?? "none"}`
         : "index:weekly";
 
   const cached = !bust && (dataCache.get(key) as RunSummaryResult | undefined);
   if (cached) return cached;
 
-  const result = await runSummary(opts);
+  const result = await runSummary({ ...opts, forCapture });
   dataCache.set(key, result);
   return result;
 }
@@ -1167,12 +1207,15 @@ export async function runSummary(options: {
   weekEnding?: string;
   checkInsText: string;
   outputDir: string | null;
+  /** Capture path: window starts at the previous day's capture. */
+  forCapture?: boolean;
 }): Promise<RunSummaryResult> {
   const {
     todayMode,
     yesterdayMode = false,
     weekEnding: weekEndingOpt,
     checkInsText,
+    forCapture = false,
   } = options;
 
   let windowStart: Date;
@@ -1189,8 +1232,14 @@ export async function runSummary(options: {
     weekEnding = weekEndingOpt;
   } else {
     const now = new Date();
-    windowStart = getWindowStart(now, todayMode, yesterdayMode);
-    windowEnd = getWindowEnd(now, todayMode, yesterdayMode);
+    if (todayMode) {
+      const window = resolveTodayWindow(now, { forCapture });
+      windowStart = window.windowStart;
+      windowEnd = window.windowEnd;
+    } else {
+      windowStart = getWindowStart(now, todayMode, yesterdayMode);
+      windowEnd = getWindowEnd(now, todayMode, yesterdayMode);
+    }
     // Use Friday of the week (not UTC date) so filenames stay consistent across timezones
     const refDate = yesterdayMode
       ? (() => {

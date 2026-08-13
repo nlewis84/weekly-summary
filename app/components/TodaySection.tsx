@@ -81,7 +81,32 @@ export function TodaySection({
   const [modalGranolaWarning, setModalGranolaWarning] = useState("");
 
   const isYesterday = title === "Yesterday";
-  const captureDate = payload?.meta.window_start?.slice(0, 10) ?? "";
+  // Snapshot files are keyed by the local calendar day the period ends on
+  // (capture day), not window_start — which may be a prior capture.
+  const captureDate = payload?.meta.window_end
+    ? (() => {
+        const d = new Date(payload.meta.window_end);
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, "0");
+        const day = String(d.getDate()).padStart(2, "0");
+        return `${y}-${m}-${day}`;
+      })()
+    : "";
+  const sinceLabel =
+    !isYesterday && payload?.meta.window_start
+      ? (() => {
+          const start = new Date(payload.meta.window_start);
+          const startDay = start.toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+          });
+          const startTime = start.toLocaleTimeString("en-US", {
+            hour: "numeric",
+            minute: "2-digit",
+          });
+          return `Since ${startDay}, ${startTime}`;
+        })()
+      : null;
   const sessionCommittedThisDate =
     isSnapshotCommit(fetcher.data) && fetcher.data.date === captureDate;
   const alreadyCaptured =
@@ -191,7 +216,12 @@ export function TodaySection({
       />
 
       <div className="flex items-center justify-between shrink-0 pb-2">
-        <h2 className="text-lg font-semibold text-(--color-text)">{title}</h2>
+        <div className="min-w-0">
+          <h2 className="text-lg font-semibold text-(--color-text)">{title}</h2>
+          {sinceLabel && (
+            <p className="text-xs text-text-muted mt-0.5">{sinceLabel}</p>
+          )}
+        </div>
         <div className="flex items-center gap-2">
           {refreshIntervalLabel && refreshIntervalLabel !== "Off" && (
             <span className="text-xs text-text-muted">
