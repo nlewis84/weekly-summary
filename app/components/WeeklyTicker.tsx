@@ -73,7 +73,7 @@ function formatStatsForCopy(stats: Stats): string {
     `Lines added: ${stats.lines_added ?? 0}`,
     `Lines deleted: ${stats.lines_deleted ?? 0}`,
     `Files changed: ${stats.files_changed ?? 0}`,
-    `Median review latency (business hrs): ${latency}`,
+    `Median review latency (working hours): ${latency}`,
     `Linear completed: ${stats.linear_completed}`,
     `Linear worked on: ${stats.linear_worked_on}`,
     `Linear issues created: ${stats.linear_issues_created}`,
@@ -115,7 +115,7 @@ const METRICS: {
   },
   {
     key: "median_review_latency_hours",
-    label: "Review time (biz hrs)",
+    label: "Review time (9–5)",
     tooltip: `Median working hours (${BUSINESS_HOURS_LABEL}) from review request to your first review. Nights and weekends are excluded.`,
     Icon: Timer,
     format: "hours",

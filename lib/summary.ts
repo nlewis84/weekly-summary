@@ -1130,7 +1130,7 @@ function buildTerminalOutput(
   out += `  • PR reviews: ${githubData.reviews.length}\n`;
   out += `  • Commits pushed: ${githubData.commits_pushed ?? 0}\n`;
   out += `  • Code volume: +${volume.lines_added} / -${volume.lines_deleted} (${volume.files_changed} files)\n`;
-  out += `  • Median review latency (business hrs): ${medianLatency != null ? `${medianLatency}h` : "—"}\n`;
+  out += `  • Median review latency (working hours): ${medianLatency != null ? `${medianLatency}h` : "—"}\n`;
   out += `  • Linear issues completed: ${linearData.completedIssues.length}\n`;
   out += `  • Linear projects completed: ${linearData.completedProjects.length}\n`;
   out += `  • Linear issues worked on: ${linearData.workedOnIssues.length}\n`;

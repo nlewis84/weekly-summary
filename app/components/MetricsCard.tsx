@@ -98,7 +98,7 @@ const PRIMARY_METRICS: MetricDef[] = [
   },
   {
     key: "median_review_latency_hours",
-    label: "Review time (biz hrs)",
+    label: "Review time (9–5)",
     tooltip: `Median working hours (${BUSINESS_HOURS_LABEL}) from review request to your first review. Nights and weekends are excluded, so an evening request answered next morning counts as minutes, not overnight.`,
     Icon: Timer,
     format: "hours",
