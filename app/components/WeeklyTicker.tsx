@@ -22,7 +22,12 @@ import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
 import type { WeeklyGoals } from "../hooks/useGoals";
 import { BUSINESS_HOURS_LABEL } from "../../lib/github-metrics";
-import { formatNumber, formatSignedNumber } from "~/lib/utils";
+import {
+  formatDurationHours,
+  formatNumber,
+  formatSignedDurationHours,
+  formatSignedNumber,
+} from "~/lib/utils";
 
 interface WeeklyTickerProps {
   stats: Stats;
@@ -63,7 +68,7 @@ function TrendBadge({ delta, better }: { delta: number; better: Better }) {
 function formatStatsForCopy(stats: Stats): string {
   const latency =
     stats.median_review_latency_hours != null
-      ? `${stats.median_review_latency_hours}h`
+      ? formatDurationHours(stats.median_review_latency_hours)
       : "—";
   const parts = [
     `PRs merged: ${stats.prs_merged}`,
@@ -305,7 +310,7 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
               numericValue == null
                 ? "—"
                 : isHours
-                  ? `${formatNumber(numericValue)}h`
+                  ? formatDurationHours(numericValue)
                   : formatNumber(numericValue);
             return (
               <div
@@ -343,7 +348,7 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
                       )}
                       <span>
                         {isHours
-                          ? `${formatSignedNumber(delta)}h`
+                          ? formatSignedDurationHours(delta)
                           : formatSignedNumber(delta)}
                       </span>
                     </span>

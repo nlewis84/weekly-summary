@@ -22,7 +22,12 @@ import {
 import type { Stats } from "../../lib/types";
 import type { Payload } from "../../lib/types";
 import { BUSINESS_HOURS_LABEL } from "../../lib/github-metrics";
-import { formatNumber, formatSignedNumber } from "~/lib/utils";
+import {
+  formatDurationHours,
+  formatNumber,
+  formatSignedDurationHours,
+  formatSignedNumber,
+} from "~/lib/utils";
 
 interface MetricsCardProps {
   stats: Stats;
@@ -167,22 +172,6 @@ const SECONDARY_METRICS: MetricDef[] = [
   },
 ];
 
-/**
- * Hours compact enough to sit beside a delta badge on one line:
- * one decimal under 10h, whole hours above it (10.73 → "11h", 2.84 → "2.8h").
- */
-function formatHours(value: number): string {
-  const rounded =
-    Math.abs(value) >= 10 ? Math.round(value) : Math.round(value * 10) / 10;
-  return `${formatNumber(rounded)}h`;
-}
-
-function formatSignedHours(value: number): string {
-  const rounded =
-    Math.abs(value) >= 10 ? Math.round(value) : Math.round(value * 10) / 10;
-  return `${formatSignedNumber(rounded)}h`;
-}
-
 function metricDisplay(
   stats: Stats,
   def: MetricDef
@@ -191,7 +180,7 @@ function metricDisplay(
   const numeric = typeof raw === "number" ? raw : null;
   if (numeric == null) return { numeric: null, text: "—" };
   if (def.format === "hours") {
-    return { numeric, text: formatHours(numeric) };
+    return { numeric, text: formatDurationHours(numeric) };
   }
   return { numeric, text: formatNumber(numeric) };
 }
@@ -253,7 +242,7 @@ function MetricCell({
               )}
               <span>
                 {def.format === "hours"
-                  ? formatSignedHours(delta)
+                  ? formatSignedDurationHours(delta)
                   : formatSignedNumber(delta)}
               </span>
             </span>
