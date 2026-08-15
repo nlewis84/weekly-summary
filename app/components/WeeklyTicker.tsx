@@ -120,7 +120,7 @@ const METRICS: {
   },
   {
     key: "median_review_latency_hours",
-    label: "Review time (9–5)",
+    label: "Time to Review (9-5)",
     tooltip: `Median working hours (${BUSINESS_HOURS_LABEL}) from review request to your first review. Nights and weekends are excluded.`,
     Icon: Timer,
     format: "hours",
