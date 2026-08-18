@@ -44,6 +44,7 @@ function extractStats(content: string): Partial<Stats> {
   const repos: string[] = [];
   if (/\badmin\b|apollos-admin/i.test(lower)) repos.push("apollos-admin");
   if (/\bcluster\b|apollos-cluster/i.test(lower)) repos.push("apollos-cluster");
+  if (/\bfreedup\b|freedup-migration/i.test(lower)) repos.push("freedup-migration");
   if (repos.length > 0) stats.repos = [...new Set(repos)];
 
   return stats;
