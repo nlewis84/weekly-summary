@@ -782,7 +782,7 @@ function getCommitRepos(): { owner: string; repos: string[] } {
   const owner = process.env.GITHUB_ORG ?? "ApollosProject";
   const raw =
     process.env.GITHUB_COMMIT_REPOS ??
-    "apollos-admin,apollos-cluster,apollos-giving-performance-qa,apollos-platforms,git-for-sql";
+    "apollos-admin,apollos-cluster,apollos-giving-performance-qa,apollos-platforms,git-for-sql,freedup-migration";
   const repos = raw
     .split(",")
     .map((r) => r.trim())
