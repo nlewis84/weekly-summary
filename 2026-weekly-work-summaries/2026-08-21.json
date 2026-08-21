@@ -1,0 +1,902 @@
+{
+  "meta": {
+    "generated_at": "2026-08-21T20:27:41.697Z",
+    "window_start": "2026-08-15T05:00:00.000Z",
+    "window_end": "2026-08-22T04:59:59.999Z",
+    "week_ending": "2026-08-21",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 10,
+    "prs_total": 13,
+    "pr_reviews": 60,
+    "pr_comments": 23,
+    "commits_pushed": 37,
+    "linear_completed": 6,
+    "linear_projects_completed": 0,
+    "linear_worked_on": 8,
+    "linear_issues_created": 3,
+    "linear_comments": 5,
+    "repos": [
+      "apollos-admin",
+      "apollos-code-reviewer",
+      "apollos-infrastructure",
+      "apollos-platforms",
+      "freedup-migration"
+    ],
+    "lines_added": 2898,
+    "lines_deleted": 21516,
+    "files_changed": 67,
+    "median_review_latency_hours": 0.43
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-11590",
+        "title": "Google Pay remains available after being disabled",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-11590/google-pay-remains-available-after-being-disabled",
+        "completedAt": "2026-08-21T00:15:33.387Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11487",
+        "title": "Copy-down migration script: Mongo content -> Postgres (freedup church)",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-11487/copy-down-migration-script-mongo-content-postgres-freedup-church",
+        "completedAt": "2026-08-19T19:04:27.935Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11401",
+        "title": "Android Give tab: payment must leave WebView (Google Pay / provider handoff)",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11401/android-give-tab-payment-must-leave-webview-google-pay-provider",
+        "completedAt": "2026-08-19T20:48:02.935Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11371",
+        "title": "Android - if push pay set as giving web url, we should show apollos giving and redirct on /payment",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11371/android-if-push-pay-set-as-giving-web-url-we-should-show-apollos",
+        "completedAt": "2026-08-18T21:03:13.264Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11368",
+        "title": "The icon dropdown in admin on the Apps > Mobile > Display (on a tab) can get buried",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11368/the-icon-dropdown-in-admin-on-the-apps-mobile-display-on-a-tab-can-get",
+        "completedAt": "2026-08-18T01:54:09.001Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11183",
+        "title": "Blank Fund sheet is stranded on the Give tab after returning from web giving",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11183/blank-fund-sheet-is-stranded-on-the-give-tab-after-returning-from-web",
+        "completedAt": "2026-08-18T21:03:13.475Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-11672",
+        "title": "CF Google Pay test: only show wallets to people who can finish on Apollos",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11672/cf-google-pay-test-only-show-wallets-to-people-who-can-finish-on",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-11590",
+        "title": "Google Pay remains available after being disabled",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-11590/google-pay-remains-available-after-being-disabled",
+        "completedAt": "2026-08-21T00:15:33.387Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11487",
+        "title": "Copy-down migration script: Mongo content -> Postgres (freedup church)",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-11487/copy-down-migration-script-mongo-content-postgres-freedup-church",
+        "completedAt": "2026-08-19T19:04:27.935Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11401",
+        "title": "Android Give tab: payment must leave WebView (Google Pay / provider handoff)",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11401/android-give-tab-payment-must-leave-webview-google-pay-provider",
+        "completedAt": "2026-08-19T20:48:02.935Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11371",
+        "title": "Android - if push pay set as giving web url, we should show apollos giving and redirct on /payment",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11371/android-if-push-pay-set-as-giving-web-url-we-should-show-apollos",
+        "completedAt": "2026-08-18T21:03:13.264Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11368",
+        "title": "The icon dropdown in admin on the Apps > Mobile > Display (on a tab) can get buried",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11368/the-icon-dropdown-in-admin-on-the-apps-mobile-display-on-a-tab-can-get",
+        "completedAt": "2026-08-18T01:54:09.001Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11183",
+        "title": "Blank Fund sheet is stranded on the Give tab after returning from web giving",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11183/blank-fund-sheet-is-stranded-on-the-give-tab-after-returning-from-web",
+        "completedAt": "2026-08-18T21:03:13.475Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10824",
+        "title": "Give tab rollout",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-10824/give-tab-rollout",
+        "completedAt": null,
+        "state": "In Progress"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-11672",
+        "title": "CF Google Pay test: only show wallets to people who can finish on Apollos",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11672/cf-google-pay-test-only-show-wallets-to-people-who-can-finish-on",
+        "createdAt": "2026-08-20T18:08:24.362Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-11546",
+        "title": "Get a new build of Apollos Preview sent out to Prod Google Play Store",
+        "project": "Give Tab",
+        "url": "https://linear.app/differential/issue/APO-11546/get-a-new-build-of-apollos-preview-sent-out-to-prod-google-play-store",
+        "createdAt": "2026-08-18T20:44:40.174Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-11487",
+        "title": "Copy-down migration script: Mongo content -> Postgres (freedup church)",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-11487/copy-down-migration-script-mongo-content-postgres-freedup-church",
+        "createdAt": "2026-08-18T15:49:36.043Z",
+        "state": "Done"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-11684",
+        "title": "Open Apple Pay screen from Give tab on iOS",
+        "url": "https://linear.app/differential/issue/APO-11684/open-apple-pay-screen-from-give-tab-on-ios",
+        "project": null,
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-11590",
+        "title": "Google Pay remains available after being disabled",
+        "url": "https://linear.app/differential/issue/APO-11590/google-pay-remains-available-after-being-disabled",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11437",
+        "title": "(Willow) Google Pay button not populating on Android for their tester",
+        "url": "https://linear.app/differential/issue/APO-11437/willow-google-pay-button-not-populating-on-android-for-their-tester",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-11018",
+        "title": "Fix crash: empty Question Block maps undefined content in CustomNovelEditor (ADMIN-73J)",
+        "url": "https://linear.app/differential/issue/APO-11018/fix-crash-empty-question-block-maps-undefined-content-in",
+        "project": null,
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-10112",
+        "title": "Cleanup - remove dead `admin-transactions-sql-v-2` OFF path",
+        "url": "https://linear.app/differential/issue/APO-10112/cleanup-remove-dead-admin-transactions-sql-v-2-off-path",
+        "project": "Charges as Source of Truth - Updating Data Flows",
+        "state": "Merged"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat: gate auto-approve by additions and rename middle decision labels",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/70",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-08-20T17:00:42Z",
+        "additions": 466,
+        "deletions": 38,
+        "changed_files": 16
+      },
+      {
+        "title": "feat: stream outcome rescan progress and surface full rescan in Settings",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/69",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-08-20T15:35:41Z",
+        "additions": 618,
+        "deletions": 63,
+        "changed_files": 7
+      },
+      {
+        "title": "fix(mobile): keep Android give links in Custom Tabs instead of native GivingScreen",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6950",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-08-19T22:10:03Z",
+        "additions": 190,
+        "deletions": 7,
+        "changed_files": 6
+      },
+      {
+        "title": "fix: stop the review queue from draining the GitHub core quota",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/68",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-08-18T20:20:14Z",
+        "additions": 751,
+        "deletions": 78,
+        "changed_files": 11
+      },
+      {
+        "title": "Show missing-path notices for orphaned FreedUp cards",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/4",
+        "repo": "freedup-migration",
+        "merged_at": "2026-08-18T19:15:03Z",
+        "additions": 207,
+        "deletions": 33,
+        "changed_files": 4
+      },
+      {
+        "title": "Stop committing Mongo dump JSON",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/3",
+        "repo": "freedup-migration",
+        "merged_at": "2026-08-18T18:17:58Z",
+        "additions": 42,
+        "deletions": 21271,
+        "changed_files": 5
+      },
+      {
+        "title": "Strip Quill spacer paragraphs from copied HTML",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/2",
+        "repo": "freedup-migration",
+        "merged_at": "2026-08-18T16:35:20Z",
+        "additions": 27,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "Wipe dump rows and seed Canvas html_content on migrate",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/1",
+        "repo": "freedup-migration",
+        "merged_at": "2026-08-18T16:25:14Z",
+        "additions": 202,
+        "deletions": 4,
+        "changed_files": 5
+      },
+      {
+        "title": "fix(mobile): Android Give tab payment leaves WebView (APO-11401)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6918",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-08-18T15:15:36Z",
+        "additions": 199,
+        "deletions": 3,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(admin): lock Give tab Display/Personalization when giving is off (APO-11367)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4073",
+        "repo": "apollos-admin",
+        "merged_at": "2026-08-18T20:45:44Z",
+        "additions": 196,
+        "deletions": 17,
+        "changed_files": 7
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix(web): gate Express Checkout to people who can finish on Apollos",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4127",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "fix(web-embeds-v2): only open query deep links for real Apollos ids",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4130",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T21:40:00Z",
+        "reviewed_at": "2026-08-20T21:54:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.23
+      },
+      {
+        "title": "test(web): dry up leftover give e2e helpers from #4065",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4129",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T20:36:35Z",
+        "reviewed_at": "2026-08-20T20:44:31Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.13
+      },
+      {
+        "title": "fix(web): gate Express Checkout to people who can finish on Apollos",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4127",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-08-20T22:33:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat: gate auto-approve by additions and rename middle decision labels",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/70",
+        "repo": "apollos-code-reviewer",
+        "requested_at": null,
+        "reviewed_at": "2026-08-20T16:58:25Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): clear TS7 typecheck errors in the canvas editor",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4125",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T18:58:14Z",
+        "reviewed_at": "2026-08-20T19:04:43Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "APO-10798: fix TS7 typecheck errors in admin charts, media, and shared inputs",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4124",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T18:50:36Z",
+        "reviewed_at": "2026-08-20T19:04:33Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.23
+      },
+      {
+        "title": "fix(admin): clear TS7 typecheck errors in nine admin routes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4123",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T18:58:14Z",
+        "reviewed_at": "2026-08-20T19:05:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "feat: stream outcome rescan progress and surface full rescan in Settings",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/69",
+        "repo": "apollos-code-reviewer",
+        "requested_at": null,
+        "reviewed_at": "2026-08-20T15:34:59Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "refactor(admin): extract useCopyToClipboard hook",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4120",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T15:51:44Z",
+        "reviewed_at": "2026-08-20T16:03:17Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.19
+      },
+      {
+        "title": "feat(admin): add the Guided Content Progression segmented control",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4119",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T13:30:44Z",
+        "reviewed_at": "2026-08-20T13:44:53Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(ci): resolve stack name before pulumi up so failure alerts are usable",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/55",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-08-20T03:43:38Z",
+        "reviewed_at": "2026-08-20T13:42:46Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "test(web): mitigate give e2e data explosion",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4116",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T18:06:56Z",
+        "reviewed_at": "2026-08-20T18:59:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.87
+      },
+      {
+        "title": "fix(mobile): render GivingScreen before church data resolves (APO-11592)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6951",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-08-20T16:10:44Z",
+        "reviewed_at": "2026-08-20T16:13:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.04
+      },
+      {
+        "title": "fix(mobile): keep Android give links in Custom Tabs instead of native GivingScreen",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6950",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-08-19T21:06:40Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-10798: convert apps/admin to tsconfig and TypeScript 7",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4113",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T18:50:35Z",
+        "reviewed_at": "2026-08-20T19:04:22Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.23
+      },
+      {
+        "title": "Show Export complete with the same toast as Reminders Sent",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4112",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T22:48:04Z",
+        "reviewed_at": "2026-08-20T13:42:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(admin): type the Stripe provider's expanded objects",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4111",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T14:43:34Z",
+        "reviewed_at": "2026-08-20T15:27:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.74
+      },
+      {
+        "title": "test(admin): type loader args and row fixtures for TS7",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4109",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T22:25:26Z",
+        "reviewed_at": "2026-08-20T13:42:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "Show a date on old Email 1 and Email 2 stamps",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4108",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T20:38:56Z",
+        "reviewed_at": "2026-08-19T21:09:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.51
+      },
+      {
+        "title": "Hide Email 1 and Email 2 sent when the donor has no email",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4107",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T19:17:29Z",
+        "reviewed_at": "2026-08-19T19:27:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.16
+      },
+      {
+        "title": "APO-11576: Remove unused Admin transactions Excel stream",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4106",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T17:10:40Z",
+        "reviewed_at": "2026-08-19T17:15:59Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.09
+      },
+      {
+        "title": "fix(admin): close a community's chat when the community is deleted",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4104",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T03:36:36Z",
+        "reviewed_at": "2026-08-20T13:43:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(web): bound the church layout's user-profile lookup at 5s",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4103",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T21:29:58Z",
+        "reviewed_at": "2026-08-20T13:42:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.5
+      },
+      {
+        "title": "fix: stop the review queue from draining the GitHub core quota",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/68",
+        "repo": "apollos-code-reviewer",
+        "requested_at": null,
+        "reviewed_at": "2026-08-18T20:09:04Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Use an info icon on the all-skipped reminder toast",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4100",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T19:46:29Z",
+        "reviewed_at": "2026-08-18T20:12:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.43
+      },
+      {
+        "title": "Toast when a giving export finishes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4099",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T19:46:39Z",
+        "reviewed_at": "2026-08-18T20:12:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.43
+      },
+      {
+        "title": "Call the Started reminder filter and export column Email 2",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4098",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T19:46:43Z",
+        "reviewed_at": "2026-08-18T20:12:22Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.43
+      },
+      {
+        "title": "Show missing-path notices for orphaned FreedUp cards",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/4",
+        "repo": "freedup-migration",
+        "requested_at": null,
+        "reviewed_at": "2026-08-18T19:08:42Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): guard emptied Question Block content in Novel editor",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4097",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T20:05:07Z",
+        "reviewed_at": "2026-08-19T21:09:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.07
+      },
+      {
+        "title": "fix(admin): stop sidebar saves clobbering enable_discussions without audience",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4096",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T13:23:57Z",
+        "reviewed_at": "2026-08-18T14:15:06Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.25
+      },
+      {
+        "title": "fix(admin): don't blame the key role for Apple's unsigned-agreement 403",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4095",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T17:49:59Z",
+        "reviewed_at": "2026-08-19T18:08:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.3
+      },
+      {
+        "title": "fix(admin): date failed-transactions report in the church timezone",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4094",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T21:34:48Z",
+        "reviewed_at": "2026-08-19T14:32:07Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.96
+      },
+      {
+        "title": "APO-10112: remove dead admin stripe_events SQL",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4091",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T15:34:46Z",
+        "reviewed_at": "2026-08-19T15:58:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.39
+      },
+      {
+        "title": "Show on the row why Send Reminder will skip it",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4090",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T18:08:36Z",
+        "reviewed_at": "2026-08-18T19:00:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.87
+      },
+      {
+        "title": "Size migration export columns to header and content",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4089",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T17:07:00Z",
+        "reviewed_at": "2026-08-18T18:59:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.87
+      },
+      {
+        "title": "Show Payment Method on the Started migration table",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4087",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T18:21:08Z",
+        "reviewed_at": "2026-08-18T19:02:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.69
+      },
+      {
+        "title": "Match the Awaiting badge dot to the summary card",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4086",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T16:20:30Z",
+        "reviewed_at": "2026-08-18T18:58:01Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.63
+      },
+      {
+        "title": "[APO-11428] Keep Recurring Migration chrome on the Archived view",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4085",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T15:12:24Z",
+        "reviewed_at": "2026-08-17T17:42:07Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.5
+      },
+      {
+        "title": "[APO-11427] Teach migration tabs/cards to navigate across routes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4084",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T15:12:18Z",
+        "reviewed_at": "2026-08-17T17:43:14Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.52
+      },
+      {
+        "title": "[APO-11426] Extract MigrationPageHeader from the live dashboard",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4083",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T15:12:09Z",
+        "reviewed_at": "2026-08-17T17:33:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.35
+      },
+      {
+        "title": "perf(web): preload Stripe.js only on payment routes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4082",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T23:02:14Z",
+        "reviewed_at": "2026-08-19T14:27:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.46
+      },
+      {
+        "title": "chore(giving): drop retired recurring-edit feature-flag plumbing",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4081",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T13:46:22Z",
+        "reviewed_at": "2026-08-17T15:00:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.01
+      },
+      {
+        "title": "test(web): add smoke coverage for search and ask routes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4080",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T13:41:04Z",
+        "reviewed_at": "2026-08-17T17:32:18Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.54
+      },
+      {
+        "title": "fix(admin): persist rotated Planning Center refresh token (APO-11421)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4079",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T13:08:42Z",
+        "reviewed_at": "2026-08-17T14:58:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.97
+      },
+      {
+        "title": "fix(admin): require auth and church access for persona-tags API (APO-11309)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4078",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T20:43:04Z",
+        "reviewed_at": "2026-08-19T14:28:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.76
+      },
+      {
+        "title": "fix(admin): drop duplicate transaction id and harden giving receipt email styling",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4077",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T22:21:31Z",
+        "reviewed_at": "2026-08-18T14:10:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.17
+      },
+      {
+        "title": "fix(web): normalize church slug for giving flag evaluation (APO-11409)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4075",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T21:30:16Z",
+        "reviewed_at": "2026-08-18T14:08:53Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.64
+      },
+      {
+        "title": "fix(mobile): Android Give tab payment leaves WebView (APO-11401)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6918",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-08-17T18:28:51Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): lock Give tab Display/Personalization when giving is off (APO-11367)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4073",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-08-17T15:08:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Give session toasts 10 seconds so admins can finish reading them",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4072",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T15:12:42Z",
+        "reviewed_at": "2026-08-18T18:57:17Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 3.74
+      },
+      {
+        "title": "feat(admin): let churches pick heading and body brand fonts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4068",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T20:03:29Z",
+        "reviewed_at": "2026-08-17T20:18:11Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.25
+      },
+      {
+        "title": "test(web): give helpers + payment-rail gift e2e (card/ACH, one-time/recurring)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4065",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T21:48:41Z",
+        "reviewed_at": "2026-08-18T13:54:58Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.19
+      },
+      {
+        "title": "feat(admin): move Events and Livestreams under Content",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4063",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T19:16:57Z",
+        "reviewed_at": "2026-08-17T20:11:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.9
+      },
+      {
+        "title": "fix(web): don't onboard a signed-in user when the profile lookup failed",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4061",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T13:35:29Z",
+        "reviewed_at": "2026-08-17T17:40:53Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.68
+      },
+      {
+        "title": "test(admin): Migration Started Send Reminder edge e2e",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4054",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-08-20T13:42:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
+      },
+      {
+        "title": "test(admin): Migration Started Send Reminder e2e",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4052",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T19:26:40Z",
+        "reviewed_at": "2026-08-19T19:27:49Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.02
+      },
+      {
+        "title": "test(admin): Migration Started filters and export e2e",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4050",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-19T04:10:06Z",
+        "reviewed_at": "2026-08-19T14:34:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.58
+      },
+      {
+        "title": "fix(web): filter Meta IAB bridge teardown noise",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4043",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-17T13:10:41Z",
+        "reviewed_at": "2026-08-17T14:56:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.94
+      },
+      {
+        "title": "feat(admin): dynamic Bible translations from the church's api.bible key (APO-11167)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4015",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-11T02:52:45Z",
+        "reviewed_at": "2026-08-20T17:24:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 59.4
+      },
+      {
+        "title": "feat(admin): read payout reconciliation report from payout.arrival_date (APO-11063)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3993",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-18T20:12:16Z",
+        "reviewed_at": "2026-08-18T20:19:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.11
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- Reviewed: [APO-11428] Keep Recurring Migration chrome on the Archived view\n- Reviewed: [APO-11427] Teach migration tabs/cards to navigate across routes\n- Reviewed: [APO-11426] Extract MigrationPageHeader from the live dashboard\n- Reviewed: chore(giving): drop retired recurring-edit feature-flag plumbing\n- Reviewed: test(web): add smoke coverage for search and ask routes\n- Reviewed: fix(admin): persist rotated Planning Center refresh token (APO-11421)\n- Reviewed: fix(mobile): Android Give tab payment leaves WebView (APO-11401)\n- Reviewed: fix(admin): lock Give tab Display/Personalization when giving is off (APO-11367)\n- Reviewed: feat(admin): let churches pick heading and body brand fonts\n- Reviewed: feat(admin): move Events and Livestreams under Content\n- Reviewed: fix(web): don't onboard a signed-in user when the profile lookup failed\n- Reviewed: fix(web): filter Meta IAB bridge teardown noise\n- In progress: APO-11401: Android Give tab: payment must leave WebView (Google Pay / provider handoff)\n- In progress: APO-10824: Give tab rollout\n- In progress: APO-9364: Make sure that subscription transactions show up on /transactions (succeeded and failed)\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- fix: stop the review queue from draining the GitHub core quota\n- Show missing-path notices for orphaned FreedUp cards\n- Stop committing Mongo dump JSON\n- Strip Quill spacer paragraphs from copied HTML\n- Wipe dump rows and seed Canvas html_content on migrate\n- fix(mobile): Android Give tab payment leaves WebView (APO-11401)\n- fix(admin): lock Give tab Display/Personalization when giving is off (APO-11367)\n- Reviewed: fix: stop the review queue from draining the GitHub core quota\n- Reviewed: Use an info icon on the all-skipped reminder toast\n- Reviewed: Toast when a giving export finishes\n- Reviewed: Call the Started reminder filter and export column Email 2\n- Reviewed: Show missing-path notices for orphaned FreedUp cards\n- Reviewed: fix(admin): stop sidebar saves clobbering enable_discussions without audience\n- Reviewed: Show on the row why Send Reminder will skip it\n- Reviewed: Size migration export columns to header and content\n- Reviewed: Show Payment Method on the Started migration table\n- Reviewed: Match the Awaiting badge dot to the summary card\n- Reviewed: [APO-11427] Teach migration tabs/cards to navigate across routes\n- Reviewed: fix(admin): drop duplicate transaction id and harden giving receipt email styling\n- …and 6 more reviews\n- Done: APO-11368: The icon dropdown in admin on the Apps > Mobile > Display (on a tab) can get buried\n- In progress: APO-10824: Give tab rollout\n- Filed 2 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- Reviewed: fix(mobile): keep Android give links in Custom Tabs instead of native GivingScreen\n- Reviewed: Show a date on old Email 1 and Email 2 stamps\n- Reviewed: Hide Email 1 and Email 2 sent when the donor has no email\n- Reviewed: APO-11576: Remove unused Admin transactions Excel stream\n- Reviewed: fix(admin): guard emptied Question Block content in Novel editor\n- Reviewed: fix(admin): don't blame the key role for Apple's unsigned-agreement 403\n- Reviewed: fix(admin): date failed-transactions report in the church timezone\n- Reviewed: APO-10112: remove dead admin stripe_events SQL\n- Reviewed: perf(web): preload Stripe.js only on payment routes\n- Reviewed: fix(admin): require auth and church access for persona-tags API (APO-11309)\n- Reviewed: test(admin): Migration Started Send Reminder e2e\n- Reviewed: test(admin): Migration Started filters and export e2e\n- Done: APO-11487: Copy-down migration script: Mongo content -> Postgres (freedup church)\n- Done: APO-11401: Android Give tab: payment must leave WebView (Google Pay / provider handoff)\n- Done: APO-11371: Android - if push pay set as giving web url, we should show apollos giving and redirct on /payment\n- Done: APO-11183: Blank Fund sheet is stranded on the Give tab after returning from web giving\n- In progress: APO-11590: Google Pay remains available after being disabled\n- Pushed 2 commits (no merges in this window)\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- feat: gate auto-approve by additions and rename middle decision labels\n- feat: stream outcome rescan progress and surface full rescan in Settings\n- fix(mobile): keep Android give links in Custom Tabs instead of native GivingScreen\n- Reviewed: fix(web-embeds-v2): only open query deep links for real Apollos ids\n- Reviewed: test(web): dry up leftover give e2e helpers from #4065\n- Reviewed: fix(web): gate Express Checkout to people who can finish on Apollos\n- Reviewed: feat: gate auto-approve by additions and rename middle decision labels\n- Reviewed: fix(admin): clear TS7 typecheck errors in the canvas editor\n- Reviewed: APO-10798: fix TS7 typecheck errors in admin charts, media, and shared inputs\n- Reviewed: fix(admin): clear TS7 typecheck errors in nine admin routes\n- Reviewed: feat: stream outcome rescan progress and surface full rescan in Settings\n- Reviewed: refactor(admin): extract useCopyToClipboard hook\n- Reviewed: feat(admin): add the Guided Content Progression segmented control\n- Reviewed: fix(ci): resolve stack name before pulumi up so failure alerts are usable\n- Reviewed: test(web): mitigate give e2e data explosion\n- …and 9 more reviews\n- In progress: APO-11672: CF Google Pay test: only show wallets to people who can finish on Apollos\n- Filed a new Linear ticket\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- Reviewed: fix(web): gate Express Checkout to people who can finish on Apollos\n- Done: APO-11590: Google Pay remains available after being disabled\n- In progress: APO-11672: CF Google Pay test: only show wallets to people who can finish on Apollos\n- Left comments on PRs"
+    },
+    {
+      "day": "Friday",
+      "content": ", August 21\nDaily\nWhat did you work on today\n3:25 PM\nMapped Giving Gates on a Figma board and checked it against the code\nSecond pass on APO-11672 / CF Google Pay wallet gate. Not quite right yet\nOut the rest of the day for family emergency"
+    },
+    {
+      "day": "Thursday",
+      "content": ", August 20\nDaily\nWhat did you work on today\n5:48 PM\nPRs on Apollos Code Reviewer (auto-approve gating + rescan progress in Settings)\nAndroid Give links stay in Custom Tabs instead of the native GivingScreen\nPretty much the whole day on this -- Mapping Christ Fellowship Google Pay test path w/ @Conrad\nHelping CS on a City First Apple issue\nScreenshot 2026-08-20 at 5.46.15 PM.png\nScreenshot 2026-08-20 at 5.46.15 PM.png"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", August 19\nDaily\nWhat did you work on today\n4:17 PM\nJam w/ @Vitor on Chat v2\nGive Tab hotfix (mobile PR 6918) and Apollos Preview to v103\nCity First Android Give / Google Pay in CS w/ @Conrad et all\nQuasi-native give screen from app-link interception\nAPO-11590, PRs in review\nClosed APO-11401 (Android Give leave WebView)\nClosed APO-11487 copy-down Mongo → Postgres for FreedUp\nScreenshot 2026-08-19 at 4.13.36 PM.png\nScreenshot 2026-08-19 at 4.13.36 PM.png"
+    },
+    {
+      "day": "Tuesday",
+      "content": ", August 18\nDaily\nWhat did you work on today\n4:00 PM\nClosed APO-11368 (icon dropdown getting buried on Apps > Mobile > Display)\nGive Tab PRs: Android payment leaving the WebView (APO-11401) and lock Display/Personalization when giving is off (APO-11367)\nFreedUp migration work kickoff\nFix to stop the review queue from draining the GitHub core quota\nArch Pod Huddle on AI tools\nStill rolling Give Tab out\nScreenshot 2026-08-18 at 4.01.19 PM.png\nScreenshot 2026-08-18 at 4.01.19 PM.png"
+    },
+    {
+      "day": "Monday",
+      "content": ", August 17\nDaily\nWhat did you work on today\n4:32 PM\nAndroid testing for Give Tab (PRs in flight from QA)\nIdeating on conference talk for CITN w/ @Conrad\nGitHub outage tanking my review stats and killing CI across the board 😔\nScreenshot 2026-08-17 at 4.30.40 PM.png"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 10\n  • PR reviews: 60\n  • Commits pushed: 37\n  • Code volume: +2898 / -21516 (67 files)\n  • Median review latency (working hours): 0.43h\n  • Linear issues completed: 6\n  • Linear projects completed: 0\n  • Linear issues worked on: 8\n  • Linear issues created: 3\n  • Linear replies: 5\n  • Repos: apollos-admin, apollos-code-reviewer, apollos-infrastructure, apollos-platforms, freedup-migration\n\n📝 Check-ins:\n\n  Monday: - Reviewed: [APO-11428] Keep Recurring Migration chrome on the Archived view\n- R...\n  Tuesday: - fix: stop the review queue from draining the GitHub core quota\n- Show missing-...\n  Wednesday: - Reviewed: fix(mobile): keep Android give links in Custom Tabs instead of nativ...\n  Thursday: - feat: gate auto-approve by additions and rename middle decision labels\n- feat:...\n  Friday: - Reviewed: fix(web): gate Express Checkout to people who can finish on Apollos\n...\n  Friday: , August 21\nDaily\nWhat did you work on today\n3:25 PM\nMapped Giving Gates on a Fi...\n  Thursday: , August 20\nDaily\nWhat did you work on today\n5:48 PM\nPRs on Apollos Code Reviewe...\n  Wednesday: , August 19\nDaily\nWhat did you work on today\n4:17 PM\nJam w/ @Vitor on Chat v2\nGi...\n  Tuesday: , August 18\nDaily\nWhat did you work on today\n4:00 PM\nClosed APO-11368 (icon drop...\n  Monday: , August 17\nDaily\nWhat did you work on today\n4:32 PM\nAndroid testing for Give Ta...\n",
+  "formatted_output": null
+}
