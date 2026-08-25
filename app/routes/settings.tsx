@@ -8,6 +8,10 @@ import {
   getStoredRefreshInterval,
 } from "../hooks/useRefreshInterval";
 import { useGoals, type WeeklyGoals } from "../hooks/useGoals";
+import {
+  useMonthlyPrTarget,
+  DEFAULT_MONTHLY_PR_TARGET,
+} from "../hooks/useMonthlyGoal";
 import { readPref, writePref } from "~/lib/prefs-storage";
 
 type Theme = "light" | "dark" | "system";
@@ -43,6 +47,8 @@ export default function Settings() {
   const [refreshInterval, setRefreshIntervalState] = useState<string>("5");
   const [mounted, setMounted] = useState(false);
   const { goals, setGoals, clearGoals } = useGoals();
+  const { target: monthlyTarget, setTarget: setMonthlyTarget } =
+    useMonthlyPrTarget();
 
   useEffect(() => {
     const stored = readPref(STORAGE_KEY) as Theme | null;
@@ -168,8 +174,43 @@ export default function Settings() {
           </div>
         </div>
 
-        {/* Right column: Weekly goals + Server settings */}
+        {/* Right column: Monthly target + Weekly goals + Server settings */}
         <div className="space-y-6">
+          <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6 xl:p-5 space-y-4">
+            <h3 className="text-sm font-medium text-(--color-text)">
+              Monthly target
+            </h3>
+            <p className="text-sm text-text-muted">
+              PRs you are expected to merge each month. Drives the progress card
+              on the home page.
+            </p>
+            <div className="flex items-end gap-3">
+              <label className="flex flex-col gap-1">
+                <span className="text-xs text-text-muted">PRs merged</span>
+                <input
+                  type="number"
+                  min={1}
+                  step={1}
+                  value={mounted ? monthlyTarget : ""}
+                  onChange={(e) => {
+                    const n = parseInt(e.target.value, 10);
+                    if (Number.isFinite(n) && n > 0) setMonthlyTarget(n);
+                  }}
+                  className="w-28 px-3 py-2 bg-surface-elevated border border-(--color-border) rounded-lg text-(--color-text) focus:ring-2 focus:ring-primary-500"
+                />
+              </label>
+              {mounted && monthlyTarget !== DEFAULT_MONTHLY_PR_TARGET && (
+                <button
+                  type="button"
+                  onClick={() => setMonthlyTarget(DEFAULT_MONTHLY_PR_TARGET)}
+                  className="pb-2.5 text-sm text-text-muted hover:text-primary-500"
+                >
+                  Reset to {DEFAULT_MONTHLY_PR_TARGET}
+                </button>
+              )}
+            </div>
+          </div>
+
           <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-6 xl:p-5 space-y-4">
             <h3 className="text-sm font-medium text-(--color-text)">
               Weekly goals
