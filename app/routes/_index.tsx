@@ -4,15 +4,22 @@ import { useToast } from "~/components/Toast";
 import type { LoaderFunctionArgs } from "react-router";
 import { data } from "react-router";
 import { getCachedRunSummary } from "../../lib/summary";
+import {
+  currentMonth,
+  getMonthlyProgress,
+  type MonthlyProgress,
+} from "../../lib/monthly-progress";
 import { fetchWeeklySummary } from "../../lib/github-fetch";
 import { listDailySnapshots } from "../../lib/daily-snapshot";
 import { isBasecampConfigured } from "../../lib/basecamp-post";
 import { isGranolaConfigured } from "../../lib/granola-client";
 import { TodaySection } from "~/components/TodaySection";
+import { MonthlyProgressCard } from "~/components/MonthlyProgressCard";
 import { WeeklySection } from "~/components/WeeklySection";
 import { FullSummaryFormContainer } from "~/components/FullSummaryFormContainer";
 import { useRefreshInterval } from "~/hooks/useRefreshInterval";
 import { useGoals } from "~/hooks/useGoals";
+import { useMonthlyPrTarget } from "~/hooks/useMonthlyGoal";
 import type { Payload } from "../../lib/types";
 
 function getPrevWeekEnding(weekEnding: string): string {
@@ -27,6 +34,7 @@ interface IndexLoaderData {
   today: { payload?: Payload; error?: string };
   yesterday: { payload?: Payload; error?: string };
   weekly: { payload?: Payload; prevPayload?: Payload | null; error?: string };
+  monthly: { progress?: MonthlyProgress; error?: string };
   capturedDates: string[];
   basecampConfigured: boolean;
   granolaConfigured: boolean;
@@ -39,6 +47,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
         today: { error: "Method not allowed" },
         yesterday: { error: "Method not allowed" },
         weekly: { error: "Method not allowed" },
+        monthly: { error: "Method not allowed" },
         capturedDates: [] as string[],
         basecampConfigured: false,
         granolaConfigured: false,
@@ -102,10 +111,20 @@ export async function loader({ request }: LoaderFunctionArgs) {
       }
     );
 
-  const [today, yesterday, weekly] = await Promise.all([
+  const runMonthly = () =>
+    getMonthlyProgress(currentMonth(new Date()), { bust }).then(
+      (progress) => ({ progress }),
+      (err) => {
+        console.error("Monthly progress error:", err);
+        return { error: (err as Error).message };
+      }
+    );
+
+  const [today, yesterday, weekly, monthly] = await Promise.all([
     runToday(),
     runYesterday(),
     runWeekly(),
+    runMonthly(),
   ]);
 
   let capturedDates: string[] = [];
@@ -125,6 +144,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
     today,
     yesterday,
     weekly,
+    monthly,
     capturedDates,
     basecampConfigured: isBasecampConfigured(),
     granolaConfigured: isGranolaConfigured(),
@@ -136,6 +156,7 @@ export default function Index() {
     today,
     yesterday,
     weekly,
+    monthly,
     capturedDates,
     basecampConfigured,
     granolaConfigured,
@@ -146,6 +167,7 @@ export default function Index() {
   const toast = useToast();
   const { intervalMs, label } = useRefreshInterval();
   const { goals } = useGoals();
+  const { target: monthlyTarget } = useMonthlyPrTarget();
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const handleRefresh = useCallback(() => {
@@ -215,6 +237,9 @@ export default function Index() {
     yesterday && "error" in yesterday ? yesterday.error : null;
   const weeklyPayload = weekly && "payload" in weekly ? weekly.payload : null;
   const weeklyError = weekly && "error" in weekly ? weekly.error : null;
+  const monthlyProgress =
+    monthly && "progress" in monthly ? monthly.progress : null;
+  const monthlyError = monthly && "error" in monthly ? monthly.error : null;
 
   return (
     <div className="space-y-5">
@@ -240,6 +265,13 @@ export default function Index() {
           </button>
         ))}
       </div>
+
+      <MonthlyProgressCard
+        progress={monthlyProgress ?? null}
+        error={monthlyError ?? null}
+        isLoading={isLoading}
+        target={monthlyTarget}
+      />
 
       <div className="xl:grid xl:grid-cols-[minmax(0,1.6fr)_minmax(20rem,1fr)] xl:gap-5 xl:items-start">
         <div className="space-y-6 xl:flex xl:flex-col xl:min-h-0">

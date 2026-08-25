@@ -7,6 +7,7 @@ Generates weekly work summaries from Linear issues, GitHub activity, and optiona
 - **CLI**: Run from terminal with check-ins file, stdin, or interactive input
 - **Web GUI**: React Router 7 app with form and metrics display
 - **6 metrics**: PRs merged, PRs created/updated, PR reviews, Linear completed, Linear worked on, repos
+- **Monthly target**: month-to-date merged PRs vs a monthly goal (default 28), with pace, projection, and a burn-up chart on the home page. Change the target in Settings.
 - **Today mode**: `--today` / `-t` for midnight-to-now window
 - **Yesterday mode**: `--yesterday` / `-y` for yesterday's stats
 - **Week backfill**: `--week` / `-w YYYY-MM-DD` for a past Friday week-ending
