@@ -229,7 +229,10 @@ export function MonthlyProgressCard({
         </span>
       </div>
 
-      <div className="pt-4 border-t border-(--color-border) grid gap-6 lg:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] xl:grid-cols-[minmax(0,15rem)_minmax(0,1fr)_minmax(0,13rem)]">
+      {/* The repo track is `auto`, not a fixed width: if that column is ever
+          not rendered, the track collapses and the chart takes the space back.
+          A fixed third track leaves a hole the moment its child is hidden. */}
+      <div className="pt-4 border-t border-(--color-border) grid gap-6 lg:grid-cols-[minmax(0,15rem)_minmax(0,1fr)_auto]">
         <div className="space-y-4 min-w-0">
           <div>
             <div className="flex items-baseline gap-2">
@@ -450,7 +453,7 @@ export function MonthlyProgressCard({
           </div>
         </div>
 
-        <div className="hidden xl:block min-w-0">
+        <div className="hidden lg:block w-52 min-w-0">
           <h3 className="text-xs font-medium text-text-muted pb-2">
             Where they landed
           </h3>
