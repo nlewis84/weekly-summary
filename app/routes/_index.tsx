@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useLoaderData, useNavigation, useSearchParams } from "react-router";
 import { useToast } from "~/components/Toast";
 import type { LoaderFunctionArgs } from "react-router";
@@ -28,11 +28,8 @@ function getPrevWeekEnding(weekEnding: string): string {
   return d.toISOString().slice(0, 10);
 }
 
-type ViewMode = "today" | "yesterday";
-
 interface IndexLoaderData {
   today: { payload?: Payload; error?: string };
-  yesterday: { payload?: Payload; error?: string };
   weekly: { payload?: Payload; prevPayload?: Payload | null; error?: string };
   monthly: { progress?: MonthlyProgress; error?: string };
   capturedDates: string[];
@@ -45,7 +42,6 @@ export async function loader({ request }: LoaderFunctionArgs) {
     return data(
       {
         today: { error: "Method not allowed" },
-        yesterday: { error: "Method not allowed" },
         weekly: { error: "Method not allowed" },
         monthly: { error: "Method not allowed" },
         capturedDates: [] as string[],
@@ -69,21 +65,6 @@ export async function loader({ request }: LoaderFunctionArgs) {
       (r) => ({ payload: r.payload }),
       (err) => {
         console.error("Today summary error:", err);
-        return { error: (err as Error).message };
-      }
-    );
-
-  const runYesterday = () =>
-    getCachedRunSummary({
-      todayMode: false,
-      yesterdayMode: true,
-      checkInsText: "",
-      outputDir: null,
-      bust,
-    }).then(
-      (r) => ({ payload: r.payload }),
-      (err) => {
-        console.error("Yesterday summary error:", err);
         return { error: (err as Error).message };
       }
     );
@@ -120,9 +101,8 @@ export async function loader({ request }: LoaderFunctionArgs) {
       }
     );
 
-  const [today, yesterday, weekly, monthly] = await Promise.all([
+  const [today, weekly, monthly] = await Promise.all([
     runToday(),
-    runYesterday(),
     runWeekly(),
     runMonthly(),
   ]);
@@ -142,7 +122,6 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
   return data({
     today,
-    yesterday,
     weekly,
     monthly,
     capturedDates,
@@ -154,14 +133,12 @@ export async function loader({ request }: LoaderFunctionArgs) {
 export default function Index() {
   const {
     today,
-    yesterday,
     weekly,
     monthly,
     capturedDates,
     basecampConfigured,
     granolaConfigured,
   } = useLoaderData<typeof loader>();
-  const [viewMode, setViewMode] = useState<ViewMode>("today");
   const navigation = useNavigation();
   const [searchParams, setSearchParams] = useSearchParams();
   const toast = useToast();
@@ -200,16 +177,6 @@ export default function Index() {
         e.preventDefault();
         handleRefresh();
       }
-      if (
-        e.key === "y" &&
-        !e.metaKey &&
-        !e.ctrlKey &&
-        !e.altKey &&
-        !e.shiftKey
-      ) {
-        e.preventDefault();
-        setViewMode("yesterday");
-      }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
@@ -231,10 +198,6 @@ export default function Index() {
 
   const todayPayload = today && "payload" in today ? today.payload : null;
   const todayError = today && "error" in today ? today.error : null;
-  const yesterdayPayload =
-    yesterday && "payload" in yesterday ? yesterday.payload : null;
-  const yesterdayError =
-    yesterday && "error" in yesterday ? yesterday.error : null;
   const weeklyPayload = weekly && "payload" in weekly ? weekly.payload : null;
   const weeklyError = weekly && "error" in weekly ? weekly.error : null;
   const monthlyProgress =
@@ -243,29 +206,6 @@ export default function Index() {
 
   return (
     <div className="space-y-5">
-      <div
-        role="tablist"
-        aria-label="Date range"
-        className="flex w-fit rounded-lg border border-(--color-border) p-0.5 bg-surface-elevated"
-      >
-        {(["today", "yesterday"] as const).map((mode) => (
-          <button
-            key={mode}
-            type="button"
-            role="tab"
-            aria-selected={viewMode === mode}
-            onClick={() => setViewMode(mode)}
-            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 ${
-              viewMode === mode
-                ? "bg-primary-600 text-white shadow-sm hover:bg-primary-500"
-                : "text-text-muted hover:text-(--color-text)"
-            }`}
-          >
-            {mode.charAt(0).toUpperCase() + mode.slice(1)}
-          </button>
-        ))}
-      </div>
-
       <MonthlyProgressCard
         progress={monthlyProgress ?? null}
         error={monthlyError ?? null}
@@ -275,32 +215,16 @@ export default function Index() {
 
       <div className="xl:grid xl:grid-cols-[minmax(0,1.6fr)_minmax(20rem,1fr)] xl:gap-5 xl:items-start">
         <div className="space-y-6 xl:flex xl:flex-col xl:min-h-0">
-          {viewMode === "today" && (
-            <TodaySection
-              payload={todayPayload ?? null}
-              error={todayError ?? null}
-              isLoading={isLoading}
-              onRefresh={handleRefresh}
-              refreshIntervalLabel={label}
-              title="Today"
-              capturedDates={capturedDates}
-              basecampConfigured={basecampConfigured}
-              granolaConfigured={granolaConfigured}
-            />
-          )}
-          {viewMode === "yesterday" && (
-            <TodaySection
-              payload={yesterdayPayload ?? null}
-              error={yesterdayError ?? null}
-              isLoading={isLoading}
-              onRefresh={handleRefresh}
-              refreshIntervalLabel={label}
-              title="Yesterday"
-              capturedDates={capturedDates}
-              basecampConfigured={basecampConfigured}
-              granolaConfigured={granolaConfigured}
-            />
-          )}
+          <TodaySection
+            payload={todayPayload ?? null}
+            error={todayError ?? null}
+            isLoading={isLoading}
+            onRefresh={handleRefresh}
+            refreshIntervalLabel={label}
+            capturedDates={capturedDates}
+            basecampConfigured={basecampConfigured}
+            granolaConfigured={granolaConfigured}
+          />
         </div>
 
         <div className="space-y-5 xl:flex xl:flex-col xl:min-h-0">

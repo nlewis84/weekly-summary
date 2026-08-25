@@ -20,8 +20,6 @@ export async function action({ request }: ActionFunctionArgs) {
   }
 
   const formData = await request.formData();
-  const mode = (formData.get("mode") as string) ?? "today";
-  const isYesterday = mode === "yesterday";
   const postToBasecamp = formData.get("postToBasecamp") === "true";
   const previewBasecamp = formData.get("previewBasecamp") === "true";
   const dateOverride = formData.get("date") as string | null;
@@ -30,11 +28,10 @@ export async function action({ request }: ActionFunctionArgs) {
   try {
     if (previewBasecamp) {
       const result = await getCachedRunSummary({
-        todayMode: !isYesterday,
-        yesterdayMode: isYesterday,
+        todayMode: true,
         checkInsText: "",
         outputDir: null,
-        forCapture: !isYesterday,
+        forCapture: true,
         bust: true,
       });
 
@@ -71,11 +68,10 @@ export async function action({ request }: ActionFunctionArgs) {
     }
 
     const result = await getCachedRunSummary({
-      todayMode: !isYesterday,
-      yesterdayMode: isYesterday,
+      todayMode: true,
       checkInsText: "",
       outputDir: null,
-      forCapture: !isYesterday,
+      forCapture: true,
       bust: true,
     });
 

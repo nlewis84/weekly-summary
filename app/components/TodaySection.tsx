@@ -54,7 +54,6 @@ interface TodaySectionProps {
   isLoading: boolean;
   onRefresh: () => void;
   refreshIntervalLabel?: string;
-  title?: string;
   capturedDates?: string[];
   basecampConfigured?: boolean;
   granolaConfigured?: boolean;
@@ -66,7 +65,6 @@ export function TodaySection({
   isLoading,
   onRefresh,
   refreshIntervalLabel,
-  title = "Today",
   capturedDates = [],
   basecampConfigured = false,
   granolaConfigured = false,
@@ -80,7 +78,6 @@ export function TodaySection({
   const [modalDraft, setModalDraft] = useState("");
   const [modalGranolaWarning, setModalGranolaWarning] = useState("");
 
-  const isYesterday = title === "Yesterday";
   // Snapshot files are keyed by the local calendar day the period ends on
   // (capture day), not window_start — which may be a prior capture.
   const captureDate = payload?.meta.window_end
@@ -92,21 +89,20 @@ export function TodaySection({
         return `${y}-${m}-${day}`;
       })()
     : "";
-  const sinceLabel =
-    !isYesterday && payload?.meta.window_start
-      ? (() => {
-          const start = new Date(payload.meta.window_start);
-          const startDay = start.toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-          });
-          const startTime = start.toLocaleTimeString("en-US", {
-            hour: "numeric",
-            minute: "2-digit",
-          });
-          return `Since ${startDay}, ${startTime}`;
-        })()
-      : null;
+  const sinceLabel = payload?.meta.window_start
+    ? (() => {
+        const start = new Date(payload.meta.window_start);
+        const startDay = start.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+        });
+        const startTime = start.toLocaleTimeString("en-US", {
+          hour: "numeric",
+          minute: "2-digit",
+        });
+        return `Since ${startDay}, ${startTime}`;
+      })()
+    : null;
   const sessionCommittedThisDate =
     isSnapshotCommit(fetcher.data) && fetcher.data.date === captureDate;
   const alreadyCaptured =
@@ -145,13 +141,13 @@ export function TodaySection({
         const verb = capturedDates.includes(captureDate)
           ? "updated"
           : "captured";
-        let msg = `${isYesterday ? "Yesterday" : "Today"}'s data ${verb}`;
+        let msg = `Today's data ${verb}`;
         if (d.basecampPosted) msg += " + posted to Basecamp";
         else if (d.basecampError) msg += " (Basecamp post failed)";
         toast(msg);
       }
     }
-  }, [fetcher.data, fetcher.state, isYesterday, capturedDates, captureDate, toast]);
+  }, [fetcher.data, fetcher.state, capturedDates, captureDate, toast]);
 
   const submitSnapshot = (body: Record<string, string>) => {
     fetcher.submit(body, { method: "post", action: "/api/snapshot" });
@@ -161,13 +157,11 @@ export function TodaySection({
     if (!captureDate) return;
     if (useBasecampPreviewFlow) {
       submitSnapshot({
-        mode: isYesterday ? "yesterday" : "today",
         date: captureDate,
         previewBasecamp: "true",
       });
     } else {
       submitSnapshot({
-        mode: isYesterday ? "yesterday" : "today",
         date: captureDate,
         postToBasecamp: postToBasecamp ? "true" : "false",
       });
@@ -177,7 +171,6 @@ export function TodaySection({
   const handleModalPost = () => {
     if (!captureDate) return;
     submitSnapshot({
-      mode: isYesterday ? "yesterday" : "today",
       date: captureDate,
       postToBasecamp: "true",
       checkInBody: modalDraft,
@@ -187,7 +180,6 @@ export function TodaySection({
   const handleModalSaveOnly = () => {
     if (!captureDate) return;
     submitSnapshot({
-      mode: isYesterday ? "yesterday" : "today",
       date: captureDate,
       postToBasecamp: "false",
     });
@@ -199,7 +191,7 @@ export function TodaySection({
       : "Capturing…"
     : alreadyCaptured
       ? "Captured"
-      : `Capture ${isYesterday ? "Yesterday" : "Today"}`;
+      : "Capture Today";
 
   return (
     <div className="xl:flex xl:flex-col xl:min-h-0">
@@ -217,7 +209,7 @@ export function TodaySection({
 
       <div className="flex items-center justify-between shrink-0 pb-2">
         <div className="min-w-0">
-          <h2 className="text-lg font-semibold text-(--color-text)">{title}</h2>
+          <h2 className="text-lg font-semibold text-(--color-text)">Today</h2>
           {sinceLabel && (
             <p className="text-xs text-text-muted mt-0.5">{sinceLabel}</p>
           )}
@@ -232,7 +224,7 @@ export function TodaySection({
             <div className="flex items-center gap-1">
               <fieldset
                 className="min-w-0 border-0 p-0 m-0"
-                aria-label={`Capture ${isYesterday ? "yesterday" : "today"}'s metrics${basecampConfigured ? "; with Basecamp enabled, capture opens a preview before posting" : ""}`}
+                aria-label={`Capture today's metrics${basecampConfigured ? "; with Basecamp enabled, capture opens a preview before posting" : ""}`}
               >
                 <div className="inline-flex items-stretch rounded-lg bg-surface-elevated/50">
                   <button
@@ -241,10 +233,10 @@ export function TodaySection({
                     disabled={isWorking || !captureDate}
                     title={
                       alreadyCaptured
-                        ? `Update ${isYesterday ? "yesterday" : "today"}'s capture`
+                        ? "Update today's capture"
                         : useBasecampPreviewFlow
-                          ? `Prepare ${isYesterday ? "yesterday" : "today"}'s check-in preview for Basecamp`
-                          : `Capture ${isYesterday ? "yesterday" : "today"}'s data`
+                          ? "Prepare today's check-in preview for Basecamp"
+                          : "Capture today's data"
                     }
                     className={`capture-toolbar-btn flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-2 text-sm transition-colors ${
                       basecampConfigured ? "rounded-l-lg" : "rounded-lg"
