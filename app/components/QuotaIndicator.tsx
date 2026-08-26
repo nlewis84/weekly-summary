@@ -15,11 +15,17 @@ interface LinearQuota {
 
 interface QuotaStatus {
   github: GitHubQuota | null;
+  githubSearch: GitHubQuota | null;
   linear: LinearQuota | null;
   error?: string;
 }
 
 const LOW_THRESHOLD = 100;
+/**
+ * Search allows 30 a minute, so "low" here is a handful, not a hundred. This is
+ * the budget the app actually runs into; core rarely gets close.
+ */
+const SEARCH_LOW_THRESHOLD = 10;
 
 function formatReset(resetAt: string | null): string {
   if (!resetAt) return "";
@@ -41,11 +47,14 @@ export function QuotaIndicator() {
       .catch(() => setQuota(null));
   }, []);
 
-  if (!quota || (!quota.github && !quota.linear)) return null;
+  if (!quota || (!quota.github && !quota.githubSearch && !quota.linear))
+    return null;
 
   const gh = quota.github;
+  const search = quota.githubSearch;
   const lin = quota.linear;
   const ghLow = gh && gh.remaining < LOW_THRESHOLD;
+  const searchLow = search && search.remaining < SEARCH_LOW_THRESHOLD;
   const linLow = lin && lin.remaining != null && lin.remaining < LOW_THRESHOLD;
 
   return (
@@ -59,6 +68,17 @@ export function QuotaIndicator() {
           >
             GitHub: {gh.remaining} left
             {ghLow && " (low)"}
+          </span>
+        )}
+        {search && (
+          <span
+            className={
+              searchLow ? "text-amber-600 dark:text-amber-400" : "text-text-muted"
+            }
+            title={`GitHub search: ${search.remaining} of ${search.limit} remaining this minute. ${formatReset(search.resetAt)}`}
+          >
+            GitHub search: {search.remaining} left
+            {searchLow && " (low)"}
           </span>
         )}
         {lin && lin.remaining != null && (

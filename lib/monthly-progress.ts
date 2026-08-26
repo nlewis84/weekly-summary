@@ -12,6 +12,7 @@
  */
 
 import { dataCache } from "./cache.js";
+import { SearchBudgetError, searchRequest } from "./github-search.js";
 import {
   buildMonthDays,
   businessDaysInMonth,
@@ -56,13 +57,6 @@ const MONTHLY_TTL_MS = 15 * 60 * 1000;
  */
 const MIN_REFETCH_MS = 10 * 60 * 1000;
 
-export class SearchRateLimitError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = "SearchRateLimitError";
-  }
-}
-
 function toYmd(d: Date): string {
   return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
 }
@@ -101,18 +95,13 @@ async function searchMergedPrs(
   const items: SearchItem[] = [];
   for (let page = 1; page <= MAX_SEARCH_PAGES; page++) {
     const url = `${GITHUB_API_BASE}/search/issues?q=${q}&per_page=${SEARCH_PAGE_SIZE}&page=${page}&sort=created&order=desc`;
-    const res = await fetch(url, { headers });
+    // "low": the month-to-date count is the first thing to give way when the
+    // search budget runs short, and the gate refuses locally rather than
+    // spending a request to discover that it is out.
+    const res = await searchRequest(url, headers, { priority: "low" });
     if (!res.ok) {
       const err = (await res.json().catch(() => ({}))) as { message?: string };
-      const message = err.message ?? `GitHub search failed: ${res.status}`;
-      // Deliberately no retry-with-sleep here: this runs inside the home page
-      // loader, and blocking it for up to a minute to win back a number that is
-      // minutes stale is a bad trade. Surface it so the caller serves the last
-      // good result instead.
-      if (res.status === 403 || res.status === 429) {
-        throw new SearchRateLimitError(message);
-      }
-      throw new Error(message);
+      throw new Error(err.message ?? `GitHub search failed: ${res.status}`);
     }
     const body = (await res.json()) as { items?: SearchItem[] };
     const batch = body.items ?? [];
@@ -254,9 +243,11 @@ export async function getMonthlyProgress(
     })
     .catch((err: unknown) => {
       if (previous) {
-        console.warn(
-          `Monthly progress: serving cached ${month} (${(err as Error).message})`
-        );
+        const why =
+          err instanceof SearchBudgetError
+            ? "search budget held back for today and this week"
+            : (err as Error).message;
+        console.warn(`Monthly progress: serving cached ${month} (${why})`);
         // Do not touch fetchedAt — the floor is measured from the last good
         // fetch, so a failure does not push the next attempt further out.
         return { ...previous.progress, stale: true };

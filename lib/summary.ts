@@ -16,6 +16,7 @@ import type {
 import { buildMarkdownSummary } from "./markdown.js";
 import { dataCache } from "./cache.js";
 import { fetchWithRetry } from "./github-api.js";
+import { SearchBudgetError, searchRequest } from "./github-search.js";
 import {
   getMostRecentSnapshot,
   localDateString,
@@ -935,18 +936,23 @@ async function fetchGitHubData(
   const since = windowStartISO.split("T")[0];
 
   try {
+    // "high": these three are what the page exists to show, so they keep the
+    // smallest reserve and the monthly search yields to them.
     const [prsCreatedRes, prsUpdatedRes, reviewsRes] = await Promise.all([
-      fetch(
+      searchRequest(
         `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+created:>=${since}&per_page=100`,
-        { headers }
+        headers,
+        { priority: "high" }
       ),
-      fetch(
+      searchRequest(
         `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+updated:>=${since}&per_page=100`,
-        { headers }
+        headers,
+        { priority: "high" }
       ),
-      fetch(
+      searchRequest(
         `${GITHUB_API_BASE}/search/issues?q=reviewed-by:${username}+type:pr+updated:>=${since}&per_page=100`,
-        { headers }
+        headers,
+        { priority: "high" }
       ),
     ]);
 
@@ -1062,7 +1068,11 @@ async function fetchGitHubData(
       commits_pushed: commitsResult.total,
       reposWithCommits: commitsResult.reposWithCommits,
     };
-  } catch {
+  } catch (err) {
+    // A rate-limited run must not be reported as a quiet zero. These numbers are
+    // shown as the day's work and can be written into a saved weekly summary, so
+    // "we could not ask" has to surface as an error, not as "you did nothing".
+    if (err instanceof SearchBudgetError) throw err;
     return {
       prs: [],
       reviews: [],
