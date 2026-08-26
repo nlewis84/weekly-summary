@@ -219,8 +219,18 @@ export function MonthlyProgressBody({
             style={{ width: `${fillPct}%` }}
           />
         </div>
-        <p className="mt-1.5 text-xs text-text-muted tabular-nums">
-          {pace.pct}% of target
+        <p className="mt-1.5 flex items-baseline justify-between gap-2 text-xs text-text-muted">
+          <span className="tabular-nums">{pace.pct}% of target</span>
+          {/* Say so rather than passing an old count off as current. */}
+          {progress.stale && (
+            <span title="GitHub declined a fresh search; showing the last result.">
+              cached{" "}
+              {new Date(progress.generated_at).toLocaleTimeString("en-US", {
+                hour: "numeric",
+                minute: "2-digit",
+              })}
+            </span>
+          )}
         </p>
       </div>
 
