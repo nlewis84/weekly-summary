@@ -64,6 +64,8 @@ export interface MonthlyProgress {
   isCurrentMonth: boolean;
   topRepos: { repo: string; count: number }[];
   generated_at: string;
+  /** Served from the last good fetch because GitHub refused a fresh search. */
+  stale?: boolean;
 }
 
 export interface PaceSummary {

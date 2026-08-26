@@ -11,8 +11,8 @@
  * it without importing the cache or the GitHub client.
  */
 
-import { fetchWithRetry } from "./github-api.js";
 import { dataCache } from "./cache.js";
+import { SearchBudgetError, searchRequest } from "./github-search.js";
 import {
   buildMonthDays,
   businessDaysInMonth,
@@ -45,6 +45,17 @@ const GITHUB_API_BASE = "https://api.github.com";
 const SEARCH_PAGE_SIZE = 100;
 /** 500 merged PRs in one month is far past any real month; a stop, not a limit. */
 const MAX_SEARCH_PAGES = 5;
+
+/** Served from cache without asking GitHub again. */
+const MONTHLY_TTL_MS = 15 * 60 * 1000;
+/**
+ * Floor between live searches for one month, which even an explicit refresh
+ * will not go under. The home page auto-refreshes on a timer and passes `bust`
+ * every time, so without this the search runs on that cadence forever — and
+ * GitHub's search API allows only 30 requests a minute, a separate and much
+ * tighter budget than the 5,000/hour core limit.
+ */
+const MIN_REFETCH_MS = 10 * 60 * 1000;
 
 function toYmd(d: Date): string {
   return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
@@ -84,7 +95,10 @@ async function searchMergedPrs(
   const items: SearchItem[] = [];
   for (let page = 1; page <= MAX_SEARCH_PAGES; page++) {
     const url = `${GITHUB_API_BASE}/search/issues?q=${q}&per_page=${SEARCH_PAGE_SIZE}&page=${page}&sort=created&order=desc`;
-    const res = await fetchWithRetry(url, { headers });
+    // "low": the month-to-date count is the first thing to give way when the
+    // search budget runs short, and the gate refuses locally rather than
+    // spending a request to discover that it is out.
+    const res = await searchRequest(url, headers, { priority: "low" });
     if (!res.ok) {
       const err = (await res.json().catch(() => ({}))) as { message?: string };
       throw new Error(err.message ?? `GitHub search failed: ${res.status}`);
@@ -118,32 +132,16 @@ async function searchMergedPrs(
 
 /**
  * Bump when MonthlyProgress changes shape — a running server would otherwise
- * keep serving objects built by the old shape until the 15-minute TTL lapses.
+ * keep serving objects built by the old shape until the TTL lapses.
  */
-const MONTHLY_CACHE_VERSION = 1;
+const MONTHLY_CACHE_VERSION = 2;
 
-export async function getMonthlyProgress(
+/** Pure: turn the month's merged PRs into the shape the card renders. */
+export function buildProgress(
   month: string,
-  options?: { bust?: boolean; now?: Date }
-): Promise<MonthlyProgress> {
-  const bust = options?.bust ?? false;
-  const now = options?.now ?? new Date();
-  const key = `monthly:v${MONTHLY_CACHE_VERSION}:${month}`;
-  if (!bust) {
-    const cached = dataCache.get(key) as MonthlyProgress | undefined;
-    if (cached) return cached;
-  }
-
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) throw new Error("GITHUB_TOKEN required for monthly progress");
-  const headers = {
-    Authorization: `Bearer ${token}`,
-    Accept: "application/vnd.github+json",
-    "X-GitHub-Api-Version": "2022-11-28",
-  };
-
-  const prs = await searchMergedPrs(month, headers);
-
+  prs: MonthlyMergedPr[],
+  now: Date
+): MonthlyProgress {
   const nowMonth = currentMonth(now);
   const isCurrentMonth = month === nowMonth;
   const lastDay = daysInMonth(month);
@@ -162,7 +160,7 @@ export async function getMonthlyProgress(
     repoCounts.set(repo, (repoCounts.get(repo) ?? 0) + 1);
   }
 
-  const result: MonthlyProgress = {
+  return {
     month,
     label: monthLabel(month),
     merged: prs.length,
@@ -177,8 +175,95 @@ export async function getMonthlyProgress(
       .sort((a, b) => b.count - a.count || a.repo.localeCompare(b.repo))
       .slice(0, 5),
     generated_at: now.toISOString(),
+    stale: false,
   };
+}
 
-  dataCache.set(key, result);
-  return result;
+/**
+ * Last successful result per month, kept past the cache TTL on purpose. When
+ * GitHub refuses a search there is nothing better to show than the number we
+ * last knew to be true, and a slightly old count beats an error banner.
+ */
+const lastGood = new Map<string, { progress: MonthlyProgress; fetchedAt: number }>();
+
+/**
+ * Searches in flight per month. Two page loads landing together previously
+ * issued two identical searches; now the second awaits the first.
+ */
+const inFlight = new Map<string, Promise<MonthlyProgress>>();
+
+/** Test seam: swap the network call without standing up a server. */
+export type SearchFn = (month: string) => Promise<MonthlyMergedPr[]>;
+
+function defaultSearch(month: string): Promise<MonthlyMergedPr[]> {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) {
+    return Promise.reject(
+      new Error("GITHUB_TOKEN required for monthly progress")
+    );
+  }
+  return searchMergedPrs(month, {
+    Authorization: `Bearer ${token}`,
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+  });
+}
+
+export async function getMonthlyProgress(
+  month: string,
+  options?: { bust?: boolean; now?: Date; search?: SearchFn }
+): Promise<MonthlyProgress> {
+  const bust = options?.bust ?? false;
+  const now = options?.now ?? new Date();
+  const search = options?.search ?? defaultSearch;
+  const key = `monthly:v${MONTHLY_CACHE_VERSION}:${month}`;
+
+  if (!bust) {
+    const cached = dataCache.get(key) as MonthlyProgress | undefined;
+    if (cached) return cached;
+  }
+
+  const previous = lastGood.get(month);
+  // The refresh floor applies even to `bust`: the page's auto-refresh busts on
+  // a timer, and month-to-date counts do not move fast enough to be worth a
+  // search every cycle.
+  if (previous && now.getTime() - previous.fetchedAt < MIN_REFETCH_MS) {
+    return previous.progress;
+  }
+
+  const running = inFlight.get(month);
+  if (running) return running;
+
+  const request = search(month)
+    .then((prs) => {
+      const progress = buildProgress(month, prs, now);
+      dataCache.set(key, progress, MONTHLY_TTL_MS);
+      lastGood.set(month, { progress, fetchedAt: now.getTime() });
+      return progress;
+    })
+    .catch((err: unknown) => {
+      if (previous) {
+        const why =
+          err instanceof SearchBudgetError
+            ? "search budget held back for today and this week"
+            : (err as Error).message;
+        console.warn(`Monthly progress: serving cached ${month} (${why})`);
+        // Do not touch fetchedAt — the floor is measured from the last good
+        // fetch, so a failure does not push the next attempt further out.
+        return { ...previous.progress, stale: true };
+      }
+      throw err;
+    })
+    .finally(() => {
+      inFlight.delete(month);
+    });
+
+  inFlight.set(month, request);
+  return request;
+}
+
+/** Test helper — the module-level caches outlive individual test cases. */
+export function resetMonthlyProgressCache(): void {
+  lastGood.clear();
+  inFlight.clear();
 }
