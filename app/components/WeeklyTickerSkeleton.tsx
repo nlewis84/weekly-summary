@@ -1,14 +1,11 @@
 /**
- * Skeleton placeholder for WeeklyTicker. Matches layout to prevent layout shift.
+ * Body-only skeleton for the period card. The card chrome and header are always
+ * rendered by PeriodSummaryCard, so this stands in for the stat rows alone.
  */
 export function WeeklyTickerSkeleton() {
   return (
-    <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) border border-(--color-border) p-5 animate-pulse xl:h-full xl:flex xl:flex-col xl:min-h-0">
-      <div className="flex items-center justify-between pb-4">
-        <div className="h-5 w-24 bg-surface-elevated rounded" />
-        <div className="h-9 w-16 bg-surface-elevated rounded-lg" />
-      </div>
-      <div className="pt-4 border-t border-(--color-border) space-y-1">
+    <div className="animate-pulse">
+      <div className="space-y-1">
         {[1, 2, 3, 4, 5, 6, 7].map((i) => (
           <div
             key={i}

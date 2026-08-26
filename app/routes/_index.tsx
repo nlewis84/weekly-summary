@@ -14,8 +14,7 @@ import { listDailySnapshots } from "../../lib/daily-snapshot";
 import { isBasecampConfigured } from "../../lib/basecamp-post";
 import { isGranolaConfigured } from "../../lib/granola-client";
 import { TodaySection } from "~/components/TodaySection";
-import { MonthlyProgressCard } from "~/components/MonthlyProgressCard";
-import { WeeklySection } from "~/components/WeeklySection";
+import { PeriodSummaryCard } from "~/components/PeriodSummaryCard";
 import { FullSummaryFormContainer } from "~/components/FullSummaryFormContainer";
 import { useRefreshInterval } from "~/hooks/useRefreshInterval";
 import { useGoals } from "~/hooks/useGoals";
@@ -206,13 +205,6 @@ export default function Index() {
 
   return (
     <div className="space-y-5">
-      <MonthlyProgressCard
-        progress={monthlyProgress ?? null}
-        error={monthlyError ?? null}
-        isLoading={isLoading}
-        target={monthlyTarget}
-      />
-
       <div className="xl:grid xl:grid-cols-[minmax(0,1.6fr)_minmax(20rem,1fr)] xl:gap-5 xl:items-start">
         <div className="space-y-6 xl:flex xl:flex-col xl:min-h-0">
           <TodaySection
@@ -232,16 +224,19 @@ export default function Index() {
             <FullSummaryFormContainer basecampConfigured={basecampConfigured} />
           </div>
           <div className="xl:flex xl:flex-col xl:min-h-0">
-            <WeeklySection
-              stats={weeklyPayload?.stats ?? null}
-              prevStats={
+            <PeriodSummaryCard
+              weekStats={weeklyPayload?.stats ?? null}
+              weekPrevStats={
                 weekly && "prevPayload" in weekly
                   ? (weekly.prevPayload?.stats ?? null)
                   : null
               }
-              error={weeklyError ?? null}
-              isLoading={isLoading}
+              weekError={weeklyError ?? null}
               goals={goals}
+              monthly={monthlyProgress ?? null}
+              monthlyError={monthlyError ?? null}
+              monthlyTarget={monthlyTarget}
+              isLoading={isLoading}
             />
           </div>
         </div>

@@ -1,9 +1,7 @@
 import {
-  CalendarBlank,
   CaretUp,
   CaretDown,
   WaveSine,
-  Copy,
   Package,
   Eye,
   CheckCircle,
@@ -18,7 +16,6 @@ import {
   Timer,
   type Icon,
 } from "phosphor-react";
-import { useToast } from "./Toast";
 import type { Stats } from "../../lib/types";
 import type { WeeklyGoals } from "../hooks/useGoals";
 import { BUSINESS_HOURS_LABEL } from "../../lib/github-metrics";
@@ -29,7 +26,7 @@ import {
   formatSignedNumber,
 } from "~/lib/utils";
 
-interface WeeklyTickerProps {
+interface WeeklyTickerBodyProps {
   stats: Stats;
   prevStats?: Stats | null;
   goals?: WeeklyGoals;
@@ -65,7 +62,7 @@ function TrendBadge({ delta, better }: { delta: number; better: Better }) {
   );
 }
 
-function formatStatsForCopy(stats: Stats): string {
+export function formatStatsForCopy(stats: Stats): string {
   const latency =
     stats.median_review_latency_hours != null
       ? formatDurationHours(stats.median_review_latency_hours)
@@ -239,42 +236,19 @@ function GoalRing({
   );
 }
 
-export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
-  const toast = useToast();
-
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(formatStatsForCopy(stats));
-    toast("Stats copied to clipboard");
-  };
-
+/** Week body only — the card, header, and period toggle live in PeriodSummaryCard. */
+export function WeeklyTickerBody({
+  stats,
+  prevStats,
+  goals,
+}: WeeklyTickerBodyProps) {
   const activeGoals = GOAL_METRICS.filter(
     ({ key }) => typeof goals?.[key] === "number" && goals[key]! > 0
   );
 
   return (
-    <div className="bg-surface rounded-xl shadow-(--shadow-skeuo-card) hover:shadow-(--shadow-skeuo-card-hover) border border-(--color-border) p-5 transition-all duration-300 xl:flex xl:flex-col xl:min-h-0">
-      <div className="flex items-center justify-between pb-4">
-        <h2 className="flex items-center gap-2 text-base font-semibold text-(--color-text)">
-          <CalendarBlank
-            size={20}
-            weight="regular"
-            className="text-primary-500 shrink-0"
-          />
-          This week
-        </h2>
-        <button
-          type="button"
-          onClick={handleCopy}
-          aria-label="Copy stats for standup"
-          className="flex items-center justify-center gap-1.5 min-h-[36px] min-w-[36px] px-2.5 py-1.5 text-sm text-text-muted hover:text-primary-500 hover:bg-surface-elevated rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
-          title="Copy stats for standup"
-        >
-          <Copy size={16} weight="regular" />
-          Copy
-        </button>
-      </div>
-
-      <div className="pt-4 border-t border-(--color-border) space-y-4 xl:flex-1 xl:min-h-0">
+    <>
+      <div className="space-y-4 xl:flex-1 xl:min-h-0">
         {activeGoals.length > 0 && (
           <div className="grid grid-cols-3 gap-3 pb-4 border-b border-(--color-border)">
             {activeGoals.map(({ key, label, Icon }) => {
@@ -368,6 +342,6 @@ export function WeeklyTicker({ stats, prevStats, goals }: WeeklyTickerProps) {
         />
         {stats.repos.length > 0 ? stats.repos.join(", ") : "—"}
       </p>
-    </div>
+    </>
   );
 }
