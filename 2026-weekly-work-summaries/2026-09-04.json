@@ -9,8 +9,8 @@
   "stats": {
     "prs_merged": 24,
     "prs_total": 34,
-    "pr_reviews": 98,
-    "pr_comments": 1,
+    "pr_reviews": 163,
+    "pr_comments": 135,
     "commits_pushed": 57,
     "linear_completed": 17,
     "linear_projects_completed": 0,
@@ -22,6 +22,7 @@
       "apollos-admin",
       "apollos-cluster",
       "apollos-code-reviewer",
+      "apollos-infrastructure",
       "apollos-platforms",
       "apollos-shovel",
       "freedup-migration",
@@ -30,7 +31,7 @@
     "lines_added": 3786,
     "lines_deleted": 462,
     "files_changed": 99,
-    "median_review_latency_hours": 1.33
+    "median_review_latency_hours": 1.23
   },
   "linear": {
     "completed_issues": [
@@ -1996,6 +1997,591 @@
         "reviewed_at": "2026-09-02T17:46:49Z",
         "review_state": "APPROVED",
         "latency_hours": 1.94
+      },
+      {
+        "title": "chore(ccb): remove commented-out FOR TESTING run_time override (APO-12099)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1798",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:21Z",
+        "reviewed_at": "2026-09-02T17:46:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.94
+      },
+      {
+        "title": "chore(ccb): remove commented-out dead code from parser and communities (APO-12098)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1797",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:23Z",
+        "reviewed_at": "2026-09-02T17:46:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.94
+      },
+      {
+        "title": "chore(ccb): remove unused EventOperations._update_media (APO-12097)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1796",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:26Z",
+        "reviewed_at": "2026-09-02T17:47:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.95
+      },
+      {
+        "title": "chore(hopestream): remove unused legacy media URL operator (APO-10900)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1795",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:28Z",
+        "reviewed_at": "2026-09-02T17:47:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.94
+      },
+      {
+        "title": "chore(field-config): remove unused default_field_mappings param (APO-12096)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1794",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:30Z",
+        "reviewed_at": "2026-09-02T17:48:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.96
+      },
+      {
+        "title": "chore(pco): rename unread linked_event_id unpack to _ (APO-12094)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1792",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-01T03:50:04Z",
+        "reviewed_at": "2026-09-01T13:58:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "chore(ccb): remove unused self.db_date_format from EventOperations (APO-12092)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1790",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:37Z",
+        "reviewed_at": "2026-09-02T17:46:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.94
+      },
+      {
+        "title": "chore(algolia): remove dead self.logger from AlgoliaEvents (APO-12091)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1789",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:39Z",
+        "reviewed_at": "2026-09-02T17:47:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.95
+      },
+      {
+        "title": "chore(shovel): rename unread constraint unpacks to _ (APO-12090)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1788",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:42Z",
+        "reviewed_at": "2026-09-02T17:47:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.94
+      },
+      {
+        "title": "chore(crossroads): drop unused parent args from series-collections mapping (APO-12086)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1786",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:43Z",
+        "reviewed_at": "2026-09-02T17:47:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.95
+      },
+      {
+        "title": "chore(ministry-platform): rename unread constraint unpack to _ (APO-12088)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1785",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-01T03:50:06Z",
+        "reviewed_at": "2026-09-01T13:58:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "chore(tests): delete orphaned apollo-type-test.py (APO-12085)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1783",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:47Z",
+        "reviewed_at": "2026-09-02T17:47:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.94
+      },
+      {
+        "title": "chore(wordpress-events): rename unread constraint unpacks to _ (APO-12084)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1782",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:49Z",
+        "reviewed_at": "2026-09-02T17:47:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.94
+      },
+      {
+        "title": "chore(dags): delete orphaned operators/globals package (APO-12082)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1780",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:50:54Z",
+        "reviewed_at": "2026-09-02T17:47:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.94
+      },
+      {
+        "title": "feat(bible): warn before a partial translation silently falls back",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4279",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T22:36:55Z",
+        "reviewed_at": "2026-09-01T14:04:55Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.08
+      },
+      {
+        "title": "feat(ministry-platform): identify cluster traffic with a User-Agent header",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4130",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-01T00:48:29Z",
+        "reviewed_at": "2026-09-01T13:57:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "chore: share node_modules across checkouts with nmMode hardlinks-global",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4278",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T19:54:06Z",
+        "reviewed_at": "2026-08-31T20:42:41Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.81
+      },
+      {
+        "title": "feat(content-item): restore the leaf branch of upNext",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4127",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-01T12:53:00Z",
+        "reviewed_at": "2026-09-01T13:58:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "refactor(finance): converge church-scoped REST routes on deriveChurchFromRoute",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4123",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-08-31T21:00:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "docs(core): publish the derived REST surface as a generated artifact",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4122",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-08-31T21:20:07Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(polls): expose poll settings and null vote counts for hidden polls",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4120",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-01T00:48:34Z",
+        "reviewed_at": "2026-09-01T14:08:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.14
+      },
+      {
+        "title": "Add e2e regression coverage for updateProfileFields mutation",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4119",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-08-31T21:14:25Z",
+        "reviewed_at": "2026-08-31T21:19:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.08
+      },
+      {
+        "title": "perf(community): eager-load community cover images instead of one query per row",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4118",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-08-31T21:14:26Z",
+        "reviewed_at": "2026-08-31T21:19:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.08
+      },
+      {
+        "title": "refactor(utils): consolidate the duplicated OData escape helper",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4117",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-08-31T21:14:28Z",
+        "reviewed_at": "2026-08-31T21:19:01Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.08
+      },
+      {
+        "title": "perf(rock-prayer): make the deletion sweep an index-only scan",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1777",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-01T13:51:24Z",
+        "reviewed_at": "2026-09-01T13:59:12Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "refactor: extract shared OpenAIStructuredOutputProvider base class",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4113",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-08-31T21:14:30Z",
+        "reviewed_at": "2026-08-31T21:18:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.07
+      },
+      {
+        "title": "APO-11496: Replace ad-hoc console.log/error with logger.warn + Sentry report in owned finance sources",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4110",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-01T06:51:34Z",
+        "reviewed_at": "2026-09-01T13:58:46Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "APO-11911: Add local/no-console-in-src ESLint rule to lock in the console→logger cleanup",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4109",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-08-31T21:14:32Z",
+        "reviewed_at": "2026-08-31T21:18:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.06
+      },
+      {
+        "title": "APO-11858: Consolidate `formatAmount` and `formatAmountForDisplay` in GivingScreen",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7046",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-08-31T21:14:18Z",
+        "reviewed_at": "2026-08-31T21:16:52Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.04
+      },
+      {
+        "title": "[APO-11997] Add report column picker",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4101",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-01T18:48:26Z",
+        "reviewed_at": "2026-09-01T19:20:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.53
+      },
+      {
+        "title": "[APO-11996] Forward report query params from Admin",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4275",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T14:38:24Z",
+        "reviewed_at": "2026-08-31T14:58:52Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.34
+      },
+      {
+        "title": "perf(db): index the community members page on (community_id, created_at)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4097",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-01T03:49:54Z",
+        "reviewed_at": "2026-09-01T13:58:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "refactor(admin): extract shared cluster REST error-body parser",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4274",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T15:46:47Z",
+        "reviewed_at": "2026-08-31T16:46:12Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.99
+      },
+      {
+        "title": "fix(web): report each unmapped feature type once, not once per render",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4273",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T18:53:00Z",
+        "reviewed_at": "2026-08-31T20:42:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.82
+      },
+      {
+        "title": "fix(review): alarm when the review proxy has no healthy targets",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/62",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-08-31T18:35:03Z",
+        "reviewed_at": "2026-08-31T20:46:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.19
+      },
+      {
+        "title": "fix(admin): scope tag-group writes to the acting church",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4271",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T18:21:25Z",
+        "reviewed_at": "2026-08-31T20:44:36Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.39
+      },
+      {
+        "title": "Migrate ByLine/Avatar duplicates off apollos-ui-kit",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7042",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-01T21:48:34Z",
+        "reviewed_at": "2026-09-02T17:49:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.01
+      },
+      {
+        "title": "fix(mobile): drop the empty content strip on image-only cards (APO-10160)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7038",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-01T00:48:24Z",
+        "reviewed_at": "2026-09-01T14:06:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "fix(mobile): guard tap navigation when stack push is missing (APO-11982)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7037",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-02T13:41:40Z",
+        "reviewed_at": "2026-09-02T13:41:59Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): stop Daily Habits refetches escaping as unhandled rejections",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7032",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-01T00:48:26Z",
+        "reviewed_at": "2026-09-01T14:03:06Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.05
+      },
+      {
+        "title": "fix(donation-embed): keep the phone caret in place while formatting",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4269",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T03:47:05Z",
+        "reviewed_at": "2026-08-31T13:36:49Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "perf(ministry-platform): make the button-feature cleanup an anti-join",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1774",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-01T13:51:26Z",
+        "reviewed_at": "2026-09-01T13:59:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(twilio): send via the shared Messaging Service so SMS reaches non-US numbers",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4091",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-02T05:53:53Z",
+        "reviewed_at": "2026-09-02T19:24:41Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 5.41
+      },
+      {
+        "title": "test(web): hardening efforts for Web e2e",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4265",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T13:40:27Z",
+        "reviewed_at": "2026-08-31T14:22:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.37
+      },
+      {
+        "title": "fix(web): route missing origins through repair",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4264",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-01T14:42:32Z",
+        "reviewed_at": "2026-09-01T14:52:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.17
+      },
+      {
+        "title": "feat(web): add guarded origin repair loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4261",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T20:00:25Z",
+        "reviewed_at": "2026-08-31T20:43:10Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.71
+      },
+      {
+        "title": "feat(web): add origin repair cooldown helpers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4260",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T14:54:05Z",
+        "reviewed_at": "2026-08-31T14:58:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.08
+      },
+      {
+        "title": "APO-11810: Render frequency labels through i18n instead of using English strings as ids",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7013",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-08-31T22:49:51Z",
+        "reviewed_at": "2026-09-01T13:58:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "chore(deps): bump node-fetch from 2.7.0 to 3.3.2",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4080",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-02T13:49:16Z",
+        "reviewed_at": "2026-09-02T17:47:57Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.8
+      },
+      {
+        "title": "fix(web): stop flashing unmapped dump slots and Text holes on initial paint (APO-11930)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4247",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-08-31T17:04:22Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "refactor: consolidate duplicated Relay edge-mapping into toEdges()",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4055",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-08-31T21:00:01Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(admin): add a v2 opt-in toggle on Giving reports",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4215",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-26T21:38:16Z",
+        "reviewed_at": "2026-09-02T19:25:33Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 37.79
+      },
+      {
+        "title": "refactor(youtube): extract shared pagination helper",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1760",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:51:00Z",
+        "reviewed_at": "2026-09-02T17:48:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.96
+      },
+      {
+        "title": "fix(media): retire broken image metadata rows",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1759",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:51:02Z",
+        "reviewed_at": "2026-09-02T17:48:38Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.96
+      },
+      {
+        "title": "fix(ccb): bound people backfill memory",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1758",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:51:04Z",
+        "reviewed_at": "2026-09-02T19:25:59Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.58
+      },
+      {
+        "title": "feat(chat-message): expose references on ChatMessage (5/5)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3963",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-01T03:49:57Z",
+        "reviewed_at": "2026-09-01T13:59:27Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "APO-11330: Default the give form to the giver's saved campus",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4126",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-31T20:13:04Z",
+        "reviewed_at": "2026-08-31T20:43:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.5
+      },
+      {
+        "title": "APO-10798: fix TS7 typecheck errors in admin charts, media, and shared inputs",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4124",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-20T18:50:36Z",
+        "reviewed_at": "2026-08-31T16:36:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 53.77
+      },
+      {
+        "title": "perf(media): keyset-page the blurhash backfill instead of OFFSET",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1747",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:51:06Z",
+        "reviewed_at": "2026-09-02T19:45:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.91
+      },
+      {
+        "title": "fix(security): stop printing the Wistia API key in Airflow logs",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1742",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T15:51:07Z",
+        "reviewed_at": "2026-09-02T17:48:19Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.95
+      },
+      {
+        "title": "feat(mobile): add signup_type attribute to Signup Completed event",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/6691",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-08-31T20:50:30Z",
+        "reviewed_at": "2026-08-31T20:51:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.02
+      },
+      {
+        "title": "build(deps-dev): bump ruff from 0.15.12 to 0.15.20",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1628",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-01T03:50:13Z",
+        "reviewed_at": "2026-09-01T13:58:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "build(deps): bump langchain-openai from 1.2.2 to 1.3.3",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1609",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-01T03:50:15Z",
+        "reviewed_at": "2026-09-01T13:58:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "build(deps): bump onesignal-python-api from 5.5.0 to 5.8.0",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1608",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-01T03:50:16Z",
+        "reviewed_at": "2026-09-01T13:58:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "build(deps): bump trafilatura from 2.0.0 to 2.1.0",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1536",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-01T03:50:17Z",
+        "reviewed_at": "2026-09-01T13:58:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
       }
     ]
   },

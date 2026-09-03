@@ -14,6 +14,7 @@
     "backfill-linear-projects": "tsx scripts/backfill-linear-projects.ts",
     "backfill-linear-completed": "tsx scripts/backfill-linear-completed-by-me.ts",
     "backfill-github-metrics": "tsx scripts/backfill-github-metrics.ts",
+    "backfill-pr-review-counts": "tsx scripts/backfill-pr-review-counts.ts",
     "typecheck": "react-router typegen && tsc",
     "lint": "eslint .",
     "format": "prettier --write \"app/**/*.{ts,tsx,css}\" \"lib/**/*.ts\" \"e2e/**/*.ts\"",
