@@ -1,6 +1,7 @@
+import { createServer } from "node:http";
 import { connect } from "node:net";
 import { reactRouter } from "@react-router/dev/vite";
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
@@ -36,6 +37,39 @@ async function findOpenPort(startPort: number): Promise<number> {
   return startPort;
 }
 
+/**
+ * Vite's default `localhost` bind is IPv6-only on this machine (`[::1]`).
+ * Browsers and tools that try `127.0.0.1` first then hang or fail.
+ * Share the same HTTP server on the other loopback so both work.
+ */
+function listenOnBothLoopbacks(): Plugin {
+  return {
+    name: "listen-on-both-loopbacks",
+    configureServer(server) {
+      const primary = server.httpServer;
+      if (!primary) return;
+
+      primary.once("listening", () => {
+        const addr = primary.address();
+        if (!addr || typeof addr === "string") return;
+
+        const extraHost = addr.family === "IPv6" || addr.family === 6 ? "127.0.0.1" : "::1";
+        const extra = createServer((req, res) => {
+          primary.emit("request", req, res);
+        });
+        extra.on("upgrade", (req, socket, head) => {
+          primary.emit("upgrade", req, socket, head);
+        });
+        extra.on("error", (err) => {
+          console.warn(`[vite] could not also listen on ${extraHost}:${addr.port}: ${err.message}`);
+        });
+        extra.listen(addr.port, extraHost);
+        primary.once("close", () => extra.close());
+      });
+    },
+  };
+}
+
 async function resolveDevPort(): Promise<number> {
   // Vite re-evaluates this config on restart while the old server is still
   // listening, so cache the choice to keep the port stable for the session.
@@ -49,6 +83,7 @@ async function resolveDevPort(): Promise<number> {
 
 export default defineConfig(async ({ command }) => ({
   plugins: [
+    listenOnBothLoopbacks(),
     tailwindcss(),
     reactRouter(),
     tsconfigPaths(),
@@ -69,5 +104,6 @@ export default defineConfig(async ({ command }) => ({
   ],
   server: {
     port: command === "serve" ? await resolveDevPort() : DEFAULT_DEV_PORT,
+    strictPort: true,
   },
 }));
