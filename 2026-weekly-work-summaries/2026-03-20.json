@@ -10,7 +10,7 @@
     "prs_merged": 8,
     "prs_total": 13,
     "pr_reviews": 18,
-    "pr_comments": 18,
+    "pr_comments": 22,
     "commits_pushed": 8,
     "linear_completed": 4,
     "linear_worked_on": 7,
@@ -23,7 +23,7 @@
     "lines_added": 1039,
     "lines_deleted": 113,
     "files_changed": 33,
-    "median_review_latency_hours": 1.53,
+    "median_review_latency_hours": 1.14,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -290,7 +290,7 @@
         "requested_at": "2026-03-20T03:10:35Z",
         "reviewed_at": "2026-03-20T15:10:54Z",
         "review_state": "APPROVED",
-        "latency_hours": 12.01
+        "latency_hours": 1.18
       },
       {
         "title": "Fix pagination inconsistency and add archived migration filters",
@@ -299,7 +299,7 @@
         "requested_at": "2026-03-19T21:07:58Z",
         "reviewed_at": "2026-03-20T15:53:09Z",
         "review_state": "APPROVED",
-        "latency_hours": 18.75
+        "latency_hours": 2.75
       },
       {
         "title": "Synchronize migration panel and filter dropdown state",
@@ -308,7 +308,7 @@
         "requested_at": "2026-03-19T20:21:35Z",
         "reviewed_at": "2026-03-20T15:44:59Z",
         "review_state": "APPROVED",
-        "latency_hours": 19.39
+        "latency_hours": 3.39
       },
       {
         "title": "[APO-6722] Auto-focus email field if email is invalid.",
@@ -317,7 +317,7 @@
         "requested_at": "2026-03-19T17:43:03Z",
         "reviewed_at": "2026-03-20T15:13:21Z",
         "review_state": "APPROVED",
-        "latency_hours": 21.51
+        "latency_hours": 5.51
       },
       {
         "title": "Improved image deploy pipeline",
@@ -326,7 +326,7 @@
         "requested_at": "2026-03-19T13:34:14Z",
         "reviewed_at": "2026-03-19T14:08:46Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.58
+        "latency_hours": 0.15
       },
       {
         "title": "Tag images and trigger workflow on deploy",
@@ -353,7 +353,7 @@
         "requested_at": "2026-03-18T13:35:32Z",
         "reviewed_at": "2026-03-18T14:55:16Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 1.33
+        "latency_hours": 0.92
       },
       {
         "title": "Fix recurring gifts pagination layout",
@@ -398,7 +398,7 @@
         "requested_at": "2026-03-17T21:36:42Z",
         "reviewed_at": "2026-03-18T15:23:19Z",
         "review_state": "APPROVED",
-        "latency_hours": 17.78
+        "latency_hours": 1.78
       },
       {
         "title": "[APO-7719] [iOS Chrome] Scroll dimensions fix.",
@@ -407,7 +407,7 @@
         "requested_at": "2026-03-16T10:30:15Z",
         "reviewed_at": "2026-03-17T14:44:38Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 28.24
+        "latency_hours": 8.74
       },
       {
         "title": "feat: gate /give redirect for non-full-platform on LD flag",

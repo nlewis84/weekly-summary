@@ -10,7 +10,7 @@
     "prs_merged": 12,
     "prs_total": 22,
     "pr_reviews": 40,
-    "pr_comments": 49,
+    "pr_comments": 50,
     "commits_pushed": 30,
     "linear_completed": 2,
     "linear_worked_on": 12,
@@ -26,7 +26,7 @@
     "lines_added": 4347,
     "lines_deleted": 125,
     "files_changed": 77,
-    "median_review_latency_hours": 16.64,
+    "median_review_latency_hours": 4.57,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -395,7 +395,7 @@
         "requested_at": "2026-06-25T22:06:04Z",
         "reviewed_at": "2026-06-26T13:42:42Z",
         "review_state": "APPROVED",
-        "latency_hours": 15.61
+        "latency_hours": 0
       },
       {
         "title": "fix(ai): restore AI Creator generation under the React Router runtime",
@@ -422,7 +422,7 @@
         "requested_at": "2026-06-24T22:28:12Z",
         "reviewed_at": "2026-06-24T22:36:35Z",
         "review_state": "COMMENTED",
-        "latency_hours": 0.14
+        "latency_hours": 0
       },
       {
         "title": "fix(giving): reuse existing customer on multi-profile insert collision (APO-10053)",
@@ -431,7 +431,7 @@
         "requested_at": "2026-06-24T21:33:11Z",
         "reviewed_at": "2026-06-24T22:25:15Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.87
+        "latency_hours": 0.45
       },
       {
         "title": "Strip commas from prefilled amount on web give handoff (APO-10019)",
@@ -449,7 +449,7 @@
         "requested_at": "2026-06-25T21:07:57Z",
         "reviewed_at": "2026-06-25T22:26:14Z",
         "review_state": "APPROVED",
-        "latency_hours": 1.3
+        "latency_hours": 0.87
       },
       {
         "title": "fix(giving): use handoff IDs and guard express-checkout prefetch (APO-10021)",
@@ -467,7 +467,7 @@
         "requested_at": "2026-06-24T12:50:28Z",
         "reviewed_at": "2026-06-25T16:05:11Z",
         "review_state": "APPROVED",
-        "latency_hours": 27.25
+        "latency_hours": 10.09
       },
       {
         "title": "fix(ci): pin Node version across Docker and CI (APO-10042)",
@@ -485,7 +485,7 @@
         "requested_at": "2026-06-24T00:49:41Z",
         "reviewed_at": "2026-06-25T16:31:34Z",
         "review_state": "COMMENTED",
-        "latency_hours": 39.7
+        "latency_hours": 10.53
       },
       {
         "title": "Harden parseAmount against comma separators (APO-10019)",
@@ -512,7 +512,7 @@
         "requested_at": "2026-06-23T17:57:01Z",
         "reviewed_at": "2026-06-25T16:29:25Z",
         "review_state": "APPROVED",
-        "latency_hours": 46.54
+        "latency_hours": 14.54
       },
       {
         "title": "feat: backfill charge source of truth columns",
@@ -530,7 +530,7 @@
         "requested_at": "2026-06-24T22:49:57Z",
         "reviewed_at": "2026-06-25T16:30:19Z",
         "review_state": "COMMENTED",
-        "latency_hours": 17.67
+        "latency_hours": 2.51
       },
       {
         "title": "revert(web): revert APO-9373 giving login code change (restores implicit registration flow)",
@@ -539,7 +539,7 @@
         "requested_at": "2026-06-23T01:13:36Z",
         "reviewed_at": "2026-06-23T12:39:28Z",
         "review_state": "APPROVED",
-        "latency_hours": 11.43
+        "latency_hours": 0
       },
       {
         "title": "fix(bible): fall back to WEB when a translation's search returns empty (APO-10082)",
@@ -584,7 +584,7 @@
         "requested_at": "2026-06-21T11:31:41Z",
         "reviewed_at": "2026-06-22T20:21:59Z",
         "review_state": "APPROVED",
-        "latency_hours": 32.84
+        "latency_hours": 6.37
       },
       {
         "title": "fix: resolve unused devDependencies knip warnings",
@@ -593,7 +593,7 @@
         "requested_at": "2026-06-20T20:24:31Z",
         "reviewed_at": "2026-06-22T20:19:34Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 47.92
+        "latency_hours": 6.33
       },
       {
         "title": "Remove deprecated FeaturesNode, LiveNode, ScriptureNode interfaces",
@@ -602,7 +602,7 @@
         "requested_at": "2026-06-19T14:56:54Z",
         "reviewed_at": "2026-06-22T16:30:59Z",
         "review_state": "APPROVED",
-        "latency_hours": 73.57
+        "latency_hours": 9.57
       },
       {
         "title": "simplify(person): replace moment-timezone with native Date",
@@ -611,7 +611,7 @@
         "requested_at": "2026-06-19T00:57:33Z",
         "reviewed_at": "2026-06-22T16:30:25Z",
         "review_state": "APPROVED",
-        "latency_hours": 87.55
+        "latency_hours": 10.51
       },
       {
         "title": "simplify: replace validator with native URL for HTTPS URL validation",
@@ -620,7 +620,7 @@
         "requested_at": "2026-06-18T23:56:53Z",
         "reviewed_at": "2026-06-22T16:16:27Z",
         "review_state": "COMMENTED",
-        "latency_hours": 88.33
+        "latency_hours": 10.27
       },
       {
         "title": "fix(reports): resolve campus for recurring gifts in transactions report",
@@ -629,7 +629,7 @@
         "requested_at": "2026-06-23T13:42:23Z",
         "reviewed_at": "2026-06-23T16:27:57Z",
         "review_state": "COMMENTED",
-        "latency_hours": 2.76
+        "latency_hours": 2.47
       },
       {
         "title": "fix(give): preserve source param when redirecting to payment page",
@@ -647,7 +647,7 @@
         "requested_at": "2026-06-18T01:25:25Z",
         "reviewed_at": "2026-06-22T16:09:06Z",
         "review_state": "APPROVED",
-        "latency_hours": 110.73
+        "latency_hours": 18.15
       },
       {
         "title": "fix: show friendly error when org profile slug already exists",
@@ -656,7 +656,7 @@
         "requested_at": "2026-06-20T15:51:19Z",
         "reviewed_at": "2026-06-22T20:10:10Z",
         "review_state": "APPROVED",
-        "latency_hours": 52.31
+        "latency_hours": 6.17
       },
       {
         "title": "fix(admin): non-destructive feature save to preserve QuestionBlock responses",
@@ -665,7 +665,7 @@
         "requested_at": "2026-06-17T03:08:21Z",
         "reviewed_at": "2026-06-22T16:28:08Z",
         "review_state": "COMMENTED",
-        "latency_hours": 133.33
+        "latency_hours": 26.47
       },
       {
         "title": "fix(mobile): remove phantom left gap on ListViewItem rows without a leading image",
@@ -674,7 +674,7 @@
         "requested_at": "2026-06-23T15:37:43Z",
         "reviewed_at": "2026-06-25T16:02:43Z",
         "review_state": "APPROVED",
-        "latency_hours": 48.42
+        "latency_hours": 16.42
       },
       {
         "title": "test(e2e): add missing critical flow coverage for admin auth",
@@ -683,7 +683,7 @@
         "requested_at": "2026-06-18T02:47:54Z",
         "reviewed_at": "2026-06-22T16:11:00Z",
         "review_state": "APPROVED",
-        "latency_hours": 109.39
+        "latency_hours": 18.18
       },
       {
         "title": "fix(theme): raise light-mode secondary text contrast to meet WCAG AA",
@@ -692,7 +692,7 @@
         "requested_at": "2026-06-17T21:04:44Z",
         "reviewed_at": "2026-06-22T16:02:11Z",
         "review_state": "APPROVED",
-        "latency_hours": 114.96
+        "latency_hours": 18.96
       },
       {
         "title": "fix(mobile): dedupe Daily Habits completion events across hook instances (APO-9485)",
@@ -701,7 +701,7 @@
         "requested_at": "2026-06-17T15:02:12Z",
         "reviewed_at": "2026-06-22T19:58:05Z",
         "review_state": "APPROVED",
-        "latency_hours": 124.93
+        "latency_hours": 28.93
       },
       {
         "title": "feat: wire up the v2 transactions sql feature flag",
@@ -719,7 +719,7 @@
         "requested_at": "2026-06-17T01:37:53Z",
         "reviewed_at": "2026-06-22T20:09:05Z",
         "review_state": "APPROVED",
-        "latency_hours": 138.52
+        "latency_hours": 30.15
       },
       {
         "title": "Gate microdeposit emails by Admin environment",
@@ -728,7 +728,7 @@
         "requested_at": "2026-06-12T13:22:36Z",
         "reviewed_at": "2026-06-22T16:35:29Z",
         "review_state": "COMMENTED",
-        "latency_hours": 243.21
+        "latency_hours": 50.59
       },
       {
         "title": "Make tap URL handling single-owner (APO-9546)",
@@ -737,7 +737,7 @@
         "requested_at": "2026-06-19T15:22:09Z",
         "reviewed_at": "2026-06-22T19:54:51Z",
         "review_state": "APPROVED",
-        "latency_hours": 76.55
+        "latency_hours": 12.55
       }
     ]
   },

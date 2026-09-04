@@ -9,7 +9,7 @@
   "stats": {
     "prs_merged": 2,
     "prs_total": 9,
-    "pr_reviews": 6,
+    "pr_reviews": 7,
     "pr_comments": 5,
     "commits_pushed": 4,
     "linear_completed": 5,
@@ -25,7 +25,7 @@
     "lines_added": 518,
     "lines_deleted": 0,
     "files_changed": 9,
-    "median_review_latency_hours": 67.13,
+    "median_review_latency_hours": 21.98,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -233,13 +233,22 @@
     ],
     "reviews": [
       {
+        "title": "fix(finance): don't let ipinfo.io failures block donations",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/3321",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-06-19T22:32:33Z",
+        "reviewed_at": "2026-06-20T00:53:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
         "title": "migrate Switch from src/ui-kit to new-src",
         "url": "https://github.com/ApollosProject/apollos-platforms/pull/6591",
         "repo": "apollos-platforms",
         "requested_at": "2026-06-17T15:18:20Z",
         "reviewed_at": "2026-06-19T20:30:21Z",
         "review_state": "APPROVED",
-        "latency_hours": 53.2
+        "latency_hours": 21.2
       },
       {
         "title": "fix(algolia-pages): guard against large-platform URLs hanging the scrape DAG",
@@ -248,7 +257,7 @@
         "requested_at": "2026-06-17T00:13:20Z",
         "reviewed_at": "2026-06-19T19:58:38Z",
         "review_state": "APPROVED",
-        "latency_hours": 67.76
+        "latency_hours": 21.98
       },
       {
         "title": "fix(features): drop non-prayer algorithm results from prayer list features (APO-9654)",
@@ -257,7 +266,7 @@
         "requested_at": "2026-06-16T17:38:52Z",
         "reviewed_at": "2026-06-19T19:45:38Z",
         "review_state": "APPROVED",
-        "latency_hours": 74.11
+        "latency_hours": 26.11
       },
       {
         "title": "fix: remap invalid studioc demo seed apollos_type values (APO-9642)",
@@ -266,7 +275,7 @@
         "requested_at": "2026-06-16T18:33:04Z",
         "reviewed_at": "2026-06-19T19:50:52Z",
         "review_state": "APPROVED",
-        "latency_hours": 73.3
+        "latency_hours": 25.3
       },
       {
         "title": "fix(mobile): dedupe Daily Habits completion events across hook instances (APO-9485)",
@@ -275,7 +284,7 @@
         "requested_at": "2026-06-17T15:02:12Z",
         "reviewed_at": "2026-06-19T20:12:26Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 53.17
+        "latency_hours": 21.17
       },
       {
         "title": "Stabilize chat detail list render props (APO-9102)",
@@ -284,7 +293,7 @@
         "requested_at": "2026-06-17T01:37:53Z",
         "reviewed_at": "2026-06-19T20:07:08Z",
         "review_state": "COMMENTED",
-        "latency_hours": 66.49
+        "latency_hours": 22.12
       }
     ]
   },

@@ -10,7 +10,7 @@
     "prs_merged": 5,
     "prs_total": 12,
     "pr_reviews": 37,
-    "pr_comments": 43,
+    "pr_comments": 54,
     "commits_pushed": 53,
     "linear_completed": 6,
     "linear_worked_on": 10,
@@ -25,7 +25,7 @@
     "lines_added": 598,
     "lines_deleted": 540,
     "files_changed": 19,
-    "median_review_latency_hours": 11.24,
+    "median_review_latency_hours": 0.39,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -309,7 +309,7 @@
         "requested_at": "2026-06-04T23:37:07Z",
         "reviewed_at": "2026-06-05T14:05:58Z",
         "review_state": "COMMENTED",
-        "latency_hours": 14.48
+        "latency_hours": 0.1
       },
       {
         "title": "fix(web): give error reload page a real escape, not a dead button (APO-9384)",
@@ -327,7 +327,7 @@
         "requested_at": "2026-06-05T00:23:58Z",
         "reviewed_at": "2026-06-05T14:39:59Z",
         "review_state": "APPROVED",
-        "latency_hours": 14.27
+        "latency_hours": 0.67
       },
       {
         "title": "[No Ticket] Processing email improvements",
@@ -336,7 +336,7 @@
         "requested_at": "2026-06-04T01:59:39Z",
         "reviewed_at": "2026-06-04T13:14:04Z",
         "review_state": "APPROVED",
-        "latency_hours": 11.24
+        "latency_hours": 0
       },
       {
         "title": "[No Ticket] Remove old \"Thank you\" section",
@@ -345,7 +345,7 @@
         "requested_at": "2026-06-04T01:35:21Z",
         "reviewed_at": "2026-06-04T13:08:21Z",
         "review_state": "APPROVED",
-        "latency_hours": 11.55
+        "latency_hours": 0
       },
       {
         "title": "Add e2e tests for email verification and OTP login flows",
@@ -354,7 +354,7 @@
         "requested_at": "2026-06-04T02:44:49Z",
         "reviewed_at": "2026-06-04T13:09:10Z",
         "review_state": "APPROVED",
-        "latency_hours": 10.41
+        "latency_hours": 0
       },
       {
         "title": "feat: bypass throng when WEB_CONCURRENCY is unset",
@@ -366,7 +366,7 @@
         "latency_hours": 0.87
       },
       {
-        "title": "fix(giving): normalize subscription charge attribution at webhook ingest",
+        "title": "fix(giving): [charges-source-of-truth] normalize subscription charge attribution at webhook ingest",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/3157",
         "repo": "apollos-cluster",
         "requested_at": null,
@@ -399,7 +399,7 @@
         "requested_at": "2026-06-03T13:49:31Z",
         "reviewed_at": "2026-06-03T15:43:38Z",
         "review_state": "APPROVED",
-        "latency_hours": 1.9
+        "latency_hours": 1.73
       },
       {
         "title": "[APO-9456] Thank you section updates",
@@ -408,7 +408,7 @@
         "requested_at": "2026-06-03T13:37:02Z",
         "reviewed_at": "2026-06-03T15:43:15Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.1
+        "latency_hours": 1.72
       },
       {
         "title": "[APO-9461] Email Subject Lines Update",
@@ -417,7 +417,7 @@
         "requested_at": "2026-06-03T12:59:58Z",
         "reviewed_at": "2026-06-03T15:43:58Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.73
+        "latency_hours": 1.73
       },
       {
         "title": "[APO-9458] Intro email updates",
@@ -426,7 +426,7 @@
         "requested_at": "2026-06-03T12:52:50Z",
         "reviewed_at": "2026-06-03T15:44:47Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.87
+        "latency_hours": 1.75
       },
       {
         "title": "[APO-9454] [Crossroads] Update NON-10X Push receipt",
@@ -435,7 +435,7 @@
         "requested_at": "2026-06-03T10:31:31Z",
         "reviewed_at": "2026-06-03T15:39:51Z",
         "review_state": "COMMENTED",
-        "latency_hours": 5.14
+        "latency_hours": 1.66
       },
       {
         "title": "fix(admin): stop Canvas autosave from persisting hydration state (APO-8581)",
@@ -444,7 +444,7 @@
         "requested_at": "2026-06-05T01:04:25Z",
         "reviewed_at": "2026-06-05T14:52:47Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 13.81
+        "latency_hours": 0.88
       },
       {
         "title": "APO-9440: only show active funds when editing recurring gifts",
@@ -453,7 +453,7 @@
         "requested_at": "2026-06-03T04:37:56Z",
         "reviewed_at": "2026-06-03T15:16:24Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 10.64
+        "latency_hours": 1.27
       },
       {
         "title": "perf(social-graph): batch peopleToFollow person lookups",
@@ -462,7 +462,7 @@
         "requested_at": "2026-06-02T18:27:47Z",
         "reviewed_at": "2026-06-03T15:02:38Z",
         "review_state": "APPROVED",
-        "latency_hours": 20.58
+        "latency_hours": 4.58
       },
       {
         "title": "feat(giving): add subscription invoice status utils and API loader",
@@ -480,7 +480,7 @@
         "requested_at": "2026-06-01T13:04:26Z",
         "reviewed_at": "2026-06-01T13:33:20Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.48
+        "latency_hours": 0
       },
       {
         "title": "fix(config): use a per-value IV for encrypted config secrets",
@@ -489,7 +489,7 @@
         "requested_at": "2026-06-01T14:38:40Z",
         "reviewed_at": "2026-06-02T13:43:28Z",
         "review_state": "APPROVED",
-        "latency_hours": 23.08
+        "latency_hours": 7.36
       },
       {
         "title": "[APO-9394] Generic `your email` success message",
@@ -498,7 +498,7 @@
         "requested_at": "2026-06-01T10:34:17Z",
         "reviewed_at": "2026-06-01T13:32:20Z",
         "review_state": "COMMENTED",
-        "latency_hours": 2.97
+        "latency_hours": 0
       },
       {
         "title": "Isolate feature render failures in FeatureFeed with an error boundary",
@@ -507,7 +507,7 @@
         "requested_at": "2026-06-01T23:38:46Z",
         "reviewed_at": "2026-06-02T14:02:32Z",
         "review_state": "COMMENTED",
-        "latency_hours": 14.4
+        "latency_hours": 0.04
       },
       {
         "title": "Mitigate SSRF in Planning Center registration event scraping",
@@ -516,7 +516,7 @@
         "requested_at": "2026-05-30T02:04:13Z",
         "reviewed_at": "2026-06-01T12:51:57Z",
         "review_state": "APPROVED",
-        "latency_hours": 58.8
+        "latency_hours": 0
       },
       {
         "title": "fix: resolve unlisted dependencies knip warnings",
@@ -525,7 +525,7 @@
         "requested_at": "2026-06-04T01:46:13Z",
         "reviewed_at": "2026-06-04T13:07:55Z",
         "review_state": "APPROVED",
-        "latency_hours": 11.36
+        "latency_hours": 0
       },
       {
         "title": "[codex] Add church deletion backup streaming [APO-8936]",
@@ -534,7 +534,7 @@
         "requested_at": "2026-06-04T22:58:52Z",
         "reviewed_at": "2026-06-05T14:09:17Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 15.17
+        "latency_hours": 0.15
       },
       {
         "title": "[codex] Preflight cluster church deletion schema [APO-8936]",
@@ -543,7 +543,7 @@
         "requested_at": "2026-06-04T03:21:02Z",
         "reviewed_at": "2026-06-04T13:10:15Z",
         "review_state": "APPROVED",
-        "latency_hours": 9.82
+        "latency_hours": 0
       },
       {
         "title": "[codex] Preflight admin church deletion schema [APO-8936]",
@@ -552,7 +552,7 @@
         "requested_at": "2026-06-02T22:04:41Z",
         "reviewed_at": "2026-06-03T15:04:26Z",
         "review_state": "APPROVED",
-        "latency_hours": 17
+        "latency_hours": 1.07
       },
       {
         "title": "[codex] Order church-scoped cluster deletes [APO-8936]",
@@ -561,7 +561,7 @@
         "requested_at": "2026-06-01T17:03:13Z",
         "reviewed_at": "2026-06-02T13:53:20Z",
         "review_state": "APPROVED",
-        "latency_hours": 20.84
+        "latency_hours": 4.95
       },
       {
         "title": "feat(auth): handle OTP RATE_LIMITED cooldown in web + web-embeds auth UI",
@@ -570,7 +570,7 @@
         "requested_at": "2026-05-29T20:31:33Z",
         "reviewed_at": "2026-06-01T13:31:03Z",
         "review_state": "APPROVED",
-        "latency_hours": 64.99
+        "latency_hours": 1.47
       },
       {
         "title": "chore: add admin React Router route config",
@@ -579,7 +579,7 @@
         "requested_at": "2026-06-04T22:55:08Z",
         "reviewed_at": "2026-06-05T14:04:22Z",
         "review_state": "COMMENTED",
-        "latency_hours": 15.15
+        "latency_hours": 0.07
       },
       {
         "title": "chore: add dormant web route config",
@@ -597,7 +597,7 @@
         "requested_at": "2026-06-04T03:21:28Z",
         "reviewed_at": "2026-06-04T13:12:31Z",
         "review_state": "APPROVED",
-        "latency_hours": 9.85
+        "latency_hours": 0
       },
       {
         "title": "chore: add Sentry React Router packages",
@@ -606,7 +606,7 @@
         "requested_at": "2026-06-02T22:12:33Z",
         "reviewed_at": "2026-06-03T15:10:31Z",
         "review_state": "APPROVED",
-        "latency_hours": 16.97
+        "latency_hours": 1.18
       },
       {
         "title": "chore: add admin router migration companion deps",
@@ -615,7 +615,7 @@
         "requested_at": "2026-05-30T02:05:36Z",
         "reviewed_at": "2026-06-01T12:54:33Z",
         "review_state": "APPROVED",
-        "latency_hours": 58.82
+        "latency_hours": 0
       },
       {
         "title": "test: cover giving report polling window",
@@ -624,7 +624,7 @@
         "requested_at": "2026-05-27T01:11:54Z",
         "reviewed_at": "2026-06-01T13:43:25Z",
         "review_state": "APPROVED",
-        "latency_hours": 132.53
+        "latency_hours": 24
       }
     ]
   },

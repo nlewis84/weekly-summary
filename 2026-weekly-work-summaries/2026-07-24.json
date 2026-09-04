@@ -10,7 +10,7 @@
     "prs_merged": 5,
     "prs_total": 6,
     "pr_reviews": 34,
-    "pr_comments": 13,
+    "pr_comments": 21,
     "commits_pushed": 12,
     "linear_completed": 6,
     "linear_worked_on": 7,
@@ -25,7 +25,7 @@
     "lines_added": 229,
     "lines_deleted": 63,
     "files_changed": 12,
-    "median_review_latency_hours": 10.73,
+    "median_review_latency_hours": 3.35,
     "linear_projects_completed": 1
   },
   "linear": {
@@ -261,7 +261,7 @@
         "requested_at": "2026-07-24T04:51:14Z",
         "reviewed_at": "2026-07-24T17:20:55Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 12.49
+        "latency_hours": 3.35
       },
       {
         "title": "chore(admin): remove Webview Tabs experimental toggle (APO-10649)",
@@ -270,7 +270,7 @@
         "requested_at": "2026-07-24T04:50:59Z",
         "reviewed_at": "2026-07-24T17:29:55Z",
         "review_state": "APPROVED",
-        "latency_hours": 12.65
+        "latency_hours": 3.5
       },
       {
         "title": "chore(admin): remove New Web Embeds experimental toggle (APO-10649)",
@@ -279,7 +279,7 @@
         "requested_at": "2026-07-24T04:50:49Z",
         "reviewed_at": "2026-07-24T17:53:50Z",
         "review_state": "APPROVED",
-        "latency_hours": 13.05
+        "latency_hours": 3.9
       },
       {
         "title": "chore(admin): remove Link Embed experimental toggle (APO-10649)",
@@ -288,7 +288,7 @@
         "requested_at": "2026-07-24T04:50:33Z",
         "reviewed_at": "2026-07-24T18:05:15Z",
         "review_state": "APPROVED",
-        "latency_hours": 13.25
+        "latency_hours": 4.09
       },
       {
         "title": "Reduce duplicate GraphQL fanout on donor give/payment loaders",
@@ -297,7 +297,7 @@
         "requested_at": "2026-07-23T17:40:11Z",
         "reviewed_at": "2026-07-24T18:13:35Z",
         "review_state": "APPROVED",
-        "latency_hours": 24.56
+        "latency_hours": 8.56
       },
       {
         "title": "fix(admin): hard-fail empty Creator outlines and surface stream errors",
@@ -306,7 +306,7 @@
         "requested_at": "2026-07-23T22:26:13Z",
         "reviewed_at": "2026-07-24T18:22:11Z",
         "review_state": "COMMENTED",
-        "latency_hours": 19.93
+        "latency_hours": 4.37
       },
       {
         "title": "fix(admin): keep AI streaming after intermediate parse errors",
@@ -315,7 +315,7 @@
         "requested_at": "2026-07-22T14:13:10Z",
         "reviewed_at": "2026-07-24T17:13:38Z",
         "review_state": "APPROVED",
-        "latency_hours": 51.01
+        "latency_hours": 19.01
       },
       {
         "title": "test(web): e2e edit and restore shared Monthly $17.59 recurring gift",
@@ -324,7 +324,7 @@
         "requested_at": "2026-07-22T18:30:34Z",
         "reviewed_at": "2026-07-24T18:05:32Z",
         "review_state": "APPROVED",
-        "latency_hours": 47.58
+        "latency_hours": 15.58
       },
       {
         "title": "fix(giving): right-align Failure Reason value in transaction drawer (APO-10609)",
@@ -369,7 +369,7 @@
         "requested_at": "2026-07-21T22:35:04Z",
         "reviewed_at": "2026-07-24T17:07:04Z",
         "review_state": "APPROVED",
-        "latency_hours": 66.53
+        "latency_hours": 19.12
       },
       {
         "title": "chore(deps): stage TipTap v3 core packages",
@@ -387,7 +387,7 @@
         "requested_at": "2026-07-21T13:19:29Z",
         "reviewed_at": "2026-07-21T14:00:49Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.69
+        "latency_hours": 0.01
       },
       {
         "title": "DB-first charge query for PushPay export rows (APO-10505)",
@@ -414,7 +414,7 @@
         "requested_at": "2026-07-21T01:29:19Z",
         "reviewed_at": "2026-07-21T13:44:47Z",
         "review_state": "APPROVED",
-        "latency_hours": 12.26
+        "latency_hours": 0
       },
       {
         "title": "ci(deploy): add per-app good-for-release helpers for confidence gate",
@@ -432,7 +432,7 @@
         "requested_at": "2026-07-21T02:11:51Z",
         "reviewed_at": "2026-07-21T13:43:35Z",
         "review_state": "APPROVED",
-        "latency_hours": 11.53
+        "latency_hours": 0
       },
       {
         "title": "test(web): e2e delete journey for saved payment methods",
@@ -468,7 +468,7 @@
         "requested_at": "2026-07-20T13:26:03Z",
         "reviewed_at": "2026-07-20T14:26:18Z",
         "review_state": "APPROVED",
-        "latency_hours": 1
+        "latency_hours": 0.44
       },
       {
         "title": "[APO-6508] Migrate pushpay-givings flag to Web LaunchDarkly",
@@ -486,7 +486,7 @@
         "requested_at": "2026-07-22T03:50:40Z",
         "reviewed_at": "2026-07-22T14:34:31Z",
         "review_state": "APPROVED",
-        "latency_hours": 10.73
+        "latency_hours": 0.58
       },
       {
         "title": "fix(admin): strip dataview[...] form-state fields in config action",
@@ -495,7 +495,7 @@
         "requested_at": "2026-07-21T23:05:01Z",
         "reviewed_at": "2026-07-24T17:06:45Z",
         "review_state": "APPROVED",
-        "latency_hours": 66.03
+        "latency_hours": 19.11
       },
       {
         "title": "Add data-hide-trending-searches option to Search embed",
@@ -504,7 +504,7 @@
         "requested_at": "2026-07-21T17:45:38Z",
         "reviewed_at": "2026-07-24T17:04:45Z",
         "review_state": "APPROVED",
-        "latency_hours": 71.32
+        "latency_hours": 23.32
       },
       {
         "title": "Lock Bible translation selection for custom api.bible keys",
@@ -513,7 +513,7 @@
         "requested_at": "2026-07-21T23:52:56Z",
         "reviewed_at": "2026-07-24T17:24:33Z",
         "review_state": "DISMISSED",
-        "latency_hours": 65.53
+        "latency_hours": 19.41
       },
       {
         "title": "docs(agents): add Cursor Cloud dev environment setup notes",
@@ -531,7 +531,7 @@
         "requested_at": "2026-07-17T19:39:26Z",
         "reviewed_at": "2026-07-20T14:24:56Z",
         "review_state": "APPROVED",
-        "latency_hours": 66.76
+        "latency_hours": 2.76
       },
       {
         "title": "fix(donation-embed): remove overflow-y-auto so Stripe ACH overlay reaches full viewport on iOS",

@@ -10,7 +10,7 @@
     "prs_merged": 1,
     "prs_total": 9,
     "pr_reviews": 27,
-    "pr_comments": 13,
+    "pr_comments": 19,
     "commits_pushed": 25,
     "linear_completed": 9,
     "linear_worked_on": 15,
@@ -25,7 +25,7 @@
     "lines_added": 8,
     "lines_deleted": 1,
     "files_changed": 2,
-    "median_review_latency_hours": 1.78,
+    "median_review_latency_hours": 0.65,
     "linear_projects_completed": 1
   },
   "linear": {
@@ -396,7 +396,7 @@
         "requested_at": "2026-05-15T12:57:33Z",
         "reviewed_at": "2026-05-15T15:15:07Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.29
+        "latency_hours": 1.25
       },
       {
         "title": "Add YouTube cleanup status banner",
@@ -441,7 +441,7 @@
         "requested_at": "2026-05-14T13:32:30Z",
         "reviewed_at": "2026-05-14T15:19:47Z",
         "review_state": "APPROVED",
-        "latency_hours": 1.79
+        "latency_hours": 1.33
       },
       {
         "title": "APO-6649 add tag group management actions",
@@ -450,7 +450,7 @@
         "requested_at": "2026-05-15T12:59:14Z",
         "reviewed_at": "2026-05-15T15:21:15Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.37
+        "latency_hours": 1.35
       },
       {
         "title": "[codex] Install only Chromium for e2e",
@@ -504,7 +504,7 @@
         "requested_at": "2026-05-13T11:40:46Z",
         "reviewed_at": "2026-05-13T11:45:50Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.08
+        "latency_hours": 0
       },
       {
         "title": "APO-9107 add Is Recurring column to Transactions Report export",
@@ -513,7 +513,7 @@
         "requested_at": "2026-05-12T13:53:59Z",
         "reviewed_at": "2026-05-12T14:38:18Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 0.74
+        "latency_hours": 0.64
       },
       {
         "title": "feat(reports): add Is Recurring column to Transactions Report export",
@@ -522,7 +522,7 @@
         "requested_at": "2026-05-12T14:52:03Z",
         "reviewed_at": "2026-05-12T23:42:00Z",
         "review_state": "APPROVED",
-        "latency_hours": 8.83
+        "latency_hours": 7.13
       },
       {
         "title": "APO-8691 strip markdown code fences from AI-generated HTML",
@@ -531,7 +531,7 @@
         "requested_at": "2026-05-13T11:46:04Z",
         "reviewed_at": "2026-05-13T18:37:58Z",
         "review_state": "APPROVED",
-        "latency_hours": 6.87
+        "latency_hours": 4.63
       },
       {
         "title": "APO-9103: Route \"Try Giving Again\" button to giving site",
@@ -558,7 +558,7 @@
         "requested_at": "2026-05-12T22:08:08Z",
         "reviewed_at": "2026-05-13T18:30:19Z",
         "review_state": "APPROVED",
-        "latency_hours": 20.37
+        "latency_hours": 4.51
       },
       {
         "title": "APO-7784 enlarge ChangeIdentityLink chevron",
@@ -576,7 +576,7 @@
         "requested_at": "2026-05-09T19:17:04Z",
         "reviewed_at": "2026-05-11T14:17:25Z",
         "review_state": "APPROVED",
-        "latency_hours": 43.01
+        "latency_hours": 0.29
       },
       {
         "title": "fix: resolve unused dependencies knip warnings",
@@ -585,7 +585,7 @@
         "requested_at": "2026-05-09T15:46:15Z",
         "reviewed_at": "2026-05-11T14:22:01Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 46.6
+        "latency_hours": 0.37
       },
       {
         "title": "APO-9042 enforce $0.50 minimum on Giving Settings minimum amount",
@@ -594,7 +594,7 @@
         "requested_at": "2026-05-09T11:22:42Z",
         "reviewed_at": "2026-05-11T14:00:27Z",
         "review_state": "APPROVED",
-        "latency_hours": 50.63
+        "latency_hours": 0.01
       },
       {
         "title": "APO-7365 flush pending title save before navigating actions",
@@ -621,7 +621,7 @@
         "requested_at": "2026-05-13T22:43:01Z",
         "reviewed_at": "2026-05-14T14:54:34Z",
         "review_state": "APPROVED",
-        "latency_hours": 16.19
+        "latency_hours": 0.91
       },
       {
         "title": "fix: parameterize tap scan person id filter to prevent SQL injection",
@@ -630,7 +630,7 @@
         "requested_at": "2026-05-10T18:23:27Z",
         "reviewed_at": "2026-05-11T14:30:53Z",
         "review_state": "APPROVED",
-        "latency_hours": 20.12
+        "latency_hours": 0.51
       }
     ]
   },

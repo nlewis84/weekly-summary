@@ -132,7 +132,9 @@ async function main() {
       .filter((r): r is string => !!r);
     const repos = [...new Set([...payload.stats.repos, ...reviewRepos])].sort();
 
-    process.stdout.write(`${reviews.length} reviews, ${authored.length} authored PRs\n`);
+    process.stdout.write(
+      `${reviews.length} reviews, ${authored.length} authored PRs\n`
+    );
     const before = {
       pr_reviews: payload.stats.pr_reviews,
       pr_comments: payload.stats.pr_comments,
@@ -152,27 +154,42 @@ async function main() {
     // The bugs being repaired here only ever dropped activity, never invented
     // it. A recomputation that comes back *lower* is therefore the recomputation
     // being wrong — candidates aged out of the search index, a request failed —
-    // not the saved week. Leave those alone rather than overwrite good data.
-    if (
-      after.pr_reviews < before.pr_reviews ||
-      after.pr_comments < before.pr_comments
-    ) {
+    // not the saved week. Guard the two counts separately: a week whose reviews
+    // are unrecoverable can still have a recoverable comment count, and holding
+    // both hostage to the weaker one throws away the good half.
+    const takeReviews = after.pr_reviews >= before.pr_reviews;
+    const takeComments = after.pr_comments >= before.pr_comments;
+
+    if (!takeReviews && !takeComments) {
       console.log(
-        `${week}: SKIPPED — recount came back lower (reviews ${before.pr_reviews} → ${after.pr_reviews}, comments ${before.pr_comments} → ${after.pr_comments}); keeping saved values`
+        `${week}: SKIPPED — both recounts came back lower (reviews ${before.pr_reviews} → ${after.pr_reviews}, comments ${before.pr_comments} → ${after.pr_comments}); keeping saved values`
       );
       continue;
     }
 
+    const describe = (
+      label: string,
+      from: number,
+      to: number,
+      take: boolean
+    ) =>
+      take
+        ? `${label} ${from} → ${to}`
+        : `${label} ${from} (kept, recount ${to} was lower)`;
     console.log(
-      `${week}: reviews ${before.pr_reviews} → ${after.pr_reviews} | comments ${before.pr_comments} → ${after.pr_comments}`
+      `${week}: ${describe("reviews", before.pr_reviews, after.pr_reviews, takeReviews)} | ${describe("comments", before.pr_comments, after.pr_comments, takeComments)}`
     );
     if (dryRun) continue;
 
-    payload.stats.pr_reviews = after.pr_reviews;
-    payload.stats.pr_comments = after.pr_comments;
-    payload.stats.median_review_latency_hours = medianLatency;
-    payload.stats.repos = repos;
-    payload.github.reviews = reviews;
+    // pr_reviews, the median latency, the review list and the repo list are all
+    // derived from the same fetch, so they move together or not at all.
+    if (takeReviews) {
+      payload.stats.pr_reviews = after.pr_reviews;
+      payload.stats.median_review_latency_hours = medianLatency;
+      payload.stats.repos = repos;
+      payload.github.reviews = reviews;
+    }
+    if (takeComments) payload.stats.pr_comments = after.pr_comments;
 
     writeFileSync(jsonPath, JSON.stringify(payload, null, 2) + "\n");
     writeFileSync(

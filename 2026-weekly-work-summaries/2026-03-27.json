@@ -10,7 +10,7 @@
     "prs_merged": 12,
     "prs_total": 25,
     "pr_reviews": 13,
-    "pr_comments": 22,
+    "pr_comments": 23,
     "commits_pushed": 14,
     "linear_completed": 6,
     "linear_worked_on": 6,
@@ -25,7 +25,7 @@
     "lines_added": 965,
     "lines_deleted": 289,
     "files_changed": 39,
-    "median_review_latency_hours": 1.13,
+    "median_review_latency_hours": null,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -447,28 +447,28 @@
         "title": "Send recurring cancellation emails from admin Stripe webhooks",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3062",
         "repo": "apollos-admin",
-        "requested_at": "2026-03-27T17:01:55Z",
+        "requested_at": null,
         "reviewed_at": "2026-03-27T17:43:59Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.7
+        "latency_hours": null
       },
       {
         "title": "fix: improve press and hover effects on recurring charges and charges",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3058",
         "repo": "apollos-admin",
-        "requested_at": "2026-03-26T16:29:11Z",
+        "requested_at": null,
         "reviewed_at": "2026-03-26T16:46:45Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.29
+        "latency_hours": null
       },
       {
         "title": "temporarily disable editing payment method on recurring giving",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3055",
         "repo": "apollos-admin",
-        "requested_at": "2026-03-26T13:23:14Z",
+        "requested_at": null,
         "reviewed_at": "2026-03-26T13:40:36Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.29
+        "latency_hours": null
       },
       {
         "title": "Drop finance reconciliation tables via new migration",
@@ -528,10 +528,10 @@
         "title": "Revert grace window and in-flight classification",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2694",
         "repo": "apollos-cluster",
-        "requested_at": "2026-03-24T16:04:10Z",
+        "requested_at": null,
         "reviewed_at": "2026-03-24T18:55:38Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.86
+        "latency_hours": null
       },
       {
         "title": "chore: always show cents on giving history",
@@ -546,19 +546,19 @@
         "title": "Add SQL migration to clean stale IDs from SUGGESTED_FOLLOWS config",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2680",
         "repo": "apollos-cluster",
-        "requested_at": "2026-03-24T14:26:24Z",
+        "requested_at": null,
         "reviewed_at": "2026-03-25T14:27:57Z",
         "review_state": "COMMENTED",
-        "latency_hours": 24.03
+        "latency_hours": null
       },
       {
         "title": "Limit root loader data to prevent leaking store credentials and TIPTAP tokens",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2980",
         "repo": "apollos-admin",
-        "requested_at": "2026-03-23T14:23:12Z",
+        "requested_at": null,
         "reviewed_at": "2026-03-23T15:56:03Z",
         "review_state": "APPROVED",
-        "latency_hours": 1.55
+        "latency_hours": null
       }
     ]
   },

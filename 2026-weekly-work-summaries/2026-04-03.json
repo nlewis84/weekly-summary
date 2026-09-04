@@ -9,8 +9,8 @@
   "stats": {
     "prs_merged": 14,
     "prs_total": 19,
-    "pr_reviews": 16,
-    "pr_comments": 17,
+    "pr_reviews": 17,
+    "pr_comments": 20,
     "commits_pushed": 14,
     "linear_completed": 15,
     "linear_worked_on": 15,
@@ -24,7 +24,7 @@
     "lines_added": 15302,
     "lines_deleted": 225,
     "files_changed": 133,
-    "median_review_latency_hours": 1.49,
+    "median_review_latency_hours": 1.31,
     "linear_projects_completed": 1
   },
   "linear": {
@@ -493,7 +493,7 @@
         "requested_at": "2026-04-02T22:41:27Z",
         "reviewed_at": "2026-04-02T23:24:14Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.71
+        "latency_hours": 0
       },
       {
         "title": "fix: add missing setup intent handling to payment flow",
@@ -512,6 +512,15 @@
         "reviewed_at": "2026-04-02T15:05:21Z",
         "review_state": "APPROVED",
         "latency_hours": 0.02
+      },
+      {
+        "title": "[APO-8124] Meaningful App Store Connect error propagation",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3093",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-02T14:01:30Z",
+        "reviewed_at": "2026-04-02T23:51:01Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.98
       },
       {
         "title": "[APO-7261] Remove embedMode=inline param, add it automatically",
@@ -574,7 +583,7 @@
         "requested_at": "2026-03-31T00:00:09Z",
         "reviewed_at": "2026-03-31T19:48:53Z",
         "review_state": "COMMENTED",
-        "latency_hours": 19.81
+        "latency_hours": 5.81
       },
       {
         "title": "[codex] Fix super admin access sync",
@@ -592,7 +601,7 @@
         "requested_at": "2026-03-29T22:56:44Z",
         "reviewed_at": "2026-03-30T15:05:10Z",
         "review_state": "APPROVED",
-        "latency_hours": 16.14
+        "latency_hours": 1.09
       },
       {
         "title": "feat: Finance audit algorithm with Slack/Sentry reporting",
@@ -610,7 +619,7 @@
         "requested_at": "2026-04-02T04:48:53Z",
         "reviewed_at": "2026-04-02T18:55:43Z",
         "review_state": "APPROVED",
-        "latency_hours": 14.11
+        "latency_hours": 4.93
       },
       {
         "title": "fix: show friendly error when org profile slug already exists",
@@ -628,7 +637,7 @@
         "requested_at": "2026-04-02T03:35:27Z",
         "reviewed_at": "2026-04-02T18:51:13Z",
         "review_state": "APPROVED",
-        "latency_hours": 15.26
+        "latency_hours": 4.85
       }
     ]
   },

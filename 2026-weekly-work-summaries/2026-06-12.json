@@ -10,7 +10,7 @@
     "prs_merged": 30,
     "prs_total": 45,
     "pr_reviews": 40,
-    "pr_comments": 39,
+    "pr_comments": 84,
     "commits_pushed": 52,
     "linear_completed": 3,
     "linear_worked_on": 13,
@@ -28,7 +28,7 @@
     "lines_added": 3391,
     "lines_deleted": 293,
     "files_changed": 87,
-    "median_review_latency_hours": 17.51,
+    "median_review_latency_hours": 1.52,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -823,7 +823,7 @@
         "requested_at": "2026-06-11T23:10:08Z",
         "reviewed_at": "2026-06-12T14:06:40Z",
         "review_state": "APPROVED",
-        "latency_hours": 14.94
+        "latency_hours": 0.11
       },
       {
         "title": "feat: add source of truth columns to charges",
@@ -850,7 +850,7 @@
         "requested_at": "2026-06-11T15:53:31Z",
         "reviewed_at": "2026-06-12T13:29:12Z",
         "review_state": "APPROVED",
-        "latency_hours": 21.59
+        "latency_hours": 6.11
       },
       {
         "title": "Add e2e tests for onboarding flow and additional protected routes",
@@ -859,7 +859,7 @@
         "requested_at": "2026-06-11T14:58:15Z",
         "reviewed_at": "2026-06-12T13:21:11Z",
         "review_state": "APPROVED",
-        "latency_hours": 22.38
+        "latency_hours": 7.03
       },
       {
         "title": "Fix migrate route test import flake",
@@ -868,7 +868,7 @@
         "requested_at": "2026-06-11T13:32:31Z",
         "reviewed_at": "2026-06-11T13:48:55Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.27
+        "latency_hours": 0
       },
       {
         "title": "[APO-9450] New Recurring Gift Has Been Updated Email",
@@ -877,7 +877,7 @@
         "requested_at": "2026-06-11T13:11:31Z",
         "reviewed_at": "2026-06-11T14:02:05Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.84
+        "latency_hours": 0.03
       },
       {
         "title": "[APO-8119] Instrument cold-start cache restore and tabs gate with Sentry spans",
@@ -886,7 +886,7 @@
         "requested_at": "2026-06-11T15:56:51Z",
         "reviewed_at": "2026-06-12T13:23:19Z",
         "review_state": "APPROVED",
-        "latency_hours": 21.44
+        "latency_hours": 6.05
       },
       {
         "title": "fix(canvas-embeds): pin search bar text color against host-page styles",
@@ -895,7 +895,7 @@
         "requested_at": "2026-06-11T17:54:18Z",
         "reviewed_at": "2026-06-12T13:56:10Z",
         "review_state": "APPROVED",
-        "latency_hours": 20.03
+        "latency_hours": 4.1
       },
       {
         "title": "fix(recurring-giving): drop null transfer_data.amount_percent on linked sub create",
@@ -913,7 +913,7 @@
         "requested_at": "2026-06-10T22:29:30Z",
         "reviewed_at": "2026-06-11T13:25:13Z",
         "review_state": "APPROVED",
-        "latency_hours": 14.93
+        "latency_hours": 0
       },
       {
         "title": "Add giving e2e completion + admin finance smoke + donation-embed contract tests (APO-9617)",
@@ -931,7 +931,7 @@
         "requested_at": "2026-06-10T00:18:42Z",
         "reviewed_at": "2026-06-10T14:00:10Z",
         "review_state": "COMMENTED",
-        "latency_hours": 13.69
+        "latency_hours": 0
       },
       {
         "title": "feat: new fund filter sql",
@@ -958,7 +958,7 @@
         "requested_at": "2026-06-09T13:43:28Z",
         "reviewed_at": "2026-06-10T13:18:24Z",
         "review_state": "APPROVED",
-        "latency_hours": 23.58
+        "latency_hours": 8
       },
       {
         "title": "feat: rewrite of transactions SQL",
@@ -976,7 +976,7 @@
         "requested_at": "2026-06-09T13:31:04Z",
         "reviewed_at": "2026-06-10T13:11:22Z",
         "review_state": "APPROVED",
-        "latency_hours": 23.67
+        "latency_hours": 8
       },
       {
         "title": "Fall back to linked recurring charge for transaction fund/campus",
@@ -985,7 +985,7 @@
         "requested_at": "2026-06-11T01:46:30Z",
         "reviewed_at": "2026-06-12T13:20:17Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 35.56
+        "latency_hours": 8
       },
       {
         "title": "feat(stripe): add stored generated object_created_at column to stripe_events",
@@ -1003,7 +1003,7 @@
         "requested_at": "2026-06-11T12:48:08Z",
         "reviewed_at": "2026-06-11T13:04:37Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.27
+        "latency_hours": 0
       },
       {
         "title": "fix(donation-embed): lock Express Checkout amount to wallet-tap value (APO-9560)",
@@ -1012,7 +1012,7 @@
         "requested_at": "2026-06-08T16:58:49Z",
         "reviewed_at": "2026-06-10T13:00:28Z",
         "review_state": "COMMENTED",
-        "latency_hours": 44.03
+        "latency_hours": 13.02
       },
       {
         "title": "fix: remove unused devDependencies from canvas-ui-web (knip)",
@@ -1021,7 +1021,7 @@
         "requested_at": "2026-06-11T20:01:57Z",
         "reviewed_at": "2026-06-12T13:59:22Z",
         "review_state": "APPROVED",
-        "latency_hours": 17.96
+        "latency_hours": 1.97
       },
       {
         "title": "Add e2e tests for privacy page, give form, and admin protected routes",
@@ -1030,7 +1030,7 @@
         "requested_at": "2026-06-08T15:23:59Z",
         "reviewed_at": "2026-06-10T12:52:40Z",
         "review_state": "APPROVED",
-        "latency_hours": 45.48
+        "latency_hours": 14.6
       },
       {
         "title": "Verify uploaded Apple API key has Admin access during iOS onboarding (APO-9480)",
@@ -1039,16 +1039,16 @@
         "requested_at": "2026-06-06T04:19:31Z",
         "reviewed_at": "2026-06-08T13:12:16Z",
         "review_state": "APPROVED",
-        "latency_hours": 56.88
+        "latency_hours": 0
       },
       {
-        "title": "Remove stale send-staging-microdeposit-emails-from-web-giving feature flag",
+        "title": "Gate microdeposit emails by Admin environment",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3545",
         "repo": "apollos-admin",
         "requested_at": "2026-06-12T13:22:36Z",
         "reviewed_at": "2026-06-12T14:10:18Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 0.8
+        "latency_hours": 0.17
       },
       {
         "title": "fix(canvas-ui-web): raise secondary text contrast to meet WCAG AA",
@@ -1057,7 +1057,7 @@
         "requested_at": "2026-06-11T20:56:18Z",
         "reviewed_at": "2026-06-12T13:59:51Z",
         "review_state": "APPROVED",
-        "latency_hours": 17.06
+        "latency_hours": 1.06
       },
       {
         "title": "APO-9440: only show active funds when editing recurring gifts",
@@ -1066,7 +1066,7 @@
         "requested_at": "2026-06-03T04:37:56Z",
         "reviewed_at": "2026-06-08T14:13:04Z",
         "review_state": "APPROVED",
-        "latency_hours": 129.59
+        "latency_hours": 24.22
       },
       {
         "title": "feat(giving): add subscription invoice status utils and API loader",
@@ -1084,7 +1084,7 @@
         "requested_at": "2026-06-11T16:23:31Z",
         "reviewed_at": "2026-06-12T13:26:38Z",
         "review_state": "APPROVED",
-        "latency_hours": 21.05
+        "latency_hours": 5.61
       },
       {
         "title": "[codex] Wire church deletion DAG [APO-8936]",
@@ -1093,7 +1093,7 @@
         "requested_at": "2026-06-10T21:14:18Z",
         "reviewed_at": "2026-06-11T13:23:49Z",
         "review_state": "APPROVED",
-        "latency_hours": 16.16
+        "latency_hours": 0.76
       },
       {
         "title": "[codex] Delete cluster church data [APO-8936]",
@@ -1102,7 +1102,7 @@
         "requested_at": "2026-06-08T16:04:19Z",
         "reviewed_at": "2026-06-10T12:56:01Z",
         "review_state": "DISMISSED",
-        "latency_hours": 44.86
+        "latency_hours": 13.93
       },
       {
         "title": "[codex] Delete admin church data [APO-8936]",
@@ -1111,7 +1111,7 @@
         "requested_at": "2026-06-08T13:53:47Z",
         "reviewed_at": "2026-06-08T14:46:39Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.88
+        "latency_hours": 0.78
       },
       {
         "title": "[codex] Export church deletion backups [APO-8936]",
@@ -1120,7 +1120,7 @@
         "requested_at": "2026-06-05T21:33:24Z",
         "reviewed_at": "2026-06-08T13:07:51Z",
         "review_state": "APPROVED",
-        "latency_hours": 63.57
+        "latency_hours": 0.44
       },
       {
         "title": "chore: switch admin runtime to React Router",
@@ -1138,7 +1138,7 @@
         "requested_at": "2026-06-04T22:55:08Z",
         "reviewed_at": "2026-06-10T13:27:06Z",
         "review_state": "COMMENTED",
-        "latency_hours": 134.53
+        "latency_hours": 24
       },
       {
         "title": "[APO-9090] Admin: Edit Frequency",

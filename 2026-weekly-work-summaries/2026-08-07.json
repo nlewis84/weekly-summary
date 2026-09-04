@@ -9,8 +9,8 @@
   "stats": {
     "prs_merged": 19,
     "prs_total": 22,
-    "pr_reviews": 44,
-    "pr_comments": 15,
+    "pr_reviews": 45,
+    "pr_comments": 53,
     "commits_pushed": 54,
     "linear_completed": 3,
     "linear_projects_completed": 0,
@@ -27,7 +27,7 @@
     "lines_added": 4856,
     "lines_deleted": 708,
     "files_changed": 116,
-    "median_review_latency_hours": 2.84
+    "median_review_latency_hours": 0.77
   },
   "linear": {
     "completed_issues": [
@@ -401,7 +401,7 @@
         "requested_at": "2026-08-07T12:30:13Z",
         "reviewed_at": "2026-08-07T15:48:37Z",
         "review_state": "APPROVED",
-        "latency_hours": 3.31
+        "latency_hours": 1.81
       },
       {
         "title": "feat: action-oriented severity labels and sensitivity-aware model routing",
@@ -419,7 +419,7 @@
         "requested_at": "2026-08-06T12:17:26Z",
         "reviewed_at": "2026-08-06T15:07:48Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.84
+        "latency_hours": 1.13
       },
       {
         "title": "Fix cumulative Linear hotfix release sync",
@@ -428,7 +428,7 @@
         "requested_at": "2026-08-05T21:24:44Z",
         "reviewed_at": "2026-08-05T23:43:45Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.32
+        "latency_hours": 0.59
       },
       {
         "title": "fix(redirect): recognize configured Apollos web hosts for Give tab auth handoff",
@@ -438,6 +438,15 @@
         "reviewed_at": "2026-08-05T20:00:34Z",
         "review_state": "COMMENTED",
         "latency_hours": null
+      },
+      {
+        "title": "refactor: flatten Web church routes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3975",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-07T19:41:55Z",
+        "reviewed_at": "2026-08-07T20:36:10Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.9
       },
       {
         "title": "refactor: flatten Web giving routes",
@@ -473,7 +482,7 @@
         "requested_at": "2026-08-05T20:29:25Z",
         "reviewed_at": "2026-08-05T23:47:42Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 3.3
+        "latency_hours": 1.51
       },
       {
         "title": "fix(web): pass church Amplitude key into AnalyticsProvider",
@@ -482,7 +491,7 @@
         "requested_at": "2026-08-05T18:40:53Z",
         "reviewed_at": "2026-08-05T23:36:39Z",
         "review_state": "COMMENTED",
-        "latency_hours": 4.93
+        "latency_hours": 3.32
       },
       {
         "title": "test(web): W2 auth edge paths + ACH bank link for money-route gate",
@@ -491,7 +500,7 @@
         "requested_at": "2026-08-05T23:27:12Z",
         "reviewed_at": "2026-08-05T23:48:56Z",
         "review_state": "COMMENTED",
-        "latency_hours": 0.36
+        "latency_hours": 0
       },
       {
         "title": "test(admin): A2 Giving authenticated page-load smokes",
@@ -500,7 +509,7 @@
         "requested_at": "2026-08-05T23:27:11Z",
         "reviewed_at": "2026-08-06T19:59:01Z",
         "review_state": "COMMENTED",
-        "latency_hours": 20.53
+        "latency_hours": 5.98
       },
       {
         "title": "test(admin): A1 un-fixme authenticated shell + Giving transactions/reports",
@@ -509,7 +518,7 @@
         "requested_at": "2026-08-05T23:27:10Z",
         "reviewed_at": "2026-08-06T00:12:47Z",
         "review_state": "COMMENTED",
-        "latency_hours": 0.76
+        "latency_hours": 0
       },
       {
         "title": "test(web): W1 money-path harden + recurring cancel in default gate",
@@ -518,7 +527,7 @@
         "requested_at": "2026-08-05T23:27:09Z",
         "reviewed_at": "2026-08-05T23:53:07Z",
         "review_state": "COMMENTED",
-        "latency_hours": 0.43
+        "latency_hours": 0
       },
       {
         "title": "fix(web-embeds-v2): delegate fullscreen and autoplay on the modal iframe",
@@ -536,7 +545,7 @@
         "requested_at": "2026-08-05T10:15:17Z",
         "reviewed_at": "2026-08-05T15:23:14Z",
         "review_state": "COMMENTED",
-        "latency_hours": 5.13
+        "latency_hours": 1.39
       },
       {
         "title": "fix(admin): exclude aiWriter nodes from AI context",
@@ -545,7 +554,7 @@
         "requested_at": "2026-08-05T13:26:17Z",
         "reviewed_at": "2026-08-05T15:21:38Z",
         "review_state": "COMMENTED",
-        "latency_hours": 1.92
+        "latency_hours": 1.36
       },
       {
         "title": "fix(admin): land non-super-admins on a real Giving tab",
@@ -563,7 +572,7 @@
         "requested_at": "2026-08-04T20:18:49Z",
         "reviewed_at": "2026-08-05T14:56:48Z",
         "review_state": "COMMENTED",
-        "latency_hours": 18.63
+        "latency_hours": 2.63
       },
       {
         "title": "fix(web): narrow query() Response at content and loader call sites",
@@ -572,7 +581,7 @@
         "requested_at": "2026-08-04T20:23:35Z",
         "reviewed_at": "2026-08-05T15:08:54Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 18.76
+        "latency_hours": 2.76
       },
       {
         "title": "fix(web-embeds-v2): let a preview's own web deploy win over the base-URL override",
@@ -590,7 +599,7 @@
         "requested_at": "2026-08-04T13:55:53Z",
         "reviewed_at": "2026-08-04T14:36:19Z",
         "review_state": "COMMENTED",
-        "latency_hours": 0.67
+        "latency_hours": 0.61
       },
       {
         "title": "fix(finance): backfill charges.fund_id/campus_id from recurring_charges (APO-10969)",
@@ -599,7 +608,7 @@
         "requested_at": "2026-08-04T04:22:28Z",
         "reviewed_at": "2026-08-04T13:12:34Z",
         "review_state": "APPROVED",
-        "latency_hours": 8.84
+        "latency_hours": 0
       },
       {
         "title": "fix(web): don't log a donor out when the refresh call can't reach cluster",
@@ -608,7 +617,7 @@
         "requested_at": "2026-08-04T03:24:16Z",
         "reviewed_at": "2026-08-04T13:56:43Z",
         "review_state": "APPROVED",
-        "latency_hours": 10.54
+        "latency_hours": 0
       },
       {
         "title": "fix(finance): fall back to recurring_charges fund/campus on charge webhooks (APO-10969)",
@@ -617,7 +626,7 @@
         "requested_at": "2026-08-04T04:12:01Z",
         "reviewed_at": "2026-08-04T13:14:55Z",
         "review_state": "APPROVED",
-        "latency_hours": 9.05
+        "latency_hours": 0
       },
       {
         "title": "fix(admin): stop rendering failed Giving balance requests as $0.00",
@@ -626,7 +635,7 @@
         "requested_at": "2026-08-04T01:41:59Z",
         "reviewed_at": "2026-08-04T14:04:13Z",
         "review_state": "APPROVED",
-        "latency_hours": 12.37
+        "latency_hours": 0.07
       },
       {
         "title": "ci(web-embeds): serialize the shared staging-fixture job",
@@ -635,7 +644,7 @@
         "requested_at": "2026-08-04T02:09:06Z",
         "reviewed_at": "2026-08-04T14:31:03Z",
         "review_state": "APPROVED",
-        "latency_hours": 12.37
+        "latency_hours": 0.52
       },
       {
         "title": "test(mobile): Maestro e2e for Give tab (APO-10821)",
@@ -689,7 +698,7 @@
         "requested_at": "2026-08-03T13:41:11Z",
         "reviewed_at": "2026-08-03T18:48:35Z",
         "review_state": "COMMENTED",
-        "latency_hours": 5.12
+        "latency_hours": 4.81
       },
       {
         "title": "Mobile: keep giving history button visible while sheets open (APO-10829)",
@@ -716,7 +725,7 @@
         "requested_at": "2026-07-23T22:26:13Z",
         "reviewed_at": "2026-08-05T14:30:39Z",
         "review_state": "COMMENTED",
-        "latency_hours": 304.07
+        "latency_hours": 64.51
       },
       {
         "title": "feat(web): inline embed transparency, height, and loader skeleton (4/4)",
@@ -725,7 +734,7 @@
         "requested_at": "2026-07-25T02:03:23Z",
         "reviewed_at": "2026-08-04T14:39:38Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 252.6
+        "latency_hours": 48.66
       },
       {
         "title": "APO-10112: ESLint guard + final stripe_events SQL cleanup",
@@ -743,7 +752,7 @@
         "requested_at": "2026-08-04T13:53:02Z",
         "reviewed_at": "2026-08-04T14:32:14Z",
         "review_state": "COMMENTED",
-        "latency_hours": 0.65
+        "latency_hours": 0.54
       },
       {
         "title": "chore: remove obsolete Remix router compatibility shims",

@@ -15,14 +15,15 @@
     "linear_completed": 5,
     "linear_worked_on": 7,
     "repos": [
+      "apollos-admin",
       "apollos-cluster",
-      "apollos-admin"
+      "apollos-platforms"
     ],
     "linear_issues_created": 8,
     "lines_added": 1545,
     "lines_deleted": 457,
     "files_changed": 26,
-    "median_review_latency_hours": 4.84,
+    "median_review_latency_hours": 0.36,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -341,42 +342,6 @@
     ],
     "reviews": [
       {
-        "title": "refactor: new auth flow",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2718",
-        "repo": "apollos-admin",
-        "requested_at": null,
-        "reviewed_at": "2026-01-27T21:24:32Z",
-        "review_state": "COMMENTED",
-        "latency_hours": null
-      },
-      {
-        "title": "chore: optimize payment route by utilizing user data from root loader",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759",
-        "repo": "apollos-admin",
-        "requested_at": null,
-        "reviewed_at": "2026-01-29T18:32:16Z",
-        "review_state": "COMMENTED",
-        "latency_hours": null
-      },
-      {
-        "title": "Migration Assistant Admin UI",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2667",
-        "repo": "apollos-admin",
-        "requested_at": "2026-01-27T21:23:26Z",
-        "reviewed_at": "2026-01-27T22:06:28Z",
-        "review_state": "COMMENTED",
-        "latency_hours": 0.72
-      },
-      {
-        "title": "Web Embeds V2 PRD",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2731",
-        "repo": "apollos-admin",
-        "requested_at": null,
-        "reviewed_at": "2026-01-30T15:09:01Z",
-        "review_state": "COMMENTED",
-        "latency_hours": null
-      },
-      {
         "title": "[APO-6536] Add Payout ID to filters in `transaction` screen.",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2761",
         "repo": "apollos-admin",
@@ -386,15 +351,6 @@
         "latency_hours": 3.29
       },
       {
-        "title": "feat: load payment intent asynchronously for faster initial render",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2748",
-        "repo": "apollos-admin",
-        "requested_at": null,
-        "reviewed_at": "2026-01-29T15:32:50Z",
-        "review_state": "COMMENTED",
-        "latency_hours": null
-      },
-      {
         "title": "feat: add feature flagged user menu for giving history and payments",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2760",
         "repo": "apollos-admin",
@@ -402,6 +358,15 @@
         "reviewed_at": "2026-01-29T20:59:40Z",
         "review_state": "APPROVED",
         "latency_hours": 4.84
+      },
+      {
+        "title": "chore: optimize payment route by utilizing user data from root loader",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2759",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-01-29T18:32:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Remove lists feature flag gating",
@@ -419,7 +384,7 @@
         "requested_at": "2026-01-29T02:12:05Z",
         "reviewed_at": "2026-01-29T14:52:05Z",
         "review_state": "APPROVED",
-        "latency_hours": 12.67
+        "latency_hours": 0
       },
       {
         "title": "Fix suggested follows person ID saving",
@@ -428,7 +393,7 @@
         "requested_at": "2026-01-29T01:30:41Z",
         "reviewed_at": "2026-01-29T14:49:12Z",
         "review_state": "APPROVED",
-        "latency_hours": 13.31
+        "latency_hours": 0
       },
       {
         "title": "feat: add Make Default button on saved payment method card",
@@ -437,16 +402,16 @@
         "requested_at": "2026-01-28T21:29:43Z",
         "reviewed_at": "2026-01-28T23:28:42Z",
         "review_state": "APPROVED",
-        "latency_hours": 1.98
+        "latency_hours": 1.5
       },
       {
-        "title": "Stabilize comment ordering in CommentsBottomSheet",
-        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5900",
-        "repo": "apollos-platforms",
-        "requested_at": "2026-01-28T03:31:56Z",
-        "reviewed_at": "2026-01-28T14:36:42Z",
-        "review_state": "APPROVED",
-        "latency_hours": 11.08
+        "title": "feat: load payment intent asynchronously for faster initial render",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2748",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-01-29T15:32:50Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
       },
       {
         "title": "Persist default church on switch",
@@ -455,25 +420,34 @@
         "requested_at": "2026-01-28T04:24:17Z",
         "reviewed_at": "2026-01-28T14:35:41Z",
         "review_state": "APPROVED",
-        "latency_hours": 10.19
+        "latency_hours": 0
       },
       {
-        "title": "chore: add performance monitoring and optimize parallel data fetching",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2720",
+        "title": "Stabilize comment ordering in CommentsBottomSheet",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/5900",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-01-28T03:31:56Z",
+        "reviewed_at": "2026-01-28T14:36:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "Web Embeds V2 PRD",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2731",
         "repo": "apollos-admin",
         "requested_at": null,
-        "reviewed_at": "2026-01-26T16:22:27Z",
+        "reviewed_at": "2026-01-30T15:09:01Z",
         "review_state": "COMMENTED",
         "latency_hours": null
       },
       {
-        "title": "Clear people origins on Rock delete",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2716",
+        "title": "test: stabilize openai summary test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2726",
         "repo": "apollos-admin",
-        "requested_at": "2026-01-26T23:17:59Z",
-        "reviewed_at": "2026-01-27T15:21:40Z",
+        "requested_at": "2026-01-26T20:01:31Z",
+        "reviewed_at": "2026-01-26T21:58:53Z",
         "review_state": "APPROVED",
-        "latency_hours": 16.06
+        "latency_hours": 1.96
       },
       {
         "title": "Disable YouVersion translations until cluster ready",
@@ -485,22 +459,49 @@
         "latency_hours": 0.03
       },
       {
+        "title": "chore: add performance monitoring and optimize parallel data fetching",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2720",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-01-26T16:22:27Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
         "title": "Fix slash command cleanup after selection",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/2719",
         "repo": "apollos-admin",
         "requested_at": "2026-01-23T18:10:56Z",
         "reviewed_at": "2026-01-26T21:59:47Z",
         "review_state": "APPROVED",
-        "latency_hours": 75.81
+        "latency_hours": 11.81
       },
       {
-        "title": "test: stabilize openai summary test",
-        "url": "https://github.com/ApollosProject/apollos-admin/pull/2726",
+        "title": "refactor: new auth flow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2718",
         "repo": "apollos-admin",
-        "requested_at": "2026-01-26T20:01:31Z",
-        "reviewed_at": "2026-01-26T21:58:53Z",
+        "requested_at": null,
+        "reviewed_at": "2026-01-27T21:24:32Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Clear people origins on Rock delete",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2716",
+        "repo": "apollos-admin",
+        "requested_at": "2026-01-26T23:17:59Z",
+        "reviewed_at": "2026-01-27T15:21:40Z",
         "review_state": "APPROVED",
-        "latency_hours": 1.96
+        "latency_hours": 0.36
+      },
+      {
+        "title": "Migration Assistant Admin UI",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/2667",
+        "repo": "apollos-admin",
+        "requested_at": "2026-01-27T21:23:26Z",
+        "reviewed_at": "2026-01-27T22:06:28Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.72
       }
     ],
     "comments_count": 44

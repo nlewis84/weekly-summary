@@ -10,7 +10,7 @@
     "prs_merged": 11,
     "prs_total": 22,
     "pr_reviews": 24,
-    "pr_comments": 26,
+    "pr_comments": 28,
     "commits_pushed": 12,
     "linear_completed": 8,
     "linear_worked_on": 10,
@@ -25,7 +25,7 @@
     "lines_added": 3069,
     "lines_deleted": 1620,
     "files_changed": 74,
-    "median_review_latency_hours": 14.28,
+    "median_review_latency_hours": 2.39,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -308,7 +308,7 @@
         "requested_at": "2026-03-12T21:41:01Z",
         "reviewed_at": "2026-03-13T15:28:54Z",
         "review_state": "COMMENTED",
-        "latency_hours": 17.8
+        "latency_hours": 1.8
       },
       {
         "title": "feat: add requiredRoles with nested requiredSkills to hasAccess",
@@ -344,7 +344,7 @@
         "requested_at": "2026-03-11T01:54:37Z",
         "reviewed_at": "2026-03-11T14:01:41Z",
         "review_state": "APPROVED",
-        "latency_hours": 12.12
+        "latency_hours": 0.03
       },
       {
         "title": "Remove resume recurring gift functionality",
@@ -353,7 +353,7 @@
         "requested_at": "2026-03-11T01:53:19Z",
         "reviewed_at": "2026-03-11T14:06:24Z",
         "review_state": "APPROVED",
-        "latency_hours": 12.22
+        "latency_hours": 0.11
       },
       {
         "title": "[APO-7548] Handle OTP errors in `web` project",
@@ -371,7 +371,7 @@
         "requested_at": "2026-03-10T22:47:49Z",
         "reviewed_at": "2026-03-11T21:37:30Z",
         "review_state": "COMMENTED",
-        "latency_hours": 22.83
+        "latency_hours": 7.63
       },
       {
         "title": "Support MP3 audio in web previews",
@@ -380,7 +380,7 @@
         "requested_at": "2026-03-10T19:39:55Z",
         "reviewed_at": "2026-03-11T14:03:28Z",
         "review_state": "APPROVED",
-        "latency_hours": 18.39
+        "latency_hours": 2.39
       },
       {
         "title": "SYM-22: Support MP3 audio in legacy web embeds",
@@ -389,7 +389,7 @@
         "requested_at": "2026-03-10T19:28:40Z",
         "reviewed_at": "2026-03-10T22:23:16Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.91
+        "latency_hours": 2.52
       },
       {
         "title": "[Finance] Charge source missing from metadata",
@@ -407,7 +407,7 @@
         "requested_at": "2026-03-10T06:39:06Z",
         "reviewed_at": "2026-03-10T20:56:09Z",
         "review_state": "COMMENTED",
-        "latency_hours": 14.28
+        "latency_hours": 6.94
       },
       {
         "title": "createOrUpdateGiveIntent mobile implementation",
@@ -416,7 +416,7 @@
         "requested_at": "2026-03-12T23:07:27Z",
         "reviewed_at": "2026-03-13T01:33:23Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.43
+        "latency_hours": 0
       },
       {
         "title": "feat: migrate from createPaymentIntent to createOrUpdateGiveIntent for Web Giving",
@@ -434,7 +434,7 @@
         "requested_at": "2026-03-09T19:57:07Z",
         "reviewed_at": "2026-03-10T21:50:10Z",
         "review_state": "COMMENTED",
-        "latency_hours": 25.88
+        "latency_hours": 9.88
       },
       {
         "title": "Fix historical tap tag analytics queries",
@@ -443,7 +443,7 @@
         "requested_at": "2026-03-09T17:18:53Z",
         "reviewed_at": "2026-03-10T21:45:14Z",
         "review_state": "APPROVED",
-        "latency_hours": 28.44
+        "latency_hours": 12.44
       },
       {
         "title": "[APO-6911] [V2] Full phone validation on giving",
@@ -452,7 +452,7 @@
         "requested_at": "2026-03-09T13:21:09Z",
         "reviewed_at": "2026-03-11T13:59:28Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 48.64
+        "latency_hours": 16
       },
       {
         "title": "[APO-6852] Respect previous set giving details",
@@ -461,7 +461,7 @@
         "requested_at": "2026-03-09T12:43:57Z",
         "reviewed_at": "2026-03-10T21:47:08Z",
         "review_state": "APPROVED",
-        "latency_hours": 33.05
+        "latency_hours": 15.79
       },
       {
         "title": "[APO-6849] [Web giving] Match app min/max values",
@@ -470,7 +470,7 @@
         "requested_at": "2026-03-07T12:10:51Z",
         "reviewed_at": "2026-03-10T21:37:51Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 81.45
+        "latency_hours": 15.63
       },
       {
         "title": "Use env var for LaunchDarkly client side ID, instead of hard-coding",
@@ -479,7 +479,7 @@
         "requested_at": "2026-03-10T02:31:21Z",
         "reviewed_at": "2026-03-10T22:04:12Z",
         "review_state": "APPROVED",
-        "latency_hours": 19.55
+        "latency_hours": 8
       },
       {
         "title": "Add Docker support for admin app with GHCR publishing",
@@ -488,7 +488,7 @@
         "requested_at": "2026-03-04T20:59:38Z",
         "reviewed_at": "2026-03-09T18:17:45Z",
         "review_state": "APPROVED",
-        "latency_hours": 117.3
+        "latency_hours": 22.3
       },
       {
         "title": "feat: add grace window and in-flight classification for reconciliation",

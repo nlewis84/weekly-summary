@@ -9,8 +9,8 @@
   "stats": {
     "prs_merged": 18,
     "prs_total": 24,
-    "pr_reviews": 25,
-    "pr_comments": 31,
+    "pr_reviews": 26,
+    "pr_comments": 40,
     "commits_pushed": 13,
     "linear_completed": 5,
     "linear_worked_on": 11,
@@ -23,7 +23,7 @@
     "lines_added": 1905,
     "lines_deleted": 559,
     "files_changed": 51,
-    "median_review_latency_hours": 5.69,
+    "median_review_latency_hours": 0.69,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -483,13 +483,22 @@
     ],
     "reviews": [
       {
+        "title": "fix: focus amount input on first give click [APO-8675]",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3215",
+        "repo": "apollos-admin",
+        "requested_at": "2026-04-18T00:03:19Z",
+        "reviewed_at": "2026-04-18T00:22:15Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0
+      },
+      {
         "title": "feat: default status filter on recurring tab ",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3209",
         "repo": "apollos-admin",
         "requested_at": "2026-04-17T05:16:50Z",
         "reviewed_at": "2026-04-17T13:26:57Z",
         "review_state": "APPROVED",
-        "latency_hours": 8.17
+        "latency_hours": 0
       },
       {
         "title": "[APO-8156] Allow Administrators to Edit a Donor's Recurring Gift",
@@ -498,10 +507,10 @@
         "requested_at": "2026-04-16T20:43:45Z",
         "reviewed_at": "2026-04-17T13:22:33Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 16.65
+        "latency_hours": 1.27
       },
       {
-        "title": "fix: scope Stripe customers by platform account ID instead of church slug",
+        "title": "fix: scope Stripe customer rows to platform account ID",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/2853",
         "repo": "apollos-cluster",
         "requested_at": null,
@@ -525,7 +534,7 @@
         "requested_at": "2026-04-17T00:18:56Z",
         "reviewed_at": "2026-04-17T13:48:59Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 13.5
+        "latency_hours": 0
       },
       {
         "title": "feat: add core subscription report data generation",
@@ -534,7 +543,7 @@
         "requested_at": "2026-04-16T23:07:31Z",
         "reviewed_at": "2026-04-17T13:43:04Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 14.59
+        "latency_hours": 0
       },
       {
         "title": "feat: add subscription Stripe search query builder and fetcher",
@@ -552,7 +561,7 @@
         "requested_at": "2026-04-16T13:18:37Z",
         "reviewed_at": "2026-04-16T16:13:08Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.91
+        "latency_hours": 2.22
       },
       {
         "title": "utility: Frequency Label -> Interval Object  - RT1",
@@ -561,7 +570,7 @@
         "requested_at": "2026-04-16T13:18:18Z",
         "reviewed_at": "2026-04-16T16:30:16Z",
         "review_state": "APPROVED",
-        "latency_hours": 3.2
+        "latency_hours": 2.5
       },
       {
         "title": "feat: add stripe_platform_id column to customers table",
@@ -579,7 +588,7 @@
         "requested_at": "2026-04-15T03:31:05Z",
         "reviewed_at": "2026-04-15T14:41:27Z",
         "review_state": "APPROVED",
-        "latency_hours": 11.17
+        "latency_hours": 0.69
       },
       {
         "title": "fix: improve giving onboarding page mobile responsiveness",
@@ -588,7 +597,7 @@
         "requested_at": "2026-04-15T04:01:54Z",
         "reviewed_at": "2026-04-15T14:53:38Z",
         "review_state": "APPROVED",
-        "latency_hours": 10.86
+        "latency_hours": 0.89
       },
       {
         "title": "Add configurable minimum payment field in Giving Settings",
@@ -597,7 +606,7 @@
         "requested_at": "2026-04-15T03:18:51Z",
         "reviewed_at": "2026-04-15T14:51:51Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 11.55
+        "latency_hours": 0.86
       },
       {
         "title": "APO-8062: Move funds and payouts pagination outside table cards",
@@ -615,7 +624,7 @@
         "requested_at": "2026-04-14T20:51:00Z",
         "reviewed_at": "2026-04-15T14:31:56Z",
         "review_state": "COMMENTED",
-        "latency_hours": 17.68
+        "latency_hours": 1.68
       },
       {
         "title": "[APO-8194 ]Do not show incomplete_expired subscriptions in the Admin",
@@ -651,7 +660,7 @@
         "requested_at": "2026-04-13T22:31:10Z",
         "reviewed_at": "2026-04-14T14:03:03Z",
         "review_state": "APPROVED",
-        "latency_hours": 15.53
+        "latency_hours": 0.05
       },
       {
         "title": "[APO-7962] Add Cancelled Date to Recurring Gift Detail for Cancelled Gifts",
@@ -660,7 +669,7 @@
         "requested_at": "2026-04-13T22:17:09Z",
         "reviewed_at": "2026-04-14T14:02:02Z",
         "review_state": "APPROVED",
-        "latency_hours": 15.75
+        "latency_hours": 0.03
       },
       {
         "title": "fix: include localizations when updating app clip header image [APO-8293]",
@@ -669,7 +678,7 @@
         "requested_at": "2026-04-13T13:33:24Z",
         "reviewed_at": "2026-04-13T13:59:40Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.44
+        "latency_hours": 0
       },
       {
         "title": "feat: Filter and Paginate Transaction Report Data",
@@ -696,7 +705,7 @@
         "requested_at": "2026-04-10T08:31:39Z",
         "reviewed_at": "2026-04-12T13:18:18Z",
         "review_state": "COMMENTED",
-        "latency_hours": 52.78
+        "latency_hours": 8
       },
       {
         "title": "Lock down Communities group sync controls for Go customers",

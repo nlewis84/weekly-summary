@@ -9,8 +9,8 @@
   "stats": {
     "prs_merged": 23,
     "prs_total": 46,
-    "pr_reviews": 39,
-    "pr_comments": 10,
+    "pr_reviews": 45,
+    "pr_comments": 40,
     "commits_pushed": 51,
     "linear_completed": 8,
     "linear_projects_completed": 1,
@@ -27,7 +27,7 @@
     "lines_added": 8266,
     "lines_deleted": 568,
     "files_changed": 130,
-    "median_review_latency_hours": 1.69
+    "median_review_latency_hours": 0.97
   },
   "linear": {
     "completed_issues": [
@@ -650,7 +650,7 @@
         "requested_at": "2026-07-30T22:48:19Z",
         "reviewed_at": "2026-07-30T22:49:01Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.01
+        "latency_hours": 0
       },
       {
         "title": "fix(prayer-topics): stop 033 backing up, and unblock 034 past the mask views (APO-10877)",
@@ -722,7 +722,7 @@
         "requested_at": "2026-07-29T04:01:43Z",
         "reviewed_at": "2026-07-29T14:58:27Z",
         "review_state": "APPROVED",
-        "latency_hours": 10.95
+        "latency_hours": 0.97
       },
       {
         "title": "feat(admin): provision APP.UNIVERSAL_LINK_HOST with new church routes",
@@ -731,7 +731,7 @@
         "requested_at": "2026-07-29T04:10:28Z",
         "reviewed_at": "2026-07-29T15:17:08Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 11.11
+        "latency_hours": 1.29
       },
       {
         "title": "fix(web): preserve giving success after payment",
@@ -740,7 +740,7 @@
         "requested_at": "2026-07-28T20:40:16Z",
         "reviewed_at": "2026-07-29T14:29:15Z",
         "review_state": "COMMENTED",
-        "latency_hours": 17.82
+        "latency_hours": 1.82
       },
       {
         "title": "test(web): clear remaining apps/web test type errors",
@@ -830,7 +830,7 @@
         "requested_at": "2026-07-28T12:21:47Z",
         "reviewed_at": "2026-07-28T19:39:43Z",
         "review_state": "APPROVED",
-        "latency_hours": 7.3
+        "latency_hours": 5.66
       },
       {
         "title": "fix(admin): strip UI-only bracketed form-state keys in config action (APO-10515)",
@@ -839,7 +839,7 @@
         "requested_at": "2026-07-28T12:57:50Z",
         "reviewed_at": "2026-07-28T19:46:44Z",
         "review_state": "APPROVED",
-        "latency_hours": 6.82
+        "latency_hours": 5.78
       },
       {
         "title": "feat(email): suppress non-production email to non-allow-listed recipients (APO-10786)",
@@ -857,7 +857,7 @@
         "requested_at": "2026-07-28T03:07:19Z",
         "reviewed_at": "2026-07-28T19:35:34Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 16.47
+        "latency_hours": 5.59
       },
       {
         "title": "test(web): fix type errors in $handle._layout.test",
@@ -866,7 +866,7 @@
         "requested_at": "2026-07-27T21:03:53Z",
         "reviewed_at": "2026-07-28T00:27:01Z",
         "review_state": "APPROVED",
-        "latency_hours": 3.39
+        "latency_hours": 0.94
       },
       {
         "title": "fix(donation-embed): resolve type errors surfaced by apps/web typecheck",
@@ -875,7 +875,7 @@
         "requested_at": "2026-07-27T20:28:24Z",
         "reviewed_at": "2026-07-28T00:22:51Z",
         "review_state": "COMMENTED",
-        "latency_hours": 3.91
+        "latency_hours": 1.53
       },
       {
         "title": "chore(web): include vitest globals in tsconfig types",
@@ -911,7 +911,7 @@
         "requested_at": "2026-07-27T13:17:07Z",
         "reviewed_at": "2026-07-27T18:45:03Z",
         "review_state": "APPROVED",
-        "latency_hours": 5.47
+        "latency_hours": 4.75
       },
       {
         "title": "fix(admin): handle AI generation failures gracefully in content editor (APO-10683)",
@@ -920,7 +920,7 @@
         "requested_at": "2026-07-28T23:22:04Z",
         "reviewed_at": "2026-07-29T14:33:48Z",
         "review_state": "COMMENTED",
-        "latency_hours": 15.2
+        "latency_hours": 0.56
       },
       {
         "title": "fix(admin): surface Creator AI provider failures instead of masked 500s",
@@ -956,7 +956,7 @@
         "requested_at": "2026-07-21T23:52:56Z",
         "reviewed_at": "2026-07-27T18:38:37Z",
         "review_state": "APPROVED",
-        "latency_hours": 138.76
+        "latency_hours": 28.64
       },
       {
         "title": "test(web): put migration smoke in testDir, cover anti-loop in unit tests",
@@ -965,7 +965,7 @@
         "requested_at": "2026-07-17T19:39:27Z",
         "reviewed_at": "2026-07-28T20:06:39Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 264.45
+        "latency_hours": 56.45
       },
       {
         "title": "[codex] fix(ai): align guide YouVersion scripture output",
@@ -984,6 +984,60 @@
         "reviewed_at": "2026-07-27T18:48:39Z",
         "review_state": "APPROVED",
         "latency_hours": 1.69
+      },
+      {
+        "title": "feat(web/search): configurable search-feed quick-links",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3596",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-29T00:02:36Z",
+        "reviewed_at": "2026-07-29T20:37:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 6.62
+      },
+      {
+        "title": "feat(web/search): embed Ask Bar + ⌘K search trigger",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3595",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-28T02:35:36Z",
+        "reviewed_at": "2026-07-28T20:02:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.04
+      },
+      {
+        "title": "chore: migrate canvas web router imports",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3463",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-07-31T19:36:32Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "chore: migrate web auth and giving route imports",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3462",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-07-30T19:34:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
+      },
+      {
+        "title": "chore: migrate web support imports",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3461",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-07-28T00:27:58Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "chore: switch web runtime to React Router",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3460",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-07-27T18:43:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
       }
     ]
   },
