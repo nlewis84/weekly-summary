@@ -1,8 +1,13 @@
-import { useCallback, useEffect, useRef } from "react";
-import { useLoaderData, useNavigation, useSearchParams } from "react-router";
+import { Suspense, useCallback, useEffect, useRef } from "react";
+import {
+  Await,
+  data,
+  useLoaderData,
+  useNavigation,
+  useSearchParams,
+} from "react-router";
 import { useToast } from "~/components/Toast";
 import type { LoaderFunctionArgs } from "react-router";
-import { data } from "react-router";
 import { getCachedRunSummary } from "../../lib/summary";
 import {
   currentMonth,
@@ -27,23 +32,104 @@ function getPrevWeekEnding(weekEnding: string): string {
   return d.toISOString().slice(0, 10);
 }
 
-interface IndexLoaderData {
-  today: { payload?: Payload; error?: string };
-  weekly: { payload?: Payload; prevPayload?: Payload | null; error?: string };
-  monthly: { progress?: MonthlyProgress; error?: string };
+type TodayResult = { payload?: Payload; error?: string };
+type WeeklyResult = {
+  payload?: Payload;
+  prevPayload?: Payload | null;
+  error?: string;
+};
+type MonthlyResult = { progress?: MonthlyProgress; error?: string };
+
+interface DashboardData {
+  today: TodayResult;
+  weekly: WeeklyResult;
+  monthly: MonthlyResult;
   capturedDates: string[];
-  basecampConfigured: boolean;
-  granolaConfigured: boolean;
+}
+
+function emptyDashboard(error: string): DashboardData {
+  return {
+    today: { error },
+    weekly: { error },
+    monthly: { error },
+    capturedDates: [],
+  };
+}
+
+function runToday(bust: boolean): Promise<TodayResult> {
+  return getCachedRunSummary({
+    todayMode: true,
+    checkInsText: "",
+    outputDir: null,
+    bust,
+  }).then(
+    (r) => ({ payload: r.payload }),
+    (err) => {
+      console.error("Today summary error:", err);
+      return { error: (err as Error).message };
+    }
+  );
+}
+
+function runWeekly(bust: boolean): Promise<WeeklyResult> {
+  return getCachedRunSummary({
+    todayMode: false,
+    checkInsText: "",
+    outputDir: null,
+    bust,
+  }).then(
+    async (r) => {
+      const prevWeekEnding = getPrevWeekEnding(r.payload.meta.week_ending);
+      let prevPayload: Payload | null = null;
+      try {
+        prevPayload = await fetchWeeklySummary(prevWeekEnding, { bust });
+      } catch {
+        // No previous week; trend badges will not show
+      }
+      return { payload: r.payload, prevPayload };
+    },
+    (err) => {
+      console.error("Weekly summary error:", err);
+      return { error: (err as Error).message };
+    }
+  );
+}
+
+function runMonthly(bust: boolean): Promise<MonthlyResult> {
+  return getMonthlyProgress(currentMonth(new Date()), { bust }).then(
+    (progress) => ({ progress }),
+    (err) => {
+      console.error("Monthly progress error:", err);
+      return { error: (err as Error).message };
+    }
+  );
+}
+
+function loadDashboard(bust: boolean): Promise<DashboardData> {
+  return Promise.all([runToday(bust), runWeekly(bust), runMonthly(bust)]).then(
+    ([today, weekly, monthly]) => {
+      let capturedDates: string[] = [];
+      try {
+        const weekEnding =
+          weekly && "payload" in weekly
+            ? weekly.payload?.meta.week_ending
+            : undefined;
+        if (weekEnding) {
+          capturedDates = listDailySnapshots(weekEnding).map((s) => s.date);
+        }
+      } catch {
+        // Snapshot listing is best-effort
+      }
+      return { today, weekly, monthly, capturedDates };
+    }
+  );
 }
 
 export async function loader({ request }: LoaderFunctionArgs) {
   if (request.method !== "GET") {
     return data(
       {
-        today: { error: "Method not allowed" },
-        weekly: { error: "Method not allowed" },
-        monthly: { error: "Method not allowed" },
-        capturedDates: [] as string[],
+        dashboard: Promise.resolve(emptyDashboard("Method not allowed")),
         basecampConfigured: false,
         granolaConfigured: false,
       },
@@ -54,90 +140,18 @@ export async function loader({ request }: LoaderFunctionArgs) {
   const url = new URL(request.url);
   const bust = !!url.searchParams.get("_bust");
 
-  const runToday = () =>
-    getCachedRunSummary({
-      todayMode: true,
-      checkInsText: "",
-      outputDir: null,
-      bust,
-    }).then(
-      (r) => ({ payload: r.payload }),
-      (err) => {
-        console.error("Today summary error:", err);
-        return { error: (err as Error).message };
-      }
-    );
-
-  const runWeekly = () =>
-    getCachedRunSummary({
-      todayMode: false,
-      checkInsText: "",
-      outputDir: null,
-      bust,
-    }).then(
-      async (r) => {
-        const prevWeekEnding = getPrevWeekEnding(r.payload.meta.week_ending);
-        let prevPayload: Payload | null = null;
-        try {
-          prevPayload = await fetchWeeklySummary(prevWeekEnding, { bust });
-        } catch {
-          // No previous week; trend badges will not show
-        }
-        return { payload: r.payload, prevPayload };
-      },
-      (err) => {
-        console.error("Weekly summary error:", err);
-        return { error: (err as Error).message };
-      }
-    );
-
-  const runMonthly = () =>
-    getMonthlyProgress(currentMonth(new Date()), { bust }).then(
-      (progress) => ({ progress }),
-      (err) => {
-        console.error("Monthly progress error:", err);
-        return { error: (err as Error).message };
-      }
-    );
-
-  const [today, weekly, monthly] = await Promise.all([
-    runToday(),
-    runWeekly(),
-    runMonthly(),
-  ]);
-
-  let capturedDates: string[] = [];
-  try {
-    const weekEnding =
-      weekly && "payload" in weekly
-        ? weekly.payload?.meta.week_ending
-        : undefined;
-    if (weekEnding) {
-      capturedDates = listDailySnapshots(weekEnding).map((s) => s.date);
-    }
-  } catch {
-    // Snapshot listing is best-effort
-  }
-
-  return data({
-    today,
-    weekly,
-    monthly,
-    capturedDates,
+  // Do not await GitHub/Linear here. Awaiting blocks the HTML until both
+  // summaries finish, which is why the tab spins with no page.
+  return {
+    dashboard: loadDashboard(bust),
     basecampConfigured: isBasecampConfigured(),
     granolaConfigured: isGranolaConfigured(),
-  } satisfies IndexLoaderData);
+  };
 }
 
 export default function Index() {
-  const {
-    today,
-    weekly,
-    monthly,
-    capturedDates,
-    basecampConfigured,
-    granolaConfigured,
-  } = useLoaderData<typeof loader>();
+  const { dashboard, basecampConfigured, granolaConfigured } =
+    useLoaderData<typeof loader>();
   const navigation = useNavigation();
   const [searchParams, setSearchParams] = useSearchParams();
   const toast = useToast();
@@ -183,7 +197,6 @@ export default function Index() {
 
   const isLoading = navigation.state === "loading";
 
-  // Strip _bust from URL after load to keep URL clean; toast on refresh complete
   useEffect(() => {
     if (searchParams.get("_bust") && navigation.state !== "loading") {
       toast("Data refreshed");
@@ -195,51 +208,113 @@ export default function Index() {
     }
   }, [searchParams, navigation.state, setSearchParams, toast]);
 
-  const todayPayload = today && "payload" in today ? today.payload : null;
-  const todayError = today && "error" in today ? today.error : null;
-  const weeklyPayload = weekly && "payload" in weekly ? weekly.payload : null;
-  const weeklyError = weekly && "error" in weekly ? weekly.error : null;
-  const monthlyProgress =
-    monthly && "progress" in monthly ? monthly.progress : null;
-  const monthlyError = monthly && "error" in monthly ? monthly.error : null;
+  const loadingCards = (
+    <>
+      <div className="space-y-6 xl:flex xl:flex-col xl:min-h-0">
+        <TodaySection
+          payload={null}
+          error={null}
+          isLoading
+          onRefresh={handleRefresh}
+          refreshIntervalLabel={label}
+          capturedDates={[]}
+          basecampConfigured={basecampConfigured}
+          granolaConfigured={granolaConfigured}
+        />
+      </div>
+      <div className="space-y-5 xl:flex xl:flex-col xl:min-h-0">
+        <div id="build-summary" className="xl:shrink-0">
+          <FullSummaryFormContainer basecampConfigured={basecampConfigured} />
+        </div>
+        <div className="xl:flex xl:flex-col xl:min-h-0">
+          <PeriodSummaryCard
+            weekStats={null}
+            weekPrevStats={null}
+            weekError={null}
+            goals={goals}
+            monthly={null}
+            monthlyError={null}
+            monthlyTarget={monthlyTarget}
+            isLoading
+          />
+        </div>
+      </div>
+    </>
+  );
 
   return (
     <div className="space-y-5">
       <div className="xl:grid xl:grid-cols-[minmax(0,1.6fr)_minmax(20rem,1fr)] xl:gap-5 xl:items-start">
-        <div className="space-y-6 xl:flex xl:flex-col xl:min-h-0">
-          <TodaySection
-            payload={todayPayload ?? null}
-            error={todayError ?? null}
-            isLoading={isLoading}
-            onRefresh={handleRefresh}
-            refreshIntervalLabel={label}
-            capturedDates={capturedDates}
-            basecampConfigured={basecampConfigured}
-            granolaConfigured={granolaConfigured}
-          />
-        </div>
+        <Suspense fallback={loadingCards}>
+          <Await resolve={dashboard}>
+            {(resolved) => {
+              const todayPayload =
+                resolved.today && "payload" in resolved.today
+                  ? resolved.today.payload
+                  : null;
+              const todayError =
+                resolved.today && "error" in resolved.today
+                  ? resolved.today.error
+                  : null;
+              const weeklyPayload =
+                resolved.weekly && "payload" in resolved.weekly
+                  ? resolved.weekly.payload
+                  : null;
+              const weeklyError =
+                resolved.weekly && "error" in resolved.weekly
+                  ? resolved.weekly.error
+                  : null;
+              const monthlyProgress =
+                resolved.monthly && "progress" in resolved.monthly
+                  ? resolved.monthly.progress
+                  : null;
+              const monthlyError =
+                resolved.monthly && "error" in resolved.monthly
+                  ? resolved.monthly.error
+                  : null;
 
-        <div className="space-y-5 xl:flex xl:flex-col xl:min-h-0">
-          <div id="build-summary" className="xl:shrink-0">
-            <FullSummaryFormContainer basecampConfigured={basecampConfigured} />
-          </div>
-          <div className="xl:flex xl:flex-col xl:min-h-0">
-            <PeriodSummaryCard
-              weekStats={weeklyPayload?.stats ?? null}
-              weekPrevStats={
-                weekly && "prevPayload" in weekly
-                  ? (weekly.prevPayload?.stats ?? null)
-                  : null
-              }
-              weekError={weeklyError ?? null}
-              goals={goals}
-              monthly={monthlyProgress ?? null}
-              monthlyError={monthlyError ?? null}
-              monthlyTarget={monthlyTarget}
-              isLoading={isLoading}
-            />
-          </div>
-        </div>
+              return (
+                <>
+                  <div className="space-y-6 xl:flex xl:flex-col xl:min-h-0">
+                    <TodaySection
+                      payload={todayPayload ?? null}
+                      error={todayError ?? null}
+                      isLoading={isLoading}
+                      onRefresh={handleRefresh}
+                      refreshIntervalLabel={label}
+                      capturedDates={resolved.capturedDates}
+                      basecampConfigured={basecampConfigured}
+                      granolaConfigured={granolaConfigured}
+                    />
+                  </div>
+                  <div className="space-y-5 xl:flex xl:flex-col xl:min-h-0">
+                    <div id="build-summary" className="xl:shrink-0">
+                      <FullSummaryFormContainer
+                        basecampConfigured={basecampConfigured}
+                      />
+                    </div>
+                    <div className="xl:flex xl:flex-col xl:min-h-0">
+                      <PeriodSummaryCard
+                        weekStats={weeklyPayload?.stats ?? null}
+                        weekPrevStats={
+                          resolved.weekly && "prevPayload" in resolved.weekly
+                            ? (resolved.weekly.prevPayload?.stats ?? null)
+                            : null
+                        }
+                        weekError={weeklyError ?? null}
+                        goals={goals}
+                        monthly={monthlyProgress ?? null}
+                        monthlyError={monthlyError ?? null}
+                        monthlyTarget={monthlyTarget}
+                        isLoading={isLoading}
+                      />
+                    </div>
+                  </div>
+                </>
+              );
+            }}
+          </Await>
+        </Suspense>
       </div>
     </div>
   );

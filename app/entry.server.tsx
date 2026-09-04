@@ -6,7 +6,7 @@ import { ServerRouter } from "react-router";
 import { renderToPipeableStream } from "react-dom/server";
 import { getInlineCss } from "./inline-css.server";
 
-const ABORT_DELAY = 5_000;
+const ABORT_DELAY = 120_000;
 
 // Inline CSS into HTML so it arrives with the response - prevents FOUC
 (globalThis as { __INLINE_CSS__?: string }).__INLINE_CSS__ = getInlineCss();
