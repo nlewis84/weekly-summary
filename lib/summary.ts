@@ -16,11 +16,12 @@ import type {
 import { buildMarkdownSummary } from "./markdown.js";
 import { dataCache } from "./cache.js";
 import { fetchWithRetry } from "./github-api.js";
-import { SearchBudgetError, searchRequest } from "./github-search.js";
 import {
-  getMostRecentSnapshot,
-  localDateString,
-} from "./daily-snapshot.js";
+  SearchBudgetError,
+  searchRequest,
+  type SearchPriority,
+} from "./github-search.js";
+import { getMostRecentSnapshot, localDateString } from "./daily-snapshot.js";
 import {
   computeBusinessLatencyHours,
   findRequestedAt,
@@ -130,15 +131,7 @@ const LINEAR_COMMENTS_QUERY = `
  * Local midnight for the calendar day of `now`.
  */
 export function startOfLocalDay(now: Date): Date {
-  return new Date(
-    now.getFullYear(),
-    now.getMonth(),
-    now.getDate(),
-    0,
-    0,
-    0,
-    0
-  );
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0);
 }
 
 /**
@@ -434,7 +427,8 @@ async function softFetchLinear<T>(
  * workspace has both "Complete" and "Incomplete" under that type, and only the
  * former counts as done.
  */
-const UNDELIVERED_PROJECT_STATUS = /^(incomplete|cancell?ed|abandoned|won'?t\s*do)$/i;
+const UNDELIVERED_PROJECT_STATUS =
+  /^(incomplete|cancell?ed|abandoned|won'?t\s*do)$/i;
 
 /** True when the project's status means it actually shipped, not just closed. */
 export function isDeliveredProject(project: {
@@ -651,6 +645,56 @@ async function fetchLinearData(
   }
 }
 
+/**
+ * GitHub search returns at most 100 items per page. A single unpaginated
+ * request silently truncates: a week with 200 reviewed PRs came back as 100
+ * candidates, so the review count was capped at whatever survived filtering.
+ * Page until the result set is exhausted, bounded by the 1,000-result ceiling
+ * the search API enforces.
+ */
+const SEARCH_PAGE_SIZE = 100;
+const SEARCH_MAX_PAGES = 10;
+
+async function searchAllIssues(
+  query: string,
+  headers: HeadersInit,
+  priority: SearchPriority
+): Promise<Array<Record<string, unknown>>> {
+  const items: Array<Record<string, unknown>> = [];
+  for (let page = 1; page <= SEARCH_MAX_PAGES; page += 1) {
+    const res = await searchRequest(
+      `${GITHUB_API_BASE}/search/issues?q=${query}&per_page=${SEARCH_PAGE_SIZE}&page=${page}`,
+      headers,
+      { priority }
+    );
+    if (!res.ok) break;
+    const data = (await res.json()) as {
+      items?: Array<Record<string, unknown>>;
+      total_count?: number;
+    };
+    const batch = data.items ?? [];
+    items.push(...batch);
+    if (batch.length < SEARCH_PAGE_SIZE) break;
+    if (
+      typeof data.total_count === "number" &&
+      items.length >= data.total_count
+    )
+      break;
+  }
+  return items;
+}
+
+/**
+ * `updated:A..B` — bounding both ends keeps the result set under the search
+ * API's 1,000-result ceiling. A review always bumps the PR's updated_at, so a
+ * PR reviewed inside the window was updated inside it too. Bounds come from the
+ * UTC dates, which only ever widens the range; exact timestamps are filtered
+ * afterwards.
+ */
+function dateRange(startISO: string, endISO: string): string {
+  return `${startISO.split("T")[0]}..${endISO.split("T")[0]}`;
+}
+
 function filterApollosPRs(items: Array<{ html_url?: string }>) {
   return (items ?? []).filter((pr) => pr.html_url?.includes("ApollosProject"));
 }
@@ -668,6 +712,34 @@ export type ReviewedPR = CandidateReviewPR & {
 };
 
 /**
+ * GitHub applies a secondary rate limit to concurrent requests, and these fans
+ * are now per-candidate over a fully paginated search — up to a thousand PRs.
+ * Firing them all at once earns a wall of 403s, which this code reads as "no
+ * review found" and silently turns into a zero. Bound the burst instead.
+ */
+const GITHUB_FETCH_CONCURRENCY = 6;
+
+async function mapWithConcurrency<T, R>(
+  items: T[],
+  limit: number,
+  fn: (item: T) => Promise<R>
+): Promise<R[]> {
+  const results = new Array<R>(items.length);
+  let next = 0;
+  const workers = Array.from(
+    { length: Math.min(limit, items.length) },
+    async () => {
+      while (next < items.length) {
+        const i = next++;
+        results[i] = await fn(items[i]!);
+      }
+    }
+  );
+  await Promise.all(workers);
+  return results;
+}
+
+/**
  * Keeps only PRs where the user submitted a review (comment, request changes, or approve) within the time window.
  * Attaches reviewed_at (first non-PENDING submitted_at by user in window) and review_state.
  */
@@ -678,8 +750,10 @@ async function filterReviewsBySubmittedInWindow(
   username: string,
   headers: HeadersInit
 ): Promise<ReviewedPR[]> {
-  const results = await Promise.all(
-    candidatePRs.map(async (pr) => {
+  const results = await mapWithConcurrency(
+    candidatePRs,
+    GITHUB_FETCH_CONCURRENCY,
+    async (pr) => {
       const reviewsUrl = pr.pull_request?.url
         ? `${pr.pull_request.url}/reviews`
         : null;
@@ -716,7 +790,7 @@ async function filterReviewsBySubmittedInWindow(
       } catch {
         return null;
       }
-    })
+    }
   );
   return results.filter((pr): pr is ReviewedPR => pr != null);
 }
@@ -754,29 +828,24 @@ async function enrichReviewsWithLatency(
   username: string,
   headers: HeadersInit
 ): Promise<ReviewEntry[]> {
-  return Promise.all(
-    reviews.map(async (pr) => {
-      const ref = parsePrRef(pr.html_url);
-      const requested_at = await fetchRequestedAt(
-        pr.html_url,
-        username,
-        pr.reviewed_at,
-        headers
-      );
-      return {
-        title: pr.title ?? "",
-        url: pr.html_url ?? "",
-        repo: ref?.repo ?? null,
-        requested_at,
-        reviewed_at: pr.reviewed_at,
-        review_state: pr.review_state,
-        latency_hours: computeBusinessLatencyHours(
-          requested_at,
-          pr.reviewed_at
-        ),
-      };
-    })
-  );
+  return mapWithConcurrency(reviews, GITHUB_FETCH_CONCURRENCY, async (pr) => {
+    const ref = parsePrRef(pr.html_url);
+    const requested_at = await fetchRequestedAt(
+      pr.html_url,
+      username,
+      pr.reviewed_at,
+      headers
+    );
+    return {
+      title: pr.title ?? "",
+      url: pr.html_url ?? "",
+      repo: ref?.repo ?? null,
+      requested_at,
+      reviewed_at: pr.reviewed_at,
+      review_state: pr.review_state,
+      latency_hours: computeBusinessLatencyHours(requested_at, pr.reviewed_at),
+    };
+  });
 }
 
 function getCommitRepos(): { owner: string; repos: string[] } {
@@ -879,15 +948,18 @@ async function fetchCommitsPushed(
                 author?: { name?: string; email?: string; date?: string };
               };
             }>;
-            if (!Array.isArray(commits))
-              return { repo, commits: collected };
+            if (!Array.isArray(commits)) return { repo, commits: collected };
             for (const c of commits) {
               const date = c.commit?.author?.date ?? null;
               if (!inWindow(date)) continue;
               const matchesUser =
                 c.author?.login === username ||
-                c.commit?.author?.email?.toLowerCase().includes(username.toLowerCase()) ||
-                c.commit?.author?.name?.toLowerCase().includes(username.toLowerCase());
+                c.commit?.author?.email
+                  ?.toLowerCase()
+                  .includes(username.toLowerCase()) ||
+                c.commit?.author?.name
+                  ?.toLowerCase()
+                  .includes(username.toLowerCase());
               if (!matchesUser) continue;
               if (c.sha) collected.push({ sha: c.sha, date });
             }
@@ -912,6 +984,124 @@ async function fetchCommitsPushed(
   }
 }
 
+const COMMENT_PAGE_SIZE = 100;
+
+/** Issue comments left by `username` on one PR, bounded to the window at both ends. */
+async function countMyComments(
+  commentsUrl: string,
+  username: string,
+  windowStart: Date,
+  windowEnd: Date,
+  headers: HeadersInit
+): Promise<number> {
+  let total = 0;
+  let page = 1;
+  try {
+    while (true) {
+      const sep = commentsUrl.includes("?") ? "&" : "?";
+      const res = await fetchWithRetry(
+        `${commentsUrl}${sep}per_page=${COMMENT_PAGE_SIZE}&page=${page}`,
+        { headers }
+      );
+      if (!res.ok) return total;
+      const comments = (await res.json()) as Array<{
+        user?: { login?: string };
+        created_at?: string;
+      }>;
+      if (!Array.isArray(comments)) return total;
+      for (const c of comments) {
+        if (c.user?.login !== username || c.created_at == null) continue;
+        const at = new Date(c.created_at);
+        if (at >= windowStart && at <= windowEnd) total += 1;
+      }
+      if (comments.length < COMMENT_PAGE_SIZE) return total;
+      page += 1;
+    }
+  } catch {
+    return total;
+  }
+}
+
+/**
+ * Reviews the user submitted inside a window, latency-enriched — the same
+ * pipeline the live weekly run uses. Exported so backfills of saved summaries
+ * recompute from identical logic rather than a second implementation that can
+ * drift.
+ */
+export async function fetchReviewsInWindow(
+  windowStart: Date,
+  windowEnd: Date,
+  username: string,
+  headers: HeadersInit,
+  options: { searchUntil?: Date } = {}
+): Promise<ReviewEntry[]> {
+  // Backfills widen the *search* bound (a PR reviewed in-window can be updated
+  // long after it) while the submitted_at filter below stays on the real window.
+  const searchUntil = options.searchUntil ?? windowEnd;
+  const items = await searchAllIssues(
+    `reviewed-by:${username}+type:pr+updated:${dateRange(
+      windowStart.toISOString(),
+      searchUntil.toISOString()
+    )}`,
+    headers,
+    "high"
+  );
+  const reviewed = await filterReviewsBySubmittedInWindow(
+    filterApollosPRs(items),
+    windowStart,
+    windowEnd,
+    username,
+    headers
+  );
+  return enrichReviewsWithLatency(reviewed, username, headers);
+}
+
+/** PRs the user authored that were created or touched on or after the window's start day. */
+export async function searchAuthoredPRs(
+  windowStart: Date,
+  windowEnd: Date,
+  username: string,
+  headers: HeadersInit
+): Promise<Array<Record<string, unknown>>> {
+  const range = dateRange(windowStart.toISOString(), windowEnd.toISOString());
+  const [created, updated] = await Promise.all([
+    searchAllIssues(
+      `author:${username}+type:pr+created:${range}`,
+      headers,
+      "high"
+    ),
+    searchAllIssues(
+      `author:${username}+type:pr+updated:${range}`,
+      headers,
+      "high"
+    ),
+  ]);
+  const seen = new Set<string>();
+  return [...created, ...updated].filter((pr) => {
+    const url = pr.html_url as string | undefined;
+    if (!url || seen.has(url)) return false;
+    seen.add(url);
+    return url.includes("ApollosProject");
+  });
+}
+
+/** Issue comments by the user, across every given PR, bounded to the window. */
+export async function countPrCommentsInWindow(
+  commentsUrls: string[],
+  username: string,
+  windowStart: Date,
+  windowEnd: Date,
+  headers: HeadersInit
+): Promise<number> {
+  const unique = [...new Set(commentsUrls.filter(Boolean))];
+  const counts = await mapWithConcurrency(
+    unique,
+    GITHUB_FETCH_CONCURRENCY,
+    (url) => countMyComments(url, username, windowStart, windowEnd, headers)
+  );
+  return counts.reduce((a, b) => a + b, 0);
+}
+
 async function fetchGitHubData(
   windowStart: Date,
   windowStartISO: string,
@@ -933,39 +1123,29 @@ async function fetchGitHubData(
     Accept: "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
   };
-  const since = windowStartISO.split("T")[0];
-
   try {
     // "high": these three are what the page exists to show, so they keep the
     // smallest reserve and the monthly search yields to them.
-    const [prsCreatedRes, prsUpdatedRes, reviewsRes] = await Promise.all([
-      searchRequest(
-        `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+created:>=${since}&per_page=100`,
+    const range = dateRange(windowStartISO, windowEnd.toISOString());
+    const [prsCreatedItems, prsUpdatedItems, reviewItems] = await Promise.all([
+      searchAllIssues(
+        `author:${username}+type:pr+created:${range}`,
         headers,
-        { priority: "high" }
+        "high"
       ),
-      searchRequest(
-        `${GITHUB_API_BASE}/search/issues?q=author:${username}+type:pr+updated:>=${since}&per_page=100`,
+      searchAllIssues(
+        `author:${username}+type:pr+updated:${range}`,
         headers,
-        { priority: "high" }
+        "high"
       ),
-      searchRequest(
-        `${GITHUB_API_BASE}/search/issues?q=reviewed-by:${username}+type:pr+updated:>=${since}&per_page=100`,
+      searchAllIssues(
+        `reviewed-by:${username}+type:pr+updated:${range}`,
         headers,
-        { priority: "high" }
+        "high"
       ),
     ]);
 
-    const [prsCreatedData, prsUpdatedData, reviewsData] = await Promise.all([
-      prsCreatedRes.ok ? prsCreatedRes.json() : { items: [] },
-      prsUpdatedRes.ok ? prsUpdatedRes.json() : { items: [] },
-      reviewsRes.ok ? reviewsRes.json() : { items: [] },
-    ]);
-
-    const allPRs = [
-      ...(prsCreatedData.items ?? []),
-      ...(prsUpdatedData.items ?? []),
-    ];
+    const allPRs = [...prsCreatedItems, ...prsUpdatedItems];
     const seen = new Set<string>();
     const uniquePRs = allPRs.filter((pr: { html_url?: string }) => {
       if (!pr.html_url || seen.has(pr.html_url)) return false;
@@ -1009,25 +1189,20 @@ async function fetchGitHubData(
 
     const userPrRefs: PrRef[] = prDetails
       .map((pr: { html_url?: string }) => {
-        const m = pr.html_url?.match(
-          /ApollosProject\/([^/]+)\/pull\/(\d+)/
-        );
+        const m = pr.html_url?.match(/ApollosProject\/([^/]+)\/pull\/(\d+)/);
         if (!m) return null;
         return { repo: m[1], number: Number(m[2]) };
       })
       .filter((p): p is PrRef => p != null);
 
     const [reviewedPRs, commitsResult] = await Promise.all([
-      (async () => {
-        const reviewCandidates = filterApollosPRs(reviewsData.items ?? []);
-        return filterReviewsBySubmittedInWindow(
-          reviewCandidates,
-          windowStart,
-          windowEnd,
-          username,
-          headers
-        );
-      })(),
+      filterReviewsBySubmittedInWindow(
+        filterApollosPRs(reviewItems),
+        windowStart,
+        windowEnd,
+        username,
+        headers
+      ),
       fetchCommitsPushed(username, headers, windowStart, windowEnd, userPrRefs),
     ]);
 
@@ -1037,29 +1212,18 @@ async function fetchGitHubData(
       headers
     );
 
-    const allForComments = [...prDetails, ...reviewedPRs].slice(0, 20) as Array<{
-      comments_url?: string;
-      created_at?: string;
-    }>;
-    const commentCounts = await Promise.all(
-      allForComments.map(async (pr) => {
-        try {
-          if (!pr.comments_url) return 0;
-          const r = await fetchWithRetry(pr.comments_url, { headers });
-          if (!r.ok) return 0;
-          const comments = await r.json();
-          return comments.filter(
-            (c: { user?: { login?: string }; created_at?: string }) =>
-              c.user?.login === username &&
-              c.created_at != null &&
-              new Date(c.created_at) >= windowStart
-          ).length;
-        } catch {
-          return 0;
-        }
-      })
+    // Every PR you authored or reviewed, deduped. This used to be capped at the
+    // first 20, which in a busy week meant only authored PRs were ever looked
+    // at and every comment left on someone else's PR went uncounted.
+    const totalComments = await countPrCommentsInWindow(
+      ([...prDetails, ...reviewedPRs] as Array<{ comments_url?: string }>)
+        .map((pr) => pr.comments_url)
+        .filter((u): u is string => !!u),
+      username,
+      windowStart,
+      windowEnd,
+      headers
     );
-    const totalComments = commentCounts.reduce((a, b) => a + b, 0);
 
     return {
       prs: prDetails,
@@ -1083,12 +1247,18 @@ async function fetchGitHubData(
   }
 }
 
-function categorizePRs<
-  T extends { merged_at?: string | null; state?: string },
->(prs: T[], windowStart: Date): { merged: T[]; open: T[] } {
-  const merged = prs.filter(
-    (pr) => pr.merged_at && new Date(pr.merged_at) >= windowStart
-  );
+function categorizePRs<T extends { merged_at?: string | null; state?: string }>(
+  prs: T[],
+  windowStart: Date,
+  windowEnd: Date
+): { merged: T[]; open: T[] } {
+  // The candidate search has no upper bound on date, so a backfilled week would
+  // otherwise count PRs merged after that week had already ended.
+  const merged = prs.filter((pr) => {
+    if (!pr.merged_at) return false;
+    const at = new Date(pr.merged_at);
+    return at >= windowStart && at <= windowEnd;
+  });
   const open = prs.filter((pr) => pr.state === "open" && !pr.merged_at);
   return { merged, open };
 }
@@ -1284,13 +1454,15 @@ export async function runSummary(options: {
       deletions?: number;
       changed_files?: number;
     }>,
-    windowStart
+    windowStart,
+    windowEnd
   );
   // PRs/reviews plus any tracked repo where you pushed commits (commit-only work)
-  const prsAndReviews = [
-    ...githubData.prs,
-    ...githubData.reviews,
-  ] as Array<{ html_url?: string; url?: string; repo?: string | null }>;
+  const prsAndReviews = [...githubData.prs, ...githubData.reviews] as Array<{
+    html_url?: string;
+    url?: string;
+    repo?: string | null;
+  }>;
   const prsByRepo = groupPRsByRepo(prsAndReviews);
   const commitRepos = githubData.reposWithCommits ?? [];
   const repos = [
@@ -1411,11 +1583,7 @@ export async function runSummary(options: {
         }
       ),
       open_prs: prCategories.open.map(
-        (pr: {
-          title?: string;
-          html_url?: string;
-          state?: string | null;
-        }) => {
+        (pr: { title?: string; html_url?: string; state?: string | null }) => {
           const m = pr.html_url?.match(/ApollosProject\/([^/]+)/);
           return {
             title: pr.title ?? "",

@@ -19,7 +19,21 @@ Generates weekly work summaries from Linear issues, GitHub activity, and optiona
 3. Optional: `GITHUB_SUMMARY_PATHS` – comma-separated paths for summaries (default: `2026-weekly-work-summaries`). Add `2025-weekly-work-summaries` etc. for earlier years.
 3. The app loads variables from `.env` automatically (CLI and web server)
 
-GitHub API calls retry automatically on 403/429 (rate limit) to stay within GitHub ToS.
+GitHub API calls retry automatically on 403/429 (rate limit) to stay within GitHub ToS. Fan-outs over PRs are bounded (`GITHUB_FETCH_CONCURRENCY`) because GitHub applies a short-window burst limit well below the hourly quota that `/rate_limit` reports.
+
+### Counting caveats
+
+`pr_reviews` counts *distinct PRs* you reviewed in the window, not review submissions — reviewing the same PR twice in a week counts once. Summing the daily snapshots therefore overshoots the weekly number, since a PR reviewed on two days appears in both days.
+
+Historical weekly summaries written before the search-pagination fix undercount `pr_reviews` and `pr_comments`. Repair them with:
+
+```bash
+pnpm backfill-pr-review-counts --dry-run   # preview
+pnpm backfill-pr-review-counts             # write
+pnpm backfill-pr-review-counts 2026-09-04  # one week
+```
+
+It recomputes against each summary's own recorded window and refuses to write a value lower than the saved one, since the bugs it repairs only ever undercounted. Early-in-the-year weeks may be unrecoverable: the candidate search runs past GitHub's 1,000-result ceiling, and those weeks are reported as skipped rather than overwritten.
 
 ## Usage
 

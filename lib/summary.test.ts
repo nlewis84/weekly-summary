@@ -420,3 +420,109 @@ describe("runSummary", () => {
     expect(result.payload.meta.window_end).toBe(windowEnd.toISOString());
   });
 });
+
+describe("runSummary GitHub paging", () => {
+  const REVIEWED_AT = "2026-08-25T12:00:00.000Z";
+
+  function prItem(n: number) {
+    return {
+      html_url: `https://github.com/ApollosProject/apollos-admin/pull/${n}`,
+      title: `PR ${n}`,
+      pull_request: {
+        url: `https://api.github.com/repos/ApollosProject/apollos-admin/pulls/${n}`,
+      },
+      comments_url: `https://api.github.com/repos/ApollosProject/apollos-admin/issues/${n}/comments`,
+    };
+  }
+
+  /** `reviewedCount` PRs reviewed in-window, spread over more than one search page. */
+  function stubGitHub(reviewedCount: number, commentOnPr: number | null) {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (url: string, init?: RequestInit) => {
+        const json = (body: unknown) =>
+          new Response(JSON.stringify(body), {
+            headers: { "Content-Type": "application/json" },
+          });
+
+        if (url.includes("linear.app")) {
+          const body = init?.body ? JSON.parse(init.body as string) : {};
+          const queryStr = String(body.query || "");
+          if (queryStr.includes("GetViewer"))
+            return json({ data: { viewer: { id: "u1", name: "Test User" } } });
+          if (queryStr.includes("GetUserComments"))
+            return json({
+              data: { comments: { nodes: [], pageInfo: { hasNextPage: false } } },
+            });
+          return json({
+            data: { issues: { nodes: [], pageInfo: { hasNextPage: false } } },
+          });
+        }
+
+        if (url.includes("/search/issues")) {
+          if (!url.includes("reviewed-by")) return json({ items: [], total_count: 0 });
+          const page = Number(new URL(url).searchParams.get("page") ?? "1");
+          const start = (page - 1) * 100;
+          const items = Array.from(
+            { length: Math.max(0, Math.min(100, reviewedCount - start)) },
+            (_, i) => prItem(start + i + 1)
+          );
+          return json({ items, total_count: reviewedCount });
+        }
+
+        if (url.includes("/reviews")) {
+          return json([
+            { user: { login: "testuser" }, state: "APPROVED", submitted_at: REVIEWED_AT },
+          ]);
+        }
+
+        if (url.includes("/comments")) {
+          const n = Number(url.match(/issues\/(\d+)\/comments/)?.[1] ?? "0");
+          if (commentOnPr != null && n === commentOnPr) {
+            return json([{ user: { login: "testuser" }, created_at: REVIEWED_AT }]);
+          }
+          return json([]);
+        }
+
+        if (url.includes("/timeline")) return json([]);
+        return json({ items: [], total_count: 0 });
+      })
+    );
+  }
+
+  beforeEach(() => {
+    process.env.LINEAR_API_KEY = "lin_test";
+    process.env.GITHUB_TOKEN = "ghp_test";
+    process.env.GITHUB_USERNAME = "testuser";
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  it("counts every reviewed PR past the 100-result search page", async () => {
+    stubGitHub(163, null);
+
+    const result = await runSummary({
+      todayMode: false,
+      weekEnding: "2026-08-28",
+      checkInsText: "",
+      outputDir: null,
+    });
+
+    expect(result.payload.stats.pr_reviews).toBe(163);
+  });
+
+  it("counts comments on PRs beyond the first handful", async () => {
+    stubGitHub(120, 118);
+
+    const result = await runSummary({
+      todayMode: false,
+      weekEnding: "2026-08-28",
+      checkInsText: "",
+      outputDir: null,
+    });
+
+    expect(result.payload.stats.pr_comments).toBe(1);
+  });
+});
