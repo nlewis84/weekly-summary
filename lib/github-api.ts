@@ -50,11 +50,22 @@ export interface CoreBudget {
   resetAt: number;
 }
 
-let coreBudget: CoreBudget | null = null;
+/**
+ * Budgets are per resource. Core, search and GraphQL are counted separately by
+ * GitHub, so a spent hourly core budget says nothing about whether a GraphQL
+ * query can go out — and the batched reads depend on exactly that being true.
+ */
+export type RateLimitResource = "core" | "graphql";
+
+const budgets = new Map<RateLimitResource, CoreBudget>();
 let refusals = 0;
 
 export function peekCoreBudget(): CoreBudget | null {
-  return coreBudget;
+  return budgets.get("core") ?? null;
+}
+
+export function peekBudget(resource: RateLimitResource): CoreBudget | null {
+  return budgets.get(resource) ?? null;
 }
 
 /**
@@ -72,7 +83,7 @@ export function coreRefusalCount(): number {
 
 /** Test helper — module state outlives individual cases. */
 export function resetCoreBudget(): void {
-  coreBudget = null;
+  budgets.clear();
   refusals = 0;
 }
 
@@ -84,11 +95,12 @@ export function recordCoreResponse(headers?: {
   // bookkeeping detail into the error the caller sees.
   if (!headers?.get) return;
 
-  // Search and GraphQL carry the same header names against their own budgets;
-  // only core belongs here. An absent resource header predates the field and
-  // is core in practice.
-  const resource = headers.get("x-ratelimit-resource");
-  if (resource != null && resource !== "core") return;
+  // Search carries the same header names against a budget this module does not
+  // gate (github-search.ts owns it), so it is ignored here. An absent resource
+  // header predates the field and is core in practice.
+  const raw = headers.get("x-ratelimit-resource") ?? "core";
+  if (raw !== "core" && raw !== "graphql") return;
+  const resource: RateLimitResource = raw;
 
   const remaining = Number.parseInt(
     headers.get("x-ratelimit-remaining") ?? "",
@@ -99,12 +111,12 @@ export function recordCoreResponse(headers?: {
   const used = Number.parseInt(headers.get("x-ratelimit-used") ?? "", 10);
   const reset = Number.parseInt(headers.get("x-ratelimit-reset") ?? "", 10);
 
-  coreBudget = {
+  budgets.set(resource, {
     limit: Number.isFinite(limit) ? limit : 5000,
     remaining,
     used: Number.isFinite(used) ? used : 0,
     resetAt: Number.isFinite(reset) ? reset * 1000 : Date.now() + 3_600_000,
-  };
+  });
 }
 
 export class RateLimitExhaustedError extends Error {
@@ -128,24 +140,35 @@ export class RateLimitExhaustedError extends Error {
  * Deliberately only true on a *recorded* zero. An unknown budget is optimistic
  * so a cold process still makes its first request.
  */
-function exhaustedUntil(now = Date.now()): CoreBudget | null {
-  if (!coreBudget) return null;
-  if (coreBudget.remaining > 0) return null;
-  if (now >= coreBudget.resetAt) return null;
-  return coreBudget;
+function exhaustedUntil(
+  resource: RateLimitResource,
+  now = Date.now()
+): CoreBudget | null {
+  const budget = budgets.get(resource);
+  if (!budget) return null;
+  if (budget.remaining > 0) return null;
+  if (now >= budget.resetAt) return null;
+  return budget;
+}
+
+export interface FetchOptions {
+  /** Which budget this request draws on. Defaults to core. */
+  resource?: RateLimitResource;
+  retryCount?: number;
 }
 
 export async function fetchWithRetry(
   url: string,
   init: RequestInit,
-  retryCount = 0
+  options: FetchOptions = {}
 ): Promise<Response> {
+  const { resource = "core", retryCount = 0 } = options;
   // Refuse locally instead of spending a round trip, and another backoff, on a
   // budget already known to be empty. These fans are hundreds of requests
   // wide: without this gate each one sleeps out its own MAX_RETRIES, so a run
   // that cannot possibly succeed takes hours to admit it and the UI just shows
   // a spinner. Failing the whole run at once is what surfaces an error.
-  const known = exhaustedUntil();
+  const known = exhaustedUntil(resource);
   if (known) {
     refusals += 1;
     throw new RateLimitExhaustedError(known.resetAt, known.limit);
@@ -160,7 +183,7 @@ export async function fetchWithRetry(
     // cycles six 90s naps to the same failure, and leaves a crowd of sleepers
     // that all wake at the reset and drain the new window immediately. Fail now
     // and report when it reopens.
-    const spent = exhaustedUntil();
+    const spent = exhaustedUntil(resource);
     if (spent) {
       refusals += 1;
       throw new RateLimitExhaustedError(spent.resetAt, spent.limit);
@@ -170,7 +193,7 @@ export async function fetchWithRetry(
     // reopens and immediately spend itself back into the same limit.
     const waitMs = rateLimitWaitMs(res.headers) + Math.random() * 1000;
     await new Promise((r) => setTimeout(r, waitMs));
-    return fetchWithRetry(url, init, retryCount + 1);
+    return fetchWithRetry(url, init, { resource, retryCount: retryCount + 1 });
   }
   return res;
 }

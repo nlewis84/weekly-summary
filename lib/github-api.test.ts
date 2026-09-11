@@ -123,6 +123,34 @@ describe("core budget tracking", () => {
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
+  it("does not let a spent core budget block a GraphQL query", async () => {
+    // The batched reads exist to survive exactly this: core gone, GraphQL fine.
+    recordCoreResponse(
+      hdrs({
+        "x-ratelimit-resource": "core",
+        "x-ratelimit-limit": "5000",
+        "x-ratelimit-remaining": "0",
+        "x-ratelimit-reset": String(Math.floor(Date.now() / 1000) + 600),
+      })
+    );
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(res(200, { "x-ratelimit-resource": "graphql", "x-ratelimit-remaining": "4900" }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const out = await fetchWithRetry(
+      "https://api.github.com/graphql",
+      {},
+      { resource: "graphql" }
+    );
+    expect(out.status).toBe(200);
+
+    // ...and core is still refused.
+    await expect(fetchWithRetry("https://api.github.com/x", {})).rejects.toThrow(
+      /budget exhausted/
+    );
+  });
+
   it("still retries a secondary limit, which is transient", async () => {
     const fetchMock = vi
       .fn()
