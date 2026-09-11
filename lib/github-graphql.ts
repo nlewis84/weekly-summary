@@ -16,6 +16,9 @@ import { fetchWithRetry } from "./github-api.js";
 
 const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql";
 
+/** Newline, for assembling multi-alias queries. */
+const BR = "\n";
+
 /**
  * PRs per request. GraphQL bills by nodes requested, so this is a trade between
  * request count and the cost of one query; 25 keeps a query well clear of both
@@ -229,10 +232,26 @@ function toActivity(pr: GqlPullRequest): PrActivity {
   };
 }
 
+export interface GraphQLOptions {
+  /**
+   * Treat per-path NOT_FOUND / FORBIDDEN errors as "nothing there" instead of
+   * failing the request.
+   *
+   * Only correct for the batched multi-alias reads, where one deleted or
+   * private repo must not discard the other 24 answers — REST returned a 404
+   * per PR and the callers already handle an absent entry. It is WRONG for
+   * anything single-target and especially for a mutation: `createCommitOnBranch`
+   * reports a rejected `expectedHeadOid` as NOT_FOUND with a null payload, and
+   * tolerating that would report a save that never happened as a success.
+   */
+  tolerateMissing?: boolean;
+}
+
 export async function graphqlRequest<T>(
   query: string,
   variables: Record<string, unknown>,
-  headers: HeadersInit
+  headers: HeadersInit,
+  options: GraphQLOptions = {}
 ): Promise<T> {
   const res = await fetchWithRetry(GITHUB_GRAPHQL_URL, {
     method: "POST",
@@ -250,13 +269,10 @@ export async function graphqlRequest<T>(
   };
 
   if (body.errors?.length) {
-    // A missing or private repo comes back as a per-alias error alongside usable
-    // data for every other alias — REST treated that as "nothing here" and so do
-    // we. Anything that costs us the whole response has to be raised.
-    const fatal = body.errors.find(
-      (e) => e.type !== "NOT_FOUND" && e.type !== "FORBIDDEN"
+    const allMissing = body.errors.every(
+      (e) => e.type === "NOT_FOUND" || e.type === "FORBIDDEN"
     );
-    if (!body.data || fatal) {
+    if (!body.data || !options.tolerateMissing || !allMissing) {
       throw new GitHubGraphQLError(
         body.errors.map((e) => e.message ?? e.type ?? "unknown").join("; ")
       );
@@ -326,7 +342,7 @@ export async function fetchPrActivity(
       });
       const data = await graphqlRequest<
         Record<string, { pullRequest?: GqlPullRequest | null } | null>
-      >(query, variables, headers);
+      >(query, variables, headers, { tolerateMissing: true });
       return { chunk, data };
     }
   );
@@ -338,5 +354,260 @@ export async function fetchPrActivity(
       out.set(prKey(ref), toActivity(pr));
     });
   }
+  return out;
+}
+
+/**
+ * The node id for a login, which `history(author:)` needs.
+ *
+ * Cached for the life of the process: it is one extra round trip and the answer
+ * cannot change.
+ */
+let userIdCache: { login: string; id: string | null } | null = null;
+
+export async function fetchUserId(
+  login: string,
+  headers: HeadersInit
+): Promise<string | null> {
+  if (userIdCache?.login === login) return userIdCache.id;
+  const data = await graphqlRequest<{ user?: { id?: string } | null }>(
+    `query($login: String!) { user(login: $login) { id } }`,
+    { login },
+    headers
+  );
+  const id = data.user?.id ?? null;
+  userIdCache = { login, id };
+  return id;
+}
+
+export interface CommitNode {
+  oid: string;
+  committedDate: string | null;
+  /**
+   * The author date, which is what the REST path filtered PR commits on
+   * (`commit.author.date`). It differs from committedDate on anything rebased,
+   * so the two are not interchangeable for a window check.
+   */
+  authoredDate?: string | null;
+  /** Only populated for PR commits, where the author still has to be matched. */
+  login?: string | null;
+  email?: string | null;
+  name?: string | null;
+}
+
+/**
+ * Commits by one author on each repo's default branch, within a window.
+ *
+ * Replaces a paginated `/repos/:owner/:repo/commits` request per repo.
+ */
+export async function fetchDefaultBranchCommits(
+  owner: string,
+  repos: string[],
+  authorId: string,
+  since: string,
+  until: string,
+  headers: HeadersInit
+): Promise<Map<string, CommitNode[]>> {
+  const out = new Map<string, CommitNode[]>();
+  if (repos.length === 0) return out;
+
+  const varDefs = [
+    "$owner: String!",
+    "$author: ID!",
+    "$since: GitTimestamp!",
+    "$until: GitTimestamp!",
+    ...repos.map((_, i) => `$r${i}: String!`),
+  ];
+  const selections = repos.map(
+    (_, i) => `  c${i}: repository(owner: $owner, name: $r${i}) {
+    defaultBranchRef { target { ... on Commit {
+      history(first: 100, author: { id: $author }, since: $since, until: $until) {
+        nodes { oid committedDate }
+        pageInfo { hasNextPage endCursor }
+      }
+    } } }
+  }`
+  );
+  const variables: Record<string, unknown> = { owner, author: authorId, since, until };
+  repos.forEach((repo, i) => {
+    variables[`r${i}`] = repo;
+  });
+
+  type HistoryShape = {
+    defaultBranchRef?: {
+      target?: {
+        history?: {
+          nodes?: Array<{ oid?: string; committedDate?: string } | null>;
+          pageInfo?: { hasNextPage?: boolean; endCursor?: string | null };
+        };
+      } | null;
+    } | null;
+  };
+
+  const data = await graphqlRequest<Record<string, HistoryShape | null>>(
+    `query(${varDefs.join(", ")}) {${BR}${selections.join(BR)}${BR}}`,
+    variables,
+    headers,
+    { tolerateMissing: true }
+  );
+
+  for (let i = 0; i < repos.length; i += 1) {
+    const repo = repos[i]!;
+    const history = data[`c${i}`]?.defaultBranchRef?.target?.history;
+    const collected: CommitNode[] = (history?.nodes ?? [])
+      .filter((n): n is NonNullable<typeof n> => n != null && !!n.oid)
+      .map((n) => ({ oid: n.oid!, committedDate: n.committedDate ?? null }));
+
+    // A week with more than 100 commits on one default branch is rare but has
+    // to page, or the count silently stops at 100.
+    let cursor = history?.pageInfo?.hasNextPage ? history.pageInfo.endCursor : null;
+    while (cursor) {
+      const page = await graphqlRequest<{ repository?: HistoryShape | null }>(
+        `query($owner: String!, $repo: String!, $author: ID!, $since: GitTimestamp!, $until: GitTimestamp!, $after: String!) {
+          repository(owner: $owner, name: $repo) {
+            defaultBranchRef { target { ... on Commit {
+              history(first: 100, author: { id: $author }, since: $since, until: $until, after: $after) {
+                nodes { oid committedDate }
+                pageInfo { hasNextPage endCursor }
+              }
+            } } }
+          }
+        }`,
+        { owner, repo, author: authorId, since, until, after: cursor },
+        headers
+      );
+      const next = page.repository?.defaultBranchRef?.target?.history;
+      for (const n of next?.nodes ?? []) {
+        if (n?.oid) collected.push({ oid: n.oid, committedDate: n.committedDate ?? null });
+      }
+      cursor = next?.pageInfo?.hasNextPage ? (next.pageInfo.endCursor ?? null) : null;
+    }
+
+    out.set(repo, collected);
+  }
+  return out;
+}
+
+/**
+ * Commits on each given PR, with enough author detail to match them the way the
+ * REST path did (login, or the email/name containing the username).
+ *
+ * Replaces a paginated `/pulls/:number/commits` request per PR.
+ */
+export async function fetchPrCommits(
+  refs: PrRef[],
+  headers: HeadersInit
+): Promise<Map<string, CommitNode[]>> {
+  const out = new Map<string, CommitNode[]>();
+  const unique = new Map<string, PrRef>();
+  for (const ref of refs) {
+    if (Number.isFinite(ref.number)) unique.set(prKey(ref), ref);
+  }
+  const list = [...unique.values()];
+  if (list.length === 0) return out;
+
+  const COMMIT_FIELDS = `nodes { commit { oid committedDate authoredDate author { user { login } email name } } }
+        pageInfo { hasNextPage endCursor }`;
+
+  type CommitsShape = {
+    commits?: {
+      nodes?: Array<{
+        commit?: {
+          oid?: string;
+          committedDate?: string;
+          authoredDate?: string;
+          author?: {
+            user?: { login?: string } | null;
+            email?: string | null;
+            name?: string | null;
+          } | null;
+        };
+      } | null>;
+      pageInfo?: { hasNextPage?: boolean; endCursor?: string | null };
+    };
+  };
+
+  const flatten = (shape: CommitsShape | null | undefined): CommitNode[] =>
+    (shape?.commits?.nodes ?? [])
+      .map((n) => n?.commit)
+      .filter((c): c is NonNullable<typeof c> => c != null && !!c.oid)
+      .map((c) => ({
+        oid: c.oid!,
+        committedDate: c.committedDate ?? null,
+        authoredDate: c.authoredDate ?? null,
+        login: c.author?.user?.login ?? null,
+        email: c.author?.email ?? null,
+        name: c.author?.name ?? null,
+      }));
+
+  const chunks: PrRef[][] = [];
+  for (let i = 0; i < list.length; i += PR_CHUNK) {
+    chunks.push(list.slice(i, i + PR_CHUNK));
+  }
+
+  const settled = await mapWithConcurrency(
+    chunks,
+    QUERY_CONCURRENCY,
+    async (chunk) => {
+      const varDefs = chunk.flatMap((_, i) => [
+        `$o${i}: String!`,
+        `$r${i}: String!`,
+        `$n${i}: Int!`,
+      ]);
+      const selections = chunk.map(
+        (_, i) => `  p${i}: repository(owner: $o${i}, name: $r${i}) {
+    pullRequest(number: $n${i}) { commits(first: 100) { ${COMMIT_FIELDS} } }
+  }`
+      );
+      const variables: Record<string, unknown> = {};
+      chunk.forEach((ref, i) => {
+        variables[`o${i}`] = ref.owner;
+        variables[`r${i}`] = ref.repo;
+        variables[`n${i}`] = ref.number;
+      });
+      const data = await graphqlRequest<
+        Record<string, { pullRequest?: CommitsShape | null } | null>
+      >(`query(${varDefs.join(", ")}) {${BR}${selections.join(BR)}${BR}}`, variables, headers, {
+        tolerateMissing: true,
+      });
+      return { chunk, data };
+    }
+  );
+
+  const overflow: Array<{ ref: PrRef; cursor: string }> = [];
+  for (const { chunk, data } of settled) {
+    chunk.forEach((ref, i) => {
+      const pr = data[`p${i}`]?.pullRequest;
+      if (!pr) return;
+      out.set(prKey(ref), flatten(pr));
+      const info = pr.commits?.pageInfo;
+      if (info?.hasNextPage && info.endCursor) {
+        overflow.push({ ref, cursor: info.endCursor });
+      }
+    });
+  }
+
+  // PRs with more than 100 commits page individually; there are rarely any.
+  for (const item of overflow) {
+    let cursor: string | null = item.cursor;
+    while (cursor) {
+      const page: { repository?: { pullRequest?: CommitsShape | null } | null } =
+        await graphqlRequest(
+          `query($o: String!, $r: String!, $n: Int!, $after: String!) {
+          repository(owner: $o, name: $r) {
+            pullRequest(number: $n) { commits(first: 100, after: $after) { ${COMMIT_FIELDS} } }
+          }
+        }`,
+          { o: item.ref.owner, r: item.ref.repo, n: item.ref.number, after: cursor },
+          headers
+        );
+      const pr = page.repository?.pullRequest;
+      const existing = out.get(prKey(item.ref)) ?? [];
+      out.set(prKey(item.ref), [...existing, ...flatten(pr)]);
+      const info = pr?.commits?.pageInfo;
+      cursor = info?.hasNextPage ? (info.endCursor ?? null) : null;
+    }
+  }
+
   return out;
 }

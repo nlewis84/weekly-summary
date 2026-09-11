@@ -37,7 +37,10 @@ import {
 } from "./github-metrics.js";
 import {
   GitHubGraphQLError,
+  fetchDefaultBranchCommits,
   fetchPrActivity,
+  fetchPrCommits,
+  fetchUserId,
   parseAnyPrRef,
   prKey,
   type PrRef as GqlPrRef,
@@ -1021,85 +1024,42 @@ async function fetchCommitsPushed(
   };
 
   try {
-    const defaultBranchResults = await Promise.all(
-      repos.map(async (repo) => {
-        const collected: Array<{ sha: string; date: string | null }> = [];
-        let page = 1;
-        const perPage = 100;
-        let hasMore = true;
-        while (hasMore) {
-          const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/commits?author=${username}&since=${since}&until=${until}&per_page=${perPage}&page=${page}`;
-          const res = await fetchWithRetry(url, { headers });
-          if (!res.ok) return { repo, commits: collected };
-          const commits = (await res.json()) as Array<{
-            sha?: string;
-            commit?: { author?: { date?: string } };
-          }>;
-          if (!Array.isArray(commits)) return { repo, commits: collected };
-          for (const c of commits) {
-            if (c.sha)
-              collected.push({
-                sha: c.sha,
-                date: c.commit?.author?.date ?? null,
-              });
-          }
-          hasMore = commits.length === perPage;
-          page += 1;
-        }
-        return { repo, commits: collected };
-      })
-    );
+    // Both halves of this were a paginated REST request per repo and per PR —
+    // ~90 requests, and the last thing in a weekly run still drawing on the
+    // core budget. Batched over GraphQL they are a handful.
+    const authorId = await fetchUserId(username, headers);
+    if (!authorId) throw new Error(`no GitHub user for login ${username}`);
 
-    for (const { repo, commits } of defaultBranchResults) {
+    const [defaultBranch, prCommits] = await Promise.all([
+      fetchDefaultBranchCommits(owner, repos, authorId, since, until, headers),
+      fetchPrCommits(
+        userPRs
+          .filter((p) => trackedRepos.has(p.repo))
+          .map((p) => ({ owner, repo: p.repo, number: p.number })),
+        headers
+      ),
+    ]);
+
+    for (const [repo, commits] of defaultBranch) {
       for (const c of commits) {
-        if (!seen.has(c.sha)) seen.set(c.sha, repo);
+        if (!seen.has(c.oid)) seen.set(c.oid, repo);
       }
     }
 
-    const prCommitResults = await Promise.all(
-      userPRs
-        .filter((p) => trackedRepos.has(p.repo))
-        .map(async ({ repo, number }) => {
-          const collected: Array<{ sha: string; date: string | null }> = [];
-          let page = 1;
-          const perPage = 100;
-          let hasMore = true;
-          while (hasMore) {
-            const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/pulls/${number}/commits?per_page=${perPage}&page=${page}`;
-            const res = await fetchWithRetry(url, { headers });
-            if (!res.ok) return { repo, commits: collected };
-            const commits = (await res.json()) as Array<{
-              sha?: string;
-              author?: { login?: string } | null;
-              commit?: {
-                author?: { name?: string; email?: string; date?: string };
-              };
-            }>;
-            if (!Array.isArray(commits)) return { repo, commits: collected };
-            for (const c of commits) {
-              const date = c.commit?.author?.date ?? null;
-              if (!inWindow(date)) continue;
-              const matchesUser =
-                c.author?.login === username ||
-                c.commit?.author?.email
-                  ?.toLowerCase()
-                  .includes(username.toLowerCase()) ||
-                c.commit?.author?.name
-                  ?.toLowerCase()
-                  .includes(username.toLowerCase());
-              if (!matchesUser) continue;
-              if (c.sha) collected.push({ sha: c.sha, date });
-            }
-            hasMore = commits.length === perPage;
-            page += 1;
-          }
-          return { repo, commits: collected };
-        })
-    );
-
-    for (const { repo, commits } of prCommitResults) {
-      for (const c of commits) {
-        if (!seen.has(c.sha)) seen.set(c.sha, repo);
+    for (const p of userPRs) {
+      if (!trackedRepos.has(p.repo)) continue;
+      const commits = prCommits.get(prKey({ owner, repo: p.repo, number: p.number }));
+      for (const c of commits ?? []) {
+        // The REST path bounded PR commits on commit.author.date; keep that.
+        if (!inWindow(c.authoredDate ?? c.committedDate)) continue;
+        // Same author match as the REST path: the linked account, or an
+        // email/name carrying the username for unlinked commits.
+        const matchesUser =
+          c.login === username ||
+          c.email?.toLowerCase().includes(username.toLowerCase()) ||
+          c.name?.toLowerCase().includes(username.toLowerCase());
+        if (!matchesUser) continue;
+        if (!seen.has(c.oid)) seen.set(c.oid, p.repo);
       }
     }
 
