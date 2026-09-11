@@ -21,6 +21,7 @@ import { isGranolaConfigured } from "../../lib/granola-client";
 import { TodaySection } from "~/components/TodaySection";
 import { PeriodSummaryCard } from "~/components/PeriodSummaryCard";
 import { FullSummaryFormContainer } from "~/components/FullSummaryFormContainer";
+import { ErrorBanner } from "~/components/ErrorBanner";
 import { useRefreshInterval } from "~/hooks/useRefreshInterval";
 import { useGoals } from "~/hooks/useGoals";
 import { useMonthlyPrTarget } from "~/hooks/useMonthlyGoal";
@@ -246,7 +247,20 @@ export default function Index() {
     <div className="space-y-5">
       <div className="xl:grid xl:grid-cols-[minmax(0,1.6fr)_minmax(20rem,1fr)] xl:gap-5 xl:items-start">
         <Suspense fallback={loadingCards}>
-          <Await resolve={dashboard}>
+          <Await
+            resolve={dashboard}
+            errorElement={
+              <div className="contents">
+                <div className="xl:col-span-2">
+                  <ErrorBanner
+                    message="GitHub and Linear took too long. Retry in a moment."
+                    onRetry={() => window.location.reload()}
+                  />
+                </div>
+                {loadingCards}
+              </div>
+            }
+          >
             {(resolved) => {
               const todayPayload =
                 resolved.today && "payload" in resolved.today

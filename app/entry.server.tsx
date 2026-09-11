@@ -6,7 +6,10 @@ import { ServerRouter } from "react-router";
 import { renderToPipeableStream } from "react-dom/server";
 import { getInlineCss } from "./inline-css.server";
 
-const ABORT_DELAY = 120_000;
+// React Router rejects unfinished streamed loader promises after this delay
+// with `Error("Server Timeout")`. Default is 4950ms, which is shorter than a
+// cold GitHub/Linear scrape.
+export const streamTimeout = 60_000;
 
 // Inline CSS into HTML so it arrives with the response - prevents FOUC
 (globalThis as { __INLINE_CSS__?: string }).__INLINE_CSS__ = getInlineCss();
@@ -49,6 +52,6 @@ export default function handleRequest(
       }
     );
 
-    setTimeout(abort, ABORT_DELAY);
+    setTimeout(abort, streamTimeout + 1_000);
   });
 }
