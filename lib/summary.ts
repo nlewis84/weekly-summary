@@ -15,7 +15,12 @@ import type {
 } from "./types.js";
 import { buildMarkdownSummary } from "./markdown.js";
 import { dataCache } from "./cache.js";
-import { fetchWithRetry } from "./github-api.js";
+import {
+  RateLimitExhaustedError,
+  coreRefusalCount,
+  fetchWithRetry,
+  peekCoreBudget,
+} from "./github-api.js";
 import {
   SearchBudgetError,
   searchRequest,
@@ -902,7 +907,7 @@ async function fetchCommitsPushed(
         let hasMore = true;
         while (hasMore) {
           const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/commits?author=${username}&since=${since}&until=${until}&per_page=${perPage}&page=${page}`;
-          const res = await fetch(url, { headers });
+          const res = await fetchWithRetry(url, { headers });
           if (!res.ok) return { repo, commits: collected };
           const commits = (await res.json()) as Array<{
             sha?: string;
@@ -939,7 +944,7 @@ async function fetchCommitsPushed(
           let hasMore = true;
           while (hasMore) {
             const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/pulls/${number}/commits?per_page=${perPage}&page=${page}`;
-            const res = await fetch(url, { headers });
+            const res = await fetchWithRetry(url, { headers });
             if (!res.ok) return { repo, commits: collected };
             const commits = (await res.json()) as Array<{
               sha?: string;
@@ -1440,10 +1445,25 @@ export async function runSummary(options: {
   const windowStartISO = windowStart.toISOString();
   const windowEndISO = windowEnd.toISOString();
 
+  const refusalsBefore = coreRefusalCount();
+
   const [linearData, githubData] = await Promise.all([
     fetchLinearData(windowStart, windowEnd, windowStartISO, windowEndISO),
     fetchGitHubData(windowStart, windowStartISO, windowEnd),
   ]);
+
+  // The per-PR fans swallow their own fetch errors so one bad PR cannot sink a
+  // summary, which means a spent budget reaches here as zeros rather than as a
+  // failure. A summary built on refused requests is wrong in the one direction
+  // that matters — it under-reports work and would be saved as fact — so fail
+  // the run instead of returning it.
+  if (coreRefusalCount() > refusalsBefore) {
+    const budget = peekCoreBudget();
+    throw new RateLimitExhaustedError(
+      budget?.resetAt ?? Date.now(),
+      budget?.limit ?? 5000
+    );
+  }
 
   const checkIns = parseCheckIns(checkInsText);
   const prCategories = categorizePRs(
