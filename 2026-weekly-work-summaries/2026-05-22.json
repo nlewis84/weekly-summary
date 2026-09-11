@@ -24,7 +24,7 @@
     "lines_added": 761,
     "lines_deleted": 41,
     "files_changed": 16,
-    "median_review_latency_hours": 36.64,
+    "median_review_latency_hours": 11.36,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -249,7 +249,7 @@
         "requested_at": "2026-05-21T21:17:31Z",
         "reviewed_at": "2026-05-22T00:24:44Z",
         "review_state": "COMMENTED",
-        "latency_hours": 3.12
+        "latency_hours": 0.71
       },
       {
         "title": "[APO-8740] Keep Google Pay visible for recurring gifts",
@@ -267,7 +267,7 @@
         "requested_at": "2026-05-17T19:25:46Z",
         "reviewed_at": "2026-05-20T16:35:12Z",
         "review_state": "APPROVED",
-        "latency_hours": 69.16
+        "latency_hours": 18.59
       },
       {
         "title": "feat(people): snapshot email and phone into ban lists on toggleBan",
@@ -276,7 +276,7 @@
         "requested_at": "2026-05-15T16:34:36Z",
         "reviewed_at": "2026-05-20T16:34:31Z",
         "review_state": "APPROVED",
-        "latency_hours": 120
+        "latency_hours": 24
       },
       {
         "title": "APO-8743 Default Transactions date filter to trailing 12 months",
@@ -285,7 +285,7 @@
         "requested_at": "2026-05-15T16:52:49Z",
         "reviewed_at": "2026-05-20T16:42:05Z",
         "review_state": "APPROVED",
-        "latency_hours": 119.82
+        "latency_hours": 23.82
       },
       {
         "title": "feat(giving): add payment method filter to transactions",

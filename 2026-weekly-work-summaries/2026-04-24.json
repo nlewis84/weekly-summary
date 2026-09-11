@@ -25,7 +25,7 @@
     "lines_added": 2362,
     "lines_deleted": 315,
     "files_changed": 26,
-    "median_review_latency_hours": 21.99,
+    "median_review_latency_hours": 1.05,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -612,7 +612,7 @@
         "requested_at": "2026-04-23T20:21:16Z",
         "reviewed_at": "2026-04-24T16:40:30Z",
         "review_state": "APPROVED",
-        "latency_hours": 20.32
+        "latency_hours": 4.32
       },
       {
         "title": "Remove staging deployment workflow",
@@ -621,7 +621,7 @@
         "requested_at": "2026-04-23T13:21:46Z",
         "reviewed_at": "2026-04-23T13:51:53Z",
         "review_state": "DISMISSED",
-        "latency_hours": 0.5
+        "latency_hours": 0
       },
       {
         "title": "fix(prisma): enable ssl for pg adapter connections",
@@ -648,7 +648,7 @@
         "requested_at": "2026-04-23T20:34:13Z",
         "reviewed_at": "2026-04-24T15:53:28Z",
         "review_state": "APPROVED",
-        "latency_hours": 19.32
+        "latency_hours": 3.32
       },
       {
         "title": "chore(schema): remove unused deprecated fields",
@@ -657,7 +657,7 @@
         "requested_at": "2026-04-21T19:52:58Z",
         "reviewed_at": "2026-04-22T19:32:07Z",
         "review_state": "APPROVED",
-        "latency_hours": 23.65
+        "latency_hours": 7.65
       },
       {
         "title": "fix(ci): filter admin-preview deployment lookup by head SHA",
@@ -666,7 +666,7 @@
         "requested_at": "2026-04-19T05:29:28Z",
         "reviewed_at": "2026-04-20T13:48:21Z",
         "review_state": "APPROVED",
-        "latency_hours": 32.31
+        "latency_hours": 0
       },
       {
         "title": "fix: focus amount input on first give click [APO-8675]",
@@ -675,7 +675,7 @@
         "requested_at": "2026-04-18T00:03:19Z",
         "reviewed_at": "2026-04-23T13:50:43Z",
         "review_state": "APPROVED",
-        "latency_hours": 133.79
+        "latency_hours": 24
       },
       {
         "title": "[codex] Fix auth redirects after give login",
@@ -684,7 +684,7 @@
         "requested_at": "2026-04-17T23:28:43Z",
         "reviewed_at": "2026-04-20T13:47:02Z",
         "review_state": "APPROVED",
-        "latency_hours": 62.31
+        "latency_hours": 0
       },
       {
         "title": "[APO-8156] Allow Administrators to Edit a Donor's Recurring Gift",
@@ -693,7 +693,7 @@
         "requested_at": "2026-04-16T20:43:45Z",
         "reviewed_at": "2026-04-20T22:06:21Z",
         "review_state": "APPROVED",
-        "latency_hours": 97.38
+        "latency_hours": 17.27
       },
       {
         "title": "fix: scope Stripe customer rows to platform account ID",
@@ -711,7 +711,7 @@
         "requested_at": "2026-04-17T20:54:10Z",
         "reviewed_at": "2026-04-20T13:50:16Z",
         "review_state": "APPROVED",
-        "latency_hours": 64.94
+        "latency_hours": 1.1
       }
     ]
   },

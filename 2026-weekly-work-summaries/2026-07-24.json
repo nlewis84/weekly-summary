@@ -9,8 +9,8 @@
   "stats": {
     "prs_merged": 5,
     "prs_total": 6,
-    "pr_reviews": 34,
-    "pr_comments": 21,
+    "pr_reviews": 35,
+    "pr_comments": 22,
     "commits_pushed": 12,
     "linear_completed": 6,
     "linear_worked_on": 7,
@@ -25,7 +25,7 @@
     "lines_added": 229,
     "lines_deleted": 63,
     "files_changed": 12,
-    "median_review_latency_hours": 3.35,
+    "median_review_latency_hours": 3.38,
     "linear_projects_completed": 1
   },
   "linear": {
@@ -451,6 +451,15 @@
         "reviewed_at": "2026-07-20T15:57:44Z",
         "review_state": "APPROVED",
         "latency_hours": 0.08
+      },
+      {
+        "title": "Add PushPay Transactions Export to Giving Reports (APO-10511)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3838",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-20T19:12:49Z",
+        "reviewed_at": "2026-07-21T19:59:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 8.77
       },
       {
         "title": "Teach reportLoader to upload CSV reports (APO-10507)",

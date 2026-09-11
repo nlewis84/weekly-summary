@@ -24,7 +24,7 @@
     "lines_added": 946,
     "lines_deleted": 255,
     "files_changed": 28,
-    "median_review_latency_hours": 13.57,
+    "median_review_latency_hours": 0.92,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -559,7 +559,7 @@
         "requested_at": "2026-05-07T22:43:37Z",
         "reviewed_at": "2026-05-07T23:54:50Z",
         "review_state": "APPROVED",
-        "latency_hours": 1.19
+        "latency_hours": 0
       },
       {
         "title": "APO-9085: Don't send ACH settlement completion email",
@@ -568,7 +568,7 @@
         "requested_at": "2026-05-07T22:37:54Z",
         "reviewed_at": "2026-05-08T21:23:58Z",
         "review_state": "APPROVED",
-        "latency_hours": 22.77
+        "latency_hours": 7.4
       },
       {
         "title": "APO-9050 hide Embeddings workflow from Data dashboard",
@@ -586,7 +586,7 @@
         "requested_at": "2026-05-07T00:28:42Z",
         "reviewed_at": "2026-05-07T14:04:13Z",
         "review_state": "COMMENTED",
-        "latency_hours": 13.59
+        "latency_hours": 0.07
       },
       {
         "title": "refactor(giving): remove enrichWithBalanceTransactions; map cluster totalFees",
@@ -604,7 +604,7 @@
         "requested_at": "2026-05-06T21:53:28Z",
         "reviewed_at": "2026-05-07T13:58:26Z",
         "review_state": "APPROVED",
-        "latency_hours": 16.08
+        "latency_hours": 0.11
       },
       {
         "title": "fix: cluster transaction export uses platform fee when Connect application_fee is missing",
@@ -622,7 +622,7 @@
         "requested_at": "2026-05-07T11:55:10Z",
         "reviewed_at": "2026-05-07T14:29:42Z",
         "review_state": "APPROVED",
-        "latency_hours": 2.58
+        "latency_hours": 0.5
       },
       {
         "title": "Upgrade ESLint and related dependencies to v10",
@@ -649,7 +649,7 @@
         "requested_at": "2026-05-06T00:04:34Z",
         "reviewed_at": "2026-05-06T15:20:37Z",
         "review_state": "COMMENTED",
-        "latency_hours": 15.27
+        "latency_hours": 1.34
       },
       {
         "title": "[codex] Add Bayside El Dorado events chip script",
@@ -658,7 +658,7 @@
         "requested_at": "2026-05-04T00:50:16Z",
         "reviewed_at": "2026-05-04T14:23:12Z",
         "review_state": "APPROVED",
-        "latency_hours": 13.55
+        "latency_hours": 0.39
       },
       {
         "title": "Fix feature action content back stack",
@@ -667,7 +667,7 @@
         "requested_at": "2026-05-03T20:01:00Z",
         "reviewed_at": "2026-05-04T14:17:10Z",
         "review_state": "APPROVED",
-        "latency_hours": 18.27
+        "latency_hours": 0.29
       },
       {
         "title": "[APO-8790] [V2] Hide App Clip banner if `source=app` is given in URL",
@@ -676,7 +676,7 @@
         "requested_at": "2026-05-01T16:04:22Z",
         "reviewed_at": "2026-05-04T14:01:30Z",
         "review_state": "CHANGES_REQUESTED",
-        "latency_hours": 69.95
+        "latency_hours": 5.95
       },
       {
         "title": "chore(schema): remove unused deprecated schema fields",
@@ -685,7 +685,7 @@
         "requested_at": "2026-04-24T21:31:03Z",
         "reviewed_at": "2026-05-04T14:08:45Z",
         "review_state": "APPROVED",
-        "latency_hours": 232.63
+        "latency_hours": 40.63
       },
       {
         "title": "fix: scope Stripe customer rows to platform account ID",

@@ -9,8 +9,8 @@
   "stats": {
     "prs_merged": 24,
     "prs_total": 34,
-    "pr_reviews": 163,
-    "pr_comments": 135,
+    "pr_reviews": 170,
+    "pr_comments": 141,
     "commits_pushed": 57,
     "linear_completed": 17,
     "linear_projects_completed": 0,
@@ -31,7 +31,7 @@
     "lines_added": 3786,
     "lines_deleted": 462,
     "files_changed": 99,
-    "median_review_latency_hours": 1.23
+    "median_review_latency_hours": 1.32
   },
   "linear": {
     "completed_issues": [
@@ -1540,6 +1540,15 @@
         "latency_hours": 1.95
       },
       {
+        "title": "fix(tv): recover the home feed after a failed load",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7060",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-01T23:49:27Z",
+        "reviewed_at": "2026-09-02T19:25:47Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 5.43
+      },
+      {
         "title": "Land remaining FreedUp migrator stack on main",
         "url": "https://github.com/ApollosProject/freedup-migration/pull/19",
         "repo": "freedup-migration",
@@ -1601,6 +1610,15 @@
         "reviewed_at": "2026-09-02T17:46:50Z",
         "review_state": "APPROVED",
         "latency_hours": 1.95
+      },
+      {
+        "title": "fix(chat): hide direct share targets from minors on the share board",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7058",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-01T23:49:31Z",
+        "reviewed_at": "2026-09-02T19:25:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 5.43
       },
       {
         "title": "Add the CrossPoint City demo page",
@@ -2173,10 +2191,10 @@
         "title": "docs(core): publish the derived REST surface as a generated artifact",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/4122",
         "repo": "apollos-cluster",
-        "requested_at": null,
+        "requested_at": "2026-08-31T21:14:22Z",
         "reviewed_at": "2026-08-31T21:20:07Z",
         "review_state": "APPROVED",
-        "latency_hours": null
+        "latency_hours": 0.1
       },
       {
         "title": "feat(polls): expose poll settings and null vote counts for hidden polls",
@@ -2323,6 +2341,15 @@
         "latency_hours": 2.39
       },
       {
+        "title": "APO-11875: Open Message Notes question block and comments full screen",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7043",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-01T00:48:22Z",
+        "reviewed_at": "2026-09-01T14:00:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
         "title": "Migrate ByLine/Avatar duplicates off apollos-ui-kit",
         "url": "https://github.com/ApollosProject/apollos-platforms/pull/7042",
         "repo": "apollos-platforms",
@@ -2346,7 +2373,7 @@
         "repo": "apollos-platforms",
         "requested_at": "2026-09-02T13:41:40Z",
         "reviewed_at": "2026-09-02T13:41:59Z",
-        "review_state": "CHANGES_REQUESTED",
+        "review_state": "DISMISSED",
         "latency_hours": 0
       },
       {
@@ -2371,19 +2398,19 @@
         "title": "perf(ministry-platform): make the button-feature cleanup an anti-join",
         "url": "https://github.com/ApollosProject/apollos-shovel/pull/1774",
         "repo": "apollos-shovel",
-        "requested_at": "2026-09-01T13:51:26Z",
+        "requested_at": null,
         "reviewed_at": "2026-09-01T13:59:11Z",
         "review_state": "COMMENTED",
-        "latency_hours": 0
+        "latency_hours": null
       },
       {
         "title": "fix(twilio): send via the shared Messaging Service so SMS reaches non-US numbers",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/4091",
         "repo": "apollos-cluster",
-        "requested_at": "2026-09-02T05:53:53Z",
+        "requested_at": null,
         "reviewed_at": "2026-09-02T19:24:41Z",
         "review_state": "COMMENTED",
-        "latency_hours": 5.41
+        "latency_hours": null
       },
       {
         "title": "test(web): hardening efforts for Web e2e",
@@ -2398,10 +2425,10 @@
         "title": "fix(web): route missing origins through repair",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4264",
         "repo": "apollos-admin",
-        "requested_at": "2026-09-01T14:42:32Z",
+        "requested_at": null,
         "reviewed_at": "2026-09-01T14:52:40Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.17
+        "latency_hours": null
       },
       {
         "title": "feat(web): add guarded origin repair loader",
@@ -2434,10 +2461,10 @@
         "title": "chore(deps): bump node-fetch from 2.7.0 to 3.3.2",
         "url": "https://github.com/ApollosProject/apollos-cluster/pull/4080",
         "repo": "apollos-cluster",
-        "requested_at": "2026-09-02T13:49:16Z",
+        "requested_at": null,
         "reviewed_at": "2026-09-02T17:47:57Z",
         "review_state": "APPROVED",
-        "latency_hours": 3.8
+        "latency_hours": null
       },
       {
         "title": "fix(web): stop flashing unmapped dump slots and Text holes on initial paint (APO-11930)",
@@ -2465,6 +2492,33 @@
         "reviewed_at": "2026-09-02T19:25:33Z",
         "review_state": "CHANGES_REQUESTED",
         "latency_hours": 37.79
+      },
+      {
+        "title": "fix(admin): require auth and block SSRF on integration test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4188",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-02T19:49:58Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix: require SESSION_SECRET instead of a hardcoded cookie-signing fallback",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4172",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-27T18:41:03Z",
+        "reviewed_at": "2026-09-02T19:25:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 32.74
+      },
+      {
+        "title": "fix(admin): org-scoped user helpers and churchId row lock",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4171",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-27T18:48:25Z",
+        "reviewed_at": "2026-09-01T14:00:46Z",
+        "review_state": "DISMISSED",
+        "latency_hours": 19.21
       },
       {
         "title": "refactor(youtube): extract shared pagination helper",
@@ -2519,6 +2573,15 @@
         "reviewed_at": "2026-08-31T16:36:51Z",
         "review_state": "APPROVED",
         "latency_hours": 53.77
+      },
+      {
+        "title": "refactor(web): preserve signup match request state",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4121",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-28T19:21:31Z",
+        "reviewed_at": "2026-08-31T13:37:07Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.64
       },
       {
         "title": "perf(media): keyset-page the blurhash backfill instead of OFFSET",
