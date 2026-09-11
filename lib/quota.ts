@@ -2,6 +2,8 @@
  * API quota visibility - GitHub and Linear rate limits.
  */
 
+import { peekCoreBudget } from "./github-api.js";
+
 export interface GitHubQuota {
   limit: number;
   remaining: number;
@@ -34,15 +36,21 @@ async function fetchGitHubQuota(): Promise<{
   const token = process.env.GITHUB_TOKEN;
   if (!token) return { core: null, search: null };
 
+  // `/rate_limit` is free to call but is served stale often enough to be
+  // actively misleading: it will report a full 5,000/5,000 while live responses
+  // are already 403ing with `x-ratelimit-remaining: 0`. What the last real
+  // response said is the truth, so prefer it and only fall back to the endpoint
+  // before this process has made a core request of its own.
+  const observed = peekCoreBudget();
+
   try {
-    // Free to call: /rate_limit does not count against any rate limit.
     const res = await fetch("https://api.github.com/rate_limit", {
       headers: {
         Authorization: `Bearer ${token}`,
         Accept: "application/vnd.github+json",
       },
     });
-    if (!res.ok) return { core: null, search: null };
+    if (!res.ok) return { core: observedCore(observed), search: null };
     const data = (await res.json()) as {
       resources?: {
         core?: { limit: number; remaining: number; reset: number; used: number };
@@ -61,12 +69,24 @@ async function fetchGitHubQuota(): Promise<{
           }
         : null;
     return {
-      core: shape(data.resources?.core),
+      core: observedCore(observed) ?? shape(data.resources?.core),
       search: shape(data.resources?.search),
     };
   } catch {
-    return { core: null, search: null };
+    return { core: observedCore(observed), search: null };
   }
+}
+
+function observedCore(
+  budget: ReturnType<typeof peekCoreBudget>
+): GitHubQuota | null {
+  if (!budget) return null;
+  return {
+    limit: budget.limit,
+    remaining: budget.remaining,
+    resetAt: new Date(budget.resetAt).toISOString(),
+    used: budget.used,
+  };
 }
 
 async function fetchLinearQuota(): Promise<LinearQuota | null> {

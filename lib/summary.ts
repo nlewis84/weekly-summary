@@ -15,7 +15,12 @@ import type {
 } from "./types.js";
 import { buildMarkdownSummary } from "./markdown.js";
 import { dataCache } from "./cache.js";
-import { fetchWithRetry } from "./github-api.js";
+import {
+  RateLimitExhaustedError,
+  coreRefusalCount,
+  fetchWithRetry,
+  peekCoreBudget,
+} from "./github-api.js";
 import {
   SearchBudgetError,
   searchRequest,
@@ -30,6 +35,16 @@ import {
   sumVolume,
   type TimelineEvent,
 } from "./github-metrics.js";
+import {
+  GitHubGraphQLError,
+  fetchDefaultBranchCommits,
+  fetchPrActivity,
+  fetchPrCommits,
+  fetchUserId,
+  parseAnyPrRef,
+  prKey,
+  type PrRef as GqlPrRef,
+} from "./github-graphql.js";
 
 const SUMMARY_README = `# Weekly Work Summaries
 
@@ -754,8 +769,11 @@ async function filterReviewsBySubmittedInWindow(
     candidatePRs,
     GITHUB_FETCH_CONCURRENCY,
     async (pr) => {
+      // per_page matters: unpaginated this returns GitHub's default first 30
+      // reviews, and a PR with more than that (one had 167) hid the user's own
+      // review behind the page boundary and reported it as never reviewed.
       const reviewsUrl = pr.pull_request?.url
-        ? `${pr.pull_request.url}/reviews`
+        ? `${pr.pull_request.url}/reviews?per_page=100`
         : null;
       if (!reviewsUrl) return null;
       try {
@@ -848,6 +866,118 @@ async function enrichReviewsWithLatency(
   });
 }
 
+/** Earliest non-PENDING review by the user inside the window. */
+function earliestReviewInWindow(
+  reviews: Array<{ state: string; submittedAt: string | null }>,
+  windowStart: Date,
+  windowEnd: Date
+): { submittedAt: string; state: string } | null {
+  const mine = reviews
+    .filter(
+      (r) =>
+        r.submittedAt != null &&
+        r.state !== "PENDING" &&
+        new Date(r.submittedAt) >= windowStart &&
+        new Date(r.submittedAt) <= windowEnd
+    )
+    .sort(
+      (a, b) =>
+        new Date(a.submittedAt!).getTime() - new Date(b.submittedAt!).getTime()
+    );
+  const first = mine[0];
+  return first ? { submittedAt: first.submittedAt!, state: first.state } : null;
+}
+
+function toReviewEntry(
+  pr: CandidateReviewPR,
+  reviewed: { submittedAt: string; state: string },
+  requested_at: string | null
+): ReviewEntry {
+  const ref = parsePrRef(pr.html_url);
+  return {
+    title: pr.title ?? "",
+    url: pr.html_url ?? "",
+    repo: ref?.repo ?? null,
+    requested_at,
+    reviewed_at: reviewed.submittedAt,
+    review_state: reviewed.state,
+    latency_hours: computeBusinessLatencyHours(
+      requested_at,
+      reviewed.submittedAt
+    ),
+  };
+}
+
+/**
+ * In-window reviews, latency-enriched, for a candidate set.
+ *
+ * This replaces two REST fans — one request per candidate for `/reviews`, a
+ * second for `/timeline` — with a batched GraphQL read, which is the difference
+ * between ~570 requests for a busy week and ~20. The filtering is deliberately
+ * the same logic and the same helpers the REST path used; only the transport
+ * changed. A PR GraphQL could not answer for, or returned more than one page
+ * for, falls back to the REST path rather than risk a short count.
+ */
+async function buildReviewEntries(
+  candidatePRs: CandidateReviewPR[],
+  windowStart: Date,
+  windowEnd: Date,
+  username: string,
+  headers: HeadersInit
+): Promise<ReviewEntry[]> {
+  const paired = candidatePRs.map((pr) => ({
+    pr,
+    ref: parseAnyPrRef(pr.html_url ?? pr.pull_request?.url),
+  }));
+
+  const activity = await fetchPrActivity(
+    paired.map((x) => x.ref).filter((r): r is GqlPrRef => r != null),
+    username,
+    headers,
+    { reviews: true, reviewRequests: true }
+  );
+
+  const entries: ReviewEntry[] = [];
+  const needsRest: CandidateReviewPR[] = [];
+
+  for (const { pr, ref } of paired) {
+    const act = ref ? activity.get(prKey(ref)) : undefined;
+    if (!act || act.truncated.reviews) {
+      if (pr.pull_request?.url) needsRest.push(pr);
+      continue;
+    }
+    const reviewed = earliestReviewInWindow(act.reviews, windowStart, windowEnd);
+    if (!reviewed) continue;
+    const events: TimelineEvent[] = act.reviewRequests.map((r) => ({
+      event: "review_requested",
+      created_at: r.createdAt,
+      requested_reviewer: r.login ? { login: r.login } : null,
+    }));
+    entries.push(
+      toReviewEntry(
+        pr,
+        reviewed,
+        findRequestedAt(events, username, reviewed.submittedAt)
+      )
+    );
+  }
+
+  if (needsRest.length > 0) {
+    const reviewed = await filterReviewsBySubmittedInWindow(
+      needsRest,
+      windowStart,
+      windowEnd,
+      username,
+      headers
+    );
+    entries.push(
+      ...(await enrichReviewsWithLatency(reviewed, username, headers))
+    );
+  }
+
+  return entries;
+}
+
 function getCommitRepos(): { owner: string; repos: string[] } {
   const owner = process.env.GITHUB_ORG ?? "ApollosProject";
   const raw =
@@ -894,85 +1024,42 @@ async function fetchCommitsPushed(
   };
 
   try {
-    const defaultBranchResults = await Promise.all(
-      repos.map(async (repo) => {
-        const collected: Array<{ sha: string; date: string | null }> = [];
-        let page = 1;
-        const perPage = 100;
-        let hasMore = true;
-        while (hasMore) {
-          const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/commits?author=${username}&since=${since}&until=${until}&per_page=${perPage}&page=${page}`;
-          const res = await fetch(url, { headers });
-          if (!res.ok) return { repo, commits: collected };
-          const commits = (await res.json()) as Array<{
-            sha?: string;
-            commit?: { author?: { date?: string } };
-          }>;
-          if (!Array.isArray(commits)) return { repo, commits: collected };
-          for (const c of commits) {
-            if (c.sha)
-              collected.push({
-                sha: c.sha,
-                date: c.commit?.author?.date ?? null,
-              });
-          }
-          hasMore = commits.length === perPage;
-          page += 1;
-        }
-        return { repo, commits: collected };
-      })
-    );
+    // Both halves of this were a paginated REST request per repo and per PR —
+    // ~90 requests, and the last thing in a weekly run still drawing on the
+    // core budget. Batched over GraphQL they are a handful.
+    const authorId = await fetchUserId(username, headers);
+    if (!authorId) throw new Error(`no GitHub user for login ${username}`);
 
-    for (const { repo, commits } of defaultBranchResults) {
+    const [defaultBranch, prCommits] = await Promise.all([
+      fetchDefaultBranchCommits(owner, repos, authorId, since, until, headers),
+      fetchPrCommits(
+        userPRs
+          .filter((p) => trackedRepos.has(p.repo))
+          .map((p) => ({ owner, repo: p.repo, number: p.number })),
+        headers
+      ),
+    ]);
+
+    for (const [repo, commits] of defaultBranch) {
       for (const c of commits) {
-        if (!seen.has(c.sha)) seen.set(c.sha, repo);
+        if (!seen.has(c.oid)) seen.set(c.oid, repo);
       }
     }
 
-    const prCommitResults = await Promise.all(
-      userPRs
-        .filter((p) => trackedRepos.has(p.repo))
-        .map(async ({ repo, number }) => {
-          const collected: Array<{ sha: string; date: string | null }> = [];
-          let page = 1;
-          const perPage = 100;
-          let hasMore = true;
-          while (hasMore) {
-            const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/pulls/${number}/commits?per_page=${perPage}&page=${page}`;
-            const res = await fetch(url, { headers });
-            if (!res.ok) return { repo, commits: collected };
-            const commits = (await res.json()) as Array<{
-              sha?: string;
-              author?: { login?: string } | null;
-              commit?: {
-                author?: { name?: string; email?: string; date?: string };
-              };
-            }>;
-            if (!Array.isArray(commits)) return { repo, commits: collected };
-            for (const c of commits) {
-              const date = c.commit?.author?.date ?? null;
-              if (!inWindow(date)) continue;
-              const matchesUser =
-                c.author?.login === username ||
-                c.commit?.author?.email
-                  ?.toLowerCase()
-                  .includes(username.toLowerCase()) ||
-                c.commit?.author?.name
-                  ?.toLowerCase()
-                  .includes(username.toLowerCase());
-              if (!matchesUser) continue;
-              if (c.sha) collected.push({ sha: c.sha, date });
-            }
-            hasMore = commits.length === perPage;
-            page += 1;
-          }
-          return { repo, commits: collected };
-        })
-    );
-
-    for (const { repo, commits } of prCommitResults) {
-      for (const c of commits) {
-        if (!seen.has(c.sha)) seen.set(c.sha, repo);
+    for (const p of userPRs) {
+      if (!trackedRepos.has(p.repo)) continue;
+      const commits = prCommits.get(prKey({ owner, repo: p.repo, number: p.number }));
+      for (const c of commits ?? []) {
+        // The REST path bounded PR commits on commit.author.date; keep that.
+        if (!inWindow(c.authoredDate ?? c.committedDate)) continue;
+        // Same author match as the REST path: the linked account, or an
+        // email/name carrying the username for unlinked commits.
+        const matchesUser =
+          c.login === username ||
+          c.email?.toLowerCase().includes(username.toLowerCase()) ||
+          c.name?.toLowerCase().includes(username.toLowerCase());
+        if (!matchesUser) continue;
+        if (!seen.has(c.oid)) seen.set(c.oid, p.repo);
       }
     }
 
@@ -1046,14 +1133,13 @@ export async function fetchReviewsInWindow(
     headers,
     "high"
   );
-  const reviewed = await filterReviewsBySubmittedInWindow(
+  return buildReviewEntries(
     filterApollosPRs(items),
     windowStart,
     windowEnd,
     username,
     headers
   );
-  return enrichReviewsWithLatency(reviewed, username, headers);
 }
 
 /** PRs the user authored that were created or touched on or after the window's start day. */
@@ -1085,7 +1171,15 @@ export async function searchAuthoredPRs(
   });
 }
 
-/** Issue comments by the user, across every given PR, bounded to the window. */
+/**
+ * Issue comments by the user, across every given PR, bounded to the window.
+ *
+ * Batched over GraphQL — this was one paginated REST request per PR, ~290 for a
+ * busy week. Accepts any PR-identifying URL (html_url, or an API pulls/issues
+ * url) so both the live run and the backfill script can hand it what they have.
+ * Anything unparseable, or with more than one page of comments, is counted the
+ * old way so the total cannot come up short.
+ */
 export async function countPrCommentsInWindow(
   commentsUrls: string[],
   username: string,
@@ -1093,13 +1187,66 @@ export async function countPrCommentsInWindow(
   windowEnd: Date,
   headers: HeadersInit
 ): Promise<number> {
-  const unique = [...new Set(commentsUrls.filter(Boolean))];
-  const counts = await mapWithConcurrency(
-    unique,
-    GITHUB_FETCH_CONCURRENCY,
-    (url) => countMyComments(url, username, windowStart, windowEnd, headers)
+  // Dedup on PR identity, not on the URL string: callers hand us a mix of
+  // html_urls and API comments_urls, which are different strings for the same
+  // PR, and one you both authored and reviewed arrives as both. Counting it
+  // twice would inflate the total.
+  const byPr = new Map<string, { url: string; ref: GqlPrRef | null }>();
+  for (const url of commentsUrls.filter(Boolean)) {
+    const ref = parseAnyPrRef(url);
+    const key = ref ? prKey(ref) : `url:${url}`;
+    if (!byPr.has(key)) byPr.set(key, { url, ref });
+  }
+  const paired = [...byPr.values()];
+
+  const activity = await fetchPrActivity(
+    paired.map((x) => x.ref).filter((r): r is GqlPrRef => r != null),
+    username,
+    headers,
+    { comments: true }
   );
-  return counts.reduce((a, b) => a + b, 0);
+
+  let total = 0;
+  const needsRest: string[] = [];
+
+  for (const { url, ref } of paired) {
+    const act = ref ? activity.get(prKey(ref)) : undefined;
+    if (!act || act.truncated.comments) {
+      needsRest.push(url);
+      continue;
+    }
+    for (const c of act.comments) {
+      if (c.login !== username) continue;
+      const at = new Date(c.createdAt);
+      if (at >= windowStart && at <= windowEnd) total += 1;
+    }
+  }
+
+  if (needsRest.length > 0) {
+    const counts = await mapWithConcurrency(
+      needsRest,
+      GITHUB_FETCH_CONCURRENCY,
+      (url) =>
+        countMyComments(
+          commentsUrlFor(url),
+          username,
+          windowStart,
+          windowEnd,
+          headers
+        )
+    );
+    total += counts.reduce((a, b) => a + b, 0);
+  }
+
+  return total;
+}
+
+/** The REST fallback needs a comments endpoint; callers may pass any PR url. */
+function commentsUrlFor(url: string): string {
+  if (url.includes("/comments")) return url;
+  const ref = parseAnyPrRef(url);
+  if (!ref) return url;
+  return `${GITHUB_API_BASE}/repos/${ref.owner}/${ref.repo}/issues/${ref.number}/comments`;
 }
 
 async function fetchGitHubData(
@@ -1153,38 +1300,32 @@ async function fetchGitHubData(
       return pr.html_url.includes("ApollosProject");
     });
 
-    const prDetails = await Promise.all(
-      uniquePRs.map(
-        async (pr: {
-          pull_request?: { url?: string };
-          html_url?: string;
-          merged_at?: string;
-          state?: string;
-          additions?: number;
-          deletions?: number;
-          changed_files?: number;
-        }) => {
-          if (pr.pull_request?.url) {
-            try {
-              const r = await fetchWithRetry(pr.pull_request.url, { headers });
-              if (r.ok) {
-                const d = await r.json();
-                return {
-                  ...pr,
-                  merged_at: d.merged_at,
-                  state: d.state,
-                  additions: d.additions ?? 0,
-                  deletions: d.deletions ?? 0,
-                  changed_files: d.changed_files ?? 0,
-                };
-              }
-            } catch {
-              /* fetch failed, use original pr */
-            }
-          }
-          return pr;
-        }
-      )
+    // One batched read instead of an unbounded `Promise.all` of one
+    // `/pulls/:number` request per PR — which was both ~90 requests and the
+    // only fan here with no concurrency limit.
+    const detailActivity = await fetchPrActivity(
+      uniquePRs
+        .map((pr: { html_url?: string }) => parseAnyPrRef(pr.html_url))
+        .filter((r): r is GqlPrRef => r != null),
+      username,
+      headers,
+      { details: true }
+    );
+
+    const prDetails = uniquePRs.map(
+      (pr: {
+        pull_request?: { url?: string };
+        html_url?: string;
+        merged_at?: string;
+        state?: string;
+        additions?: number;
+        deletions?: number;
+        changed_files?: number;
+      }) => {
+        const ref = parseAnyPrRef(pr.html_url);
+        const details = ref ? detailActivity.get(prKey(ref))?.details : null;
+        return details ? { ...pr, ...details } : pr;
+      }
     );
 
     const userPrRefs: PrRef[] = prDetails
@@ -1195,8 +1336,8 @@ async function fetchGitHubData(
       })
       .filter((p): p is PrRef => p != null);
 
-    const [reviewedPRs, commitsResult] = await Promise.all([
-      filterReviewsBySubmittedInWindow(
+    const [reviews, commitsResult] = await Promise.all([
+      buildReviewEntries(
         filterApollosPRs(reviewItems),
         windowStart,
         windowEnd,
@@ -1206,19 +1347,16 @@ async function fetchGitHubData(
       fetchCommitsPushed(username, headers, windowStart, windowEnd, userPrRefs),
     ]);
 
-    const reviews = await enrichReviewsWithLatency(
-      reviewedPRs,
-      username,
-      headers
-    );
-
     // Every PR you authored or reviewed, deduped. This used to be capped at the
     // first 20, which in a busy week meant only authored PRs were ever looked
     // at and every comment left on someone else's PR went uncounted.
     const totalComments = await countPrCommentsInWindow(
-      ([...prDetails, ...reviewedPRs] as Array<{ comments_url?: string }>)
-        .map((pr) => pr.comments_url)
-        .filter((u): u is string => !!u),
+      [
+        ...(prDetails as Array<{ comments_url?: string }>).map(
+          (pr) => pr.comments_url
+        ),
+        ...reviews.map((r) => r.url),
+      ].filter((u): u is string => !!u),
       username,
       windowStart,
       windowEnd,
@@ -1237,6 +1375,11 @@ async function fetchGitHubData(
     // shown as the day's work and can be written into a saved weekly summary, so
     // "we could not ask" has to surface as an error, not as "you did nothing".
     if (err instanceof SearchBudgetError) throw err;
+    if (err instanceof RateLimitExhaustedError) throw err;
+    // The batched reads are now the source of these numbers, so a GraphQL
+    // failure is the difference between a real count and a zero, not a single
+    // unreachable PR.
+    if (err instanceof GitHubGraphQLError) throw err;
     return {
       prs: [],
       reviews: [],
@@ -1440,10 +1583,25 @@ export async function runSummary(options: {
   const windowStartISO = windowStart.toISOString();
   const windowEndISO = windowEnd.toISOString();
 
+  const refusalsBefore = coreRefusalCount();
+
   const [linearData, githubData] = await Promise.all([
     fetchLinearData(windowStart, windowEnd, windowStartISO, windowEndISO),
     fetchGitHubData(windowStart, windowStartISO, windowEnd),
   ]);
+
+  // The per-PR fans swallow their own fetch errors so one bad PR cannot sink a
+  // summary, which means a spent budget reaches here as zeros rather than as a
+  // failure. A summary built on refused requests is wrong in the one direction
+  // that matters — it under-reports work and would be saved as fact — so fail
+  // the run instead of returning it.
+  if (coreRefusalCount() > refusalsBefore) {
+    const budget = peekCoreBudget();
+    throw new RateLimitExhaustedError(
+      budget?.resetAt ?? Date.now(),
+      budget?.limit ?? 5000
+    );
+  }
 
   const checkIns = parseCheckIns(checkInsText);
   const prCategories = categorizePRs(

@@ -1,12 +1,21 @@
 /**
- * Persist weekly summary to GitHub repo via REST API.
- * Uses PUT /repos/{owner}/{repo}/contents/{path} for create/update.
- * Retries on 403/429 (rate limit) per GitHub ToS.
+ * Persist weekly summary to the GitHub repo.
+ *
+ * Primary path is a single `createCommitOnBranch` mutation, which draws on the
+ * GraphQL budget rather than core. That matters because the rest of a weekly
+ * run is now GraphQL too: a spent core budget used to leave the summary built
+ * but unsaveable, failing on four contents-API requests after all the real work
+ * had already succeeded. It also writes both files in one commit instead of
+ * two, so a saved week is never half-written.
+ *
+ * The REST contents API is kept as a fallback for anything the mutation cannot
+ * do (a token without `contents: write`, say).
  */
 
 import type { Payload } from "./types.js";
 import { buildMarkdownSummary } from "./markdown.js";
 import { fetchWithRetry } from "./github-api.js";
+import { GitHubGraphQLError, graphqlRequest } from "./github-graphql.js";
 
 const GITHUB_API = "https://api.github.com";
 
@@ -48,6 +57,96 @@ async function putFile(
   }
 }
 
+interface FileAddition {
+  path: string;
+  contents: string;
+}
+
+/**
+ * Commit several files at once on the default branch.
+ *
+ * `expectedHeadOid` makes this a compare-and-set: if the branch moved between
+ * reading the head and committing, GitHub rejects it rather than clobbering,
+ * and one retry picks up the new head.
+ */
+async function commitViaGraphQL(
+  token: string,
+  owner: string,
+  repo: string,
+  additions: FileAddition[],
+  headline: string
+): Promise<void> {
+  const headers = { Authorization: `Bearer ${token}` };
+
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const info = await graphqlRequest<{
+      repository?: {
+        defaultBranchRef?: { name?: string; target?: { oid?: string } } | null;
+      } | null;
+    }>(
+      `query($owner: String!, $repo: String!) {
+        repository(owner: $owner, name: $repo) {
+          defaultBranchRef { name target { oid } }
+        }
+      }`,
+      { owner, repo },
+      headers
+    );
+
+    const branch = info.repository?.defaultBranchRef;
+    const oid = branch?.target?.oid;
+    if (!branch?.name || !oid) {
+      throw new GitHubGraphQLError(
+        `no default branch for ${owner}/${repo}`
+      );
+    }
+
+    try {
+      const result = await graphqlRequest<{
+        createCommitOnBranch?: { commit?: { oid?: string } | null } | null;
+      }>(
+        `mutation($input: CreateCommitOnBranchInput!) {
+          createCommitOnBranch(input: $input) { commit { oid } }
+        }`,
+        {
+          input: {
+            branch: {
+              repositoryNameWithOwner: `${owner}/${repo}`,
+              branchName: branch.name,
+            },
+            expectedHeadOid: oid,
+            message: { headline },
+            fileChanges: {
+              additions: additions.map((a) => ({
+                path: a.path,
+                contents: Buffer.from(a.contents, "utf8").toString("base64"),
+              })),
+            },
+          },
+        },
+        headers
+      );
+      // Do not take silence for success: a refused mutation can come back with
+      // a null payload, and a save that wrote nothing must not report as saved.
+      if (!result.createCommitOnBranch?.commit?.oid) {
+        throw new GitHubGraphQLError(
+          "createCommitOnBranch returned no commit"
+        );
+      }
+      return;
+    } catch (err) {
+      // A moved head is the one failure worth retrying; anything else is real.
+      // GitHub words it "No commit exists with specified expectedHeadOid".
+      const stale =
+        err instanceof GitHubGraphQLError &&
+        /expectedheadoid|stale|not a fast forward|head of the branch/i.test(
+          err.message
+        );
+      if (!stale || attempt === 1) throw err;
+    }
+  }
+}
+
 export async function saveSummaryToGitHub(
   payload: Payload,
   repoSpec: string
@@ -60,13 +159,34 @@ export async function saveSummaryToGitHub(
 
   const weekEnding = payload.meta.week_ending;
   const basePath = "2026-weekly-work-summaries";
+  const json = JSON.stringify(payload, null, 2);
+  const markdown = buildMarkdownSummary(payload);
+
+  try {
+    await commitViaGraphQL(
+      token,
+      owner,
+      repo,
+      [
+        { path: `${basePath}/${weekEnding}.json`, contents: json },
+        { path: `${basePath}/${weekEnding}.md`, contents: markdown },
+      ],
+      `Save weekly summary ${weekEnding}`
+    );
+    return;
+  } catch (err) {
+    if (!(err instanceof GitHubGraphQLError)) throw err;
+    console.error(
+      `GraphQL commit failed (${err.message}); falling back to the contents API`
+    );
+  }
 
   await putFile(
     token,
     owner,
     repo,
     `${basePath}/${weekEnding}.json`,
-    JSON.stringify(payload, null, 2),
+    json,
     `Save weekly summary ${weekEnding}`
   );
 
@@ -75,7 +195,7 @@ export async function saveSummaryToGitHub(
     owner,
     repo,
     `${basePath}/${weekEnding}.md`,
-    buildMarkdownSummary(payload),
+    markdown,
     `Save weekly summary ${weekEnding} (md)`
   );
 }

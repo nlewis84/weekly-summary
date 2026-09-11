@@ -9,7 +9,7 @@
   "stats": {
     "prs_merged": 14,
     "prs_total": 16,
-    "pr_reviews": 71,
+    "pr_reviews": 72,
     "pr_comments": 89,
     "commits_pushed": 36,
     "linear_completed": 11,
@@ -28,7 +28,7 @@
     "lines_added": 3435,
     "lines_deleted": 311,
     "files_changed": 105,
-    "median_review_latency_hours": 0.69
+    "median_review_latency_hours": 0.73
   },
   "linear": {
     "completed_issues": [
@@ -966,10 +966,19 @@
         "title": "fix: require SESSION_SECRET instead of a hardcoded cookie-signing fallback",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4172",
         "repo": "apollos-admin",
-        "requested_at": null,
+        "requested_at": "2026-08-27T18:41:03Z",
         "reviewed_at": "2026-08-27T19:42:40Z",
         "review_state": "COMMENTED",
-        "latency_hours": null
+        "latency_hours": 1.03
+      },
+      {
+        "title": "fix(admin): org-scoped user helpers and churchId row lock",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4171",
+        "repo": "apollos-admin",
+        "requested_at": "2026-08-27T18:48:25Z",
+        "reviewed_at": "2026-08-27T19:44:40Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.94
       },
       {
         "title": "fix(admin): validate healthcheck PORT and drop duplicate jsx tests",

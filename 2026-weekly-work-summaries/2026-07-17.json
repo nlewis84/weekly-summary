@@ -9,7 +9,7 @@
   "stats": {
     "prs_merged": 4,
     "prs_total": 5,
-    "pr_reviews": 31,
+    "pr_reviews": 33,
     "pr_comments": 14,
     "commits_pushed": 8,
     "linear_completed": 11,
@@ -24,7 +24,7 @@
     "lines_added": 283,
     "lines_deleted": 13,
     "files_changed": 6,
-    "median_review_latency_hours": 66.37,
+    "median_review_latency_hours": 5.89,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -328,7 +328,7 @@
         "requested_at": "2026-07-17T04:27:44Z",
         "reviewed_at": "2026-07-17T13:09:28Z",
         "review_state": "APPROVED",
-        "latency_hours": 8.7
+        "latency_hours": 0
       },
       {
         "title": "[APO-6508] Migrate push-pay-migrations flag to Web LaunchDarkly",
@@ -337,7 +337,7 @@
         "requested_at": "2026-07-16T20:09:40Z",
         "reviewed_at": "2026-07-17T02:58:22Z",
         "review_state": "APPROVED",
-        "latency_hours": 6.81
+        "latency_hours": 1.84
       },
       {
         "title": "fix(finance): resolve isRecurring at event time for transactions report (APO-10492)",
@@ -346,7 +346,16 @@
         "requested_at": "2026-07-16T15:27:08Z",
         "reviewed_at": "2026-07-17T02:50:30Z",
         "review_state": "APPROVED",
-        "latency_hours": 11.39
+        "latency_hours": 6.55
+      },
+      {
+        "title": "fix(web-embeds): hold fit-content modal height so Done is not clipped",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3822",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-16T14:37:04Z",
+        "reviewed_at": "2026-07-16T14:53:18Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.27
       },
       {
         "title": "feat(seed): deterministic giving + migration fixtures for appstoretester",
@@ -355,7 +364,7 @@
         "requested_at": "2026-07-17T16:10:12Z",
         "reviewed_at": "2026-07-17T22:44:05Z",
         "review_state": "COMMENTED",
-        "latency_hours": 6.56
+        "latency_hours": 5.83
       },
       {
         "title": "fix(admin): clear Data-tab loading bar for churches with no workflows",
@@ -364,7 +373,7 @@
         "requested_at": "2026-07-14T23:24:07Z",
         "reviewed_at": "2026-07-15T00:06:48Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.71
+        "latency_hours": 0
       },
       {
         "title": "[APO-6508] Migrate 1st and 15th flag to Web LaunchDarkly",
@@ -400,7 +409,7 @@
         "requested_at": "2026-07-15T18:09:22Z",
         "reviewed_at": "2026-07-16T14:47:32Z",
         "review_state": "APPROVED",
-        "latency_hours": 20.64
+        "latency_hours": 4.64
       },
       {
         "title": "fix(admin): backfill Ministry Platform group-type config connection (APO-3972)",
@@ -409,7 +418,7 @@
         "requested_at": "2026-07-14T01:42:36Z",
         "reviewed_at": "2026-07-14T19:56:28Z",
         "review_state": "APPROVED",
-        "latency_hours": 18.23
+        "latency_hours": 5.94
       },
       {
         "title": "chore: standardize Node 24 policy",
@@ -418,7 +427,7 @@
         "requested_at": "2026-07-13T22:42:07Z",
         "reviewed_at": "2026-07-14T20:06:23Z",
         "review_state": "COMMENTED",
-        "latency_hours": 21.4
+        "latency_hours": 6.11
       },
       {
         "title": "fix(finance): typed not-found rejection when selecting a recurring payment method",
@@ -436,7 +445,7 @@
         "requested_at": "2026-07-14T00:39:36Z",
         "reviewed_at": "2026-07-14T19:25:06Z",
         "review_state": "APPROVED",
-        "latency_hours": 18.76
+        "latency_hours": 5.42
       },
       {
         "title": "fix(giving): show ACH bank name on charges when source-of-truth flag is on (APO-10354)",
@@ -445,7 +454,7 @@
         "requested_at": "2026-07-13T13:40:00Z",
         "reviewed_at": "2026-07-13T13:41:05Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.02
+        "latency_hours": 0
       },
       {
         "title": "fix(web-embeds): migration probe no longer self-destructs on a timer (APO-10395)",
@@ -454,7 +463,7 @@
         "requested_at": "2026-07-10T23:27:18Z",
         "reviewed_at": "2026-07-13T17:49:34Z",
         "review_state": "COMMENTED",
-        "latency_hours": 66.37
+        "latency_hours": 3.83
       },
       {
         "title": "fix(web-embeds): migration popup follows the church's brand colors (APO-9321)",
@@ -463,7 +472,7 @@
         "requested_at": "2026-07-10T22:03:47Z",
         "reviewed_at": "2026-07-13T17:30:14Z",
         "review_state": "COMMENTED",
-        "latency_hours": 67.44
+        "latency_hours": 3.5
       },
       {
         "title": "Run release deploys from the main control plane",
@@ -472,7 +481,7 @@
         "requested_at": "2026-07-10T19:48:05Z",
         "reviewed_at": "2026-07-13T17:17:33Z",
         "review_state": "COMMENTED",
-        "latency_hours": 69.49
+        "latency_hours": 5.49
       },
       {
         "title": "fix(admin): warn TV customers about YouTube/Vimeo links (APO-10396)",
@@ -481,7 +490,7 @@
         "requested_at": "2026-07-11T00:01:36Z",
         "reviewed_at": "2026-07-13T17:20:42Z",
         "review_state": "APPROVED",
-        "latency_hours": 65.32
+        "latency_hours": 3.35
       },
       {
         "title": "fix(web): drop duplicate Stripe pre-validation from migrate confirm action",
@@ -490,7 +499,7 @@
         "requested_at": "2026-07-09T20:33:55Z",
         "reviewed_at": "2026-07-13T17:19:40Z",
         "review_state": "COMMENTED",
-        "latency_hours": 92.76
+        "latency_hours": 12.76
       },
       {
         "title": "fix(web): drop duplicate payment-method pre-validation in select-payment-method",
@@ -499,7 +508,16 @@
         "requested_at": "2026-07-09T16:31:00Z",
         "reviewed_at": "2026-07-13T14:57:11Z",
         "review_state": "APPROVED",
-        "latency_hours": 94.44
+        "latency_hours": 14.44
+      },
+      {
+        "title": "test(web): Mobot iOS-Safari suite + cross-browser migration-embed smoke (APO-9322)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3778",
+        "repo": "apollos-admin",
+        "requested_at": "2026-07-09T06:01:54Z",
+        "reviewed_at": "2026-07-13T17:41:01Z",
+        "review_state": "APPROVED",
+        "latency_hours": 19.68
       },
       {
         "title": "test(web-embeds): e2e for Crossroads migration toast auth flows",
@@ -508,7 +526,7 @@
         "requested_at": "2026-07-10T15:28:18Z",
         "reviewed_at": "2026-07-13T17:48:39Z",
         "review_state": "COMMENTED",
-        "latency_hours": 74.34
+        "latency_hours": 10.34
       },
       {
         "title": "feat(connect-button): duplicate profile check in OTP flow (APO-5217)",
@@ -517,7 +535,7 @@
         "requested_at": "2026-07-09T00:29:43Z",
         "reviewed_at": "2026-07-13T14:47:11Z",
         "review_state": "COMMENTED",
-        "latency_hours": 110.29
+        "latency_hours": 16.79
       },
       {
         "title": "[APO-6508] Add LaunchDarkly web migration routing",
@@ -526,7 +544,7 @@
         "requested_at": "2026-07-06T21:15:23Z",
         "reviewed_at": "2026-07-13T14:33:02Z",
         "review_state": "APPROVED",
-        "latency_hours": 161.29
+        "latency_hours": 33.29
       },
       {
         "title": "fix: resolve unused files knip warnings",
@@ -535,7 +553,7 @@
         "requested_at": "2026-07-04T03:52:55Z",
         "reviewed_at": "2026-07-13T14:15:35Z",
         "review_state": "APPROVED",
-        "latency_hours": 226.38
+        "latency_hours": 40.26
       },
       {
         "title": "test(web): add e2e coverage for the add-payment-method flow",
@@ -544,7 +562,7 @@
         "requested_at": "2026-07-08T15:29:42Z",
         "reviewed_at": "2026-07-13T14:34:08Z",
         "review_state": "APPROVED",
-        "latency_hours": 119.07
+        "latency_hours": 23.07
       },
       {
         "title": "feat(admin): duplicate a feed",
@@ -553,7 +571,7 @@
         "requested_at": "2026-07-09T01:12:17Z",
         "reviewed_at": "2026-07-13T14:55:17Z",
         "review_state": "APPROVED",
-        "latency_hours": 109.72
+        "latency_hours": 16.92
       },
       {
         "title": "docs(bible): add AGENTS_bible.md for the bible datasource",
@@ -562,7 +580,7 @@
         "requested_at": "2026-07-01T16:44:50Z",
         "reviewed_at": "2026-07-16T16:26:53Z",
         "review_state": "APPROVED",
-        "latency_hours": 359.7
+        "latency_hours": 87.7
       },
       {
         "title": "perf: reorder Dockerfile COPY/install layers for better cache reuse",
@@ -571,7 +589,7 @@
         "requested_at": "2026-07-09T14:55:18Z",
         "reviewed_at": "2026-07-13T14:49:14Z",
         "review_state": "APPROVED",
-        "latency_hours": 95.9
+        "latency_hours": 15.9
       },
       {
         "title": "fix(canvas): scripture modal inserts trigger immediate Cluster save",
@@ -580,16 +598,16 @@
         "requested_at": "2026-07-09T02:48:39Z",
         "reviewed_at": "2026-07-13T14:41:58Z",
         "review_state": "APPROVED",
-        "latency_hours": 107.89
+        "latency_hours": 16.7
       },
       {
         "title": "chore: migrate admin UI router imports",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3458",
         "repo": "apollos-admin",
-        "requested_at": null,
+        "requested_at": "2026-07-15T17:11:04Z",
         "reviewed_at": "2026-07-16T14:41:25Z",
         "review_state": "APPROVED",
-        "latency_hours": null
+        "latency_hours": 5.51
       },
       {
         "title": "Migration: clean up stale global customer records from test-mode churches",
@@ -598,7 +616,7 @@
         "requested_at": "2026-05-13T17:12:56Z",
         "reviewed_at": "2026-07-15T22:16:27Z",
         "review_state": "APPROVED",
-        "latency_hours": 1517.06
+        "latency_hours": 364.78
       }
     ]
   },

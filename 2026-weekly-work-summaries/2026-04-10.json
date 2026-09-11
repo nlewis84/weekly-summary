@@ -25,7 +25,7 @@
     "lines_added": 2102,
     "lines_deleted": 43,
     "files_changed": 22,
-    "median_review_latency_hours": 7.15,
+    "median_review_latency_hours": 0.27,
     "linear_projects_completed": 0
   },
   "linear": {
@@ -348,7 +348,7 @@
         "requested_at": "2026-04-08T13:22:08Z",
         "reviewed_at": "2026-04-08T14:16:14Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.9
+        "latency_hours": 0.27
       },
       {
         "title": "[APO-8152] Restore payment method editing, fix list not updating",
@@ -357,7 +357,7 @@
         "requested_at": "2026-04-07T22:45:01Z",
         "reviewed_at": "2026-04-08T14:09:19Z",
         "review_state": "APPROVED",
-        "latency_hours": 15.41
+        "latency_hours": 0.16
       },
       {
         "title": "feat: add transaction detail sheet and refund functionality to giving",
@@ -384,7 +384,7 @@
         "requested_at": "2026-04-07T13:48:45Z",
         "reviewed_at": "2026-04-07T13:56:27Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.13
+        "latency_hours": 0
       },
       {
         "title": "Fix cancellation confirmation email logo contrast",
@@ -411,7 +411,7 @@
         "requested_at": "2026-04-04T00:30:18Z",
         "reviewed_at": "2026-04-06T14:34:17Z",
         "review_state": "APPROVED",
-        "latency_hours": 62.07
+        "latency_hours": 0.57
       },
       {
         "title": "fix(ci): stabilize admin seed bootstrap and web e2e preview lookup",
@@ -420,7 +420,7 @@
         "requested_at": "2026-04-04T00:23:46Z",
         "reviewed_at": "2026-04-06T14:36:39Z",
         "review_state": "COMMENTED",
-        "latency_hours": 62.21
+        "latency_hours": 0.61
       },
       {
         "title": "Simplify web-embeds v1 by removing donation support",
@@ -429,7 +429,7 @@
         "requested_at": "2026-04-03T22:34:58Z",
         "reviewed_at": "2026-04-06T14:15:19Z",
         "review_state": "APPROVED",
-        "latency_hours": 63.67
+        "latency_hours": 0.26
       },
       {
         "title": "APO-8075: Add express checkout and hide back arrow in migration payment flow",
@@ -438,7 +438,7 @@
         "requested_at": "2026-04-07T19:01:21Z",
         "reviewed_at": "2026-04-08T14:00:03Z",
         "review_state": "COMMENTED",
-        "latency_hours": 18.98
+        "latency_hours": 2.98
       }
     ]
   },

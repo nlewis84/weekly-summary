@@ -1,6 +1,6 @@
 import { data } from "react-router";
 import type { ActionFunctionArgs } from "react-router";
-import { runSummary } from "../../lib/summary";
+import { getCachedRunSummary, runSummary } from "../../lib/summary";
 import { saveSummaryToGitHub } from "../../lib/github-persist";
 import { buildBasecampSummary } from "../../lib/markdown";
 import { isBasecampConfigured, postWeeklySummaryToBasecamp } from "../../lib/basecamp-post";
@@ -17,11 +17,19 @@ export async function action({ request }: ActionFunctionArgs) {
   const postToBasecamp = formData.get("postToBasecamp") === "true";
 
   try {
-    const result = await runSummary({
+    // This used runSummary unconditionally, so every click on Generate paid
+    // for a full ~800-request cold run even when the dashboard had fetched the
+    // same week seconds earlier. Reuse that work — but only when there is no
+    // check-in text, since the cache key does not include it and a cached run
+    // would silently drop what the user typed.
+    const summaryArgs = {
       todayMode: todayOnly,
       checkInsText: checkIns,
       outputDir: null,
-    });
+    };
+    const result = checkIns.trim()
+      ? await runSummary(summaryArgs)
+      : await getCachedRunSummary(summaryArgs);
 
     let basecampPosted = false;
     let basecampError: string | undefined;

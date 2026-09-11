@@ -237,7 +237,7 @@
         "requested_at": "2026-04-28T22:13:34Z",
         "reviewed_at": "2026-04-28T22:16:24Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.05
+        "latency_hours": 0
       },
       {
         "title": "fix: Replace Routes During Login/Signup Flow [APO-8677]",
@@ -246,7 +246,7 @@
         "requested_at": "2026-04-27T22:32:36Z",
         "reviewed_at": "2026-04-27T22:45:02Z",
         "review_state": "APPROVED",
-        "latency_hours": 0.21
+        "latency_hours": 0
       },
       {
         "title": "fix: send app clip localizations inline",
@@ -255,7 +255,7 @@
         "requested_at": "2026-04-25T04:30:21Z",
         "reviewed_at": "2026-04-29T14:29:48Z",
         "review_state": "APPROVED",
-        "latency_hours": 105.99
+        "latency_hours": 16.5
       },
       {
         "title": "chore(schema): remove unused deprecated schema fields",
@@ -264,7 +264,7 @@
         "requested_at": "2026-04-24T21:31:03Z",
         "reviewed_at": "2026-04-29T14:09:37Z",
         "review_state": "COMMENTED",
-        "latency_hours": 112.64
+        "latency_hours": 16.64
       },
       {
         "title": "feat: add giveOnWebAllowedSources field to Church schema",

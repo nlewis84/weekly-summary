@@ -459,6 +459,39 @@ describe("runSummary GitHub paging", () => {
           });
         }
 
+        // The per-PR fans are batched over GraphQL now: one aliased query per
+        // 25 PRs, answered here the same way the REST endpoints below were.
+        if (url.includes("api.github.com/graphql")) {
+          const body = init?.body ? JSON.parse(init.body as string) : {};
+          const query = String(body.query ?? "");
+          const vars = (body.variables ?? {}) as Record<string, unknown>;
+          const data: Record<string, unknown> = {};
+          for (let i = 0; vars[`n${i}`] !== undefined; i += 1) {
+            const n = Number(vars[`n${i}`]);
+            const pr: Record<string, unknown> = {};
+            if (query.includes("reviews(")) {
+              pr.reviews = {
+                nodes: [{ state: "APPROVED", submittedAt: REVIEWED_AT }],
+                pageInfo: { hasNextPage: false },
+              };
+            }
+            if (query.includes("timelineItems(")) {
+              pr.timelineItems = { nodes: [], pageInfo: { hasNextPage: false } };
+            }
+            if (query.includes("comments(")) {
+              pr.comments = {
+                nodes:
+                  commentOnPr != null && n === commentOnPr
+                    ? [{ createdAt: REVIEWED_AT, author: { login: "testuser" } }]
+                    : [],
+                pageInfo: { hasNextPage: false },
+              };
+            }
+            data[`p${i}`] = { pullRequest: pr };
+          }
+          return json({ data });
+        }
+
         if (url.includes("/search/issues")) {
           if (!url.includes("reviewed-by")) return json({ items: [], total_count: 0 });
           const page = Number(new URL(url).searchParams.get("page") ?? "1");

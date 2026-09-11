@@ -21,6 +21,7 @@ import { isGranolaConfigured } from "../../lib/granola-client";
 import { TodaySection } from "~/components/TodaySection";
 import { PeriodSummaryCard } from "~/components/PeriodSummaryCard";
 import { FullSummaryFormContainer } from "~/components/FullSummaryFormContainer";
+import { ErrorBanner } from "~/components/ErrorBanner";
 import { useRefreshInterval } from "~/hooks/useRefreshInterval";
 import { useGoals } from "~/hooks/useGoals";
 import { useMonthlyPrTarget } from "~/hooks/useMonthlyGoal";
@@ -160,6 +161,10 @@ export default function Index() {
   const { target: monthlyTarget } = useMonthlyPrTarget();
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  // An explicit refresh is allowed to bust the cache; the interval below is
+  // not. A cold load is ~1,000 GitHub requests, so an auto-refresh that busts
+  // costs more per hour than the 5,000/hour budget holds and leaves nothing for
+  // the buttons that actually write something.
   const handleRefresh = useCallback(() => {
     setSearchParams((prev) => {
       const next = new URLSearchParams(prev);
@@ -168,13 +173,37 @@ export default function Index() {
     });
   }, [setSearchParams]);
 
+  const handleAutoRefresh = useCallback(() => {
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev);
+      next.delete("_bust");
+      return next;
+    });
+  }, [setSearchParams]);
+
   useEffect(() => {
     if (intervalMs === null) return;
-    intervalRef.current = setInterval(handleRefresh, intervalMs);
+    intervalRef.current = setInterval(handleAutoRefresh, intervalMs);
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [intervalMs, handleRefresh]);
+  }, [intervalMs, handleAutoRefresh]);
+
+  // `_bust` is sticky once set: left in the URL it makes every later load in
+  // this tab uncached, including the interval's. Drop it as soon as the load it
+  // was meant for has landed.
+  useEffect(() => {
+    if (navigation.state !== "idle") return;
+    if (!searchParams.has("_bust")) return;
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete("_bust");
+        return next;
+      },
+      { replace: true, preventScrollReset: true }
+    );
+  }, [navigation.state, searchParams, setSearchParams]);
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -246,7 +275,20 @@ export default function Index() {
     <div className="space-y-5">
       <div className="xl:grid xl:grid-cols-[minmax(0,1.6fr)_minmax(20rem,1fr)] xl:gap-5 xl:items-start">
         <Suspense fallback={loadingCards}>
-          <Await resolve={dashboard}>
+          <Await
+            resolve={dashboard}
+            errorElement={
+              <div className="contents">
+                <div className="xl:col-span-2">
+                  <ErrorBanner
+                    message="GitHub and Linear took too long. Retry in a moment."
+                    onRetry={() => window.location.reload()}
+                  />
+                </div>
+                {loadingCards}
+              </div>
+            }
+          >
             {(resolved) => {
               const todayPayload =
                 resolved.today && "payload" in resolved.today
