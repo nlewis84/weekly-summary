@@ -37,6 +37,7 @@ import {
 } from "./github-metrics.js";
 import {
   GitHubGraphQLError,
+  toleratedGapCount,
   fetchDefaultBranchCommits,
   fetchPrActivity,
   fetchPrCommits,
@@ -1066,7 +1067,16 @@ async function fetchCommitsPushed(
     const total = seen.size;
     const reposWithCommits = [...new Set([...seen.values()])].sort();
     return { total, reposWithCommits };
-  } catch {
+  } catch (err) {
+    // "We could not ask" is not "you pushed nothing". This catch used to return
+    // a zero for every failure, which is how an exhausted GraphQL budget was
+    // saved as commits_pushed: 0 next to 140 real commits.
+    if (
+      err instanceof GitHubGraphQLError ||
+      err instanceof RateLimitExhaustedError
+    ) {
+      throw err;
+    }
     return { total: 0, reposWithCommits: [] };
   }
 }
@@ -1584,6 +1594,7 @@ export async function runSummary(options: {
   const windowEndISO = windowEnd.toISOString();
 
   const refusalsBefore = coreRefusalCount();
+  const gapsBefore = toleratedGapCount();
 
   const [linearData, githubData] = await Promise.all([
     fetchLinearData(windowStart, windowEnd, windowStartISO, windowEndISO),
@@ -1600,6 +1611,15 @@ export async function runSummary(options: {
     throw new RateLimitExhaustedError(
       budget?.resetAt ?? Date.now(),
       budget?.limit ?? 5000
+    );
+  }
+
+  // Same reasoning for the batched reads: a tolerated gap means some PRs went
+  // unanswered, so every count derived from them is short by an unknown amount.
+  const gaps = toleratedGapCount() - gapsBefore;
+  if (gaps > 0) {
+    throw new GitHubGraphQLError(
+      `${gaps} PR${gaps === 1 ? "" : "s"} could not be read; counts would be short`
     );
   }
 

@@ -241,6 +241,17 @@ describe("runSummary", () => {
             { headers: { "Content-Type": "application/json" } }
           );
         }
+        if (url.includes("api.github.com/graphql")) {
+          // The batched reads live here now; an empty `data` is a valid
+          // "nothing to report", whereas no `data` at all is a real failure.
+          const body = init?.body ? JSON.parse(init.body as string) : {};
+          const query = String(body.query ?? "");
+          const data: Record<string, unknown> = {};
+          if (query.includes("user(login:")) data.user = { id: "U_test" };
+          return new Response(JSON.stringify({ data }), {
+            headers: { "Content-Type": "application/json" },
+          });
+        }
         if (url.includes("github.com")) {
           if (url.includes("/events")) {
             return new Response(JSON.stringify([]), {
@@ -372,6 +383,17 @@ describe("runSummary", () => {
               },
             };
           }
+          return new Response(JSON.stringify({ data }), {
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        if (url.includes("api.github.com/graphql")) {
+          // The batched reads live here now; an empty `data` is a valid
+          // "nothing to report", whereas no `data` at all is a real failure.
+          const body = init?.body ? JSON.parse(init.body as string) : {};
+          const query = String(body.query ?? "");
+          const data: Record<string, unknown> = {};
+          if (query.includes("user(login:")) data.user = { id: "U_test" };
           return new Response(JSON.stringify({ data }), {
             headers: { "Content-Type": "application/json" },
           });

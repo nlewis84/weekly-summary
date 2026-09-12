@@ -16,6 +16,25 @@ import { fetchWithRetry } from "./github-api.js";
 
 const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql";
 
+/**
+ * Per-path NOT_FOUND errors this process has tolerated.
+ *
+ * Tolerating them keeps one deleted repo from discarding a batch of 25, but a
+ * run that tolerated any of them is reporting on fewer PRs than it was asked
+ * about. Callers compare this across a run to decide whether the numbers are
+ * safe to report.
+ */
+let tolerated = 0;
+
+export function toleratedGapCount(): number {
+  return tolerated;
+}
+
+/** Test helper — module state outlives individual cases. */
+export function resetToleratedGaps(): void {
+  tolerated = 0;
+}
+
 /** Newline, for assembling multi-alias queries. */
 const BR = "\n";
 
@@ -234,8 +253,8 @@ function toActivity(pr: GqlPullRequest): PrActivity {
 
 export interface GraphQLOptions {
   /**
-   * Treat per-path NOT_FOUND / FORBIDDEN errors as "nothing there" instead of
-   * failing the request.
+   * Treat per-path NOT_FOUND errors as "nothing there" instead of failing the
+   * request.
    *
    * Only correct for the batched multi-alias reads, where one deleted or
    * private repo must not discard the other 24 answers — REST returned a 404
@@ -269,14 +288,17 @@ export async function graphqlRequest<T>(
   };
 
   if (body.errors?.length) {
-    const allMissing = body.errors.every(
-      (e) => e.type === "NOT_FOUND" || e.type === "FORBIDDEN"
-    );
+    // FORBIDDEN deliberately is NOT tolerated: a throttled or permission-denied
+    // path looks exactly like that, and swallowing it turned an exhausted
+    // GraphQL budget into a summary reporting 0 commits and 21 merged PRs
+    // instead of 140 and 50 — saved as fact, with no error shown.
+    const allMissing = body.errors.every((e) => e.type === "NOT_FOUND");
     if (!body.data || !options.tolerateMissing || !allMissing) {
       throw new GitHubGraphQLError(
         body.errors.map((e) => e.message ?? e.type ?? "unknown").join("; ")
       );
     }
+    tolerated += body.errors.length;
   }
 
   if (!body.data) throw new GitHubGraphQLError("empty response");
