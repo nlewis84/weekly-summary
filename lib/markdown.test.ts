@@ -88,126 +88,47 @@ describe("buildBasecampSummary", () => {
     expect(md).not.toContain("Terminal output");
   });
 
-  it("formats PR items as `[title](url)(repo)` markdown list bullets", () => {
+  it("reports every section as a count, never as a list of items", () => {
+    const reviews = Array.from({ length: 194 }, (_, i) => ({
+      title: `review ${i}`,
+      url: `https://github.com/ApollosProject/apollos-admin/pull/${i}`,
+      repo: "apollos-admin",
+      latency_hours: 1.5,
+    }));
     const md = buildBasecampSummary(
       makePayload({
         github: {
           merged_prs: [
-            {
-              title: "fix: pagination controls to Transactions should be outside the parent div",
-              url: "https://github.com/ApollosProject/apollos-admin/pull/1",
-              repo: "apollos-admin",
-              merged_at: "2026-04-17T12:00:00.000Z",
-            },
-            {
-              title: "feat: add stripe_platform_id column to customers table",
-              url: "https://github.com/ApollosProject/apollos-cluster/pull/2",
-              repo: "apollos-cluster",
-              merged_at: "2026-04-16T12:00:00.000Z",
-            },
+            { title: "fix: a thing", url: "https://github.com/x/1", repo: "apollos-admin", merged_at: null },
+            { title: "fix: another", url: "https://github.com/x/2", repo: "apollos-cluster", merged_at: null },
           ],
           open_prs: [
-            {
-              title: "feat: enrich transactions with Stripe balance transaction fees and net",
-              url: "https://github.com/ApollosProject/apollos-admin/pull/3",
-              repo: "apollos-admin",
-              state: "open",
-            },
+            { title: "wip", url: "https://github.com/x/3", repo: "apollos-admin", state: "open" },
           ],
-          reviews: [
-            { title: "feat: default status filter on recurring tab", url: "https://github.com/x" },
-          ],
+          reviews,
         },
-      })
-    );
-
-    expect(md).toContain(
-      "PRs merged\n- [fix: pagination controls to Transactions should be outside the parent div](https://github.com/ApollosProject/apollos-admin/pull/1)(apollos-admin)\n- [feat: add stripe_platform_id column to customers table](https://github.com/ApollosProject/apollos-cluster/pull/2)(apollos-cluster)"
-    );
-    expect(md).toContain(
-      "PRs active\n- [feat: enrich transactions with Stripe balance transaction fees and net](https://github.com/ApollosProject/apollos-admin/pull/3)(apollos-admin)"
-    );
-    expect(md).toContain(
-      "PR reviews\n- [feat: default status filter on recurring tab](https://github.com/x)"
-    );
-    expect(md).not.toContain("2026-04-17");
-  });
-
-  it("falls back to title-only when PR repo and url are missing", () => {
-    const md = buildBasecampSummary(
-      makePayload({
-        github: {
-          merged_prs: [{ title: "chore: orphan pr", url: "", repo: null, merged_at: null }],
-          open_prs: [],
-          reviews: [],
-        },
-      })
-    );
-    expect(md).toContain("PRs merged\n- chore: orphan pr\n");
-    expect(md).not.toContain("chore: orphan pr(");
-    expect(md).not.toContain("[chore: orphan pr]");
-  });
-
-  it("formats Linear items as `[IDENTIFIER title](url)` markdown list bullets", () => {
-    const md = buildBasecampSummary(
-      makePayload({
         linear: {
-          completed_issues: [
-            {
-              identifier: "APO-8303",
-              title: "Handle staging Pushpay URL when forwarding query params",
-              completedAt: "2026-04-14T12:00:00.000Z",
-              project: "Project A",
-              url: "https://linear.app/x/issue/APO-8303/handle-staging-pushpay",
-            },
-          ],
-          worked_on_issues: [
-            {
-              identifier: "APO-8668",
-              title: "Enrich transactions with balance transaction fee data in loader",
-              url: "https://linear.app/x/issue/APO-8668/enrich-transactions",
-            },
-          ],
-          created_issues: [
-            {
-              identifier: "APO-8669",
-              title: "Zero fees in payouts export for gross-settled churches",
-              createdAt: "2026-04-17T12:00:00.000Z",
-              url: "https://linear.app/x/issue/APO-8669/zero-fees",
-            },
-          ],
+          completed_issues: [{ identifier: "APO-1", title: "done" }, { identifier: "APO-2", title: "done2" }],
+          worked_on_issues: [{ identifier: "APO-3", title: "wip" }],
+          created_issues: [{ identifier: "APO-4", title: "new" }, { identifier: "APO-5", title: "new2" }],
           commented_issues: [],
         },
       })
     );
 
-    expect(md).toContain(
-      "Linear done\n- [APO-8303 Handle staging Pushpay URL when forwarding query params](https://linear.app/x/issue/APO-8303/handle-staging-pushpay)"
-    );
-    expect(md).toContain(
-      "Linear active\n- [APO-8668 Enrich transactions with balance transaction fee data in loader](https://linear.app/x/issue/APO-8668/enrich-transactions)"
-    );
-    expect(md).toContain(
-      "Linear created\n- [APO-8669 Zero fees in payouts export for gross-settled churches](https://linear.app/x/issue/APO-8669/zero-fees)"
-    );
-    expect(md).not.toContain("2026-04-14");
-    expect(md).not.toContain("2026-04-17");
-    expect(md).not.toContain("Project A");
-  });
+    expect(md).toContain("PRs merged\n- Merged 2 PRs");
+    expect(md).toContain("PRs active\n- 1 PR still open");
+    expect(md).toContain("PR reviews\n- Reviewed 194 PRs");
+    expect(md).toContain("Linear done\n- Completed 2 issues");
+    expect(md).toContain("Linear active\n- Worked on 1 issue");
+    expect(md).toContain("Linear created\n- Created 2 issues");
 
-  it("falls back to plain `IDENTIFIER title` when Linear url is missing", () => {
-    const md = buildBasecampSummary(
-      makePayload({
-        linear: {
-          completed_issues: [{ identifier: "APO-1", title: "no url" }],
-          worked_on_issues: [],
-          created_issues: [],
-          commented_issues: [],
-        },
-      })
-    );
-    expect(md).toContain("Linear done\n- APO-1 no url\n");
-    expect(md).not.toContain("[APO-1 no url]");
+    // No per-item detail leaks through: that is what blew Basecamp's size limit.
+    expect(md).not.toContain("review 0");
+    expect(md).not.toContain("github.com");
+    expect(md).not.toContain("APO-1");
+    expect(md).not.toContain("1.5h");
+    expect(md.length).toBeLessThan(400);
   });
 
   it("emits sections in the expected order", () => {

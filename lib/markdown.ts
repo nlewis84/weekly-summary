@@ -80,71 +80,67 @@ export function buildMarkdownSummary(payload: Payload): string {
  * Items are emitted as Markdown bullet lists with hyperlinks so Basecamp
  * renders each item on its own line and links out to the PR/issue.
  */
+/**
+ * The Basecamp check-in answer: one count per section, no item lists.
+ *
+ * Basecamp rejects an oversized answer with a bare "Unprocessable Entity", and
+ * a busy week (≈200 reviews, ≈65 PRs, ≈170 Linear issues) ran to ~73k
+ * characters against a ceiling nearer 58k — so the whole post failed rather
+ * than arriving trimmed. The per-item detail lives in the summary committed to
+ * GitHub, which has no such limit, and this stays a digest that fits.
+ */
 export function buildBasecampSummary(payload: Payload): string {
   const { linear, github } = payload;
   const sections: string[] = [];
 
-  const mergedPrs = github.merged_prs ?? [];
-  if (mergedPrs.length > 0) {
-    sections.push(buildSection("PRs merged", mergedPrs.map((pr) => formatPrLine(pr.title, pr.repo, pr.url))));
-  }
+  const addCount = (heading: string, line: string, count: number) => {
+    if (count > 0) sections.push(buildSection(heading, [line]));
+  };
 
-  const openPrs = github.open_prs ?? [];
-  if (openPrs.length > 0) {
-    sections.push(buildSection("PRs active", openPrs.map((pr) => formatPrLine(pr.title, pr.repo, pr.url))));
-  }
+  const merged = github.merged_prs ?? [];
+  addCount("PRs merged", `Merged ${count(merged.length, "PR")}`, merged.length);
+
+  const open = github.open_prs ?? [];
+  addCount("PRs active", `${count(open.length, "PR")} still open`, open.length);
 
   const reviews = github.reviews ?? [];
-  if (reviews.length > 0) {
-    sections.push(
-      buildSection(
-        "PR reviews",
-        reviews.map((pr) => {
-          const base = formatPrLine(pr.title, pr.repo, pr.url);
-          if (pr.latency_hours != null) return `${base} (${pr.latency_hours}h)`;
-          return base;
-        })
-      )
-    );
-  }
+  addCount(
+    "PR reviews",
+    `Reviewed ${count(reviews.length, "PR")}`,
+    reviews.length
+  );
 
   const completed = linear.completed_issues ?? [];
-  if (completed.length > 0) {
-    sections.push(buildSection("Linear done", completed.map(formatLinearLine)));
-  }
+  addCount(
+    "Linear done",
+    `Completed ${count(completed.length, "issue")}`,
+    completed.length
+  );
 
   const workedOn = linear.worked_on_issues ?? [];
-  if (workedOn.length > 0) {
-    sections.push(buildSection("Linear active", workedOn.map(formatLinearLine)));
-  }
+  addCount(
+    "Linear active",
+    `Worked on ${count(workedOn.length, "issue")}`,
+    workedOn.length
+  );
 
   const created = linear.created_issues ?? [];
-  if (created.length > 0) {
-    sections.push(buildSection("Linear created", created.map(formatLinearLine)));
-  }
+  addCount(
+    "Linear created",
+    `Created ${count(created.length, "issue")}`,
+    created.length
+  );
 
   const body = sections.join("\n\n");
   return `Callouts for:\n\n${body}\n`;
+}
+
+function count(n: number, noun: string): string {
+  return `${n} ${noun}${n === 1 ? "" : "s"}`;
 }
 
 function buildSection(heading: string, items: string[]): string {
   return [heading, ...items.map((item) => `- ${item}`)].join("\n");
 }
 
-function formatPrLine(
-  title: string | undefined,
-  repo: string | null | undefined,
-  url: string | undefined
-): string {
-  const t = title ?? "";
-  const linked = url ? `[${t}](${url})` : t;
-  return repo ? `${linked}(${repo})` : linked;
-}
 
-function formatLinearLine(issue: Record<string, unknown>): string {
-  const id = (issue.identifier as string) ?? "";
-  const title = (issue.title as string) ?? "";
-  const url = (issue.url as string) ?? "";
-  const label = id ? `${id} ${title}` : title;
-  return url ? `[${label}](${url})` : label;
-}

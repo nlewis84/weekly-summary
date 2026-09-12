@@ -84,16 +84,53 @@ interface BasecampResult {
   error?: string;
 }
 
+/**
+ * The CLI reports failures as JSON on stdout *and* exits non-zero, which makes
+ * execFile throw. Reading only `err.message` there threw the useful half away:
+ * a rejected post surfaced as Node's "Command failed: basecamp checkins answer
+ * create ..." with the entire body echoed back, instead of the API's actual
+ * complaint (an oversized answer comes back as "Unprocessable Entity").
+ */
+function parseBasecampOutput(stdout: unknown): BasecampResult | null {
+  if (typeof stdout !== "string" || !stdout.trim()) return null;
+  try {
+    const parsed = JSON.parse(stdout) as {
+      ok?: boolean;
+      error?: string;
+      code?: string;
+    };
+    if (parsed.ok === false) {
+      const detail = [parsed.error, parsed.code && `(${parsed.code})`]
+        .filter(Boolean)
+        .join(" ");
+      return { ok: false, error: detail || "basecamp CLI reported a failure" };
+    }
+    return { ok: true };
+  } catch {
+    return null;
+  }
+}
+
 async function runBasecamp(args: string[]): Promise<BasecampResult> {
   try {
     const { stdout } = await execFileAsync("basecamp", args, {
       timeout: 30_000,
+      maxBuffer: 10 * 1024 * 1024,
     });
-    const parsed = JSON.parse(stdout) as { ok?: boolean; error?: string };
-    return { ok: parsed.ok !== false };
+    return parseBasecampOutput(stdout) ?? { ok: true };
   } catch (err) {
-    const msg =
+    const fromCli = parseBasecampOutput(
+      (err as { stdout?: unknown } | null)?.stdout
+    );
+    if (fromCli) {
+      console.error("Basecamp CLI error:", fromCli.error);
+      return fromCli;
+    }
+    // Nothing parseable — fall back to the thrown message, trimmed so a large
+    // body echoed into it cannot become the error the user sees.
+    const raw =
       err instanceof Error ? err.message : "Unknown basecamp CLI error";
+    const msg = raw.length > 300 ? `${raw.slice(0, 300)}…` : raw;
     console.error("Basecamp CLI error:", msg);
     return { ok: false, error: msg };
   }

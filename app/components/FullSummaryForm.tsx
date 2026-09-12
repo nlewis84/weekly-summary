@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { FileText, PushPin } from "phosphor-react";
 import { useToast } from "./Toast";
 import { LottieIcon } from "./LottieIcon";
@@ -8,6 +8,7 @@ import type { Payload } from "../../lib/types";
 import { readPref, writePref } from "~/lib/prefs-storage";
 
 const LAST_BUILT_KEY = "weekly-summary-last-built";
+const POST_TO_BASECAMP_KEY = "weekly-summary-post-to-basecamp";
 
 function readLastBuiltFromStorage(): {
   builtAt: string;
@@ -81,7 +82,19 @@ export function FullSummaryForm({
   const [selectedDates, setSelectedDates] = useState<Set<string>>(new Set());
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const hiddenCheckInsRef = useRef<HTMLInputElement>(null);
+  // Persisted, not plain useState: this form is rendered twice in _index.tsx —
+  // once in the Suspense fallback and once inside the resolved <Await> — and the
+  // loader builds a fresh dashboard promise on every revalidation. Each one
+  // remounts the form, which silently reset this box to unchecked and let a save
+  // go through without the Basecamp post the user had asked for.
   const [postToBasecamp, setPostToBasecamp] = useState(false);
+  useEffect(() => {
+    setPostToBasecamp(readPref(POST_TO_BASECAMP_KEY) === "true");
+  }, []);
+  const changePostToBasecamp = useCallback((next: boolean) => {
+    setPostToBasecamp(next);
+    writePref(POST_TO_BASECAMP_KEY, next ? "true" : "false");
+  }, []);
 
   useEffect(() => {
     if (snapshots.length > 0) {
@@ -109,6 +122,7 @@ export function FullSummaryForm({
       let msg = "Summary saved to repository";
       if (basecampPosted) msg += " + posted to Basecamp";
       else if (basecampError) msg += " (Basecamp post failed)";
+      else if (basecampConfigured) msg += " (not posted to Basecamp)";
       toast(msg);
       const entry = { builtAt, weekEnding };
       setLastBuilt(entry);
@@ -327,7 +341,7 @@ export function FullSummaryForm({
                   type="checkbox"
                   id="postToBasecamp"
                   checked={postToBasecamp}
-                  onChange={(e) => setPostToBasecamp(e.target.checked)}
+                  onChange={(e) => changePostToBasecamp(e.target.checked)}
                   className="rounded border-(--color-border) text-primary-600 focus:ring-primary-500"
                 />
                 <label
@@ -356,7 +370,13 @@ export function FullSummaryForm({
               <LottieIcon name="check" size={48} loop={false} />
               <div className="flex-1">
                 <p className="font-medium text-success-500">
-                  Saved to repository{basecampPosted ? " + posted to Basecamp" : ""}.
+                  Saved to repository
+                  {basecampPosted
+                    ? " + posted to Basecamp"
+                    : basecampConfigured && !basecampError
+                      ? " — not posted to Basecamp"
+                      : ""}
+                  .
                 </p>
                 <p className="text-sm text-text-muted mt-0.5">
                   Your weekly summary has been generated and committed.
