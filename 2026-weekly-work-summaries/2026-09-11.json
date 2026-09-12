@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated_at": "2026-09-11T23:49:19.007Z",
+    "generated_at": "2026-09-12T00:04:30.221Z",
     "window_start": "2026-09-05T05:00:00.000Z",
     "window_end": "2026-09-12T04:59:59.999Z",
     "week_ending": "2026-09-11",
     "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
   },
   "stats": {
-    "prs_merged": 21,
+    "prs_merged": 50,
     "prs_total": 65,
-    "pr_reviews": 157,
-    "pr_comments": 138,
-    "commits_pushed": 0,
+    "pr_reviews": 194,
+    "pr_comments": 171,
+    "commits_pushed": 140,
     "linear_completed": 56,
     "linear_projects_completed": 0,
     "linear_worked_on": 60,
@@ -25,10 +25,10 @@
       "apollos-platforms",
       "freedup-migration"
     ],
-    "lines_added": 2644,
-    "lines_deleted": 6728,
-    "files_changed": 105,
-    "median_review_latency_hours": 9.18
+    "lines_added": 4526,
+    "lines_deleted": 7234,
+    "files_changed": 201,
+    "median_review_latency_hours": 5.73
   },
   "linear": {
     "completed_issues": [
@@ -1556,6 +1556,15 @@
         "changed_files": 5
       },
       {
+        "title": "fix(admin): pad assessment category fields off the card edge",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4655",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-09T20:55:04Z",
+        "additions": 9,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
         "title": "fix(admin): align assessment questions with their answers",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4654",
         "repo": "apollos-admin",
@@ -1589,6 +1598,15 @@
         "merged_at": "2026-09-10T01:56:15Z",
         "additions": 38,
         "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "Map Assessment to Assessment with a stable assessmentId",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/28",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-10T16:09:44Z",
+        "additions": 186,
+        "deletions": 10,
         "changed_files": 2
       },
       {
@@ -1655,6 +1673,24 @@
         "changed_files": 2
       },
       {
+        "title": "refactor(admin): share church-flag env hatch with editor flags (APO-12755)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4573",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-09T15:56:45Z",
+        "additions": 225,
+        "deletions": 112,
+        "changed_files": 8
+      },
+      {
+        "title": "refactor(admin): share church-flag env hatch (APO-12752)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4571",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T19:44:50Z",
+        "additions": 155,
+        "deletions": 39,
+        "changed_files": 4
+      },
+      {
         "title": "refactor(canvas-ui-web): share json() between Admin and web (APO-12751)",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4567",
         "repo": "apollos-admin",
@@ -1664,6 +1700,15 @@
         "changed_files": 6
       },
       {
+        "title": "refactor(admin): share deepEqual between utils and BarChart (APO-12750)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4566",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-09T03:19:21Z",
+        "additions": 1,
+        "deletions": 24,
+        "changed_files": 1
+      },
+      {
         "title": "refactor(web-embeds): share canvas-ui-web isValidUrl with Admin novel-core (APO-12747)",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4565",
         "repo": "apollos-admin",
@@ -1671,6 +1716,222 @@
         "additions": 58,
         "deletions": 16,
         "changed_files": 6
+      },
+      {
+        "title": "refactor(web): share canvas-ui-web getSubdomain in well-known routes (APO-12745)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4562",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T19:52:59Z",
+        "additions": 56,
+        "deletions": 31,
+        "changed_files": 6
+      },
+      {
+        "title": "refactor(web): share canvas-ui-web extractAskTurns (APO-12732)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4561",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-09T03:19:22Z",
+        "additions": 68,
+        "deletions": 32,
+        "changed_files": 6
+      },
+      {
+        "title": "refactor(web-embeds): share canvas-ui-web validateEmail (APO-12731)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4559",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T19:45:07Z",
+        "additions": 46,
+        "deletions": 11,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(admin): cancel PageCard save timer on unmount (APO-12722)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4557",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T19:44:50Z",
+        "additions": 101,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(web-embeds): share canvas-ui-web parseSlugToIdAndType (APO-12658)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4538",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T10:25:09Z",
+        "additions": 104,
+        "deletions": 59,
+        "changed_files": 7
+      },
+      {
+        "title": "refactor(web): share canvas-ui-web retryAfterSeconds in ResendButton and web-embeds (APO-12656)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4537",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T19:52:59Z",
+        "additions": 71,
+        "deletions": 41,
+        "changed_files": 7
+      },
+      {
+        "title": "refactor(admin): share canvas-ui-web formatPhone between web and Admin (APO-12655)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4536",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T19:19:02Z",
+        "additions": 50,
+        "deletions": 18,
+        "changed_files": 8
+      },
+      {
+        "title": "fix(admin): type QuestionBlockFeature allowPublicResponses (APO-12654)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4535",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T18:50:38Z",
+        "additions": 2,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(tap-linking): share canvas-ui-web normalizeChurchSlugForApi (APO-12653)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4534",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T10:25:09Z",
+        "additions": 20,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(web): share canonicalFrequencyFromId in gift edit (APO-12652)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4533",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T14:55:09Z",
+        "additions": 88,
+        "deletions": 26,
+        "changed_files": 5
+      },
+      {
+        "title": "refactor(admin): share getCurrentDateString in stripe.server (APO-12650)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4531",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T14:55:09Z",
+        "additions": 11,
+        "deletions": 8,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share getTodayInZone in EditRecurringGiftModal (APO-12649)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4530",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T14:55:08Z",
+        "additions": 10,
+        "deletions": 10,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(web): share normalizeChurchSlugForUrl in slugs.ts (APO-12548)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4529",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T10:24:21Z",
+        "additions": 8,
+        "deletions": 17,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(admin): type AssessmentForm, ImageFeature, and question storage (APO-12648)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4528",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T10:24:21Z",
+        "additions": 47,
+        "deletions": 23,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(admin): preserve community share URL protocol and empty feeds (APO-12507)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4464",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T22:46:59Z",
+        "additions": 106,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(web-embeds): share canvas-ui-web slug helpers in ensurePublic/AdminChurchSlug (APO-12546)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4463",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T02:40:56Z",
+        "additions": 23,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(admin): nest canvas ExpandableSection children from parent_feature_id (APO-12493)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4461",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T15:04:24Z",
+        "additions": 97,
+        "deletions": 6,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share normalizeChurchSlugForUrl in embedSnippet toPublicSlug (APO-12544)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4460",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T02:40:06Z",
+        "additions": 15,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(admin): keep ExpandableSection card from overlapping the previous canvas block (APO-12494)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4453",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T14:59:43Z",
+        "additions": 14,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(admin): play attached audio in the canvas AudioFeature pill (APO-12495)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4451",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-09T03:20:22Z",
+        "additions": 226,
+        "deletions": 12,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share normalizeChurchSlugForUrl in sendgrid gift-failed email (APO-12525)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4449",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T02:50:59Z",
+        "additions": 2,
+        "deletions": 1,
+        "changed_files": 1
+      },
+      {
+        "title": "refactor(admin): share normalizeChurchSlugForUrl in FeedSharingModal (APO-12524)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4447",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T02:54:47Z",
+        "additions": 12,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(web): share normalizeChurchSlugForUrl in well-known routes (APO-12512)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4446",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T02:47:57Z",
+        "additions": 65,
+        "deletions": 3,
+        "changed_files": 3
+      },
+      {
+        "title": "refactor(web): share normalizeChurchSlugForApi in createApolloClient (APO-12510)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4445",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-08T02:52:08Z",
+        "additions": 64,
+        "deletions": 7,
+        "changed_files": 2
       }
     ],
     "open_prs": [
@@ -1748,6 +2009,276 @@
       }
     ],
     "reviews": [
+      {
+        "title": "e2e: Giving overview page-load smoke",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4737",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T21:22:23Z",
+        "reviewed_at": "2026-09-11T22:06:07Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.63
+      },
+      {
+        "title": "test(giving): cover the fail-closed giveOnWeb source gate helpers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4736",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T20:56:09Z",
+        "reviewed_at": "2026-09-11T22:01:44Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.06
+      },
+      {
+        "title": "Point agents at admin Playwright e2e suite",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4733",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T19:12:34Z",
+        "reviewed_at": "2026-09-11T22:11:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.79
+      },
+      {
+        "title": "test(tap-linking): drop the duplicate \"handles null activation parameter\" test (APO-13154)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4729",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:32:46Z",
+        "reviewed_at": "2026-09-11T22:11:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.45
+      },
+      {
+        "title": "test(admin): drop the duplicate \"no options provided\" hasAccess test (APO-13153)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4728",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:31:52Z",
+        "reviewed_at": "2026-09-11T22:11:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.47
+      },
+      {
+        "title": "test(admin): drop a byte-identical duplicate in getDeltaDagsCached (APO-13152)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4727",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:31:08Z",
+        "reviewed_at": "2026-09-11T22:11:32Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.48
+      },
+      {
+        "title": "test(donation-embed): drop a byte-identical duplicate in StartDateSelector (APO-13151)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4726",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:30:08Z",
+        "reviewed_at": "2026-09-11T22:11:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.5
+      },
+      {
+        "title": "Use Cluster REST origin for generated audio deletes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4725",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T19:53:11Z",
+        "reviewed_at": "2026-09-11T22:10:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.11
+      },
+      {
+        "title": "ci(releases): daily Web deploys and continuous Linear sync",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4723",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:05:16Z",
+        "reviewed_at": "2026-09-11T22:12:59Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.91
+      },
+      {
+        "title": "chore(admin): remove unused determineContentSetup (APO-13135)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4721",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T16:27:44Z",
+        "reviewed_at": "2026-09-11T17:32:31Z",
+        "review_state": "DISMISSED",
+        "latency_hours": 1.08
+      },
+      {
+        "title": "feat(admin): verify Amazon upload credentials on store setup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4720",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T16:18:13Z",
+        "reviewed_at": "2026-09-11T17:35:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.29
+      },
+      {
+        "title": "e2e: Apps/Feeds/Integrations Catalog page-load smokes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4718",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T17:38:32Z",
+        "reviewed_at": "2026-09-11T18:59:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.35
+      },
+      {
+        "title": "refactor(admin): use the existing DropdownTransition in five dropdowns (APO-13092)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4706",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T22:44:38Z",
+        "reviewed_at": "2026-09-11T17:34:50Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.58
+      },
+      {
+        "title": "Fix web search answer SSE origin fallback",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4705",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T01:06:31Z",
+        "reviewed_at": "2026-09-11T17:34:04Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.57
+      },
+      {
+        "title": "test(donation-embed): cover toExpressCheckoutError, the donor-facing error funnel (APO-13076)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4704",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T20:40:01Z",
+        "reviewed_at": "2026-09-10T21:15:44Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.6
+      },
+      {
+        "title": "fix(admin): pass the validate() error, not the whole result, to validationError in createNewApp action",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4703",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:36:08Z",
+        "reviewed_at": "2026-09-11T22:16:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.4
+      },
+      {
+        "title": "fix(admin): pass the validate() error, not the whole result, to validationError in stores marketing action",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4702",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:07:52Z",
+        "reviewed_at": "2026-09-11T22:12:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.87
+      },
+      {
+        "title": "fix(admin): pass the validate() error, not the whole result, to validationError in App Clip action",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4701",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:11:30Z",
+        "reviewed_at": "2026-09-11T22:10:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.81
+      },
+      {
+        "title": "fix(admin): pass the validate() error, not the whole result, to validationError in campuses action",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4700",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:12:34Z",
+        "reviewed_at": "2026-09-11T22:17:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.79
+      },
+      {
+        "title": "fix(admin): pass the validate() error, not the whole result, to validationError in communities action",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4699",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:12:13Z",
+        "reviewed_at": "2026-09-11T22:12:25Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.8
+      },
+      {
+        "title": "fix(admin): pass the validate() error, not the whole result, to validationError in funds action",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4698",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:11:56Z",
+        "reviewed_at": "2026-09-11T22:11:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.8
+      },
+      {
+        "title": "perf(admin): roll the Total People total up in one BigQuery job",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4697",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T20:40:59Z",
+        "reviewed_at": "2026-09-10T21:16:12Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.59
+      },
+      {
+        "title": "perf(admin): stop the shell loaders re-running on the editor autosave",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4695",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T19:42:45Z",
+        "reviewed_at": "2026-09-10T21:15:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.55
+      },
+      {
+        "title": "fix(security): stop using collection GET /api/config/:church (APO-7495)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4691",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T21:09:01Z",
+        "reviewed_at": "2026-09-10T22:32:47Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.85
+      },
+      {
+        "title": "Point the PushPay report at transactions (APO-12030)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4690",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:52:45Z",
+        "reviewed_at": "2026-09-11T22:02:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.12
+      },
+      {
+        "title": "chore(admin): remove unused createPaginationQueryString (APO-12979)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4689",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T16:31:04Z",
+        "reviewed_at": "2026-09-10T21:15:36Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.74
+      },
+      {
+        "title": "chore(admin): remove unused AUTO_REFRESH_TIMEOUT (APO-12978)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4688",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T16:26:49Z",
+        "reviewed_at": "2026-09-10T21:15:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.81
+      },
+      {
+        "title": "build(admin): ship a production-only runtime stage (APO-12969)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4684",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T15:33:45Z",
+        "reviewed_at": "2026-09-10T21:15:46Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.7
+      },
+      {
+        "title": "build(admin): build only the admin app in the Docker image (APO-12968)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4683",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T15:32:06Z",
+        "reviewed_at": "2026-09-10T21:15:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.72
+      },
+      {
+        "title": "build(admin): scope Tailwind content globs to shared package src (APO-12967)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4682",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T15:31:55Z",
+        "reviewed_at": "2026-09-10T21:15:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.73
+      },
       {
         "title": "Add tap-linking Cluster REST origin helper",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4679",
@@ -2901,6 +3432,15 @@
         "latency_hours": 8.78
       },
       {
+        "title": "feat(admin): let Super Admins opt in to v2 Giving reports early",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4431",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T21:49:11Z",
+        "reviewed_at": "2026-09-10T22:54:17Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.18
+      },
+      {
         "title": "fix(admin): require mobile_app skill on mobile tab mutations",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4421",
         "repo": "apollos-admin",
@@ -3084,10 +3624,10 @@
         "title": "feat(assessments): spread AssessmentFeature into the web feed fragment",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4315",
         "repo": "apollos-admin",
-        "requested_at": null,
+        "requested_at": "2026-09-11T01:22:54Z",
         "reviewed_at": "2026-09-11T17:33:11Z",
         "review_state": "APPROVED",
-        "latency_hours": null
+        "latency_hours": 3.55
       },
       {
         "title": "feat(assessments): render the entry card, sheet, and result chart on web",
@@ -3111,19 +3651,28 @@
         "title": "fix(admin): require auth and org scope on the users route",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4270",
         "repo": "apollos-admin",
-        "requested_at": "2026-09-04T05:06:34Z",
+        "requested_at": null,
         "reviewed_at": "2026-09-09T02:57:25Z",
         "review_state": "DISMISSED",
-        "latency_hours": 24
+        "latency_hours": null
       },
       {
         "title": "fix(admin): add creator to new org before church switch",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/4268",
         "repo": "apollos-admin",
-        "requested_at": "2026-09-04T05:06:36Z",
+        "requested_at": null,
         "reviewed_at": "2026-09-09T02:57:26Z",
         "review_state": "DISMISSED",
-        "latency_hours": 24
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): redirect after org remove on inviteMember",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4267",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-09T14:42:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
       },
       {
         "title": "feat(admin): add a v2 opt-in toggle on Giving reports",
@@ -3133,6 +3682,42 @@
         "reviewed_at": "2026-09-08T22:22:03Z",
         "review_state": "CHANGES_REQUESTED",
         "latency_hours": 72.36
+      },
+      {
+        "title": "fix(admin): require auth and block SSRF on integration test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4188",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-01T21:28:44Z",
+        "reviewed_at": "2026-09-08T22:22:03Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 40.52
+      },
+      {
+        "title": "fix(admin): generate OTPs with WebCrypto instead of Math.random",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4178",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-09T13:59:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): bind Planning Center OAuth tokens to signed state and session",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4177",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-09T15:23:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): require auth for data pipeline DAG toggle and sync (APO-11754)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4175",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-09T15:24:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
       },
       {
         "title": "fix(admin): scope media deletes to authorized church slug",
@@ -3153,42 +3738,26 @@
         "latency_hours": 49.16
       },
       {
+        "title": "fix(admin): bind App Clip action to authorized church slug (APO-11385)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4074",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-09T02:57:27Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": null
+      },
+      {
         "title": "[MP Reports 7/7] Admin: unbrand Batches Report copy from Rock",
         "url": "https://github.com/ApollosProject/apollos-admin/pull/3870",
         "repo": "apollos-admin",
-        "requested_at": "2026-09-04T18:41:14Z",
+        "requested_at": null,
         "reviewed_at": "2026-09-09T14:34:59Z",
         "review_state": "APPROVED",
-        "latency_hours": 19.9
+        "latency_hours": null
       }
     ]
   },
-  "check_ins": [
-    {
-      "day": "Wednesday",
-      "content": "- fix(admin): pad assessment category fields off the card edge\n- Map CardTimer to Timer with integer seconds\n- fix(admin): pass selection state so BarChart bars can dim (APO-12862)\n- refactor(admin): share church-flag env hatch with editor flags (APO-12755)\n- refactor(admin): share church-flag env hatch (APO-12752)\n- refactor(canvas-ui-web): share json() between Admin and web (APO-12751)\n- refactor(admin): share deepEqual between utils and BarChart (APO-12750)\n- refactor(web-embeds): share canvas-ui-web isValidUrl with Admin novel-core (APO-12747)\n- refactor(web): share canvas-ui-web getSubdomain in well-known routes (APO-12745)\n- refactor(web): share canvas-ui-web extractAskTurns (APO-12732)\n- refactor(web-embeds): share canvas-ui-web validateEmail (APO-12731)\n- fix(admin): cancel PageCard save timer on unmount (APO-12722)\n- …and 26 more (see Weekly Summary)\n- Reviewed: fix(web): ask for TimerFeature.seconds on content items\n- Reviewed: fix(admin): align assessment questions with their answers\n- Reviewed: fix(admin): stop two never-taken guards from crashing New Content and autosave\n- Reviewed: fix(admin): degrade editor chrome instead of losing the whole page\n- Reviewed: fix(admin): keep unusable media ids out of the uuid cast\n- Reviewed: fix(admin): free the feature priority range before a save re-keys it\n- Reviewed: fix(admin): park feature rows before reordering so content saves stop hitting the unique index (APO-12791)\n- Reviewed: fix(admin): church-scope tap deletes (APO-11385)\n- Reviewed: feat(admin): add privileged withClusterTransaction helper (APO-11385)\n- Reviewed: test(admin): remove vacuous cache TTL test (APO-12922)\n- Reviewed: APO-12770: Fix Edit Fund drawer writing display_name = '' instead of NULL\n- Reviewed: fix(admin): church-scope tap writes and claim unclaimed batches (APO-11385)\n- …and 130 more reviews\n- Done: APO-12925: Admin - Edit Assessment Categories and text are butted up against the left border\n- Done: APO-12862: BarChart: selected/unselected bars never dim (activeBar and activeLegend not passed to CustomBar)\n- Done: APO-12755: Share Admin church-flag env hatch with expandable, inline-media, and guide-progress\n- Done: APO-12752: Share Admin church-flag env hatch between assessments and recallCalculations\n- Done: APO-12751: Share canvas-ui-web json() between Admin and web json-response\n- Done: APO-12750: Share Admin deepEqual between utils.jsx and BarChart\n- Done: APO-12747: Share canvas-ui-web isValidUrl between web-embeds and Admin novel-core\n- Done: APO-12745: Share canvas-ui-web getSubdomain in web well-known routes\n- Done: APO-12732: Share canvas-ui-web extractAskTurns between web-embeds and web\n- Done: APO-12731: Share canvas-ui-web validateEmail between web-embeds and Admin\n- Done: APO-12658: Share canvas-ui-web parseSlugToIdAndType between web-embeds and web-embeds-v2\n- Done: APO-12656: Share canvas-ui-web retryAfterSeconds between ResendButton and web-embeds rateLimit\n- …and 32 more completed issues\n- In progress: APO-12930: If you are not logged in and try to use an Assessment on Web, the button is disabled and you get no feedback that you must be logged in\n- In progress: APO-12928: Admin - Edit Assessment - Clicking Save Assessment saves, but does NOT dismiss the side modal and it should\n- In progress: APO-12926: Admin - Edit Assessment Questions - the Question is slightly shifted to the right compared to the answers.\n- In progress: APO-12920: Map Assessment to Assessment with a stable assessmentId\n- In progress: APO-12919: Mobile: Week 1 Money Motivations Quiz shows no assessment\n- In progress: APO-12918: Admin: Week 1 Money Motivations Quiz shows no assessment\n- In progress: APO-12917: Web: Week 1 Money Motivations Quiz shows no assessment\n- In progress: APO-12915: Web never asks for TimerFeature.seconds so authored timers render nothing\n- In progress: APO-12900: Move church-flag env-hatch rationale onto isChurchFlagEnabled and convert webEmbedsV2Flag\n- In progress: APO-12899: Bolster logging for tap-lookup failures that fall back to admin.apollos.app\n- In progress: APO-12883: Share firstNonEmptyString between web-embeds getAdminBaseUrl and getWebAppBaseUrl\n- In progress: APO-12882: Share ChartLegend between LineChart and AreaChart\n- …and 7 more in-flight issues\n- Filed 47 new Linear tickets\n- Left comments on PRs and in Linear"
-    },
-    {
-      "day": "Thursday",
-      "content": "- fix: stop a GitHub rate limit from emptying the review queue\n- fix(web): ask for TimerFeature.seconds on content items\n- fix(admin): align assessment questions with their answers\n- fix(admin): close the assessment editor after a successful save\n- fix(web): tell unsigned-in readers they must sign in to take an assessment\n- Admin: keep Mongo assessment ids when Canvas hydrates\n- Map Assessment to Assessment with a stable assessmentId\n- fix(tap): forward tap correlation ids and stamp church-slug errors (APO-12899)\n- fix(mobile): report tap browser fallbacks with context (APO-12899)\n- fix(tap): tag tapScan misses and throws for Sentry (APO-12899)\n- fix(tap-linking): report admin fallbacks to Sentry (APO-12899)\n- Reviewed: test(donation-embed): cover toExpressCheckoutError, the donor-facing error funnel (APO-13076)\n- Reviewed: perf(admin): roll the Total People total up in one BigQuery job\n- Reviewed: perf(admin): stop the shell loaders re-running on the editor autosave\n- Reviewed: chore(admin): remove unused createPaginationQueryString (APO-12979)\n- Reviewed: chore(admin): remove unused AUTO_REFRESH_TIMEOUT (APO-12978)\n- Reviewed: build(admin): ship a production-only runtime stage (APO-12969)\n- Reviewed: build(admin): build only the admin app in the Docker image (APO-12968)\n- Reviewed: build(admin): scope Tailwind content globs to shared package src (APO-12967)\n- Reviewed: Add tap-linking Cluster REST origin helper\n- Reviewed: fix(admin): authenticate Tap requests and ignore form tenant\n- Reviewed: refactor(admin): consolidate the six inlined modal close buttons (APO-12947)\n- Reviewed: test(admin): cover giveOnWebSources parse/read guards\n- …and 6 more reviews\n- In progress: APO-12916: Scrolling to the bottom of a content item is not marking the item as completed on mobile\n- In progress: APO-12899: Bolster logging for tap-lookup failures that fall back to admin.apollos.app\n- Left comments on PRs and in Linear"
-    },
-    {
-      "day": "Friday",
-      "content": "- fix(mobile): stop poll vote-change hang and crash (APO-13138)\n- Keep the voted poll option filled when results are hidden\n- Evaluate question-block-privacy on the server like other editor flags\n- Keep pollId when Admin hydrates a Poll from SQL rows\n- Map MultipleChoice / MultipleSelect / GroupMultipleChoice to Poll\n- fix(mobile): keep first-visit completion and unlock the next item (APO-12916)\n- fix(mobile): send tap correlation ids and skip duplicate GraphQL capture (APO-12899)\n- Reviewed: e2e: Giving overview page-load smoke\n- Reviewed: test(giving): cover the fail-closed giveOnWeb source gate helpers\n- Reviewed: Point agents at admin Playwright e2e suite\n- Reviewed: test(tap-linking): drop the duplicate \"handles null activation parameter\" test (APO-13154)\n- Reviewed: test(admin): drop the duplicate \"no options provided\" hasAccess test (APO-13153)\n- Reviewed: test(admin): drop a byte-identical duplicate in getDeltaDagsCached (APO-13152)\n- Reviewed: test(donation-embed): drop a byte-identical duplicate in StartDateSelector (APO-13151)\n- Reviewed: Use Cluster REST origin for generated audio deletes\n- Reviewed: ci(releases): daily Web deploys and continuous Linear sync\n- Reviewed: chore(admin): remove unused determineContentSetup (APO-13135)\n- Reviewed: feat(admin): verify Amazon upload credentials on store setup\n- Reviewed: e2e: Apps/Feeds/Integrations Catalog page-load smokes\n- …and 19 more reviews\n- Done: APO-12930: If you are not logged in and try to use an Assessment on Web, the button is disabled and you get no feedback that you must be logged in\n- Done: APO-12928: Admin - Edit Assessment - Clicking Save Assessment saves, but does NOT dismiss the side modal and it should\n- Done: APO-12926: Admin - Edit Assessment Questions - the Question is slightly shifted to the right compared to the answers.\n- Done: APO-12918: Admin: Week 1 Money Motivations Quiz shows no assessment\n- Done: APO-12915: Web never asks for TimerFeature.seconds so authored timers render nothing\n- Done: APO-12899: Bolster logging for tap-lookup failures that fall back to admin.apollos.app\n- Done: APO-11955: M2: Wire mobile multi-select from maxSelections\n- Done: APO-11950: M-hidden: Hide vote totals on mobile when a poll hides results\n- Done: APO-11948: M3: Checkbox icons for multi-select poll options\n- Done: APO-11946: A1b: Zod defaults and the poll-settings flag\n- Done: APO-11945: A1: Persist poll settings on the admin SQL write path\n- Done: APO-11943: Recut Poll Enhancements into stacked PRs and babysit to merge\n- Filed 14 new Linear tickets\n- Left comments on PRs and in Linear"
-    },
-    {
-      "day": "Friday",
-      "content": ", September 11\nDaily\nWhat did you work on today\n5:26 PM\nMapped FreedUp multiple-choice blocks over to Poll\nFiled Admin empty Poll form when the poll is already on the row\nFreedUp project issues cleanup\nHammering on FreedUp Migration and Polls/Multiple Choice\nShipped better logging for church tap lookups that fall back the wrong way\nScreenshot 2026-09-11 at 5.24.10 PM.png\nScreenshot 2026-09-11 at 5.24.10 PM.png"
-    },
-    {
-      "day": "Thursday",
-      "content": ", September 10\nDaily\nWhat did you work on today\n5:13 PM\n1:1 w/ @Vincent\n1:1 w/ Michael\nRan FreedUp content import on prod and confirmed it in Demo TestFlight w/ @Conrad\nConfirmed Timers hold up on Admin, Web, and mobile\nFixed content items not staying marked complete after you scroll to the bottom; in review w/ @Conrad\nClosed overlapping Assessment work; shipped quiz display, Web login nudge, and Admin edit/layout fixes\nWalked FreedUp prod re-run steps w/ @Conrad\nLined up an Airflow rewrite plan for the FreedUp import w/ @Vincent\nSent CITN Louisville travel spend (hotel, flight, meals, parking)\nJam w/ @Conrad on FreedUp week one\nScreenshot 2026-09-10 at 5.11.51 PM.png\nScreenshot 2026-09-10 at 5.11.51 PM.png"
-    },
-    {
-      "day": "Wednesday",
-      "content": ", September 9\nDaily\nWhat did you work on today\n4:56 PM\nHelped @Matt on Echo intermittent church taps; put better logging out for review across the lookup chain\nMerged a bunch of shared helpers across Admin, web, and giving (date, church-link, phone, slug, and related)\nMerged Admin church feature-flag helper share for expandable sections, inline media, and guide progress\nMerged FreedUp timer mapping and Admin bar chart selected-bar fix\nFiled Money Motivations quiz missing on web, Admin, and mobile; mapping work in progress\nPut Admin assessment edit UI fixes in review (spacing, save modal, add-option placement)\nPut web timer and logged-out assessment feedback fixes in review\nFiled mobile guide progress not completing when you scroll to the bottom\nCaveat on these stats, this is all the work I did from Sep 3 - EOD today. I worked a bit over the weekend to get some things lined up for this week since I was OOO Monday/Tuesday.\nScreenshot 2026-09-09 at 4.53.28 PM.png"
-    }
-  ],
-  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 21\n  • PR reviews: 157\n  • Commits pushed: 0\n  • Code volume: +2644 / -6728 (105 files)\n  • Median review latency (working hours): 9.18h\n  • Linear issues completed: 56\n  • Linear projects completed: 0\n  • Linear issues worked on: 60\n  • Linear issues created: 57\n  • Linear replies: 8\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-infrastructure, apollos-platforms, freedup-migration\n\n📝 Check-ins:\n\n  Wednesday: - fix(admin): pad assessment category fields off the card edge\n- Map CardTimer t...\n  Thursday: - fix: stop a GitHub rate limit from emptying the review queue\n- fix(web): ask f...\n  Friday: - fix(mobile): stop poll vote-change hang and crash (APO-13138)\n- Keep the voted...\n  Friday: , September 11\nDaily\nWhat did you work on today\n5:26 PM\nMapped FreedUp multiple-...\n  Thursday: , September 10\nDaily\nWhat did you work on today\n5:13 PM\n1:1 w/ @Vincent\n1:1 w/ M...\n  Wednesday: , September 9\nDaily\nWhat did you work on today\n4:56 PM\nHelped @Matt on Echo inte...\n",
+  "check_ins": [],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 50\n  • PR reviews: 194\n  • Commits pushed: 140\n  • Code volume: +4526 / -7234 (201 files)\n  • Median review latency (working hours): 5.73h\n  • Linear issues completed: 56\n  • Linear projects completed: 0\n  • Linear issues worked on: 60\n  • Linear issues created: 57\n  • Linear replies: 8\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-infrastructure, apollos-platforms, freedup-migration\n\n",
   "formatted_output": null
 }
