@@ -1,0 +1,2914 @@
+{
+  "meta": {
+    "generated_at": "2026-09-18T22:14:14.065Z",
+    "window_start": "2026-09-12T05:00:00.000Z",
+    "window_end": "2026-09-19T04:59:59.999Z",
+    "week_ending": "2026-09-18",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 16,
+    "prs_total": 20,
+    "pr_reviews": 155,
+    "pr_comments": 185,
+    "commits_pushed": 43,
+    "linear_completed": 78,
+    "linear_projects_completed": 0,
+    "linear_worked_on": 30,
+    "linear_issues_created": 31,
+    "linear_comments": 23,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-platforms",
+      "apollos-shovel",
+      "forge",
+      "freedup-migration"
+    ],
+    "lines_added": 1966,
+    "lines_deleted": 90,
+    "files_changed": 53,
+    "median_review_latency_hours": 4.41
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-13604",
+        "title": "Decide the grant path for the next year",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13604/decide-the-grant-path-for-the-next-year",
+        "completedAt": "2026-09-18T16:06:05.366Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13603",
+        "title": "Census HubSpot contacts/companies: is CRM a source of truth?",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13603/census-hubspot-contactscompanies-is-crm-a-source-of-truth",
+        "completedAt": "2026-09-17T16:43:43.837Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13602",
+        "title": "Census WooCommerce orders: can we match an Apollos person?",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13602/census-woocommerce-orders-can-we-match-an-apollos-person",
+        "completedAt": "2026-09-17T16:43:43.589Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13601",
+        "title": "Write how FreedUp access works today",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13601/write-how-freedup-access-works-today",
+        "completedAt": "2026-09-17T16:43:44.225Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13488",
+        "title": "Canvas drops nested Recalls inside Expandable Sections",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13488/canvas-drops-nested-recalls-inside-expandable-sections",
+        "completedAt": "2026-09-16T16:23:18.896Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13487",
+        "title": "Canvas Oops: Content hole not allowed in a leaf node spec",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13487/canvas-oops-content-hole-not-allowed-in-a-leaf-node-spec",
+        "completedAt": "2026-09-16T16:23:18.845Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13484",
+        "title": "[migration] Drop same-card HTML that repeats the Poll question",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13484/migration-drop-same-card-html-that-repeats-the-poll-question",
+        "completedAt": "2026-09-15T21:25:34.538Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13270",
+        "title": "💡 Idea on how to handle multiple choice branching",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13270/idea-on-how-to-handle-multiple-choice-branching",
+        "completedAt": "2026-09-15T21:25:36.492Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13249",
+        "title": "[migration] Drop GuideGroups and Group Sync instruction HTML",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13249/migration-drop-guidegroups-and-group-sync-instruction-html",
+        "completedAt": "2026-09-14T21:16:47.148Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13242",
+        "title": "[migration] Map GroupMultipleChoice through MultipleChoice Poll rules",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13242/migration-map-groupmultiplechoice-through-multiplechoice-poll-rules",
+        "completedAt": "2026-09-14T20:08:51.968Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13241",
+        "title": "[migration] Map SyncTimer to Timer",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13241/migration-map-synctimer-to-timer",
+        "completedAt": "2026-09-14T20:08:52.270Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13240",
+        "title": "[migration] Drop GroupSyncPersonPicker",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13240/migration-drop-groupsyncpersonpicker",
+        "completedAt": "2026-09-14T20:08:52.048Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13239",
+        "title": "[migration] Map GroupReader to Html read-aloud prompt",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13239/migration-map-groupreader-to-html-read-aloud-prompt",
+        "completedAt": "2026-09-14T20:08:52.162Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13238",
+        "title": "Investigate what GuideGroups actually is",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13238/investigate-what-guidegroups-actually-is",
+        "completedAt": "2026-09-14T20:36:40.743Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13195",
+        "title": "Skip ReferencedMultipleChoice in the migrator",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13195/skip-referencedmultiplechoice-in-the-migrator",
+        "completedAt": "2026-09-14T17:04:46.628Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13194",
+        "title": "wk 2 Your Action Plan - pathing seems off",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13194/wk-2-your-action-plan-pathing-seems-off",
+        "completedAt": "2026-09-14T17:04:46.316Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13193",
+        "title": "Wk 2 Income and Housing - Error message in Canvas (bad migration data)",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13193/wk-2-income-and-housing-error-message-in-canvas-bad-migration-data",
+        "completedAt": "2026-09-14T15:27:57.497Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13138",
+        "title": "Mobile poll: changing a vote hangs on a spinner, then a later tap crashes",
+        "project": "Poll Enhancements",
+        "url": "https://linear.app/differential/issue/APO-13138/mobile-poll-changing-a-vote-hangs-on-a-spinner-then-a-later-tap",
+        "completedAt": "2026-09-14T21:21:13.491Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13137",
+        "title": "Web poll: after voting with results hidden, the selected option disappears",
+        "project": "Poll Enhancements",
+        "url": "https://linear.app/differential/issue/APO-13137/web-poll-after-voting-with-results-hidden-the-selected-option",
+        "completedAt": "2026-09-12T16:13:37.791Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13130",
+        "title": "Admin canvas shows empty Poll form when pollId is already on the row",
+        "project": "Poll Enhancements",
+        "url": "https://linear.app/differential/issue/APO-13130/admin-canvas-shows-empty-poll-form-when-pollid-is-already-on-the-row",
+        "completedAt": "2026-09-12T16:13:37.848Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13129",
+        "title": "Map MultipleChoice / MultipleSelect / GroupMultipleChoice to Poll",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13129/map-multiplechoice-multipleselect-groupmultiplechoice-to-poll",
+        "completedAt": "2026-09-12T16:13:37.966Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13127",
+        "title": "[migration] Flatten Week 1 branch and detail pages into expandables",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13127/migration-flatten-week-1-branch-and-detail-pages-into-expandables",
+        "completedAt": "2026-09-14T17:04:46.909Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13126",
+        "title": "[migration] Inspect 3 Lanes “Before you confirm” copies before changing them",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13126/migration-inspect-3-lanes-before-you-confirm-copies-before-changing",
+        "completedAt": "2026-09-14T14:18:18.149Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13125",
+        "title": "[migration] Only strip a matching title on the first card",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13125/migration-only-strip-a-matching-title-on-the-first-card",
+        "completedAt": "2026-09-14T17:04:46.729Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13124",
+        "title": "[migration] Strip duplicate session titles; keep Level N and estimated time",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13124/migration-strip-duplicate-session-titles-keep-level-n-and-estimated",
+        "completedAt": "2026-09-14T17:04:46.825Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13120",
+        "title": "Prod Admin is missing the private / public toggle on question blocks",
+        "project": "Question Block Privacy",
+        "url": "https://linear.app/differential/issue/APO-13120/prod-admin-is-missing-the-private-public-toggle-on-question-blocks",
+        "completedAt": "2026-09-12T16:13:38.180Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12920",
+        "title": "Map Assessment to Assessment with a stable assessmentId",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-12920/map-assessment-to-assessment-with-a-stable-assessmentid",
+        "completedAt": "2026-09-14T17:04:46.441Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12916",
+        "title": "Scrolling to the bottom of a content item is not marking the item as completed on mobile",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-12916/scrolling-to-the-bottom-of-a-content-item-is-not-marking-the-item-as",
+        "completedAt": "2026-09-14T21:19:04.556Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12909",
+        "title": "Map CardTimer to Timer with data.seconds",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-12909/map-cardtimer-to-timer-with-dataseconds",
+        "completedAt": "2026-09-14T17:04:46.538Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12215",
+        "title": "Admin canvas still shows ExpandableImage as Unsupported after the row is an Image feature",
+        "project": "Inline Media Blocks",
+        "url": "https://linear.app/differential/issue/APO-12215/admin-canvas-still-shows-expandableimage-as-unsupported-after-the-row",
+        "completedAt": "2026-09-15T22:13:39.218Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12698",
+        "title": "Register TimerFeature and mount the run provider on mobile",
+        "project": "Timers",
+        "url": "https://linear.app/differential/issue/APO-12698/register-timerfeature-and-mount-the-run-provider-on-mobile",
+        "completedAt": "2026-09-14T21:21:53.133Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12697",
+        "title": "Render the timer block on a reading page",
+        "project": "Timers",
+        "url": "https://linear.app/differential/issue/APO-12697/render-the-timer-block-on-a-reading-page",
+        "completedAt": "2026-09-14T21:21:52.868Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12696",
+        "title": "Hold one running timer per reading on mobile",
+        "project": "Timers",
+        "url": "https://linear.app/differential/issue/APO-12696/hold-one-running-timer-per-reading-on-mobile",
+        "completedAt": "2026-09-14T21:21:53.087Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12695",
+        "title": "Add the timer's strings in three languages",
+        "project": "Timers",
+        "url": "https://linear.app/differential/issue/APO-12695/add-the-timers-strings-in-three-languages",
+        "completedAt": "2026-09-14T21:21:52.918Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12694",
+        "title": "Let ProgressBar take its own tint and track colour",
+        "project": "Timers",
+        "url": "https://linear.app/differential/issue/APO-12694/let-progressbar-take-its-own-tint-and-track-colour",
+        "completedAt": "2026-09-14T21:21:53.035Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12693",
+        "title": "Stub TimerFeature in the mobile client schema",
+        "project": "Timers",
+        "url": "https://linear.app/differential/issue/APO-12693/stub-timerfeature-in-the-mobile-client-schema",
+        "completedAt": "2026-09-14T21:21:52.982Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12626",
+        "title": "[migration] Resolve FreedUp recalls to minted sources across levels",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12626/migration-resolve-freedup-recalls-to-minted-sources-across-levels",
+        "completedAt": "2026-09-14T21:24:39.100Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12625",
+        "title": "[migration] Mint question block ids and answer types for FreedUp prompts",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12625/migration-mint-question-block-ids-and-answer-types-for-freedup-prompts",
+        "completedAt": "2026-09-14T21:24:39.941Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12624",
+        "title": "[mobile] RecallFeature: formula and poll bodies",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12624/mobile-recallfeature-formula-and-poll-bodies",
+        "completedAt": "2026-09-14T21:24:39.180Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12623",
+        "title": "[mobile] RecallFeature: the viewer's answer in post chrome",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12623/mobile-recallfeature-the-viewers-answer-in-post-chrome",
+        "completedAt": "2026-09-14T21:24:40.016Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12622",
+        "title": "[mobile] RecallFeature: fragment, registration and the unanswered state",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12622/mobile-recallfeature-fragment-registration-and-the-unanswered-state",
+        "completedAt": "2026-09-14T21:24:39.842Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12621",
+        "title": "[mobile] Keep the block and same-item recalls fresh after answering",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12621/mobile-keep-the-block-and-same-item-recalls-fresh-after-answering",
+        "completedAt": "2026-09-14T21:24:39.017Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12620",
+        "title": "[mobile] Answers sheet: the viewer's answer first, composer hidden once answered",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12620/mobile-answers-sheet-the-viewers-answer-first-composer-hidden-once",
+        "completedAt": "2026-09-14T21:24:39.739Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12619",
+        "title": "[mobile] Show the viewer's own answer inside the question block",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12619/mobile-show-the-viewers-own-answer-inside-the-question-block",
+        "completedAt": "2026-09-14T21:24:39.521Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12618",
+        "title": "[mobile] Carry the question block's answer state through the comments route params",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12618/mobile-carry-the-question-blocks-answer-state-through-the-comments",
+        "completedAt": "2026-09-14T21:24:39.611Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12617",
+        "title": "[mobile] Numeric composer for number and currency answers",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12617/mobile-numeric-composer-for-number-and-currency-answers",
+        "completedAt": "2026-09-14T21:24:39.359Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12616",
+        "title": "[mobile] Move feed widgets onto Card",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12616/mobile-move-feed-widgets-onto-card",
+        "completedAt": "2026-09-14T21:24:39.265Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12615",
+        "title": "[mobile] Client schema stub for recall and question block answers",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-12615/mobile-client-schema-stub-for-recall-and-question-block-answers",
+        "completedAt": "2026-09-14T21:24:39.439Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12312",
+        "title": "Lock the mobile answer composer and empty state",
+        "project": "Question Block Privacy",
+        "url": "https://linear.app/differential/issue/APO-12312/lock-the-mobile-answer-composer-and-empty-state",
+        "completedAt": "2026-09-14T21:16:33.301Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12311",
+        "title": "Show lock copy on mobile question blocks",
+        "project": "Question Block Privacy",
+        "url": "https://linear.app/differential/issue/APO-12311/show-lock-copy-on-mobile-question-blocks",
+        "completedAt": "2026-09-14T21:16:31.847Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12306",
+        "title": "Lock migrated FreedUp question blocks",
+        "project": "Question Block Privacy",
+        "url": "https://linear.app/differential/issue/APO-12306/lock-migrated-freedup-question-blocks",
+        "completedAt": "2026-09-14T21:15:13.607Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12216",
+        "title": "Sometimes completion logic doesn't fire when scrolling to the end of a content item",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-12216/sometimes-completion-logic-doesnt-fire-when-scrolling-to-the-end-of-a",
+        "completedAt": "2026-09-14T21:19:06.722Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12185",
+        "title": "Mobile: spread AssessmentFeature into the feature fragment",
+        "project": "Assessments",
+        "url": "https://linear.app/differential/issue/APO-12185/mobile-spread-assessmentfeature-into-the-feature-fragment",
+        "completedAt": "2026-09-14T21:22:13.314Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12184",
+        "title": "Mobile: assessment entry card, bottom sheet, and result chart",
+        "project": "Assessments",
+        "url": "https://linear.app/differential/issue/APO-12184/mobile-assessment-entry-card-bottom-sheet-and-result-chart",
+        "completedAt": "2026-09-14T21:22:26.678Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12183",
+        "title": "Mobile: assessment types, client scoring, and answer-state helpers",
+        "project": "Assessments",
+        "url": "https://linear.app/differential/issue/APO-12183/mobile-assessment-types-client-scoring-and-answer-state-helpers",
+        "completedAt": "2026-09-14T21:22:13.411Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12182",
+        "title": "Mobile: declare AssessmentFeature in clientSchema.graphql for codegen",
+        "project": "Assessments",
+        "url": "https://linear.app/differential/issue/APO-12182/mobile-declare-assessmentfeature-in-clientschemagraphql-for-codegen",
+        "completedAt": "2026-09-14T21:22:13.362Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12174",
+        "title": "Admin: serialize the assessment node to an AssessmentFeature row",
+        "project": "Assessments",
+        "url": "https://linear.app/differential/issue/APO-12174/admin-serialize-the-assessment-node-to-an-assessmentfeature-row",
+        "completedAt": "2026-09-14T21:23:48.085Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11822",
+        "title": "Add Expandable Section block to the canvas editor",
+        "project": "Expandable Content Sections",
+        "url": "https://linear.app/differential/issue/APO-11822/add-expandable-section-block-to-the-canvas-editor",
+        "completedAt": "2026-09-14T21:21:32.843Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11821",
+        "title": "Persist nested features with parent_feature_id",
+        "project": "Expandable Content Sections",
+        "url": "https://linear.app/differential/issue/APO-11821/persist-nested-features-with-parent-feature-id",
+        "completedAt": "2026-09-14T21:21:32.937Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11820",
+        "title": "Render expandable sections with ExpandableCard on web",
+        "project": "Expandable Content Sections",
+        "url": "https://linear.app/differential/issue/APO-11820/render-expandable-sections-with-expandablecard-on-web",
+        "completedAt": "2026-09-14T21:21:32.889Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11819",
+        "title": "Gate expandable section authoring behind a church flag",
+        "project": "Expandable Content Sections",
+        "url": "https://linear.app/differential/issue/APO-11819/gate-expandable-section-authoring-behind-a-church-flag",
+        "completedAt": "2026-09-14T21:21:32.793Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11818",
+        "title": "Keep ExpandableCard nested controls inert until expanded",
+        "project": "Expandable Content Sections",
+        "url": "https://linear.app/differential/issue/APO-11818/keep-expandablecard-nested-controls-inert-until-expanded",
+        "completedAt": "2026-09-14T21:21:32.991Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11624",
+        "title": "Cover Guided Content Progression with Playwright",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11624/cover-guided-content-progression-with-playwright",
+        "completedAt": "2026-09-14T21:18:38.339Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11623",
+        "title": "Save the Guided Content Progression choice from the editor",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11623/save-the-guided-content-progression-choice-from-the-editor",
+        "completedAt": "2026-09-14T21:18:47.743Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11622",
+        "title": "Persist a content item's unlock mode",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11622/persist-a-content-items-unlock-mode",
+        "completedAt": "2026-09-14T21:18:47.912Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11621",
+        "title": "Load a content item's unlock mode into the editor",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11621/load-a-content-items-unlock-mode-into-the-editor",
+        "completedAt": "2026-09-14T21:18:47.992Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11620",
+        "title": "Add the Guided Content Progression segmented control",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11620/add-the-guided-content-progression-segmented-control",
+        "completedAt": "2026-09-14T21:18:38.391Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11619",
+        "title": "Resolve the guide-progress flag for a church",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11619/resolve-the-guide-progress-flag-for-a-church",
+        "completedAt": "2026-09-14T21:18:47.828Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11545",
+        "title": "Complete paged content at the end of the reading, with a Completed chip",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11545/complete-paged-content-at-the-end-of-the-reading-with-a-completed-chip",
+        "completedAt": "2026-09-14T21:20:44.618Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11544",
+        "title": "Add a standard Up Next section to content items",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11544/add-a-standard-up-next-section-to-content-items",
+        "completedAt": "2026-09-14T21:20:50.920Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11543",
+        "title": "Resume a journey at the latest touched item, not the first incomplete one",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11543/resume-a-journey-at-the-latest-touched-item-not-the-first-incomplete",
+        "completedAt": "2026-09-14T21:20:48.309Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11449",
+        "title": "Mobile: journey UI (progress header, child-row states, inline completion element)",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11449/mobile-journey-ui-progress-header-child-row-states-inline-completion",
+        "completedAt": "2026-09-14T21:20:22.512Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11446",
+        "title": "Cluster: ProgressNode widening + edge lockState schema + Stellate PRIVATE rules",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11446/cluster-progressnode-widening-edge-lockstate-schema-stellate-private",
+        "completedAt": "2026-09-14T21:20:25.134Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11445",
+        "title": "Mobile: honest completion mechanics (latch, VIEW, conditional complete-on-open)",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11445/mobile-honest-completion-mechanics-latch-view-conditional-complete-on",
+        "completedAt": "2026-09-14T21:20:38.913Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11444",
+        "title": "Admin: Guided Content Progression control (Off / Open / Locked)",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11444/admin-guided-content-progression-control-off-open-locked",
+        "completedAt": "2026-09-14T21:18:52.298Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11443",
+        "title": "Cluster: derived progress traversal (percentComplete, isCompleted, upNext, lock inputs)",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11443/cluster-derived-progress-traversal-percentcomplete-iscompleted-upnext",
+        "completedAt": "2026-09-14T21:20:42.061Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11442",
+        "title": "Cluster: add content_item.unlock_mode migration",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11442/cluster-add-content-itemunlock-mode-migration",
+        "completedAt": "2026-09-14T21:20:20.154Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11441",
+        "title": "Cluster: completion no-downgrade guard + VIEW started-write",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-11441/cluster-completion-no-downgrade-guard-view-started-write",
+        "completedAt": "2026-09-14T21:20:16.709Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-13604",
+        "title": "Decide the grant path for the next year",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13604/decide-the-grant-path-for-the-next-year",
+        "completedAt": "2026-09-18T16:06:05.366Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13603",
+        "title": "Census HubSpot contacts/companies: is CRM a source of truth?",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13603/census-hubspot-contactscompanies-is-crm-a-source-of-truth",
+        "completedAt": "2026-09-17T16:43:43.837Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13602",
+        "title": "Census WooCommerce orders: can we match an Apollos person?",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13602/census-woocommerce-orders-can-we-match-an-apollos-person",
+        "completedAt": "2026-09-17T16:43:43.589Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13601",
+        "title": "Write how FreedUp access works today",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13601/write-how-freedup-access-works-today",
+        "completedAt": "2026-09-17T16:43:44.225Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13488",
+        "title": "Canvas drops nested Recalls inside Expandable Sections",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13488/canvas-drops-nested-recalls-inside-expandable-sections",
+        "completedAt": "2026-09-16T16:23:18.896Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13487",
+        "title": "Canvas Oops: Content hole not allowed in a leaf node spec",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13487/canvas-oops-content-hole-not-allowed-in-a-leaf-node-spec",
+        "completedAt": "2026-09-16T16:23:18.845Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13484",
+        "title": "[migration] Drop same-card HTML that repeats the Poll question",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13484/migration-drop-same-card-html-that-repeats-the-poll-question",
+        "completedAt": "2026-09-15T21:25:34.538Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13270",
+        "title": "💡 Idea on how to handle multiple choice branching",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13270/idea-on-how-to-handle-multiple-choice-branching",
+        "completedAt": "2026-09-15T21:25:36.492Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13249",
+        "title": "[migration] Drop GuideGroups and Group Sync instruction HTML",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13249/migration-drop-guidegroups-and-group-sync-instruction-html",
+        "completedAt": "2026-09-14T21:16:47.148Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13242",
+        "title": "[migration] Map GroupMultipleChoice through MultipleChoice Poll rules",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13242/migration-map-groupmultiplechoice-through-multiplechoice-poll-rules",
+        "completedAt": "2026-09-14T20:08:51.968Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13241",
+        "title": "[migration] Map SyncTimer to Timer",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13241/migration-map-synctimer-to-timer",
+        "completedAt": "2026-09-14T20:08:52.270Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13240",
+        "title": "[migration] Drop GroupSyncPersonPicker",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13240/migration-drop-groupsyncpersonpicker",
+        "completedAt": "2026-09-14T20:08:52.048Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13239",
+        "title": "[migration] Map GroupReader to Html read-aloud prompt",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13239/migration-map-groupreader-to-html-read-aloud-prompt",
+        "completedAt": "2026-09-14T20:08:52.162Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13238",
+        "title": "Investigate what GuideGroups actually is",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13238/investigate-what-guidegroups-actually-is",
+        "completedAt": "2026-09-14T20:36:40.743Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13195",
+        "title": "Skip ReferencedMultipleChoice in the migrator",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13195/skip-referencedmultiplechoice-in-the-migrator",
+        "completedAt": "2026-09-14T17:04:46.628Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13194",
+        "title": "wk 2 Your Action Plan - pathing seems off",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13194/wk-2-your-action-plan-pathing-seems-off",
+        "completedAt": "2026-09-14T17:04:46.316Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13193",
+        "title": "Wk 2 Income and Housing - Error message in Canvas (bad migration data)",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13193/wk-2-income-and-housing-error-message-in-canvas-bad-migration-data",
+        "completedAt": "2026-09-14T15:27:57.497Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13138",
+        "title": "Mobile poll: changing a vote hangs on a spinner, then a later tap crashes",
+        "project": "Poll Enhancements",
+        "url": "https://linear.app/differential/issue/APO-13138/mobile-poll-changing-a-vote-hangs-on-a-spinner-then-a-later-tap",
+        "completedAt": "2026-09-14T21:21:13.491Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13137",
+        "title": "Web poll: after voting with results hidden, the selected option disappears",
+        "project": "Poll Enhancements",
+        "url": "https://linear.app/differential/issue/APO-13137/web-poll-after-voting-with-results-hidden-the-selected-option",
+        "completedAt": "2026-09-12T16:13:37.791Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13130",
+        "title": "Admin canvas shows empty Poll form when pollId is already on the row",
+        "project": "Poll Enhancements",
+        "url": "https://linear.app/differential/issue/APO-13130/admin-canvas-shows-empty-poll-form-when-pollid-is-already-on-the-row",
+        "completedAt": "2026-09-12T16:13:37.848Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13129",
+        "title": "Map MultipleChoice / MultipleSelect / GroupMultipleChoice to Poll",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13129/map-multiplechoice-multipleselect-groupmultiplechoice-to-poll",
+        "completedAt": "2026-09-12T16:13:37.966Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13127",
+        "title": "[migration] Flatten Week 1 branch and detail pages into expandables",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13127/migration-flatten-week-1-branch-and-detail-pages-into-expandables",
+        "completedAt": "2026-09-14T17:04:46.909Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13126",
+        "title": "[migration] Inspect 3 Lanes “Before you confirm” copies before changing them",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13126/migration-inspect-3-lanes-before-you-confirm-copies-before-changing",
+        "completedAt": "2026-09-14T14:18:18.149Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13125",
+        "title": "[migration] Only strip a matching title on the first card",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13125/migration-only-strip-a-matching-title-on-the-first-card",
+        "completedAt": "2026-09-14T17:04:46.729Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13124",
+        "title": "[migration] Strip duplicate session titles; keep Level N and estimated time",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13124/migration-strip-duplicate-session-titles-keep-level-n-and-estimated",
+        "completedAt": "2026-09-14T17:04:46.825Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13120",
+        "title": "Prod Admin is missing the private / public toggle on question blocks",
+        "project": "Question Block Privacy",
+        "url": "https://linear.app/differential/issue/APO-13120/prod-admin-is-missing-the-private-public-toggle-on-question-blocks",
+        "completedAt": "2026-09-12T16:13:38.180Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12920",
+        "title": "Map Assessment to Assessment with a stable assessmentId",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-12920/map-assessment-to-assessment-with-a-stable-assessmentid",
+        "completedAt": "2026-09-14T17:04:46.441Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12916",
+        "title": "Scrolling to the bottom of a content item is not marking the item as completed on mobile",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-12916/scrolling-to-the-bottom-of-a-content-item-is-not-marking-the-item-as",
+        "completedAt": "2026-09-14T21:19:04.556Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12909",
+        "title": "Map CardTimer to Timer with data.seconds",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-12909/map-cardtimer-to-timer-with-dataseconds",
+        "completedAt": "2026-09-14T17:04:46.538Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12215",
+        "title": "Admin canvas still shows ExpandableImage as Unsupported after the row is an Image feature",
+        "project": "Inline Media Blocks",
+        "url": "https://linear.app/differential/issue/APO-12215/admin-canvas-still-shows-expandableimage-as-unsupported-after-the-row",
+        "completedAt": "2026-09-15T22:13:39.218Z",
+        "state": "Done"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-13608",
+        "title": "Build the grant path: signed-in check page on Apollos Web",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13608/build-the-grant-path-signed-in-check-page-on-apollos-web",
+        "createdAt": "2026-09-17T16:21:16.888Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13607",
+        "title": "Staff override for paid FreedUp access",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13607/staff-override-for-paid-freedup-access",
+        "createdAt": "2026-09-17T16:21:15.188Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13606",
+        "title": "Lock a content series to a required tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13606/lock-a-content-series-to-a-required-tag",
+        "createdAt": "2026-09-17T16:21:13.656Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13605",
+        "title": "Mint a FreedUp purchase tag on the person",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13605/mint-a-freedup-purchase-tag-on-the-person",
+        "createdAt": "2026-09-17T16:21:12.336Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13604",
+        "title": "Decide the grant path for the next year",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13604/decide-the-grant-path-for-the-next-year",
+        "createdAt": "2026-09-17T16:21:05.461Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13603",
+        "title": "Census HubSpot contacts/companies: is CRM a source of truth?",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13603/census-hubspot-contactscompanies-is-crm-a-source-of-truth",
+        "createdAt": "2026-09-17T16:20:56.753Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13602",
+        "title": "Census WooCommerce orders: can we match an Apollos person?",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13602/census-woocommerce-orders-can-we-match-an-apollos-person",
+        "createdAt": "2026-09-17T16:20:55.633Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13601",
+        "title": "Write how FreedUp access works today",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13601/write-how-freedup-access-works-today",
+        "createdAt": "2026-09-17T16:20:53.313Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13557",
+        "title": "Responses sheet on iOS < 26 loses glass chrome and looks unfinished",
+        "project": "Question Block Privacy",
+        "url": "https://linear.app/differential/issue/APO-13557/responses-sheet-on-ios-26-loses-glass-chrome-and-looks-unfinished",
+        "createdAt": "2026-09-16T16:15:42.007Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13539",
+        "title": "[migration] Bold GroupReader read-aloud prompt",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13539/migration-bold-groupreader-read-aloud-prompt",
+        "createdAt": "2026-09-16T14:32:28.982Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13488",
+        "title": "Canvas drops nested Recalls inside Expandable Sections",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13488/canvas-drops-nested-recalls-inside-expandable-sections",
+        "createdAt": "2026-09-15T19:33:12.868Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13487",
+        "title": "Canvas Oops: Content hole not allowed in a leaf node spec",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13487/canvas-oops-content-hole-not-allowed-in-a-leaf-node-spec",
+        "createdAt": "2026-09-15T19:16:21.499Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13484",
+        "title": "[migration] Drop same-card HTML that repeats the Poll question",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13484/migration-drop-same-card-html-that-repeats-the-poll-question",
+        "createdAt": "2026-09-15T18:15:28.604Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13249",
+        "title": "[migration] Drop GuideGroups and Group Sync instruction HTML",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13249/migration-drop-guidegroups-and-group-sync-instruction-html",
+        "createdAt": "2026-09-14T20:36:19.814Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13242",
+        "title": "[migration] Map GroupMultipleChoice through MultipleChoice Poll rules",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13242/migration-map-groupmultiplechoice-through-multiplechoice-poll-rules",
+        "createdAt": "2026-09-14T19:00:02.880Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13241",
+        "title": "[migration] Map SyncTimer to Timer",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13241/migration-map-synctimer-to-timer",
+        "createdAt": "2026-09-14T18:59:59.678Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13240",
+        "title": "[migration] Drop GroupSyncPersonPicker",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13240/migration-drop-groupsyncpersonpicker",
+        "createdAt": "2026-09-14T18:59:57.615Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13239",
+        "title": "[migration] Map GroupReader to Html read-aloud prompt",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13239/migration-map-groupreader-to-html-read-aloud-prompt",
+        "createdAt": "2026-09-14T18:59:55.411Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13238",
+        "title": "Investigate what GuideGroups actually is",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13238/investigate-what-guidegroups-actually-is",
+        "createdAt": "2026-09-14T18:49:59.840Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13237",
+        "title": "Deal with Group Features",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13237/deal-with-group-features",
+        "createdAt": "2026-09-14T18:48:57.879Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-13236",
+        "title": "Adjust Web progress/end of content item to match mobile",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-13236/adjust-web-progressend-of-content-item-to-match-mobile",
+        "createdAt": "2026-09-14T18:32:03.972Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13235",
+        "title": "mobile - When interacting, there's a bit of flashing going on",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13235/mobile-when-interacting-theres-a-bit-of-flashing-going-on",
+        "createdAt": "2026-09-14T18:29:27.165Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13234",
+        "title": "Web - Should Edit be action colored?",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13234/web-should-edit-be-action-colored",
+        "createdAt": "2026-09-14T18:28:34.367Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13209",
+        "title": "Fix the Canvas UI tooltip formatting",
+        "project": "Poll Enhancements",
+        "url": "https://linear.app/differential/issue/APO-13209/fix-the-canvas-ui-tooltip-formatting",
+        "createdAt": "2026-09-14T15:51:37.324Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13208",
+        "title": "Remove icon and Recall in Canvas editor tooltip",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13208/remove-icon-and-recall-in-canvas-editor-tooltip",
+        "createdAt": "2026-09-14T15:50:37.820Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13207",
+        "title": "Should we show the Edit button in Canvas?",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13207/should-we-show-the-edit-button-in-canvas",
+        "createdAt": "2026-09-14T15:49:38.498Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13203",
+        "title": "Weird UI when certain features are included on expandable sections",
+        "project": "Expandable Content Sections",
+        "url": "https://linear.app/differential/issue/APO-13203/weird-ui-when-certain-features-are-included-on-expandable-sections",
+        "createdAt": "2026-09-14T15:48:17.398Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13195",
+        "title": "Skip ReferencedMultipleChoice in the migrator",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13195/skip-referencedmultiplechoice-in-the-migrator",
+        "createdAt": "2026-09-14T15:06:59.184Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13194",
+        "title": "wk 2 Your Action Plan - pathing seems off",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13194/wk-2-your-action-plan-pathing-seems-off",
+        "createdAt": "2026-09-14T14:19:07.401Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13193",
+        "title": "Wk 2 Income and Housing - Error message in Canvas (bad migration data)",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13193/wk-2-income-and-housing-error-message-in-canvas-bad-migration-data",
+        "createdAt": "2026-09-14T14:13:21.379Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13192",
+        "title": "[migration] 3 Lanes: Lane 2 and 3 “right for you?” land as pages; Lane 1 is an expandable",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13192/migration-3-lanes-lane-2-and-3-right-for-you-land-as-pages-lane-1-is",
+        "createdAt": "2026-09-14T14:01:02.372Z",
+        "state": "Duplicate"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-13604",
+        "title": "Decide the grant path for the next year",
+        "url": "https://linear.app/differential/issue/APO-13604/decide-the-grant-path-for-the-next-year",
+        "project": "FreedUp paid access",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13603",
+        "title": "Census HubSpot contacts/companies: is CRM a source of truth?",
+        "url": "https://linear.app/differential/issue/APO-13603/census-hubspot-contactscompanies-is-crm-a-source-of-truth",
+        "project": "FreedUp paid access",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13602",
+        "title": "Census WooCommerce orders: can we match an Apollos person?",
+        "url": "https://linear.app/differential/issue/APO-13602/census-woocommerce-orders-can-we-match-an-apollos-person",
+        "project": "FreedUp paid access",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13601",
+        "title": "Write how FreedUp access works today",
+        "url": "https://linear.app/differential/issue/APO-13601/write-how-freedup-access-works-today",
+        "project": "FreedUp paid access",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13557",
+        "title": "Responses sheet on iOS < 26 loses glass chrome and looks unfinished",
+        "url": "https://linear.app/differential/issue/APO-13557/responses-sheet-on-ios-26-loses-glass-chrome-and-looks-unfinished",
+        "project": "Question Block Privacy",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13539",
+        "title": "[migration] Bold GroupReader read-aloud prompt",
+        "url": "https://linear.app/differential/issue/APO-13539/migration-bold-groupreader-read-aloud-prompt",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-12215",
+        "title": "Admin canvas still shows ExpandableImage as Unsupported after the row is an Image feature",
+        "url": "https://linear.app/differential/issue/APO-12215/admin-canvas-still-shows-expandableimage-as-unsupported-after-the-row",
+        "project": "Inline Media Blocks",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13269",
+        "title": "Some Question Blocks should be \"Currency\" Types",
+        "url": "https://linear.app/differential/issue/APO-13269/some-question-blocks-should-be-currency-types",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13273",
+        "title": "Mobile PollView recycles the previous poll onto a later page (Plan for Freedom p3/p7)",
+        "url": "https://linear.app/differential/issue/APO-13273/mobile-pollview-recycles-the-previous-poll-onto-a-later-page-plan-for",
+        "project": "Poll Enhancements",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13270",
+        "title": "💡 Idea on how to handle multiple choice branching",
+        "url": "https://linear.app/differential/issue/APO-13270/idea-on-how-to-handle-multiple-choice-branching",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13238",
+        "title": "Investigate what GuideGroups actually is",
+        "url": "https://linear.app/differential/issue/APO-13238/investigate-what-guidegroups-actually-is",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13249",
+        "title": "[migration] Drop GuideGroups and Group Sync instruction HTML",
+        "url": "https://linear.app/differential/issue/APO-13249/migration-drop-guidegroups-and-group-sync-instruction-html",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13242",
+        "title": "[migration] Map GroupMultipleChoice through MultipleChoice Poll rules",
+        "url": "https://linear.app/differential/issue/APO-13242/migration-map-groupmultiplechoice-through-multiplechoice-poll-rules",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13241",
+        "title": "[migration] Map SyncTimer to Timer",
+        "url": "https://linear.app/differential/issue/APO-13241/migration-map-synctimer-to-timer",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13240",
+        "title": "[migration] Drop GroupSyncPersonPicker",
+        "url": "https://linear.app/differential/issue/APO-13240/migration-drop-groupsyncpersonpicker",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13239",
+        "title": "[migration] Map GroupReader to Html read-aloud prompt",
+        "url": "https://linear.app/differential/issue/APO-13239/migration-map-groupreader-to-html-read-aloud-prompt",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13203",
+        "title": "Weird UI when certain features are included on expandable sections",
+        "url": "https://linear.app/differential/issue/APO-13203/weird-ui-when-certain-features-are-included-on-expandable-sections",
+        "project": "Expandable Content Sections",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13194",
+        "title": "wk 2 Your Action Plan - pathing seems off",
+        "url": "https://linear.app/differential/issue/APO-13194/wk-2-your-action-plan-pathing-seems-off",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13193",
+        "title": "Wk 2 Income and Housing - Error message in Canvas (bad migration data)",
+        "url": "https://linear.app/differential/issue/APO-13193/wk-2-income-and-housing-error-message-in-canvas-bad-migration-data",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11796",
+        "title": "Census unsupported FreedUp types and decide support",
+        "url": "https://linear.app/differential/issue/APO-11796/census-unsupported-freedup-types-and-decide-support",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13127",
+        "title": "[migration] Flatten Week 1 branch and detail pages into expandables",
+        "url": "https://linear.app/differential/issue/APO-13127/migration-flatten-week-1-branch-and-detail-pages-into-expandables",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13126",
+        "title": "[migration] Inspect 3 Lanes “Before you confirm” copies before changing them",
+        "url": "https://linear.app/differential/issue/APO-13126/migration-inspect-3-lanes-before-you-confirm-copies-before-changing",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13192",
+        "title": "[migration] 3 Lanes: Lane 2 and 3 “right for you?” land as pages; Lane 1 is an expandable",
+        "url": "https://linear.app/differential/issue/APO-13192/migration-3-lanes-lane-2-and-3-right-for-you-land-as-pages-lane-1-is",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Duplicate"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "fix(mobile): frost Responses chrome on iOS before 26 (APO-13557)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7296",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-09-16T21:24:50Z",
+        "additions": 159,
+        "deletions": 15,
+        "changed_files": 8
+      },
+      {
+        "title": "Bold GroupReader read-aloud prompt (APO-13539)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/42",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-16T14:45:33Z",
+        "additions": 6,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "Allowlist dollar ShortAnswers as Currency when Mongo omits isCurrency (APO-13269)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/41",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-15T22:10:40Z",
+        "additions": 74,
+        "deletions": 2,
+        "changed_files": 3
+      },
+      {
+        "title": "Title poll-branch expandables from locked dest map (APO-13270)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/40",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-15T20:57:08Z",
+        "additions": 400,
+        "deletions": 3,
+        "changed_files": 4
+      },
+      {
+        "title": "Strip same-card HTML that repeats the Poll question (APO-13484)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/39",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-15T19:57:02Z",
+        "additions": 202,
+        "deletions": 11,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(admin): keep Recall and Timer inside Expandable Sections (APO-13488)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4802",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-16T14:57:16Z",
+        "additions": 61,
+        "deletions": 0,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(admin): stop Canvas Oops on leaf abstractFeature serialize (APO-13487)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4801",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-15T21:27:36Z",
+        "additions": 0,
+        "deletions": 1,
+        "changed_files": 1
+      },
+      {
+        "title": "Drop GuideGroups and Group Sync instruction HTML",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/38",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-14T20:56:41Z",
+        "additions": 88,
+        "deletions": 5,
+        "changed_files": 4
+      },
+      {
+        "title": "Honor GroupMultipleChoice poll privacy and drop duplicate HTML",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/37",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-14T20:05:10Z",
+        "additions": 126,
+        "deletions": 11,
+        "changed_files": 4
+      },
+      {
+        "title": "Map SyncTimer to Timer",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/36",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-14T20:02:17Z",
+        "additions": 36,
+        "deletions": 7,
+        "changed_files": 2
+      },
+      {
+        "title": "Drop GroupSyncPersonPicker from the migrator",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/35",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-14T20:00:15Z",
+        "additions": 31,
+        "deletions": 1,
+        "changed_files": 3
+      },
+      {
+        "title": "Map GroupReader to Html read-aloud prompt",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/34",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-14T19:56:56Z",
+        "additions": 38,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "Page intro lane destinations so Action Plan video is not with Joy",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/33",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-14T16:58:04Z",
+        "additions": 487,
+        "deletions": 3,
+        "changed_files": 3
+      },
+      {
+        "title": "Strip duplicate first-card session titles; keep Level N and estimated time",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/32",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-14T15:37:38Z",
+        "additions": 109,
+        "deletions": 3,
+        "changed_files": 4
+      },
+      {
+        "title": "Skip ReferencedMultipleChoice in the migrator",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/31",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-14T15:21:34Z",
+        "additions": 32,
+        "deletions": 22,
+        "changed_files": 4
+      },
+      {
+        "title": "Nest parentId cards as expandables on the parent page",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/30",
+        "repo": "freedup-migration",
+        "merged_at": "2026-09-14T15:12:06Z",
+        "additions": 117,
+        "deletions": 2,
+        "changed_files": 2
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "improve(shaping): decisions carry their consequence",
+        "url": "https://github.com/ApollosProject/forge/pull/100",
+        "repo": "forge",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "test(web): drop six byte-identical duplicate tests in $handle.give",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4998",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T18:30:58Z",
+        "reviewed_at": "2026-09-18T20:40:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.16
+      },
+      {
+        "title": "test(donation-embed): drop two byte-identical Donation render tests",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4997",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T18:29:37Z",
+        "reviewed_at": "2026-09-18T20:40:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.18
+      },
+      {
+        "title": "fix(admin): request failure code on the failed report",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4994",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T17:08:47Z",
+        "reviewed_at": "2026-09-18T20:23:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.25
+      },
+      {
+        "title": "fix(admin): ask Airflow who owns a DAG before toggling it",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4991",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T16:00:34Z",
+        "reviewed_at": "2026-09-18T20:25:10Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.41
+      },
+      {
+        "title": "Consolidate churchSlug guard + error-fallback boilerplate in bigQuery.server.js",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4990",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T12:12:50Z",
+        "reviewed_at": "2026-09-18T14:31:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.52
+      },
+      {
+        "title": "docs: ask for two human reviewers on PRs",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4989",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T01:33:16Z",
+        "reviewed_at": "2026-09-18T14:29:29Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.49
+      },
+      {
+        "title": "fix(admin): show the link URL box under its button, not below the fold",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4988",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T13:29:57Z",
+        "reviewed_at": "2026-09-18T14:32:10Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.54
+      },
+      {
+        "title": "feat(chat-attachments): keep the image size and the voice note data in the live mapper",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4687",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-17T18:57:57Z",
+        "reviewed_at": "2026-09-17T21:12:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.24
+      },
+      {
+        "title": "feat(chat-attachments): keep the image size and the voice note data in the history sync",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4686",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-17T18:59:19Z",
+        "reviewed_at": "2026-09-17T21:14:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.26
+      },
+      {
+        "title": "feat(chat-attachments): read the image size and the voice note data off the meta",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4685",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-17T18:58:47Z",
+        "reviewed_at": "2026-09-17T21:13:46Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.25
+      },
+      {
+        "title": "perf(admin): batch-load community members for communities list",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4861",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T16:08:31Z",
+        "reviewed_at": "2026-09-18T14:53:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 6.74
+      },
+      {
+        "title": "feat(admin): add the PrayerRequestsTable component (APO-8395)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4860",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T14:08:08Z",
+        "reviewed_at": "2026-09-17T14:32:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.41
+      },
+      {
+        "title": "refactor(admin): convert LivestreamTable to TypeScript (APO-12480)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4859",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T14:05:21Z",
+        "reviewed_at": "2026-09-17T14:33:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.47
+      },
+      {
+        "title": "feat(web): build prefilled MyWell giving URLs (APO-11398)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4858",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T13:28:42Z",
+        "reviewed_at": "2026-09-17T14:33:38Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "refactor(web): split Pushpay URL building out of getOtherPaymentMethodsUrl (APO-11398)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4857",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T13:28:40Z",
+        "reviewed_at": "2026-09-17T14:31:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.53
+      },
+      {
+        "title": "feat(admin): link staff into the prayer requests page (APO-8395)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4856",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T13:18:35Z",
+        "reviewed_at": "2026-09-17T14:32:29Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.54
+      },
+      {
+        "title": "feat(admin): add a Cluster prayers model for staff prayer review (APO-8395)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4855",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T13:18:31Z",
+        "reviewed_at": "2026-09-17T14:33:27Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "feat(admin): collapse canvas sections the way web does (APO-13546)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4851",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T11:42:33Z",
+        "reviewed_at": "2026-09-17T14:32:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.55
+      },
+      {
+        "title": "feat(mobile): collapse sections to a two-line card (APO-13548)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7306",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-17T11:42:43Z",
+        "reviewed_at": "2026-09-17T14:33:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "feat(canvas-ui-web): present collapsed sections as a two-line card (APO-13544)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4850",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T11:42:29Z",
+        "reviewed_at": "2026-09-17T14:34:45Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.58
+      },
+      {
+        "title": "feat(mobile): open expanded sections in a native sheet (APO-13549)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7305",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-17T11:42:40Z",
+        "reviewed_at": "2026-09-17T14:33:38Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "feat(canvas-ui-web): resolve a section's two summary lines (APO-13543)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4849",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T11:42:26Z",
+        "reviewed_at": "2026-09-17T14:35:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.58
+      },
+      {
+        "title": "feat(mobile): resolve a section's two summary lines (APO-13547)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7304",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-17T11:42:36Z",
+        "reviewed_at": "2026-09-17T14:32:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.54
+      },
+      {
+        "title": "feat(admin): start a new section with an empty Untitled heading (APO-13545)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4848",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T11:42:14Z",
+        "reviewed_at": "2026-09-17T14:35:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.6
+      },
+      {
+        "title": "fix(admin): match canvas editor page fill to web/mobile screen",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4847",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T02:12:04Z",
+        "reviewed_at": "2026-09-17T14:31:38Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.53
+      },
+      {
+        "title": "feat(migrate): turn text-only branch cards into poll follow-ups",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/43",
+        "repo": "freedup-migration",
+        "requested_at": "2026-09-16T22:55:56Z",
+        "reviewed_at": "2026-09-17T14:33:22Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "feat(mobile): render a unique follow-up under the poll answers (APO-13576)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7303",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-16T22:55:53Z",
+        "reviewed_at": "2026-09-17T14:34:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.57
+      },
+      {
+        "title": "feat(admin): move poll authoring into a drawer with follow-ups (APO-13575)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4845",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T22:55:39Z",
+        "reviewed_at": "2026-09-17T14:35:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.59
+      },
+      {
+        "title": "feat(admin): add poll follow-up editor, tabs, and shared grouping (APO-13574)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4844",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T22:55:38Z",
+        "reviewed_at": "2026-09-17T14:33:08Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.55
+      },
+      {
+        "title": "feat(web): render a unique follow-up under the poll answers (APO-13573)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4843",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T22:55:37Z",
+        "reviewed_at": "2026-09-17T14:32:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.54
+      },
+      {
+        "title": "feat(admin): persist poll follow-ups through the answer rewrite (APO-13572)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4842",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T22:55:36Z",
+        "reviewed_at": "2026-09-17T14:35:22Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.59
+      },
+      {
+        "title": "feat(polls): expose FollowUp { id, html } on PollOption (APO-13571)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4672",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T22:55:46Z",
+        "reviewed_at": "2026-09-17T14:32:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.54
+      },
+      {
+        "title": "feat(polls): persist follow-ups across the answer rewrite (APO-13569)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4671",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T22:55:44Z",
+        "reviewed_at": "2026-09-17T14:33:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "feat(polls): add follow_up_id and follow_up_html on poll_options (APO-13570)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4670",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T22:55:42Z",
+        "reviewed_at": "2026-09-17T14:26:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.45
+      },
+      {
+        "title": "Resolve passkit downloads against Cluster REST origin",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7302",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-17T01:37:21Z",
+        "reviewed_at": "2026-09-18T14:53:59Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 8.9
+      },
+      {
+        "title": "build(deps): bump smol-toml to 1.8.0 (smol-toml-only)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4841",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T21:12:44Z",
+        "reviewed_at": "2026-09-18T14:51:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 9.64
+      },
+      {
+        "title": "feat(admin): move the Creator AI default model to GPT-6 Astra",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4840",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T20:54:51Z",
+        "reviewed_at": "2026-09-18T14:33:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 9.65
+      },
+      {
+        "title": "APO-13561: correct 7 charges stuck at pending after failing",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4660",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T19:40:59Z",
+        "reviewed_at": "2026-09-17T14:33:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.87
+      },
+      {
+        "title": "Align grouped migration rows with the prototype chrome",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4837",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T18:58:35Z",
+        "reviewed_at": "2026-09-17T14:32:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.57
+      },
+      {
+        "title": "APO-12201: Show disputed status in Apollos Admin",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4836",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T13:13:00Z",
+        "reviewed_at": "2026-09-17T21:15:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.26
+      },
+      {
+        "title": "[APO-13559] Restore refund rows in the transactions export",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4835",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T23:52:23Z",
+        "reviewed_at": "2026-09-17T14:31:22Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.52
+      },
+      {
+        "title": "feat(admin): church-wide private response toggle (APO-11695)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4834",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T18:12:07Z",
+        "reviewed_at": "2026-09-18T15:03:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.86
+      },
+      {
+        "title": "feat(admin): add an \"Open Details URL directly\" option to Events sections (APO-8120)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4830",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T15:44:59Z",
+        "reviewed_at": "2026-09-17T14:30:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.76
+      },
+      {
+        "title": "feat(chat-sync): keep the file's media type in the live mapper",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4656",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T15:48:53Z",
+        "reviewed_at": "2026-09-16T18:56:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.13
+      },
+      {
+        "title": "refactor(chat-sync): dedupe live files by the file and links on their own",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4655",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T15:48:47Z",
+        "reviewed_at": "2026-09-16T18:58:36Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.16
+      },
+      {
+        "title": "feat(mobile): tap toggles play/pause and add an inline fullscreen button",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7292",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-16T14:05:52Z",
+        "reviewed_at": "2026-09-16T14:16:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.18
+      },
+      {
+        "title": "feat(chat-sync): stop a running sync when the worker shuts down",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4650",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T13:24:02Z",
+        "reviewed_at": "2026-09-16T19:01:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.03
+      },
+      {
+        "title": "feat(chat-sync): let an admin_global job sweep every church",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4649",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T13:23:58Z",
+        "reviewed_at": "2026-09-16T18:59:24Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.99
+      },
+      {
+        "title": "feat(chat-sync): send the sync's warnings and errors to the app logger",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4648",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T13:23:52Z",
+        "reviewed_at": "2026-09-16T18:59:40Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.99
+      },
+      {
+        "title": "feat(chat-sync): run one church's sync as a queue job",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4647",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T13:23:47Z",
+        "reviewed_at": "2026-09-16T18:58:21Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.97
+      },
+      {
+        "title": "fix(admin): preserve queued content autosaves (APO-13253)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4827",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T13:59:19Z",
+        "reviewed_at": "2026-09-18T14:56:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 16.94
+      },
+      {
+        "title": "fix(chat-sync): write a child row only for a person of that church",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4646",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:56Z",
+        "reviewed_at": "2026-09-16T18:59:21Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.99
+      },
+      {
+        "title": "fix(chat-sync): refuse to derive a tenant from a partial member list",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4645",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:54Z",
+        "reviewed_at": "2026-09-16T19:00:58Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 5.02
+      },
+      {
+        "title": "fix(chat-sync): report whether the member walk finished",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4644",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:51Z",
+        "reviewed_at": "2026-09-16T18:59:14Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.99
+      },
+      {
+        "title": "fix(chat-sync): read the member people rows in one query",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4643",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:48Z",
+        "reviewed_at": "2026-09-16T20:12:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.2
+      },
+      {
+        "title": "fix(chat-sync): follow the row that won the create race",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4642",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:45Z",
+        "reviewed_at": "2026-09-16T18:58:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.97
+      },
+      {
+        "title": "fix(chat-sync): derive nothing when channel members disagree",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4641",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:42Z",
+        "reviewed_at": "2026-09-16T19:00:21Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 5.01
+      },
+      {
+        "title": "fix(chat-sync): check a derived slug against the church table",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4640",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:39Z",
+        "reviewed_at": "2026-09-16T18:57:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.96
+      },
+      {
+        "title": "fix(chat-sync): read the channel's tenant from its own row first",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4639",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:37Z",
+        "reviewed_at": "2026-09-16T18:59:06Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.99
+      },
+      {
+        "title": "fix(chat-sync): member people rows outrank channel metadata",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4638",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:34Z",
+        "reviewed_at": "2026-09-16T19:01:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 5.02
+      },
+      {
+        "title": "fix(chat-sync): return the derived slug and write nothing when there is none",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4637",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:31Z",
+        "reviewed_at": "2026-09-16T19:00:18Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 5.01
+      },
+      {
+        "title": "chore(deps): migrate apps/admin to zod 4",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4824",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T12:27:43Z",
+        "reviewed_at": "2026-09-18T14:53:59Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 16.9
+      },
+      {
+        "title": "build(deps): bump graphql from 16.11.0 to 17.0.2",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4823",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T04:54:53Z",
+        "reviewed_at": "2026-09-16T18:58:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.97
+      },
+      {
+        "title": "build(deps-dev): bump postcss-prefixwrap from 1.57.0 to 1.58.0",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4822",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T04:54:15Z",
+        "reviewed_at": "2026-09-16T18:56:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.94
+      },
+      {
+        "title": "build(deps): bump @sentry/react-router from 10.54.0 to 10.74.0",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4821",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T04:53:39Z",
+        "reviewed_at": "2026-09-18T14:53:33Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 16.89
+      },
+      {
+        "title": "build(deps-dev): bump eslint-plugin-import from 2.31.0 to 2.32.0",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4819",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T04:51:52Z",
+        "reviewed_at": "2026-09-16T18:57:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.96
+      },
+      {
+        "title": "build(deps): bump zod from 3.25.76 to 4.6.5",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4817",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T04:50:37Z",
+        "reviewed_at": "2026-09-16T18:58:52Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.98
+      },
+      {
+        "title": "fix: require authz and church-scoped dagId on data API loaders",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4814",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T01:47:12Z",
+        "reviewed_at": "2026-09-18T14:53:13Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 16.89
+      },
+      {
+        "title": "fix(mobile): stop PollView showing the previous poll on a recycled row",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7290",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-16T02:26:10Z",
+        "reviewed_at": "2026-09-16T14:16:48Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.28
+      },
+      {
+        "title": "test(admin): prove TipTap v3 editor workflows (APO-10605)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4813",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T03:25:09Z",
+        "reviewed_at": "2026-09-18T14:53:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 8.9
+      },
+      {
+        "title": "fix(admin): authorize config mutations and harden sync discovery",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4812",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T23:03:03Z",
+        "reviewed_at": "2026-09-18T14:52:32Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 16.88
+      },
+      {
+        "title": "fix(web): recover the add-card Save button when Stripe throws",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4800",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T20:04:46Z",
+        "reviewed_at": "2026-09-15T22:31:09Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.92
+      },
+      {
+        "title": "feat(admin): wire Content tabs on Apps → Mobile",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4799",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T19:02:57Z",
+        "reviewed_at": "2026-09-16T21:57:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.9
+      },
+      {
+        "title": "feat(admin): Content tab type in Tab Setup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4798",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T19:59:25Z",
+        "reviewed_at": "2026-09-15T22:34:43Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.01
+      },
+      {
+        "title": "feat(app-tab): CONTENT tab type and contentItem field",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4513",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-15T22:28:24Z",
+        "reviewed_at": "2026-09-15T22:29:57Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "chore(admin): remove unused FeatureSchema",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4797",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T16:31:49Z",
+        "reviewed_at": "2026-09-15T22:31:01Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.47
+      },
+      {
+        "title": "chore(web-embeds): remove unused ensurePublicChurchSlug",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4796",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T16:27:45Z",
+        "reviewed_at": "2026-09-15T22:31:47Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.54
+      },
+      {
+        "title": "chore(web): remove unused extractPathIdFromHref",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4795",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T16:25:38Z",
+        "reviewed_at": "2026-09-15T22:31:46Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.57
+      },
+      {
+        "title": "feat(admin): clean up WordPress data when deleting integration",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4793",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T15:39:11Z",
+        "reviewed_at": "2026-09-15T22:34:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 6.35
+      },
+      {
+        "title": "feat(admin): store church-authorized APNs P8 uploads",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4791",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T22:14:43Z",
+        "reviewed_at": "2026-09-15T22:33:19Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "feat(chat-attachments): show the file type and size on GraphQL",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4471",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-18T10:13:18Z",
+        "reviewed_at": "2026-09-18T14:33:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "fix(cache): stop edge-caching per-viewer comment lists (APO-13261)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4465",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-15T14:36:45Z",
+        "reviewed_at": "2026-09-15T14:45:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.14
+      },
+      {
+        "title": "fix(mobile): key feature and page cells by id",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7274",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-15T14:36:42Z",
+        "reviewed_at": "2026-09-15T14:42:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.1
+      },
+      {
+        "title": "fix(admin): match Assessment block width to the other Canvas feature blocks (APO-12943)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4790",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T14:37:08Z",
+        "reviewed_at": "2026-09-15T14:44:13Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.12
+      },
+      {
+        "title": "fix(canvas-ui-web): color the Recall Edit link with the action token",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4789",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T14:37:05Z",
+        "reviewed_at": "2026-09-15T14:42:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.09
+      },
+      {
+        "title": "fix(mobile): exclude the link Button variant from the inset hairline border",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7273",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-15T14:36:39Z",
+        "reviewed_at": "2026-09-15T14:43:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.12
+      },
+      {
+        "title": "Canvas block menu and tooltip: alignment, spacing, and dead affordances",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4788",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T14:37:03Z",
+        "reviewed_at": "2026-09-15T14:43:59Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.12
+      },
+      {
+        "title": "fix(web): complete a reading when it ends, not when it opens (APO-13236)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4787",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T14:37:00Z",
+        "reviewed_at": "2026-09-16T14:16:58Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 7.67
+      },
+      {
+        "title": "fix(canvas-ui-web): stop swapping the voter's avatar into the poll answered state",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4786",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T14:36:58Z",
+        "reviewed_at": "2026-09-15T14:42:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.09
+      },
+      {
+        "title": "fix(mobile): consistent check-icon answered state on polls/assessments; fix assessment scroll gesture",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7272",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-15T14:36:36Z",
+        "reviewed_at": "2026-09-15T14:45:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.16
+      },
+      {
+        "title": "fix(mobile): size the question block Answer button to match the card",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7270",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-15T14:36:29Z",
+        "reviewed_at": "2026-09-15T14:43:46Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.12
+      },
+      {
+        "title": "fix(admin,web): stop the image carousel cropping to 4:3",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4785",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T14:36:56Z",
+        "reviewed_at": "2026-09-15T14:45:53Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.15
+      },
+      {
+        "title": "fix(mobile): stop the image carousel cropping to 3:2",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7269",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-15T14:36:26Z",
+        "reviewed_at": "2026-09-15T14:43:46Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.12
+      },
+      {
+        "title": "fix(admin): stop the AI Writer panel mis-sizing inside an Expandable Section",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4784",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T14:36:54Z",
+        "reviewed_at": "2026-09-15T14:44:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.12
+      },
+      {
+        "title": "Number the Up Next row when it has no thumbnail",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7268",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-15T14:36:23Z",
+        "reviewed_at": "2026-09-15T14:42:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "feat(web): let a reader reset a running timer (APO-13123)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4783",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T14:36:52Z",
+        "reviewed_at": "2026-09-15T14:44:51Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.13
+      },
+      {
+        "title": "feat(mobile): let a reader reset a running timer (APO-13123)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7267",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-15T14:36:20Z",
+        "reviewed_at": "2026-09-15T14:42:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "fix(mobile): let a long button title wrap instead of clipping (APO-13274)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7266",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-15T14:36:17Z",
+        "reviewed_at": "2026-09-15T14:43:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.12
+      },
+      {
+        "title": "refactor(admin): share the Apollos invite-email field across the four store forms",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4782",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T22:35:36Z",
+        "reviewed_at": "2026-09-15T14:26:06Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.44
+      },
+      {
+        "title": "Bound the people tap-scan cache so it cannot grow for the life of the process",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4781",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T20:04:44Z",
+        "reviewed_at": "2026-09-15T22:31:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.92
+      },
+      {
+        "title": "Bind people tap-scan id lists as one array so large churches do not throw",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4780",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T20:04:43Z",
+        "reviewed_at": "2026-09-15T22:40:41Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.92
+      },
+      {
+        "title": "test(admin): cover webPageMeta's third-party fetch failure paths",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4778",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T20:38:11Z",
+        "reviewed_at": "2026-09-15T14:23:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.75
+      },
+      {
+        "title": "fix(admin): degrade cluster REST reads when the fetch never lands (APO-13243)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4776",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T15:41:29Z",
+        "reviewed_at": "2026-09-16T19:00:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.32
+      },
+      {
+        "title": "chore(web): remove unused useFeatureFlag hook",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4771",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T16:26:51Z",
+        "reviewed_at": "2026-09-14T19:43:24Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.28
+      },
+      {
+        "title": "chore(admin): remove unused buildTransactionsCountSql",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4770",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T16:23:55Z",
+        "reviewed_at": "2026-09-14T19:48:37Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 3.41
+      },
+      {
+        "title": "chore(admin): remove unused ThrottleExecutor",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4769",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T16:22:49Z",
+        "reviewed_at": "2026-09-14T19:41:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.32
+      },
+      {
+        "title": "Chat sync: only sync messages newer than a given time",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4446",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-14T16:52:49Z",
+        "reviewed_at": "2026-09-16T18:58:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 18.09
+      },
+      {
+        "title": "Fix web search answer SSE fallback",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4766",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T14:56:59Z",
+        "reviewed_at": "2026-09-15T14:23:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.44
+      },
+      {
+        "title": "fix(communities): clarify synced membership copy (APO-13174)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4765",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T12:49:43Z",
+        "reviewed_at": "2026-09-15T14:24:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 8.42
+      },
+      {
+        "title": "test(giving): cover the non-JSON report-status body fallback",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4764",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T00:59:00Z",
+        "reviewed_at": "2026-09-15T14:22:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 8.37
+      },
+      {
+        "title": "test(admin): drop the duplicate nextPayout-null balance summary test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4763",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-13T23:54:00Z",
+        "reviewed_at": "2026-09-14T19:41:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.7
+      },
+      {
+        "title": "test(admin): drop the duplicate MagicLinkSection null-retry test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4762",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-13T23:34:18Z",
+        "reviewed_at": "2026-09-14T19:41:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.7
+      },
+      {
+        "title": "test(admin): drop the duplicate getStripeClient test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4761",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-13T23:16:16Z",
+        "reviewed_at": "2026-09-14T19:41:54Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.7
+      },
+      {
+        "title": "chore(admin): remove unused transcription type guards",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4759",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-13T20:10:24Z",
+        "reviewed_at": "2026-09-14T19:41:57Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.7
+      },
+      {
+        "title": "chore(admin): remove unused createFeatureValidator",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4758",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-13T19:54:01Z",
+        "reviewed_at": "2026-09-14T19:41:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.7
+      },
+      {
+        "title": "chore(admin): remove unused INPUT_REGEX from the stores route",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4755",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-13T19:37:51Z",
+        "reviewed_at": "2026-09-14T19:41:53Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.7
+      },
+      {
+        "title": "chore(admin): remove unused determineConfigProgressAsPercent",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4754",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-13T17:32:52Z",
+        "reviewed_at": "2026-09-14T19:40:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.68
+      },
+      {
+        "title": "chore: remove Sentry performance and replay opt-ins",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4753",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-13T17:33:15Z",
+        "reviewed_at": "2026-09-15T14:24:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 8.41
+      },
+      {
+        "title": "Consolidate ad-hoc giving API auth checks into withAuthorization",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4752",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T18:10:06Z",
+        "reviewed_at": "2026-09-14T19:52:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.7
+      },
+      {
+        "title": "test(cluster-db): cover escapeLiteral, the RLS role escaper",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4750",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-13T00:12:59Z",
+        "reviewed_at": "2026-09-14T19:41:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.7
+      },
+      {
+        "title": "fix(canvas-ui-web): dedup question block commenters by person id (APO-12901)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4749",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-13T00:04:31Z",
+        "reviewed_at": "2026-09-15T14:24:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 8.4
+      },
+      {
+        "title": "test(admin): drop duplicate deriveDisplayMigrationStatus case",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4747",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-12T21:10:39Z",
+        "reviewed_at": "2026-09-14T19:40:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.68
+      },
+      {
+        "title": "test(tap-linking): drop byte-identical duplicate app-clip AASA test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4746",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-12T20:53:22Z",
+        "reviewed_at": "2026-09-14T19:41:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.7
+      },
+      {
+        "title": "chore(admin): remove unused prettierConfigVariable",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4745",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-12T16:50:44Z",
+        "reviewed_at": "2026-09-14T19:41:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.7
+      },
+      {
+        "title": "Consolidate duplicated click-outside handling into useOnClickOutside (APO-13168)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4744",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T17:59:44Z",
+        "reviewed_at": "2026-09-14T19:43:29Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.73
+      },
+      {
+        "title": "Match source text exactly when the prompt asks for it (APO-11423)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4743",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T13:45:35Z",
+        "reviewed_at": "2026-09-16T19:02:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 5.04
+      },
+      {
+        "title": "refactor(admin): consolidate the four copies of updateOrAddValue",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4739",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T22:32:02Z",
+        "reviewed_at": "2026-09-14T19:41:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.69
+      },
+      {
+        "title": "ci(releases): daily Web deploys and continuous Linear sync",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4723",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T18:05:16Z",
+        "reviewed_at": "2026-09-15T14:25:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 12.34
+      },
+      {
+        "title": "feat(admin): verify Amazon upload credentials on store setup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4720",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T16:18:13Z",
+        "reviewed_at": "2026-09-15T14:25:51Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 14.13
+      },
+      {
+        "title": "[1/18] feat(admin): add privileged withClusterTransaction helper",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4713",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T15:32:41Z",
+        "reviewed_at": "2026-09-18T14:54:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 31.36
+      },
+      {
+        "title": "fix(admin): reject invalid Tap ranges before writes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4708",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T19:41:52Z",
+        "reviewed_at": "2026-09-15T22:32:28Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.3
+      },
+      {
+        "title": "fix(admin): scope mobile tab delete through Cluster RLS",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4707",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T23:33:34Z",
+        "reviewed_at": "2026-09-18T14:54:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 40.9
+      },
+      {
+        "title": "APO-8115: Add scheduled_chat_messages table (migration only)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4369",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-17T16:30:53Z",
+        "reviewed_at": "2026-09-17T21:14:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.72
+      },
+      {
+        "title": "fix(admin): define and verify Tap group ownership lookup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4663",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T03:22:08Z",
+        "reviewed_at": "2026-09-15T14:25:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 24.43
+      },
+      {
+        "title": "fix(web): stop rendering the embed migration probe through the React app",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4660",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T02:00:16Z",
+        "reviewed_at": "2026-09-16T18:59:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 36.99
+      },
+      {
+        "title": "[1/7] fix(admin): add church-scope tap write helpers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4644",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-09T19:06:05Z",
+        "reviewed_at": "2026-09-18T14:58:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 51.88
+      },
+      {
+        "title": "fix(admin): allowlist Ask CORS instead of wildcard [1/9]",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4627",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-09T21:31:24Z",
+        "reviewed_at": "2026-09-18T14:53:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 49.36
+      },
+      {
+        "title": "(CityRev) Deep link to start a DM with a specific user — admin editor (APO-9361)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4577",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-08T13:19:37Z",
+        "reviewed_at": "2026-09-17T21:15:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 63.25
+      },
+      {
+        "title": "test(url-safety): cover the read_bounded remote-body size cap (APO-12642)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1858",
+        "repo": "apollos-shovel",
+        "requested_at": null,
+        "reviewed_at": "2026-09-15T14:37:47Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(web): prefill MyWell giving links from the Give page (APO-11398)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4454",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-03T20:35:01Z",
+        "reviewed_at": "2026-09-17T15:01:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 74.43
+      },
+      {
+        "title": "docs(ds): AGENTS.md, docs/, slash commands, DS-only Storybook",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4438",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T20:03:20Z",
+        "reviewed_at": "2026-09-18T14:41:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 10.63
+      },
+      {
+        "title": "ci(ds): blocking screenshot gate + linux baseline refresh workflow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4437",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T20:03:13Z",
+        "reviewed_at": "2026-09-18T14:36:38Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 10.56
+      },
+      {
+        "title": "ci(ds): design-system CI job + canvas-ui-web legacy lint gate",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4436",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T20:03:07Z",
+        "reviewed_at": "2026-09-18T14:33:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 10.5
+      },
+      {
+        "title": "feat(ds): component manifest + preview pipeline",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4435",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T20:03:00Z",
+        "reviewed_at": "2026-09-18T14:33:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 10.5
+      },
+      {
+        "title": "[APO-12017] Generate the subscriptions report from recurring_charges",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4225",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-15T19:50:44Z",
+        "reviewed_at": "2026-09-16T14:17:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.44
+      },
+      {
+        "title": "Generate the payouts report from the payout table (APO-12021)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4224",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-09-16T14:15:23Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(communities): add an Active toggle to hide a community app-wide",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4422",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-17T14:33:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(community): make an admin-off community disappear everywhere",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4217",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-09-17T21:14:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "refactor(admin): convert the Livestreams list to TypeScript (APO-12480)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4414",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-17T14:33:23Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "refactor(admin): scope livestream reads to the church, unhide the tab (APO-12479)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4413",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-16T18:58:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
+      },
+      {
+        "title": "[APO-12007] Generate the transactions report from charges",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4107",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-09-14T19:47:32Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "[1/2] fix(admin): require auth and org scope on the users route",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4270",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-04T05:06:34Z",
+        "reviewed_at": "2026-09-18T14:57:12Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 80.95
+      },
+      {
+        "title": "Stage TipTap v3.31 supporting packages (APO-10605)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3853",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-02T20:34:24Z",
+        "reviewed_at": "2026-09-15T22:32:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 73.43
+      },
+      {
+        "title": "Stage TipTap v3.31 editor packages (APO-10605)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3852",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-02T20:34:22Z",
+        "reviewed_at": "2026-09-15T14:25:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 65.85
+      },
+      {
+        "title": "Fix Apple TV screenshot ratio",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/3251",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-15T14:25:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- Drop GuideGroups and Group Sync instruction HTML\n- Honor GroupMultipleChoice poll privacy and drop duplicate HTML\n- Map SyncTimer to Timer\n- Drop GroupSyncPersonPicker from the migrator\n- Map GroupReader to Html read-aloud prompt\n- Page intro lane destinations so Action Plan video is not with Joy\n- Strip duplicate first-card session titles; keep Level N and estimated time\n- Skip ReferencedMultipleChoice in the migrator\n- Nest parentId cards as expandables on the parent page\n- Reviewed: chore(web): remove unused useFeatureFlag hook\n- Reviewed: chore(admin): remove unused buildTransactionsCountSql\n- Reviewed: chore(admin): remove unused ThrottleExecutor\n- Reviewed: test(admin): drop the duplicate nextPayout-null balance summary test\n- Reviewed: test(admin): drop the duplicate MagicLinkSection null-retry test\n- Reviewed: test(admin): drop the duplicate getStripeClient test\n- Reviewed: chore(admin): remove unused transcription type guards\n- Reviewed: chore(admin): remove unused createFeatureValidator\n- Reviewed: chore(admin): remove unused INPUT_REGEX from the stores route\n- Reviewed: chore(admin): remove unused determineConfigProgressAsPercent\n- Reviewed: Consolidate ad-hoc giving API auth checks into withAuthorization\n- Reviewed: test(cluster-db): cover escapeLiteral, the RLS role escaper\n- …and 6 more reviews\n- Done: APO-13249: [migration] Drop GuideGroups and Group Sync instruction HTML\n- Done: APO-13242: [migration] Map GroupMultipleChoice through MultipleChoice Poll rules\n- Done: APO-13241: [migration] Map SyncTimer to Timer\n- Done: APO-13240: [migration] Drop GroupSyncPersonPicker\n- Done: APO-13239: [migration] Map GroupReader to Html read-aloud prompt\n- Done: APO-13238: Investigate what GuideGroups actually is\n- Done: APO-13195: Skip ReferencedMultipleChoice in the migrator\n- Done: APO-13194: wk 2 Your Action Plan - pathing seems off\n- Done: APO-13193: Wk 2 Income and Housing - Error message in Canvas (bad migration data)\n- Done: APO-13138: Mobile poll: changing a vote hangs on a spinner, then a later tap crashes\n- Done: APO-13137: Web poll: after voting with results hidden, the selected option disappears\n- Done: APO-13130: Admin canvas shows empty Poll form when pollId is already on the row\n- …and 57 more completed issues\n- Filed 18 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- Allowlist dollar ShortAnswers as Currency when Mongo omits isCurrency (APO-13269)\n- Title poll-branch expandables from locked dest map (APO-13270)\n- Strip same-card HTML that repeats the Poll question (APO-13484)\n- fix(admin): stop Canvas Oops on leaf abstractFeature serialize (APO-13487)\n- Reviewed: fix(cache): stop edge-caching per-viewer comment lists (APO-13261)\n- Reviewed: fix(mobile): key feature and page cells by id\n- Reviewed: fix(admin): match Assessment block width to the other Canvas feature blocks (APO-12943)\n- Reviewed: fix(canvas-ui-web): color the Recall Edit link with the action token\n- Reviewed: fix(mobile): exclude the link Button variant from the inset hairline border\n- Reviewed: Canvas block menu and tooltip: alignment, spacing, and dead affordances\n- Reviewed: fix(canvas-ui-web): stop swapping the voter's avatar into the poll answered state\n- Reviewed: fix(mobile): consistent check-icon answered state on polls/assessments; fix assessment scroll gesture\n- Reviewed: fix(mobile): size the question block Answer button to match the card\n- Reviewed: fix(admin,web): stop the image carousel cropping to 4:3\n- Reviewed: fix(mobile): stop the image carousel cropping to 3:2\n- Reviewed: fix(admin): stop the AI Writer panel mis-sizing inside an Expandable Section\n- …and 19 more reviews\n- Done: APO-13484: [migration] Drop same-card HTML that repeats the Poll question\n- Done: APO-13270: 💡 Idea on how to handle multiple choice branching\n- Done: APO-12215: Admin canvas still shows ExpandableImage as Unsupported after the row is an Image feature\n- In progress: APO-13488: Canvas drops nested Recalls inside Expandable Sections\n- Filed 3 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- fix(mobile): frost Responses chrome on iOS before 26 (APO-13557)\n- Bold GroupReader read-aloud prompt (APO-13539)\n- fix(admin): keep Recall and Timer inside Expandable Sections (APO-13488)\n- Reviewed: feat(chat-sync): keep the file's media type in the live mapper\n- Reviewed: refactor(chat-sync): dedupe live files by the file and links on their own\n- Reviewed: feat(mobile): tap toggles play/pause and add an inline fullscreen button\n- Reviewed: feat(chat-sync): stop a running sync when the worker shuts down\n- Reviewed: feat(chat-sync): let an admin_global job sweep every church\n- Reviewed: feat(chat-sync): send the sync's warnings and errors to the app logger\n- Reviewed: feat(chat-sync): run one church's sync as a queue job\n- Reviewed: fix(chat-sync): write a child row only for a person of that church\n- Reviewed: fix(chat-sync): refuse to derive a tenant from a partial member list\n- Reviewed: fix(chat-sync): report whether the member walk finished\n- Reviewed: fix(chat-sync): read the member people rows in one query\n- Reviewed: fix(chat-sync): follow the row that won the create race\n- …and 34 more reviews\n- Done: APO-13488: Canvas drops nested Recalls inside Expandable Sections\n- Done: APO-13487: Canvas Oops: Content hole not allowed in a leaf node spec\n- Filed 2 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- Reviewed: feat(chat-attachments): keep the image size and the voice note data in the live mapper\n- Reviewed: feat(chat-attachments): keep the image size and the voice note data in the history sync\n- Reviewed: feat(chat-attachments): read the image size and the voice note data off the meta\n- Reviewed: feat(admin): add the PrayerRequestsTable component (APO-8395)\n- Reviewed: refactor(admin): convert LivestreamTable to TypeScript (APO-12480)\n- Reviewed: feat(web): build prefilled MyWell giving URLs (APO-11398)\n- Reviewed: refactor(web): split Pushpay URL building out of getOtherPaymentMethodsUrl (APO-11398)\n- Reviewed: feat(admin): link staff into the prayer requests page (APO-8395)\n- Reviewed: feat(admin): add a Cluster prayers model for staff prayer review (APO-8395)\n- Reviewed: feat(admin): collapse canvas sections the way web does (APO-13546)\n- Reviewed: feat(mobile): collapse sections to a two-line card (APO-13548)\n- Reviewed: feat(canvas-ui-web): present collapsed sections as a two-line card (APO-13544)\n- …and 28 more reviews\n- Done: APO-13603: Census HubSpot contacts/companies: is CRM a source of truth?\n- Done: APO-13602: Census WooCommerce orders: can we match an Apollos person?\n- Done: APO-13601: Write how FreedUp access works today\n- In progress: APO-13604: Decide the grant path for the next year\n- Filed 8 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- Reviewed: test(web): drop six byte-identical duplicate tests in $handle.give\n- Reviewed: test(donation-embed): drop two byte-identical Donation render tests\n- Reviewed: fix(admin): request failure code on the failed report\n- Reviewed: fix(admin): ask Airflow who owns a DAG before toggling it\n- Reviewed: Consolidate churchSlug guard + error-fallback boilerplate in bigQuery.server.js\n- Reviewed: docs: ask for two human reviewers on PRs\n- Reviewed: fix(admin): show the link URL box under its button, not below the fold\n- Reviewed: perf(admin): batch-load community members for communities list\n- Reviewed: Resolve passkit downloads against Cluster REST origin\n- Reviewed: build(deps): bump smol-toml to 1.8.0 (smol-toml-only)\n- Reviewed: feat(admin): move the Creator AI default model to GPT-6 Astra\n- Reviewed: Align grouped migration rows with the prototype chrome\n- …and 19 more reviews\n- Done: APO-13604: Decide the grant path for the next year\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": ", September 18\nDaily\nWhat did you work on today\n5:10 PM\nLocked the FreedUp paid-access grant path w/ @Conrad (tag-based; no coupons)\nShaped the signed-in web check so the first Week 2 visit matches Woo by email and tags the person\nDropped the old confirm/coupon step; empty match goes to contact support\nDocumented the web grant flow in the FreedUp paid access project and shared it w/ @Conrad\nLined up Weeks 2–6 gating off the purchase tag\nA couple of Forge PRs"
+    },
+    {
+      "day": "Thursday",
+      "content": ", September 17\nDaily\nWhat did you work on today\n5:02 PM\nJam w/ @Conrad on FreedUp paid access and GoodSense handoff\nWrote how FreedUp access works today\nChecked WooCommerce and HubSpot: Woo is the purchase gate; HubSpot is not the source of truth\nStood up the FreedUp paid access project; grant path still open\nConfirmed FreedUp Week 1 content move finished across all sessions\nSent @Conrad the access write-up ahead of the Wed Sep 23 GoodSense meeting\nWorked on my presentation for CITN\nScreenshot 2026-09-17 at 5.00.42 PM.png\nScreenshot 2026-09-17 at 5.00.42 PM.png"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", September 16\nDaily\nWhat did you work on today\n4:59 PM\nRan FreedUp content import in prod w/ @Conrad (Under 35/Over 35 headers on 3 Lanes Assessment)\nLined up FreedUp-only prod access w/ @Vincent so the import could run safely\nConfirmed Web and Admin Week 1, then walked mobile Week 1 w/ @Conrad\nFixed private responses sheet on older iOS\nClosed Admin bugs for recalls missing in expandable sections and a content hole crash\nMerged bold Group Discussion read-aloud prompt\nPassed private responses UI notes and a header fix w/ @Conrad\nScreenshot 2026-09-16 at 4.58.15 PM.png\nScreenshot 2026-09-16 at 4.58.15 PM.png"
+    },
+    {
+      "day": "Tuesday",
+      "content": ", September 15\nDaily\nWhat did you work on today\n5:24 PM\nWalked FreedUp Week 1 in Admin and on web/admin/mobile w/ @Conrad\nDropped duplicate poll question text that showed twice on the same card (merged)\nFixed Admin crash on Ideas that Work and recalls vanishing inside expandable sections; both in review\nDebugged question blocks on web when logged out w/ @Conrad\nFlagged scripture references that aren't becoming scripture features after the content move\nCalled out Pop Quiz Week 2 cleanup for after the last content move\nScreenshot 2026-09-15 at 5.20.50 PM.png\nScreenshot 2026-09-15 at 5.20.50 PM.png"
+    },
+    {
+      "day": "Monday",
+      "content": ", September 14\nDaily\nWhat did you work on today\n4:46 PM\nChecked in w/ @Conrad on FreedUp Week 1 readiness for the Goodsense demo\nWalked Week 1 on Admin, web, and mobile; Group Discussion was the biggest hole\nConfirmed Polls and Multiple Choice after Friday's landings\nCaptured leftover Admin UI issues in Linear\nFlagged answer-gated follow-up content still missing\nTried text headers instead of the recall block on some expandable sections\nCleaning up Week 1 Group Discussion; lined up Group features to finish in the content move by end of day (ALL Group features are accounted for in the Migration tool now)\nCleared stale In Review and In Progress items across open FreedUp projects so completion matches what's done\nCallouts for:\nFreedUp Week 1 — Finished the Week 1 content move in prod and walked it on Admin/web/mobile w/ Conrad\nPrivate responses & Admin — Shipped the older-iOS private responses fix and closed Admin recalls/content-hole crashes\nPaid access — Documented how FreedUp access works today (Woo is the purchase gate) and shaped the tag-based grant path w/ Conrad ahead of GoodSense"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 16\n  • PR reviews: 155\n  • Commits pushed: 43\n  • Code volume: +1966 / -90 (53 files)\n  • Median review latency (working hours): 4.41h\n  • Linear issues completed: 78\n  • Linear projects completed: 0\n  • Linear issues worked on: 30\n  • Linear issues created: 31\n  • Linear replies: 23\n  • Repos: apollos-admin, apollos-cluster, apollos-platforms, apollos-shovel, forge, freedup-migration\n\n📝 Check-ins:\n\n  Monday: - Drop GuideGroups and Group Sync instruction HTML\n- Honor GroupMultipleChoice p...\n  Tuesday: - Allowlist dollar ShortAnswers as Currency when Mongo omits isCurrency (APO-132...\n  Wednesday: - fix(mobile): frost Responses chrome on iOS before 26 (APO-13557)\n- Bold GroupR...\n  Thursday: - Reviewed: feat(chat-attachments): keep the image size and the voice note data ...\n  Friday: - Reviewed: test(web): drop six byte-identical duplicate tests in $handle.give\n-...\n  Friday: , September 18\nDaily\nWhat did you work on today\n5:10 PM\nLocked the FreedUp paid-...\n  Thursday: , September 17\nDaily\nWhat did you work on today\n5:02 PM\nJam w/ @Conrad on FreedU...\n  Wednesday: , September 16\nDaily\nWhat did you work on today\n4:59 PM\nRan FreedUp content impo...\n  Tuesday: , September 15\nDaily\nWhat did you work on today\n5:24 PM\nWalked FreedUp Week 1 in...\n  Monday: , September 14\nDaily\nWhat did you work on today\n4:46 PM\nChecked in w/ @Conrad on...\n",
+  "formatted_output": null
+}
