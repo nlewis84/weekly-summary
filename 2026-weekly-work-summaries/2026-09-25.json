@@ -1,0 +1,2672 @@
+{
+  "meta": {
+    "generated_at": "2026-09-25T21:00:45.379Z",
+    "window_start": "2026-09-19T05:00:00.000Z",
+    "window_end": "2026-09-26T04:59:59.999Z",
+    "week_ending": "2026-09-25",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 37,
+    "prs_total": 57,
+    "pr_reviews": 146,
+    "pr_comments": 185,
+    "commits_pushed": 98,
+    "linear_completed": 27,
+    "linear_projects_completed": 0,
+    "linear_worked_on": 42,
+    "linear_issues_created": 34,
+    "linear_comments": 6,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-platforms",
+      "apollos-shovel",
+      "forge",
+      "toolbox"
+    ],
+    "lines_added": 8528,
+    "lines_deleted": 1521,
+    "files_changed": 195,
+    "median_review_latency_hours": 0.89
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-13880",
+        "title": "Apollos Dashboard data is not populating",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13880/apollos-dashboard-data-is-not-populating",
+        "completedAt": "2026-09-24T15:50:51.905Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13824",
+        "title": "Share formatPersonDisplayName in Admin people-search comboboxes",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13824/share-formatpersondisplayname-in-admin-people-search-comboboxes",
+        "completedAt": "2026-09-23T16:13:02.335Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13823",
+        "title": "Share formatFullName in TransactionDetailSheet",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13823/share-formatfullname-in-transactiondetailsheet",
+        "completedAt": "2026-09-23T16:13:01.377Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13822",
+        "title": "Share fieldNameToGraphQLKey in web-embeds AuthDetails and ProfileDetails",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13822/share-fieldnametographqlkey-in-web-embeds-authdetails-and",
+        "completedAt": "2026-09-23T14:40:48.517Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13820",
+        "title": "Share formatCurrency in web formatAmount",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13820/share-formatcurrency-in-web-formatamount",
+        "completedAt": "2026-09-23T14:56:34.810Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13819",
+        "title": "Share formatClock in Admin TimerFeature formatDuration",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13819/share-formatclock-in-admin-timerfeature-formatduration",
+        "completedAt": "2026-09-23T14:40:48.560Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13818",
+        "title": "Share formatAudioClock between canvas-ui-web AudioPlayer and Admin AudioFeatureNodeView",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13818/share-formataudioclock-between-canvas-ui-web-audioplayer-and-admin",
+        "completedAt": "2026-09-23T14:40:48.279Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13817",
+        "title": "Share donation-embed dateToString in Admin todayLocalYMD",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13817/share-donation-embed-datetostring-in-admin-todaylocalymd",
+        "completedAt": "2026-09-23T16:13:02.082Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13816",
+        "title": "Share ChartTooltip chrome in Admin AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13816/share-charttooltip-chrome-in-admin-areachart",
+        "completedAt": "2026-09-25T10:26:28.392Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13815",
+        "title": "Share ChartTooltip chrome between Admin LineChart and AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13815/share-charttooltip-chrome-between-admin-linechart-and-areachart",
+        "completedAt": "2026-09-23T16:13:01.460Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13814",
+        "title": "Share ChartTooltipRow in Admin BarChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13814/share-charttooltiprow-in-admin-barchart",
+        "completedAt": "2026-09-23T16:13:02.370Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13774",
+        "title": "Share cn between novel-core editor utils and tremor-raw",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13774/share-cn-between-novel-core-editor-utils-and-tremor-raw",
+        "completedAt": "2026-09-23T16:13:02.403Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13773",
+        "title": "Share getGivingFrequency map in web payment.server",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13773/share-getgivingfrequency-map-in-web-paymentserver",
+        "completedAt": "2026-09-23T14:50:16.788Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13772",
+        "title": "Share IFRAME_MESSAGE_TYPES and PARENT_MESSAGE_TYPES between web embed and web-embeds-v2",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13772/share-iframe-message-types-and-parent-message-types-between-web-embed",
+        "completedAt": "2026-09-23T15:36:03.457Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13771",
+        "title": "Extract sendgrid payment-method confirmation email flag",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13771/extract-sendgrid-payment-method-confirmation-email-flag",
+        "completedAt": "2026-09-23T16:13:01.530Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13769",
+        "title": "Share EMBED_IFRAME_ALLOW between Admin snippets and web-embeds-v2",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13769/share-embed-iframe-allow-between-admin-snippets-and-web-embeds-v2",
+        "completedAt": "2026-09-23T15:18:22.263Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13767",
+        "title": "Share development-always-on church-flag hatch in Admin migration helpers",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13767/share-development-always-on-church-flag-hatch-in-admin-migration",
+        "completedAt": "2026-09-23T16:13:02.237Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13766",
+        "title": "Share isChurchFlagEnabled in unknownToKnownSignupsFlag",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13766/share-ischurchflagenabled-in-unknowntoknownsignupsflag",
+        "completedAt": "2026-09-23T16:13:01.304Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13765",
+        "title": "Share ChartTooltipRow between Admin LineChart and AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13765/share-charttooltiprow-between-admin-linechart-and-areachart",
+        "completedAt": "2026-09-23T16:13:01.494Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13764",
+        "title": "Share isCalendarValidDate in Admin and web gift-edit",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13764/share-iscalendarvaliddate-in-admin-and-web-gift-edit",
+        "completedAt": "2026-09-23T03:43:27.880Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13763",
+        "title": "Share ChartLegend in Admin BarChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13763/share-chartlegend-in-admin-barchart",
+        "completedAt": "2026-09-23T16:13:02.277Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12883",
+        "title": "Share firstNonEmptyString between web-embeds getAdminBaseUrl and getWebAppBaseUrl",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12883/share-firstnonemptystring-between-web-embeds-getadminbaseurl-and",
+        "completedAt": "2026-09-21T20:52:12.735Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12882",
+        "title": "Share ChartLegend between LineChart and AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12882/share-chartlegend-between-linechart-and-areachart",
+        "completedAt": "2026-09-22T16:12:36.158Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12873",
+        "title": "Share canvas-ui-web normalizeChurchSlugForApi in web-embeds-v2 e2e after stripping @",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12873/share-canvas-ui-web-normalizechurchslugforapi-in-web-embeds-v2-e2e",
+        "completedAt": "2026-09-21T20:45:22.211Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12871",
+        "title": "Share canvas-ui-web normalizeChurchSlugForApi in web slugs.ts",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12871/share-canvas-ui-web-normalizechurchslugforapi-in-web-slugsts",
+        "completedAt": "2026-09-22T16:10:26.882Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12868",
+        "title": "Share canvas-ui-web getSubdomain in tap-linking after stripping the port",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12868/share-canvas-ui-web-getsubdomain-in-tap-linking-after-stripping-the",
+        "completedAt": "2026-09-22T16:10:26.817Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12867",
+        "title": "Share donation-embed canonicalFrequencyFromId in Admin EditRecurringGiftModal",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12867/share-donation-embed-canonicalfrequencyfromid-in-admin",
+        "completedAt": "2026-09-22T16:12:35.969Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-14011",
+        "title": "Web: Object.hasOwn crashes Sentry IAB filter on iOS 14 / NetCast",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14011/web-objecthasown-crashes-sentry-iab-filter-on-ios-14-netcast",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14008",
+        "title": "Admin: DAG stream enqueue after client disconnect closes the controller",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14008/admin-dag-stream-enqueue-after-client-disconnect-closes-the-controller",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-13880",
+        "title": "Apollos Dashboard data is not populating",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13880/apollos-dashboard-data-is-not-populating",
+        "completedAt": "2026-09-24T15:50:51.905Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13879",
+        "title": "Share formatFullName in Admin launchpad release-request email",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13879/share-formatfullname-in-admin-launchpad-release-request-email",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13876",
+        "title": "Share formatPersonDisplayName in Admin transactions workbook donor column",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13876/share-formatpersondisplayname-in-admin-transactions-workbook-donor",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13870",
+        "title": "Share stripPhoneFormatting between web and donation-embed",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13870/share-stripphoneformatting-between-web-and-donation-embed",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13827",
+        "title": "Claim FreedUp access from live Woo orders",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13827/claim-freedup-access-from-live-woo-orders",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13824",
+        "title": "Share formatPersonDisplayName in Admin people-search comboboxes",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13824/share-formatpersondisplayname-in-admin-people-search-comboboxes",
+        "completedAt": "2026-09-23T16:13:02.335Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13823",
+        "title": "Share formatFullName in TransactionDetailSheet",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13823/share-formatfullname-in-transactiondetailsheet",
+        "completedAt": "2026-09-23T16:13:01.377Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13822",
+        "title": "Share fieldNameToGraphQLKey in web-embeds AuthDetails and ProfileDetails",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13822/share-fieldnametographqlkey-in-web-embeds-authdetails-and",
+        "completedAt": "2026-09-23T14:40:48.517Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13820",
+        "title": "Share formatCurrency in web formatAmount",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13820/share-formatcurrency-in-web-formatamount",
+        "completedAt": "2026-09-23T14:56:34.810Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13819",
+        "title": "Share formatClock in Admin TimerFeature formatDuration",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13819/share-formatclock-in-admin-timerfeature-formatduration",
+        "completedAt": "2026-09-23T14:40:48.560Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13818",
+        "title": "Share formatAudioClock between canvas-ui-web AudioPlayer and Admin AudioFeatureNodeView",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13818/share-formataudioclock-between-canvas-ui-web-audioplayer-and-admin",
+        "completedAt": "2026-09-23T14:40:48.279Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13817",
+        "title": "Share donation-embed dateToString in Admin todayLocalYMD",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13817/share-donation-embed-datetostring-in-admin-todaylocalymd",
+        "completedAt": "2026-09-23T16:13:02.082Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13816",
+        "title": "Share ChartTooltip chrome in Admin AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13816/share-charttooltip-chrome-in-admin-areachart",
+        "completedAt": "2026-09-25T10:26:28.392Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13815",
+        "title": "Share ChartTooltip chrome between Admin LineChart and AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13815/share-charttooltip-chrome-between-admin-linechart-and-areachart",
+        "completedAt": "2026-09-23T16:13:01.460Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13814",
+        "title": "Share ChartTooltipRow in Admin BarChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13814/share-charttooltiprow-in-admin-barchart",
+        "completedAt": "2026-09-23T16:13:02.370Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13774",
+        "title": "Share cn between novel-core editor utils and tremor-raw",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13774/share-cn-between-novel-core-editor-utils-and-tremor-raw",
+        "completedAt": "2026-09-23T16:13:02.403Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13773",
+        "title": "Share getGivingFrequency map in web payment.server",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13773/share-getgivingfrequency-map-in-web-paymentserver",
+        "completedAt": "2026-09-23T14:50:16.788Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13772",
+        "title": "Share IFRAME_MESSAGE_TYPES and PARENT_MESSAGE_TYPES between web embed and web-embeds-v2",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13772/share-iframe-message-types-and-parent-message-types-between-web-embed",
+        "completedAt": "2026-09-23T15:36:03.457Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13771",
+        "title": "Extract sendgrid payment-method confirmation email flag",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13771/extract-sendgrid-payment-method-confirmation-email-flag",
+        "completedAt": "2026-09-23T16:13:01.530Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13769",
+        "title": "Share EMBED_IFRAME_ALLOW between Admin snippets and web-embeds-v2",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13769/share-embed-iframe-allow-between-admin-snippets-and-web-embeds-v2",
+        "completedAt": "2026-09-23T15:18:22.263Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13767",
+        "title": "Share development-always-on church-flag hatch in Admin migration helpers",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13767/share-development-always-on-church-flag-hatch-in-admin-migration",
+        "completedAt": "2026-09-23T16:13:02.237Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13766",
+        "title": "Share isChurchFlagEnabled in unknownToKnownSignupsFlag",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13766/share-ischurchflagenabled-in-unknowntoknownsignupsflag",
+        "completedAt": "2026-09-23T16:13:01.304Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13765",
+        "title": "Share ChartTooltipRow between Admin LineChart and AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13765/share-charttooltiprow-between-admin-linechart-and-areachart",
+        "completedAt": "2026-09-23T16:13:01.494Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13764",
+        "title": "Share isCalendarValidDate in Admin and web gift-edit",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13764/share-iscalendarvaliddate-in-admin-and-web-gift-edit",
+        "completedAt": "2026-09-23T03:43:27.880Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13763",
+        "title": "Share ChartLegend in Admin BarChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13763/share-chartlegend-in-admin-barchart",
+        "completedAt": "2026-09-23T16:13:02.277Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13608",
+        "title": "Build the grant path: signed-in check page on Apollos Web",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13608/build-the-grant-path-signed-in-check-page-on-apollos-web",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13607",
+        "title": "Staff override for paid FreedUp access",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13607/staff-override-for-paid-freedup-access",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13606",
+        "title": "Lock a content series to a required tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13606/lock-a-content-series-to-a-required-tag",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13605",
+        "title": "Mint a FreedUp purchase tag on the person",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13605/mint-a-freedup-purchase-tag-on-the-person",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-12900",
+        "title": "Move church-flag env-hatch rationale onto isChurchFlagEnabled and convert webEmbedsV2Flag",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12900/move-church-flag-env-hatch-rationale-onto-ischurchflagenabled-and",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-12891",
+        "title": "Admin: LinkEmbed processEmbedMeta crashes when meta is missing",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-12891/admin-linkembed-processembedmeta-crashes-when-meta-is-missing",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-12889",
+        "title": "Web Embed: Webview processEmbedMeta crashes when meta is missing",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-12889/web-embed-webview-processembedmeta-crashes-when-meta-is-missing",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-12883",
+        "title": "Share firstNonEmptyString between web-embeds getAdminBaseUrl and getWebAppBaseUrl",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12883/share-firstnonemptystring-between-web-embeds-getadminbaseurl-and",
+        "completedAt": "2026-09-21T20:52:12.735Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12882",
+        "title": "Share ChartLegend between LineChart and AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12882/share-chartlegend-between-linechart-and-areachart",
+        "completedAt": "2026-09-22T16:12:36.158Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12874",
+        "title": "Share DEFAULT_SUGGESTED_PROMPTS in web-embeds useAskLoaderData",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12874/share-default-suggested-prompts-in-web-embeds-useaskloaderdata",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-12873",
+        "title": "Share canvas-ui-web normalizeChurchSlugForApi in web-embeds-v2 e2e after stripping @",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12873/share-canvas-ui-web-normalizechurchslugforapi-in-web-embeds-v2-e2e",
+        "completedAt": "2026-09-21T20:45:22.211Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12871",
+        "title": "Share canvas-ui-web normalizeChurchSlugForApi in web slugs.ts",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12871/share-canvas-ui-web-normalizechurchslugforapi-in-web-slugsts",
+        "completedAt": "2026-09-22T16:10:26.882Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12868",
+        "title": "Share canvas-ui-web getSubdomain in tap-linking after stripping the port",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12868/share-canvas-ui-web-getsubdomain-in-tap-linking-after-stripping-the",
+        "completedAt": "2026-09-22T16:10:26.817Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12867",
+        "title": "Share donation-embed canonicalFrequencyFromId in Admin EditRecurringGiftModal",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12867/share-donation-embed-canonicalfrequencyfromid-in-admin",
+        "completedAt": "2026-09-22T16:12:35.969Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12338",
+        "title": "Share parseHexRgb in web-embeds ThemeProvider",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12338/share-parsehexrgb-in-web-embeds-themeprovider",
+        "completedAt": null,
+        "state": "In Progress"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-14011",
+        "title": "Web: Object.hasOwn crashes Sentry IAB filter on iOS 14 / NetCast",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14011/web-objecthasown-crashes-sentry-iab-filter-on-ios-14-netcast",
+        "createdAt": "2026-09-25T17:19:26.930Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14008",
+        "title": "Admin: DAG stream enqueue after client disconnect closes the controller",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14008/admin-dag-stream-enqueue-after-client-disconnect-closes-the-controller",
+        "createdAt": "2026-09-25T16:55:05.566Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-13879",
+        "title": "Share formatFullName in Admin launchpad release-request email",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13879/share-formatfullname-in-admin-launchpad-release-request-email",
+        "createdAt": "2026-09-24T10:10:10.777Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13878",
+        "title": "Share formatPersonDisplayName in Admin daily habits leaderboard names",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13878/share-formatpersondisplayname-in-admin-daily-habits-leaderboard-names",
+        "createdAt": "2026-09-24T09:41:02.816Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13877",
+        "title": "Share formatPersonDisplayName in sendgrid recurring-gift cancellation recipient",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13877/share-formatpersondisplayname-in-sendgrid-recurring-gift-cancellation",
+        "createdAt": "2026-09-24T09:10:06.501Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13876",
+        "title": "Share formatPersonDisplayName in Admin transactions workbook donor column",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13876/share-formatpersondisplayname-in-admin-transactions-workbook-donor",
+        "createdAt": "2026-09-24T08:42:09.200Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13874",
+        "title": "Share formatFullName in Admin PeopleIcon tooltip",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13874/share-formatfullname-in-admin-peopleicon-tooltip",
+        "createdAt": "2026-09-24T07:43:15.721Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13873",
+        "title": "Share formatPersonDisplayName in Admin TransactionTable",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13873/share-formatpersondisplayname-in-admin-transactiontable",
+        "createdAt": "2026-09-24T07:10:44.460Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13872",
+        "title": "Share formatPersonDisplayName in Admin PeopleTableRow",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13872/share-formatpersondisplayname-in-admin-peopletablerow",
+        "createdAt": "2026-09-24T06:40:27.908Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13871",
+        "title": "Share formatPersonDisplayName in Suggested Follows PersonSummary",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13871/share-formatpersondisplayname-in-suggested-follows-personsummary",
+        "createdAt": "2026-09-24T06:11:07.804Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13870",
+        "title": "Share stripPhoneFormatting between web and donation-embed",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13870/share-stripphoneformatting-between-web-and-donation-embed",
+        "createdAt": "2026-09-24T05:41:35.752Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13869",
+        "title": "Share ChartTooltip chrome in Admin BarChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13869/share-charttooltip-chrome-in-admin-barchart",
+        "createdAt": "2026-09-24T05:10:57.150Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13827",
+        "title": "Claim FreedUp access from live Woo orders",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13827/claim-freedup-access-from-live-woo-orders",
+        "createdAt": "2026-09-23T15:29:15.144Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13824",
+        "title": "Share formatPersonDisplayName in Admin people-search comboboxes",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13824/share-formatpersondisplayname-in-admin-people-search-comboboxes",
+        "createdAt": "2026-09-23T09:42:56.976Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13823",
+        "title": "Share formatFullName in TransactionDetailSheet",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13823/share-formatfullname-in-transactiondetailsheet",
+        "createdAt": "2026-09-23T09:15:12.194Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13822",
+        "title": "Share fieldNameToGraphQLKey in web-embeds AuthDetails and ProfileDetails",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13822/share-fieldnametographqlkey-in-web-embeds-authdetails-and",
+        "createdAt": "2026-09-23T08:43:24.561Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13820",
+        "title": "Share formatCurrency in web formatAmount",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13820/share-formatcurrency-in-web-formatamount",
+        "createdAt": "2026-09-23T08:12:49.173Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13819",
+        "title": "Share formatClock in Admin TimerFeature formatDuration",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13819/share-formatclock-in-admin-timerfeature-formatduration",
+        "createdAt": "2026-09-23T07:40:17.653Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13818",
+        "title": "Share formatAudioClock between canvas-ui-web AudioPlayer and Admin AudioFeatureNodeView",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13818/share-formataudioclock-between-canvas-ui-web-audioplayer-and-admin",
+        "createdAt": "2026-09-23T07:11:49.473Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13817",
+        "title": "Share donation-embed dateToString in Admin todayLocalYMD",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13817/share-donation-embed-datetostring-in-admin-todaylocalymd",
+        "createdAt": "2026-09-23T06:48:01.454Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13816",
+        "title": "Share ChartTooltip chrome in Admin AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13816/share-charttooltip-chrome-in-admin-areachart",
+        "createdAt": "2026-09-23T06:10:30.392Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13815",
+        "title": "Share ChartTooltip chrome between Admin LineChart and AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13815/share-charttooltip-chrome-between-admin-linechart-and-areachart",
+        "createdAt": "2026-09-23T05:41:02.540Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13814",
+        "title": "Share ChartTooltipRow in Admin BarChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13814/share-charttooltiprow-in-admin-barchart",
+        "createdAt": "2026-09-23T05:11:33.677Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13796",
+        "title": "Treat an unknown lock state as locked on mobile",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13796/treat-an-unknown-lock-state-as-locked-on-mobile",
+        "createdAt": "2026-09-22T18:37:00.131Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-13774",
+        "title": "Share cn between novel-core editor utils and tremor-raw",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13774/share-cn-between-novel-core-editor-utils-and-tremor-raw",
+        "createdAt": "2026-09-22T09:45:43.773Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13773",
+        "title": "Share getGivingFrequency map in web payment.server",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13773/share-getgivingfrequency-map-in-web-paymentserver",
+        "createdAt": "2026-09-22T09:12:20.699Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13772",
+        "title": "Share IFRAME_MESSAGE_TYPES and PARENT_MESSAGE_TYPES between web embed and web-embeds-v2",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13772/share-iframe-message-types-and-parent-message-types-between-web-embed",
+        "createdAt": "2026-09-22T08:45:34.103Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13771",
+        "title": "Extract sendgrid payment-method confirmation email flag",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13771/extract-sendgrid-payment-method-confirmation-email-flag",
+        "createdAt": "2026-09-22T08:13:02.250Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13769",
+        "title": "Share EMBED_IFRAME_ALLOW between Admin snippets and web-embeds-v2",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13769/share-embed-iframe-allow-between-admin-snippets-and-web-embeds-v2",
+        "createdAt": "2026-09-22T07:47:38.504Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13767",
+        "title": "Share development-always-on church-flag hatch in Admin migration helpers",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13767/share-development-always-on-church-flag-hatch-in-admin-migration",
+        "createdAt": "2026-09-22T07:18:17.902Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13766",
+        "title": "Share isChurchFlagEnabled in unknownToKnownSignupsFlag",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13766/share-ischurchflagenabled-in-unknowntoknownsignupsflag",
+        "createdAt": "2026-09-22T06:44:41.555Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13765",
+        "title": "Share ChartTooltipRow between Admin LineChart and AreaChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13765/share-charttooltiprow-between-admin-linechart-and-areachart",
+        "createdAt": "2026-09-22T06:10:46.261Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13764",
+        "title": "Share isCalendarValidDate in Admin and web gift-edit",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13764/share-iscalendarvaliddate-in-admin-and-web-gift-edit",
+        "createdAt": "2026-09-22T05:40:07.165Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13763",
+        "title": "Share ChartLegend in Admin BarChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13763/share-chartlegend-in-admin-barchart",
+        "createdAt": "2026-09-22T05:11:34.407Z",
+        "state": "Done"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-14043",
+        "title": "Investigate prayer-day slider defaults and limit its range",
+        "url": "https://linear.app/differential/issue/APO-14043/investigate-prayer-day-slider-defaults-and-limit-its-range",
+        "project": null,
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-12889",
+        "title": "Web Embed: Webview processEmbedMeta crashes when meta is missing",
+        "url": "https://linear.app/differential/issue/APO-12889/web-embed-webview-processembedmeta-crashes-when-meta-is-missing",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-12891",
+        "title": "Admin: LinkEmbed processEmbedMeta crashes when meta is missing",
+        "url": "https://linear.app/differential/issue/APO-12891/admin-linkembed-processembedmeta-crashes-when-meta-is-missing",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-12338",
+        "title": "Share parseHexRgb in web-embeds ThemeProvider",
+        "url": "https://linear.app/differential/issue/APO-12338/share-parsehexrgb-in-web-embeds-themeprovider",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-13880",
+        "title": "Apollos Dashboard data is not populating",
+        "url": "https://linear.app/differential/issue/APO-13880/apollos-dashboard-data-is-not-populating",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13823",
+        "title": "Share formatFullName in TransactionDetailSheet",
+        "url": "https://linear.app/differential/issue/APO-13823/share-formatfullname-in-transactiondetailsheet",
+        "project": null,
+        "state": "Done"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "Revert \"bump @google-cloud/bigquery from 8.3.0 to 9.1.0\" (APO-13880)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5119",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-24T15:21:39Z",
+        "additions": 69,
+        "deletions": 73,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share formatPersonDisplayName in daily habits names (APO-13878)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5116",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-25T17:46:30Z",
+        "additions": 33,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share formatPersonDisplayName in sendgrid cancellation recipient (APO-13877)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5115",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-25T18:26:05Z",
+        "additions": 21,
+        "deletions": 4,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share formatFullName in PeopleIcon (APO-13874)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5112",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-25T17:45:56Z",
+        "additions": 60,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share formatPersonDisplayName in TransactionTable (APO-13873)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5111",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-25T18:32:01Z",
+        "additions": 42,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share formatPersonDisplayName in PeopleTableRow (APO-13872)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5110",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-25T18:26:05Z",
+        "additions": 89,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share formatPersonDisplayName in Suggested Follows PersonSummary (APO-13871)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5109",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-25T17:34:03Z",
+        "additions": 115,
+        "deletions": 31,
+        "changed_files": 3
+      },
+      {
+        "title": "refactor(admin): share ChartTooltip chrome in BarChart (APO-13869)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5107",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-25T18:25:48Z",
+        "additions": 64,
+        "deletions": 72,
+        "changed_files": 4
+      },
+      {
+        "title": "Treat an unknown lock state as locked on mobile",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7381",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-09-25T02:35:02Z",
+        "additions": 61,
+        "deletions": 2,
+        "changed_files": 3
+      },
+      {
+        "title": "refactor(admin): share formatPersonDisplayName in people-search comboboxes (APO-13824)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5089",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T14:51:33Z",
+        "additions": 44,
+        "deletions": 30,
+        "changed_files": 4
+      },
+      {
+        "title": "refactor(admin): share formatFullName in TransactionDetailSheet (APO-13823)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5088",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T14:51:33Z",
+        "additions": 62,
+        "deletions": 6,
+        "changed_files": 4
+      },
+      {
+        "title": "refactor(web): share fieldNameToGraphQLKey in AuthDetails and ProfileDetails (APO-13822)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5087",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T14:37:20Z",
+        "additions": 54,
+        "deletions": 15,
+        "changed_files": 8
+      },
+      {
+        "title": "refactor(admin): share formatCurrency in web formatAmount (APO-13820)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5086",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T14:47:47Z",
+        "additions": 58,
+        "deletions": 18,
+        "changed_files": 6
+      },
+      {
+        "title": "refactor(admin): share formatClock in TimerFeature formatDuration (APO-13819)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5085",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T14:37:20Z",
+        "additions": 39,
+        "deletions": 12,
+        "changed_files": 6
+      },
+      {
+        "title": "refactor(admin): share formatAudioClock in AudioPlayer and AudioFeatureNodeView (APO-13818)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5084",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T14:37:20Z",
+        "additions": 62,
+        "deletions": 18,
+        "changed_files": 5
+      },
+      {
+        "title": "refactor(admin): share dateToString in todayLocalYMD (APO-13817)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5083",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T14:49:17Z",
+        "additions": 33,
+        "deletions": 5,
+        "changed_files": 3
+      },
+      {
+        "title": "refactor(admin): share ChartTooltip chrome in AreaChart (APO-13816)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5081",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T12:53:50Z",
+        "additions": 123,
+        "deletions": 68,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share ChartTooltip chrome in LineChart (APO-13815)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5080",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T15:31:58Z",
+        "additions": 197,
+        "deletions": 137,
+        "changed_files": 4
+      },
+      {
+        "title": "refactor(admin): share ChartTooltipRow in BarChart (APO-13814)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5078",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T13:42:22Z",
+        "additions": 50,
+        "deletions": 42,
+        "changed_files": 4
+      },
+      {
+        "title": "refactor(admin): share cn between novel-core and tremor-raw (APO-13774)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5047",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T14:37:20Z",
+        "additions": 33,
+        "deletions": 12,
+        "changed_files": 5
+      },
+      {
+        "title": "refactor(web): share getGivingFrequency map in payment.server (APO-13773)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5046",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T14:46:46Z",
+        "additions": 54,
+        "deletions": 24,
+        "changed_files": 5
+      },
+      {
+        "title": "refactor(web): share embed postMessage type maps with web-embeds-v2 (APO-13772)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5045",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T15:13:00Z",
+        "additions": 105,
+        "deletions": 62,
+        "changed_files": 7
+      },
+      {
+        "title": "refactor(admin): extract sendgrid payment-method confirmation email flag (APO-13771)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5044",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T14:37:19Z",
+        "additions": 151,
+        "deletions": 13,
+        "changed_files": 4
+      },
+      {
+        "title": "refactor(admin): share EMBED_IFRAME_ALLOW with web-embeds-v2 (APO-13769)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5043",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T15:10:07Z",
+        "additions": 33,
+        "deletions": 9,
+        "changed_files": 7
+      },
+      {
+        "title": "refactor(admin): share development-always-on church-flag hatch in migration helpers (APO-13767)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5042",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T03:36:55Z",
+        "additions": 54,
+        "deletions": 8,
+        "changed_files": 4
+      },
+      {
+        "title": "refactor(admin): share isChurchFlagEnabled in unknownToKnownSignupsFlag (APO-13766)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5041",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T03:36:55Z",
+        "additions": 13,
+        "deletions": 21,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share ChartTooltipRow in LineChart and AreaChart (APO-13765)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5040",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T03:37:52Z",
+        "additions": 66,
+        "deletions": 74,
+        "changed_files": 4
+      },
+      {
+        "title": "refactor(giving): share isCalendarValidDate in Admin and web gift-edit (APO-13764)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5039",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T03:37:52Z",
+        "additions": 62,
+        "deletions": 27,
+        "changed_files": 7
+      },
+      {
+        "title": "refactor(admin): share ChartLegend in BarChart (APO-13763)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5038",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-23T03:37:52Z",
+        "additions": 27,
+        "deletions": 55,
+        "changed_files": 4
+      },
+      {
+        "title": "improve(shaping): decisions carry their consequence",
+        "url": "https://github.com/ApollosProject/forge/pull/100",
+        "repo": "forge",
+        "merged_at": "2026-09-19T14:37:04Z",
+        "additions": 3,
+        "deletions": 1,
+        "changed_files": 1
+      },
+      {
+        "title": "Add an Anthropic caller beside the Cursor one, behind ModelCaller",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/78",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-09-21T19:51:24Z",
+        "additions": 6386,
+        "deletions": 498,
+        "changed_files": 60
+      },
+      {
+        "title": "refactor(web-embeds): share firstNonEmptyString between URL helpers (APO-12883)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4621",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-21T20:41:02Z",
+        "additions": 63,
+        "deletions": 30,
+        "changed_files": 4
+      },
+      {
+        "title": "refactor(admin): share ChartLegend between LineChart and AreaChart (APO-12882)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4620",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-21T20:30:43Z",
+        "additions": 98,
+        "deletions": 100,
+        "changed_files": 4
+      },
+      {
+        "title": "refactor(web-embeds-v2): share canvas-ui-web normalizeChurchSlugForApi in e2e setup (APO-12873)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4612",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-21T20:33:35Z",
+        "additions": 62,
+        "deletions": 1,
+        "changed_files": 3
+      },
+      {
+        "title": "refactor(web): share canvas-ui-web normalizeChurchSlugForApi in slugs.ts (APO-12871)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4610",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-21T20:41:02Z",
+        "additions": 14,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(tap-linking): share canvas-ui-web getSubdomain after stripping the port (APO-12868)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4609",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-21T20:39:07Z",
+        "additions": 16,
+        "deletions": 19,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share canonicalFrequencyFromId in EditRecurringGiftModal (APO-12867)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4608",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-21T20:30:09Z",
+        "additions": 12,
+        "deletions": 25,
+        "changed_files": 2
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix(canvas-ui-web): guard Webview when Iframely omits meta",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5148",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(canvas-ui-web): guard LinkEmbed when Iframely omits meta",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5146",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(web): avoid Object.hasOwn crash in the Sentry IAB filter",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5141",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(admin): skip DAG SSE writes after the client disconnects",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5137",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "refactor(admin): share formatFullName in launchpad release email (APO-13879)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5117",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "refactor(admin): share formatPersonDisplayName in transactions workbook (APO-13876)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5114",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "refactor(web): share stripPhoneFormatting between web and donation-embed (APO-13870)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5108",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Claim FreedUp access from live Woo orders (APO-13827)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4857",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Decide FreedUp purchase from the signed-in email (APO-13608)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4853",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Prove staff override is the purchase tag (APO-13607)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4852",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Let Admin write tag.data for the purchase-gate Persona (APO-13605)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5092",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Refuse a purchase-gated read without the gate tag (APO-13606)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4851",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Name the FreedUp purchase-gate Persona (APO-13605)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4850",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "exp: run one pull request through both providers at once",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/79",
+        "repo": "apollos-code-reviewer",
+        "state": "open"
+      },
+      {
+        "title": "refactor(admin): share church-flag env hatch with webEmbedsV2 (APO-12900)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4637",
+        "repo": "apollos-admin",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "fix(web): close Give page pickers and avatar menu on back (APO-13955)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5129",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T20:39:10Z",
+        "reviewed_at": "2026-09-25T20:56:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.29
+      },
+      {
+        "title": "fix(v2 reports): Drop the refund side of a gift that never settled",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4913",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-25T04:29:33Z",
+        "reviewed_at": "2026-09-25T12:54:43Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "test(admin): staging e2e for dashboard chart API (APO-13880)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5127",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-24T22:48:23Z",
+        "reviewed_at": "2026-09-25T13:09:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "test(admin): drop a duplicate test that never calls updateDiscussionEnabledByContentId",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5124",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-24T20:00:34Z",
+        "reviewed_at": "2026-09-25T14:12:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.21
+      },
+      {
+        "title": "fix(admin): keep backfill DAG in step when manual sync unpauses a workflow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5123",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T01:36:08Z",
+        "reviewed_at": "2026-09-25T13:11:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "refactor(web): share stripPhoneFormatting between web and donation-embed (APO-13870)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5108",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-25T20:46:29Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(mobile): keep minors out of direct chats on the V2 chat list",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7404",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:25:19Z",
+        "reviewed_at": "2026-09-24T14:19:19Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.32
+      },
+      {
+        "title": "feat(mobile): join a community chat from the V2 chat list",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7403",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:25:15Z",
+        "reviewed_at": "2026-09-24T14:15:50Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.26
+      },
+      {
+        "title": "feat(mobile): add the new chat button to the V2 chat list",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7402",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:25:09Z",
+        "reviewed_at": "2026-09-24T14:17:48Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.3
+      },
+      {
+        "title": "feat(mobile): prompt for a birthdate over an empty V2 chat list",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7401",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:25:05Z",
+        "reviewed_at": "2026-09-24T14:17:58Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.3
+      },
+      {
+        "title": "feat(mobile): offer join rows for communities on the V2 chat list",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7400",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:25:01Z",
+        "reviewed_at": "2026-09-24T14:12:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.2
+      },
+      {
+        "title": "feat(mobile): open a chat from the V2 chat list",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7399",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:56Z",
+        "reviewed_at": "2026-09-24T14:17:50Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.3
+      },
+      {
+        "title": "feat(mobile): hand each V2 chat row its state and refresh the list",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7398",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:50Z",
+        "reviewed_at": "2026-09-24T14:14:22Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.24
+      },
+      {
+        "title": "feat(mobile): show the chat start view with a retry on the V2 chat list",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7397",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:45Z",
+        "reviewed_at": "2026-09-24T14:10:49Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.18
+      },
+      {
+        "title": "feat(mobile): rename and delete a chat from the V2 row as an admin",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7396",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:41Z",
+        "reviewed_at": "2026-09-24T14:15:33Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.26
+      },
+      {
+        "title": "feat(mobile): leave a chat from the V2 row by menu or swipe",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7395",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:36Z",
+        "reviewed_at": "2026-09-24T14:09:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.16
+      },
+      {
+        "title": "feat(mobile): mute and unmute a chat from the V2 row menu",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7394",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:31Z",
+        "reviewed_at": "2026-09-24T14:09:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.16
+      },
+      {
+        "title": "fix(mobile): read the chat list again when a row's hold runs out",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7393",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:27Z",
+        "reviewed_at": "2026-09-24T14:13:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.23
+      },
+      {
+        "title": "feat(mobile): hold a chat row's leave or mute until the server agrees",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7392",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:22Z",
+        "reviewed_at": "2026-09-24T14:07:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.12
+      },
+      {
+        "title": "feat(mobile): show chat request states and hidden previews on the V2 chat row",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7391",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:18Z",
+        "reviewed_at": "2026-09-24T14:07:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.13
+      },
+      {
+        "title": "feat(mobile): show the V2 chat row's unread, muted and community marks",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7390",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:14Z",
+        "reviewed_at": "2026-09-24T14:12:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.2
+      },
+      {
+        "title": "feat(mobile): link the cached sender and handle every chat message shape",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7389",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:10Z",
+        "reviewed_at": "2026-09-24T14:12:22Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.21
+      },
+      {
+        "title": "feat(mobile): patch a new chat text message into the Apollo cache",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7388",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T05:24:06Z",
+        "reviewed_at": "2026-09-24T14:12:50Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.21
+      },
+      {
+        "title": "fix(web-embeds-v2): stop the church page sliding under the modal on phones (APO-13793)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5105",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-24T20:30:02Z",
+        "reviewed_at": "2026-09-25T13:10:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.5
+      },
+      {
+        "title": "fix(web-embeds-v2): shape the feed skeleton like the cards it loads into (APO-13675)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5102",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-24T15:33:06Z",
+        "reviewed_at": "2026-09-24T15:39:06Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.1
+      },
+      {
+        "title": "fix(admin): settle failed workflow toggles and block repeat clicks",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5101",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-24T17:39:22Z",
+        "reviewed_at": "2026-09-24T18:03:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.41
+      },
+      {
+        "title": "feat(v2 reports): Allocate refunds by GIVING.REFUND_TRANSACTION_DATE",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4865",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-25T04:29:42Z",
+        "reviewed_at": "2026-09-25T13:03:58Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "test(donation-embed): drop the duplicate DonationPaymentForm submission-prevention test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5098",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T18:31:27Z",
+        "reviewed_at": "2026-09-23T19:07:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.6
+      },
+      {
+        "title": "[APO-13833] Dedupe the daily prayer feed by requestor before the limit",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4863",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-24T15:52:27Z",
+        "reviewed_at": "2026-09-25T13:12:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 6.13
+      },
+      {
+        "title": "chore(admin): remove unused inferTypeFromContentType",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5097",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T17:40:06Z",
+        "reviewed_at": "2026-09-23T19:12:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.54
+      },
+      {
+        "title": "fix(v2 reports): Request every transaction status except failed",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5096",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T04:15:44Z",
+        "reviewed_at": "2026-09-25T12:54:33Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix: derive cluster REST origin with URL.origin",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5094",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T01:26:50Z",
+        "reviewed_at": "2026-09-25T13:10:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(canvas-ui-web): crop card images instead of stretching them (APO-13800)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5093",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T20:15:35Z",
+        "reviewed_at": "2026-09-23T20:19:50Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.07
+      },
+      {
+        "title": "Let Admin write tag.data for the purchase-gate Persona (APO-13605)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5092",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-25T15:39:14Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(web): size the overlay header logo up inside embeds (APO-13674)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5091",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T20:15:40Z",
+        "reviewed_at": "2026-09-23T20:20:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.08
+      },
+      {
+        "title": "Name the FreedUp purchase-gate Persona (APO-13605)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4850",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-09-23T17:24:10Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Remove tautological formatPhoneNumber identity test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5090",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T14:24:44Z",
+        "reviewed_at": "2026-09-23T14:27:08Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.04
+      },
+      {
+        "title": "feat(scripture-journal): list content comments alongside journals in My Journal (APO-12060)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4848",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-23T14:46:33Z",
+        "reviewed_at": "2026-09-23T14:54:59Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.14
+      },
+      {
+        "title": "Add CSV download of closed poll results (APO-5906)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5082",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T15:37:45Z",
+        "reviewed_at": "2026-09-23T17:18:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.68
+      },
+      {
+        "title": "prep(admin): migrate Stripe server SDK for v22 / Basil+ API (APO stripe major)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5079",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T05:25:40Z",
+        "reviewed_at": "2026-09-25T13:15:18Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 16
+      },
+      {
+        "title": "build(deps-dev): bump postcss-preset-env from 10.1.1 to 11.5.3",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5076",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T04:52:21Z",
+        "reviewed_at": "2026-09-23T13:04:45Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "build(deps-dev): bump react-refresh from 0.14.2 to 0.19.0",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5075",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T04:51:34Z",
+        "reviewed_at": "2026-09-23T13:04:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "feat(web): track Donation Started when a web gift continues to payment",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5074",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T15:59:05Z",
+        "reviewed_at": "2026-09-23T17:27:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.47
+      },
+      {
+        "title": "build(deps): bump @google-cloud/bigquery from 8.3.0 to 9.1.0",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5073",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T04:50:45Z",
+        "reviewed_at": "2026-09-23T13:05:04Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(canvas-ui-web): space the first feature list below article copy (APO-13799)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5072",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T14:42:20Z",
+        "reviewed_at": "2026-09-23T14:45:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.06
+      },
+      {
+        "title": "test(admin): cover the APNs readiness gate",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5071",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T20:34:34Z",
+        "reviewed_at": "2026-09-22T20:45:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.19
+      },
+      {
+        "title": "test(donation-embed): drop two duplicate DonationSetupForm callback tests",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5069",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T18:37:06Z",
+        "reviewed_at": "2026-09-22T18:47:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.18
+      },
+      {
+        "title": "test(donation-embed): drop the duplicate DonationPaymentForm amount render test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5068",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T18:35:56Z",
+        "reviewed_at": "2026-09-22T18:47:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.2
+      },
+      {
+        "title": "fix(canvas-ui-web): give mock Church the now-required altSlugs (APO-13788)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5067",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T17:37:13Z",
+        "reviewed_at": "2026-09-22T18:27:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.84
+      },
+      {
+        "title": "perf(admin): load the icon-by-name registry and video player on demand (APO-13783)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5066",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T17:20:05Z",
+        "reviewed_at": "2026-09-22T19:14:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.91
+      },
+      {
+        "title": "fix(admin): time out Cluster DB connection attempts instead of hanging (APO-13787)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5065",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T17:20:03Z",
+        "reviewed_at": "2026-09-22T18:29:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.15
+      },
+      {
+        "title": "perf(admin): stop paginated lists from loading their data twice (APO-13786)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5064",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T17:20:01Z",
+        "reviewed_at": "2026-09-22T18:29:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.15
+      },
+      {
+        "title": "perf(admin): send only feed ids and names in the root loader (APO-13785)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5063",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T17:19:59Z",
+        "reviewed_at": "2026-09-22T18:29:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.17
+      },
+      {
+        "title": "perf(admin): load dashboard charts when they scroll into view (APO-13784)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5062",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T17:19:57Z",
+        "reviewed_at": "2026-09-22T18:29:10Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.15
+      },
+      {
+        "title": "perf(admin): run the content editor loader's independent reads in parallel (APO-13782)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5061",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T17:19:54Z",
+        "reviewed_at": "2026-09-22T18:29:14Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.16
+      },
+      {
+        "title": "perf(admin): cache Stripe product details and drop the editor's duplicate subscription check (APO-13781)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5060",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T17:19:52Z",
+        "reviewed_at": "2026-09-22T18:30:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.17
+      },
+      {
+        "title": "refactor(admin): share the store config boolean coercion across the four store forms",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5048",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T13:54:05Z",
+        "reviewed_at": "2026-09-22T14:09:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.15
+      },
+      {
+        "title": "fix(web): break the login loop caused by a duplicate __session cookie (APO-13762)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5036",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T03:20:58Z",
+        "reviewed_at": "2026-09-22T12:58:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(web): rewrite CDN host-root answer SSE URLs onto Cluster REST",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5033",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-21T20:04:40Z",
+        "reviewed_at": "2026-09-21T20:18:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.23
+      },
+      {
+        "title": "Chat sync: schedule the delta and full sync DAGs",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1952",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-22T08:46:53Z",
+        "reviewed_at": "2026-09-22T12:57:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "Chat sync: add the Shovel trigger for the cluster backfill route",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1951",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-22T08:46:37Z",
+        "reviewed_at": "2026-09-22T12:57:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "Chat sync: send the last successful run as deltatime",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1950",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-22T08:47:05Z",
+        "reviewed_at": "2026-09-22T12:57:22Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "feat(admin): link a feed to the app's My Profile screen (APO-8733)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5032",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-21T20:08:45Z",
+        "reviewed_at": "2026-09-21T20:23:51Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.25
+      },
+      {
+        "title": "feat(church): expose the My Profile feed as Church.profileFeed (APO-8733)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4773",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-22T12:21:55Z",
+        "reviewed_at": "2026-09-22T12:57:42Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "APO-13748: Mint campaign links on the environment's giving host",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5031",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-21T19:15:12Z",
+        "reviewed_at": "2026-09-21T19:16:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.03
+      },
+      {
+        "title": "perf(admin): batch feed feature order updates into one query",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5030",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-21T19:59:48Z",
+        "reviewed_at": "2026-09-21T20:18:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.31
+      },
+      {
+        "title": "APO-8115 (7/7): List a channel's scheduled messages for hosts",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4770",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-21T18:36:32Z",
+        "reviewed_at": "2026-09-21T19:10:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "APO-8115 (6/7): Add the cancelScheduledChatMessage mutation",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4769",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-21T18:36:29Z",
+        "reviewed_at": "2026-09-21T19:11:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.58
+      },
+      {
+        "title": "APO-8115 (5/7): Add the scheduleChatMessage mutation",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4768",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-21T18:36:24Z",
+        "reviewed_at": "2026-09-21T19:11:36Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.59
+      },
+      {
+        "title": "APO-8115 (4/7): Schedule a chat message on a delayed send job",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4767",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-21T18:36:22Z",
+        "reviewed_at": "2026-09-21T19:12:17Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.6
+      },
+      {
+        "title": "APO-8115 (3/7): Add the scheduled chat message send worker",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4766",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-21T18:36:19Z",
+        "reviewed_at": "2026-09-21T19:11:06Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.58
+      },
+      {
+        "title": "APO-8115 (2/7): Publish a scheduled chat message as its host",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4765",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-21T18:36:15Z",
+        "reviewed_at": "2026-09-21T19:11:13Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.58
+      },
+      {
+        "title": "APO-8115 (1/7): Add the ScheduledChatMessage model",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4764",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-21T18:36:12Z",
+        "reviewed_at": "2026-09-21T19:11:31Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.59
+      },
+      {
+        "title": "fix(admin): leave Rock Link empty for unsynced transactions (APO-13694)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5026",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-21T22:05:29Z",
+        "reviewed_at": "2026-09-22T12:56:42Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "test(web-embeds): drop the last four duplicate ThemeProvider render tests",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5024",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-20T18:32:02Z",
+        "reviewed_at": "2026-09-21T17:48:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.81
+      },
+      {
+        "title": "test(donation-embed): drop five byte-identical DonationSetupForm render tests",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5023",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-20T18:29:50Z",
+        "reviewed_at": "2026-09-21T17:53:20Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.89
+      },
+      {
+        "title": "chore(admin): remove unused deriveFileType",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5022",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-20T17:22:01Z",
+        "reviewed_at": "2026-09-21T18:08:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.15
+      },
+      {
+        "title": "test(tap-linking): cover the Apollos Now AASA fallback",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5019",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-20T03:02:56Z",
+        "reviewed_at": "2026-09-21T17:48:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.81
+      },
+      {
+        "title": "refactor(admin): share the confirmation-dialog backdrop and panel",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5018",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-20T02:05:55Z",
+        "reviewed_at": "2026-09-21T17:54:25Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.91
+      },
+      {
+        "title": "test(admin): drop the duplicate getAssociatedTapData empty-result test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5017",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-19T18:39:59Z",
+        "reviewed_at": "2026-09-21T17:48:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.81
+      },
+      {
+        "title": "chore(admin): remove unused YoutubeTranscript scraper",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5016",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-19T18:19:22Z",
+        "reviewed_at": "2026-09-21T17:48:32Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.81
+      },
+      {
+        "title": "fix(canvas): stop stamping empty class spans on saved content",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5015",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-19T16:24:28Z",
+        "reviewed_at": "2026-09-21T17:54:31Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.91
+      },
+      {
+        "title": "Carry the payment method through the cluster transactions proxy",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5014",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-19T16:19:44Z",
+        "reviewed_at": "2026-09-21T17:50:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.84
+      },
+      {
+        "title": "fix(admin): drop the Name underline on the Recurring table",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5013",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-19T16:20:16Z",
+        "reviewed_at": "2026-09-21T17:53:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.89
+      },
+      {
+        "title": "fix(security): default users-route invites to Content Admin",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5012",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-19T04:24:02Z",
+        "reviewed_at": "2026-09-21T17:53:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.89
+      },
+      {
+        "title": "test(admin): Ask CORS allowlist coverage follow-up for #4627",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5011",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-19T03:32:09Z",
+        "reviewed_at": "2026-09-21T17:53:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.89
+      },
+      {
+        "title": "feat(analytics): track share button taps",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5009",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-19T00:38:59Z",
+        "reviewed_at": "2026-09-21T17:52:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.88
+      },
+      {
+        "title": "refactor(admin): use the shared openCloudinaryWidget in three inliners",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5008",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T22:39:06Z",
+        "reviewed_at": "2026-09-21T17:48:32Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.81
+      },
+      {
+        "title": "[APO-11425] Map web and embed payment errors like the app",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5007",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T22:21:26Z",
+        "reviewed_at": "2026-09-23T04:10:52Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 16
+      },
+      {
+        "title": "fix(admin): reject remote URLs for credential config values",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5005",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-21T15:49:14Z",
+        "reviewed_at": "2026-09-21T17:53:47Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.08
+      },
+      {
+        "title": "test(giving): cover the allowed-web-sources config helpers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5004",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T20:55:39Z",
+        "reviewed_at": "2026-09-21T17:50:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.91
+      },
+      {
+        "title": "Configure Admin report backends",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5003",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-20T23:59:22Z",
+        "reviewed_at": "2026-09-21T17:55:05Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 3.92
+      },
+      {
+        "title": "chore(design-tokens): migrate style-dictionary to v5 (prep for #4999)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5001",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T23:46:40Z",
+        "reviewed_at": "2026-09-21T17:52:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.87
+      },
+      {
+        "title": "fix(admin): use authorized church slug for Stripe checkout",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5000",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T23:18:58Z",
+        "reviewed_at": "2026-09-21T17:53:27Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.89
+      },
+      {
+        "title": "build(deps-dev): bump style-dictionary from 4.4.0 to 5.5.4 in /packages/design-tokens in the npm_and_yarn group across 1 directory",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4999",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T18:51:54Z",
+        "reviewed_at": "2026-09-21T17:50:32Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.98
+      },
+      {
+        "title": "APO-13648: Validate community address has street, city, and state",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4996",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-21T23:54:30Z",
+        "reviewed_at": "2026-09-22T12:58:06Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "chore: remove unused /ask endpoints and semantic search code",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4995",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-19T03:36:12Z",
+        "reviewed_at": "2026-09-21T18:20:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.34
+      },
+      {
+        "title": "[APO-13562] Show only active livestreams",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4733",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-18T17:43:09Z",
+        "reviewed_at": "2026-09-21T17:52:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 8.15
+      },
+      {
+        "title": "Mention Wistia support in video URL help copy",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4992",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-19T03:25:38Z",
+        "reviewed_at": "2026-09-21T17:51:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.86
+      },
+      {
+        "title": "fix(admin): ask Airflow who owns a DAG before toggling it",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4991",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T16:00:34Z",
+        "reviewed_at": "2026-09-21T18:54:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 10.89
+      },
+      {
+        "title": "migration(notification_preference): add chat_notification_scope column (APO-6884)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4723",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-23T15:32:30Z",
+        "reviewed_at": "2026-09-23T15:35:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.04
+      },
+      {
+        "title": "Backfill charges with missing application fees (APO-13640)",
+        "url": "https://github.com/ApollosProject/toolbox/pull/40",
+        "repo": "toolbox",
+        "requested_at": "2026-09-23T14:22:50Z",
+        "reviewed_at": "2026-09-23T14:29:53Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.12
+      },
+      {
+        "title": "docs: ask for two human reviewers on PRs",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4989",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T01:33:16Z",
+        "reviewed_at": "2026-09-21T20:14:53Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 14.25
+      },
+      {
+        "title": "APO-13610: Add background image upload to Edit Community",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4937",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T17:36:47Z",
+        "reviewed_at": "2026-09-25T20:56:53Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.34
+      },
+      {
+        "title": "perf(admin): batch-load community members for communities list",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4861",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T16:08:31Z",
+        "reviewed_at": "2026-09-21T17:51:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 17.72
+      },
+      {
+        "title": "refactor(admin): convert LivestreamTable to TypeScript (APO-12480)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4859",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T14:05:21Z",
+        "reviewed_at": "2026-09-21T17:47:41Z",
+        "review_state": "APPROVED",
+        "latency_hours": 19.71
+      },
+      {
+        "title": "refactor(youtube): split PlaylistTag into fetch_playlist_items and save_tags (APO-12206)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1919",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-22T15:16:45Z",
+        "reviewed_at": "2026-09-22T18:28:52Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.2
+      },
+      {
+        "title": "APO-11879: Community prayer list via existing forwarded-community consent gate",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4678",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-21T21:18:20Z",
+        "reviewed_at": "2026-09-22T12:59:19Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.69
+      },
+      {
+        "title": "fix(admin): preserve queued content autosaves (APO-13253)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4827",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T13:59:19Z",
+        "reviewed_at": "2026-09-21T17:53:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 27.9
+      },
+      {
+        "title": "fix(chat-sync): write a child row only for a person of that church",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4646",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-16T12:33:56Z",
+        "reviewed_at": "2026-09-21T17:55:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 27.93
+      },
+      {
+        "title": "test(admin): prove TipTap v3 editor workflows (APO-10605)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4813",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-17T03:25:09Z",
+        "reviewed_at": "2026-09-21T17:53:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 19.89
+      },
+      {
+        "title": "fix(admin): authorize config mutations and harden sync discovery",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4812",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-15T23:03:03Z",
+        "reviewed_at": "2026-09-21T17:53:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 27.89
+      },
+      {
+        "title": "Add per-member chat mute/unmute (APO-11681)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4422",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-21T18:29:58Z",
+        "reviewed_at": "2026-09-23T04:13:05Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 11.5
+      },
+      {
+        "title": "fix(mobile): wait for the profile before drawing the V2 chat list",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7230",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:29:41Z",
+        "reviewed_at": "2026-09-23T17:22:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.89
+      },
+      {
+        "title": "chore(admin): remove unused determineContentSetup (APO-13135)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4721",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-11T16:27:44Z",
+        "reviewed_at": "2026-09-21T19:55:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 51.47
+      },
+      {
+        "title": "feat(mobile): pick the chat list by feature flag",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7229",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:29:37Z",
+        "reviewed_at": "2026-09-23T17:25:49Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.94
+      },
+      {
+        "title": "feat(mobile): build the V2 chat list screen",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7228",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:29:32Z",
+        "reviewed_at": "2026-09-23T17:27:48Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.97
+      },
+      {
+        "title": "feat(mobile): build the V2 chat list row",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7227",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:29:27Z",
+        "reviewed_at": "2026-09-23T17:21:25Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.87
+      },
+      {
+        "title": "feat(mobile): draw a chat channel image from GraphQL data",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7226",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:29:23Z",
+        "reviewed_at": "2026-09-23T17:23:23Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.9
+      },
+      {
+        "title": "feat(mobile): keep the GraphQL chat list fresh from PubNub events",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7225",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:29:19Z",
+        "reviewed_at": "2026-09-23T17:23:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.9
+      },
+      {
+        "title": "feat(mobile): read the chat channel list from GraphQL",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7224",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:28:41Z",
+        "reviewed_at": "2026-09-23T17:28:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.99
+      },
+      {
+        "title": "feat(mobile): keep a live chat last message until the server catches up",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7223",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:28:37Z",
+        "reviewed_at": "2026-09-23T17:30:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.03
+      },
+      {
+        "title": "refactor(mobile): pull unread channel counts into their own hook",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7222",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:28:33Z",
+        "reviewed_at": "2026-09-23T17:19:06Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.84
+      },
+      {
+        "title": "feat(mobile): sort chat channels by their last message",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7221",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:28:29Z",
+        "reviewed_at": "2026-09-23T17:24:40Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.94
+      },
+      {
+        "title": "feat(mobile): build a chat channel title from GraphQL data",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7220",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:28:25Z",
+        "reviewed_at": "2026-09-23T17:20:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.86
+      },
+      {
+        "title": "refactor(mobile): move the chat request state into its own file",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7219",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-23T16:28:21Z",
+        "reviewed_at": "2026-09-23T17:21:27Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.89
+      },
+      {
+        "title": "feat(orgProfile): let Apollos staff manage church alias slugs (APO-9067)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4586",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T16:56:05Z",
+        "reviewed_at": "2026-09-22T19:14:27Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.31
+      },
+      {
+        "title": "feat(multi-tenant): resolve church alias slugs at request time (APO-9067)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4309",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-21T20:51:12Z",
+        "reviewed_at": "2026-09-21T20:58:47Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.13
+      },
+      {
+        "title": "Let admin staff view a person's prayer history even if muted",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4569",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-08T06:36:25Z",
+        "reviewed_at": "2026-09-22T21:36:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 87.61
+      },
+      {
+        "title": "Revoke chat access immediately when banning a person (APO-12033)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4519",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-05T06:30:25Z",
+        "reviewed_at": "2026-09-23T15:29:53Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 97.5
+      },
+      {
+        "title": "Mobile design system: census, coupling + orphan gates, Button analytics split",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7120",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T14:21:23Z",
+        "reviewed_at": "2026-09-24T14:35:32Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.24
+      },
+      {
+        "title": "Mobile ui-v2 groundwork: token pipeline, DSV2Gallery, APO-10622, APO-10859",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7119",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-24T14:30:28Z",
+        "reviewed_at": "2026-09-24T15:40:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.16
+      },
+      {
+        "title": "Add Chat Verification section to Admin user profile",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4472",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-23T14:31:11Z",
+        "reviewed_at": "2026-09-23T14:47:42Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.28
+      },
+      {
+        "title": "feat(feed): stamp feed Section identity onto View Content and Action List/Bar Tapped events",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7105",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-09-21T18:05:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(ministry-platform): write Nickname instead of First_Name on profile update (APO-3889)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4232",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-09-23T19:08:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(mobile): copy full content item text from the share sheet (APO-9350)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7104",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-09-21T17:53:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "ci(ds): blocking screenshot gate + linux baseline refresh workflow",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4437",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T20:03:13Z",
+        "reviewed_at": "2026-09-23T04:18:29Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 33.95
+      },
+      {
+        "title": "ci(ds): design-system CI job + canvas-ui-web legacy lint gate",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4436",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T20:03:07Z",
+        "reviewed_at": "2026-09-23T04:13:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 33.95
+      },
+      {
+        "title": "feat(ds): component manifest + preview pipeline",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4435",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-16T20:03:00Z",
+        "reviewed_at": "2026-09-23T04:16:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 33.95
+      },
+      {
+        "title": "feat(prayers): show the post date on a prayer request",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7086",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-09-21T17:50:14Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(youtube): mirror playlists as ordered series so manual ordering carries through",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1835",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-09-02T14:49:10Z",
+        "reviewed_at": "2026-09-23T13:56:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 119.18
+      },
+      {
+        "title": "[1/2] fix(admin): require auth and org scope on the users route",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4270",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-04T05:06:34Z",
+        "reviewed_at": "2026-09-23T14:00:32Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 104.01
+      },
+      {
+        "title": "[APO-11425] Show mapped wallet declines on hosted /give",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4258",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-21T17:53:53Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "[APO-11425] Map wallet confirm errors before dropping Stripe fields",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4257",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-23T04:10:41Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "[APO-11425] Map card-form confirm errors to donor-safe copy",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4256",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-23T04:12:58Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "[APO-11425] Add a shared giving payment error mapper",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4255",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-21T17:55:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- improve(shaping): decisions carry their consequence\n- Add an Anthropic caller beside the Cursor one, behind ModelCaller\n- refactor(admin): share ChartLegend between LineChart and AreaChart (APO-12882)\n- refactor(admin): share canonicalFrequencyFromId in EditRecurringGiftModal (APO-12867)\n- Reviewed: fix(web): rewrite CDN host-root answer SSE URLs onto Cluster REST\n- Reviewed: feat(admin): link a feed to the app's My Profile screen (APO-8733)\n- Reviewed: APO-13748: Mint campaign links on the environment's giving host\n- Reviewed: perf(admin): batch feed feature order updates into one query\n- Reviewed: APO-8115 (7/7): List a channel's scheduled messages for hosts\n- Reviewed: APO-8115 (6/7): Add the cancelScheduledChatMessage mutation\n- Reviewed: APO-8115 (5/7): Add the scheduleChatMessage mutation\n- Reviewed: APO-8115 (4/7): Schedule a chat message on a delayed send job\n- Reviewed: APO-8115 (3/7): Add the scheduled chat message send worker\n- Reviewed: APO-8115 (2/7): Publish a scheduled chat message as its host\n- Reviewed: APO-8115 (1/7): Add the ScheduledChatMessage model\n- Reviewed: test(web-embeds): drop the last four duplicate ThemeProvider render tests\n- …and 36 more reviews\n- In progress: APO-12900: Move church-flag env-hatch rationale onto isChurchFlagEnabled and convert webEmbedsV2Flag\n- In progress: APO-12883: Share firstNonEmptyString between web-embeds getAdminBaseUrl and getWebAppBaseUrl\n- In progress: APO-12874: Share DEFAULT_SUGGESTED_PROMPTS in web-embeds useAskLoaderData\n- In progress: APO-12873: Share canvas-ui-web normalizeChurchSlugForApi in web-embeds-v2 e2e after stripping @\n- In progress: APO-12871: Share canvas-ui-web normalizeChurchSlugForApi in web slugs.ts\n- In progress: APO-12868: Share canvas-ui-web getSubdomain in tap-linking after stripping the port\n- Left comments on PRs"
+    },
+    {
+      "day": "Friday",
+      "content": "- Revert \"bump @google-cloud/bigquery from 8.3.0 to 9.1.0\" (APO-13880)\n- refactor(admin): share formatPersonDisplayName in daily habits names (APO-13878)\n- refactor(admin): share formatPersonDisplayName in sendgrid cancellation recipient (APO-13877)\n- refactor(admin): share formatFullName in PeopleIcon (APO-13874)\n- refactor(admin): share formatPersonDisplayName in TransactionTable (APO-13873)\n- refactor(admin): share formatPersonDisplayName in PeopleTableRow (APO-13872)\n- refactor(admin): share formatPersonDisplayName in Suggested Follows PersonSummary (APO-13871)\n- refactor(admin): share ChartTooltip chrome in BarChart (APO-13869)\n- Treat an unknown lock state as locked on mobile\n- refactor(admin): share formatPersonDisplayName in people-search comboboxes (APO-13824)\n- refactor(admin): share formatFullName in TransactionDetailSheet (APO-13823)\n- refactor(web): share fieldNameToGraphQLKey in AuthDetails and ProfileDetails (APO-13822)\n- …and 21 more (see Weekly Summary)\n- Reviewed: fix(web): close Give page pickers and avatar menu on back (APO-13955)\n- Reviewed: fix(v2 reports): Drop the refund side of a gift that never settled\n- Reviewed: test(admin): staging e2e for dashboard chart API (APO-13880)\n- Reviewed: test(admin): drop a duplicate test that never calls updateDiscussionEnabledByContentId\n- Reviewed: fix(admin): keep backfill DAG in step when manual sync unpauses a workflow\n- Reviewed: refactor(web): share stripPhoneFormatting between web and donation-embed (APO-13870)\n- Reviewed: feat(mobile): keep minors out of direct chats on the V2 chat list\n- Reviewed: feat(mobile): join a community chat from the V2 chat list\n- Reviewed: feat(mobile): add the new chat button to the V2 chat list\n- Reviewed: feat(mobile): prompt for a birthdate over an empty V2 chat list\n- Reviewed: feat(mobile): offer join rows for communities on the V2 chat list\n- Reviewed: feat(mobile): open a chat from the V2 chat list\n- …and 88 more reviews\n- Done: APO-13880: Apollos Dashboard data is not populating\n- Done: APO-13824: Share formatPersonDisplayName in Admin people-search comboboxes\n- Done: APO-13823: Share formatFullName in TransactionDetailSheet\n- Done: APO-13822: Share fieldNameToGraphQLKey in web-embeds AuthDetails and ProfileDetails\n- Done: APO-13820: Share formatCurrency in web formatAmount\n- Done: APO-13819: Share formatClock in Admin TimerFeature formatDuration\n- Done: APO-13818: Share formatAudioClock between canvas-ui-web AudioPlayer and Admin AudioFeatureNodeView\n- Done: APO-13817: Share donation-embed dateToString in Admin todayLocalYMD\n- Done: APO-13816: Share ChartTooltip chrome in Admin AreaChart\n- Done: APO-13815: Share ChartTooltip chrome between Admin LineChart and AreaChart\n- Done: APO-13814: Share ChartTooltipRow in Admin BarChart\n- Done: APO-13774: Share cn between novel-core editor utils and tremor-raw\n- …and 15 more completed issues\n- In progress: APO-14011: Web: Object.hasOwn crashes Sentry IAB filter on iOS 14 / NetCast\n- In progress: APO-14008: Admin: DAG stream enqueue after client disconnect closes the controller\n- In progress: APO-13879: Share formatFullName in Admin launchpad release-request email\n- In progress: APO-13876: Share formatPersonDisplayName in Admin transactions workbook donor column\n- In progress: APO-13870: Share stripPhoneFormatting between web and donation-embed\n- In progress: APO-13827: Claim FreedUp access from live Woo orders\n- In progress: APO-13608: Build the grant path: signed-in check page on Apollos Web\n- In progress: APO-13607: Staff override for paid FreedUp access\n- In progress: APO-13606: Lock a content series to a required tag\n- In progress: APO-13605: Mint a FreedUp purchase tag on the person\n- In progress: APO-12900: Move church-flag env-hatch rationale onto isChurchFlagEnabled and convert webEmbedsV2Flag\n- In progress: APO-12891: Admin: LinkEmbed processEmbedMeta crashes when meta is missing\n- …and 2 more in-flight issues\n- Filed 34 new Linear tickets\n- Left comments on PRs and in Linear\nThis is actually for Tuesday-Friday because it was DI Week and I didn't run the task for several days.\nRe-ran FreedUp content move on prod and staging for poll follow-ups from text-only branch cards w/ @Conrad\nDi Week Leadership Presentation\nEngineering Retro\nFixed empty Admin dashboard charts and shipped to prod for Kerry w/ @Michael and @Conrad\nSorted Nick’s design system PR stack and merged what was ready so it doesn’t sit on Austin\nClosed shared Admin and web helpers across charts, gifts, timers, names, money, forms, phone formatting, and chart tooltips\nPut FreedUp paid access into review (purchase tag, paid-week lock, staff grant, signed-in store check, live-order claim)\nMerged treating an unknown lock as locked on mobile\nHelped kick a manual prod cluster deploy for Dylan\nSpun up Sentry Queue overnight-bot work during the day\nHelped CS on Declare prayer day-range settings (max 21, default 7; they had set it to 1)"
+    },
+    {
+      "day": "Monday",
+      "content": ", September 21\nDaily\nWhat did you work on today\n3:32 PM\nWorking in the Cincy office with some of the crew! 🎉\nTons of PR reviews\nRe-ran FreedUp content import on prod and staging w/ @Conrad for poll follow-ups from text-only branch cards\nPut shared helpers into review across Admin, web, and embeds (slug, subdomain, chart legend, giving frequency, church flags)\nLooking into Woocommerce API for potential shovel work"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 37\n  • PR reviews: 146\n  • Commits pushed: 98\n  • Code volume: +8528 / -1521 (195 files)\n  • Median review latency (working hours): 0.89h\n  • Linear issues completed: 27\n  • Linear projects completed: 0\n  • Linear issues worked on: 42\n  • Linear issues created: 34\n  • Linear replies: 6\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-platforms, apollos-shovel, forge, toolbox\n\n📝 Check-ins:\n\n  Monday: - improve(shaping): decisions carry their consequence\n- Add an Anthropic caller ...\n  Friday: - Revert \"bump @google-cloud/bigquery from 8.3.0 to 9.1.0\" (APO-13880)\n- refacto...\n  Monday: , September 21\nDaily\nWhat did you work on today\n3:32 PM\nWorking in the Cincy off...\n",
+  "formatted_output": null
+}
