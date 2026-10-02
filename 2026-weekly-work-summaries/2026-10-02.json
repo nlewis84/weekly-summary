@@ -1,0 +1,2451 @@
+{
+  "meta": {
+    "generated_at": "2026-10-02T21:16:09.845Z",
+    "window_start": "2026-09-26T05:00:00.000Z",
+    "window_end": "2026-10-03T04:59:59.999Z",
+    "week_ending": "2026-10-02",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 20,
+    "prs_total": 55,
+    "pr_reviews": 54,
+    "pr_comments": 52,
+    "commits_pushed": 104,
+    "linear_completed": 49,
+    "linear_projects_completed": 1,
+    "linear_worked_on": 67,
+    "linear_issues_created": 48,
+    "linear_comments": 35,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-platforms",
+      "freedup-migration"
+    ],
+    "lines_added": 4133,
+    "lines_deleted": 396,
+    "files_changed": 95,
+    "median_review_latency_hours": 2.42
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-14864",
+        "title": "Investigate unsupported features on Week 2 — Ideas That Work",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14864/investigate-unsupported-features-on-week-2-ideas-that-work",
+        "completedAt": "2026-10-02T19:14:08.106Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14403",
+        "title": "Web: church content video crashes when Vimeo player SDK is broken (WEB-GE)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14403/web-church-content-video-crashes-when-vimeo-player-sdk-is-broken-web",
+        "completedAt": "2026-09-29T20:04:25.178Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14401",
+        "title": "Admin community cover upload fails when Cloudinary media already exists",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14401/admin-community-cover-upload-fails-when-cloudinary-media-already",
+        "completedAt": "2026-09-28T16:22:30.936Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14400",
+        "title": "Admin content save fails when tags list includes deleted tag ids",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14400/admin-content-save-fails-when-tags-list-includes-deleted-tag-ids",
+        "completedAt": "2026-09-28T16:22:31.352Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14399",
+        "title": "Admin: invalid Tap tag URLs should not hit the database",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14399/admin-invalid-tap-tag-urls-should-not-hit-the-database",
+        "completedAt": "2026-09-28T16:22:31.527Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14397",
+        "title": "Web: ignore ResizeObserver loop limit exceeded in Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14397/web-ignore-resizeobserver-loop-limit-exceeded-in-sentry",
+        "completedAt": "2026-09-28T16:10:47.660Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14391",
+        "title": "Admin: saving a poll crashes when duplicate list tags are submitted",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14391/admin-saving-a-poll-crashes-when-duplicate-list-tags-are-submitted",
+        "completedAt": "2026-09-28T16:22:31.590Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14390",
+        "title": "Admin: bad content URL crashes Postgres on non-UUID id",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14390/admin-bad-content-url-crashes-postgres-on-non-uuid-id",
+        "completedAt": "2026-09-28T16:22:31.296Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14389",
+        "title": "Admin: opening content crashes when image mediaIds is a pipe-joined string",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14389/admin-opening-content-crashes-when-image-mediaids-is-a-pipe-joined",
+        "completedAt": "2026-09-28T16:22:31.685Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14388",
+        "title": "Web: content page errors when YouTube video id is invalid",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14388/web-content-page-errors-when-youtube-video-id-is-invalid",
+        "completedAt": "2026-09-28T16:26:05.153Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14332",
+        "title": "Admin: linking related content crashes when the connection already exists",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14332/admin-linking-related-content-crashes-when-the-connection-already",
+        "completedAt": "2026-09-28T16:22:31.405Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14328",
+        "title": "Web: church page crashes when layout meta reads appStoreId of missing church",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14328/web-church-page-crashes-when-layout-meta-reads-appstoreid-of-missing",
+        "completedAt": "2026-09-28T16:10:47.498Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14325",
+        "title": "Admin: wrapping a pasted paragraph reports Position out of range",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14325/admin-wrapping-a-pasted-paragraph-reports-position-out-of-range",
+        "completedAt": "2026-09-28T16:22:31.463Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14323",
+        "title": "Admin: moving content crashes when the category combobox clears",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14323/admin-moving-content-crashes-when-the-category-combobox-clears",
+        "completedAt": "2026-09-28T16:22:31.625Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14299",
+        "title": "Admin: content save crashes when the editor posts empty JSON",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14299/admin-content-save-crashes-when-the-editor-posts-empty-json",
+        "completedAt": "2026-09-28T16:22:31.110Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14060",
+        "title": "Admin: Change History crashes when the person record is missing",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14060/admin-change-history-crashes-when-the-person-record-is-missing",
+        "completedAt": "2026-09-28T16:22:31.558Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14011",
+        "title": "Web: Object.hasOwn crashes Sentry IAB filter on iOS 14 / NetCast",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14011/web-objecthasown-crashes-sentry-iab-filter-on-ios-14-netcast",
+        "completedAt": "2026-10-01T16:10:05.972Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14008",
+        "title": "Admin: DAG stream enqueue after client disconnect closes the controller",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14008/admin-dag-stream-enqueue-after-client-disconnect-closes-the-controller",
+        "completedAt": "2026-09-26T16:20:29.894Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13879",
+        "title": "Share formatFullName in Admin launchpad release-request email",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13879/share-formatfullname-in-admin-launchpad-release-request-email",
+        "completedAt": "2026-09-26T16:20:30.486Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13878",
+        "title": "Share formatPersonDisplayName in Admin daily habits leaderboard names",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13878/share-formatpersondisplayname-in-admin-daily-habits-leaderboard-names",
+        "completedAt": "2026-09-26T16:20:30.861Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13877",
+        "title": "Share formatPersonDisplayName in sendgrid recurring-gift cancellation recipient",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13877/share-formatpersondisplayname-in-sendgrid-recurring-gift-cancellation",
+        "completedAt": "2026-09-26T16:20:30.073Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13876",
+        "title": "Share formatPersonDisplayName in Admin transactions workbook donor column",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13876/share-formatpersondisplayname-in-admin-transactions-workbook-donor",
+        "completedAt": "2026-09-26T16:20:30.617Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13874",
+        "title": "Share formatFullName in Admin PeopleIcon tooltip",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13874/share-formatfullname-in-admin-peopleicon-tooltip",
+        "completedAt": "2026-09-26T16:20:31.100Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13873",
+        "title": "Share formatPersonDisplayName in Admin TransactionTable",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13873/share-formatpersondisplayname-in-admin-transactiontable",
+        "completedAt": "2026-09-26T16:20:30.201Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13872",
+        "title": "Share formatPersonDisplayName in Admin PeopleTableRow",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13872/share-formatpersondisplayname-in-admin-peopletablerow",
+        "completedAt": "2026-09-26T16:20:30.934Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13871",
+        "title": "Share formatPersonDisplayName in Suggested Follows PersonSummary",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13871/share-formatpersondisplayname-in-suggested-follows-personsummary",
+        "completedAt": "2026-09-26T16:20:29.962Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13869",
+        "title": "Share ChartTooltip chrome in Admin BarChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13869/share-charttooltip-chrome-in-admin-barchart",
+        "completedAt": "2026-09-26T16:20:30.138Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13557",
+        "title": "Responses sheet on iOS < 26 loses glass chrome and looks unfinished",
+        "project": "Question Block Privacy",
+        "url": "https://linear.app/differential/issue/APO-13557/responses-sheet-on-ios-26-loses-glass-chrome-and-looks-unfinished",
+        "completedAt": "2026-09-29T16:16:27.886Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13539",
+        "title": "[migration] Bold GroupReader read-aloud prompt",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13539/migration-bold-groupreader-read-aloud-prompt",
+        "completedAt": "2026-09-29T21:33:38.646Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13269",
+        "title": "Some Question Blocks should be \"Currency\" Types",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13269/some-question-blocks-should-be-currency-types",
+        "completedAt": "2026-09-29T21:33:40.550Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13208",
+        "title": "Remove icon and Recall in Canvas editor tooltip",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13208/remove-icon-and-recall-in-canvas-editor-tooltip",
+        "completedAt": "2026-09-29T16:12:01.711Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13207",
+        "title": "Should we show the Edit button in Canvas?",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13207/should-we-show-the-edit-button-in-canvas",
+        "completedAt": "2026-09-29T16:14:45.734Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12900",
+        "title": "Move church-flag env-hatch rationale onto isChurchFlagEnabled and convert webEmbedsV2Flag",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12900/move-church-flag-env-hatch-rationale-onto-ischurchflagenabled-and",
+        "completedAt": "2026-09-27T16:12:43.175Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12722",
+        "title": "PageCard's uncancelled timer fails the admin-react-1 CI shard at random",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12722/pagecards-uncancelled-timer-fails-the-admin-react-1-ci-shard-at-random",
+        "completedAt": "2026-09-30T10:20:56.102Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13576",
+        "title": "[mobile] Render a unique follow-up under the poll answers",
+        "project": "Poll-Conditional Content",
+        "url": "https://linear.app/differential/issue/APO-13576/mobile-render-a-unique-follow-up-under-the-poll-answers",
+        "completedAt": "2026-09-29T16:06:49.155Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13549",
+        "title": "Open a section in a sheet on mobile",
+        "project": "Expandable Content Sections",
+        "url": "https://linear.app/differential/issue/APO-13549/open-a-section-in-a-sheet-on-mobile",
+        "completedAt": "2026-09-29T16:08:31.808Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13548",
+        "title": "Collapse a section to two lines on mobile",
+        "project": "Expandable Content Sections",
+        "url": "https://linear.app/differential/issue/APO-13548/collapse-a-section-to-two-lines-on-mobile",
+        "completedAt": "2026-09-29T16:08:31.734Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13547",
+        "title": "Resolve a section's two summary lines on mobile",
+        "project": "Expandable Content Sections",
+        "url": "https://linear.app/differential/issue/APO-13547/resolve-a-sections-two-summary-lines-on-mobile",
+        "completedAt": "2026-09-29T16:08:31.877Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13274",
+        "title": "Cut off text on \"Answer it\" line",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13274/cut-off-text-on-answer-it-line",
+        "completedAt": "2026-09-29T16:09:11.058Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13273",
+        "title": "Mobile PollView recycles the previous poll onto a later page (Plan for Freedom p3/p7)",
+        "project": "Poll Enhancements",
+        "url": "https://linear.app/differential/issue/APO-13273/mobile-pollview-recycles-the-previous-poll-onto-a-later-page-plan-for",
+        "completedAt": "2026-09-29T16:02:45.363Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13272",
+        "title": "An assessment recall on the same content item as the assessment is empty",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13272/an-assessment-recall-on-the-same-content-item-as-the-assessment-is",
+        "completedAt": "2026-09-29T16:09:10.985Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13271",
+        "title": "Handle assessment question with lots of answers",
+        "project": "Assessments",
+        "url": "https://linear.app/differential/issue/APO-13271/handle-assessment-question-with-lots-of-answers",
+        "completedAt": "2026-09-29T16:19:11.261Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13268",
+        "title": "The edit button in mobile recall should match web",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13268/the-edit-button-in-mobile-recall-should-match-web",
+        "completedAt": "2026-09-29T16:09:10.907Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13262",
+        "title": "The parent series should not display a broken thumbnail if there is no cover image",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-13262/the-parent-series-should-not-display-a-broken-thumbnail-if-there-is-no",
+        "completedAt": "2026-09-29T16:07:19.807Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13235",
+        "title": "mobile - When interacting, there's a bit of flashing going on",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13235/mobile-when-interacting-theres-a-bit-of-flashing-going-on",
+        "completedAt": "2026-09-29T16:09:11.147Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13134",
+        "title": "Canvas question block menu: center Public responses and pad the separator",
+        "project": "Question Block Privacy",
+        "url": "https://linear.app/differential/issue/APO-13134/canvas-question-block-menu-center-public-responses-and-pad-the",
+        "completedAt": "2026-09-29T16:15:52.153Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13122",
+        "title": "Question block Answer button is still oversized, worse with a filled answer",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13122/question-block-answer-button-is-still-oversized-worse-with-a-filled",
+        "completedAt": "2026-09-29T16:09:11.227Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13121",
+        "title": "Up next should show 2 next to Money Motivations Quiz while still on session 1",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-13121/up-next-should-show-2-next-to-money-motivations-quiz-while-still-on",
+        "completedAt": "2026-09-29T16:07:17.615Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [
+      {
+        "identifier": "Project",
+        "title": "FreedUp MongoDb Migration",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/project/freedup-mongodb-migration-b7d5c22310ab",
+        "completedAt": "2026-09-27T19:25:04.620Z",
+        "state": "Complete",
+        "description": "Content-only copy-down of the FreedUp Mongo corpus (1 journey, 36 levels, 573 cards) into local Postgres. No users, responses, or GuideLevelProgress (decided 2026-08-18).",
+        "startedAt": "2026-08-18T20:31:34.646Z",
+        "targetDate": "2026-10-01",
+        "lead": "Nathan Lewis",
+        "issue_count": 57,
+        "completed_issue_count": 49
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-14943",
+        "title": "[migration] Add a branch report that shows how the cards link",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14943/migration-add-a-branch-report-that-shows-how-the-cards-link",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14937",
+        "title": "[migration] Ideas That Work (Weeks 4, 5 and 6): put the four sections after Couples inside Couples",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14937/migration-ideas-that-work-weeks-4-5-and-6-put-the-four-sections-after",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14936",
+        "title": "[migration] Week 3 \"What is a spending plan?\": put Be Encouraged in each lane",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14936/migration-week-3-what-is-a-spending-plan-put-be-encouraged-in-each",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14933",
+        "title": "[migration] Web addresses in Plan for Freedom \"Automatic\" are not links",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14933/migration-web-addresses-in-plan-for-freedom-automatic-are-not-links",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14932",
+        "title": "[migration] Use one rule for branch cards that come from a poll",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14932/migration-use-one-rule-for-branch-cards-that-come-from-a-poll",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14931",
+        "title": "[migration] Combine adjacent branch cards that have the same condition",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14931/migration-combine-adjacent-branch-cards-that-have-the-same-condition",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14869",
+        "title": "[migration] Lane and branch cards inconsistently land as expandables (wk3+ audit)",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14869/migration-lane-and-branch-cards-inconsistently-land-as-expandables-wk3",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14867",
+        "title": "Fix expandable sections showing Untitled / View More for question blocks",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14867/fix-expandable-sections-showing-untitled-view-more-for-question-blocks",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14865",
+        "title": "Investigate and clean up “Follows a skipped parent” warnings on Week 4 — Your Action Plan",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14865/investigate-and-clean-up-follows-a-skipped-parent-warnings-on-week-4",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14864",
+        "title": "Investigate unsupported features on Week 2 — Ideas That Work",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14864/investigate-unsupported-features-on-week-2-ideas-that-work",
+        "completedAt": "2026-10-02T19:14:08.106Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14504",
+        "title": "Admin App Clip save fails when Apple reports no data change",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14504/admin-app-clip-save-fails-when-apple-reports-no-data-change",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14501",
+        "title": "Admin Creator AI outline add-page should use church OpenAI key",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14501/admin-creator-ai-outline-add-page-should-use-church-openai-key",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14492",
+        "title": "Admin content title save fails when the title is too long for the database index",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14492/admin-content-title-save-fails-when-the-title-is-too-long-for-the",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14487",
+        "title": "Admin: App Clip save rejects non-JPG/PNG header images before Apple API",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14487/admin-app-clip-save-rejects-non-jpgpng-header-images-before-apple-api",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14480",
+        "title": "Admin: AI Writer continue prompts crash when OpenAI quota is exhausted (APOLLOS-ADMIN-6P3)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14480/admin-ai-writer-continue-prompts-crash-when-openai-quota-is-exhausted",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14478",
+        "title": "Admin App Clip save should not report handled App Store Connect errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14478/admin-app-clip-save-should-not-report-handled-app-store-connect-errors",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14476",
+        "title": "Admin: Creator AI initial generation should not error-report OpenAI quota exhaustion",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14476/admin-creator-ai-initial-generation-should-not-error-report-openai",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14442",
+        "title": "Admin: AI Creator stream crashes when client disconnects during guide/plan generation",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14442/admin-ai-creator-stream-crashes-when-client-disconnects-during",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14436",
+        "title": "Admin AI Writer prompt suggestions abort when leaving the editor",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14436/admin-ai-writer-prompt-suggestions-abort-when-leaving-the-editor",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14421",
+        "title": "Admin: continue-writing AI suggestions error when OpenAI returns 429",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14421/admin-continue-writing-ai-suggestions-error-when-openai-returns-429",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14403",
+        "title": "Web: church content video crashes when Vimeo player SDK is broken (WEB-GE)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14403/web-church-content-video-crashes-when-vimeo-player-sdk-is-broken-web",
+        "completedAt": "2026-09-29T20:04:25.178Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14402",
+        "title": "Admin AI Writer crashes when attaching server video after the doc changed",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14402/admin-ai-writer-crashes-when-attaching-server-video-after-the-doc",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14401",
+        "title": "Admin community cover upload fails when Cloudinary media already exists",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14401/admin-community-cover-upload-fails-when-cloudinary-media-already",
+        "completedAt": "2026-09-28T16:22:30.936Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14400",
+        "title": "Admin content save fails when tags list includes deleted tag ids",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14400/admin-content-save-fails-when-tags-list-includes-deleted-tag-ids",
+        "completedAt": "2026-09-28T16:22:31.352Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14399",
+        "title": "Admin: invalid Tap tag URLs should not hit the database",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14399/admin-invalid-tap-tag-urls-should-not-hit-the-database",
+        "completedAt": "2026-09-28T16:22:31.527Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14398",
+        "title": "Admin Insert Page crashes with mismatched transaction when pages already exist",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14398/admin-insert-page-crashes-with-mismatched-transaction-when-pages",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14397",
+        "title": "Web: ignore ResizeObserver loop limit exceeded in Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14397/web-ignore-resizeobserver-loop-limit-exceeded-in-sentry",
+        "completedAt": "2026-09-28T16:10:47.660Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14396",
+        "title": "Admin: drop HubSpot script loader DOM error events in Sentry beforeSend",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14396/admin-drop-hubspot-script-loader-dom-error-events-in-sentry-beforesend",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14395",
+        "title": "Admin: drop HubSpot messages loader errors in Sentry beforeSend",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14395/admin-drop-hubspot-messages-loader-errors-in-sentry-beforesend",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14394",
+        "title": "Admin: drop HubSpot loader script load errors in Sentry beforeSend",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14394/admin-drop-hubspot-loader-script-load-errors-in-sentry-beforesend",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14393",
+        "title": "Admin: HubSpot click tracking throws URI malformed in Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14393/admin-hubspot-click-tracking-throws-uri-malformed-in-sentry",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14392",
+        "title": "Admin: drop HubSpot getParentNodeModuleId errors in Sentry beforeSend",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14392/admin-drop-hubspot-getparentnodemoduleid-errors-in-sentry-beforesend",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14391",
+        "title": "Admin: saving a poll crashes when duplicate list tags are submitted",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14391/admin-saving-a-poll-crashes-when-duplicate-list-tags-are-submitted",
+        "completedAt": "2026-09-28T16:22:31.590Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14390",
+        "title": "Admin: bad content URL crashes Postgres on non-UUID id",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14390/admin-bad-content-url-crashes-postgres-on-non-uuid-id",
+        "completedAt": "2026-09-28T16:22:31.296Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14389",
+        "title": "Admin: opening content crashes when image mediaIds is a pipe-joined string",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14389/admin-opening-content-crashes-when-image-mediaids-is-a-pipe-joined",
+        "completedAt": "2026-09-28T16:22:31.685Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14388",
+        "title": "Web: content page errors when YouTube video id is invalid",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14388/web-content-page-errors-when-youtube-video-id-is-invalid",
+        "completedAt": "2026-09-28T16:26:05.153Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14379",
+        "title": "Resolve Sentry issues whose fixes already shipped to production",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14379/resolve-sentry-issues-whose-fixes-already-shipped-to-production",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14332",
+        "title": "Admin: linking related content crashes when the connection already exists",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14332/admin-linking-related-content-crashes-when-the-connection-already",
+        "completedAt": "2026-09-28T16:22:31.405Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14328",
+        "title": "Web: church page crashes when layout meta reads appStoreId of missing church",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14328/web-church-page-crashes-when-layout-meta-reads-appstoreid-of-missing",
+        "completedAt": "2026-09-28T16:10:47.498Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14325",
+        "title": "Admin: wrapping a pasted paragraph reports Position out of range",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14325/admin-wrapping-a-pasted-paragraph-reports-position-out-of-range",
+        "completedAt": "2026-09-28T16:22:31.463Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14323",
+        "title": "Admin: moving content crashes when the category combobox clears",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14323/admin-moving-content-crashes-when-the-category-combobox-clears",
+        "completedAt": "2026-09-28T16:22:31.625Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14299",
+        "title": "Admin: content save crashes when the editor posts empty JSON",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14299/admin-content-save-crashes-when-the-editor-posts-empty-json",
+        "completedAt": "2026-09-28T16:22:31.110Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14060",
+        "title": "Admin: Change History crashes when the person record is missing",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14060/admin-change-history-crashes-when-the-person-record-is-missing",
+        "completedAt": "2026-09-28T16:22:31.558Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14011",
+        "title": "Web: Object.hasOwn crashes Sentry IAB filter on iOS 14 / NetCast",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14011/web-objecthasown-crashes-sentry-iab-filter-on-ios-14-netcast",
+        "completedAt": "2026-10-01T16:10:05.972Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14008",
+        "title": "Admin: DAG stream enqueue after client disconnect closes the controller",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14008/admin-dag-stream-enqueue-after-client-disconnect-closes-the-controller",
+        "completedAt": "2026-09-26T16:20:29.894Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13879",
+        "title": "Share formatFullName in Admin launchpad release-request email",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13879/share-formatfullname-in-admin-launchpad-release-request-email",
+        "completedAt": "2026-09-26T16:20:30.486Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13878",
+        "title": "Share formatPersonDisplayName in Admin daily habits leaderboard names",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13878/share-formatpersondisplayname-in-admin-daily-habits-leaderboard-names",
+        "completedAt": "2026-09-26T16:20:30.861Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13877",
+        "title": "Share formatPersonDisplayName in sendgrid recurring-gift cancellation recipient",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13877/share-formatpersondisplayname-in-sendgrid-recurring-gift-cancellation",
+        "completedAt": "2026-09-26T16:20:30.073Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13876",
+        "title": "Share formatPersonDisplayName in Admin transactions workbook donor column",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13876/share-formatpersondisplayname-in-admin-transactions-workbook-donor",
+        "completedAt": "2026-09-26T16:20:30.617Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13874",
+        "title": "Share formatFullName in Admin PeopleIcon tooltip",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13874/share-formatfullname-in-admin-peopleicon-tooltip",
+        "completedAt": "2026-09-26T16:20:31.100Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13873",
+        "title": "Share formatPersonDisplayName in Admin TransactionTable",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13873/share-formatpersondisplayname-in-admin-transactiontable",
+        "completedAt": "2026-09-26T16:20:30.201Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13872",
+        "title": "Share formatPersonDisplayName in Admin PeopleTableRow",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13872/share-formatpersondisplayname-in-admin-peopletablerow",
+        "completedAt": "2026-09-26T16:20:30.934Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13871",
+        "title": "Share formatPersonDisplayName in Suggested Follows PersonSummary",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13871/share-formatpersondisplayname-in-suggested-follows-personsummary",
+        "completedAt": "2026-09-26T16:20:29.962Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13869",
+        "title": "Share ChartTooltip chrome in Admin BarChart",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-13869/share-charttooltip-chrome-in-admin-barchart",
+        "completedAt": "2026-09-26T16:20:30.138Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13607",
+        "title": "Staff override for paid FreedUp access",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13607/staff-override-for-paid-freedup-access",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13606",
+        "title": "Lock a content series to a required tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13606/lock-a-content-series-to-a-required-tag",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13557",
+        "title": "Responses sheet on iOS < 26 loses glass chrome and looks unfinished",
+        "project": "Question Block Privacy",
+        "url": "https://linear.app/differential/issue/APO-13557/responses-sheet-on-ios-26-loses-glass-chrome-and-looks-unfinished",
+        "completedAt": "2026-09-29T16:16:27.886Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13539",
+        "title": "[migration] Bold GroupReader read-aloud prompt",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13539/migration-bold-groupreader-read-aloud-prompt",
+        "completedAt": "2026-09-29T21:33:38.646Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13269",
+        "title": "Some Question Blocks should be \"Currency\" Types",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-13269/some-question-blocks-should-be-currency-types",
+        "completedAt": "2026-09-29T21:33:40.550Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13265",
+        "title": "Assessment Results State: Edit button needs adjusted",
+        "project": "Assessments",
+        "url": "https://linear.app/differential/issue/APO-13265/assessment-results-state-edit-button-needs-adjusted",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13208",
+        "title": "Remove icon and Recall in Canvas editor tooltip",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13208/remove-icon-and-recall-in-canvas-editor-tooltip",
+        "completedAt": "2026-09-29T16:12:01.711Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13207",
+        "title": "Should we show the Edit button in Canvas?",
+        "project": "Recall & Calculations",
+        "url": "https://linear.app/differential/issue/APO-13207/should-we-show-the-edit-button-in-canvas",
+        "completedAt": "2026-09-29T16:14:45.734Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12900",
+        "title": "Move church-flag env-hatch rationale onto isChurchFlagEnabled and convert webEmbedsV2Flag",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12900/move-church-flag-env-hatch-rationale-onto-ischurchflagenabled-and",
+        "completedAt": "2026-09-27T16:12:43.175Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12878",
+        "title": "Share canvas-ui-web extractAskTurns in Admin ask route",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12878/share-canvas-ui-web-extractaskturns-in-admin-ask-route",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-12863",
+        "title": "extractAskTurns accepts malformed assistant turns, crashing the Ask page",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12863/extractaskturns-accepts-malformed-assistant-turns-crashing-the-ask",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-12722",
+        "title": "PageCard's uncancelled timer fails the admin-react-1 CI shard at random",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12722/pagecards-uncancelled-timer-fails-the-admin-react-1-ci-shard-at-random",
+        "completedAt": "2026-09-30T10:20:56.102Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11192",
+        "title": "Admin: feed template tracking passes wrong Segment event key",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-11192/admin-feed-template-tracking-passes-wrong-segment-event-key",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-14943",
+        "title": "[migration] Add a branch report that shows how the cards link",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14943/migration-add-a-branch-report-that-shows-how-the-cards-link",
+        "createdAt": "2026-10-02T18:42:37.633Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14937",
+        "title": "[migration] Ideas That Work (Weeks 4, 5 and 6): put the four sections after Couples inside Couples",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14937/migration-ideas-that-work-weeks-4-5-and-6-put-the-four-sections-after",
+        "createdAt": "2026-10-02T18:28:46.239Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14936",
+        "title": "[migration] Week 3 \"What is a spending plan?\": put Be Encouraged in each lane",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14936/migration-week-3-what-is-a-spending-plan-put-be-encouraged-in-each",
+        "createdAt": "2026-10-02T18:15:05.922Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14933",
+        "title": "[migration] Web addresses in Plan for Freedom \"Automatic\" are not links",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14933/migration-web-addresses-in-plan-for-freedom-automatic-are-not-links",
+        "createdAt": "2026-10-02T17:54:47.584Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14932",
+        "title": "[migration] Use one rule for branch cards that come from a poll",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14932/migration-use-one-rule-for-branch-cards-that-come-from-a-poll",
+        "createdAt": "2026-10-02T17:44:07.943Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14931",
+        "title": "[migration] Combine adjacent branch cards that have the same condition",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14931/migration-combine-adjacent-branch-cards-that-have-the-same-condition",
+        "createdAt": "2026-10-02T17:26:19.101Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14872",
+        "title": "Mobile: Up Next at end of paged item appears late or only after reaching the bottom",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-14872/mobile-up-next-at-end-of-paged-item-appears-late-or-only-after",
+        "createdAt": "2026-10-01T20:07:26.996Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-14871",
+        "title": "Decide: week-end Up Next opens next session vs week parent hub",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-14871/decide-week-end-up-next-opens-next-session-vs-week-parent-hub",
+        "createdAt": "2026-10-01T20:07:20.098Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-14870",
+        "title": "Mobile: Janky scroll / layout shift on long paged guide content",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-14870/mobile-janky-scroll-layout-shift-on-long-paged-guide-content",
+        "createdAt": "2026-10-01T20:07:19.065Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-14869",
+        "title": "[migration] Lane and branch cards inconsistently land as expandables (wk3+ audit)",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14869/migration-lane-and-branch-cards-inconsistently-land-as-expandables-wk3",
+        "createdAt": "2026-10-01T20:07:17.681Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14868",
+        "title": "[migration] Strip redundant lane-picker copy when lanes are expandables",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14868/migration-strip-redundant-lane-picker-copy-when-lanes-are-expandables",
+        "createdAt": "2026-10-01T20:07:16.254Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-14867",
+        "title": "Fix expandable sections showing Untitled / View More for question blocks",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14867/fix-expandable-sections-showing-untitled-view-more-for-question-blocks",
+        "createdAt": "2026-10-01T20:00:03.990Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14865",
+        "title": "Investigate and clean up “Follows a skipped parent” warnings on Week 4 — Your Action Plan",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14865/investigate-and-clean-up-follows-a-skipped-parent-warnings-on-week-4",
+        "createdAt": "2026-10-01T19:56:57.118Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14864",
+        "title": "Investigate unsupported features on Week 2 — Ideas That Work",
+        "project": "FreedUp MongoDb Migration",
+        "url": "https://linear.app/differential/issue/APO-14864/investigate-unsupported-features-on-week-2-ideas-that-work",
+        "createdAt": "2026-10-01T19:55:50.463Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14859",
+        "title": "Sometimes in mobile, a LOT of dead space is appended to the end of paged content",
+        "project": "Guide Progress & Unlocks",
+        "url": "https://linear.app/differential/issue/APO-14859/sometimes-in-mobile-a-lot-of-dead-space-is-appended-to-the-end-of",
+        "createdAt": "2026-10-01T18:35:50.146Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-14504",
+        "title": "Admin App Clip save fails when Apple reports no data change",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14504/admin-app-clip-save-fails-when-apple-reports-no-data-change",
+        "createdAt": "2026-09-28T23:09:50.874Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14501",
+        "title": "Admin Creator AI outline add-page should use church OpenAI key",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14501/admin-creator-ai-outline-add-page-should-use-church-openai-key",
+        "createdAt": "2026-09-28T22:03:18.108Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14492",
+        "title": "Admin content title save fails when the title is too long for the database index",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14492/admin-content-title-save-fails-when-the-title-is-too-long-for-the",
+        "createdAt": "2026-09-28T21:36:38.665Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14487",
+        "title": "Admin: App Clip save rejects non-JPG/PNG header images before Apple API",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14487/admin-app-clip-save-rejects-non-jpgpng-header-images-before-apple-api",
+        "createdAt": "2026-09-28T21:05:01.424Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14480",
+        "title": "Admin: AI Writer continue prompts crash when OpenAI quota is exhausted (APOLLOS-ADMIN-6P3)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14480/admin-ai-writer-continue-prompts-crash-when-openai-quota-is-exhausted",
+        "createdAt": "2026-09-28T19:33:36.892Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14478",
+        "title": "Admin App Clip save should not report handled App Store Connect errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14478/admin-app-clip-save-should-not-report-handled-app-store-connect-errors",
+        "createdAt": "2026-09-28T19:04:13.545Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14476",
+        "title": "Admin: Creator AI initial generation should not error-report OpenAI quota exhaustion",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14476/admin-creator-ai-initial-generation-should-not-error-report-openai",
+        "createdAt": "2026-09-28T18:34:54.603Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14442",
+        "title": "Admin: AI Creator stream crashes when client disconnects during guide/plan generation",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14442/admin-ai-creator-stream-crashes-when-client-disconnects-during",
+        "createdAt": "2026-09-28T17:02:43.545Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14436",
+        "title": "Admin AI Writer prompt suggestions abort when leaving the editor",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14436/admin-ai-writer-prompt-suggestions-abort-when-leaving-the-editor",
+        "createdAt": "2026-09-28T16:03:51.493Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14421",
+        "title": "Admin: continue-writing AI suggestions error when OpenAI returns 429",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14421/admin-continue-writing-ai-suggestions-error-when-openai-returns-429",
+        "createdAt": "2026-09-28T14:32:44.654Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14403",
+        "title": "Web: church content video crashes when Vimeo player SDK is broken (WEB-GE)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14403/web-church-content-video-crashes-when-vimeo-player-sdk-is-broken-web",
+        "createdAt": "2026-09-28T09:37:04.515Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14402",
+        "title": "Admin AI Writer crashes when attaching server video after the doc changed",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14402/admin-ai-writer-crashes-when-attaching-server-video-after-the-doc",
+        "createdAt": "2026-09-28T09:02:01.336Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14401",
+        "title": "Admin community cover upload fails when Cloudinary media already exists",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14401/admin-community-cover-upload-fails-when-cloudinary-media-already",
+        "createdAt": "2026-09-28T08:32:02.184Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14400",
+        "title": "Admin content save fails when tags list includes deleted tag ids",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14400/admin-content-save-fails-when-tags-list-includes-deleted-tag-ids",
+        "createdAt": "2026-09-28T08:02:47.532Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14399",
+        "title": "Admin: invalid Tap tag URLs should not hit the database",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14399/admin-invalid-tap-tag-urls-should-not-hit-the-database",
+        "createdAt": "2026-09-28T07:32:59.716Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14398",
+        "title": "Admin Insert Page crashes with mismatched transaction when pages already exist",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14398/admin-insert-page-crashes-with-mismatched-transaction-when-pages",
+        "createdAt": "2026-09-28T07:03:12.120Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14397",
+        "title": "Web: ignore ResizeObserver loop limit exceeded in Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14397/web-ignore-resizeobserver-loop-limit-exceeded-in-sentry",
+        "createdAt": "2026-09-28T06:33:48.549Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14396",
+        "title": "Admin: drop HubSpot script loader DOM error events in Sentry beforeSend",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14396/admin-drop-hubspot-script-loader-dom-error-events-in-sentry-beforesend",
+        "createdAt": "2026-09-28T06:02:49.434Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14395",
+        "title": "Admin: drop HubSpot messages loader errors in Sentry beforeSend",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14395/admin-drop-hubspot-messages-loader-errors-in-sentry-beforesend",
+        "createdAt": "2026-09-28T05:33:32.550Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14394",
+        "title": "Admin: drop HubSpot loader script load errors in Sentry beforeSend",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14394/admin-drop-hubspot-loader-script-load-errors-in-sentry-beforesend",
+        "createdAt": "2026-09-28T05:26:42.306Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14393",
+        "title": "Admin: HubSpot click tracking throws URI malformed in Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14393/admin-hubspot-click-tracking-throws-uri-malformed-in-sentry",
+        "createdAt": "2026-09-28T05:02:29.317Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14392",
+        "title": "Admin: drop HubSpot getParentNodeModuleId errors in Sentry beforeSend",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14392/admin-drop-hubspot-getparentnodemoduleid-errors-in-sentry-beforesend",
+        "createdAt": "2026-09-28T04:38:57.870Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14391",
+        "title": "Admin: saving a poll crashes when duplicate list tags are submitted",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14391/admin-saving-a-poll-crashes-when-duplicate-list-tags-are-submitted",
+        "createdAt": "2026-09-28T04:22:36.365Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14390",
+        "title": "Admin: bad content URL crashes Postgres on non-UUID id",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14390/admin-bad-content-url-crashes-postgres-on-non-uuid-id",
+        "createdAt": "2026-09-28T04:08:13.889Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14389",
+        "title": "Admin: opening content crashes when image mediaIds is a pipe-joined string",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14389/admin-opening-content-crashes-when-image-mediaids-is-a-pipe-joined",
+        "createdAt": "2026-09-28T03:53:52.214Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14388",
+        "title": "Web: content page errors when YouTube video id is invalid",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14388/web-content-page-errors-when-youtube-video-id-is-invalid",
+        "createdAt": "2026-09-28T03:09:30.602Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14379",
+        "title": "Resolve Sentry issues whose fixes already shipped to production",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14379/resolve-sentry-issues-whose-fixes-already-shipped-to-production",
+        "createdAt": "2026-09-27T19:33:16.312Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14332",
+        "title": "Admin: linking related content crashes when the connection already exists",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14332/admin-linking-related-content-crashes-when-the-connection-already",
+        "createdAt": "2026-09-26T17:34:47.839Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14328",
+        "title": "Web: church page crashes when layout meta reads appStoreId of missing church",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14328/web-church-page-crashes-when-layout-meta-reads-appstoreid-of-missing",
+        "createdAt": "2026-09-26T11:36:03.239Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14327",
+        "title": "Admin: adding feed section content crashes when algorithms is missing",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14327/admin-adding-feed-section-content-crashes-when-algorithms-is-missing",
+        "createdAt": "2026-09-26T09:35:46.637Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-14325",
+        "title": "Admin: wrapping a pasted paragraph reports Position out of range",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14325/admin-wrapping-a-pasted-paragraph-reports-position-out-of-range",
+        "createdAt": "2026-09-26T06:34:29.004Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14324",
+        "title": "Admin: backspace next to a content button crashes the editor",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14324/admin-backspace-next-to-a-content-button-crashes-the-editor",
+        "createdAt": "2026-09-26T06:04:42.303Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-14323",
+        "title": "Admin: moving content crashes when the category combobox clears",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14323/admin-moving-content-crashes-when-the-category-combobox-clears",
+        "createdAt": "2026-09-26T05:06:04.766Z",
+        "state": "Done"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-14865",
+        "title": "Investigate and clean up “Follows a skipped parent” warnings on Week 4 — Your Action Plan",
+        "url": "https://linear.app/differential/issue/APO-14865/investigate-and-clean-up-follows-a-skipped-parent-warnings-on-week-4",
+        "project": "FreedUp MongoDb Migration",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14864",
+        "title": "Investigate unsupported features on Week 2 — Ideas That Work",
+        "url": "https://linear.app/differential/issue/APO-14864/investigate-unsupported-features-on-week-2-ideas-that-work",
+        "project": "FreedUp MongoDb Migration",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14869",
+        "title": "[migration] Lane and branch cards inconsistently land as expandables (wk3+ audit)",
+        "url": "https://linear.app/differential/issue/APO-14869/migration-lane-and-branch-cards-inconsistently-land-as-expandables-wk3",
+        "project": "FreedUp MongoDb Migration",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14867",
+        "title": "Fix expandable sections showing Untitled / View More for question blocks",
+        "url": "https://linear.app/differential/issue/APO-14867/fix-expandable-sections-showing-untitled-view-more-for-question-blocks",
+        "project": "FreedUp MongoDb Migration",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14868",
+        "title": "[migration] Strip redundant lane-picker copy when lanes are expandables",
+        "url": "https://linear.app/differential/issue/APO-14868/migration-strip-redundant-lane-picker-copy-when-lanes-are-expandables",
+        "project": "FreedUp MongoDb Migration",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-14936",
+        "title": "[migration] Week 3 \"What is a spending plan?\": put Be Encouraged in each lane",
+        "url": "https://linear.app/differential/issue/APO-14936/migration-week-3-what-is-a-spending-plan-put-be-encouraged-in-each",
+        "project": "FreedUp MongoDb Migration",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14937",
+        "title": "[migration] Ideas That Work (Weeks 4, 5 and 6): put the four sections after Couples inside Couples",
+        "url": "https://linear.app/differential/issue/APO-14937/migration-ideas-that-work-weeks-4-5-and-6-put-the-four-sections-after",
+        "project": "FreedUp MongoDb Migration",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14943",
+        "title": "[migration] Add a branch report that shows how the cards link",
+        "url": "https://linear.app/differential/issue/APO-14943/migration-add-a-branch-report-that-shows-how-the-cards-link",
+        "project": "FreedUp MongoDb Migration",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14931",
+        "title": "[migration] Combine adjacent branch cards that have the same condition",
+        "url": "https://linear.app/differential/issue/APO-14931/migration-combine-adjacent-branch-cards-that-have-the-same-condition",
+        "project": "FreedUp MongoDb Migration",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14932",
+        "title": "[migration] Use one rule for branch cards that come from a poll",
+        "url": "https://linear.app/differential/issue/APO-14932/migration-use-one-rule-for-branch-cards-that-come-from-a-poll",
+        "project": "FreedUp MongoDb Migration",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14933",
+        "title": "[migration] Web addresses in Plan for Freedom \"Automatic\" are not links",
+        "url": "https://linear.app/differential/issue/APO-14933/migration-web-addresses-in-plan-for-freedom-automatic-are-not-links",
+        "project": "FreedUp MongoDb Migration",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-12878",
+        "title": "Share canvas-ui-web extractAskTurns in Admin ask route",
+        "url": "https://linear.app/differential/issue/APO-12878/share-canvas-ui-web-extractaskturns-in-admin-ask-route",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-12863",
+        "title": "extractAskTurns accepts malformed assistant turns, crashing the Ask page",
+        "url": "https://linear.app/differential/issue/APO-12863/extractaskturns-accepts-malformed-assistant-turns-crashing-the-ask",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-13265",
+        "title": "Assessment Results State: Edit button needs adjusted",
+        "url": "https://linear.app/differential/issue/APO-13265/assessment-results-state-edit-button-needs-adjusted",
+        "project": "Assessments",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13134",
+        "title": "Canvas question block menu: center Public responses and pad the separator",
+        "url": "https://linear.app/differential/issue/APO-13134/canvas-question-block-menu-center-public-responses-and-pad-the",
+        "project": "Question Block Privacy",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13207",
+        "title": "Should we show the Edit button in Canvas?",
+        "url": "https://linear.app/differential/issue/APO-13207/should-we-show-the-edit-button-in-canvas",
+        "project": "Recall & Calculations",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13208",
+        "title": "Remove icon and Recall in Canvas editor tooltip",
+        "url": "https://linear.app/differential/issue/APO-13208/remove-icon-and-recall-in-canvas-editor-tooltip",
+        "project": "Recall & Calculations",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11554",
+        "title": "Make Series \"Open\" button affordance smaller",
+        "url": "https://linear.app/differential/issue/APO-11554/make-series-open-button-affordance-smaller",
+        "project": "Guide Progress & Unlocks",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13267",
+        "title": "Autoplay inline videos",
+        "url": "https://linear.app/differential/issue/APO-13267/autoplay-inline-videos",
+        "project": "Inline Media Blocks",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-12561",
+        "title": "apps/admin typecheck regressed to 27 errors (13 in canvas-editor dbFeaturesToPages)",
+        "url": "https://linear.app/differential/issue/APO-12561/appsadmin-typecheck-regressed-to-27-errors-13-in-canvas-editor",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-14437",
+        "title": "Fix OpenAI credit check in Betterstack",
+        "url": "https://linear.app/differential/issue/APO-14437/fix-openai-credit-check-in-betterstack",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14402",
+        "title": "Admin AI Writer crashes when attaching server video after the doc changed",
+        "url": "https://linear.app/differential/issue/APO-14402/admin-ai-writer-crashes-when-attaching-server-video-after-the-doc",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14398",
+        "title": "Admin Insert Page crashes with mismatched transaction when pages already exist",
+        "url": "https://linear.app/differential/issue/APO-14398/admin-insert-page-crashes-with-mismatched-transaction-when-pages",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14388",
+        "title": "Web: content page errors when YouTube video id is invalid",
+        "url": "https://linear.app/differential/issue/APO-14388/web-content-page-errors-when-youtube-video-id-is-invalid",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14379",
+        "title": "Resolve Sentry issues whose fixes already shipped to production",
+        "url": "https://linear.app/differential/issue/APO-14379/resolve-sentry-issues-whose-fixes-already-shipped-to-production",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-11001",
+        "title": "Admin: AI Combobox crashes when clearing prompt (APOLLOS-ADMIN-41K)",
+        "url": "https://linear.app/differential/issue/APO-11001/admin-ai-combobox-crashes-when-clearing-prompt-apollos-admin-41k",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11265",
+        "title": "Web reports CefSharp Safe Links scanner bridge rejections as product errors",
+        "url": "https://linear.app/differential/issue/APO-11265/web-reports-cefsharp-safe-links-scanner-bridge-rejections-as-product",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11005",
+        "title": "Admin: AlgorithmForm crashes adding STATIC items when items missing (APOLLOS-ADMIN-6MV)",
+        "url": "https://linear.app/differential/issue/APO-11005/admin-algorithmform-crashes-adding-static-items-when-items-missing",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11191",
+        "title": "Admin: ManualSyncModal null getElementById on close",
+        "url": "https://linear.app/differential/issue/APO-11191/admin-manualsyncmodal-null-getelementbyid-on-close",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11192",
+        "title": "Admin: feed template tracking passes wrong Segment event key",
+        "url": "https://linear.app/differential/issue/APO-11192/admin-feed-template-tracking-passes-wrong-segment-event-key",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14332",
+        "title": "Admin: linking related content crashes when the connection already exists",
+        "url": "https://linear.app/differential/issue/APO-14332/admin-linking-related-content-crashes-when-the-connection-already",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14328",
+        "title": "Web: church page crashes when layout meta reads appStoreId of missing church",
+        "url": "https://linear.app/differential/issue/APO-14328/web-church-page-crashes-when-layout-meta-reads-appstoreid-of-missing",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14327",
+        "title": "Admin: adding feed section content crashes when algorithms is missing",
+        "url": "https://linear.app/differential/issue/APO-14327/admin-adding-feed-section-content-crashes-when-algorithms-is-missing",
+        "project": "Sentry Queue",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-12187",
+        "title": "Admin: feeds error page crashes reading parent.document on unload",
+        "url": "https://linear.app/differential/issue/APO-12187/admin-feeds-error-page-crashes-reading-parentdocument-on-unload",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-14325",
+        "title": "Admin: wrapping a pasted paragraph reports Position out of range",
+        "url": "https://linear.app/differential/issue/APO-14325/admin-wrapping-a-pasted-paragraph-reports-position-out-of-range",
+        "project": "Sentry Queue",
+        "state": "Done"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "Run reviews on a Claude subscription, and choose the provider in Settings",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/81",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-10-02T17:38:50Z",
+        "additions": 1490,
+        "deletions": 129,
+        "changed_files": 27
+      },
+      {
+        "title": "feat: bulk-review the queue with author filter and concurrency cap",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/80",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-09-30T16:22:38Z",
+        "additions": 1027,
+        "deletions": 39,
+        "changed_files": 10
+      },
+      {
+        "title": "fix(web): guard VideoPlayer when Vimeo SDK Player is missing (WEB-GE)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5283",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-29T20:01:14Z",
+        "additions": 197,
+        "deletions": 1,
+        "changed_files": 6
+      },
+      {
+        "title": "Fix community cover save when Cloudinary media already exists",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5281",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-28T14:47:33Z",
+        "additions": 59,
+        "deletions": 12,
+        "changed_files": 5
+      },
+      {
+        "title": "Skip missing tag ids when saving content tags",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5279",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-28T14:43:57Z",
+        "additions": 51,
+        "deletions": 7,
+        "changed_files": 2
+      },
+      {
+        "title": "Guard Tap scan when tag id is not numeric",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5278",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-28T14:32:28Z",
+        "additions": 105,
+        "deletions": 5,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(web): ignore ResizeObserver loop limit exceeded in Sentry (WEB-BE)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5276",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-28T14:32:28Z",
+        "additions": 32,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Fix duplicate poll option tag inserts on save (APOLLOS-ADMIN-732)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5270",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-28T14:32:28Z",
+        "additions": 22,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(admin): reject non-UUID content URLs before cluster queries",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5268",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-28T14:35:55Z",
+        "additions": 303,
+        "deletions": 107,
+        "changed_files": 6
+      },
+      {
+        "title": "fix(admin): hydrate image rows when mediaIds is pipe-joined",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5267",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-28T14:35:55Z",
+        "additions": 100,
+        "deletions": 14,
+        "changed_files": 6
+      },
+      {
+        "title": "fix(web): skip YouTube player for invalid video ids (WEB-A4)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5266",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-28T16:22:57Z",
+        "additions": 204,
+        "deletions": 1,
+        "changed_files": 6
+      },
+      {
+        "title": "fix(admin): keep the editor open when a related-content link already exists",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5184",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-27T20:05:41Z",
+        "additions": 21,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(web): keep church pages up when layout meta has no church",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5179",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-27T20:15:44Z",
+        "additions": 17,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(admin): keep the caret inside the document after wrapping a pasted paragraph",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5175",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-27T20:04:04Z",
+        "additions": 52,
+        "deletions": 5,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(admin): keep the content editor open when Move category search clears",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5173",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-27T20:04:40Z",
+        "additions": 69,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(admin): keep the content editor open when autosave posts empty JSON",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5156",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-27T20:04:40Z",
+        "additions": 65,
+        "deletions": 2,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(admin): keep Change History up when the person row is missing",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5153",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-27T20:04:04Z",
+        "additions": 98,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(web): avoid Object.hasOwn crash in the Sentry IAB filter",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5141",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-30T20:18:22Z",
+        "additions": 72,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "Let Admin write tag.data for the purchase-gate Persona (APO-13605)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5092",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-29T15:12:15Z",
+        "additions": 120,
+        "deletions": 4,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(admin): share church-flag env hatch with webEmbedsV2 (APO-12900)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4637",
+        "repo": "apollos-admin",
+        "merged_at": "2026-09-26T18:34:06Z",
+        "additions": 29,
+        "deletions": 64,
+        "changed_files": 4
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "feat(migrate): one rule per poll for its branch cards (APO-14932)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/50",
+        "repo": "freedup-migration",
+        "state": "open"
+      },
+      {
+        "title": "fix(migrate): leave out cards whose parent is missing from the dump (APO-14865)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/49",
+        "repo": "freedup-migration",
+        "state": "open"
+      },
+      {
+        "title": "feat(migrate): one expandable section per lane (APO-14931)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/48",
+        "repo": "freedup-migration",
+        "state": "open"
+      },
+      {
+        "title": "fix(migrate): fold single-card intro lanes into sections (APO-14869)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/47",
+        "repo": "freedup-migration",
+        "state": "open"
+      },
+      {
+        "title": "fix(migrate): keep the poll-question heading in poll-only sections (APO-14867)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/46",
+        "repo": "freedup-migration",
+        "state": "open"
+      },
+      {
+        "title": "fix(migrate): link plain web addresses in card HTML (APO-14933)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/45",
+        "repo": "freedup-migration",
+        "state": "open"
+      },
+      {
+        "title": "feat(report): add a read-only branch report of how cards link (APO-14943)",
+        "url": "https://github.com/ApollosProject/freedup-migration/pull/44",
+        "repo": "freedup-migration",
+        "state": "open"
+      },
+      {
+        "title": "fix(mobile): use ghost variant for assessment results Edit (APO-13265)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7524",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "fix(admin): App Clip save succeeds when Apple reports no change (APO-14504)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5317",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Use church OpenAI key for Creator AI outline add-page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5315",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Admin: reject content titles that exceed database index limits",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5313",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Admin: reject non-JPG/PNG App Clip header images before Apple API (APOLLOS-ADMIN-73A)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5312",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(admin): handle OpenAI quota on continue-writing prompts (APOLLOS-ADMIN-6P3)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5307",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Admin: stop reporting handled App Store Connect errors from App Clip save",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5305",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(admin): Creator AI OpenAI no-credits 429 without Sentry noise (APOLLOS-ADMIN-75Q)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5302",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Guard AI Creator stream when client disconnects (APOLLOS-ADMIN-76B)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5300",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Abort AI Writer prompt fetch cleanly when leaving the editor",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5292",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Fix continue-writing prompts when OpenAI returns 429",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5287",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(admin): drop HubSpot Sentry noise and load Segment once per page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5272",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "refactor(web): share stripPhoneFormatting between web and donation-embed (APO-13870)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5108",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Claim FreedUp access from live Woo orders (APO-13827)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4857",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Decide FreedUp purchase from the signed-in email (APO-13608)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4853",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Prove staff override grants the gate Persona (APO-13607)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4852",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Withhold tag-gated reads until the viewer has the gate Persona (APO-13606)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4851",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Name the FreedUp purchase-gate Persona (APO-13605)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4850",
+        "repo": "apollos-cluster",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Run reviews on a Claude subscription, and choose the provider in Settings",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/81",
+        "repo": "apollos-code-reviewer",
+        "requested_at": null,
+        "reviewed_at": "2026-10-02T16:24:46Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): warn before closing the content editor with a save pending",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5453",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-02T00:46:11Z",
+        "reviewed_at": "2026-10-02T16:05:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.1
+      },
+      {
+        "title": "docs(chat): a church-wide ban cuts off chat history",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5107",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-30T15:26:31Z",
+        "reviewed_at": "2026-10-02T14:26:12Z",
+        "review_state": "APPROVED",
+        "latency_hours": 14.99
+      },
+      {
+        "title": "feat(admin): edit Daily tab hero title/subtitle (APO-7837)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5368",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-30T13:42:15Z",
+        "reviewed_at": "2026-10-02T14:20:41Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 16.34
+      },
+      {
+        "title": "feat(notifications): schedule push broadcasts with a BullMQ delay (APO-8941)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5069",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-30T12:50:21Z",
+        "reviewed_at": "2026-10-02T14:28:07Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 16.47
+      },
+      {
+        "title": "feat(web): draw a content item's theme on web and v1 embeds",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5365",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-01T22:15:17Z",
+        "reviewed_at": "2026-10-02T14:27:01Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.45
+      },
+      {
+        "title": "feat(admin): add the content ThemeSelector component",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5362",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-01T21:59:20Z",
+        "reviewed_at": "2026-10-02T14:27:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.46
+      },
+      {
+        "title": "feat(admin): serve a content item's own images for theme color reading",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5360",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-02T18:07:34Z",
+        "reviewed_at": "2026-10-02T18:57:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.84
+      },
+      {
+        "title": "feat(admin): list a content item's images for theme reading",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5358",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-02T14:45:20Z",
+        "reviewed_at": "2026-10-02T16:02:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.29
+      },
+      {
+        "title": "feat(admin): flag and read/write a content item's theme",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5357",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-01T17:12:39Z",
+        "reviewed_at": "2026-10-02T14:26:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.23
+      },
+      {
+        "title": "feat(mobile): provide a content item's theme to one subtree (NestedThemeProvider)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7528",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-02T16:27:55Z",
+        "reviewed_at": "2026-10-02T17:48:52Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.35
+      },
+      {
+        "title": "feat(mobile): build a content item's theme on top of the church theme",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7527",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-01T12:35:43Z",
+        "reviewed_at": "2026-10-02T14:26:38Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 8.44
+      },
+      {
+        "title": "fix(mobile): release media players after commit, not during render",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7526",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-01T13:53:34Z",
+        "reviewed_at": "2026-10-01T15:09:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.17
+      },
+      {
+        "title": "fix(admin): share links use the church's primary alias slug (APO-14527)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5333",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-29T15:14:21Z",
+        "reviewed_at": "2026-10-02T14:27:43Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 23.22
+      },
+      {
+        "title": "Require a plan before creating a new app",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5332",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-29T17:45:34Z",
+        "reviewed_at": "2026-10-02T14:26:19Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 20.68
+      },
+      {
+        "title": "feat(mobile): give every church a sign-up line that fits it",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7517",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-29T14:51:19Z",
+        "reviewed_at": "2026-09-29T15:44:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.89
+      },
+      {
+        "title": "feat(narration): read in the marin voice on a pinned model",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5004",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-02T17:41:39Z",
+        "reviewed_at": "2026-10-02T17:46:12Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.08
+      },
+      {
+        "title": "feat(narration): pause at images and before sections",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5003",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-01T21:58:55Z",
+        "reviewed_at": "2026-10-02T16:03:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.08
+      },
+      {
+        "title": "APO-14489: Show helper text when hovering campaign link actions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5318",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-29T01:03:27Z",
+        "reviewed_at": "2026-09-30T16:18:47Z",
+        "review_state": "APPROVED",
+        "latency_hours": 10.31
+      },
+      {
+        "title": "docs: point agents at the web Playwright suite",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5314",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-28T21:55:08Z",
+        "reviewed_at": "2026-09-29T15:44:47Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.83
+      },
+      {
+        "title": "fix(migration): bold every donor name, not only multi-gift headers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5309",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-28T20:43:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(openai): make the credit health check catch the real billing code",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4989",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-28T17:05:53Z",
+        "reviewed_at": "2026-09-28T17:12:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "fix(web): guard VideoPlayer when Vimeo SDK Player is missing (WEB-GE)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5283",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-29T15:06:54Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "chore(web-embeds): drop the unused ts-loader dependency",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5265",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-28T01:00:53Z",
+        "reviewed_at": "2026-09-28T16:25:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.43
+      },
+      {
+        "title": "test(analytics): pin the Amplitude client's library selection",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5244",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-27T23:52:12Z",
+        "reviewed_at": "2026-09-28T16:24:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.41
+      },
+      {
+        "title": "chore(storybook-addon): remove the unused prompts devDependency",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5232",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-27T20:08:40Z",
+        "reviewed_at": "2026-09-28T16:23:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.4
+      },
+      {
+        "title": "chore(storybook): remove the redundant tailwind-gradient-mask-image devDependency",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5231",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-27T19:50:08Z",
+        "reviewed_at": "2026-09-28T16:24:09Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.4
+      },
+      {
+        "title": "chore(storybook): remove the redundant @tailwindcss/typography devDependency",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5230",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-27T19:33:14Z",
+        "reviewed_at": "2026-09-28T16:23:54Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.4
+      },
+      {
+        "title": "chore(donation-embed): remove the unused @testing-library/user-event devDependency",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5229",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-27T19:10:39Z",
+        "reviewed_at": "2026-09-28T16:25:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.42
+      },
+      {
+        "title": "chore(web-embeds): remove the unused ts-loader devDependency",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5228",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-27T18:48:35Z",
+        "reviewed_at": "2026-09-28T16:23:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.39
+      },
+      {
+        "title": "chore(web-embeds): remove the unused postcss-loader devDependency",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5227",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-27T18:32:21Z",
+        "reviewed_at": "2026-09-28T16:23:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.39
+      },
+      {
+        "title": "Transactions report (v1): a dispute wins over a refund label",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5218",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-28T19:54:01Z",
+        "reviewed_at": "2026-09-29T15:19:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.43
+      },
+      {
+        "title": "refactor(admin): share the field-error block across the three text inputs (APO-14340)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5205",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-27T02:44:43Z",
+        "reviewed_at": "2026-09-28T16:23:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.39
+      },
+      {
+        "title": "fix(web): refresh an expired session before church page loaders run (APO-14310)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5185",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-27T04:30:56Z",
+        "reviewed_at": "2026-09-29T15:25:57Z",
+        "review_state": "APPROVED",
+        "latency_hours": 9.43
+      },
+      {
+        "title": "chore(web-embeds): remove the unused tldts dependency (APO-14331)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5181",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-26T16:48:03Z",
+        "reviewed_at": "2026-09-28T16:23:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.39
+      },
+      {
+        "title": "chore(web-embeds): remove the unused dompurify dependency (APO-14330)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5180",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-26T16:45:53Z",
+        "reviewed_at": "2026-09-28T16:22:52Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.38
+      },
+      {
+        "title": "fix(feeds): limit the prayer-days slider to 7-30 and explain it (APO-14043)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5178",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-28T13:14:55Z",
+        "reviewed_at": "2026-09-28T16:24:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.41
+      },
+      {
+        "title": "Transactions report (v1): honour GIVING.REFUND_TRANSACTION_DATE",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5172",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-28T17:13:26Z",
+        "reviewed_at": "2026-09-29T15:13:08Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6
+      },
+      {
+        "title": "Transactions report (v1): Stripe Payout Date from payout.arrival_date",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5171",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-28T17:12:54Z",
+        "reviewed_at": "2026-09-29T15:12:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.99
+      },
+      {
+        "title": "Transactions report (v2): Is Recurring from the refund row itself",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4944",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-28T17:05:53Z",
+        "reviewed_at": "2026-09-29T15:11:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.09
+      },
+      {
+        "title": "Transactions report (v2): Stripe Payout Date from payout.arrival_date",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4943",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-28T17:05:23Z",
+        "reviewed_at": "2026-09-29T15:10:47Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.09
+      },
+      {
+        "title": "chore(admin): drop the redundant root @launchdarkly/node-server-sdk",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5145",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T17:34:00Z",
+        "reviewed_at": "2026-09-28T16:22:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.81
+      },
+      {
+        "title": "chore(admin): drop the unused @aws-sdk/lib-storage dependency",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5144",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T17:29:15Z",
+        "reviewed_at": "2026-09-28T16:22:09Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.88
+      },
+      {
+        "title": "chore(admin): remove unused deleteUserByEmail",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5142",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T17:25:44Z",
+        "reviewed_at": "2026-09-28T16:22:07Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.94
+      },
+      {
+        "title": "fix(web): avoid Object.hasOwn crash in the Sentry IAB filter",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5141",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-09-29T15:09:36Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "test(admin): cover addNewChurchRoute's guards and parameter binding",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5139",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T17:10:46Z",
+        "reviewed_at": "2026-09-29T15:22:36Z",
+        "review_state": "APPROVED",
+        "latency_hours": 14.2
+      },
+      {
+        "title": "refactor(admin): share the category -> select-option mapping across sixteen call sites",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5138",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T17:10:00Z",
+        "reviewed_at": "2026-09-28T16:21:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.19
+      },
+      {
+        "title": "fix(web): the View More list opens full screen as a card grid",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5121",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T17:22:46Z",
+        "reviewed_at": "2026-09-28T16:27:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.08
+      },
+      {
+        "title": "fix(canvas-ui-web): short card rows share the row instead of leaving slots empty",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5120",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-25T17:22:45Z",
+        "reviewed_at": "2026-09-29T15:22:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 13.99
+      },
+      {
+        "title": "APO-8115: Resolve ChatChannel through node(id) for members",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4860",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-09-29T14:39:47Z",
+        "reviewed_at": "2026-09-29T15:19:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.66
+      },
+      {
+        "title": "Withhold tag-gated reads until the viewer has the gate Persona (APO-13606)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4851",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-09-29T15:31:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "[APO-13562] Support livestream heroes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4993",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T16:51:49Z",
+        "reviewed_at": "2026-09-28T16:25:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 47.55
+      },
+      {
+        "title": "Let admin staff view a person's prayer history even if muted",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4569",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-08T06:36:25Z",
+        "reviewed_at": "2026-09-30T16:20:44Z",
+        "review_state": "APPROVED",
+        "latency_hours": 130.35
+      },
+      {
+        "title": "Mobile design system: census, coupling + orphan gates, Button analytics split",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7120",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-09-28T16:11:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- Fix community cover save when Cloudinary media already exists\n- Skip missing tag ids when saving content tags\n- Guard Tap scan when tag id is not numeric\n- fix(web): ignore ResizeObserver loop limit exceeded in Sentry (WEB-BE)\n- Fix duplicate poll option tag inserts on save (APOLLOS-ADMIN-732)\n- fix(admin): reject non-UUID content URLs before cluster queries\n- fix(admin): hydrate image rows when mediaIds is pipe-joined\n- fix(web): skip YouTube player for invalid video ids (WEB-A4)\n- fix(admin): keep the editor open when a related-content link already exists\n- fix(web): keep church pages up when layout meta has no church\n- fix(admin): keep the caret inside the document after wrapping a pasted paragraph\n- fix(admin): keep the content editor open when Move category search clears\n- …and 8 more (see Weekly Summary)\n- Reviewed: fix(migration): bold every donor name, not only multi-gift headers\n- Reviewed: fix(openai): make the credit health check catch the real billing code\n- Reviewed: chore(web-embeds): drop the unused ts-loader dependency\n- Reviewed: test(analytics): pin the Amplitude client's library selection\n- Reviewed: chore(storybook-addon): remove the unused prompts devDependency\n- Reviewed: chore(storybook): remove the redundant tailwind-gradient-mask-image devDependency\n- Reviewed: chore(storybook): remove the redundant @tailwindcss/typography devDependency\n- Reviewed: chore(donation-embed): remove the unused @testing-library/user-event devDependency\n- Reviewed: chore(web-embeds): remove the unused ts-loader devDependency\n- Reviewed: chore(web-embeds): remove the unused postcss-loader devDependency\n- Reviewed: refactor(admin): share the field-error block across the three text inputs (APO-14340)\n- Reviewed: chore(web-embeds): remove the unused tldts dependency (APO-14331)\n- …and 11 more reviews\n- Done: APO-14401: Admin community cover upload fails when Cloudinary media already exists\n- Done: APO-14400: Admin content save fails when tags list includes deleted tag ids\n- Done: APO-14399: Admin: invalid Tap tag URLs should not hit the database\n- Done: APO-14397: Web: ignore ResizeObserver loop limit exceeded in Sentry\n- Done: APO-14391: Admin: saving a poll crashes when duplicate list tags are submitted\n- Done: APO-14390: Admin: bad content URL crashes Postgres on non-UUID id\n- Done: APO-14389: Admin: opening content crashes when image mediaIds is a pipe-joined string\n- Done: APO-14388: Web: content page errors when YouTube video id is invalid\n- Done: APO-14332: Admin: linking related content crashes when the connection already exists\n- Done: APO-14328: Web: church page crashes when layout meta reads appStoreId of missing church\n- Done: APO-14325: Admin: wrapping a pasted paragraph reports Position out of range\n- Done: APO-14323: Admin: moving content crashes when the category combobox clears\n- …and 15 more completed issues\n- Wrapped up project: FreedUp MongoDb Migration\n- In progress: APO-14480: Admin: AI Writer continue prompts crash when OpenAI quota is exhausted (APOLLOS-ADMIN-6P3)\n- In progress: APO-14478: Admin App Clip save should not report handled App Store Connect errors to Sentry\n- In progress: APO-14476: Admin: Creator AI initial generation should not error-report OpenAI quota exhaustion\n- In progress: APO-14442: Admin: AI Creator stream crashes when client disconnects during guide/plan generation\n- In progress: APO-14436: Admin AI Writer prompt suggestions abort when leaving the editor\n- In progress: APO-14421: Admin: continue-writing AI suggestions error when OpenAI returns 429\n- In progress: APO-14403: Web: church content video crashes when Vimeo player SDK is broken (WEB-GE)\n- In progress: APO-14402: Admin AI Writer crashes when attaching server video after the doc changed\n- In progress: APO-14398: Admin Insert Page crashes with mismatched transaction when pages already exist\n- In progress: APO-14396: Admin: drop HubSpot script loader DOM error events in Sentry beforeSend\n- In progress: APO-14395: Admin: drop HubSpot messages loader errors in Sentry beforeSend\n- In progress: APO-14394: Admin: drop HubSpot loader script load errors in Sentry beforeSend\n- …and 5 more in-flight issues\n- Filed 31 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- fix(web): guard VideoPlayer when Vimeo SDK Player is missing (WEB-GE)\n- Let Admin write tag.data for the purchase-gate Persona (APO-13605)\n- Reviewed: feat(mobile): give every church a sign-up line that fits it\n- Reviewed: docs: point agents at the web Playwright suite\n- Reviewed: fix(web): guard VideoPlayer when Vimeo SDK Player is missing (WEB-GE)\n- Reviewed: Transactions report (v1): a dispute wins over a refund label\n- Reviewed: fix(web): refresh an expired session before church page loaders run (APO-14310)\n- Reviewed: Transactions report (v1): honour GIVING.REFUND_TRANSACTION_DATE\n- Reviewed: Transactions report (v1): Stripe Payout Date from payout.arrival_date\n- Reviewed: Transactions report (v2): Is Recurring from the refund row itself\n- Reviewed: Transactions report (v2): Stripe Payout Date from payout.arrival_date\n- Reviewed: fix(web): avoid Object.hasOwn crash in the Sentry IAB filter\n- Reviewed: test(admin): cover addNewChurchRoute's guards and parameter binding\n- Reviewed: fix(canvas-ui-web): short card rows share the row instead of leaving slots empty\n- …and 2 more reviews\n- Done: APO-14403: Web: church content video crashes when Vimeo player SDK is broken (WEB-GE)\n- Done: APO-13557: Responses sheet on iOS < 26 loses glass chrome and looks unfinished\n- Done: APO-13539: [migration] Bold GroupReader read-aloud prompt\n- Done: APO-13269: Some Question Blocks should be \"Currency\" Types\n- Done: APO-13208: Remove icon and Recall in Canvas editor tooltip\n- Done: APO-13207: Should we show the Edit button in Canvas?\n- Done: APO-13576: [mobile] Render a unique follow-up under the poll answers\n- Done: APO-13549: Open a section in a sheet on mobile\n- Done: APO-13548: Collapse a section to two lines on mobile\n- Done: APO-13547: Resolve a section's two summary lines on mobile\n- Done: APO-13274: Cut off text on \"Answer it\" line\n- Done: APO-13273: Mobile PollView recycles the previous poll onto a later page (Plan for Freedom p3/p7)\n- …and 8 more completed issues\n- In progress: APO-14504: Admin App Clip save fails when Apple reports no data change\n- In progress: APO-14501: Admin Creator AI outline add-page should use church OpenAI key\n- In progress: APO-14492: Admin content title save fails when the title is too long for the database index\n- In progress: APO-14487: Admin: App Clip save rejects non-JPG/PNG header images before Apple API\n- In progress: APO-14396: Admin: drop HubSpot script loader DOM error events in Sentry beforeSend\n- In progress: APO-14395: Admin: drop HubSpot messages loader errors in Sentry beforeSend\n- In progress: APO-14394: Admin: drop HubSpot loader script load errors in Sentry beforeSend\n- In progress: APO-14393: Admin: HubSpot click tracking throws URI malformed in Sentry\n- In progress: APO-14392: Admin: drop HubSpot getParentNodeModuleId errors in Sentry beforeSend\n- In progress: APO-13607: Staff override for paid FreedUp access\n- In progress: APO-13606: Lock a content series to a required tag\n- In progress: APO-13265: Assessment Results State: Edit button needs adjusted\n- Filed 4 new Linear tickets\n- Replied in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- feat: bulk-review the queue with author filter and concurrency cap\n- fix(web): avoid Object.hasOwn crash in the Sentry IAB filter\n- Reviewed: fix(mobile): release media players after commit, not during render\n- Reviewed: APO-14489: Show helper text when hovering campaign link actions\n- Reviewed: Let admin staff view a person's prayer history even if muted\n- Done: APO-14011: Web: Object.hasOwn crashes Sentry IAB filter on iOS 14 / NetCast\n- Done: APO-12722: PageCard's uncancelled timer fails the admin-react-1 CI shard at random\n- In progress: APO-12878: Share canvas-ui-web extractAskTurns in Admin ask route\n- In progress: APO-12863: extractAskTurns accepts malformed assistant turns, crashing the Ask page\n- Filed 9 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- Run reviews on a Claude subscription, and choose the provider in Settings\n- Reviewed: Run reviews on a Claude subscription, and choose the provider in Settings\n- Reviewed: fix(admin): warn before closing the content editor with a save pending\n- Reviewed: docs(chat): a church-wide ban cuts off chat history\n- Reviewed: feat(admin): edit Daily tab hero title/subtitle (APO-7837)\n- Reviewed: feat(notifications): schedule push broadcasts with a BullMQ delay (APO-8941)\n- Reviewed: feat(web): draw a content item's theme on web and v1 embeds\n- Reviewed: feat(admin): add the content ThemeSelector component\n- Reviewed: feat(admin): serve a content item's own images for theme color reading\n- Reviewed: feat(admin): list a content item's images for theme reading\n- Reviewed: feat(admin): flag and read/write a content item's theme\n- Reviewed: feat(mobile): provide a content item's theme to one subtree (NestedThemeProvider)\n- Reviewed: feat(mobile): build a content item's theme on top of the church theme\n- …and 4 more reviews\n- Done: APO-14864: Investigate unsupported features on Week 2 — Ideas That Work\n- In progress: APO-14943: [migration] Add a branch report that shows how the cards link\n- In progress: APO-14937: [migration] Ideas That Work (Weeks 4, 5 and 6): put the four sections after Couples inside Couples\n- In progress: APO-14936: [migration] Week 3 \"What is a spending plan?\": put Be Encouraged in each lane\n- In progress: APO-14933: [migration] Web addresses in Plan for Freedom \"Automatic\" are not links\n- In progress: APO-14932: [migration] Use one rule for branch cards that come from a poll\n- In progress: APO-14931: [migration] Combine adjacent branch cards that have the same condition\n- In progress: APO-14869: [migration] Lane and branch cards inconsistently land as expandables (wk3+ audit)\n- In progress: APO-14867: Fix expandable sections showing Untitled / View More for question blocks\n- In progress: APO-14865: Investigate and clean up “Follows a skipped parent” warnings on Week 4 — Your Action Plan\n- Filed 6 new Linear tickets\n- Left comments on PRs and in Linear\nCallouts for:\nFreedUp weeks 3–6 — Unblocked after media freezes from a package update, walked later weeks w/ Conrad, and filed the cleanup\nFreedUp paid access — Merged Admin support for purchase tags\nWeb player & older devices — Fixed church content videos crashing on the web and pages blanking out on older phones and TVs"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 20\n  • PR reviews: 54\n  • Commits pushed: 104\n  • Code volume: +4133 / -396 (95 files)\n  • Median review latency (working hours): 2.42h\n  • Linear issues completed: 48\n  • Linear projects completed: 1\n  • Linear issues worked on: 67\n  • Linear issues created: 48\n  • Linear replies: 35\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-platforms, freedup-migration\n\n📝 Check-ins:\n\n  Monday: - Fix community cover save when Cloudinary media already exists\n- Skip missing t...\n  Tuesday: - fix(web): guard VideoPlayer when Vimeo SDK Player is missing (WEB-GE)\n- Let Ad...\n  Thursday: - feat: bulk-review the queue with author filter and concurrency cap\n- fix(web):...\n  Friday: - Run reviews on a Claude subscription, and choose the provider in Settings\n- Re...\n",
+  "formatted_output": null
+}
