@@ -1,97 +1,59 @@
-# Weekly Summary
+# :bar_chart: Weekly Summary
 
-Generates weekly work summaries from Linear issues, GitHub activity, and optional check-ins. Standalone project (extracted from Apollos).
+Welcome to Weekly Summary! This app turns your Linear issues and GitHub activity into daily and weekly work metrics you can read in the browser or from the terminal. It is built for engineers who want a single place to track PRs, reviews, Linear throughput, check-ins, and progress toward a monthly merge goal. Standalone project (extracted from Apollos).
 
-## Features
+- Node.js >=22
+- React Router 7.13 / React 19.2 / TypeScript 5.9
+- Vite 7.3 / Tailwind CSS 4.1
+- Vitest / Playwright
 
-- **CLI**: Run from terminal with check-ins file, stdin, or interactive input
-- **Web GUI**: React Router 7 app with form and metrics display
-- **6 metrics**: PRs merged, PRs created/updated, PR reviews, Linear completed, Linear worked on, repos
-- **Monthly target**: month-to-date merged PRs vs a monthly goal (default 28), with pace, projection, and a burn-up chart on the home page. Change the target in Settings.
-- **Today mode**: `--today` / `-t` for midnight-to-now window
-- **Yesterday mode**: `--yesterday` / `-y` for yesterday's stats
-- **Week backfill**: `--week` / `-w YYYY-MM-DD` for a past Friday week-ending
+## :chart_with_upwards_trend: Features
 
-## Setup
+- **CLI and web dashboard:** Run summaries from the terminal or use the React Router 7 UI with live metrics, charts, and history.
+- **GitHub and Linear stats:** PRs merged and active, reviews, comments, commits pushed, Linear completed and worked on, issues created, repos touched, plus code-volume and review-latency detail when data is available.
+- **Monthly PR target:** Month-to-date merged PRs against a goal you set in Settings (default 28), with pace, projection, and a burn-up chart on the home page.
+- **Flexible windows:** `--today` / `-t` for since midnight, `--yesterday` / `-y` for yesterday, or `--week` / `-w YYYY-MM-DD` for a past Friday week-ending (uses `daily-snapshots/` check-ins when present).
+- **Weekly build flow:** Paste or capture check-ins, generate JSON and Markdown under your configured summary paths, and optionally post to Basecamp or pull in Granola meeting notes when those integrations are configured.
+- **Ops-friendly:** `GET /health` for a lightweight probe and `GET /health?deep=true` to check GitHub and Linear connectivity (for Uptime Robot, Heroku, and similar).
 
-1. Copy `.env.example` to `.env`
-2. Set `LINEAR_API_KEY` and `GITHUB_TOKEN` in `.env` (optional: `GITHUB_USERNAME`, defaults to `nlewis84`)
-3. Optional: `GITHUB_SUMMARY_PATHS` – comma-separated paths for summaries (default: `2026-weekly-work-summaries`). Add `2025-weekly-work-summaries` etc. for earlier years.
-3. The app loads variables from `.env` automatically (CLI and web server)
+## :open_file_folder: Installation
 
-GitHub API calls retry automatically on 403/429 (rate limit) to stay within GitHub ToS. Fan-outs over PRs are bounded (`GITHUB_FETCH_CONCURRENCY`) because GitHub applies a short-window burst limit well below the hourly quota that `/rate_limit` reports.
+- Download or clone this project.
+- Copy `.env.example` to `.env`.
+- Add a [Linear API key](https://linear.app/settings/api) as `LINEAR_API_KEY` and a GitHub token as `GITHUB_TOKEN` (optional: `GITHUB_USERNAME`, default `nlewis84`; optional: `GITHUB_SUMMARY_PATHS` for summary folders such as `2026-weekly-work-summaries` or earlier years).
+- Optional integrations: Granola (`GRANOLA_API_KEY`), Basecamp (project and check-in IDs plus the [Basecamp CLI](https://basecamp.com/agents#cli)), and commit-tracking repos via `GITHUB_ORG` / `GITHUB_COMMIT_REPOS` (see `.env.example`).
 
-### Counting caveats
+The app loads `.env` automatically for both the CLI and the web server. Never commit `.env`; set production secrets with your host (for example `heroku config:set`).
 
-`pr_reviews` counts *distinct PRs* you reviewed in the window, not review submissions — reviewing the same PR twice in a week counts once. Summing the daily snapshots therefore overshoots the weekly number, since a PR reviewed on two days appears in both days.
+## :calendar: Usage
 
-Historical weekly summaries written before the search-pagination fix undercount `pr_reviews` and `pr_comments`. Repair them with:
+- `cd` into the project directory.
+- Run `pnpm install`.
+- Run `pnpm dev` and open your browser at [http://localhost:3001](http://localhost:3001).
+- For a production build locally, run `pnpm build` then `pnpm start`.
 
-```bash
-pnpm backfill-pr-review-counts --dry-run   # preview
-pnpm backfill-pr-review-counts             # write
-pnpm backfill-pr-review-counts 2026-09-04  # one week
-```
+**CLI**
 
-It recomputes against each summary's own recorded window and refuses to write a value lower than the saved one, since the bugs it repairs only ever undercounted. Early-in-the-year weeks may be unrecoverable: the candidate search runs past GitHub's 1,000-result ceiling, and those weeks are reported as skipped rather than overwritten.
+- Run `pnpm cli --today` for stats since midnight today.
+- Run `pnpm cli --yesterday` for yesterday's window.
+- Run `pnpm cli --week 2026-07-03` to backfill a week (Friday week-ending date).
+- Run `pnpm cli check-ins.txt` to pass a check-ins file, or run `pnpm cli` and type check-ins (Ctrl+D when done).
 
-## Usage
+**Deploy on Heroku**
 
-### CLI
+- Run `heroku create weekly-summary` (or use your existing app).
+- Run `heroku config:set LINEAR_API_KEY=... GITHUB_TOKEN=...`.
+- Run `git push heroku main` (the Procfile runs `react-router-serve build/server/index.js` via `pnpm start`).
 
-```bash
-# Today only (since midnight)
-pnpm cli --today
+**Other scripts:** `pnpm test`, `pnpm test:e2e`, `pnpm lint`, and `pnpm typecheck` match the package scripts.
 
-# Yesterday only
-pnpm cli --yesterday
+## :mag: How It Works
 
-# Backfill a specific week (Friday week-ending date)
-pnpm cli --week 2026-07-03
-# Uses daily-snapshots/ for that week as check-ins when present
+- GitHub API calls retry on 403/429 rate limits; parallel PR fetches respect `GITHUB_FETCH_CONCURRENCY` because GitHub enforces a short burst limit below the hourly quota `/rate_limit` reports.
+- `pr_reviews` counts distinct PRs you reviewed in the window, not individual review submissions, so summing daily snapshots can overshoot the true weekly count when the same PR spans multiple days.
+- Older weekly JSON files may undercount `pr_reviews` and `pr_comments`; repair with `pnpm backfill-pr-review-counts --dry-run` (preview), `pnpm backfill-pr-review-counts` (write), or `pnpm backfill-pr-review-counts 2026-09-04` (one week). The script refuses to lower a saved count and skips weeks past GitHub search's 1,000-result ceiling.
+- API keys and tokens are used only in server loaders and API routes and are not exposed in the client bundle.
 
-# With check-ins file
-pnpm cli check-ins.txt
+## :raised_hands: Acknowledgements
 
-# Interactive (type check-ins, Ctrl+D when done)
-pnpm cli
-```
-
-### Web
-
-```bash
-pnpm dev    # http://localhost:3001
-pnpm build && pnpm start
-```
-
-## Scripts
-
-| Command      | Description                    |
-| ------------ | ------------------------------ |
-| `pnpm dev`   | Start dev server              |
-| `pnpm build` | Build for production          |
-| `pnpm start` | Serve production build        |
-| `pnpm cli`   | Run CLI (supports `--today`, `--yesterday`, `--week YYYY-MM-DD`) |
-| `pnpm test`  | Run unit tests                |
-| `pnpm test:e2e` | Run Playwright E2E tests  |
-| `pnpm lint`  | Run ESLint                    |
-| `pnpm typecheck` | TypeScript check          |
-
-## Deployment (Heroku)
-
-1. Create app: `heroku create weekly-summary`
-2. Set config: `heroku config:set LINEAR_API_KEY=... GITHUB_TOKEN=...`
-3. Deploy: `git push heroku main`
-
-Procfile runs `react-router-serve build/server/index.js`.
-
-## Monitoring
-
-- **Lightweight**: `GET /health` returns `{ ok: true, timestamp }` (no external calls).
-- **Deep check**: `GET /health?deep=true` verifies GitHub and Linear API connectivity. Returns `{ ok, timestamp, github, linear }` with `"ok"` or `"error"` per service. Use for alerting when APIs are down (e.g. Uptime Robot, Heroku).
-
-## Security
-
-- **Secrets**: `LINEAR_API_KEY`, `GITHUB_TOKEN`, and other env vars are used only in server-side loaders and API routes. They are never sent to the client bundle.
-- **`.env`**: Never commit `.env`. It is listed in `.gitignore`. Use `.env.example` as a template.
-- **Deployment**: Set config vars via your host (e.g. `heroku config:set`) rather than committing secrets.
+Weekly summary logic was originally built inside Apollos and later extracted into this repo (see `lib/summary.ts`).
