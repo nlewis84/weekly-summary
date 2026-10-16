@@ -1,0 +1,1255 @@
+{
+  "meta": {
+    "generated_at": "2026-10-16T21:53:04.516Z",
+    "window_start": "2026-10-10T05:00:00.000Z",
+    "window_end": "2026-10-17T04:59:59.999Z",
+    "week_ending": "2026-10-16",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 18,
+    "prs_total": 28,
+    "pr_reviews": 51,
+    "pr_comments": 67,
+    "commits_pushed": 83,
+    "linear_completed": 11,
+    "linear_projects_completed": 0,
+    "linear_worked_on": 18,
+    "linear_issues_created": 25,
+    "linear_comments": 11,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-platforms",
+      "forge"
+    ],
+    "lines_added": 5567,
+    "lines_deleted": 1120,
+    "files_changed": 74,
+    "median_review_latency_hours": 0.9
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-15846",
+        "title": "Admin dashboard Total Sessions chart went empty after the BigQuery tracks views were rebuilt",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15846/admin-dashboard-total-sessions-chart-went-empty-after-the-bigquery",
+        "completedAt": "2026-10-16T20:54:13.088Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15702",
+        "title": "MCP S1: connect ChatGPT to the same address",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15702/mcp-s1-connect-chatgpt-to-the-same-address",
+        "completedAt": "2026-10-16T18:28:12.218Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15456",
+        "title": "Admin content editor crashes when focus() runs on a null editor",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15456/admin-content-editor-crashes-when-focus-runs-on-a-null-editor",
+        "completedAt": "2026-10-16T16:15:43.717Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15376",
+        "title": "Admin should not report Stripe Connect FrameMessenger data-layer errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15376/admin-should-not-report-stripe-connect-framemessenger-data-layer",
+        "completedAt": "2026-10-16T16:15:43.999Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15364",
+        "title": "Admin content list crashes with React Root did not complete",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15364/admin-content-list-crashes-with-react-root-did-not-complete",
+        "completedAt": "2026-10-16T16:15:43.446Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15317",
+        "title": "Admin should not report Safari Fetch is aborted on React Router fetcher cancel to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15317/admin-should-not-report-safari-fetch-is-aborted-on-react-router",
+        "completedAt": "2026-10-16T16:15:43.082Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15315",
+        "title": "Admin form submit crashes when RVF has no registered form",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15315/admin-form-submit-crashes-when-rvf-has-no-registered-form",
+        "completedAt": "2026-10-16T16:15:44.552Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15312",
+        "title": "Admin should not report React Router fetcher aborts as Sentry errors",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15312/admin-should-not-report-react-router-fetcher-aborts-as-sentry-errors",
+        "completedAt": "2026-10-10T16:14:51.940Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15295",
+        "title": "Admin should not report expected collaboration disconnects as Sentry errors",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15295/admin-should-not-report-expected-collaboration-disconnects-as-sentry",
+        "completedAt": "2026-10-10T16:14:52.352Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15293",
+        "title": "Web should not report Remix's sanitized Unexpected Server Error catch-all to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15293/web-should-not-report-remixs-sanitized-unexpected-server-error-catch",
+        "completedAt": "2026-10-13T16:11:47.061Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14436",
+        "title": "Admin AI Writer prompt suggestions abort when leaving the editor",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14436/admin-ai-writer-prompt-suggestions-abort-when-leaving-the-editor",
+        "completedAt": "2026-10-10T16:14:52.203Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-15849",
+        "title": "Admin Top Tapped Items chart scans 6-8 GB of BigQuery on every load",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15849/admin-top-tapped-items-chart-scans-6-8-gb-of-bigquery-on-every-load",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-15848",
+        "title": "Admin leftover Apps fetcher reports a React Router routeId as a Sentry error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15848/admin-leftover-apps-fetcher-reports-a-react-router-routeid-as-a-sentry",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15846",
+        "title": "Admin dashboard Total Sessions chart went empty after the BigQuery tracks views were rebuilt",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15846/admin-dashboard-total-sessions-chart-went-empty-after-the-bigquery",
+        "completedAt": "2026-10-16T20:54:13.088Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15804",
+        "title": "Admin should not report Safari Load failed when React scheduler frames sit above the router fetch",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15804/admin-should-not-report-safari-load-failed-when-react-scheduler-frames",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15790",
+        "title": "S2 sidecar: style the consent page like the login page",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15790/s2-sidecar-style-the-consent-page-like-the-login-page",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15741",
+        "title": "Admin should not report stackless Safari Load failed on Content to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15741/admin-should-not-report-stackless-safari-load-failed-on-content-to",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-15738",
+        "title": "Admin content editor crashes when Tiptap AI stream mapping is missing",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15738/admin-content-editor-crashes-when-tiptap-ai-stream-mapping-is-missing",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15737",
+        "title": "Admin content load reports Node fetch ECONNRESET as a Sentry error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15737/admin-content-load-reports-node-fetch-econnreset-as-a-sentry-error",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15702",
+        "title": "MCP S1: connect ChatGPT to the same address",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15702/mcp-s1-connect-chatgpt-to-the-same-address",
+        "completedAt": "2026-10-16T18:28:12.218Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15456",
+        "title": "Admin content editor crashes when focus() runs on a null editor",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15456/admin-content-editor-crashes-when-focus-runs-on-a-null-editor",
+        "completedAt": "2026-10-16T16:15:43.717Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15376",
+        "title": "Admin should not report Stripe Connect FrameMessenger data-layer errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15376/admin-should-not-report-stripe-connect-framemessenger-data-layer",
+        "completedAt": "2026-10-16T16:15:43.999Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15364",
+        "title": "Admin content list crashes with React Root did not complete",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15364/admin-content-list-crashes-with-react-root-did-not-complete",
+        "completedAt": "2026-10-16T16:15:43.446Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15317",
+        "title": "Admin should not report Safari Fetch is aborted on React Router fetcher cancel to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15317/admin-should-not-report-safari-fetch-is-aborted-on-react-router",
+        "completedAt": "2026-10-16T16:15:43.082Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15315",
+        "title": "Admin form submit crashes when RVF has no registered form",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15315/admin-form-submit-crashes-when-rvf-has-no-registered-form",
+        "completedAt": "2026-10-16T16:15:44.552Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15312",
+        "title": "Admin should not report React Router fetcher aborts as Sentry errors",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15312/admin-should-not-report-react-router-fetcher-aborts-as-sentry-errors",
+        "completedAt": "2026-10-10T16:14:51.940Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15295",
+        "title": "Admin should not report expected collaboration disconnects as Sentry errors",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15295/admin-should-not-report-expected-collaboration-disconnects-as-sentry",
+        "completedAt": "2026-10-10T16:14:52.352Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15293",
+        "title": "Web should not report Remix's sanitized Unexpected Server Error catch-all to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15293/web-should-not-report-remixs-sanitized-unexpected-server-error-catch",
+        "completedAt": "2026-10-13T16:11:47.061Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14436",
+        "title": "Admin AI Writer prompt suggestions abort when leaving the editor",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-14436/admin-ai-writer-prompt-suggestions-abort-when-leaving-the-editor",
+        "completedAt": "2026-10-10T16:14:52.203Z",
+        "state": "Done"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-15850",
+        "title": "Admin AutocreateHtmlWrapper grouping 72R is the same caret restore as 75D",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15850/admin-autocreatehtmlwrapper-grouping-72r-is-the-same-caret-restore-as",
+        "createdAt": "2026-10-16T21:34:10.966Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15849",
+        "title": "Admin Top Tapped Items chart scans 6-8 GB of BigQuery on every load",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15849/admin-top-tapped-items-chart-scans-6-8-gb-of-bigquery-on-every-load",
+        "createdAt": "2026-10-16T21:13:17.452Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-15848",
+        "title": "Admin leftover Apps fetcher reports a React Router routeId as a Sentry error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15848/admin-leftover-apps-fetcher-reports-a-react-router-routeid-as-a-sentry",
+        "createdAt": "2026-10-16T21:04:54.683Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15846",
+        "title": "Admin dashboard Total Sessions chart went empty after the BigQuery tracks views were rebuilt",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15846/admin-dashboard-total-sessions-chart-went-empty-after-the-bigquery",
+        "createdAt": "2026-10-16T20:52:47.005Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15838",
+        "title": "Admin appendMapping grouping 775 is the same Tiptap AI stream crash as 776",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15838/admin-appendmapping-grouping-775-is-the-same-tiptap-ai-stream-crash-as",
+        "createdAt": "2026-10-16T20:35:26.419Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15811",
+        "title": "Admin y-prosemirror Position out of range grouping 71X is the same collab selection restore as 67Q",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15811/admin-y-prosemirror-position-out-of-range-grouping-71x-is-the-same",
+        "createdAt": "2026-10-16T20:05:22.965Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15804",
+        "title": "Admin should not report Safari Load failed when React scheduler frames sit above the router fetch",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15804/admin-should-not-report-safari-load-failed-when-react-scheduler-frames",
+        "createdAt": "2026-10-16T19:06:27.940Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15800",
+        "title": "Admin collab disconnect grouping 765 is already fixed on main",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15800/admin-collab-disconnect-grouping-765-is-already-fixed-on-main",
+        "createdAt": "2026-10-16T18:33:33.542Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15793",
+        "title": "Admin content editor crashes with React Root did not complete",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15793/admin-content-editor-crashes-with-react-root-did-not-complete",
+        "createdAt": "2026-10-16T18:04:40.727Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15791",
+        "title": "Admin BodyStreamBuffer abort grouping 75R is the same React Router fetcher abort as 733",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15791/admin-bodystreambuffer-abort-grouping-75r-is-the-same-react-router",
+        "createdAt": "2026-10-16T17:34:31.911Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15790",
+        "title": "S2 sidecar: style the consent page like the login page",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15790/s2-sidecar-style-the-consent-page-like-the-login-page",
+        "createdAt": "2026-10-16T17:25:18.733Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15786",
+        "title": "Admin Failed to fetch grouping 758 is the same React Router + Sentry wrap as 756",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15786/admin-failed-to-fetch-grouping-758-is-the-same-react-router-sentry",
+        "createdAt": "2026-10-16T17:04:46.233Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15785",
+        "title": "Admin Failed to fetch grouping 75J is the same React Router + Sentry wrap as 756",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15785/admin-failed-to-fetch-grouping-75j-is-the-same-react-router-sentry",
+        "createdAt": "2026-10-16T16:33:52.860Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15772",
+        "title": "Admin Failed to fetch grouping 72E is the same React Router + Sentry wrap as 756",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15772/admin-failed-to-fetch-grouping-72e-is-the-same-react-router-sentry",
+        "createdAt": "2026-10-16T16:04:57.377Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15766",
+        "title": "Admin Load failed grouping 74X is the same React Router fetch as 72B",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15766/admin-load-failed-grouping-74x-is-the-same-react-router-fetch-as-72b",
+        "createdAt": "2026-10-16T15:33:19.124Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15765",
+        "title": "Admin collab disconnect grouping 74C is already fixed on main",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15765/admin-collab-disconnect-grouping-74c-is-already-fixed-on-main",
+        "createdAt": "2026-10-16T15:13:56.737Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15741",
+        "title": "Admin should not report stackless Safari Load failed on Content to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15741/admin-should-not-report-stackless-safari-load-failed-on-content-to",
+        "createdAt": "2026-10-16T02:35:09.081Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-15740",
+        "title": "Admin hydration mismatch on Prayers is local HeadlessChrome tagged production",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15740/admin-hydration-mismatch-on-prayers-is-local-headlesschrome-tagged",
+        "createdAt": "2026-10-16T02:07:10.960Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15738",
+        "title": "Admin content editor crashes when Tiptap AI stream mapping is missing",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15738/admin-content-editor-crashes-when-tiptap-ai-stream-mapping-is-missing",
+        "createdAt": "2026-10-16T00:05:35.349Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15737",
+        "title": "Admin content load reports Node fetch ECONNRESET as a Sentry error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15737/admin-content-load-reports-node-fetch-econnreset-as-a-sentry-error",
+        "createdAt": "2026-10-15T23:32:34.545Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15736",
+        "title": "Admin dashboard reports BigQuery chart queries over 1GB as Sentry errors",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15736/admin-dashboard-reports-bigquery-chart-queries-over-1gb-as-sentry",
+        "createdAt": "2026-10-15T23:10:43.472Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-15712",
+        "title": "Add missing FK indexes on assistant sign-in token tables",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15712/add-missing-fk-indexes-on-assistant-sign-in-token-tables",
+        "createdAt": "2026-10-15T18:15:01.691Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15702",
+        "title": "MCP S1: connect ChatGPT to the same address",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15702/mcp-s1-connect-chatgpt-to-the-same-address",
+        "createdAt": "2026-10-15T16:10:42.091Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15701",
+        "title": "MCP sign-in: accept any port on a loopback redirect",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15701/mcp-sign-in-accept-any-port-on-a-loopback-redirect",
+        "createdAt": "2026-10-15T16:01:29.894Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-15456",
+        "title": "Admin content editor crashes when focus() runs on a null editor",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15456/admin-content-editor-crashes-when-focus-runs-on-a-null-editor",
+        "createdAt": "2026-10-11T15:33:37.414Z",
+        "state": "Done"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-15846",
+        "title": "Admin dashboard Total Sessions chart went empty after the BigQuery tracks views were rebuilt",
+        "url": "https://linear.app/differential/issue/APO-15846/admin-dashboard-total-sessions-chart-went-empty-after-the-bigquery",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15736",
+        "title": "Admin dashboard reports BigQuery chart queries over 1GB as Sentry errors",
+        "url": "https://linear.app/differential/issue/APO-15736/admin-dashboard-reports-bigquery-chart-queries-over-1gb-as-sentry",
+        "project": "Sentry Queue",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-15804",
+        "title": "Admin should not report Safari Load failed when React scheduler frames sit above the router fetch",
+        "url": "https://linear.app/differential/issue/APO-15804/admin-should-not-report-safari-load-failed-when-react-scheduler-frames",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15770",
+        "title": "S5 code 4 of 4: proof of a devotional with scripture and an event",
+        "url": "https://linear.app/differential/issue/APO-15770/s5-code-4-of-4-proof-of-a-devotional-with-scripture-and-an-event",
+        "project": "Apollos MCP",
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-15790",
+        "title": "S2 sidecar: style the consent page like the login page",
+        "url": "https://linear.app/differential/issue/APO-15790/s2-sidecar-style-the-consent-page-like-the-login-page",
+        "project": "Apollos MCP",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15741",
+        "title": "Admin should not report stackless Safari Load failed on Content to Sentry",
+        "url": "https://linear.app/differential/issue/APO-15741/admin-should-not-report-stackless-safari-load-failed-on-content-to",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-15738",
+        "title": "Admin content editor crashes when Tiptap AI stream mapping is missing",
+        "url": "https://linear.app/differential/issue/APO-15738/admin-content-editor-crashes-when-tiptap-ai-stream-mapping-is-missing",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15737",
+        "title": "Admin content load reports Node fetch ECONNRESET as a Sentry error",
+        "url": "https://linear.app/differential/issue/APO-15737/admin-content-load-reports-node-fetch-econnreset-as-a-sentry-error",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15712",
+        "title": "Add missing FK indexes on assistant sign-in token tables",
+        "url": "https://linear.app/differential/issue/APO-15712/add-missing-fk-indexes-on-assistant-sign-in-token-tables",
+        "project": "Apollos MCP",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12874",
+        "title": "Share DEFAULT_SUGGESTED_PROMPTS in web-embeds useAskLoaderData",
+        "url": "https://linear.app/differential/issue/APO-12874/share-default-suggested-prompts-in-web-embeds-useaskloaderdata",
+        "project": null,
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15456",
+        "title": "Admin content editor crashes when focus() runs on a null editor",
+        "url": "https://linear.app/differential/issue/APO-15456/admin-content-editor-crashes-when-focus-runs-on-a-null-editor",
+        "project": "Sentry Queue",
+        "state": "Done"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "improve(metabase): point analytics queries at all_tracks_logical_view",
+        "url": "https://github.com/ApollosProject/forge/pull/176",
+        "repo": "forge",
+        "merged_at": "2026-10-16T21:35:27Z",
+        "additions": 3,
+        "deletions": 2,
+        "changed_files": 1
+      },
+      {
+        "title": "Split Sentry noise filters into one file per library",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5782",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-16T20:01:56Z",
+        "additions": 1050,
+        "deletions": 966,
+        "changed_files": 15
+      },
+      {
+        "title": "Style the assistant consent page like the login page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5779",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-16T17:52:54Z",
+        "additions": 176,
+        "deletions": 80,
+        "changed_files": 2
+      },
+      {
+        "title": "Raise the BigQuery cost alert to 2GB",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5773",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-16T16:25:10Z",
+        "additions": 48,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "APO-15407: Name the create draft tool once",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5749",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-15T20:07:32Z",
+        "additions": 10,
+        "deletions": 4,
+        "changed_files": 2
+      },
+      {
+        "title": "Point Graphite PR links at graphite.com",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/87",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-10-15T16:41:06Z",
+        "additions": 3,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "APO-15702: Let ChatGPT sign in to the assistant",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5746",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-15T18:09:13Z",
+        "additions": 2766,
+        "deletions": 25,
+        "changed_files": 19
+      },
+      {
+        "title": "Admin content editor should not crash after inserting Scripture",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5657",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-16T01:58:44Z",
+        "additions": 176,
+        "deletions": 7,
+        "changed_files": 5
+      },
+      {
+        "title": "Stop reporting Safari turbo-stream decode failures to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5642",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-16T18:12:24Z",
+        "additions": 162,
+        "deletions": 9,
+        "changed_files": 2
+      },
+      {
+        "title": "Admin should not report leftover React Router fetcher routeIds to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5638",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-16T18:10:23Z",
+        "additions": 120,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Stop reporting Stripe Connect data-layer errors to Sentry when Giving remounts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5629",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-16T14:42:51Z",
+        "additions": 141,
+        "deletions": 11,
+        "changed_files": 4
+      },
+      {
+        "title": "Stop Admin from crashing when a click lands before hydration finishes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5621",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-15T21:28:28Z",
+        "additions": 111,
+        "deletions": 6,
+        "changed_files": 3
+      },
+      {
+        "title": "Stop sending Chrome Failed to fetch on Sentry-wrapped React Router fetches to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5616",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-16T17:22:01Z",
+        "additions": 120,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Stop reporting Safari Fetch is aborted on React Router fetcher cancel to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5613",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-15T21:25:42Z",
+        "additions": 142,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Admin should not crash when a Poll drawer closes during save",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5612",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-15T21:28:45Z",
+        "additions": 176,
+        "deletions": 2,
+        "changed_files": 4
+      },
+      {
+        "title": "Stop reporting y-prosemirror collab selection restore as a Sentry error",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5610",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-16T18:13:22Z",
+        "additions": 131,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Stop reporting Safari Load failed on React Router data fetches to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5609",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-16T16:53:07Z",
+        "additions": 119,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Stop grouping Remix sanitized 500s as Unexpected Server Error on web",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5605",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-10T22:30:05Z",
+        "additions": 113,
+        "deletions": 2,
+        "changed_files": 3
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "Register a Sentry release for each Admin production publish",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5796",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Filter Top Tapped Items by the church's app names so BigQuery prunes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5795",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Stop reporting leftover Apps fetcher routeIds to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5794",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Stop reporting Safari Load failed when React scheduler frames sit above the router fetch",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5783",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Stop reporting stackless Safari Load failed on Content to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5764",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Admin content editor should not crash when AI rewrite streams during collab",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5763",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Admin content should not crash when Cluster config fetch resets",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5762",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(mobile): use ghost variant for assessment results Edit (APO-13265)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7524",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "Decide FreedUp purchase from the signed-in email (APO-13608)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4853",
+        "repo": "apollos-cluster",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "fix(admin): match church staff access to profile sections",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5786",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-16T20:06:16Z",
+        "reviewed_at": "2026-10-16T21:49:32Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.72
+      },
+      {
+        "title": "Split Sentry noise filters into one file per library",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5782",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-16T18:48:18Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "chore(agents): remove unloaded vendored .cursor/apollos-rules pack",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5769",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-16T14:25:10Z",
+        "reviewed_at": "2026-10-16T14:30:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.09
+      },
+      {
+        "title": "fix(mobile): expose the resend-code link as an accessible button (APO-15199)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7774",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-16T13:04:10Z",
+        "reviewed_at": "2026-10-16T14:34:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.58
+      },
+      {
+        "title": "fix(web): let single-fetch .data requests past the root path blocker",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5753",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T19:13:43Z",
+        "reviewed_at": "2026-10-15T19:44:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.52
+      },
+      {
+        "title": "fix(admin): drop Org Admin AI Insights page-load e2e",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5750",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T18:45:01Z",
+        "reviewed_at": "2026-10-15T18:55:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.18
+      },
+      {
+        "title": "fix(mobile): name the tab header icons, profile, back and chat list buttons for screen readers (APO-14919)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7759",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-15T11:03:34Z",
+        "reviewed_at": "2026-10-15T14:11:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.19
+      },
+      {
+        "title": "APO-15676: Show fund ChMS names in campaign link fund pickers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5742",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T15:15:34Z",
+        "reviewed_at": "2026-10-15T15:27:44Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.2
+      },
+      {
+        "title": "feat(admin): preserve data when revoking church staff access (APO-15646)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5740",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T18:44:38Z",
+        "reviewed_at": "2026-10-15T19:02:13Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.29
+      },
+      {
+        "title": "fix(mobile): keep the Daily week strip readable at Accessibility text sizes (APO-14923)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7744",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-15T21:09:06Z",
+        "reviewed_at": "2026-10-16T14:34:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.42
+      },
+      {
+        "title": "fix(mobile): gate prayer chat replies on invite settings (APO-15572)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7732",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-16T13:03:43Z",
+        "reviewed_at": "2026-10-16T14:35:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.59
+      },
+      {
+        "title": "Prove an assistant works across churches",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5703",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-16T18:44:08Z",
+        "reviewed_at": "2026-10-16T18:50:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.1
+      },
+      {
+        "title": "Pick several churches at consent",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5702",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-16T18:44:06Z",
+        "reviewed_at": "2026-10-16T18:52:20Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.14
+      },
+      {
+        "title": "Pick the church on every assistant call",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5700",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-16T18:44:03Z",
+        "reviewed_at": "2026-10-16T18:51:52Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.13
+      },
+      {
+        "title": "fix(admin): require team access and membership to send invites from inviteMember",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5698",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-13T17:12:03Z",
+        "reviewed_at": "2026-10-15T14:32:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 13.34
+      },
+      {
+        "title": "Carry Creator's content rules into the assistant",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5687",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T17:23:09Z",
+        "reviewed_at": "2026-10-15T18:15:40Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.88
+      },
+      {
+        "title": "Batch and retry payout balance lookups so wide Payout Reconciliation reports don't fail (APO-15080)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5680",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-13T18:36:39Z",
+        "reviewed_at": "2026-10-15T14:05:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 11.48
+      },
+      {
+        "title": "fix(mobile): open other churches' app-link URLs in-app (APO-15516)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7723",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-14T17:06:30Z",
+        "reviewed_at": "2026-10-16T14:33:57Z",
+        "review_state": "APPROVED",
+        "latency_hours": 13.46
+      },
+      {
+        "title": "Prove a local agent can create one draft",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5673",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T17:23:05Z",
+        "reviewed_at": "2026-10-15T18:16:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.9
+      },
+      {
+        "title": "APO-15407: Create one draft and record the activity",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5668",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-12T18:34:30Z",
+        "reviewed_at": "2026-10-15T18:13:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 23.65
+      },
+      {
+        "title": "APO-15406: Add read tools for one church's content",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5666",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T17:22:58Z",
+        "reviewed_at": "2026-10-15T18:13:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.85
+      },
+      {
+        "title": "APO-15405: Refuse an assistant call the church has not allowed",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5665",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T17:22:55Z",
+        "reviewed_at": "2026-10-15T18:13:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.83
+      },
+      {
+        "title": "fix(admin): scope Tap reads to the authorized church",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5646",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T19:09:58Z",
+        "reviewed_at": "2026-10-15T19:46:28Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.61
+      },
+      {
+        "title": "Stop reporting Safari turbo-stream decode failures to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5642",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-16T14:43:43Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-15404: Add assistant sign-in, consent, and token exchange",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5641",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T17:22:52Z",
+        "reviewed_at": "2026-10-15T18:16:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.9
+      },
+      {
+        "title": "fix(mobile): restore iOS webview scroll momentum (APO-15429)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7704",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-16T13:03:32Z",
+        "reviewed_at": "2026-10-16T14:32:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.54
+      },
+      {
+        "title": "Admin should not report leftover React Router fetcher routeIds to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5638",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-16T14:43:47Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-15368: Add the church assistant level and the activity log",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5625",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-09T19:35:09Z",
+        "reviewed_at": "2026-10-15T18:12:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 30.62
+      },
+      {
+        "title": "APO-15367: Add assistant sign-in token tables",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5624",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-09T19:35:09Z",
+        "reviewed_at": "2026-10-15T18:10:13Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 30.58
+      },
+      {
+        "title": "APO-15366: Add assistant grant tables",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5623",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-09T19:35:08Z",
+        "reviewed_at": "2026-10-15T18:09:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 30.57
+      },
+      {
+        "title": "APO-15365: Add the AssistantClient table for assistant sign-in",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5622",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-09T19:35:07Z",
+        "reviewed_at": "2026-10-15T18:11:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 30.6
+      },
+      {
+        "title": "fix(web): show the App Store badge on a cold cache (APO-15326)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5618",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-10T22:23:40Z",
+        "reviewed_at": "2026-10-15T14:03:01Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 24.05
+      },
+      {
+        "title": "fix(web): iOS Universal Links claim church alias paths (APO-15321)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5617",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-09T00:58:57Z",
+        "reviewed_at": "2026-10-15T14:03:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 32.06
+      },
+      {
+        "title": "Stop sending Chrome Failed to fetch on Sentry-wrapped React Router fetches to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5616",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-16T14:43:50Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(mobile): show an event's display date/time instead of the formatted time (APO-11580)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7694",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-15T20:04:41Z",
+        "reviewed_at": "2026-10-15T20:10:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.09
+      },
+      {
+        "title": "Stop reporting y-prosemirror collab selection restore as a Sentry error",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5610",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-16T14:43:53Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Stop reporting Safari Load failed on React Router data fetches to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5609",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-16T14:43:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): keep one page per Creator guide page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5600",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T19:42:49Z",
+        "reviewed_at": "2026-10-15T19:49:13Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "fix(admin): read AI generation sessions only within the church",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5598",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-13T16:21:55Z",
+        "reviewed_at": "2026-10-15T14:22:44Z",
+        "review_state": "APPROVED",
+        "latency_hours": 14.01
+      },
+      {
+        "title": "fix(admin): drop made-up buttons and events from streamed posts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5591",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-13T16:10:51Z",
+        "reviewed_at": "2026-10-15T14:09:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 13.98
+      },
+      {
+        "title": "fix(mobile): publish iOS chat drafts by POST (APO-15090)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7689",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-15T16:30:23Z",
+        "reviewed_at": "2026-10-15T16:41:46Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.19
+      },
+      {
+        "title": "fix(admin): drop made-up Creator buttons and events",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5585",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-12T20:04:47Z",
+        "reviewed_at": "2026-10-15T14:09:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 18.08
+      },
+      {
+        "title": "fix(admin): require a Super Admin on the church for AI Insights",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5556",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-07T23:05:35Z",
+        "reviewed_at": "2026-10-15T14:03:54Z",
+        "review_state": "APPROVED",
+        "latency_hours": 40.07
+      },
+      {
+        "title": "Payouts report: zero the fee for gross-settled churches (APO-14532)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5546",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T21:55:09Z",
+        "reviewed_at": "2026-10-16T14:33:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.64
+      },
+      {
+        "title": "Payouts report: zero the fee for gross-settled churches (APO-14532)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5412",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-15T21:53:41Z",
+        "reviewed_at": "2026-10-16T14:32:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.65
+      },
+      {
+        "title": "fix(web): report payment method failures to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5529",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-09T13:16:37Z",
+        "reviewed_at": "2026-10-15T14:02:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 32.05
+      },
+      {
+        "title": "Add Maestro coverage for Daily, search dismiss, chat list, and profile",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7609",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-09T17:35:51Z",
+        "reviewed_at": "2026-10-15T14:09:36Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 28.56
+      },
+      {
+        "title": "[APO-11425] Map web and embed payment errors like the app",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5007",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T22:21:26Z",
+        "reviewed_at": "2026-10-15T14:33:07Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 144.55
+      },
+      {
+        "title": "feat(mobile): let hosts mute a member in chat (APO-11681)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7301",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-09-29T19:38:02Z",
+        "reviewed_at": "2026-10-15T15:23:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 91.76
+      },
+      {
+        "title": "refactor(admin): share the Apollos invite-email field across the four store forms",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4782",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-14T22:35:36Z",
+        "reviewed_at": "2026-10-15T14:06:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 176.11
+      },
+      {
+        "title": "fix(security): fetch church config per-key instead of collection GET",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4691",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-10T21:09:01Z",
+        "reviewed_at": "2026-10-15T16:59:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 195.84
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Thursday",
+      "content": "- APO-15407: Name the create draft tool once\n- Point Graphite PR links at graphite.com\n- APO-15702: Let ChatGPT sign in to the assistant\n- Stop reporting React Router fetcher aborts as Sentry errors\n- Stop sending expected collab disconnects to Sentry\n- Stop grouping Remix sanitized 500s as Unexpected Server Error on web\n- Stop sending OpenAI content_filter stops to Sentry\n- Admin: load dashboard charts without N+1 __manifest requests\n- fix(admin): Creator AI OpenAI no-credits 429 without Sentry noise (APOLLOS-ADMIN-75Q)\n- Abort AI Writer prompt fetch cleanly when leaving the editor\n- Reviewed: fix(web): let single-fetch .data requests past the root path blocker\n- Reviewed: fix(admin): drop Org Admin AI Insights page-load e2e\n- Reviewed: fix(mobile): name the tab header icons, profile, back and chat list buttons for screen readers (APO-14919)\n- Reviewed: APO-15676: Show fund ChMS names in campaign link fund pickers\n- Reviewed: feat(admin): preserve data when revoking church staff access (APO-15646)\n- Reviewed: fix(admin): require team access and membership to send invites from inviteMember\n- Reviewed: Carry Creator's content rules into the assistant\n- Reviewed: Batch and retry payout balance lookups so wide Payout Reconciliation reports don't fail (APO-15080)\n- Reviewed: Prove a local agent can create one draft\n- Reviewed: APO-15407: Create one draft and record the activity\n- Reviewed: APO-15406: Add read tools for one church's content\n- Reviewed: APO-15405: Refuse an assistant call the church has not allowed\n- …and 22 more reviews\n- Done: APO-15312: Admin should not report React Router fetcher aborts as Sentry errors\n- Done: APO-15295: Admin should not report expected collaboration disconnects as Sentry errors\n- Done: APO-15293: Web should not report Remix's sanitized Unexpected Server Error catch-all to Sentry\n- Done: APO-15292: Admin Creator AI should not report content_filter truncation as a Sentry error\n- Done: APO-15260: Admin dashboard fires N+1 React Router __manifest requests\n- Done: APO-15255: Admin should not report Remix's sanitized Unexpected Server Error catch-all to Sentry\n- Done: APO-15254: Admin dashboard hydrates with a server/client HTML mismatch\n- Done: APO-15250: Admin media create should not report handled YouTube duration 403s to Sentry\n- Done: APO-14492: Admin content title save fails when the title is too long for the database index\n- Done: APO-14476: Admin: Creator AI initial generation should not error-report OpenAI quota exhaustion\n- Done: APO-14436: Admin AI Writer prompt suggestions abort when leaving the editor\n- In progress: APO-15456: Admin content editor crashes when focus() runs on a null editor\n- In progress: APO-15434: Admin should not report Safari turbo-stream decode failures to Sentry\n- In progress: APO-15401: Admin should not report leftover React Router fetcher routeIds to Sentry\n- In progress: APO-15376: Admin should not report Stripe Connect FrameMessenger data-layer errors to Sentry\n- In progress: APO-15364: Admin content list crashes with React Root did not complete\n- In progress: APO-15319: Admin should not report Chrome Failed to fetch on React Router data fetches to Sentry\n- In progress: APO-15317: Admin should not report Safari Fetch is aborted on React Router fetcher cancel to Sentry\n- In progress: APO-15315: Admin form submit crashes when RVF has no registered form\n- In progress: APO-15306: Admin should not report y-prosemirror collab selection restore as a Sentry error\n- In progress: APO-15305: Admin should not report Safari Load failed on React Router data fetches to Sentry\n- Filed 14 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- improve(metabase): point analytics queries at all_tracks_logical_view\n- Split Sentry noise filters into one file per library\n- Style the assistant consent page like the login page\n- Raise the BigQuery cost alert to 2GB\n- Admin content editor should not crash after inserting Scripture\n- Stop reporting Safari turbo-stream decode failures to Sentry\n- Admin should not report leftover React Router fetcher routeIds to Sentry\n- Stop reporting Stripe Connect data-layer errors to Sentry when Giving remounts\n- Stop Admin from crashing when a click lands before hydration finishes\n- Stop sending Chrome Failed to fetch on Sentry-wrapped React Router fetches to Sentry\n- Stop reporting Safari Fetch is aborted on React Router fetcher cancel to Sentry\n- Admin should not crash when a Poll drawer closes during save\n- …and 2 more (see Weekly Summary)\n- Reviewed: fix(admin): match church staff access to profile sections\n- Reviewed: Split Sentry noise filters into one file per library\n- Reviewed: chore(agents): remove unloaded vendored .cursor/apollos-rules pack\n- Reviewed: fix(mobile): expose the resend-code link as an accessible button (APO-15199)\n- Reviewed: feat(admin): preserve data when revoking church staff access (APO-15646)\n- Reviewed: fix(mobile): keep the Daily week strip readable at Accessibility text sizes (APO-14923)\n- Reviewed: fix(mobile): gate prayer chat replies on invite settings (APO-15572)\n- Reviewed: Prove an assistant works across churches\n- Reviewed: Pick several churches at consent\n- Reviewed: Pick the church on every assistant call\n- Reviewed: Carry Creator's content rules into the assistant\n- Reviewed: fix(mobile): open other churches' app-link URLs in-app (APO-15516)\n- …and 9 more reviews\n- Done: APO-15846: Admin dashboard Total Sessions chart went empty after the BigQuery tracks views were rebuilt\n- Done: APO-15702: MCP S1: connect ChatGPT to the same address\n- Done: APO-15456: Admin content editor crashes when focus() runs on a null editor\n- Done: APO-15376: Admin should not report Stripe Connect FrameMessenger data-layer errors to Sentry\n- Done: APO-15364: Admin content list crashes with React Root did not complete\n- Done: APO-15317: Admin should not report Safari Fetch is aborted on React Router fetcher cancel to Sentry\n- Done: APO-15315: Admin form submit crashes when RVF has no registered form\n- In progress: APO-15849: Admin Top Tapped Items chart scans 6-8 GB of BigQuery on every load\n- In progress: APO-15848: Admin leftover Apps fetcher reports a React Router routeId as a Sentry error\n- In progress: APO-15804: Admin should not report Safari Load failed when React scheduler frames sit above the router fetch\n- In progress: APO-15790: S2 sidecar: style the consent page like the login page\n- In progress: APO-15741: Admin should not report stackless Safari Load failed on Content to Sentry\n- In progress: APO-15738: Admin content editor crashes when Tiptap AI stream mapping is missing\n- In progress: APO-15737: Admin content load reports Node fetch ECONNRESET as a Sentry error\n- Filed 21 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": ", October 16\nDaily\nWhat did you work on today\n4:52 PM\nWeekly Update w/ leadership\nTested the second piece of the Apollos AI assistant end to end w/ @Austin and checked that only the right people get access\nRecorded a Loom of it and we started moving everything to be ready for review\nMocked up a sign-in screen that matches Admin, so people coming from login see the same site\nProposed a fix w/ @Vincent for a recurring crash report all inside of Big Query\nLots of work in BQ today to clean up Sentry issue noise"
+    },
+    {
+      "day": "Thursday",
+      "content": ", October 15\nDaily\nWhat did you work on today\n3:14 PM\nGot @Austin's first slice of the Apollos MCP running locally\nGenerated a devotional through it from Claude\nStarted adding ChatGPT support to that slice 1 and generated a devotional through it from ChatGPT\nFinished testing Slice 1 and started reviewing\nMoved 10 Sentry cleanup fixes from draft to ready for review\nA couple of cleanup PRs for Slice 1\nInvited @David to staging as a Super Admin and wrote up how to do it\nScreenshot 2026-10-15 at 3.14.07 PM.png\nScreenshot 2026-10-15 at 3.14.07 PM.png\nchattyg making content.gif"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 18\n  • PR reviews: 51\n  • Commits pushed: 83\n  • Code volume: +5567 / -1120 (74 files)\n  • Median review latency (working hours): 0.9h\n  • Linear issues completed: 11\n  • Linear projects completed: 0\n  • Linear issues worked on: 18\n  • Linear issues created: 25\n  • Linear replies: 11\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-platforms, forge\n\n📝 Check-ins:\n\n  Thursday: - APO-15407: Name the create draft tool once\n- Point Graphite PR links at graphi...\n  Friday: - improve(metabase): point analytics queries at all_tracks_logical_view\n- Split ...\n  Friday: , October 16\nDaily\nWhat did you work on today\n4:52 PM\nWeekly Update w/ leadershi...\n  Thursday: , October 15\nDaily\nWhat did you work on today\n3:14 PM\nGot @Austin's first slice ...\n",
+  "formatted_output": null
+}
