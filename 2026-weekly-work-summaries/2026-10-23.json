@@ -1,0 +1,3128 @@
+{
+  "meta": {
+    "generated_at": "2026-10-23T19:11:09.569Z",
+    "window_start": "2026-10-17T05:00:00.000Z",
+    "window_end": "2026-10-24T04:59:59.999Z",
+    "week_ending": "2026-10-23",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 29,
+    "prs_total": 53,
+    "pr_reviews": 111,
+    "pr_comments": 143,
+    "commits_pushed": 157,
+    "linear_completed": 64,
+    "linear_projects_completed": 0,
+    "linear_worked_on": 52,
+    "linear_issues_created": 66,
+    "linear_comments": 39,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-infrastructure",
+      "apollos-platforms",
+      "apollos-shovel",
+      "bug-board"
+    ],
+    "lines_added": 6863,
+    "lines_deleted": 781,
+    "files_changed": 144,
+    "median_review_latency_hours": 1.34
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-16375",
+        "title": "MCP: keep replies to markdown every client can show",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16375/mcp-keep-replies-to-markdown-every-client-can-show",
+        "completedAt": "2026-10-23T14:51:44.792Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16374",
+        "title": "MCP: end each reply with one specific next step",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16374/mcp-end-each-reply-with-one-specific-next-step",
+        "completedAt": "2026-10-23T14:51:43.823Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16373",
+        "title": "MCP: quote what changed when an edit hits someone else's change",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16373/mcp-quote-what-changed-when-an-edit-hits-someone-elses-change",
+        "completedAt": "2026-10-23T14:51:46.064Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16372",
+        "title": "MCP: use tables for the church picker and search results",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16372/mcp-use-tables-for-the-church-picker-and-search-results",
+        "completedAt": "2026-10-23T14:51:46.956Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16371",
+        "title": "MCP: show the reference and translation for each scripture passage in replies",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16371/mcp-show-the-reference-and-translation-for-each-scripture-passage-in",
+        "completedAt": "2026-10-23T14:51:47.923Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16370",
+        "title": "MCP: return a ready-made date label with each item",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16370/mcp-return-a-ready-made-date-label-with-each-item",
+        "completedAt": "2026-10-23T14:51:50.358Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16369",
+        "title": "MCP: return a resource link for each item a tool writes",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16369/mcp-return-a-resource-link-for-each-item-a-tool-writes",
+        "completedAt": "2026-10-23T14:51:49.578Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16361",
+        "title": "MCP: give a link to each new draft, not its ID",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16361/mcp-give-a-link-to-each-new-draft-not-its-id",
+        "completedAt": "2026-10-23T14:51:48.705Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16251",
+        "title": "MCP sign-in: revoking a refresh token leaves the grant's access tokens working",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16251/mcp-sign-in-revoking-a-refresh-token-leaves-the-grants-access-tokens",
+        "completedAt": "2026-10-22T19:32:43.652Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16228",
+        "title": "Creator AI: detect when model-written scripture doesn't match the requested passage",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16228/creator-ai-detect-when-model-written-scripture-doesnt-match-the",
+        "completedAt": "2026-10-23T14:52:29.722Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16225",
+        "title": "Creator AI: recover from content_filter stops on scripture instead of failing",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16225/creator-ai-recover-from-content-filter-stops-on-scripture-instead-of",
+        "completedAt": "2026-10-23T14:52:29.329Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16223",
+        "title": "Resolve admin Sentry issues whose events are all from staging or local dev",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16223/resolve-admin-sentry-issues-whose-events-are-all-from-staging-or-local",
+        "completedAt": "2026-10-21T15:37:04.105Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16222",
+        "title": "Scope Sentry alerts and inbox views to environment:production for admin and web",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16222/scope-sentry-alerts-and-inbox-views-to-environmentproduction-for-admin",
+        "completedAt": "2026-10-21T19:01:28.310Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16220",
+        "title": "Admin: tag Sentry events with the deployment environment",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16220/admin-tag-sentry-events-with-the-deployment-environment",
+        "completedAt": "2026-10-21T20:05:42.130Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16219",
+        "title": "Sentry environment tagging is wrong or missing across admin, web, and web-embeds",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16219/sentry-environment-tagging-is-wrong-or-missing-across-admin-web-and",
+        "completedAt": "2026-10-21T19:01:44.175Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16217",
+        "title": "Admin runs out of Prisma connections under load (APOLLOS-ADMIN-75M)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16217/admin-runs-out-of-prisma-connections-under-load-apollos-admin-75m",
+        "completedAt": "2026-10-21T15:18:03.248Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16186",
+        "title": "Admin content editor crashes when expanding a section in Safari",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16186/admin-content-editor-crashes-when-expanding-a-section-in-safari",
+        "completedAt": "2026-10-23T16:54:17.051Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16171",
+        "title": "Web should not report Amplitude localStorage SecurityError to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16171/web-should-not-report-amplitude-localstorage-securityerror-to-sentry",
+        "completedAt": "2026-10-23T16:29:40.338Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16091",
+        "title": "Web should not report stackless Safari AbortError on content pages to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16091/web-should-not-report-stackless-safari-aborterror-on-content-pages-to",
+        "completedAt": "2026-10-21T16:30:09.505Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15984",
+        "title": "MCP sidecar: Reuse a person's connection when they sign in again",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15984/mcp-sidecar-reuse-a-persons-connection-when-they-sign-in-again",
+        "completedAt": "2026-10-21T16:51:49.380Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15876",
+        "title": "Admin should not report Firefox media AbortError on Content to Sentry",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15876/admin-should-not-report-firefox-media-aborterror-on-content-to-sentry",
+        "completedAt": "2026-10-20T16:16:06.785Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15872",
+        "title": "Admin Giving reports Safari JSON parse of create-session 500 as Sentry noise",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15872/admin-giving-reports-safari-json-parse-of-create-session-500-as-sentry",
+        "completedAt": "2026-10-20T16:16:06.920Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15863",
+        "title": "Admin should not report stackless Firefox NetworkError on Giving to Sentry",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15863/admin-should-not-report-stackless-firefox-networkerror-on-giving-to",
+        "completedAt": "2026-10-20T16:16:07.093Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15849",
+        "title": "Admin Top Tapped Items chart scans 6-8 GB of BigQuery on every load",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15849/admin-top-tapped-items-chart-scans-6-8-gb-of-bigquery-on-every-load",
+        "completedAt": "2026-10-17T14:08:57.993Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15790",
+        "title": "S2 sidecar: style the consent page like the login page",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15790/s2-sidecar-style-the-consent-page-like-the-login-page",
+        "completedAt": "2026-10-21T20:25:27.961Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15741",
+        "title": "Admin should not report stackless Safari Load failed on Content to Sentry",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15741/admin-should-not-report-stackless-safari-load-failed-on-content-to",
+        "completedAt": "2026-10-20T16:16:07.511Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15738",
+        "title": "Admin content editor crashes when Tiptap AI stream mapping is missing",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15738/admin-content-editor-crashes-when-tiptap-ai-stream-mapping-is-missing",
+        "completedAt": "2026-10-19T20:03:18.872Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15737",
+        "title": "Admin content load reports Node fetch ECONNRESET as a Sentry error",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15737/admin-content-load-reports-node-fetch-econnreset-as-a-sentry-error",
+        "completedAt": "2026-10-21T16:51:48.785Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15736",
+        "title": "Admin dashboard reports BigQuery chart queries over 1GB as Sentry errors",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15736/admin-dashboard-reports-bigquery-chart-queries-over-1gb-as-sentry",
+        "completedAt": "2026-10-17T14:08:58.118Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15434",
+        "title": "Admin should not report Safari turbo-stream decode failures to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15434/admin-should-not-report-safari-turbo-stream-decode-failures-to-sentry",
+        "completedAt": "2026-10-17T14:08:58.056Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15401",
+        "title": "Admin should not report leftover React Router fetcher routeIds to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15401/admin-should-not-report-leftover-react-router-fetcher-routeids-to",
+        "completedAt": "2026-10-17T14:08:58.239Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15362",
+        "title": "MCP sidecar: signing key secret and env vars in apollos-infrastructure",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15362/mcp-sidecar-signing-key-secret-and-env-vars-in-apollos-infrastructure",
+        "completedAt": "2026-10-19T18:05:30.784Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15361",
+        "title": "MCP sidecar: Playwright for consent and the AI Assistants page",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15361/mcp-sidecar-playwright-for-consent-and-the-ai-assistants-page",
+        "completedAt": "2026-10-23T18:39:45.356Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15358",
+        "title": "MCP sidecar: AI Assistants page",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15358/mcp-sidecar-ai-assistants-page",
+        "completedAt": "2026-10-21T16:51:49.125Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15319",
+        "title": "Admin should not report Chrome Failed to fetch on React Router data fetches to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15319/admin-should-not-report-chrome-failed-to-fetch-on-react-router-data",
+        "completedAt": "2026-10-17T14:08:58.281Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15306",
+        "title": "Admin should not report y-prosemirror collab selection restore as a Sentry error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15306/admin-should-not-report-y-prosemirror-collab-selection-restore-as-a",
+        "completedAt": "2026-10-17T14:08:58.330Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15305",
+        "title": "Admin should not report Safari Load failed on React Router data fetches to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15305/admin-should-not-report-safari-load-failed-on-react-router-data",
+        "completedAt": "2026-10-17T14:08:58.156Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14379",
+        "title": "Resolve Sentry issues whose fixes already shipped to production",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14379/resolve-sentry-issues-whose-fixes-already-shipped-to-production",
+        "completedAt": "2026-10-21T14:59:52.460Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16379",
+        "title": "Sweep 3 of 5: publish, schedule, and unpublish onto the shared operations",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16379/sweep-3-of-5-publish-schedule-and-unpublish-onto-the-shared-operations",
+        "completedAt": "2026-10-23T14:51:42.571Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16144",
+        "title": "S1 fix: a shared createDraft operation",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16144/s1-fix-a-shared-createdraft-operation",
+        "completedAt": "2026-10-21T20:04:05.576Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16143",
+        "title": "S1 fix: search_content by collection and status",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16143/s1-fix-search-content-by-collection-and-status",
+        "completedAt": "2026-10-21T20:04:04.173Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15770",
+        "title": "S5 code 4 of 4: proof of a devotional with scripture and an event",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15770/s5-code-4-of-4-proof-of-a-devotional-with-scripture-and-an-event",
+        "completedAt": "2026-10-23T18:57:53.570Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15769",
+        "title": "S5 code 3 of 4: event block",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15769/s5-code-3-of-4-event-block",
+        "completedAt": "2026-10-23T18:57:52.337Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15768",
+        "title": "S5 code 2 of 4: scripture block",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15768/s5-code-2-of-4-scripture-block",
+        "completedAt": "2026-10-23T18:57:51.016Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15767",
+        "title": "S5 code 1 of 4: scripture lookup",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15767/s5-code-1-of-4-scripture-lookup",
+        "completedAt": "2026-10-23T18:57:49.585Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15710",
+        "title": "S4 code 3 of 3: proof of a week scheduled from the chat",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15710/s4-code-3-of-3-proof-of-a-week-scheduled-from-the-chat",
+        "completedAt": "2026-10-21T19:48:22.630Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15709",
+        "title": "S4 code 2 of 3: schedule_content",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15709/s4-code-2-of-3-schedule-content",
+        "completedAt": "2026-10-21T19:48:21.534Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15708",
+        "title": "S4 code 1 of 3: shared schedule, publish, and unpublish",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15708/s4-code-1-of-3-shared-schedule-publish-and-unpublish",
+        "completedAt": "2026-10-21T19:48:20.503Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15593",
+        "title": "MCP sidecar: autosave after a change from someone else",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15593/mcp-sidecar-autosave-after-a-change-from-someone-else",
+        "completedAt": "2026-10-19T14:26:04.476Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15582",
+        "title": "S3 code 4 of 4: proof of a drafted week revised live",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15582/s3-code-4-of-4-proof-of-a-drafted-week-revised-live",
+        "completedAt": "2026-10-21T19:56:03.296Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15581",
+        "title": "S3 code 3 of 4: update_content",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15581/s3-code-3-of-4-update-content",
+        "completedAt": "2026-10-21T19:56:02.305Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15580",
+        "title": "S3 code 2 of 4: read the live document, with dates and a version",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15580/s3-code-2-of-4-read-the-live-document-with-dates-and-a-version",
+        "completedAt": "2026-10-21T19:56:00.926Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15579",
+        "title": "S3 code 1 of 4: several dated drafts in one call",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15579/s3-code-1-of-4-several-dated-drafts-in-one-call",
+        "completedAt": "2026-10-21T19:55:59.415Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15578",
+        "title": "MCP sidecar: live editing in local proofs",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15578/mcp-sidecar-live-editing-in-local-proofs",
+        "completedAt": "2026-10-19T14:26:03.078Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15538",
+        "title": "S2 code 3 of 3: proof across churches",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15538/s2-code-3-of-3-proof-across-churches",
+        "completedAt": "2026-10-21T19:55:58.032Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15537",
+        "title": "S2 code 2 of 3: pick several churches at consent",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15537/s2-code-2-of-3-pick-several-churches-at-consent",
+        "completedAt": "2026-10-21T19:55:56.215Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15536",
+        "title": "S2 code 1 of 3: pick the church on every call",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15536/s2-code-1-of-3-pick-the-church-on-every-call",
+        "completedAt": "2026-10-21T19:55:54.993Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15491",
+        "title": "S1 proof: a local agent creates one draft",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15491/s1-proof-a-local-agent-creates-one-draft",
+        "completedAt": "2026-10-21T19:55:53.347Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15407",
+        "title": "S1 code 4 of 4: create one draft and record the activity",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15407/s1-code-4-of-4-create-one-draft-and-record-the-activity",
+        "completedAt": "2026-10-19T18:04:48.289Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15406",
+        "title": "S1 code 3 of 4: church profile, search, and get one item",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15406/s1-code-3-of-4-church-profile-search-and-get-one-item",
+        "completedAt": "2026-10-19T18:04:45.619Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15352",
+        "title": "MCP S4: schedule from the chat",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15352/mcp-s4-schedule-from-the-chat",
+        "completedAt": "2026-10-23T14:51:51.242Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15351",
+        "title": "MCP S3: draft the week and revise live",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15351/mcp-s3-draft-the-week-and-revise-live",
+        "completedAt": "2026-10-21T20:39:43.116Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15350",
+        "title": "MCP S2: work across churches",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15350/mcp-s2-work-across-churches",
+        "completedAt": "2026-10-21T20:25:29.293Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15349",
+        "title": "MCP S1: connect and draft one item",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15349/mcp-s1-connect-and-draft-one-item",
+        "completedAt": "2026-10-22T19:32:46.841Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-16428",
+        "title": "Mobile should not report Apollo fetch Network request failed to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16428/mobile-should-not-report-apollo-fetch-network-request-failed-to-sentry",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16421",
+        "title": "Mobile should not warn Sentry when schema introspection is offline",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16421/mobile-should-not-warn-sentry-when-schema-introspection-is-offline",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16413",
+        "title": "Mobile should not report expected No person in context GraphQL errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16413/mobile-should-not-report-expected-no-person-in-context-graphql-errors",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16377",
+        "title": "MCP: richer markdown replies",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16377/mcp-richer-markdown-replies",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16375",
+        "title": "MCP: keep replies to markdown every client can show",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16375/mcp-keep-replies-to-markdown-every-client-can-show",
+        "completedAt": "2026-10-23T14:51:44.792Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16374",
+        "title": "MCP: end each reply with one specific next step",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16374/mcp-end-each-reply-with-one-specific-next-step",
+        "completedAt": "2026-10-23T14:51:43.823Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16373",
+        "title": "MCP: quote what changed when an edit hits someone else's change",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16373/mcp-quote-what-changed-when-an-edit-hits-someone-elses-change",
+        "completedAt": "2026-10-23T14:51:46.064Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16372",
+        "title": "MCP: use tables for the church picker and search results",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16372/mcp-use-tables-for-the-church-picker-and-search-results",
+        "completedAt": "2026-10-23T14:51:46.956Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16371",
+        "title": "MCP: show the reference and translation for each scripture passage in replies",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16371/mcp-show-the-reference-and-translation-for-each-scripture-passage-in",
+        "completedAt": "2026-10-23T14:51:47.923Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16370",
+        "title": "MCP: return a ready-made date label with each item",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16370/mcp-return-a-ready-made-date-label-with-each-item",
+        "completedAt": "2026-10-23T14:51:50.358Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16369",
+        "title": "MCP: return a resource link for each item a tool writes",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16369/mcp-return-a-resource-link-for-each-item-a-tool-writes",
+        "completedAt": "2026-10-23T14:51:49.578Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16361",
+        "title": "MCP: give a link to each new draft, not its ID",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16361/mcp-give-a-link-to-each-new-draft-not-its-id",
+        "completedAt": "2026-10-23T14:51:48.705Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16251",
+        "title": "MCP sign-in: revoking a refresh token leaves the grant's access tokens working",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16251/mcp-sign-in-revoking-a-refresh-token-leaves-the-grants-access-tokens",
+        "completedAt": "2026-10-22T19:32:43.652Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16228",
+        "title": "Creator AI: detect when model-written scripture doesn't match the requested passage",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16228/creator-ai-detect-when-model-written-scripture-doesnt-match-the",
+        "completedAt": "2026-10-23T14:52:29.722Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16225",
+        "title": "Creator AI: recover from content_filter stops on scripture instead of failing",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16225/creator-ai-recover-from-content-filter-stops-on-scripture-instead-of",
+        "completedAt": "2026-10-23T14:52:29.329Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16223",
+        "title": "Resolve admin Sentry issues whose events are all from staging or local dev",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16223/resolve-admin-sentry-issues-whose-events-are-all-from-staging-or-local",
+        "completedAt": "2026-10-21T15:37:04.105Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16222",
+        "title": "Scope Sentry alerts and inbox views to environment:production for admin and web",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16222/scope-sentry-alerts-and-inbox-views-to-environmentproduction-for-admin",
+        "completedAt": "2026-10-21T19:01:28.310Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16220",
+        "title": "Admin: tag Sentry events with the deployment environment",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16220/admin-tag-sentry-events-with-the-deployment-environment",
+        "completedAt": "2026-10-21T20:05:42.130Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16219",
+        "title": "Sentry environment tagging is wrong or missing across admin, web, and web-embeds",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16219/sentry-environment-tagging-is-wrong-or-missing-across-admin-web-and",
+        "completedAt": "2026-10-21T19:01:44.175Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16217",
+        "title": "Admin runs out of Prisma connections under load (APOLLOS-ADMIN-75M)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16217/admin-runs-out-of-prisma-connections-under-load-apollos-admin-75m",
+        "completedAt": "2026-10-21T15:18:03.248Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16186",
+        "title": "Admin content editor crashes when expanding a section in Safari",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16186/admin-content-editor-crashes-when-expanding-a-section-in-safari",
+        "completedAt": "2026-10-23T16:54:17.051Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16171",
+        "title": "Web should not report Amplitude localStorage SecurityError to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16171/web-should-not-report-amplitude-localstorage-securityerror-to-sentry",
+        "completedAt": "2026-10-23T16:29:40.338Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16170",
+        "title": "Web should not report failed dynamic module imports on FeatureFeed to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16170/web-should-not-report-failed-dynamic-module-imports-on-featurefeed-to",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16091",
+        "title": "Web should not report stackless Safari AbortError on content pages to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16091/web-should-not-report-stackless-safari-aborterror-on-content-pages-to",
+        "completedAt": "2026-10-21T16:30:09.505Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15984",
+        "title": "MCP sidecar: Reuse a person's connection when they sign in again",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15984/mcp-sidecar-reuse-a-persons-connection-when-they-sign-in-again",
+        "completedAt": "2026-10-21T16:51:49.380Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15876",
+        "title": "Admin should not report Firefox media AbortError on Content to Sentry",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15876/admin-should-not-report-firefox-media-aborterror-on-content-to-sentry",
+        "completedAt": "2026-10-20T16:16:06.785Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15872",
+        "title": "Admin Giving reports Safari JSON parse of create-session 500 as Sentry noise",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15872/admin-giving-reports-safari-json-parse-of-create-session-500-as-sentry",
+        "completedAt": "2026-10-20T16:16:06.920Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15863",
+        "title": "Admin should not report stackless Firefox NetworkError on Giving to Sentry",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15863/admin-should-not-report-stackless-firefox-networkerror-on-giving-to",
+        "completedAt": "2026-10-20T16:16:07.093Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15849",
+        "title": "Admin Top Tapped Items chart scans 6-8 GB of BigQuery on every load",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15849/admin-top-tapped-items-chart-scans-6-8-gb-of-bigquery-on-every-load",
+        "completedAt": "2026-10-17T14:08:57.993Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15790",
+        "title": "S2 sidecar: style the consent page like the login page",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15790/s2-sidecar-style-the-consent-page-like-the-login-page",
+        "completedAt": "2026-10-21T20:25:27.961Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15741",
+        "title": "Admin should not report stackless Safari Load failed on Content to Sentry",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15741/admin-should-not-report-stackless-safari-load-failed-on-content-to",
+        "completedAt": "2026-10-20T16:16:07.511Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15738",
+        "title": "Admin content editor crashes when Tiptap AI stream mapping is missing",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15738/admin-content-editor-crashes-when-tiptap-ai-stream-mapping-is-missing",
+        "completedAt": "2026-10-19T20:03:18.872Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15737",
+        "title": "Admin content load reports Node fetch ECONNRESET as a Sentry error",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15737/admin-content-load-reports-node-fetch-econnreset-as-a-sentry-error",
+        "completedAt": "2026-10-21T16:51:48.785Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15736",
+        "title": "Admin dashboard reports BigQuery chart queries over 1GB as Sentry errors",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15736/admin-dashboard-reports-bigquery-chart-queries-over-1gb-as-sentry",
+        "completedAt": "2026-10-17T14:08:58.118Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15434",
+        "title": "Admin should not report Safari turbo-stream decode failures to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15434/admin-should-not-report-safari-turbo-stream-decode-failures-to-sentry",
+        "completedAt": "2026-10-17T14:08:58.056Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15401",
+        "title": "Admin should not report leftover React Router fetcher routeIds to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15401/admin-should-not-report-leftover-react-router-fetcher-routeids-to",
+        "completedAt": "2026-10-17T14:08:58.239Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15362",
+        "title": "MCP sidecar: signing key secret and env vars in apollos-infrastructure",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15362/mcp-sidecar-signing-key-secret-and-env-vars-in-apollos-infrastructure",
+        "completedAt": "2026-10-19T18:05:30.784Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15361",
+        "title": "MCP sidecar: Playwright for consent and the AI Assistants page",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15361/mcp-sidecar-playwright-for-consent-and-the-ai-assistants-page",
+        "completedAt": "2026-10-23T18:39:45.356Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15358",
+        "title": "MCP sidecar: AI Assistants page",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15358/mcp-sidecar-ai-assistants-page",
+        "completedAt": "2026-10-21T16:51:49.125Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15319",
+        "title": "Admin should not report Chrome Failed to fetch on React Router data fetches to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15319/admin-should-not-report-chrome-failed-to-fetch-on-react-router-data",
+        "completedAt": "2026-10-17T14:08:58.281Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15306",
+        "title": "Admin should not report y-prosemirror collab selection restore as a Sentry error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15306/admin-should-not-report-y-prosemirror-collab-selection-restore-as-a",
+        "completedAt": "2026-10-17T14:08:58.330Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15305",
+        "title": "Admin should not report Safari Load failed on React Router data fetches to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15305/admin-should-not-report-safari-load-failed-on-react-router-data",
+        "completedAt": "2026-10-17T14:08:58.156Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14402",
+        "title": "Admin AI Writer crashes when attaching server video after the doc changed",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14402/admin-ai-writer-crashes-when-attaching-server-video-after-the-doc",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14398",
+        "title": "Admin Insert Page crashes with mismatched transaction when pages already exist",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14398/admin-insert-page-crashes-with-mismatched-transaction-when-pages",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-14379",
+        "title": "Resolve Sentry issues whose fixes already shipped to production",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14379/resolve-sentry-issues-whose-fixes-already-shipped-to-production",
+        "completedAt": "2026-10-21T14:59:52.460Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13827",
+        "title": "Claim FreedUp access from live Woo orders",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13827/claim-freedup-access-from-live-woo-orders",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13608",
+        "title": "Build the grant path: signed-in check page on Apollos Web",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13608/build-the-grant-path-signed-in-check-page-on-apollos-web",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13607",
+        "title": "Staff override for paid FreedUp access",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13607/staff-override-for-paid-freedup-access",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13606",
+        "title": "Lock a content series to a required tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13606/lock-a-content-series-to-a-required-tag",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13605",
+        "title": "Mint a FreedUp purchase tag on the person",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13605/mint-a-freedup-purchase-tag-on-the-person",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-12338",
+        "title": "Share parseHexRgb in web-embeds ThemeProvider",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12338/share-parsehexrgb-in-web-embeds-themeprovider",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-11192",
+        "title": "Admin: feed template tracking passes wrong Segment event key",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-11192/admin-feed-template-tracking-passes-wrong-segment-event-key",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-16450",
+        "title": "Android GraphQL $id grouping BNK is leftover old-runtime noise (same as 8BM)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16450/android-graphql-dollarid-grouping-bnk-is-leftover-old-runtime-noise",
+        "createdAt": "2026-10-23T19:09:19.826Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16448",
+        "title": "Cluster returns HTTP 500 for getPrayerRequests (Sentry APOLLOS-MOBILE-F3X)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16448/cluster-returns-http-500-for-getprayerrequests-sentry-apollos-mobile",
+        "createdAt": "2026-10-23T18:36:13.187Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16446",
+        "title": "Cluster returns HTTP 500 for getDailyHabitsStreak (Sentry APOLLOS-MOBILE-F3Y)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16446/cluster-returns-http-500-for-getdailyhabitsstreak-sentry-apollos",
+        "createdAt": "2026-10-23T18:07:45.970Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16442",
+        "title": "Cluster returns HTTP 500 for getDailyHabits (Sentry APOLLOS-MOBILE-F3W)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16442/cluster-returns-http-500-for-getdailyhabits-sentry-apollos-mobile-f3w",
+        "createdAt": "2026-10-23T17:36:45.487Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16439",
+        "title": "Cluster returns HTTP 500 for getContentItemScreen (Sentry APOLLOS-MOBILE-F3J)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16439/cluster-returns-http-500-for-getcontentitemscreen-sentry-apollos",
+        "createdAt": "2026-10-23T17:13:44.436Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16429",
+        "title": "Cluster returns HTTP 500 for RequestChatToken (Sentry APOLLOS-MOBILE-F3V)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16429/cluster-returns-http-500-for-requestchattoken-sentry-apollos-mobile",
+        "createdAt": "2026-10-23T16:40:14.290Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16428",
+        "title": "Mobile should not report Apollo fetch Network request failed to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16428/mobile-should-not-report-apollo-fetch-network-request-failed-to-sentry",
+        "createdAt": "2026-10-23T16:16:18.170Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16421",
+        "title": "Mobile should not warn Sentry when schema introspection is offline",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16421/mobile-should-not-warn-sentry-when-schema-introspection-is-offline",
+        "createdAt": "2026-10-23T05:06:06.910Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16420",
+        "title": "Cluster returns HTTP 500 for getChurch (Sentry APOLLOS-MOBILE-F4F)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16420/cluster-returns-http-500-for-getchurch-sentry-apollos-mobile-f4f",
+        "createdAt": "2026-10-23T04:38:22.662Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16413",
+        "title": "Mobile should not report expected No person in context GraphQL errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16413/mobile-should-not-report-expected-no-person-in-context-graphql-errors",
+        "createdAt": "2026-10-23T04:10:26.851Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16412",
+        "title": "Cluster returns HTTP 500 for interactWithNode (Sentry APOLLOS-MOBILE-F75)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16412/cluster-returns-http-500-for-interactwithnode-sentry-apollos-mobile",
+        "createdAt": "2026-10-23T03:42:10.149Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16409",
+        "title": "Daily Habits fires getDailyHabit with no id",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16409/daily-habits-fires-getdailyhabit-with-no-id",
+        "createdAt": "2026-10-23T03:11:41.777Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16403",
+        "title": "Tap scan should not warn Sentry when falling back to admin",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16403/tap-scan-should-not-warn-sentry-when-falling-back-to-admin",
+        "createdAt": "2026-10-23T00:03:49.470Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16402",
+        "title": "Tap asset links should not warn Sentry when the apex host has no subdomain",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16402/tap-asset-links-should-not-warn-sentry-when-the-apex-host-has-no",
+        "createdAt": "2026-10-22T23:37:49.425Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16396",
+        "title": "MCP: fit the server instructions in 4096 characters",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16396/mcp-fit-the-server-instructions-in-4096-characters",
+        "createdAt": "2026-10-22T21:52:46.261Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16393",
+        "title": "Admin Active Users chart still scans over 2GB after the 1GB alarm was raised",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16393/admin-active-users-chart-still-scans-over-2gb-after-the-1gb-alarm-was",
+        "createdAt": "2026-10-22T20:56:37.325Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16382",
+        "title": "Sweep 1 of 5: autosave body save onto saveEditorRows",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16382/sweep-1-of-5-autosave-body-save-onto-saveeditorrows",
+        "createdAt": "2026-10-22T19:42:13.187Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16381",
+        "title": "Sweep 5 of 5: sidebar save onto setSettings",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16381/sweep-5-of-5-sidebar-save-onto-setsettings",
+        "createdAt": "2026-10-22T19:41:09.703Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16380",
+        "title": "Sweep 4 of 5: Creator AI publish onto the publish operation",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16380/sweep-4-of-5-creator-ai-publish-onto-the-publish-operation",
+        "createdAt": "2026-10-22T19:41:08.467Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16379",
+        "title": "Sweep 3 of 5: publish, schedule, and unpublish onto the shared operations",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16379/sweep-3-of-5-publish-schedule-and-unpublish-onto-the-shared-operations",
+        "createdAt": "2026-10-22T19:41:06.668Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16378",
+        "title": "Sweep 2 of 5: New button onto createDraft",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16378/sweep-2-of-5-new-button-onto-createdraft",
+        "createdAt": "2026-10-22T19:41:04.497Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16377",
+        "title": "MCP: richer markdown replies",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16377/mcp-richer-markdown-replies",
+        "createdAt": "2026-10-22T19:14:43.679Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16376",
+        "title": "MCP: add a small eval that checks reply format",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16376/mcp-add-a-small-eval-that-checks-reply-format",
+        "createdAt": "2026-10-22T19:13:17.954Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16375",
+        "title": "MCP: keep replies to markdown every client can show",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16375/mcp-keep-replies-to-markdown-every-client-can-show",
+        "createdAt": "2026-10-22T19:13:16.265Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16374",
+        "title": "MCP: end each reply with one specific next step",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16374/mcp-end-each-reply-with-one-specific-next-step",
+        "createdAt": "2026-10-22T19:13:14.594Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16373",
+        "title": "MCP: quote what changed when an edit hits someone else's change",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16373/mcp-quote-what-changed-when-an-edit-hits-someone-elses-change",
+        "createdAt": "2026-10-22T19:13:13.242Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16372",
+        "title": "MCP: use tables for the church picker and search results",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16372/mcp-use-tables-for-the-church-picker-and-search-results",
+        "createdAt": "2026-10-22T19:13:12.029Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16371",
+        "title": "MCP: show the reference and translation for each scripture passage in replies",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16371/mcp-show-the-reference-and-translation-for-each-scripture-passage-in",
+        "createdAt": "2026-10-22T19:13:10.655Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16370",
+        "title": "MCP: return a ready-made date label with each item",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16370/mcp-return-a-ready-made-date-label-with-each-item",
+        "createdAt": "2026-10-22T19:13:09.327Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16369",
+        "title": "MCP: return a resource link for each item a tool writes",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16369/mcp-return-a-resource-link-for-each-item-a-tool-writes",
+        "createdAt": "2026-10-22T19:13:07.436Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16324",
+        "title": "Admin Load failed grouping 761 is leftover Safari dashboard chart fetch noise",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16324/admin-load-failed-grouping-761-is-leftover-safari-dashboard-chart",
+        "createdAt": "2026-10-22T15:06:53.555Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16252",
+        "title": "S4 proof script no longer runs: no scopes at consent, and its week is in the past",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16252/s4-proof-script-no-longer-runs-no-scopes-at-consent-and-its-week-is-in",
+        "createdAt": "2026-10-21T19:48:19.264Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16251",
+        "title": "MCP sign-in: revoking a refresh token leaves the grant's access tokens working",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16251/mcp-sign-in-revoking-a-refresh-token-leaves-the-grants-access-tokens",
+        "createdAt": "2026-10-21T19:48:18.115Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16228",
+        "title": "Creator AI: detect when model-written scripture doesn't match the requested passage",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16228/creator-ai-detect-when-model-written-scripture-doesnt-match-the",
+        "createdAt": "2026-10-21T15:54:20.917Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16226",
+        "title": "Scripture: fall back to the closest available translation when the requested version isn't accessible",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16226/scripture-fall-back-to-the-closest-available-translation-when-the",
+        "createdAt": "2026-10-21T15:50:02.993Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16225",
+        "title": "Creator AI: recover from content_filter stops on scripture instead of failing",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16225/creator-ai-recover-from-content-filter-stops-on-scripture-instead-of",
+        "createdAt": "2026-10-21T15:50:02.371Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16223",
+        "title": "Resolve admin Sentry issues whose events are all from staging or local dev",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16223/resolve-admin-sentry-issues-whose-events-are-all-from-staging-or-local",
+        "createdAt": "2026-10-21T15:33:18.560Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16222",
+        "title": "Scope Sentry alerts and inbox views to environment:production for admin and web",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16222/scope-sentry-alerts-and-inbox-views-to-environmentproduction-for-admin",
+        "createdAt": "2026-10-21T15:33:17.231Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16221",
+        "title": "Web-embeds: Sentry never initializes (reads REACT_APP_SENTRY_DSN under Vite)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16221/web-embeds-sentry-never-initializes-reads-react-app-sentry-dsn-under",
+        "createdAt": "2026-10-21T15:33:15.372Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16220",
+        "title": "Admin: tag Sentry events with the deployment environment",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16220/admin-tag-sentry-events-with-the-deployment-environment",
+        "createdAt": "2026-10-21T15:33:13.885Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16219",
+        "title": "Sentry environment tagging is wrong or missing across admin, web, and web-embeds",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16219/sentry-environment-tagging-is-wrong-or-missing-across-admin-web-and",
+        "createdAt": "2026-10-21T15:32:46.159Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16217",
+        "title": "Admin runs out of Prisma connections under load (APOLLOS-ADMIN-75M)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16217/admin-runs-out-of-prisma-connections-under-load-apollos-admin-75m",
+        "createdAt": "2026-10-21T15:04:13.845Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16197",
+        "title": "Admin should not report React Router 502 on Content __manifest to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16197/admin-should-not-report-react-router-502-on-content-manifest-to-sentry",
+        "createdAt": "2026-10-21T02:35:24.805Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16196",
+        "title": "Admin Fetch is aborted grouping 767",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16196/admin-fetch-is-aborted-grouping-767",
+        "createdAt": "2026-10-21T01:40:34.249Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16195",
+        "title": "Admin turbo-stream grouping 768 is the same React Router decode as 741",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16195/admin-turbo-stream-grouping-768-is-the-same-react-router-decode-as-741",
+        "createdAt": "2026-10-21T01:11:26.780Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16194",
+        "title": "Admin appendMapping grouping 76S is the same Tiptap AI stream crash as 776",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16194/admin-appendmapping-grouping-76s-is-the-same-tiptap-ai-stream-crash-as",
+        "createdAt": "2026-10-21T00:39:19.358Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16193",
+        "title": "Admin appendMapping grouping 76T is the same Tiptap AI stream crash as 776",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16193/admin-appendmapping-grouping-76t-is-the-same-tiptap-ai-stream-crash-as",
+        "createdAt": "2026-10-21T00:10:30.952Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16192",
+        "title": "Admin TipTap Enter split is local HeadlessChrome e2e tagged production",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16192/admin-tiptap-enter-split-is-local-headlesschrome-e2e-tagged-production",
+        "createdAt": "2026-10-20T23:39:59.670Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16189",
+        "title": "Admin WKWebView postMessage grouping 748 is leftover DuckDuckGo browser noise",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16189/admin-wkwebview-postmessage-grouping-748-is-leftover-duckduckgo",
+        "createdAt": "2026-10-20T23:10:21.960Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16187",
+        "title": "Admin Load failed grouping 749 is leftover Safari dashboard chart fetch noise",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16187/admin-load-failed-grouping-749-is-leftover-safari-dashboard-chart",
+        "createdAt": "2026-10-20T22:42:46.859Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16186",
+        "title": "Admin content editor crashes when expanding a section in Safari",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16186/admin-content-editor-crashes-when-expanding-a-section-in-safari",
+        "createdAt": "2026-10-20T22:04:42.938Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16184",
+        "title": "Admin should not report stackless Firefox Error in input stream on Giving to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16184/admin-should-not-report-stackless-firefox-error-in-input-stream-on",
+        "createdAt": "2026-10-20T21:33:02.032Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16183",
+        "title": "Admin should not report Safari Load failed when hashed react-dom sits above React Router fetch",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16183/admin-should-not-report-safari-load-failed-when-hashed-react-dom-sits",
+        "createdAt": "2026-10-20T21:02:41.740Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16177",
+        "title": "Admin should not report AbortError signal is aborted without reason on React Router cancel to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16177/admin-should-not-report-aborterror-signal-is-aborted-without-reason-on",
+        "createdAt": "2026-10-20T20:35:58.821Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16173",
+        "title": "Admin should not report Safari Fetch is aborted when React and Sentry frames sit above the router fetch",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16173/admin-should-not-report-safari-fetch-is-aborted-when-react-and-sentry",
+        "createdAt": "2026-10-20T20:09:40.699Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16171",
+        "title": "Web should not report Amplitude localStorage SecurityError to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16171/web-should-not-report-amplitude-localstorage-securityerror-to-sentry",
+        "createdAt": "2026-10-20T19:32:45.478Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16170",
+        "title": "Web should not report failed dynamic module imports on FeatureFeed to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16170/web-should-not-report-failed-dynamic-module-imports-on-featurefeed-to",
+        "createdAt": "2026-10-20T19:02:58.075Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16164",
+        "title": "Web should not report third-party EmptyRanges ReferenceError to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16164/web-should-not-report-third-party-emptyranges-referenceerror-to-sentry",
+        "createdAt": "2026-10-20T18:35:31.418Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16091",
+        "title": "Web should not report stackless Safari AbortError on content pages to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16091/web-should-not-report-stackless-safari-aborterror-on-content-pages-to",
+        "createdAt": "2026-10-20T00:04:23.336Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15984",
+        "title": "MCP sidecar: Reuse a person's connection when they sign in again",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15984/mcp-sidecar-reuse-a-persons-connection-when-they-sign-in-again",
+        "createdAt": "2026-10-19T15:41:20.896Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15881",
+        "title": "Admin should not report React Router fetcher aborts with React/Content frames to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15881/admin-should-not-report-react-router-fetcher-aborts-with-reactcontent",
+        "createdAt": "2026-10-17T07:33:44.194Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15880",
+        "title": "Admin Load failed grouping 77R is the same React Router fetch as 72B",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15880/admin-load-failed-grouping-77r-is-the-same-react-router-fetch-as-72b",
+        "createdAt": "2026-10-17T07:03:35.456Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15879",
+        "title": "Admin should not report Pendo sendBeacon Blob constructor errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15879/admin-should-not-report-pendo-sendbeacon-blob-constructor-errors-to",
+        "createdAt": "2026-10-17T06:33:44.529Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15878",
+        "title": "Admin Load failed grouping 744 is leftover Safari pagination fetch noise",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15878/admin-load-failed-grouping-744-is-leftover-safari-pagination-fetch",
+        "createdAt": "2026-10-17T06:05:00.499Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15877",
+        "title": "Admin Load failed grouping 77V is the same React Router fetch as 72B",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-15877/admin-load-failed-grouping-77v-is-the-same-react-router-fetch-as-72b",
+        "createdAt": "2026-10-17T05:34:04.869Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15876",
+        "title": "Admin should not report Firefox media AbortError on Content to Sentry",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15876/admin-should-not-report-firefox-media-aborterror-on-content-to-sentry",
+        "createdAt": "2026-10-17T05:02:55.246Z",
+        "state": "Done"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-16448",
+        "title": "Cluster returns HTTP 500 for getPrayerRequests (Sentry APOLLOS-MOBILE-F3X)",
+        "url": "https://linear.app/differential/issue/APO-16448/cluster-returns-http-500-for-getprayerrequests-sentry-apollos-mobile",
+        "project": "Sentry Queue",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16428",
+        "title": "Mobile should not report Apollo fetch Network request failed to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16428/mobile-should-not-report-apollo-fetch-network-request-failed-to-sentry",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16393",
+        "title": "Admin Active Users chart still scans over 2GB after the 1GB alarm was raised",
+        "url": "https://linear.app/differential/issue/APO-16393/admin-active-users-chart-still-scans-over-2gb-after-the-1gb-alarm-was",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16409",
+        "title": "Daily Habits fires getDailyHabit with no id",
+        "url": "https://linear.app/differential/issue/APO-16409/daily-habits-fires-getdailyhabit-with-no-id",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16413",
+        "title": "Mobile should not report expected No person in context GraphQL errors to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16413/mobile-should-not-report-expected-no-person-in-context-graphql-errors",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16403",
+        "title": "Tap scan should not warn Sentry when falling back to admin",
+        "url": "https://linear.app/differential/issue/APO-16403/tap-scan-should-not-warn-sentry-when-falling-back-to-admin",
+        "project": "Sentry Queue",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16173",
+        "title": "Admin should not report Safari Fetch is aborted when React and Sentry frames sit above the router fetch",
+        "url": "https://linear.app/differential/issue/APO-16173/admin-should-not-report-safari-fetch-is-aborted-when-react-and-sentry",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16177",
+        "title": "Admin should not report AbortError signal is aborted without reason on React Router cancel to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16177/admin-should-not-report-aborterror-signal-is-aborted-without-reason-on",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16183",
+        "title": "Admin should not report Safari Load failed when hashed react-dom sits above React Router fetch",
+        "url": "https://linear.app/differential/issue/APO-16183/admin-should-not-report-safari-load-failed-when-hashed-react-dom-sits",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16184",
+        "title": "Admin should not report stackless Firefox Error in input stream on Giving to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16184/admin-should-not-report-stackless-firefox-error-in-input-stream-on",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16196",
+        "title": "Admin Fetch is aborted grouping 767",
+        "url": "https://linear.app/differential/issue/APO-16196/admin-fetch-is-aborted-grouping-767",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16197",
+        "title": "Admin should not report React Router 502 on Content __manifest to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16197/admin-should-not-report-react-router-502-on-content-manifest-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15790",
+        "title": "S2 sidecar: style the consent page like the login page",
+        "url": "https://linear.app/differential/issue/APO-15790/s2-sidecar-style-the-consent-page-like-the-login-page",
+        "project": "Apollos MCP",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16219",
+        "title": "Sentry environment tagging is wrong or missing across admin, web, and web-embeds",
+        "url": "https://linear.app/differential/issue/APO-16219/sentry-environment-tagging-is-wrong-or-missing-across-admin-web-and",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16222",
+        "title": "Scope Sentry alerts and inbox views to environment:production for admin and web",
+        "url": "https://linear.app/differential/issue/APO-16222/scope-sentry-alerts-and-inbox-views-to-environmentproduction-for-admin",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16217",
+        "title": "Admin runs out of Prisma connections under load (APOLLOS-ADMIN-75M)",
+        "url": "https://linear.app/differential/issue/APO-16217/admin-runs-out-of-prisma-connections-under-load-apollos-admin-75m",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14379",
+        "title": "Resolve Sentry issues whose fixes already shipped to production",
+        "url": "https://linear.app/differential/issue/APO-14379/resolve-sentry-issues-whose-fixes-already-shipped-to-production",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11989",
+        "title": "Admin: TipTap bubble menu crashes reading dataset of null",
+        "url": "https://linear.app/differential/issue/APO-11989/admin-tiptap-bubble-menu-crashes-reading-dataset-of-null",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12889",
+        "title": "Web Embed: Webview processEmbedMeta crashes when meta is missing",
+        "url": "https://linear.app/differential/issue/APO-12889/web-embed-webview-processembedmeta-crashes-when-meta-is-missing",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14008",
+        "title": "Admin: DAG stream enqueue after client disconnect closes the controller",
+        "url": "https://linear.app/differential/issue/APO-14008/admin-dag-stream-enqueue-after-client-disconnect-closes-the-controller",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12891",
+        "title": "Admin: LinkEmbed processEmbedMeta crashes when meta is missing",
+        "url": "https://linear.app/differential/issue/APO-12891/admin-linkembed-processembedmeta-crashes-when-meta-is-missing",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16186",
+        "title": "Admin content editor crashes when expanding a section in Safari",
+        "url": "https://linear.app/differential/issue/APO-16186/admin-content-editor-crashes-when-expanding-a-section-in-safari",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16174",
+        "title": "MCP sidecar: show how to connect on the AI Assistants page",
+        "url": "https://linear.app/differential/issue/APO-16174/mcp-sidecar-show-how-to-connect-on-the-ai-assistants-page",
+        "project": "Apollos MCP",
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-16171",
+        "title": "Web should not report Amplitude localStorage SecurityError to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16171/web-should-not-report-amplitude-localstorage-securityerror-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16170",
+        "title": "Web should not report failed dynamic module imports on FeatureFeed to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16170/web-should-not-report-failed-dynamic-module-imports-on-featurefeed-to",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16164",
+        "title": "Web should not report third-party EmptyRanges ReferenceError to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16164/web-should-not-report-third-party-emptyranges-referenceerror-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16091",
+        "title": "Web should not report stackless Safari AbortError on content pages to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16091/web-should-not-report-stackless-safari-aborterror-on-content-pages-to",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15491",
+        "title": "S1 proof: a local agent creates one draft",
+        "url": "https://linear.app/differential/issue/APO-15491/s1-proof-a-local-agent-creates-one-draft",
+        "project": "Apollos MCP",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15881",
+        "title": "Admin should not report React Router fetcher aborts with React/Content frames to Sentry",
+        "url": "https://linear.app/differential/issue/APO-15881/admin-should-not-report-react-router-fetcher-aborts-with-reactcontent",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15879",
+        "title": "Admin should not report Pendo sendBeacon Blob constructor errors to Sentry",
+        "url": "https://linear.app/differential/issue/APO-15879/admin-should-not-report-pendo-sendbeacon-blob-constructor-errors-to",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15848",
+        "title": "Admin leftover Apps fetcher reports a React Router routeId as a Sentry error",
+        "url": "https://linear.app/differential/issue/APO-15848/admin-leftover-apps-fetcher-reports-a-react-router-routeid-as-a-sentry",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-15804",
+        "title": "Admin should not report Safari Load failed when React scheduler frames sit above the router fetch",
+        "url": "https://linear.app/differential/issue/APO-15804/admin-should-not-report-safari-load-failed-when-react-scheduler-frames",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-13827",
+        "title": "Claim FreedUp access from live Woo orders",
+        "url": "https://linear.app/differential/issue/APO-13827/claim-freedup-access-from-live-woo-orders",
+        "project": "FreedUp paid access",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13608",
+        "title": "Build the grant path: signed-in check page on Apollos Web",
+        "url": "https://linear.app/differential/issue/APO-13608/build-the-grant-path-signed-in-check-page-on-apollos-web",
+        "project": "FreedUp paid access",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13605",
+        "title": "Mint a FreedUp purchase tag on the person",
+        "url": "https://linear.app/differential/issue/APO-13605/mint-a-freedup-purchase-tag-on-the-person",
+        "project": "FreedUp paid access",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13606",
+        "title": "Lock a content series to a required tag",
+        "url": "https://linear.app/differential/issue/APO-13606/lock-a-content-series-to-a-required-tag",
+        "project": "FreedUp paid access",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13607",
+        "title": "Staff override for paid FreedUp access",
+        "url": "https://linear.app/differential/issue/APO-13607/staff-override-for-paid-freedup-access",
+        "project": "FreedUp paid access",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-13265",
+        "title": "Assessment Results State: Edit button needs adjusted",
+        "url": "https://linear.app/differential/issue/APO-13265/assessment-results-state-edit-button-needs-adjusted",
+        "project": "Assessments",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-15849",
+        "title": "Admin Top Tapped Items chart scans 6-8 GB of BigQuery on every load",
+        "url": "https://linear.app/differential/issue/APO-15849/admin-top-tapped-items-chart-scans-6-8-gb-of-bigquery-on-every-load",
+        "project": null,
+        "state": "Done"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "Test the EmptyRanges filter with mixed and <anonymous> frames",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5920",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-23T18:12:15Z",
+        "additions": 5,
+        "deletions": 2,
+        "changed_files": 1
+      },
+      {
+        "title": "APO-16376: add a reply eval for the MCP server",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5919",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-23T18:24:13Z",
+        "additions": 566,
+        "deletions": 54,
+        "changed_files": 4
+      },
+      {
+        "title": "APO-16396: fit the MCP server instructions in 4096 characters",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5918",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-23T17:40:18Z",
+        "additions": 154,
+        "deletions": 117,
+        "changed_files": 6
+      },
+      {
+        "title": "Stop warning Sentry when tap scan falls back to Admin",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5914",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-23T16:13:59Z",
+        "additions": 21,
+        "deletions": 51,
+        "changed_files": 2
+      },
+      {
+        "title": "Stop warning Sentry when tap apex has no asset-links subdomain",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5913",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-23T16:13:59Z",
+        "additions": 6,
+        "deletions": 9,
+        "changed_files": 2
+      },
+      {
+        "title": "APO-16370: give each item a date label in church time",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5907",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-22T21:18:00Z",
+        "additions": 217,
+        "deletions": 30,
+        "changed_files": 12
+      },
+      {
+        "title": "APO-16361: link each item the assistant writes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5906",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-22T21:43:40Z",
+        "additions": 163,
+        "deletions": 7,
+        "changed_files": 11
+      },
+      {
+        "title": "APO-16375: tell the assistant how to format its replies",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5905",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-22T22:18:51Z",
+        "additions": 24,
+        "deletions": 4,
+        "changed_files": 4
+      },
+      {
+        "title": "Redesign the assistant consent page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5895",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-22T21:16:11Z",
+        "additions": 1478,
+        "deletions": 254,
+        "changed_files": 19
+      },
+      {
+        "title": "APO-15361: Playwright for assistant consent and the AI Assistants page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5878",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-23T15:53:11Z",
+        "additions": 588,
+        "deletions": 18,
+        "changed_files": 7
+      },
+      {
+        "title": "APO-16251: Revoking a refresh token also ends its connection",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5874",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-22T14:40:19Z",
+        "additions": 83,
+        "deletions": 22,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(admin): show the Creator AI error inside the output panel",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5873",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-22T16:44:56Z",
+        "additions": 72,
+        "deletions": 3,
+        "changed_files": 5
+      },
+      {
+        "title": "APO-16225: Recover Creator AI scripture from content_filter stops",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5869",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-22T16:44:56Z",
+        "additions": 286,
+        "deletions": 11,
+        "changed_files": 9
+      },
+      {
+        "title": "APO-16228: Replace Creator AI scripture that doesn't match its heading",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5868",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-22T16:44:56Z",
+        "additions": 213,
+        "deletions": 8,
+        "changed_files": 6
+      },
+      {
+        "title": "fix(admin): tag Sentry events with the deployment environment",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5866",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-21T16:55:53Z",
+        "additions": 6,
+        "deletions": 0,
+        "changed_files": 3
+      },
+      {
+        "title": "Admin content editor should not crash when expanding a section in Safari",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5854",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-23T16:51:13Z",
+        "additions": 70,
+        "deletions": 36,
+        "changed_files": 3
+      },
+      {
+        "title": "APO-16171: Give Amplitude in-memory storage when the browser blocks localStorage",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5844",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-23T16:26:35Z",
+        "additions": 87,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "APO-16164: Stop reporting Safari EmptyRanges on web content",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5841",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-23T16:18:16Z",
+        "additions": 146,
+        "deletions": 2,
+        "changed_files": 3
+      },
+      {
+        "title": "APO-16091: Stop reporting stackless Safari AbortError on web content",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5824",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-20T21:15:30Z",
+        "additions": 142,
+        "deletions": 3,
+        "changed_files": 3
+      },
+      {
+        "title": "Stop reporting stackless Safari and Firefox network errors to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5818",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-19T20:02:32Z",
+        "additions": 135,
+        "deletions": 4,
+        "changed_files": 5
+      },
+      {
+        "title": "APO-15358: Add the AI Assistants page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5817",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-20T17:09:19Z",
+        "additions": 1750,
+        "deletions": 22,
+        "changed_files": 13
+      },
+      {
+        "title": "APO-15984: Reuse a person's connection when they sign in again",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5816",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-20T17:10:47Z",
+        "additions": 132,
+        "deletions": 24,
+        "changed_files": 2
+      },
+      {
+        "title": "feat(admin): pass the AI assistant signing key to admin (APO-15362)",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/108",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-10-19T15:12:15Z",
+        "additions": 29,
+        "deletions": 1,
+        "changed_files": 3
+      },
+      {
+        "title": "Record why a review failed, and classify coordinator errors",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/89",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-10-19T12:41:27Z",
+        "additions": 71,
+        "deletions": 25,
+        "changed_files": 1
+      },
+      {
+        "title": "Hide approved pull requests from the review queue",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/88",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-10-19T11:52:08Z",
+        "additions": 77,
+        "deletions": 2,
+        "changed_files": 4
+      },
+      {
+        "title": "APO-15872: Return JSON from Giving create-session when Stripe fails",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5801",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-20T15:29:54Z",
+        "additions": 176,
+        "deletions": 47,
+        "changed_files": 4
+      },
+      {
+        "title": "Admin content editor should not crash when AI rewrite streams during collab",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5763",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-19T19:59:54Z",
+        "additions": 25,
+        "deletions": 19,
+        "changed_files": 3
+      },
+      {
+        "title": "APO-15737: Retry a Cluster read once when the connection resets",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5762",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-20T19:41:46Z",
+        "additions": 134,
+        "deletions": 4,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(mobile): use ghost variant for assessment results Edit (APO-13265)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7524",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-22T17:38:04Z",
+        "additions": 7,
+        "deletions": 1,
+        "changed_files": 2
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix(mobile): ignore Apollo Network request failed in Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7912",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "Mobile should not warn Sentry when schema introspection is offline",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7905",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "Mobile should not report expected No person in context GraphQL errors to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7903",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "APO-16170: Reload once when a web route module fails to import",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5843",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Claim FreedUp access from live Woo orders (APO-13827)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4857",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Decide FreedUp purchase from the signed-in email (APO-13608)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4853",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Prove staff override grants the gate Persona (APO-13607)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4852",
+        "repo": "apollos-cluster",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "fix(mobile): fail closed on lookalike TLD letters and dot marks in chat link titles (APO-16440)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7914",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-23T17:34:48Z",
+        "reviewed_at": "2026-10-23T18:33:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.98
+      },
+      {
+        "title": "APO-16218: Name v1's Failed columns and headers in the v2 request",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5922",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-23T17:57:05Z",
+        "reviewed_at": "2026-10-23T18:33:17Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.6
+      },
+      {
+        "title": "Test the EmptyRanges filter with mixed and <anonymous> frames",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5920",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-23T18:25:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(ecs): deploy version-controlled images on Fargate",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/130",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-10-23T16:37:23Z",
+        "reviewed_at": "2026-10-23T18:28:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.85
+      },
+      {
+        "title": "APO-16376: add a reply eval for the MCP server",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5919",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-23T16:08:54Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-16396: fit the MCP server instructions in 4096 characters",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5918",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-23T16:58:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(mobile): join formatted chat list previews onto one line (APO-16302)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7907",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-23T10:34:15Z",
+        "reviewed_at": "2026-10-23T14:55:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.92
+      },
+      {
+        "title": "fix(mobile): cap Responses question banner so list stays visible (APO-16305)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7906",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-23T09:05:48Z",
+        "reviewed_at": "2026-10-23T14:55:04Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.92
+      },
+      {
+        "title": "fix(admin): create one Tap action group for all ranges (APO-16336)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5915",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-23T05:54:32Z",
+        "reviewed_at": "2026-10-23T14:56:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.95
+      },
+      {
+        "title": "fix(mobile): fetch getChurch once per launch, not per consumer (APO-16386)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7904",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-23T04:38:53Z",
+        "reviewed_at": "2026-10-23T14:54:47Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.91
+      },
+      {
+        "title": "Mobile should not report expected No person in context GraphQL errors to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7903",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-10-23T16:26:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-16370: give each item a date label in church time",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5907",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-22T21:19:25Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-16361: link each item the assistant writes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5906",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-22T21:19:23Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-16375: tell the assistant how to format its replies",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5905",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-22T21:52:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(mobile): close remaining chat link title disguise holes (APO-16362)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7900",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-22T19:54:08Z",
+        "reviewed_at": "2026-10-23T14:58:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.07
+      },
+      {
+        "title": "fix(mobile): refresh church settings past persisted cache (APO-16356)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7896",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-22T18:35:58Z",
+        "reviewed_at": "2026-10-22T18:49:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.23
+      },
+      {
+        "title": "Redesign the assistant consent page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5895",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-22T18:43:05Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(admin): shared Cluster REST client for bespoke and PostgREST lanes (APO-12270)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5893",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-22T16:26:19Z",
+        "reviewed_at": "2026-10-22T18:58:01Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.53
+      },
+      {
+        "title": "fix(ci): install and verify the NDK before Gradle (APO-16341)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7890",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-22T16:27:07Z",
+        "reviewed_at": "2026-10-22T18:51:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.41
+      },
+      {
+        "title": "fix(config): take the config route tenant from :church (APO-12268)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5998",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-22T15:38:40Z",
+        "reviewed_at": "2026-10-22T18:53:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.25
+      },
+      {
+        "title": "Scope person tag writes to the caller's church",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5885",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-22T16:27:05Z",
+        "reviewed_at": "2026-10-22T19:46:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.33
+      },
+      {
+        "title": "Reports: remove the V2 date floor (APO-16262)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5883",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-22T12:46:17Z",
+        "reviewed_at": "2026-10-22T14:53:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.88
+      },
+      {
+        "title": "feat(web): translate web give, giving history, and login/sign-up to es/pt (APO-16263)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5881",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-22T15:24:02Z",
+        "reviewed_at": "2026-10-22T19:17:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.89
+      },
+      {
+        "title": "fix(mobile): show the real address when a chat link title glues a host with other punctuation or hides it in user:password@ (APO-16269)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7878",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-22T00:35:43Z",
+        "reviewed_at": "2026-10-22T14:53:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.89
+      },
+      {
+        "title": "feat(polls): link polls to group meetings (APO-16270)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5983",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-22T14:17:19Z",
+        "reviewed_at": "2026-10-22T14:53:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.6
+      },
+      {
+        "title": "APO-15361: Playwright for assistant consent and the AI Assistants page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5878",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-22T19:39:50Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Keep review filter controls in sync after Back and reload",
+        "url": "https://github.com/ApollosProject/bug-board/pull/691",
+        "repo": "bug-board",
+        "requested_at": "2026-10-21T17:46:15Z",
+        "reviewed_at": "2026-10-21T19:06:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.34
+      },
+      {
+        "title": "fix(admin): show the Creator AI error inside the output panel",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5873",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-22T14:53:28Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(account): enable GuardDuty and route findings to Linear (APO-16236)",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/126",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-10-22T16:38:22Z",
+        "reviewed_at": "2026-10-22T18:56:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.3
+      },
+      {
+        "title": "APO-16225: Recover Creator AI scripture from content_filter stops",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5869",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-22T02:44:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-16228: Replace Creator AI scripture that doesn't match its heading",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5868",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-21T20:57:48Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Rename PR template Screenshots section to Proof",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5865",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-23T17:44:51Z",
+        "reviewed_at": "2026-10-23T18:27:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.71
+      },
+      {
+        "title": "Move assistant draft creation into a shared content operation",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5862",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-21T14:30:20Z",
+        "reviewed_at": "2026-10-21T15:10:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.67
+      },
+      {
+        "title": "APO-16143: Search content by collection and status",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5861",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-21T14:30:34Z",
+        "reviewed_at": "2026-10-21T15:09:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.65
+      },
+      {
+        "title": "feat(postgrest): run PostgREST in production (APO-12269)",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/123",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-10-21T16:53:32Z",
+        "reviewed_at": "2026-10-21T19:05:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.2
+      },
+      {
+        "title": "sql: create PostgREST's authenticator role in production (APO-12269)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5936",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-21T13:50:19Z",
+        "reviewed_at": "2026-10-21T15:23:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.4
+      },
+      {
+        "title": "fix(mobile): drop marks from scheduled message previews with only a link (APO-16166)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7860",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-21T06:34:08Z",
+        "reviewed_at": "2026-10-21T19:05:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.1
+      },
+      {
+        "title": "fix(mobile): show the real address when a chat link title glues a host to a word or hides it in user@ (APO-16198)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7857",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-21T03:35:20Z",
+        "reviewed_at": "2026-10-21T19:06:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.11
+      },
+      {
+        "title": "fix(admin): explain production-ready blockers on store deploy controls",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5855",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T22:51:50Z",
+        "reviewed_at": "2026-10-22T18:57:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.96
+      },
+      {
+        "title": "Admin content editor should not crash when expanding a section in Safari",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5854",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-23T17:52:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): scope collaboration JWTs to the authorized document",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5848",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T20:52:48Z",
+        "reviewed_at": "2026-10-20T21:34:44Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.7
+      },
+      {
+        "title": "fix(mobile): route alias links whose slug extends the church slug (APO-16158)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7853",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-20T20:56:02Z",
+        "reviewed_at": "2026-10-20T21:29:36Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "ci: drop m6a from RunsOn instance families",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5895",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-20T19:38:53Z",
+        "reviewed_at": "2026-10-20T21:34:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.93
+      },
+      {
+        "title": "APO-16164: Stop reporting Safari EmptyRanges on web content",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5841",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-23T16:27:54Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-16140: Serve the MCP route from the SDK v2 handler, on both protocols",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5837",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T20:24:52Z",
+        "reviewed_at": "2026-10-20T21:27:41Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.05
+      },
+      {
+        "title": "APO-16145: Ask for read, draft, and schedule at consent, and check each tool's scope",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5836",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T18:06:03Z",
+        "reviewed_at": "2026-10-20T18:37:31Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.52
+      },
+      {
+        "title": "APO-16141: Limit each assistant connection to 60 tool calls a minute",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5832",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T17:12:20Z",
+        "reviewed_at": "2026-10-20T17:14:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.04
+      },
+      {
+        "title": "ci: widen RunsOn spot instance families",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5831",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T16:50:05Z",
+        "reviewed_at": "2026-10-20T16:58:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.15
+      },
+      {
+        "title": "ci: widen RunsOn spot instance families",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5888",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-20T16:50:00Z",
+        "reviewed_at": "2026-10-20T16:56:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.1
+      },
+      {
+        "title": "ci: drop RunsOn runner volumes to the free 125 MB/s gp3 baseline",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5830",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T16:50:03Z",
+        "reviewed_at": "2026-10-20T16:56:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "ci: drop RunsOn runner volumes to the free 125 MB/s gp3 baseline",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5887",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-20T16:49:57Z",
+        "reviewed_at": "2026-10-20T16:56:22Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "APO-16142: Hold the assistant's database calls at zero that skip the church role",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5829",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T17:00:54Z",
+        "reviewed_at": "2026-10-20T17:08:41Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.13
+      },
+      {
+        "title": "APO-16125: S6 code 1 of 4: media search and settings reads",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5828",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-23T17:42:43Z",
+        "reviewed_at": "2026-10-23T18:30:57Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.8
+      },
+      {
+        "title": "feat(church): grant new church roles to PostgREST's authenticator (APO-12269)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5827",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-21T13:02:44Z",
+        "reviewed_at": "2026-10-21T18:45:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.76
+      },
+      {
+        "title": "feat(postgrest): pass an allowlist of PostgREST resources through cluster (APO-12269)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5882",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-20T13:55:30Z",
+        "reviewed_at": "2026-10-20T15:26:38Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.44
+      },
+      {
+        "title": "Reports: show the V1 fallback notice only next to the version select (APO-16124)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5826",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T13:40:28Z",
+        "reviewed_at": "2026-10-20T15:23:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.39
+      },
+      {
+        "title": "feat(postgrest): private PostgREST over the cluster DB on staging (APO-12269)",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/114",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-10-20T13:53:30Z",
+        "reviewed_at": "2026-10-20T15:20:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.34
+      },
+      {
+        "title": "fix(mobile): keep a multi-day event range together when it has display text (APO-16058)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7839",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-20T03:41:59Z",
+        "reviewed_at": "2026-10-20T15:27:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.46
+      },
+      {
+        "title": "fix(mobile): show the real address when a chat link title hides another site in a longer title (APO-16069)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7837",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-20T00:06:24Z",
+        "reviewed_at": "2026-10-20T15:22:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.37
+      },
+      {
+        "title": "fix(mobile): show a lookalike chat link address in punycode (APO-16070)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7836",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-20T00:06:29Z",
+        "reviewed_at": "2026-10-20T15:23:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.4
+      },
+      {
+        "title": "fix(admin): People sends no contact details to staff without Audience (APO-16034)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5821",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T00:06:51Z",
+        "reviewed_at": "2026-10-20T15:29:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.49
+      },
+      {
+        "title": "fix(mobile): complete registration before Connect Button name step (APO-16035)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7833",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-20T00:06:36Z",
+        "reviewed_at": "2026-10-20T14:39:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.66
+      },
+      {
+        "title": "fix(mobile): give Daily day sheet rows a button role (APO-15977)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7829",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-19T20:56:07Z",
+        "reviewed_at": "2026-10-20T15:30:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.57
+      },
+      {
+        "title": "APO-15358: Add the AI Assistants page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5817",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-19T17:23:01Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-15984: Reuse a person's connection when they sign in again",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5816",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-19T17:18:12Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-15979: Prove an assistant never writes at a look-alike church",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5815",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-23T17:17:19Z",
+        "reviewed_at": "2026-10-23T18:33:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.27
+      },
+      {
+        "title": "APO-15979: Never write at a look-alike church",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5814",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-21T17:25:14Z",
+        "reviewed_at": "2026-10-21T19:10:25Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.75
+      },
+      {
+        "title": "fix(prayer): keep the Pray for others list when the Daily tab refetches (APO-15970)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7824",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-19T11:48:39Z",
+        "reviewed_at": "2026-10-19T12:14:22Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): resolve confirm() as cancel when Android dismisses it (APO-15185)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7816",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-19T06:52:26Z",
+        "reviewed_at": "2026-10-19T11:57:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): name the Daily day sheet close button for screen readers",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7801",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-18T21:36:11Z",
+        "reviewed_at": "2026-10-19T11:57:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "Delete a generated Creator plan and all its days in one action (APO-12819)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5803",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-17T05:48:08Z",
+        "reviewed_at": "2026-10-19T12:19:51Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): refresh Find Communities after leaving a community (APO-15827)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7798",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-19T08:49:58Z",
+        "reviewed_at": "2026-10-19T11:57:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "chore(scripts): remove obsolete followup-send smoke and charge-sync concurrency scripts",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5833",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-21T14:58:44Z",
+        "reviewed_at": "2026-10-21T19:04:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.09
+      },
+      {
+        "title": "fix(ci): fail closed on reviewer-check API errors",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5793",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-19T20:25:34Z",
+        "reviewed_at": "2026-10-19T20:51:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.42
+      },
+      {
+        "title": "feat(admin): gate super-admin production-ready store controls (APO-15756)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5789",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-18T21:34:13Z",
+        "reviewed_at": "2026-10-19T12:31:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): expose the chat phone-verification resend link as an accessible button (APO-15807)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7784",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-19T17:33:59Z",
+        "reviewed_at": "2026-10-19T17:53:08Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.32
+      },
+      {
+        "title": "fix(auth): return 401 for rejected access tokens (APO-15799)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5824",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-19T09:32:39Z",
+        "reviewed_at": "2026-10-19T12:44:59Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "APO-15768: S5 code 2 of 4: scripture block",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5781",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T20:36:58Z",
+        "reviewed_at": "2026-10-20T21:32:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.93
+      },
+      {
+        "title": "Keep Reviews filter controls in sync on Reset and Back",
+        "url": "https://github.com/ApollosProject/bug-board/pull/682",
+        "repo": "bug-board",
+        "requested_at": "2026-10-19T09:40:24Z",
+        "reviewed_at": "2026-10-19T12:48:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "APO-15767: S5 code 1 of 4: scripture lookup",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5775",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T20:11:46Z",
+        "reviewed_at": "2026-10-20T21:27:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.26
+      },
+      {
+        "title": "APO-15758: Add search to giving campaign fund dropdowns",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5772",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-19T14:59:51Z",
+        "reviewed_at": "2026-10-19T15:57:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.96
+      },
+      {
+        "title": "APO-15757: Confirm before saving when campuses share a campaign fund",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5771",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-17T01:47:22Z",
+        "reviewed_at": "2026-10-19T12:19:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "APO-15737: Retry a Cluster read once when the connection resets",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5762",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-20T16:50:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): create invites and their memberships in one locked transaction (APO-13805)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5756",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T20:38:40Z",
+        "reviewed_at": "2026-10-19T12:28:01Z",
+        "review_state": "APPROVED",
+        "latency_hours": 9.36
+      },
+      {
+        "title": "Add schedule_content",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5754",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T20:11:33Z",
+        "reviewed_at": "2026-10-20T21:39:44Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.47
+      },
+      {
+        "title": "APO-15582: Prove a week drafted and revised live",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5735",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-19T13:48:14Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(mobile): expose Notification Settings switches to VoiceOver (APO-15055)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7743",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-15T09:07:32Z",
+        "reviewed_at": "2026-10-19T12:45:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 16
+      },
+      {
+        "title": "feat(mobile): complete single-page content on reaching the end (APO-13770)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7740",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-19T17:35:14Z",
+        "reviewed_at": "2026-10-19T17:55:08Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.33
+      },
+      {
+        "title": "feat(admin): one Support Email setting on Give Settings (APO-11218)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5720",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T19:55:42Z",
+        "reviewed_at": "2026-10-20T21:28:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.55
+      },
+      {
+        "title": "fix(web-embeds): don't override author link colors in HTML content (APO-10692)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5717",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-19T18:10:11Z",
+        "reviewed_at": "2026-10-19T18:12:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.03
+      },
+      {
+        "title": "APO-15581: Let the assistant change a draft while a person edits it",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5711",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-19T13:48:13Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Read the live document, with church-time dates and a version",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5708",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T14:10:36Z",
+        "reviewed_at": "2026-10-20T15:20:36Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.17
+      },
+      {
+        "title": "Write several dated drafts in one assistant call",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5705",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-19T13:48:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Prove an assistant works across churches",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5703",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-16T18:44:08Z",
+        "reviewed_at": "2026-10-19T17:53:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.15
+      },
+      {
+        "title": "Pick several churches at consent",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5702",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-16T18:44:06Z",
+        "reviewed_at": "2026-10-19T12:16:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.27
+      },
+      {
+        "title": "Pick the church on every assistant call",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5700",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-16T18:44:03Z",
+        "reviewed_at": "2026-10-19T12:16:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.27
+      },
+      {
+        "title": "fix(admin): require team access and membership to send invites from inviteMember",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5698",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-13T17:12:03Z",
+        "reviewed_at": "2026-10-19T17:53:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 32.69
+      },
+      {
+        "title": "Carry Creator's content rules into the assistant",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5687",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T17:23:09Z",
+        "reviewed_at": "2026-10-19T12:16:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.61
+      },
+      {
+        "title": "Prove a local agent can create one draft",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5673",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T17:23:05Z",
+        "reviewed_at": "2026-10-19T12:46:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.62
+      },
+      {
+        "title": "APO-15407: Create one draft and record the activity",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5668",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-12T18:34:30Z",
+        "reviewed_at": "2026-10-19T12:45:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 35.42
+      },
+      {
+        "title": "APO-15406: Add read tools for one church's content",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5666",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T17:22:58Z",
+        "reviewed_at": "2026-10-19T12:45:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.62
+      },
+      {
+        "title": "APO-15405: Refuse an assistant call the church has not allowed",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5665",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T17:22:55Z",
+        "reviewed_at": "2026-10-19T12:45:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.62
+      },
+      {
+        "title": "APO-15404: Add assistant sign-in, consent, and token exchange",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5641",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-15T17:22:52Z",
+        "reviewed_at": "2026-10-19T12:46:07Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.62
+      },
+      {
+        "title": "feat(giving): add a single stuck-charge sweep DAG",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2022",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-10-16T15:38:06Z",
+        "reviewed_at": "2026-10-19T12:13:04Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.37
+      },
+      {
+        "title": "fix(admin): replay a divergent editor document on open (APO-15221)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5577",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-20T13:42:23Z",
+        "reviewed_at": "2026-10-20T15:29:23Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.49
+      },
+      {
+        "title": "feat(tv)!: native tvOS and Android TV apps with the white-label deploy",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7685",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-20T17:58:19Z",
+        "reviewed_at": "2026-10-20T18:40:23Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.7
+      },
+      {
+        "title": "fix(admin): share links use the church's primary alias slug (APO-14527)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5333",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-29T15:14:21Z",
+        "reviewed_at": "2026-10-22T18:50:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 139.6
+      },
+      {
+        "title": "refactor(db): use native arrays for CHMS and event queries",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/1892",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-10-21T16:23:09Z",
+        "reviewed_at": "2026-10-21T19:08:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.75
+      },
+      {
+        "title": "(CCC Omaha) Show which users a spammer has messaged in Admin (APO-9173)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4545",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-07T07:07:34Z",
+        "reviewed_at": "2026-10-22T18:53:39Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 268.89
+      },
+      {
+        "title": "refactor(web-embeds): share parseHexRgb in ThemeProvider (APO-12338)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4368",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-19T14:07:39Z",
+        "reviewed_at": "2026-10-19T14:08:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.02
+      },
+      {
+        "title": "fix(admin): require auth and block SSRF on integration test",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4188",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-01T21:28:44Z",
+        "reviewed_at": "2026-10-19T12:20:00Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 264.52
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- Stop reporting stackless Safari and Firefox network errors to Sentry\n- feat(admin): pass the AI assistant signing key to admin (APO-15362)\n- Record why a review failed, and classify coordinator errors\n- Hide approved pull requests from the review queue\n- Register a Sentry release for each Admin production publish\n- Filter Top Tapped Items by the church's app names so BigQuery prunes\n- Admin content editor should not crash when AI rewrite streams during collab\n- Reviewed: APO-15358: Add the AI Assistants page\n- Reviewed: APO-15984: Reuse a person's connection when they sign in again\n- Reviewed: fix(prayer): keep the Pray for others list when the Daily tab refetches (APO-15970)\n- Reviewed: fix(mobile): resolve confirm() as cancel when Android dismisses it (APO-15185)\n- Reviewed: fix(mobile): name the Daily day sheet close button for screen readers\n- Reviewed: Delete a generated Creator plan and all its days in one action (APO-12819)\n- Reviewed: fix(mobile): refresh Find Communities after leaving a community (APO-15827)\n- Reviewed: fix(ci): fail closed on reviewer-check API errors\n- Reviewed: feat(admin): gate super-admin production-ready store controls (APO-15756)\n- Reviewed: fix(mobile): expose the chat phone-verification resend link as an accessible button (APO-15807)\n- Reviewed: fix(auth): return 401 for rejected access tokens (APO-15799)\n- Reviewed: Keep Reviews filter controls in sync on Reset and Back\n- …and 22 more reviews\n- Done: APO-15849: Admin Top Tapped Items chart scans 6-8 GB of BigQuery on every load\n- Done: APO-15738: Admin content editor crashes when Tiptap AI stream mapping is missing\n- Done: APO-15736: Admin dashboard reports BigQuery chart queries over 1GB as Sentry errors\n- Done: APO-15434: Admin should not report Safari turbo-stream decode failures to Sentry\n- Done: APO-15401: Admin should not report leftover React Router fetcher routeIds to Sentry\n- Done: APO-15362: MCP sidecar: signing key secret and env vars in apollos-infrastructure\n- Done: APO-15319: Admin should not report Chrome Failed to fetch on React Router data fetches to Sentry\n- Done: APO-15306: Admin should not report y-prosemirror collab selection restore as a Sentry error\n- Done: APO-15305: Admin should not report Safari Load failed on React Router data fetches to Sentry\n- Done: APO-15593: MCP sidecar: autosave after a change from someone else\n- Done: APO-15578: MCP sidecar: live editing in local proofs\n- Done: APO-15407: S1 code 4 of 4: create one draft and record the activity\n- …and 1 more completed issues\n- In progress: APO-15984: MCP sidecar: Reuse a person's connection when they sign in again\n- In progress: APO-15872: Admin Giving reports Safari JSON parse of create-session 500 as Sentry noise\n- In progress: APO-15737: Admin content load reports Node fetch ECONNRESET as a Sentry error\n- In progress: APO-15358: MCP sidecar: AI Assistants page\n- In progress: APO-14402: Admin AI Writer crashes when attaching server video after the doc changed\n- In progress: APO-14398: Admin Insert Page crashes with mismatched transaction when pages already exist\n- In progress: APO-13827: Claim FreedUp access from live Woo orders\n- In progress: APO-13608: Build the grant path: signed-in check page on Apollos Web\n- In progress: APO-13607: Staff override for paid FreedUp access\n- In progress: APO-13606: Lock a content series to a required tag\n- In progress: APO-13605: Mint a FreedUp purchase tag on the person\n- In progress: APO-13265: Assessment Results State: Edit button needs adjusted\n- …and 2 more in-flight issues\n- Filed 21 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- APO-16091: Stop reporting stackless Safari AbortError on web content\n- APO-15358: Add the AI Assistants page\n- APO-15984: Reuse a person's connection when they sign in again\n- APO-15872: Return JSON from Giving create-session when Stripe fails\n- APO-15737: Retry a Cluster read once when the connection resets\n- Reviewed: fix(admin): scope collaboration JWTs to the authorized document\n- Reviewed: fix(mobile): route alias links whose slug extends the church slug (APO-16158)\n- Reviewed: ci: drop m6a from RunsOn instance families\n- Reviewed: APO-16140: Serve the MCP route from the SDK v2 handler, on both protocols\n- Reviewed: APO-16145: Ask for read, draft, and schedule at consent, and check each tool's scope\n- Reviewed: APO-16141: Limit each assistant connection to 60 tool calls a minute\n- Reviewed: ci: widen RunsOn spot instance families\n- Reviewed: ci: widen RunsOn spot instance families\n- Reviewed: ci: drop RunsOn runner volumes to the free 125 MB/s gp3 baseline\n- Reviewed: ci: drop RunsOn runner volumes to the free 125 MB/s gp3 baseline\n- Reviewed: APO-16142: Hold the assistant's database calls at zero that skip the church role\n- Reviewed: feat(postgrest): pass an allowlist of PostgREST resources through cluster (APO-12269)\n- …and 18 more reviews\n- Done: APO-15876: Admin should not report Firefox media AbortError on Content to Sentry\n- Done: APO-15872: Admin Giving reports Safari JSON parse of create-session 500 as Sentry noise\n- Done: APO-15863: Admin should not report stackless Firefox NetworkError on Giving to Sentry\n- Done: APO-15741: Admin should not report stackless Safari Load failed on Content to Sentry\n- In progress: APO-16184: Admin should not report stackless Firefox Error in input stream on Giving to Sentry\n- In progress: APO-16183: Admin should not report Safari Load failed when hashed react-dom sits above React Router fetch\n- In progress: APO-16177: Admin should not report AbortError signal is aborted without reason on React Router cancel to Sentry\n- In progress: APO-16173: Admin should not report Safari Fetch is aborted when React and Sentry frames sit above the router fetch\n- In progress: APO-16171: Web should not report Amplitude localStorage SecurityError to Sentry\n- In progress: APO-16170: Web should not report failed dynamic module imports on FeatureFeed to Sentry\n- In progress: APO-16164: Web should not report third-party EmptyRanges ReferenceError to Sentry\n- Filed 8 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- fix(admin): tag Sentry events with the deployment environment\n- Reviewed: Keep review filter controls in sync after Back and reload\n- Reviewed: APO-16228: Replace Creator AI scripture that doesn't match its heading\n- Reviewed: Move assistant draft creation into a shared content operation\n- Reviewed: APO-16143: Search content by collection and status\n- Reviewed: feat(postgrest): run PostgREST in production (APO-12269)\n- Reviewed: sql: create PostgREST's authenticator role in production (APO-12269)\n- Reviewed: fix(mobile): drop marks from scheduled message previews with only a link (APO-16166)\n- Reviewed: fix(mobile): show the real address when a chat link title glues a host to a word or hides it in user@ (APO-16198)\n- Reviewed: feat(church): grant new church roles to PostgREST's authenticator (APO-12269)\n- Reviewed: APO-15979: Never write at a look-alike church\n- Reviewed: chore(scripts): remove obsolete followup-send smoke and charge-sync concurrency scripts\n- Reviewed: Add schedule_content\n- …and 1 more reviews\n- Done: APO-16223: Resolve admin Sentry issues whose events are all from staging or local dev\n- Done: APO-16222: Scope Sentry alerts and inbox views to environment:production for admin and web\n- Done: APO-16220: Admin: tag Sentry events with the deployment environment\n- Done: APO-16219: Sentry environment tagging is wrong or missing across admin, web, and web-embeds\n- Done: APO-16217: Admin runs out of Prisma connections under load (APOLLOS-ADMIN-75M)\n- Done: APO-16091: Web should not report stackless Safari AbortError on content pages to Sentry\n- Done: APO-15984: MCP sidecar: Reuse a person's connection when they sign in again\n- Done: APO-15790: S2 sidecar: style the consent page like the login page\n- Done: APO-15737: Admin content load reports Node fetch ECONNRESET as a Sentry error\n- Done: APO-15358: MCP sidecar: AI Assistants page\n- Done: APO-14379: Resolve Sentry issues whose fixes already shipped to production\n- Done: APO-16144: S1 fix: a shared createDraft operation\n- …and 14 more completed issues\n- In progress: APO-16251: MCP sign-in: revoking a refresh token leaves the grant's access tokens working\n- In progress: APO-16228: Creator AI: detect when model-written scripture doesn't match the requested passage\n- In progress: APO-16225: Creator AI: recover from content_filter stops on scripture instead of failing\n- In progress: APO-16197: Admin should not report React Router 502 on Content __manifest to Sentry\n- In progress: APO-16196: Admin Fetch is aborted grouping 767\n- In progress: APO-16186: Admin content editor crashes when expanding a section in Safari\n- In progress: APO-16171: Web should not report Amplitude localStorage SecurityError to Sentry\n- In progress: APO-16164: Web should not report third-party EmptyRanges ReferenceError to Sentry\n- Filed 20 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- APO-16251: Revoking a refresh token also ends its connection\n- fix(admin): show the Creator AI error inside the output panel\n- APO-16225: Recover Creator AI scripture from content_filter stops\n- APO-16228: Replace Creator AI scripture that doesn't match its heading\n- fix(mobile): use ghost variant for assessment results Edit (APO-13265)\n- Reviewed: fix(mobile): refresh church settings past persisted cache (APO-16356)\n- Reviewed: Redesign the assistant consent page\n- Reviewed: feat(admin): shared Cluster REST client for bespoke and PostgREST lanes (APO-12270)\n- Reviewed: fix(ci): install and verify the NDK before Gradle (APO-16341)\n- Reviewed: fix(config): take the config route tenant from :church (APO-12268)\n- Reviewed: Scope person tag writes to the caller's church\n- Reviewed: Reports: remove the V2 date floor (APO-16262)\n- Reviewed: feat(web): translate web give, giving history, and login/sign-up to es/pt (APO-16263)\n- Reviewed: fix(mobile): show the real address when a chat link title glues a host with other punctuation or hides it in user:password@ (APO-16269)\n- Reviewed: feat(polls): link polls to group meetings (APO-16270)\n- Reviewed: APO-15361: Playwright for assistant consent and the AI Assistants page\n- Reviewed: fix(admin): show the Creator AI error inside the output panel\n- …and 8 more reviews\n- Done: APO-16251: MCP sign-in: revoking a refresh token leaves the grant's access tokens working\n- Done: APO-15349: MCP S1: connect and draft one item\n- In progress: APO-16375: MCP: keep replies to markdown every client can show\n- In progress: APO-16374: MCP: end each reply with one specific next step\n- In progress: APO-16373: MCP: quote what changed when an edit hits someone else's change\n- In progress: APO-16372: MCP: use tables for the church picker and search results\n- In progress: APO-16371: MCP: show the reference and translation for each scripture passage in replies\n- In progress: APO-16370: MCP: return a ready-made date label with each item\n- In progress: APO-16369: MCP: return a resource link for each item a tool writes\n- In progress: APO-16361: MCP: give a link to each new draft, not its ID\n- In progress: APO-15361: MCP sidecar: Playwright for consent and the AI Assistants page\n- Filed 15 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- Test the EmptyRanges filter with mixed and <anonymous> frames\n- APO-16376: add a reply eval for the MCP server\n- APO-16396: fit the MCP server instructions in 4096 characters\n- Stop warning Sentry when tap scan falls back to Admin\n- Stop warning Sentry when tap apex has no asset-links subdomain\n- APO-16370: give each item a date label in church time\n- APO-16361: link each item the assistant writes\n- APO-16375: tell the assistant how to format its replies\n- Redesign the assistant consent page\n- APO-15361: Playwright for assistant consent and the AI Assistants page\n- Admin content editor should not crash when expanding a section in Safari\n- APO-16171: Give Amplitude in-memory storage when the browser blocks localStorage\n- …and 1 more (see Weekly Summary)\n- Reviewed: fix(mobile): fail closed on lookalike TLD letters and dot marks in chat link titles (APO-16440)\n- Reviewed: APO-16218: Name v1's Failed columns and headers in the v2 request\n- Reviewed: Test the EmptyRanges filter with mixed and <anonymous> frames\n- Reviewed: fix(ecs): deploy version-controlled images on Fargate\n- Reviewed: APO-16376: add a reply eval for the MCP server\n- Reviewed: APO-16396: fit the MCP server instructions in 4096 characters\n- Reviewed: fix(mobile): join formatted chat list previews onto one line (APO-16302)\n- Reviewed: fix(mobile): cap Responses question banner so list stays visible (APO-16305)\n- Reviewed: fix(admin): create one Tap action group for all ranges (APO-16336)\n- Reviewed: fix(mobile): fetch getChurch once per launch, not per consumer (APO-16386)\n- Reviewed: Mobile should not report expected No person in context GraphQL errors to Sentry\n- Reviewed: APO-16370: give each item a date label in church time\n- …and 10 more reviews\n- Done: APO-16375: MCP: keep replies to markdown every client can show\n- Done: APO-16374: MCP: end each reply with one specific next step\n- Done: APO-16373: MCP: quote what changed when an edit hits someone else's change\n- Done: APO-16372: MCP: use tables for the church picker and search results\n- Done: APO-16371: MCP: show the reference and translation for each scripture passage in replies\n- Done: APO-16370: MCP: return a ready-made date label with each item\n- Done: APO-16369: MCP: return a resource link for each item a tool writes\n- Done: APO-16361: MCP: give a link to each new draft, not its ID\n- Done: APO-16228: Creator AI: detect when model-written scripture doesn't match the requested passage\n- Done: APO-16225: Creator AI: recover from content_filter stops on scripture instead of failing\n- Done: APO-16186: Admin content editor crashes when expanding a section in Safari\n- Done: APO-16171: Web should not report Amplitude localStorage SecurityError to Sentry\n- …and 7 more completed issues\n- In progress: APO-16428: Mobile should not report Apollo fetch Network request failed to Sentry\n- In progress: APO-16421: Mobile should not warn Sentry when schema introspection is offline\n- In progress: APO-16413: Mobile should not report expected No person in context GraphQL errors to Sentry\n- In progress: APO-16377: MCP: richer markdown replies\n- In progress: APO-16170: Web should not report failed dynamic module imports on FeatureFeed to Sentry\n- Filed 15 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": ", October 23\nDaily\nWhat did you work on today\n2:07 PM\nWeekly Update w/ Michael and @David\nShipped the batch of AI assistant reply improvements, like links to new drafts, tables for church lists, the reference and translation for each passage, and one clear next step\nAdded automated tests for the AI Assistants page and approval screen\nClosed out the AI writer scripture fixes\nFixed the Admin content editor crashing when expanding a section in Safari, and quieted a few noisy crash reports on web and mobile\nLogged a batch of mobile errors where things like daily habits and prayer requests failed to load\nInvestigated and explained this morning's slowdown to @John: a Cloudflare network outage on the East Coast, while our servers stayed healthy\nTested Slice 5 of Apollos MCP and cleaned up slices 1-4 (they are all complete and in prod)\nLined up FreedUp paid access as next week's priority w/ @Conrad, pending his Goodsense meeting\nScreenshot 2026-10-23 at 2.06.36 PM.png\nScreenshot 2026-10-23 at 2.06.36 PM.png"
+    },
+    {
+      "day": "Thursday",
+      "content": ", October 22\nDaily\nWhat did you work on today\n3:43 PM\nMerged the AI writer fixes that catch mismatched scripture and recover when the AI refuses a passage\nMerged the Edit button fix on the assessment results screen\nFixed AI assistant sign-in so removing a connection shuts off access right away\nPut a batch of AI assistant reply improvements in review w/ @Austin, including links to new drafts, tables for church and search results, and the reference and translation for each passage\nMocked up a AI Assistant Connection page w/ @Austin\nShared a Loom of the AI assistant in #dev for @Clayton\nClosed out leftover Admin crash reports that were only browser network noise\nScreenshot 2026-10-22 at 3.38.44 PM.png\nScreenshot 2026-10-22 at 3.38.44 PM.png"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", October 21\nDaily\nWhat did you work on today\n4:16 PM\nFixed Sentry for Web and Admin so that environment is stored correctly!\nCleared out old crash reports from Sentry, plus ones that were already fixed\nFixed Admin running out of database connections when it got busy, and quieted two noisy crash reports on Admin and web\nShipped the AI Assistants page in Admin, made returning users reuse their AI connection, and styled the approval page to match login\nConfirmed Slice 4 of Apollos MCP worked and told @Austin it was good to move out of draft\nSorted about 20 loose Apollos MCP tickets into milestones correctly\nPut two AI writer fixes in review: it now catches scripture that doesn't match the passage someone asked for, and recovers when the AI refuses to write a passage\nFlagged that we hit the Bible lookup limit for local testing, which resets Nov 7\nScreenshot 2026-10-21 at 4.15.20 PM.png\nScreenshot 2026-10-21 at 4.15.20 PM.png"
+    },
+    {
+      "day": "Tuesday",
+      "content": ", October 20\nDaily\nWhat did you work on today\n4:50 PM\nMerged the new AI Assistants page in Admin, and made signing in again reuse a person's existing assistant connection\nFiled a follow-up so the AI Assistants page shows churches how to connect\nMerged fixes so Giving shows a clear error when Stripe fails, and so content retries once when the connection drops\nClosed a batch of Admin crash reports caused by everyday browser network hiccups\nKept more web and Admin crash cleanup in review\nMet up w/ @Conrad and @Clayton\nSent @Conrad boil the ocean feedback\nScreenshot 2026-10-20 at 4.49.44 PM.png\nScreenshot 2026-10-20 at 4.49.44 PM.png"
+    },
+    {
+      "day": "Monday",
+      "content": ", October 19\nDaily\nWhat did you work on today\n5:40 PM\nStarted testing the next round of the AI assistant connection work w/ @Austin\nOpened a fix so people don't have to reconnect their AI assistant when they sign in again, and kept the AI Assistants page in Admin moving through review\nStarted testing Slice 4 of Apollos MCP w/ @Austin\nClosed an Admin content editor crash tied to the AI writer\nMerged three fixes that stop harmless browser network blips from showing up as Admin errors, and closed four more reports that didn't need a fix\nShared a chart in #dev showing Admin errors dropping over the last month\nWorked in person w/ @Conrad and @Clayton in downtown McKinney\nTried @Conrad's early prototype of an AI-driven Admin and gave feedback\nScreenshot 2026-10-19 at 5.38.34 PM.png\nCallouts for:\n- Apollos AI assistant: Took it from idea to working in production for our demo church w/ @Austin. Churches can connect ChatGPT or Claude to Apollos, find their content, and draft new pieces with the right scripture without leaving the chat. It's behind a feature flag and ready to roll out wider.\n- Crash reports we can trust: Closed or cleared about 60 crash and noise reports across Admin, web, mobile, and embeds, and set alerts to fire only for the live site, so real problems now stand out. I also fixed Admin running out of database connections when it got busy, and a dashboard chart that read 6 to 8 GB of data every time someone opened it.\n- Keeping the team moving: Shipped 27 changes and reviewed about 80 more from teammates, which kept @Austin and @Vincent unblocked. I also explained this morning's Cloudflare outage to customer success within hours and got the hack crew building on one shared Claude prototype."
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 29\n  • PR reviews: 111\n  • Commits pushed: 157\n  • Code volume: +6863 / -781 (144 files)\n  • Median review latency (working hours): 1.34h\n  • Linear issues completed: 64\n  • Linear projects completed: 0\n  • Linear issues worked on: 52\n  • Linear issues created: 66\n  • Linear replies: 39\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-infrastructure, apollos-platforms, apollos-shovel, bug-board\n\n📝 Check-ins:\n\n  Monday: - Stop reporting stackless Safari and Firefox network errors to Sentry\n- feat(ad...\n  Tuesday: - APO-16091: Stop reporting stackless Safari AbortError on web content\n- APO-153...\n  Wednesday: - fix(admin): tag Sentry events with the deployment environment\n- Reviewed: Keep...\n  Thursday: - APO-16251: Revoking a refresh token also ends its connection\n- fix(admin): sho...\n  Friday: - Test the EmptyRanges filter with mixed and <anonymous> frames\n- APO-16376: add...\n  Friday: , October 23\nDaily\nWhat did you work on today\n2:07 PM\nWeekly Update w/ Michael a...\n  Thursday: , October 22\nDaily\nWhat did you work on today\n3:43 PM\nMerged the AI writer fixes...\n  Wednesday: , October 21\nDaily\nWhat did you work on today\n4:16 PM\nFixed Sentry for Web and A...\n  Tuesday: , October 20\nDaily\nWhat did you work on today\n4:50 PM\nMerged the new AI Assistan...\n  Monday: , October 19\nDaily\nWhat did you work on today\n5:40 PM\nStarted testing the next r...\n",
+  "formatted_output": null
+}
