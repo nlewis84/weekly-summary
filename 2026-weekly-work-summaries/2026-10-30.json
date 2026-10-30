@@ -1,0 +1,2271 @@
+{
+  "meta": {
+    "generated_at": "2026-10-30T21:37:21.982Z",
+    "window_start": "2026-10-24T05:00:00.000Z",
+    "window_end": "2026-10-31T04:59:59.999Z",
+    "week_ending": "2026-10-30",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 49,
+    "prs_total": 57,
+    "pr_reviews": 70,
+    "pr_comments": 88,
+    "commits_pushed": 150,
+    "linear_completed": 30,
+    "linear_projects_completed": 0,
+    "linear_worked_on": 36,
+    "linear_issues_created": 43,
+    "linear_comments": 27,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-infrastructure",
+      "apollos-platforms",
+      "apollos-shovel",
+      "pgstream"
+    ],
+    "lines_added": 6448,
+    "lines_deleted": 745,
+    "files_changed": 216,
+    "median_review_latency_hours": 1.15
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-16956",
+        "title": "Pick or create an access tag under Guided Content Progression > Locked",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16956/pick-or-create-an-access-tag-under-guided-content-progression-locked",
+        "completedAt": "2026-10-30T16:29:34.347Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16954",
+        "title": "Hide a mobile tab from people with an excluded segment",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16954/hide-a-mobile-tab-from-people-with-an-excluded-segment",
+        "completedAt": "2026-10-30T14:35:24.743Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16891",
+        "title": "Admin report-status poll 500s when the Cluster connection resets (APOLLOS-ADMIN-739)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16891/admin-report-status-poll-500s-when-the-cluster-connection-resets",
+        "completedAt": "2026-10-29T17:53:07.815Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16741",
+        "title": "Chat token request reports PubNub Chat SDK getMembership failures as GraphQL errors (APOLLOS-CLUSTER-2Y7)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16741/chat-token-request-reports-pubnub-chat-sdk-getmembership-failures-as",
+        "completedAt": "2026-10-29T20:28:40.373Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16597",
+        "title": "Daily feed cards without a Node type fail GraphQL (Sentry APOLLOS-CLUSTER-8RF)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16597/daily-feed-cards-without-a-node-type-fail-graphql-sentry-apollos",
+        "completedAt": "2026-10-29T20:28:40.476Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16596",
+        "title": "Turn on the FreedUp DAGs in production",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16596/turn-on-the-freedup-dags-in-production",
+        "completedAt": "2026-10-28T15:04:42.614Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16593",
+        "title": "Cluster reports already-registered church connect as a server error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16593/cluster-reports-already-registered-church-connect-as-a-server-error",
+        "completedAt": "2026-10-29T20:28:40.329Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16588",
+        "title": "Remove the unused Woo claim code from cluster",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16588/remove-the-unused-woo-claim-code-from-cluster",
+        "completedAt": "2026-10-27T16:24:27.484Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16585",
+        "title": "Cluster should still change campus when Planning Center OAuth is invalid_grant",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16585/cluster-should-still-change-campus-when-planning-center-oauth-is",
+        "completedAt": "2026-10-29T20:28:40.419Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16577",
+        "title": "Cluster should not report expected chat invite FORBIDDEN to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16577/cluster-should-not-report-expected-chat-invite-forbidden-to-sentry",
+        "completedAt": "2026-10-29T20:28:40.238Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16575",
+        "title": "Lock FreedUp weeks 2 to 6 with the purchase tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16575/lock-freedup-weeks-2-to-6-with-the-purchase-tag",
+        "completedAt": "2026-10-29T20:12:29.127Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16574",
+        "title": "Store FreedUp's read-only Woo key for shovel",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16574/store-freedups-read-only-woo-key-for-shovel",
+        "completedAt": "2026-10-28T15:04:43.395Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16572",
+        "title": "Decide FreedUp access from the signed-in email",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16572/decide-freedup-access-from-the-signed-in-email",
+        "completedAt": "2026-10-26T20:01:33.821Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16570",
+        "title": "Cluster should not report expected chat birthdate FORBIDDEN to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16570/cluster-should-not-report-expected-chat-birthdate-forbidden-to-sentry",
+        "completedAt": "2026-10-29T20:28:40.284Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16494",
+        "title": "Cluster should treat a missing follow accept/ignore as user input, not a Sentry error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16494/cluster-should-treat-a-missing-follow-acceptignore-as-user-input-not-a",
+        "completedAt": "2026-10-27T02:02:38.349Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16493",
+        "title": "Cluster should not report expected chat membership FORBIDDEN to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16493/cluster-should-not-report-expected-chat-membership-forbidden-to-sentry",
+        "completedAt": "2026-10-27T02:02:38.817Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16403",
+        "title": "Tap scan should not warn Sentry when falling back to admin",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16403/tap-scan-should-not-warn-sentry-when-falling-back-to-admin",
+        "completedAt": "2026-10-24T16:09:33.309Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16402",
+        "title": "Tap asset links should not warn Sentry when the apex host has no subdomain",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16402/tap-asset-links-should-not-warn-sentry-when-the-apex-host-has-no",
+        "completedAt": "2026-10-24T16:09:33.168Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16396",
+        "title": "MCP: fit the server instructions in 4096 characters",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16396/mcp-fit-the-server-instructions-in-4096-characters",
+        "completedAt": "2026-10-24T16:14:18.915Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16377",
+        "title": "MCP: richer markdown replies",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16377/mcp-richer-markdown-replies",
+        "completedAt": "2026-10-28T15:27:38.297Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16376",
+        "title": "MCP: add a small eval that checks reply format",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16376/mcp-add-a-small-eval-that-checks-reply-format",
+        "completedAt": "2026-10-24T16:14:18.883Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16170",
+        "title": "Web should not report failed dynamic module imports on FeatureFeed to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16170/web-should-not-report-failed-dynamic-module-imports-on-featurefeed-to",
+        "completedAt": "2026-10-26T16:13:19.418Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16164",
+        "title": "Web should not report third-party EmptyRanges ReferenceError to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16164/web-should-not-report-third-party-emptyranges-referenceerror-to-sentry",
+        "completedAt": "2026-10-24T16:09:33.250Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15360",
+        "title": "MCP sidecar: editor loader fixes for connect button, webview, and link embed",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15360/mcp-sidecar-editor-loader-fixes-for-connect-button-webview-and-link",
+        "completedAt": "2026-10-28T15:27:42.936Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13608",
+        "title": "Grant FreedUp access from Woo orders in a shovel DAG",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13608/grant-freedup-access-from-woo-orders-in-a-shovel-dag",
+        "completedAt": "2026-10-27T16:51:42.548Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13607",
+        "title": "Staff override for paid FreedUp access",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13607/staff-override-for-paid-freedup-access",
+        "completedAt": "2026-10-26T16:29:08.063Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13606",
+        "title": "Lock a content series to a required tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13606/lock-a-content-series-to-a-required-tag",
+        "completedAt": "2026-10-26T16:29:07.969Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13605",
+        "title": "Mint a FreedUp purchase tag on the person",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13605/mint-a-freedup-purchase-tag-on-the-person",
+        "completedAt": "2026-10-26T16:29:08.156Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13265",
+        "title": "Assessment Results State: Edit button needs adjusted",
+        "project": "Assessments",
+        "url": "https://linear.app/differential/issue/APO-13265/assessment-results-state-edit-button-needs-adjusted",
+        "completedAt": "2026-10-28T22:45:16.725Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11748",
+        "title": "[Security][apollos-admin] Unauthenticated Ask endpoint with CORS wildcard",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-11748/securityapollos-admin-unauthenticated-ask-endpoint-with-cors-wildcard",
+        "completedAt": "2026-10-26T14:03:52.307Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-16966",
+        "title": "Cluster should not report Postgres ECONNRESET GraphQL errors to Sentry (APOLLOS-CLUSTER-8RW)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16966/cluster-should-not-report-postgres-econnreset-graphql-errors-to-sentry",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16965",
+        "title": "Mobile should catch a failed external URL open instead of reporting it to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16965/mobile-should-catch-a-failed-external-url-open-instead-of-reporting-it",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16964",
+        "title": "Cluster should not report Postgres shutdown GraphQL errors to Sentry (APOLLOS-CLUSTER-8P8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16964/cluster-should-not-report-postgres-shutdown-graphql-errors-to-sentry",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16963",
+        "title": "Cluster should not report in-use phone FORBIDDEN to Sentry (APOLLOS-CLUSTER-7Y9)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16963/cluster-should-not-report-in-use-phone-forbidden-to-sentry-apollos",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16962",
+        "title": "Cluster should still save a profile when Rock returns 401 (APOLLOS-CLUSTER-8FZ)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16962/cluster-should-still-save-a-profile-when-rock-returns-401-apollos",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16956",
+        "title": "Pick or create an access tag under Guided Content Progression > Locked",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16956/pick-or-create-an-access-tag-under-guided-content-progression-locked",
+        "completedAt": "2026-10-30T16:29:34.347Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16954",
+        "title": "Hide a mobile tab from people with an excluded segment",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16954/hide-a-mobile-tab-from-people-with-an-excluded-segment",
+        "completedAt": "2026-10-30T14:35:24.743Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16892",
+        "title": "Resolve Sentry issues whose fixes shipped to production (2026-10-29 run)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16892/resolve-sentry-issues-whose-fixes-shipped-to-production-2026-10-29-run",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16891",
+        "title": "Admin report-status poll 500s when the Cluster connection resets (APOLLOS-ADMIN-739)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16891/admin-report-status-poll-500s-when-the-cluster-connection-resets",
+        "completedAt": "2026-10-29T17:53:07.815Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16741",
+        "title": "Chat token request reports PubNub Chat SDK getMembership failures as GraphQL errors (APOLLOS-CLUSTER-2Y7)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16741/chat-token-request-reports-pubnub-chat-sdk-getmembership-failures-as",
+        "completedAt": "2026-10-29T20:28:40.373Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16597",
+        "title": "Daily feed cards without a Node type fail GraphQL (Sentry APOLLOS-CLUSTER-8RF)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16597/daily-feed-cards-without-a-node-type-fail-graphql-sentry-apollos",
+        "completedAt": "2026-10-29T20:28:40.476Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16596",
+        "title": "Turn on the FreedUp DAGs in production",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16596/turn-on-the-freedup-dags-in-production",
+        "completedAt": "2026-10-28T15:04:42.614Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16593",
+        "title": "Cluster reports already-registered church connect as a server error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16593/cluster-reports-already-registered-church-connect-as-a-server-error",
+        "completedAt": "2026-10-29T20:28:40.329Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16588",
+        "title": "Remove the unused Woo claim code from cluster",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16588/remove-the-unused-woo-claim-code-from-cluster",
+        "completedAt": "2026-10-27T16:24:27.484Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16585",
+        "title": "Cluster should still change campus when Planning Center OAuth is invalid_grant",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16585/cluster-should-still-change-campus-when-planning-center-oauth-is",
+        "completedAt": "2026-10-29T20:28:40.419Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16577",
+        "title": "Cluster should not report expected chat invite FORBIDDEN to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16577/cluster-should-not-report-expected-chat-invite-forbidden-to-sentry",
+        "completedAt": "2026-10-29T20:28:40.238Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16575",
+        "title": "Lock FreedUp weeks 2 to 6 with the purchase tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16575/lock-freedup-weeks-2-to-6-with-the-purchase-tag",
+        "completedAt": "2026-10-29T20:12:29.127Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16574",
+        "title": "Store FreedUp's read-only Woo key for shovel",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16574/store-freedups-read-only-woo-key-for-shovel",
+        "completedAt": "2026-10-28T15:04:43.395Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16572",
+        "title": "Decide FreedUp access from the signed-in email",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16572/decide-freedup-access-from-the-signed-in-email",
+        "completedAt": "2026-10-26T20:01:33.821Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16570",
+        "title": "Cluster should not report expected chat birthdate FORBIDDEN to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16570/cluster-should-not-report-expected-chat-birthdate-forbidden-to-sentry",
+        "completedAt": "2026-10-29T20:28:40.284Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16494",
+        "title": "Cluster should treat a missing follow accept/ignore as user input, not a Sentry error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16494/cluster-should-treat-a-missing-follow-acceptignore-as-user-input-not-a",
+        "completedAt": "2026-10-27T02:02:38.349Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16493",
+        "title": "Cluster should not report expected chat membership FORBIDDEN to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16493/cluster-should-not-report-expected-chat-membership-forbidden-to-sentry",
+        "completedAt": "2026-10-27T02:02:38.817Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16491",
+        "title": "Mobile should not report expected join-chat and like GraphQL errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16491/mobile-should-not-report-expected-join-chat-and-like-graphql-errors-to",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16403",
+        "title": "Tap scan should not warn Sentry when falling back to admin",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16403/tap-scan-should-not-warn-sentry-when-falling-back-to-admin",
+        "completedAt": "2026-10-24T16:09:33.309Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16402",
+        "title": "Tap asset links should not warn Sentry when the apex host has no subdomain",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16402/tap-asset-links-should-not-warn-sentry-when-the-apex-host-has-no",
+        "completedAt": "2026-10-24T16:09:33.168Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16396",
+        "title": "MCP: fit the server instructions in 4096 characters",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16396/mcp-fit-the-server-instructions-in-4096-characters",
+        "completedAt": "2026-10-24T16:14:18.915Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16377",
+        "title": "MCP: richer markdown replies",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16377/mcp-richer-markdown-replies",
+        "completedAt": "2026-10-28T15:27:38.297Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16376",
+        "title": "MCP: add a small eval that checks reply format",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-16376/mcp-add-a-small-eval-that-checks-reply-format",
+        "completedAt": "2026-10-24T16:14:18.883Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16170",
+        "title": "Web should not report failed dynamic module imports on FeatureFeed to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16170/web-should-not-report-failed-dynamic-module-imports-on-featurefeed-to",
+        "completedAt": "2026-10-26T16:13:19.418Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16164",
+        "title": "Web should not report third-party EmptyRanges ReferenceError to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16164/web-should-not-report-third-party-emptyranges-referenceerror-to-sentry",
+        "completedAt": "2026-10-24T16:09:33.250Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15360",
+        "title": "MCP sidecar: editor loader fixes for connect button, webview, and link embed",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/issue/APO-15360/mcp-sidecar-editor-loader-fixes-for-connect-button-webview-and-link",
+        "completedAt": "2026-10-28T15:27:42.936Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13608",
+        "title": "Grant FreedUp access from Woo orders in a shovel DAG",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13608/grant-freedup-access-from-woo-orders-in-a-shovel-dag",
+        "completedAt": "2026-10-27T16:51:42.548Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13607",
+        "title": "Staff override for paid FreedUp access",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13607/staff-override-for-paid-freedup-access",
+        "completedAt": "2026-10-26T16:29:08.063Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13606",
+        "title": "Lock a content series to a required tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13606/lock-a-content-series-to-a-required-tag",
+        "completedAt": "2026-10-26T16:29:07.969Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13605",
+        "title": "Mint a FreedUp purchase tag on the person",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-13605/mint-a-freedup-purchase-tag-on-the-person",
+        "completedAt": "2026-10-26T16:29:08.156Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-13265",
+        "title": "Assessment Results State: Edit button needs adjusted",
+        "project": "Assessments",
+        "url": "https://linear.app/differential/issue/APO-13265/assessment-results-state-edit-button-needs-adjusted",
+        "completedAt": "2026-10-28T22:45:16.725Z",
+        "state": "Done"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-17005",
+        "title": "Android createErrorLink grouping EXK is leftover old-runtime noise (same as F0Q)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17005/android-createerrorlink-grouping-exk-is-leftover-old-runtime-noise",
+        "createdAt": "2026-10-30T20:06:03.982Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17004",
+        "title": "Mobile>App Page: spruce up the selected tab border and limit the scroll bar to not overlap with the device header and tab footer",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17004/mobileapp-page-spruce-up-the-selected-tab-border-and-limit-the-scroll",
+        "createdAt": "2026-10-30T19:41:42.252Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16967",
+        "title": "Cluster should not report community-chat membership FORBIDDEN to Sentry (APOLLOS-CLUSTER-814)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16967/cluster-should-not-report-community-chat-membership-forbidden-to",
+        "createdAt": "2026-10-30T01:37:37.201Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16966",
+        "title": "Cluster should not report Postgres ECONNRESET GraphQL errors to Sentry (APOLLOS-CLUSTER-8RW)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16966/cluster-should-not-report-postgres-econnreset-graphql-errors-to-sentry",
+        "createdAt": "2026-10-30T01:07:38.512Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16965",
+        "title": "Mobile should catch a failed external URL open instead of reporting it to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16965/mobile-should-catch-a-failed-external-url-open-instead-of-reporting-it",
+        "createdAt": "2026-10-30T00:35:31.409Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16964",
+        "title": "Cluster should not report Postgres shutdown GraphQL errors to Sentry (APOLLOS-CLUSTER-8P8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16964/cluster-should-not-report-postgres-shutdown-graphql-errors-to-sentry",
+        "createdAt": "2026-10-29T23:35:25.354Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16963",
+        "title": "Cluster should not report in-use phone FORBIDDEN to Sentry (APOLLOS-CLUSTER-7Y9)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16963/cluster-should-not-report-in-use-phone-forbidden-to-sentry-apollos",
+        "createdAt": "2026-10-29T23:05:18.134Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16962",
+        "title": "Cluster should still save a profile when Rock returns 401 (APOLLOS-CLUSTER-8FZ)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16962/cluster-should-still-save-a-profile-when-rock-returns-401-apollos",
+        "createdAt": "2026-10-29T22:37:03.901Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16961",
+        "title": "Saving a mobile tab with Personalization collapsed wipes its segments",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16961/saving-a-mobile-tab-with-personalization-collapsed-wipes-its-segments",
+        "createdAt": "2026-10-29T22:19:35.516Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16957",
+        "title": "Cluster should not report inaccessible-prayer FORBIDDEN to Sentry (APOLLOS-CLUSTER-8GD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16957/cluster-should-not-report-inaccessible-prayer-forbidden-to-sentry",
+        "createdAt": "2026-10-29T21:37:52.810Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16956",
+        "title": "Pick or create an access tag under Guided Content Progression > Locked",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16956/pick-or-create-an-access-tag-under-guided-content-progression-locked",
+        "createdAt": "2026-10-29T21:14:59.632Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16955",
+        "title": "Add Show to and Hide from to the tab Segments picker in Admin",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16955/add-show-to-and-hide-from-to-the-tab-segments-picker-in-admin",
+        "createdAt": "2026-10-29T21:14:45.371Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16954",
+        "title": "Hide a mobile tab from people with an excluded segment",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16954/hide-a-mobile-tab-from-people-with-an-excluded-segment",
+        "createdAt": "2026-10-29T21:14:32.091Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16892",
+        "title": "Resolve Sentry issues whose fixes shipped to production (2026-10-29 run)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16892/resolve-sentry-issues-whose-fixes-shipped-to-production-2026-10-29-run",
+        "createdAt": "2026-10-29T15:53:35.462Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16891",
+        "title": "Admin report-status poll 500s when the Cluster connection resets (APOLLOS-ADMIN-739)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16891/admin-report-status-poll-500s-when-the-cluster-connection-resets",
+        "createdAt": "2026-10-29T15:32:52.136Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16741",
+        "title": "Chat token request reports PubNub Chat SDK getMembership failures as GraphQL errors (APOLLOS-CLUSTER-2Y7)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16741/chat-token-request-reports-pubnub-chat-sdk-getmembership-failures-as",
+        "createdAt": "2026-10-28T05:08:24.324Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16728",
+        "title": "Admin page-changes poll reports Cluster 404 as a Sentry error (APOLLOS-ADMIN-78H)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16728/admin-page-changes-poll-reports-cluster-404-as-a-sentry-error-apollos",
+        "createdAt": "2026-10-28T04:05:37.962Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16721",
+        "title": "iOS anonymous(main) Network request failed grouping 3AS is leftover old-runtime noise (same as EXM)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16721/ios-anonymousmain-network-request-failed-grouping-3as-is-leftover-old",
+        "createdAt": "2026-10-28T03:07:25.552Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16720",
+        "title": "iOS fetch.umd Network request failed grouping 78 is leftover old-runtime noise (same as EXM)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16720/ios-fetchumd-network-request-failed-grouping-78-is-leftover-old",
+        "createdAt": "2026-10-28T02:08:10.659Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16603",
+        "title": "Mobile should not report a failed PubNub church-slug stamp to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16603/mobile-should-not-report-a-failed-pubnub-church-slug-stamp-to-sentry",
+        "createdAt": "2026-10-27T00:36:25.023Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16602",
+        "title": "Mobile should refresh the session on GraphQL HTTP 401 instead of reporting it to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16602/mobile-should-refresh-the-session-on-graphql-http-401-instead-of",
+        "createdAt": "2026-10-27T00:10:52.412Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16601",
+        "title": "Cluster returns HTTP 500 for updateUserPushSettings (Sentry APOLLOS-MOBILE-F9G)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16601/cluster-returns-http-500-for-updateuserpushsettings-sentry-apollos",
+        "createdAt": "2026-10-26T23:35:41.677Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16600",
+        "title": "Cluster returns HTTP 500 for getPrayerRequest (Sentry APOLLOS-MOBILE-F9H)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16600/cluster-returns-http-500-for-getprayerrequest-sentry-apollos-mobile",
+        "createdAt": "2026-10-26T23:06:11.419Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16598",
+        "title": "Cluster returns HTTP 500 for getCurrentUserForOnboarding (Sentry APOLLOS-MOBILE-F3Q)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16598/cluster-returns-http-500-for-getcurrentuserforonboarding-sentry",
+        "createdAt": "2026-10-26T22:36:33.925Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16597",
+        "title": "Daily feed cards without a Node type fail GraphQL (Sentry APOLLOS-CLUSTER-8RF)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16597/daily-feed-cards-without-a-node-type-fail-graphql-sentry-apollos",
+        "createdAt": "2026-10-26T22:12:53.360Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16596",
+        "title": "Turn on the FreedUp DAGs in production",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16596/turn-on-the-freedup-dags-in-production",
+        "createdAt": "2026-10-26T21:53:57.921Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16595",
+        "title": "Mobile should not report NativePlayer origin 404s to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16595/mobile-should-not-report-nativeplayer-origin-404s-to-sentry",
+        "createdAt": "2026-10-26T21:38:39.769Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16593",
+        "title": "Cluster reports already-registered church connect as a server error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16593/cluster-reports-already-registered-church-connect-as-a-server-error",
+        "createdAt": "2026-10-26T21:04:39.985Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16588",
+        "title": "Remove the unused Woo claim code from cluster",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16588/remove-the-unused-woo-claim-code-from-cluster",
+        "createdAt": "2026-10-26T20:38:29.250Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16587",
+        "title": "Show buyers and non-buyers different FreedUp home tabs",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16587/show-buyers-and-non-buyers-different-freedup-home-tabs",
+        "createdAt": "2026-10-26T20:38:27.859Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16585",
+        "title": "Cluster should still change campus when Planning Center OAuth is invalid_grant",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16585/cluster-should-still-change-campus-when-planning-center-oauth-is",
+        "createdAt": "2026-10-26T20:35:57.123Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16577",
+        "title": "Cluster should not report expected chat invite FORBIDDEN to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16577/cluster-should-not-report-expected-chat-invite-forbidden-to-sentry",
+        "createdAt": "2026-10-26T20:05:49.073Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16575",
+        "title": "Lock FreedUp weeks 2 to 6 with the purchase tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16575/lock-freedup-weeks-2-to-6-with-the-purchase-tag",
+        "createdAt": "2026-10-26T20:01:44.040Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16574",
+        "title": "Store FreedUp's read-only Woo key for shovel",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16574/store-freedups-read-only-woo-key-for-shovel",
+        "createdAt": "2026-10-26T20:01:40.914Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16573",
+        "title": "Open the check page from a closed week on mobile, and refetch on return",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16573/open-the-check-page-from-a-closed-week-on-mobile-and-refetch-on-return",
+        "createdAt": "2026-10-26T20:01:39.437Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16572",
+        "title": "Decide FreedUp access from the signed-in email",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-16572/decide-freedup-access-from-the-signed-in-email",
+        "createdAt": "2026-10-26T20:01:33.414Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16570",
+        "title": "Cluster should not report expected chat birthdate FORBIDDEN to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16570/cluster-should-not-report-expected-chat-birthdate-forbidden-to-sentry",
+        "createdAt": "2026-10-26T19:41:00.847Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16494",
+        "title": "Cluster should treat a missing follow accept/ignore as user input, not a Sentry error",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16494/cluster-should-treat-a-missing-follow-acceptignore-as-user-input-not-a",
+        "createdAt": "2026-10-24T07:38:21.558Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16493",
+        "title": "Cluster should not report expected chat membership FORBIDDEN to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16493/cluster-should-not-report-expected-chat-membership-forbidden-to-sentry",
+        "createdAt": "2026-10-24T07:06:34.605Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16492",
+        "title": "CDN/LB returns HTTP 502 for GraphQL POSTs (Sentry APOLLOS-MOBILE-EXT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16492/cdnlb-returns-http-502-for-graphql-posts-sentry-apollos-mobile-ext",
+        "createdAt": "2026-10-24T06:41:59.722Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16491",
+        "title": "Mobile should not report expected join-chat and like GraphQL errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16491/mobile-should-not-report-expected-join-chat-and-like-graphql-errors-to",
+        "createdAt": "2026-10-24T06:08:59.926Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16490",
+        "title": "Cluster returns HTTP 500 for Poll (Sentry APOLLOS-MOBILE-F5E)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16490/cluster-returns-http-500-for-poll-sentry-apollos-mobile-f5e",
+        "createdAt": "2026-10-24T05:37:18.121Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16489",
+        "title": "Cluster returns HTTP 500 for GratitudePaginated (Sentry APOLLOS-MOBILE-F51)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16489/cluster-returns-http-500-for-gratitudepaginated-sentry-apollos-mobile",
+        "createdAt": "2026-10-24T05:06:20.062Z",
+        "state": "To Do"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-16957",
+        "title": "Cluster should not report inaccessible-prayer FORBIDDEN to Sentry (APOLLOS-CLUSTER-8GD)",
+        "url": "https://linear.app/differential/issue/APO-16957/cluster-should-not-report-inaccessible-prayer-forbidden-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16965",
+        "title": "Mobile should catch a failed external URL open instead of reporting it to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16965/mobile-should-catch-a-failed-external-url-open-instead-of-reporting-it",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16966",
+        "title": "Cluster should not report Postgres ECONNRESET GraphQL errors to Sentry (APOLLOS-CLUSTER-8RW)",
+        "url": "https://linear.app/differential/issue/APO-16966/cluster-should-not-report-postgres-econnreset-graphql-errors-to-sentry",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16964",
+        "title": "Cluster should not report Postgres shutdown GraphQL errors to Sentry (APOLLOS-CLUSTER-8P8)",
+        "url": "https://linear.app/differential/issue/APO-16964/cluster-should-not-report-postgres-shutdown-graphql-errors-to-sentry",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16963",
+        "title": "Cluster should not report in-use phone FORBIDDEN to Sentry (APOLLOS-CLUSTER-7Y9)",
+        "url": "https://linear.app/differential/issue/APO-16963/cluster-should-not-report-in-use-phone-forbidden-to-sentry-apollos",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16962",
+        "title": "Cluster should still save a profile when Rock returns 401 (APOLLOS-CLUSTER-8FZ)",
+        "url": "https://linear.app/differential/issue/APO-16962/cluster-should-still-save-a-profile-when-rock-returns-401-apollos",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16967",
+        "title": "Cluster should not report community-chat membership FORBIDDEN to Sentry (APOLLOS-CLUSTER-814)",
+        "url": "https://linear.app/differential/issue/APO-16967/cluster-should-not-report-community-chat-membership-forbidden-to",
+        "project": "Sentry Queue",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16587",
+        "title": "Show buyers and non-buyers different FreedUp home tabs",
+        "url": "https://linear.app/differential/issue/APO-16587/show-buyers-and-non-buyers-different-freedup-home-tabs",
+        "project": "FreedUp paid access",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16892",
+        "title": "Resolve Sentry issues whose fixes shipped to production (2026-10-29 run)",
+        "url": "https://linear.app/differential/issue/APO-16892/resolve-sentry-issues-whose-fixes-shipped-to-production-2026-10-29-run",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16402",
+        "title": "Tap asset links should not warn Sentry when the apex host has no subdomain",
+        "url": "https://linear.app/differential/issue/APO-16402/tap-asset-links-should-not-warn-sentry-when-the-apex-host-has-no",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16170",
+        "title": "Web should not report failed dynamic module imports on FeatureFeed to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16170/web-should-not-report-failed-dynamic-module-imports-on-featurefeed-to",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16741",
+        "title": "Chat token request reports PubNub Chat SDK getMembership failures as GraphQL errors (APOLLOS-CLUSTER-2Y7)",
+        "url": "https://linear.app/differential/issue/APO-16741/chat-token-request-reports-pubnub-chat-sdk-getmembership-failures-as",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16574",
+        "title": "Store FreedUp's read-only Woo key for shovel",
+        "url": "https://linear.app/differential/issue/APO-16574/store-freedups-read-only-woo-key-for-shovel",
+        "project": "FreedUp paid access",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16596",
+        "title": "Turn on the FreedUp DAGs in production",
+        "url": "https://linear.app/differential/issue/APO-16596/turn-on-the-freedup-dags-in-production",
+        "project": "FreedUp paid access",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16162",
+        "title": "Overflow Church can't connect Planning Center in Admin (\"There was an error connecting\")",
+        "url": "https://linear.app/differential/issue/APO-16162/overflow-church-cant-connect-planning-center-in-admin-there-was-an",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16602",
+        "title": "Mobile should refresh the session on GraphQL HTTP 401 instead of reporting it to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16602/mobile-should-refresh-the-session-on-graphql-http-401-instead-of",
+        "project": "Sentry Queue",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16597",
+        "title": "Daily feed cards without a Node type fail GraphQL (Sentry APOLLOS-CLUSTER-8RF)",
+        "url": "https://linear.app/differential/issue/APO-16597/daily-feed-cards-without-a-node-type-fail-graphql-sentry-apollos",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16595",
+        "title": "Mobile should not report NativePlayer origin 404s to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16595/mobile-should-not-report-nativeplayer-origin-404s-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16593",
+        "title": "Cluster reports already-registered church connect as a server error",
+        "url": "https://linear.app/differential/issue/APO-16593/cluster-reports-already-registered-church-connect-as-a-server-error",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16577",
+        "title": "Cluster should not report expected chat invite FORBIDDEN to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16577/cluster-should-not-report-expected-chat-invite-forbidden-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16570",
+        "title": "Cluster should not report expected chat birthdate FORBIDDEN to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16570/cluster-should-not-report-expected-chat-birthdate-forbidden-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15069",
+        "title": "[QA hole] No E2E for header magnifier → Search; magnifier has no testID/label, and the APO-14515 flag combo (semantic-search-ask on, new-search off) can't be reached on Apollos Dev/DEMO",
+        "url": "https://linear.app/differential/issue/APO-15069/qa-hole-no-e2e-for-header-magnifier-search-magnifier-has-no",
+        "project": "Revyl",
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-11748",
+        "title": "[Security][apollos-admin] Unauthenticated Ask endpoint with CORS wildcard",
+        "url": "https://linear.app/differential/issue/APO-11748/securityapollos-admin-unauthenticated-ask-endpoint-with-cors-wildcard",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12863",
+        "title": "extractAskTurns accepts malformed assistant turns, crashing the Ask page",
+        "url": "https://linear.app/differential/issue/APO-12863/extractaskturns-accepts-malformed-assistant-turns-crashing-the-ask",
+        "project": null,
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-12878",
+        "title": "Share canvas-ui-web extractAskTurns in Admin ask route",
+        "url": "https://linear.app/differential/issue/APO-12878/share-canvas-ui-web-extractaskturns-in-admin-ask-route",
+        "project": null,
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16493",
+        "title": "Cluster should not report expected chat membership FORBIDDEN to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16493/cluster-should-not-report-expected-chat-membership-forbidden-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16491",
+        "title": "Mobile should not report expected join-chat and like GraphQL errors to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16491/mobile-should-not-report-expected-join-chat-and-like-graphql-errors-to",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "APO-16961: Make the segments Cancel test fail without the fix",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6138",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-30T19:50:40Z",
+        "additions": 12,
+        "deletions": 3,
+        "changed_files": 1
+      },
+      {
+        "title": "Leave e2e-created communities after each test",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6168",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-30T16:32:28Z",
+        "additions": 85,
+        "deletions": 15,
+        "changed_files": 8
+      },
+      {
+        "title": "fix(cluster): answer a non-member community chat join with BAD_USER_INPUT",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6159",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-30T20:26:01Z",
+        "additions": 3,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "APO-16961: Keep a tab's segments when Personalization is collapsed",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6129",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-30T18:42:42Z",
+        "additions": 81,
+        "deletions": 3,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(cluster): answer an inaccessible prayer with BAD_USER_INPUT",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6154",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-30T20:23:10Z",
+        "additions": 5,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "Pick or create an access tag under Guided Content Progression > Locked",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6126",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-30T16:14:18Z",
+        "additions": 281,
+        "deletions": 20,
+        "changed_files": 8
+      },
+      {
+        "title": "APO-16955: Add Show to and Hide from to the tab Segments picker",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6125",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-30T21:09:49Z",
+        "additions": 259,
+        "deletions": 60,
+        "changed_files": 6
+      },
+      {
+        "title": "Hide a mobile tab from people with an excluded segment (APO-16954)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6153",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-30T13:32:29Z",
+        "additions": 135,
+        "deletions": 9,
+        "changed_files": 7
+      },
+      {
+        "title": "Retry a Cluster config read that times out",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6120",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-30T16:51:01Z",
+        "additions": 106,
+        "deletions": 37,
+        "changed_files": 2
+      },
+      {
+        "title": "APO-16891: Retry Giving report fetches once when the Cluster connection resets",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6091",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-29T16:52:50Z",
+        "additions": 45,
+        "deletions": 5,
+        "changed_files": 3
+      },
+      {
+        "title": "Ignore COMPLETE on a purchase-gated item the viewer cannot open (APO-16575)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6126",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-29T14:05:12Z",
+        "additions": 61,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Keep a purchase-locked next level locked at the end of a level (APO-16575)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8002",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-29T19:17:43Z",
+        "additions": 31,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "Reload once when an admin chunk fails to import (APOLLOS-ADMIN-75A)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6028",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-28T18:48:47Z",
+        "additions": 133,
+        "deletions": 0,
+        "changed_files": 5
+      },
+      {
+        "title": "Stop reporting a blank body save as a failed save",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6026",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-28T20:25:50Z",
+        "additions": 86,
+        "deletions": 23,
+        "changed_files": 4
+      },
+      {
+        "title": "Treat Chat SDK getMembership failures as a retryable chat-token outage",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6106",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-29T17:03:15Z",
+        "additions": 139,
+        "deletions": 11,
+        "changed_files": 5
+      },
+      {
+        "title": "Show Continue and Up next as locked when the next week needs access (APO-16575)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7983",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-28T18:43:46Z",
+        "additions": 199,
+        "deletions": 15,
+        "changed_files": 8
+      },
+      {
+        "title": "Explain a purchase lock instead of \"unlocks in order\" (APO-16575)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7981",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-28T16:03:03Z",
+        "additions": 98,
+        "deletions": 8,
+        "changed_files": 10
+      },
+      {
+        "title": "Lock levels inside a purchase-gated week (APO-16575)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6083",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-28T15:19:11Z",
+        "additions": 177,
+        "deletions": 4,
+        "changed_files": 3
+      },
+      {
+        "title": "Record one model_calls row per model call in a review",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/94",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-10-27T15:51:49Z",
+        "additions": 969,
+        "deletions": 37,
+        "changed_files": 19
+      },
+      {
+        "title": "Update Node to 24.22.1 for the October security release",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5970",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-27T17:51:59Z",
+        "additions": 20,
+        "deletions": 20,
+        "changed_files": 12
+      },
+      {
+        "title": "Update Node to 24.22.1 for the October security release",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6075",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-27T19:11:41Z",
+        "additions": 5,
+        "deletions": 5,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(node): update admin image to 24.22.1, move log-slack-alerts to nodejs24.x",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/135",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-10-27T16:40:23Z",
+        "additions": 2,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "Warn when security-sensitive PRs get a weaker model",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/93",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-10-27T15:51:25Z",
+        "additions": 115,
+        "deletions": 1,
+        "changed_files": 3
+      },
+      {
+        "title": "Plan 30: measure where review tokens go, then cut them",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/92",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-10-27T15:28:11Z",
+        "additions": 300,
+        "deletions": 0,
+        "changed_files": 3
+      },
+      {
+        "title": "Flag truncation only on a real stop, not on output length",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/91",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-10-27T15:03:01Z",
+        "additions": 26,
+        "deletions": 24,
+        "changed_files": 4
+      },
+      {
+        "title": "Mobile should not report a failed PubNub church-slug stamp to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7966",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-29T20:22:43Z",
+        "additions": 123,
+        "deletions": 16,
+        "changed_files": 2
+      },
+      {
+        "title": "Refresh the signed-in session when GraphQL returns HTTP 401",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7965",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-30T17:24:13Z",
+        "additions": 315,
+        "deletions": 5,
+        "changed_files": 2
+      },
+      {
+        "title": "Keep the daily feed loading when a card has no Node type",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6061",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-29T16:50:26Z",
+        "additions": 62,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Mobile should not report NativePlayer origin 404s to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7961",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-29T20:25:18Z",
+        "additions": 68,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Stop reporting already-registered church connect as a server error",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6059",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-29T16:51:21Z",
+        "additions": 51,
+        "deletions": 2,
+        "changed_files": 3
+      },
+      {
+        "title": "Keep campus change working when Planning Center OAuth is expired",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6057",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-29T16:51:38Z",
+        "additions": 113,
+        "deletions": 7,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(cluster): grant FreedUp access from Woo orders (APO-13608)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2116",
+        "repo": "apollos-shovel",
+        "merged_at": "2026-10-27T16:36:55Z",
+        "additions": 527,
+        "deletions": 0,
+        "changed_files": 3
+      },
+      {
+        "title": "Remove the unused Woo claim code (APO-16588)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6056",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-27T14:46:02Z",
+        "additions": 0,
+        "deletions": 335,
+        "changed_files": 5
+      },
+      {
+        "title": "Skip expected chat invite FORBIDDEN in Sentry",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6054",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-29T17:17:15Z",
+        "additions": 38,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Skip expected chat birthdate FORBIDDEN in Sentry",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6053",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-29T16:52:38Z",
+        "additions": 32,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Say \"The previously flagged issue\" instead of \"All 1\"",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/90",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-10-26T14:13:15Z",
+        "additions": 37,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "Treat a missing follow accept or ignore as user input",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6030",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-26T16:29:40Z",
+        "additions": 62,
+        "deletions": 4,
+        "changed_files": 3
+      },
+      {
+        "title": "Skip expected GetChatAdmins membership FORBIDDEN in Sentry",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6029",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-26T21:48:36Z",
+        "additions": 34,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Mobile should ask for phone and birthdate before opening a direct chat",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7922",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-27T21:22:50Z",
+        "additions": 362,
+        "deletions": 1,
+        "changed_files": 16
+      },
+      {
+        "title": "Mobile should not report NativePlayer network DNS failures to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7920",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-26T20:45:12Z",
+        "additions": 45,
+        "deletions": 5,
+        "changed_files": 2
+      },
+      {
+        "title": "Skip like mutation when the content item has no id",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7916",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-26T20:45:12Z",
+        "additions": 185,
+        "deletions": 14,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(mobile): ignore Apollo Network request failed in Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7912",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-26T20:45:12Z",
+        "additions": 59,
+        "deletions": 4,
+        "changed_files": 4
+      },
+      {
+        "title": "Mobile should not warn Sentry when schema introspection is offline",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7905",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-26T17:48:23Z",
+        "additions": 19,
+        "deletions": 30,
+        "changed_files": 2
+      },
+      {
+        "title": "Mobile should not report expected No person in context GraphQL errors to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7903",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-10-26T18:10:24Z",
+        "additions": 71,
+        "deletions": 1,
+        "changed_files": 6
+      },
+      {
+        "title": "APO-16170: Reload once when a web route module fails to import",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5843",
+        "repo": "apollos-admin",
+        "merged_at": "2026-10-26T14:47:01Z",
+        "additions": 252,
+        "deletions": 2,
+        "changed_files": 8
+      },
+      {
+        "title": "Decide FreedUp purchase from the signed-in email (APO-13608)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4853",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-26T17:14:18Z",
+        "additions": 335,
+        "deletions": 0,
+        "changed_files": 5
+      },
+      {
+        "title": "Prove staff override grants the gate Persona (APO-13607)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4852",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-26T15:16:15Z",
+        "additions": 16,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "Withhold tag-gated reads until the viewer has the gate Persona (APO-13606)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4851",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-26T14:52:32Z",
+        "additions": 216,
+        "deletions": 8,
+        "changed_files": 6
+      },
+      {
+        "title": "Name the FreedUp purchase-gate Persona (APO-13605)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/4850",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-10-26T14:30:23Z",
+        "additions": 53,
+        "deletions": 0,
+        "changed_files": 2
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "APO-16955: Keep a tab's shown segments when switching tabs before saving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6146",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Skip Sentry for Postgres socket-reset GraphQL errors",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6158",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "fix(mobile): catch Linking.openURL failures when opening an external URL",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8014",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "Skip Sentry for Postgres shutdown GraphQL errors",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6157",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "fix(cluster): answer an in-use chat phone with BAD_USER_INPUT",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6156",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Save the Apollos profile when the church ChMS returns 401",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6155",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Mobile should never use a chat token from a failed fetch",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7918",
+        "repo": "apollos-platforms",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Leave e2e-created communities after each test",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6168",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-10-30T16:19:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Stop leaveCommunity hanging on PubNub token revoke",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6166",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-30T16:29:28Z",
+        "reviewed_at": "2026-10-30T16:35:52Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "fix(mobile): show webview pages that never finish loading (APO-16771)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8015",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-30T03:37:28Z",
+        "reviewed_at": "2026-10-30T14:26:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.45
+      },
+      {
+        "title": "APO-16961: Keep a tab's segments when Personalization is collapsed",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6129",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-30T15:58:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Pick or create an access tag under Guided Content Progression > Locked",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6126",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-30T15:30:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-16955: Add Show to and Hide from to the tab Segments picker",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6125",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-30T19:27:04Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): show what poll, timer, assessment, and recall blocks hold when the assistant reads a draft back",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6123",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-29T22:00:52Z",
+        "reviewed_at": "2026-10-29T22:23:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(admin): say why the assistant's S7 blocks were refused, and name every block that is off",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6122",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-29T20:39:14Z",
+        "reviewed_at": "2026-10-29T21:02:04Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.38
+      },
+      {
+        "title": "feat(admin): list the link, connect, and media blocks the assistant can write",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6113",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-30T15:38:10Z",
+        "reviewed_at": "2026-10-30T16:35:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.95
+      },
+      {
+        "title": "fix(bible): read \"Acts of the Apostles\" references as Acts (APO-16882)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6136",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-29T18:32:13Z",
+        "reviewed_at": "2026-10-29T18:41:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.15
+      },
+      {
+        "title": "test(admin): film the assistant building a guide with every interactive block",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6090",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-29T20:39:15Z",
+        "reviewed_at": "2026-10-29T21:00:01Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.35
+      },
+      {
+        "title": "fix(signing): repair App Group associations without full setup",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8009",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-29T14:21:59Z",
+        "reviewed_at": "2026-10-29T15:35:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.22
+      },
+      {
+        "title": "fix(deploy): recover explicitly authorized Apple drafts",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8008",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-29T14:14:40Z",
+        "reviewed_at": "2026-10-29T15:34:19Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.33
+      },
+      {
+        "title": "fix(deploy): notify on unaccepted Apple program licenses",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8007",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-29T14:14:33Z",
+        "reviewed_at": "2026-10-29T15:06:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.86
+      },
+      {
+        "title": "Fix flaky tap-linking tap-action test timeouts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6072",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-29T14:23:43Z",
+        "reviewed_at": "2026-10-29T15:00:47Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.62
+      },
+      {
+        "title": "fix(deploy): preserve shared Apple submission metadata",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8005",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-29T12:26:23Z",
+        "reviewed_at": "2026-10-29T18:40:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.68
+      },
+      {
+        "title": "fix(mobile): flatten Hermes sources after the meta/hermes move",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8004",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-29T15:00:03Z",
+        "reviewed_at": "2026-10-29T15:00:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "feat(admin): let the assistant add a timer and an expandable section to a draft",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6039",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-29T02:48:53Z",
+        "reviewed_at": "2026-10-29T15:04:54Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.08
+      },
+      {
+        "title": "Stop printing webhook.env (database URLs) on start",
+        "url": "https://github.com/ApollosProject/pgstream/pull/2",
+        "repo": "pgstream",
+        "requested_at": "2026-10-28T17:42:36Z",
+        "reviewed_at": "2026-10-28T18:40:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.96
+      },
+      {
+        "title": "Stop reporting a blank body save as a failed save",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6026",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-28T19:25:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(mobile): fail closed on an accented chat link TLD that reads as a common one (APO-16769)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7994",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-28T16:33:44Z",
+        "reviewed_at": "2026-10-28T17:07:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.57
+      },
+      {
+        "title": "fix(mobile): hide the badge sheet button when its CTA URL is blank (APO-16809)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7991",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-28T15:01:31Z",
+        "reviewed_at": "2026-10-28T17:07:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.11
+      },
+      {
+        "title": "docs: how to add an admin REST endpoint (APO-12271)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6108",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-28T10:35:50Z",
+        "reviewed_at": "2026-10-28T14:25:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.42
+      },
+      {
+        "title": "APO-16642: S9 code 4 of 6: turn guided progression on or off",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5984",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-29T15:48:03Z",
+        "reviewed_at": "2026-10-29T18:41:30Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.89
+      },
+      {
+        "title": "Show Continue and Up next as locked when the next week needs access (APO-16575)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7983",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-10-28T15:33:28Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Lock levels inside a purchase-gated week (APO-16575)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6083",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-10-27T21:31:05Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(migrations): mask apps.preview_key through an anon-schema function",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6079",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-10-27T16:33:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(admin): add list_content_blocks MCP tool",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5971",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-28T17:15:04Z",
+        "reviewed_at": "2026-10-28T18:39:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.4
+      },
+      {
+        "title": "Record one model_calls row per model call in a review",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/94",
+        "repo": "apollos-code-reviewer",
+        "requested_at": null,
+        "reviewed_at": "2026-10-27T15:44:48Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): send Planning Center OAuth client credentials only once (APO-16162)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5968",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-27T14:22:15Z",
+        "reviewed_at": "2026-10-27T14:29:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "Remove Better Stack heartbeat from staging confidence gate",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6071",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-27T14:32:53Z",
+        "reviewed_at": "2026-10-27T14:49:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.27
+      },
+      {
+        "title": "fix(admin): require the funds giving permission to manage funds",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5961",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-28T19:53:21Z",
+        "reviewed_at": "2026-10-29T14:59:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.11
+      },
+      {
+        "title": "feat(admin): send includeDisputes on Failed V2 cluster export",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5959",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-27T17:12:57Z",
+        "reviewed_at": "2026-10-27T17:42:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.5
+      },
+      {
+        "title": "Sweep church-scoped admin REST routes for cross-tenant 401s; guard PubNub person route (APO-12268)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6066",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-27T10:46:52Z",
+        "reviewed_at": "2026-10-27T14:53:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.89
+      },
+      {
+        "title": "fix(mobile): drop user:password@ from a chat link's shown real address (APO-16295)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7968",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-27T02:47:47Z",
+        "reviewed_at": "2026-10-27T14:50:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.84
+      },
+      {
+        "title": "APO-9387: Private, autosaving note box in a message",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7962",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-29T16:03:17Z",
+        "reviewed_at": "2026-10-29T18:34:51Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.53
+      },
+      {
+        "title": "APO-9387: Note box block in the canvas editor",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5955",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-27T01:43:32Z",
+        "reviewed_at": "2026-10-27T16:31:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.52
+      },
+      {
+        "title": "APO-9387: SermonCommentFeature, a private note per person per box",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6060",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-27T02:11:07Z",
+        "reviewed_at": "2026-10-27T16:29:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.5
+      },
+      {
+        "title": "feat(admin): giving links use the church's primary alias slug",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5950",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-27T02:01:03Z",
+        "reviewed_at": "2026-10-27T14:48:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.82
+      },
+      {
+        "title": "feat(admin): filter prayer requests by submitter campus (APO-11879)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5949",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-26T18:16:47Z",
+        "reviewed_at": "2026-10-26T20:21:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.08
+      },
+      {
+        "title": "fix(admin): scope fund_campus writes to the church and make them atomic (APO-12273)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5948",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-26T17:59:52Z",
+        "reviewed_at": "2026-10-26T19:40:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.67
+      },
+      {
+        "title": "fix(mobile): keep Share off the Daily Gratitude title on Android (APO-16299)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7954",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-26T17:34:32Z",
+        "reviewed_at": "2026-10-26T19:42:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.13
+      },
+      {
+        "title": "APO-15221: Show when an editor body save is refused",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5945",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-26T16:27:26Z",
+        "reviewed_at": "2026-10-26T16:55:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.46
+      },
+      {
+        "title": "fix(web): report payment page giving config failures to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5944",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-26T15:06:11Z",
+        "reviewed_at": "2026-10-26T16:51:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.76
+      },
+      {
+        "title": "APO-14948: Load the give page when a fund or campus link has a percent sign",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5942",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-26T14:29:12Z",
+        "reviewed_at": "2026-10-26T16:50:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.35
+      },
+      {
+        "title": "APO-15118: Ask v2 for the Failed report's own Transaction Id and a plain Name",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5941",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-29T02:15:12Z",
+        "reviewed_at": "2026-10-29T15:01:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.02
+      },
+      {
+        "title": "Ratchet every direct Cluster-DB call and lint new base.server imports (APO-12270)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5939",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-26T10:25:20Z",
+        "reviewed_at": "2026-10-26T14:09:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.16
+      },
+      {
+        "title": "APO-16519: Replace hand-rolled batching loops with lodash chunk",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5938",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-26T19:41:11Z",
+        "reviewed_at": "2026-10-27T14:48:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.12
+      },
+      {
+        "title": "fix(mobile): keep a chat link title that glues a CJK word to the site it opens",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7939",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-25T15:36:07Z",
+        "reviewed_at": "2026-10-26T19:40:08Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.67
+      },
+      {
+        "title": "fix(mobile): label post overflow button \"More actions\" for VoiceOver",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7927",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-24T19:39:26Z",
+        "reviewed_at": "2026-10-26T19:39:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.65
+      },
+      {
+        "title": "feat(admin): show and edit a media block's current URL",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5929",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-24T02:36:13Z",
+        "reviewed_at": "2026-10-26T13:58:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mcp): support native OAuth callback paths and ports",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5924",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-23T19:01:14Z",
+        "reviewed_at": "2026-10-26T14:07:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.1
+      },
+      {
+        "title": "fix(mobile): fail closed on lookalike TLD letters and dot marks in chat link titles (APO-16440)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7914",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-23T17:34:48Z",
+        "reviewed_at": "2026-10-26T19:41:36Z",
+        "review_state": "APPROVED",
+        "latency_hours": 10.11
+      },
+      {
+        "title": "Write CSV amounts with two decimals (APO-16433)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6019",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-26T17:36:33Z",
+        "reviewed_at": "2026-10-26T19:41:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.08
+      },
+      {
+        "title": "APO-16436: Ask for the v2 Failed report newest first, as v1 lists it",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5921",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-29T02:28:57Z",
+        "reviewed_at": "2026-10-29T15:01:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.02
+      },
+      {
+        "title": "Let a transactions export ask for newest first with order=desc (APO-16436)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6017",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-26T17:57:28Z",
+        "reviewed_at": "2026-10-26T19:41:47Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.74
+      },
+      {
+        "title": "fix(ecs): deploy version-controlled images on Fargate",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/130",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-10-23T16:37:23Z",
+        "reviewed_at": "2026-10-26T13:57:57Z",
+        "review_state": "APPROVED",
+        "latency_hours": 5.38
+      },
+      {
+        "title": "Order report rows in the generators so CSV matches Excel (APO-16427)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6014",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-26T03:06:49Z",
+        "reviewed_at": "2026-10-26T14:00:53Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.01
+      },
+      {
+        "title": "fix(mobile): route mixed-case apollos.com/<church> links",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7898",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-27T14:38:56Z",
+        "reviewed_at": "2026-10-27T14:51:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.21
+      },
+      {
+        "title": "APO-14468: v2 PushPay asks the shared CSV for PushPay's headers",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5898",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-29T15:00:56Z",
+        "reviewed_at": "2026-10-29T15:33:09Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.54
+      },
+      {
+        "title": "APO-15221: Refuse a stale editor body write",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5897",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-22T20:28:17Z",
+        "reviewed_at": "2026-10-28T14:51:33Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 26.39
+      },
+      {
+        "title": "feat(mobile): show a posted meeting as a card in chat (APO-16321)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7885",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-27T02:07:00Z",
+        "reviewed_at": "2026-10-27T16:30:01Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2.5
+      },
+      {
+        "title": "Rename PR template Screenshots section to Proof",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5865",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-23T17:44:51Z",
+        "reviewed_at": "2026-10-27T17:42:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 15.96
+      },
+      {
+        "title": "APO-16170: Reload once when a web route module fails to import",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5843",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-10-26T14:23:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "APO-16125: S6 code 1 of 4: media search and settings reads",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5828",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-23T17:42:43Z",
+        "reviewed_at": "2026-10-26T14:03:09Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.34
+      },
+      {
+        "title": "fix(admin): keep Creator events on a day inside a date range",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5732",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-27T20:41:45Z",
+        "reviewed_at": "2026-10-28T14:27:35Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.76
+      },
+      {
+        "title": "fix(admin): keep org access in sync when Team Members changes a Super Admin role",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5725",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-28T20:55:27Z",
+        "reviewed_at": "2026-10-29T15:00:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.08
+      },
+      {
+        "title": "fix(admin): record Creator token use",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5619",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-26T16:36:32Z",
+        "reviewed_at": "2026-10-26T16:55:13Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.31
+      },
+      {
+        "title": "fix(admin): give Creator plan guides the plan's request",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5614",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-26T16:18:36Z",
+        "reviewed_at": "2026-10-26T16:54:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.6
+      },
+      {
+        "title": "refactor(web): extract requireParam helper for required route params",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4244",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-26T19:39:27Z",
+        "reviewed_at": "2026-10-27T14:48:36Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.15
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- Say \"The previously flagged issue\" instead of \"All 1\"\n- Treat a missing follow accept or ignore as user input\n- Skip expected GetChatAdmins membership FORBIDDEN in Sentry\n- Mobile should not report NativePlayer network DNS failures to Sentry\n- Skip like mutation when the content item has no id\n- fix(mobile): ignore Apollo Network request failed in Sentry\n- Mobile should not warn Sentry when schema introspection is offline\n- Mobile should not report expected No person in context GraphQL errors to Sentry\n- APO-16170: Reload once when a web route module fails to import\n- Decide FreedUp purchase from the signed-in email (APO-13608)\n- Prove staff override grants the gate Persona (APO-13607)\n- Withhold tag-gated reads until the viewer has the gate Persona (APO-13606)\n- …and 1 more (see Weekly Summary)\n- Reviewed: feat(admin): filter prayer requests by submitter campus (APO-11879)\n- Reviewed: fix(admin): scope fund_campus writes to the church and make them atomic (APO-12273)\n- Reviewed: fix(mobile): keep Share off the Daily Gratitude title on Android (APO-16299)\n- Reviewed: APO-15221: Show when an editor body save is refused\n- Reviewed: fix(web): report payment page giving config failures to Sentry\n- Reviewed: APO-14948: Load the give page when a fund or campus link has a percent sign\n- Reviewed: Ratchet every direct Cluster-DB call and lint new base.server imports (APO-12270)\n- Reviewed: fix(mobile): keep a chat link title that glues a CJK word to the site it opens\n- Reviewed: fix(mobile): label post overflow button \"More actions\" for VoiceOver\n- Reviewed: feat(admin): show and edit a media block's current URL\n- Reviewed: fix(mcp): support native OAuth callback paths and ports\n- Reviewed: fix(mobile): fail closed on lookalike TLD letters and dot marks in chat link titles (APO-16440)\n- …and 8 more reviews\n- Done: APO-16572: Decide FreedUp access from the signed-in email\n- Done: APO-16403: Tap scan should not warn Sentry when falling back to admin\n- Done: APO-16402: Tap asset links should not warn Sentry when the apex host has no subdomain\n- Done: APO-16396: MCP: fit the server instructions in 4096 characters\n- Done: APO-16376: MCP: add a small eval that checks reply format\n- Done: APO-16170: Web should not report failed dynamic module imports on FeatureFeed to Sentry\n- Done: APO-16164: Web should not report third-party EmptyRanges ReferenceError to Sentry\n- Done: APO-13607: Staff override for paid FreedUp access\n- Done: APO-13606: Lock a content series to a required tag\n- Done: APO-13605: Mint a FreedUp purchase tag on the person\n- Done: APO-11748: [Security][apollos-admin] Unauthenticated Ask endpoint with CORS wildcard\n- In progress: APO-16595: Mobile should not report NativePlayer origin 404s to Sentry\n- In progress: APO-16593: Cluster reports already-registered church connect as a server error\n- In progress: APO-16588: Remove the unused Woo claim code from cluster\n- In progress: APO-16585: Cluster should still change campus when Planning Center OAuth is invalid_grant\n- In progress: APO-16577: Cluster should not report expected chat invite FORBIDDEN to Sentry\n- In progress: APO-16574: Store FreedUp's read-only Woo key for shovel\n- In progress: APO-16570: Cluster should not report expected chat birthdate FORBIDDEN to Sentry\n- In progress: APO-16491: Mobile should not report expected join-chat and like GraphQL errors to Sentry\n- In progress: APO-16477: Mobile should not report transient PubNub REST API errors to Sentry\n- In progress: APO-13608: Grant FreedUp access from Woo orders in a shovel DAG\n- Filed 27 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- Record one model_calls row per model call in a review\n- Update Node to 24.22.1 for the October security release\n- Update Node to 24.22.1 for the October security release\n- fix(node): update admin image to 24.22.1, move log-slack-alerts to nodejs24.x\n- Warn when security-sensitive PRs get a weaker model\n- Plan 30: measure where review tokens go, then cut them\n- Flag truncation only on a real stop, not on output length\n- feat(cluster): grant FreedUp access from Woo orders (APO-13608)\n- Remove the unused Woo claim code (APO-16588)\n- Mobile should ask for phone and birthdate before opening a direct chat\n- Reviewed: Lock levels inside a purchase-gated week (APO-16575)\n- Reviewed: fix(migrations): mask apps.preview_key through an anon-schema function\n- Reviewed: Record one model_calls row per model call in a review\n- Reviewed: fix(admin): send Planning Center OAuth client credentials only once (APO-16162)\n- Reviewed: Remove Better Stack heartbeat from staging confidence gate\n- Reviewed: feat(admin): send includeDisputes on Failed V2 cluster export\n- Reviewed: Sweep church-scoped admin REST routes for cross-tenant 401s; guard PubNub person route (APO-12268)\n- Reviewed: fix(mobile): drop user:password@ from a chat link's shown real address (APO-16295)\n- Reviewed: APO-9387: Note box block in the canvas editor\n- Reviewed: APO-9387: SermonCommentFeature, a private note per person per box\n- Reviewed: feat(admin): giving links use the church's primary alias slug\n- Reviewed: APO-16519: Replace hand-rolled batching loops with lodash chunk\n- …and 4 more reviews\n- Done: APO-16588: Remove the unused Woo claim code from cluster\n- Done: APO-16494: Cluster should treat a missing follow accept/ignore as user input, not a Sentry error\n- Done: APO-16493: Cluster should not report expected chat membership FORBIDDEN to Sentry\n- Done: APO-13608: Grant FreedUp access from Woo orders in a shovel DAG\n- In progress: APO-16603: Mobile should not report a failed PubNub church-slug stamp to Sentry\n- In progress: APO-16602: Mobile should refresh the session on GraphQL HTTP 401 instead of reporting it to Sentry\n- In progress: APO-16597: Daily feed cards without a Node type fail GraphQL (Sentry APOLLOS-CLUSTER-8RF)\n- In progress: APO-16575: Lock FreedUp weeks 2 to 6 with the purchase tag\n- In progress: APO-16491: Mobile should not report expected join-chat and like GraphQL errors to Sentry\n- Filed 6 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- Reload once when an admin chunk fails to import (APOLLOS-ADMIN-75A)\n- Stop reporting a blank body save as a failed save\n- Show Continue and Up next as locked when the next week needs access (APO-16575)\n- Explain a purchase lock instead of \"unlocks in order\" (APO-16575)\n- Lock levels inside a purchase-gated week (APO-16575)\n- Reviewed: Stop printing webhook.env (database URLs) on start\n- Reviewed: Stop reporting a blank body save as a failed save\n- Reviewed: fix(mobile): fail closed on an accented chat link TLD that reads as a common one (APO-16769)\n- Reviewed: fix(mobile): hide the badge sheet button when its CTA URL is blank (APO-16809)\n- Reviewed: docs: how to add an admin REST endpoint (APO-12271)\n- Reviewed: Show Continue and Up next as locked when the next week needs access (APO-16575)\n- Reviewed: Lock levels inside a purchase-gated week (APO-16575)\n- Reviewed: feat(admin): add list_content_blocks MCP tool\n- Reviewed: APO-15221: Refuse a stale editor body write\n- Reviewed: fix(admin): keep Creator events on a day inside a date range\n- Done: APO-16596: Turn on the FreedUp DAGs in production\n- Done: APO-16574: Store FreedUp's read-only Woo key for shovel\n- Done: APO-16377: MCP: richer markdown replies\n- Done: APO-15360: MCP sidecar: editor loader fixes for connect button, webview, and link embed\n- In progress: APO-16741: Chat token request reports PubNub Chat SDK getMembership failures as GraphQL errors (APOLLOS-CLUSTER-2Y7)\n- In progress: APO-16575: Lock FreedUp weeks 2 to 6 with the purchase tag\n- Filed 4 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- APO-16891: Retry Giving report fetches once when the Cluster connection resets\n- Ignore COMPLETE on a purchase-gated item the viewer cannot open (APO-16575)\n- Keep a purchase-locked next level locked at the end of a level (APO-16575)\n- Treat Chat SDK getMembership failures as a retryable chat-token outage\n- Mobile should not report a failed PubNub church-slug stamp to Sentry\n- Keep the daily feed loading when a card has no Node type\n- Mobile should not report NativePlayer origin 404s to Sentry\n- Stop reporting already-registered church connect as a server error\n- Keep campus change working when Planning Center OAuth is expired\n- Skip expected chat invite FORBIDDEN in Sentry\n- Skip expected chat birthdate FORBIDDEN in Sentry\n- Reviewed: fix(admin): show what poll, timer, assessment, and recall blocks hold when the assistant reads a draft back\n- Reviewed: fix(admin): say why the assistant's S7 blocks were refused, and name every block that is off\n- Reviewed: fix(bible): read \"Acts of the Apostles\" references as Acts (APO-16882)\n- Reviewed: test(admin): film the assistant building a guide with every interactive block\n- Reviewed: fix(signing): repair App Group associations without full setup\n- Reviewed: fix(deploy): recover explicitly authorized Apple drafts\n- Reviewed: fix(deploy): notify on unaccepted Apple program licenses\n- Reviewed: Fix flaky tap-linking tap-action test timeouts\n- Reviewed: fix(deploy): preserve shared Apple submission metadata\n- Reviewed: fix(mobile): flatten Hermes sources after the meta/hermes move\n- Reviewed: feat(admin): let the assistant add a timer and an expandable section to a draft\n- Reviewed: APO-16642: S9 code 4 of 6: turn guided progression on or off\n- …and 6 more reviews\n- Done: APO-16891: Admin report-status poll 500s when the Cluster connection resets (APOLLOS-ADMIN-739)\n- Done: APO-16741: Chat token request reports PubNub Chat SDK getMembership failures as GraphQL errors (APOLLOS-CLUSTER-2Y7)\n- Done: APO-16597: Daily feed cards without a Node type fail GraphQL (Sentry APOLLOS-CLUSTER-8RF)\n- Done: APO-16593: Cluster reports already-registered church connect as a server error\n- Done: APO-16585: Cluster should still change campus when Planning Center OAuth is invalid_grant\n- Done: APO-16577: Cluster should not report expected chat invite FORBIDDEN to Sentry\n- Done: APO-16575: Lock FreedUp weeks 2 to 6 with the purchase tag\n- Done: APO-16570: Cluster should not report expected chat birthdate FORBIDDEN to Sentry\n- Done: APO-13265: Assessment Results State: Edit button needs adjusted\n- In progress: APO-16957: Cluster should not report inaccessible-prayer FORBIDDEN to Sentry (APOLLOS-CLUSTER-8GD)\n- In progress: APO-16956: Pick or create an access tag under Guided Content Progression > Locked\n- In progress: APO-16955: Add Show to and Hide from to the tab Segments picker in Admin\n- In progress: APO-16954: Hide a mobile tab from people with an excluded segment\n- In progress: APO-16892: Resolve Sentry issues whose fixes shipped to production (2026-10-29 run)\n- Filed 7 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- APO-16961: Make the segments Cancel test fail without the fix\n- Leave e2e-created communities after each test\n- fix(cluster): answer a non-member community chat join with BAD_USER_INPUT\n- APO-16961: Keep a tab's segments when Personalization is collapsed\n- fix(cluster): answer an inaccessible prayer with BAD_USER_INPUT\n- Pick or create an access tag under Guided Content Progression > Locked\n- APO-16955: Add Show to and Hide from to the tab Segments picker\n- Hide a mobile tab from people with an excluded segment (APO-16954)\n- Retry a Cluster config read that times out\n- Refresh the signed-in session when GraphQL returns HTTP 401\n- Reviewed: Leave e2e-created communities after each test\n- Reviewed: Stop leaveCommunity hanging on PubNub token revoke\n- Reviewed: fix(mobile): show webview pages that never finish loading (APO-16771)\n- Reviewed: APO-16961: Keep a tab's segments when Personalization is collapsed\n- Reviewed: Pick or create an access tag under Guided Content Progression > Locked\n- Reviewed: APO-16955: Add Show to and Hide from to the tab Segments picker\n- Reviewed: feat(admin): list the link, connect, and media blocks the assistant can write\n- Done: APO-16956: Pick or create an access tag under Guided Content Progression > Locked\n- Done: APO-16954: Hide a mobile tab from people with an excluded segment\n- In progress: APO-16966: Cluster should not report Postgres ECONNRESET GraphQL errors to Sentry (APOLLOS-CLUSTER-8RW)\n- In progress: APO-16965: Mobile should catch a failed external URL open instead of reporting it to Sentry\n- In progress: APO-16964: Cluster should not report Postgres shutdown GraphQL errors to Sentry (APOLLOS-CLUSTER-8P8)\n- In progress: APO-16963: Cluster should not report in-use phone FORBIDDEN to Sentry (APOLLOS-CLUSTER-7Y9)\n- In progress: APO-16962: Cluster should still save a profile when Rock returns 401 (APOLLOS-CLUSTER-8FZ)\n- Filed 8 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": ", October 30\nDaily\nWhat did you work on today\n4:33 PM\nGot prod deploys working again after about a day down: cleared junk from about 5,000 leftover test communities and merged a fix so test runs clean up after themselves\nMerged a Show to / Hide from choice for mobile tabs, so FreedUp's non-buyer Home tab can be hidden from people who bought\nMerged a fix so a mobile tab keeps its audience settings when Personalization is collapsed\nMerged picking or creating a lock tag right inside Admin for locked FreedUp content\nMerged fixes for expired sign-ins refreshing on their own and Admin retrying slow settings loads\nCleared crash-report noise from tapping Pray on a removed prayer (75 people) and opening a community you'd been removed from\nTested the next batch of the Apollos AI assistant's content tools w/ @Austin\nLined up Admin v2 feedback w/ @Conrad and sorted mic and gear for the fall keynote\nWeekly Update w/ @David and Michael\nScreenshot 2026-10-30 at 4.32.30 PM.png\nScreenshot 2026-10-30 at 4.32.30 PM.png"
+    },
+    {
+      "day": "Thursday",
+      "content": ", October 29\nDaily\nWhat did you work on today\n5:32 PM\nLocked FreedUp weeks 2 to 6 behind the purchase and merged the last two lock fixes, so finishing a level or marking a locked item done can't open the next paid week\nPicked the designs w/ @Conrad for separate FreedUp home tabs for buyers and non-buyers, and for a lock tag Admin can create itself, then opened fixes so a tab can be hidden from people with a tag and Admin can pick or create the tag that locks content\nFound a bug where saving a mobile tab with its Personalization section closed wipes who the tab shows to, and logged it to fix\nMerged a batch of crash fixes: the daily feed keeps loading when a card is missing its type, campus changes still work when a church's Planning Center sign-in has expired, and Chat handles short outages without an error\nMerged fixes that stop expected chat messages, already-joined church connects, and missing mobile videos from showing up as crash reports, and opened one more for prayer requests people can no longer see\nTracked down a script hitting our servers every 5 seconds for 3 hours, raised it in #dev, and merged a fix so Giving reports retry once instead of failing when the connection drops\nTested the next round of the Apollos AI assistant's content tools and sent @Austin notes on where its error messages don't tell people what to fix\nOpened fixes to keep people signed in when their session expires and to retry slow settings loads in Admin, and started another cleanup run to close crash reports whose fixes are already live\nScreenshot 2026-10-29 at 5.32.20 PM.png\nScreenshot 2026-10-29 at 5.32.20 PM.png"
+    },
+    {
+      "day": "Wednesday",
+      "content": ", October 28\nDaily\nWhat did you work on today\n5:08 PM\nTurned on automatic FreedUp access in production: every 5 minutes it checks new WooCommerce orders and gives matching Apollos accounts the purchase tag, with a full catch-up run each night\nMerged the FreedUp lock fixes so paid weeks stay closed through Continue, Up Next, and direct links, and now say \"Access required\" instead of \"unlocks in order\"\nTested paid access on a test build, where a pull to refresh gives the right access right away\nRecorded a Loom on the paid-week lock setup and talked through where the lock setting should live in Admin w/ @Conrad\nPlanned tag-gated tabs for FreedUp w/ @Conrad and found a small Admin change that would let a tab hide from people with a tag, not just show for them\nClosed out the Apollos AI assistant fixes for the connect button, link previews, and better-formatted replies\nMerged Admin fixes so blank saves no longer show as failures and pages reload once when they fail to load\nOpened a fix so Chat says it's temporarily unavailable instead of showing a raw error\nScreenshot 2026-10-28 at 5.08.14 PM.png\nScreenshot 2026-10-28 at 5.08.14 PM.png"
+    },
+    {
+      "day": "Tuesday",
+      "content": ", October 27\nDaily\nWhat did you work on today\n4:59 PM\nMerged automatic FreedUp access from WooCommerce orders and removed the old, unused purchase-claim code\nStress tested the FreedUp paid-week locks on the live app and set up a sample thank-you and unlock pair for the Resources tab\nFound ways past the paid-week locks through the Continue and Up Next buttons and through direct links, and put fixes in review so locked weeks stay closed and say why\nUpdated Node across Admin, the backend, and our servers for the October security release\nMoved Skunkworks errors out of our live crash reports w/ @Vincent\nMerged a fix so \"message this person\" asks for a missing phone number or birthdate instead of showing an error\nReviewed Admin permission fixes so only the right people can change a church's plan or its mobile tabs\nKept more overnight crash fixes in review for chat, the daily feed, campus changes, and staying signed in\nScreenshot 2026-10-27 at 4.58.34 PM.png\nScreenshot 2026-10-27 at 4.58.34 PM.png"
+    },
+    {
+      "day": "Monday",
+      "content": ", October 26\nDaily\nWhat did you work on today\n4:57 PM\nMerged the core FreedUp paid-access pieces: paid weeks stay locked until someone buys, staff can grant access by hand, and access follows the email a person signs in with\nOpened the piece that grants FreedUp access automatically from WooCommerce orders, and started setting up its read-only connection to FreedUp's store\nLined up the rest of the FreedUp launch: locking weeks 2-6, turning on the order sync in production, and showing buyers and non-buyers different home items\nCleaned out old, unused code for claiming purchases\nMerged a batch of mobile and web crash fixes, covering offline errors, expected sign-in errors, video network failures, and web pages that now reload once when they fail to load\nMerged a fix so expected chat permission errors stop showing up as crashes\nKept more crash fixes in review for chat invites, missing videos, church sign-ups that were already registered, and campus changes when a church's Planning Center connection expires\nClosed out stale crash tickets for the removed Ask page\nShared in #dev that Admin crash reports dropped to double digits last week!\nScreenshot 2026-10-26 at 4.56.50 PM.png"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 49\n  • PR reviews: 70\n  • Commits pushed: 150\n  • Code volume: +6448 / -745 (216 files)\n  • Median review latency (working hours): 1.15h\n  • Linear issues completed: 30\n  • Linear projects completed: 0\n  • Linear issues worked on: 36\n  • Linear issues created: 43\n  • Linear replies: 27\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-infrastructure, apollos-platforms, apollos-shovel, pgstream\n\n📝 Check-ins:\n\n  Monday: - Say \"The previously flagged issue\" instead of \"All 1\"\n- Treat a missing follow...\n  Tuesday: - Record one model_calls row per model call in a review\n- Update Node to 24.22.1...\n  Wednesday: - Reload once when an admin chunk fails to import (APOLLOS-ADMIN-75A)\n- Stop rep...\n  Thursday: - APO-16891: Retry Giving report fetches once when the Cluster connection resets...\n  Friday: - APO-16961: Make the segments Cancel test fail without the fix\n- Leave e2e-crea...\n  Friday: , October 30\nDaily\nWhat did you work on today\n4:33 PM\nGot prod deploys working a...\n  Thursday: , October 29\nDaily\nWhat did you work on today\n5:32 PM\nLocked FreedUp weeks 2 to ...\n  Wednesday: , October 28\nDaily\nWhat did you work on today\n5:08 PM\nTurned on automatic FreedU...\n  Tuesday: , October 27\nDaily\nWhat did you work on today\n4:59 PM\nMerged automatic FreedUp a...\n  Monday: , October 26\nDaily\nWhat did you work on today\n4:57 PM\nMerged the core FreedUp pa...\n",
+  "formatted_output": null
+}
