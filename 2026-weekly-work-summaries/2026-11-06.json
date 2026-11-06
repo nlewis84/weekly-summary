@@ -1,0 +1,2489 @@
+{
+  "meta": {
+    "generated_at": "2026-11-06T22:21:39.380Z",
+    "window_start": "2026-10-31T05:00:00.000Z",
+    "window_end": "2026-11-07T05:59:59.999Z",
+    "week_ending": "2026-11-06",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 28,
+    "prs_total": 50,
+    "pr_reviews": 89,
+    "pr_comments": 97,
+    "commits_pushed": 113,
+    "linear_completed": 33,
+    "linear_projects_completed": 1,
+    "linear_worked_on": 48,
+    "linear_issues_created": 52,
+    "linear_comments": 27,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-infrastructure",
+      "apollos-platforms",
+      "apollos-shovel",
+      "bug-board"
+    ],
+    "lines_added": 3083,
+    "lines_deleted": 371,
+    "files_changed": 117,
+    "median_review_latency_hours": 0.99
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-17274",
+        "title": "Show a locked screen on web for FreedUp content behind the purchase tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-17274/show-a-locked-screen-on-web-for-freedup-content-behind-the-purchase",
+        "completedAt": "2026-11-04T23:51:25.916Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17234",
+        "title": "Giving history: Visa logo is hard to see in dark mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17234/giving-history-visa-logo-is-hard-to-see-in-dark-mode",
+        "completedAt": "2026-11-06T17:09:20.546Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17165",
+        "title": "Existing synced gifts at City First and Willow Creek stay Pending after the status fix",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17165/existing-synced-gifts-at-city-first-and-willow-creek-stay-pending",
+        "completedAt": "2026-11-06T17:47:38.155Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17160",
+        "title": "Rock gift backfill copies all history when donors only need two tax years",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17160/rock-gift-backfill-copies-all-history-when-donors-only-need-two-tax",
+        "completedAt": "2026-11-03T20:32:31.072Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17132",
+        "title": "Rock gift backfill makes 50 requests per batch to fetch transaction details",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17132/rock-gift-backfill-makes-50-requests-per-batch-to-fetch-transaction",
+        "completedAt": "2026-11-03T20:32:31.228Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17131",
+        "title": "Rock sync restarts a whole backfill after one transient Rock error",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17131/rock-sync-restarts-a-whole-backfill-after-one-transient-rock-error",
+        "completedAt": "2026-11-03T20:32:31.000Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17107",
+        "title": "Rock gift sync marks every synced gift pending",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17107/rock-gift-sync-marks-every-synced-gift-pending",
+        "completedAt": "2026-11-03T20:32:31.138Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17094",
+        "title": "Turn on Christ Fellowship's Rock gift sync and check it before donors see it",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17094/turn-on-christ-fellowships-rock-gift-sync-and-check-it-before-donors",
+        "completedAt": "2026-11-06T15:26:29.482Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17093",
+        "title": "Giving history: one word for finished gifts, \"View your Gift\" on Pushpay only, bank icon",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17093/giving-history-one-word-for-finished-gifts-view-your-gift-on-pushpay",
+        "completedAt": "2026-11-04T22:53:48.454Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17092",
+        "title": "Giving history: gate synced ChMS gifts per church and show each Apollos gift once",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17092/giving-history-gate-synced-chms-gifts-per-church-and-show-each-apollos",
+        "completedAt": "2026-11-04T22:53:49.581Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17068",
+        "title": "Apollos has no family unit, so a family's gifts can't be grouped in giving history",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17068/apollos-has-no-family-unit-so-a-familys-gifts-cant-be-grouped-in",
+        "completedAt": "2026-11-02T20:28:39.501Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17067",
+        "title": "Decide whether admin shows ChMS gifts, and where",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17067/decide-whether-admin-shows-chms-gifts-and-where",
+        "completedAt": "2026-11-02T20:28:38.584Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17030",
+        "title": "Cluster should still load a feed when an action relatedNode has no Node type (APOLLOS-CLUSTER-80M)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17030/cluster-should-still-load-a-feed-when-an-action-relatednode-has-no",
+        "completedAt": "2026-11-03T17:22:22.391Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17028",
+        "title": "Cluster should not report Twilio invalid-To OTP errors to Sentry (APOLLOS-CLUSTER-35N)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17028/cluster-should-not-report-twilio-invalid-to-otp-errors-to-sentry",
+        "completedAt": "2026-11-03T17:22:23.299Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17027",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 404 (APOLLOS-CLUSTER-8QN)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17027/cluster-should-not-fail-graphql-when-studioc-tracking-returns-404",
+        "completedAt": "2026-11-03T17:22:22.679Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16967",
+        "title": "Cluster should not report community-chat membership FORBIDDEN to Sentry (APOLLOS-CLUSTER-814)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16967/cluster-should-not-report-community-chat-membership-forbidden-to",
+        "completedAt": "2026-11-01T17:19:40.435Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16966",
+        "title": "Cluster should not report Postgres ECONNRESET GraphQL errors to Sentry (APOLLOS-CLUSTER-8RW)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16966/cluster-should-not-report-postgres-econnreset-graphql-errors-to-sentry",
+        "completedAt": "2026-11-03T22:54:25.628Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16964",
+        "title": "Cluster should not report Postgres shutdown GraphQL errors to Sentry (APOLLOS-CLUSTER-8P8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16964/cluster-should-not-report-postgres-shutdown-graphql-errors-to-sentry",
+        "completedAt": "2026-11-03T22:54:25.572Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16963",
+        "title": "Cluster should not report in-use phone FORBIDDEN to Sentry (APOLLOS-CLUSTER-7Y9)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16963/cluster-should-not-report-in-use-phone-forbidden-to-sentry-apollos",
+        "completedAt": "2026-11-03T17:22:22.608Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16957",
+        "title": "Cluster should not report inaccessible-prayer FORBIDDEN to Sentry (APOLLOS-CLUSTER-8GD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16957/cluster-should-not-report-inaccessible-prayer-forbidden-to-sentry",
+        "completedAt": "2026-11-01T17:19:40.340Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16603",
+        "title": "Mobile should not report a failed PubNub church-slug stamp to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16603/mobile-should-not-report-a-failed-pubnub-church-slug-stamp-to-sentry",
+        "completedAt": "2026-11-03T20:57:09.995Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16602",
+        "title": "Mobile should refresh the session on GraphQL HTTP 401 instead of reporting it to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16602/mobile-should-refresh-the-session-on-graphql-http-401-instead-of",
+        "completedAt": "2026-11-03T20:57:07.730Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16595",
+        "title": "Mobile should not report NativePlayer origin 404s to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16595/mobile-should-not-report-nativeplayer-origin-404s-to-sentry",
+        "completedAt": "2026-11-03T20:57:06.124Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16487",
+        "title": "Mobile should not report NativePlayer network DNS failures to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16487/mobile-should-not-report-nativeplayer-network-dns-failures-to-sentry",
+        "completedAt": "2026-11-03T20:57:06.240Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16428",
+        "title": "Mobile should not report Apollo fetch Network request failed to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16428/mobile-should-not-report-apollo-fetch-network-request-failed-to-sentry",
+        "completedAt": "2026-11-03T20:57:05.753Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16421",
+        "title": "Mobile should not warn Sentry when schema introspection is offline",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16421/mobile-should-not-warn-sentry-when-schema-introspection-is-offline",
+        "completedAt": "2026-11-03T20:57:06.859Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16413",
+        "title": "Mobile should not report expected No person in context GraphQL errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16413/mobile-should-not-report-expected-no-person-in-context-graphql-errors",
+        "completedAt": "2026-11-03T20:57:05.954Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12561",
+        "title": "apps/admin typecheck regressed to 27 errors (13 in canvas-editor dbFeaturesToPages)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12561/appsadmin-typecheck-regressed-to-27-errors-13-in-canvas-editor",
+        "completedAt": "2026-11-03T17:18:36.853Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12473",
+        "title": "Mobile: GraphQL errors pass StudioC JSON as UUID / miss like nodeId",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12473/mobile-graphql-errors-pass-studioc-json-as-uuid-miss-like-nodeid",
+        "completedAt": "2026-11-03T20:57:05.678Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12338",
+        "title": "Share parseHexRgb in web-embeds ThemeProvider",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12338/share-parsehexrgb-in-web-embeds-themeprovider",
+        "completedAt": "2026-11-02T18:20:13.677Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10714",
+        "title": "Guard backfill cleanup() against deleting valid donations on partial API fetch",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-10714/guard-backfill-cleanup-against-deleting-valid-donations-on-partial-api",
+        "completedAt": "2026-11-03T22:24:03.864Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17195",
+        "title": "Giving history: how should refunds and corrections from Rock show?",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17195/giving-history-how-should-refunds-and-corrections-from-rock-show",
+        "completedAt": "2026-11-04T22:53:46.728Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [
+      {
+        "identifier": "Project",
+        "title": "FreedUp paid access",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/project/freedup-paid-access-d39fd81885fe",
+        "completedAt": "2026-11-01T19:54:05.135Z",
+        "state": "Complete",
+        "description": "Tag, lock, staff override, and a shovel DAG that grants the tag from Woo orders. Woo email is the person key. HubSpot is a sidecar.",
+        "startedAt": "2026-09-17T16:06:30.303Z",
+        "targetDate": "2026-10-31",
+        "lead": "Nathan Lewis",
+        "issue_count": 20,
+        "completed_issue_count": 19
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-17364",
+        "title": "Giving history: lead gift pages with the amount and show details as rows",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17364/giving-history-lead-gift-pages-with-the-amount-and-show-details-as",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17358",
+        "title": "Giving history: pager doesn't say which page you're on",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17358/giving-history-pager-doesnt-say-which-page-youre-on",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17357",
+        "title": "Giving history: pages change width on desktop",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17357/giving-history-pages-change-width-on-desktop",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17356",
+        "title": "Giving history: church logo next to \"Giving\" is nearly invisible in light mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17356/giving-history-church-logo-next-to-giving-is-nearly-invisible-in-light",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17355",
+        "title": "Giving history: gift page says \"Transaction Details\" twice",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17355/giving-history-gift-page-says-transaction-details-twice",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17274",
+        "title": "Show a locked screen on web for FreedUp content behind the purchase tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-17274/show-a-locked-screen-on-web-for-freedup-content-behind-the-purchase",
+        "completedAt": "2026-11-04T23:51:25.916Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17267",
+        "title": "Mobile should not report NativePlayer TLS and connection failures to Sentry (APOLLOS-MOBILE-ERT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17267/mobile-should-not-report-nativeplayer-tls-and-connection-failures-to",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17234",
+        "title": "Giving history: Visa logo is hard to see in dark mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17234/giving-history-visa-logo-is-hard-to-see-in-dark-mode",
+        "completedAt": "2026-11-06T17:09:20.546Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17196",
+        "title": "Mobile should not report expected chat invite and auth GraphQL errors to Sentry (APOLLOS-MOBILE-FGR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17196/mobile-should-not-report-expected-chat-invite-and-auth-graphql-errors",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17167",
+        "title": "Mobile should not report token refresh Network request failed to Sentry (Sentry APOLLOS-MOBILE-FA3)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17167/mobile-should-not-report-token-refresh-network-request-failed-to",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17165",
+        "title": "Existing synced gifts at City First and Willow Creek stay Pending after the status fix",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17165/existing-synced-gifts-at-city-first-and-willow-creek-stay-pending",
+        "completedAt": "2026-11-06T17:47:38.155Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17164",
+        "title": "Mobile should not report a full-disk church cache write to Sentry (Sentry APOLLOS-MOBILE-EY7)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17164/mobile-should-not-report-a-full-disk-church-cache-write-to-sentry",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17160",
+        "title": "Rock gift backfill copies all history when donors only need two tax years",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17160/rock-gift-backfill-copies-all-history-when-donors-only-need-two-tax",
+        "completedAt": "2026-11-03T20:32:31.072Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17156",
+        "title": "Mobile Give handoff should not report mint Network request failed to Sentry (Sentry APOLLOS-MOBILE-EZB)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17156/mobile-give-handoff-should-not-report-mint-network-request-failed-to",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17154",
+        "title": "Mobile WebView should not report HTTP 404s to Sentry (Sentry APOLLOS-MOBILE-FR9)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17154/mobile-webview-should-not-report-http-404s-to-sentry-sentry-apollos",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17132",
+        "title": "Rock gift backfill makes 50 requests per batch to fetch transaction details",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17132/rock-gift-backfill-makes-50-requests-per-batch-to-fetch-transaction",
+        "completedAt": "2026-11-03T20:32:31.228Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17131",
+        "title": "Rock sync restarts a whole backfill after one transient Rock error",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17131/rock-sync-restarts-a-whole-backfill-after-one-transient-rock-error",
+        "completedAt": "2026-11-03T20:32:31.000Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17125",
+        "title": "Cluster should still load currentUser when Rock authToken lookup returns 401 (APOLLOS-CLUSTER-8F8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17125/cluster-should-still-load-currentuser-when-rock-authtoken-lookup",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17124",
+        "title": "Cluster should not report expected give-intent Transaction forbidden to Sentry (APOLLOS-CLUSTER-7HD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17124/cluster-should-not-report-expected-give-intent-transaction-forbidden",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17122",
+        "title": "Cluster should still load a content item when html-to-text overflows on Html export (APOLLOS-CLUSTER-8SS)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17122/cluster-should-still-load-a-content-item-when-html-to-text-overflows",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17107",
+        "title": "Rock gift sync marks every synced gift pending",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17107/rock-gift-sync-marks-every-synced-gift-pending",
+        "completedAt": "2026-11-03T20:32:31.138Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17094",
+        "title": "Turn on Christ Fellowship's Rock gift sync and check it before donors see it",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17094/turn-on-christ-fellowships-rock-gift-sync-and-check-it-before-donors",
+        "completedAt": "2026-11-06T15:26:29.482Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17093",
+        "title": "Giving history: one word for finished gifts, \"View your Gift\" on Pushpay only, bank icon",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17093/giving-history-one-word-for-finished-gifts-view-your-gift-on-pushpay",
+        "completedAt": "2026-11-04T22:53:48.454Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17092",
+        "title": "Giving history: gate synced ChMS gifts per church and show each Apollos gift once",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17092/giving-history-gate-synced-chms-gifts-per-church-and-show-each-apollos",
+        "completedAt": "2026-11-04T22:53:49.581Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17068",
+        "title": "Apollos has no family unit, so a family's gifts can't be grouped in giving history",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17068/apollos-has-no-family-unit-so-a-familys-gifts-cant-be-grouped-in",
+        "completedAt": "2026-11-02T20:28:39.501Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17067",
+        "title": "Decide whether admin shows ChMS gifts, and where",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17067/decide-whether-admin-shows-chms-gifts-and-where",
+        "completedAt": "2026-11-02T20:28:38.584Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17030",
+        "title": "Cluster should still load a feed when an action relatedNode has no Node type (APOLLOS-CLUSTER-80M)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17030/cluster-should-still-load-a-feed-when-an-action-relatednode-has-no",
+        "completedAt": "2026-11-03T17:22:22.391Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17028",
+        "title": "Cluster should not report Twilio invalid-To OTP errors to Sentry (APOLLOS-CLUSTER-35N)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17028/cluster-should-not-report-twilio-invalid-to-otp-errors-to-sentry",
+        "completedAt": "2026-11-03T17:22:23.299Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17027",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 404 (APOLLOS-CLUSTER-8QN)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17027/cluster-should-not-fail-graphql-when-studioc-tracking-returns-404",
+        "completedAt": "2026-11-03T17:22:22.679Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16967",
+        "title": "Cluster should not report community-chat membership FORBIDDEN to Sentry (APOLLOS-CLUSTER-814)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16967/cluster-should-not-report-community-chat-membership-forbidden-to",
+        "completedAt": "2026-11-01T17:19:40.435Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16966",
+        "title": "Cluster should not report Postgres ECONNRESET GraphQL errors to Sentry (APOLLOS-CLUSTER-8RW)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16966/cluster-should-not-report-postgres-econnreset-graphql-errors-to-sentry",
+        "completedAt": "2026-11-03T22:54:25.628Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16964",
+        "title": "Cluster should not report Postgres shutdown GraphQL errors to Sentry (APOLLOS-CLUSTER-8P8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16964/cluster-should-not-report-postgres-shutdown-graphql-errors-to-sentry",
+        "completedAt": "2026-11-03T22:54:25.572Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16963",
+        "title": "Cluster should not report in-use phone FORBIDDEN to Sentry (APOLLOS-CLUSTER-7Y9)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16963/cluster-should-not-report-in-use-phone-forbidden-to-sentry-apollos",
+        "completedAt": "2026-11-03T17:22:22.608Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16962",
+        "title": "Cluster should still save a profile when Rock returns 401 (APOLLOS-CLUSTER-8FZ)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16962/cluster-should-still-save-a-profile-when-rock-returns-401-apollos",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-16957",
+        "title": "Cluster should not report inaccessible-prayer FORBIDDEN to Sentry (APOLLOS-CLUSTER-8GD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16957/cluster-should-not-report-inaccessible-prayer-forbidden-to-sentry",
+        "completedAt": "2026-11-01T17:19:40.340Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16603",
+        "title": "Mobile should not report a failed PubNub church-slug stamp to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16603/mobile-should-not-report-a-failed-pubnub-church-slug-stamp-to-sentry",
+        "completedAt": "2026-11-03T20:57:09.995Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16602",
+        "title": "Mobile should refresh the session on GraphQL HTTP 401 instead of reporting it to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16602/mobile-should-refresh-the-session-on-graphql-http-401-instead-of",
+        "completedAt": "2026-11-03T20:57:07.730Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16595",
+        "title": "Mobile should not report NativePlayer origin 404s to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16595/mobile-should-not-report-nativeplayer-origin-404s-to-sentry",
+        "completedAt": "2026-11-03T20:57:06.124Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16491",
+        "title": "Mobile should not report expected join-chat and like GraphQL errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16491/mobile-should-not-report-expected-join-chat-and-like-graphql-errors-to",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16487",
+        "title": "Mobile should not report NativePlayer network DNS failures to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16487/mobile-should-not-report-nativeplayer-network-dns-failures-to-sentry",
+        "completedAt": "2026-11-03T20:57:06.240Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16428",
+        "title": "Mobile should not report Apollo fetch Network request failed to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16428/mobile-should-not-report-apollo-fetch-network-request-failed-to-sentry",
+        "completedAt": "2026-11-03T20:57:05.753Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16421",
+        "title": "Mobile should not warn Sentry when schema introspection is offline",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16421/mobile-should-not-warn-sentry-when-schema-introspection-is-offline",
+        "completedAt": "2026-11-03T20:57:06.859Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16413",
+        "title": "Mobile should not report expected No person in context GraphQL errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16413/mobile-should-not-report-expected-no-person-in-context-graphql-errors",
+        "completedAt": "2026-11-03T20:57:05.954Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15088",
+        "title": "Remove the phone number requirement when giving (converted to project)",
+        "project": "Remove the phone number requirement when giving",
+        "url": "https://linear.app/differential/issue/APO-15088/remove-the-phone-number-requirement-when-giving-converted-to-project",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-12561",
+        "title": "apps/admin typecheck regressed to 27 errors (13 in canvas-editor dbFeaturesToPages)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12561/appsadmin-typecheck-regressed-to-27-errors-13-in-canvas-editor",
+        "completedAt": "2026-11-03T17:18:36.853Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12473",
+        "title": "Mobile: GraphQL errors pass StudioC JSON as UUID / miss like nodeId",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12473/mobile-graphql-errors-pass-studioc-json-as-uuid-miss-like-nodeid",
+        "completedAt": "2026-11-03T20:57:05.678Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-12338",
+        "title": "Share parseHexRgb in web-embeds ThemeProvider",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-12338/share-parsehexrgb-in-web-embeds-themeprovider",
+        "completedAt": "2026-11-02T18:20:13.677Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-10714",
+        "title": "Guard backfill cleanup() against deleting valid donations on partial API fetch",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-10714/guard-backfill-cleanup-against-deleting-valid-donations-on-partial-api",
+        "completedAt": "2026-11-03T22:24:03.864Z",
+        "state": "Done"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-17380",
+        "title": "Giving history: a solid black church logo is hard to see on the dark logo circle",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17380/giving-history-a-solid-black-church-logo-is-hard-to-see-on-the-dark",
+        "createdAt": "2026-11-06T22:03:26.338Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-17379",
+        "title": "Giving history: a refunded card gift says \"Complete\" on its gift page",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17379/giving-history-a-refunded-card-gift-says-complete-on-its-gift-page",
+        "createdAt": "2026-11-06T22:03:15.665Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-17367",
+        "title": "Giving history shows gift times in UTC",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17367/giving-history-shows-gift-times-in-utc",
+        "createdAt": "2026-11-06T20:47:17.658Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-17366",
+        "title": "Giving history: read the church time zone from merged config",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17366/giving-history-read-the-church-time-zone-from-merged-config",
+        "createdAt": "2026-11-06T20:46:34.835Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-17364",
+        "title": "Giving history: lead gift pages with the amount and show details as rows",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17364/giving-history-lead-gift-pages-with-the-amount-and-show-details-as",
+        "createdAt": "2026-11-06T20:09:44.269Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17363",
+        "title": "Giving history: Edit link on a recurring gift doesn't look like a link in dark mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17363/giving-history-edit-link-on-a-recurring-gift-doesnt-look-like-a-link",
+        "createdAt": "2026-11-06T20:09:42.652Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-17358",
+        "title": "Giving history: pager doesn't say which page you're on",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17358/giving-history-pager-doesnt-say-which-page-youre-on",
+        "createdAt": "2026-11-06T19:59:16.103Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17357",
+        "title": "Giving history: pages change width on desktop",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17357/giving-history-pages-change-width-on-desktop",
+        "createdAt": "2026-11-06T19:59:14.915Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17356",
+        "title": "Giving history: church logo next to \"Giving\" is nearly invisible in light mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17356/giving-history-church-logo-next-to-giving-is-nearly-invisible-in-light",
+        "createdAt": "2026-11-06T19:59:13.781Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17355",
+        "title": "Giving history: gift page says \"Transaction Details\" twice",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17355/giving-history-gift-page-says-transaction-details-twice",
+        "createdAt": "2026-11-06T19:59:11.520Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17354",
+        "title": "Giving history: \"up to 24 hours\" note is black and cramped in light mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17354/giving-history-up-to-24-hours-note-is-black-and-cramped-in-light-mode",
+        "createdAt": "2026-11-06T19:59:09.689Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-17353",
+        "title": "Giving history: gift page shows the date without the year or time",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17353/giving-history-gift-page-shows-the-date-without-the-year-or-time",
+        "createdAt": "2026-11-06T19:59:08.671Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-17274",
+        "title": "Show a locked screen on web for FreedUp content behind the purchase tag",
+        "project": "FreedUp paid access",
+        "url": "https://linear.app/differential/issue/APO-17274/show-a-locked-screen-on-web-for-freedup-content-behind-the-purchase",
+        "createdAt": "2026-11-04T22:51:48.528Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17267",
+        "title": "Mobile should not report NativePlayer TLS and connection failures to Sentry (APOLLOS-MOBILE-ERT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17267/mobile-should-not-report-nativeplayer-tls-and-connection-failures-to",
+        "createdAt": "2026-11-04T22:10:07.957Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17262",
+        "title": "Mary: don't treat the donation-embed translation file as giving code",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17262/mary-dont-treat-the-donation-embed-translation-file-as-giving-code",
+        "createdAt": "2026-11-04T21:51:17.585Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-17261",
+        "title": "Mobile captureMessage catch-all mixes PubNub init, schema introspection, and share failures (APOLLOS-MOBILE-BWY)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17261/mobile-capturemessage-catch-all-mixes-pubnub-init-schema-introspection",
+        "createdAt": "2026-11-04T21:37:35.682Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17252",
+        "title": "[Mobile] First and Last Name fields lost their padding and spacing on Complete Your Profile and Personal Details (regression from #7701)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17252/mobile-first-and-last-name-fields-lost-their-padding-and-spacing-on",
+        "createdAt": "2026-11-04T20:47:52.567Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-17234",
+        "title": "Giving history: Visa logo is hard to see in dark mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17234/giving-history-visa-logo-is-hard-to-see-in-dark-mode",
+        "createdAt": "2026-11-04T18:50:34.206Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17222",
+        "title": "Giving history: mark a Rock gift as refunded",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17222/giving-history-mark-a-rock-gift-as-refunded",
+        "createdAt": "2026-11-04T18:15:18.977Z",
+        "state": "Duplicate"
+      },
+      {
+        "identifier": "APO-17221",
+        "title": "Giving history: choose a year, from only the years with gifts",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17221/giving-history-choose-a-year-from-only-the-years-with-gifts",
+        "createdAt": "2026-11-04T18:15:16.480Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-17196",
+        "title": "Mobile should not report expected chat invite and auth GraphQL errors to Sentry (APOLLOS-MOBILE-FGR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17196/mobile-should-not-report-expected-chat-invite-and-auth-graphql-errors",
+        "createdAt": "2026-11-04T05:09:37.252Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17195",
+        "title": "Giving history: how should refunds and corrections from Rock show?",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17195/giving-history-how-should-refunds-and-corrections-from-rock-show",
+        "createdAt": "2026-11-04T03:47:41.155Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17167",
+        "title": "Mobile should not report token refresh Network request failed to Sentry (Sentry APOLLOS-MOBILE-FA3)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17167/mobile-should-not-report-token-refresh-network-request-failed-to",
+        "createdAt": "2026-11-03T18:39:18.856Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17166",
+        "title": "Better Stack should alert in Slack when Cluster keeps losing its database connection",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17166/better-stack-should-alert-in-slack-when-cluster-keeps-losing-its",
+        "createdAt": "2026-11-03T18:27:26.660Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17165",
+        "title": "Existing synced gifts at City First and Willow Creek stay Pending after the status fix",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17165/existing-synced-gifts-at-city-first-and-willow-creek-stay-pending",
+        "createdAt": "2026-11-03T18:21:05.567Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17164",
+        "title": "Mobile should not report a full-disk church cache write to Sentry (Sentry APOLLOS-MOBILE-EY7)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17164/mobile-should-not-report-a-full-disk-church-cache-write-to-sentry",
+        "createdAt": "2026-11-03T18:09:26.525Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17160",
+        "title": "Rock gift backfill copies all history when donors only need two tax years",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17160/rock-gift-backfill-copies-all-history-when-donors-only-need-two-tax",
+        "createdAt": "2026-11-03T17:38:25.488Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17156",
+        "title": "Mobile Give handoff should not report mint Network request failed to Sentry (Sentry APOLLOS-MOBILE-EZB)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17156/mobile-give-handoff-should-not-report-mint-network-request-failed-to",
+        "createdAt": "2026-11-03T17:10:23.663Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17154",
+        "title": "Mobile WebView should not report HTTP 404s to Sentry (Sentry APOLLOS-MOBILE-FR9)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17154/mobile-webview-should-not-report-http-404s-to-sentry-sentry-apollos",
+        "createdAt": "2026-11-03T16:37:22.460Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17153",
+        "title": "Cluster returns HTTP 500 for currentUserFollowRequests (Sentry APOLLOS-MOBILE-F4R)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17153/cluster-returns-http-500-for-currentuserfollowrequests-sentry-apollos",
+        "createdAt": "2026-11-03T16:05:23.495Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17144",
+        "title": "Cluster returns HTTP 500 for getDailyPrayerResults (Sentry APOLLOS-MOBILE-F6W)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17144/cluster-returns-http-500-for-getdailyprayerresults-sentry-apollos",
+        "createdAt": "2026-11-03T15:36:41.096Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17142",
+        "title": "Cluster returns HTTP 500 for GetCurrentUserCommunitiesForHook (Sentry APOLLOS-MOBILE-F9F)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17142/cluster-returns-http-500-for-getcurrentusercommunitiesforhook-sentry",
+        "createdAt": "2026-11-03T15:20:36.602Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17138",
+        "title": "iOS reports a fully blocked app hang while main and JS threads are idle (APOLLOS-MOBILE-FKE)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17138/ios-reports-a-fully-blocked-app-hang-while-main-and-js-threads-are",
+        "createdAt": "2026-11-03T14:46:57.385Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17132",
+        "title": "Rock gift backfill makes 50 requests per batch to fetch transaction details",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17132/rock-gift-backfill-makes-50-requests-per-batch-to-fetch-transaction",
+        "createdAt": "2026-11-03T14:39:54.905Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17131",
+        "title": "Rock sync restarts a whole backfill after one transient Rock error",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17131/rock-sync-restarts-a-whole-backfill-after-one-transient-rock-error",
+        "createdAt": "2026-11-03T14:26:40.499Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17125",
+        "title": "Cluster should still load currentUser when Rock authToken lookup returns 401 (APOLLOS-CLUSTER-8F8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17125/cluster-should-still-load-currentuser-when-rock-authtoken-lookup",
+        "createdAt": "2026-11-03T04:33:51.529Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17124",
+        "title": "Cluster should not report expected give-intent Transaction forbidden to Sentry (APOLLOS-CLUSTER-7HD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17124/cluster-should-not-report-expected-give-intent-transaction-forbidden",
+        "createdAt": "2026-11-03T04:05:04.931Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17122",
+        "title": "Cluster should still load a content item when html-to-text overflows on Html export (APOLLOS-CLUSTER-8SS)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17122/cluster-should-still-load-a-content-item-when-html-to-text-overflows",
+        "createdAt": "2026-11-03T03:35:49.318Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17115",
+        "title": "Admin content editor reports a kept-body autosave as Content could not be saved (APOLLOS-ADMIN-78P)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17115/admin-content-editor-reports-a-kept-body-autosave-as-content-could-not",
+        "createdAt": "2026-11-03T01:40:24.397Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17107",
+        "title": "Rock gift sync marks every synced gift pending",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17107/rock-gift-sync-marks-every-synced-gift-pending",
+        "createdAt": "2026-11-02T20:50:47.928Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17097",
+        "title": "Turn on unified giving history for the other Rock giving churches",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17097/turn-on-unified-giving-history-for-the-other-rock-giving-churches",
+        "createdAt": "2026-11-02T20:29:59.622Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17096",
+        "title": "Show Rock giving history in the app for churches without Apollos Giving",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17096/show-rock-giving-history-in-the-app-for-churches-without-apollos",
+        "createdAt": "2026-11-02T20:29:47.786Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-17095",
+        "title": "Ask Crossroads whether to turn on unified giving history in the app",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17095/ask-crossroads-whether-to-turn-on-unified-giving-history-in-the-app",
+        "createdAt": "2026-11-02T20:29:45.761Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17094",
+        "title": "Turn on Christ Fellowship's Rock gift sync and check it before donors see it",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17094/turn-on-christ-fellowships-rock-gift-sync-and-check-it-before-donors",
+        "createdAt": "2026-11-02T20:29:42.867Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17093",
+        "title": "Giving history: one word for finished gifts, \"View your Gift\" on Pushpay only, bank icon",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17093/giving-history-one-word-for-finished-gifts-view-your-gift-on-pushpay",
+        "createdAt": "2026-11-02T20:29:40.985Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17092",
+        "title": "Giving history: gate synced ChMS gifts per church and show each Apollos gift once",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17092/giving-history-gate-synced-chms-gifts-per-church-and-show-each-apollos",
+        "createdAt": "2026-11-02T20:29:21.701Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17068",
+        "title": "Apollos has no family unit, so a family's gifts can't be grouped in giving history",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17068/apollos-has-no-family-unit-so-a-familys-gifts-cant-be-grouped-in",
+        "createdAt": "2026-11-02T15:52:41.943Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17067",
+        "title": "Decide whether admin shows ChMS gifts, and where",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17067/decide-whether-admin-shows-chms-gifts-and-where",
+        "createdAt": "2026-11-02T15:47:32.086Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17030",
+        "title": "Cluster should still load a feed when an action relatedNode has no Node type (APOLLOS-CLUSTER-80M)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17030/cluster-should-still-load-a-feed-when-an-action-relatednode-has-no",
+        "createdAt": "2026-10-31T10:06:41.826Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17029",
+        "title": "Cluster should still save a profile when Rock originId is missing (APOLLOS-CLUSTER-8KW)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17029/cluster-should-still-save-a-profile-when-rock-originid-is-missing",
+        "createdAt": "2026-10-31T09:37:23.831Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-17028",
+        "title": "Cluster should not report Twilio invalid-To OTP errors to Sentry (APOLLOS-CLUSTER-35N)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17028/cluster-should-not-report-twilio-invalid-to-otp-errors-to-sentry",
+        "createdAt": "2026-10-31T09:09:39.275Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17027",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 404 (APOLLOS-CLUSTER-8QN)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17027/cluster-should-not-fail-graphql-when-studioc-tracking-returns-404",
+        "createdAt": "2026-10-31T08:38:18.394Z",
+        "state": "Done"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-17343",
+        "title": "Creator AI crashes on sales_demo with Cannot read properties of undefined (reading 'map')",
+        "url": "https://linear.app/differential/issue/APO-17343/creator-ai-crashes-on-sales-demo-with-cannot-read-properties-of",
+        "project": null,
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-17165",
+        "title": "Existing synced gifts at City First and Willow Creek stay Pending after the status fix",
+        "url": "https://linear.app/differential/issue/APO-17165/existing-synced-gifts-at-city-first-and-willow-creek-stay-pending",
+        "project": "Unified Giving History",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17095",
+        "title": "Ask Crossroads whether to turn on unified giving history in the app",
+        "url": "https://linear.app/differential/issue/APO-17095/ask-crossroads-whether-to-turn-on-unified-giving-history-in-the-app",
+        "project": "Unified Giving History",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17127",
+        "title": "Admin: Transactions total count and page count change on page 2",
+        "url": "https://linear.app/differential/issue/APO-17127/admin-transactions-total-count-and-page-count-change-on-page-2",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17247",
+        "title": "Prevent minors from receiving follows and follow requests",
+        "url": "https://linear.app/differential/issue/APO-17247/prevent-minors-from-receiving-follows-and-follow-requests",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17115",
+        "title": "Admin content editor reports a kept-body autosave as Content could not be saved (APOLLOS-ADMIN-78P)",
+        "url": "https://linear.app/differential/issue/APO-17115/admin-content-editor-reports-a-kept-body-autosave-as-content-could-not",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17195",
+        "title": "Giving history: how should refunds and corrections from Rock show?",
+        "url": "https://linear.app/differential/issue/APO-17195/giving-history-how-should-refunds-and-corrections-from-rock-show",
+        "project": "Unified Giving History",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17093",
+        "title": "Giving history: one word for finished gifts, \"View your Gift\" on Pushpay only, bank icon",
+        "url": "https://linear.app/differential/issue/APO-17093/giving-history-one-word-for-finished-gifts-view-your-gift-on-pushpay",
+        "project": "Unified Giving History",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17166",
+        "title": "Better Stack should alert in Slack when Cluster keeps losing its database connection",
+        "url": "https://linear.app/differential/issue/APO-17166/better-stack-should-alert-in-slack-when-cluster-keeps-losing-its",
+        "project": null,
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17094",
+        "title": "Turn on Christ Fellowship's Rock gift sync and check it before donors see it",
+        "url": "https://linear.app/differential/issue/APO-17094/turn-on-christ-fellowships-rock-gift-sync-and-check-it-before-donors",
+        "project": "Unified Giving History",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17152",
+        "title": "Investigate report of an underage user receiving app messages",
+        "url": "https://linear.app/differential/issue/APO-17152/investigate-report-of-an-underage-user-receiving-app-messages",
+        "project": null,
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17163",
+        "title": "Minor follow safety and visibility policies need clarification",
+        "url": "https://linear.app/differential/issue/APO-17163/minor-follow-safety-and-visibility-policies-need-clarification",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17164",
+        "title": "Mobile should not report a full-disk church cache write to Sentry (Sentry APOLLOS-MOBILE-EY7)",
+        "url": "https://linear.app/differential/issue/APO-17164/mobile-should-not-report-a-full-disk-church-cache-write-to-sentry",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17154",
+        "title": "Mobile WebView should not report HTTP 404s to Sentry (Sentry APOLLOS-MOBILE-FR9)",
+        "url": "https://linear.app/differential/issue/APO-17154/mobile-webview-should-not-report-http-404s-to-sentry-sentry-apollos",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17138",
+        "title": "iOS reports a fully blocked app hang while main and JS threads are idle (APOLLOS-MOBILE-FKE)",
+        "url": "https://linear.app/differential/issue/APO-17138/ios-reports-a-fully-blocked-app-hang-while-main-and-js-threads-are",
+        "project": "Sentry Queue",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17124",
+        "title": "Cluster should not report expected give-intent Transaction forbidden to Sentry (APOLLOS-CLUSTER-7HD)",
+        "url": "https://linear.app/differential/issue/APO-17124/cluster-should-not-report-expected-give-intent-transaction-forbidden",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17122",
+        "title": "Cluster should still load a content item when html-to-text overflows on Html export (APOLLOS-CLUSTER-8SS)",
+        "url": "https://linear.app/differential/issue/APO-17122/cluster-should-still-load-a-content-item-when-html-to-text-overflows",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17029",
+        "title": "Cluster should still save a profile when Rock originId is missing (APOLLOS-CLUSTER-8KW)",
+        "url": "https://linear.app/differential/issue/APO-17029/cluster-should-still-save-a-profile-when-rock-originid-is-missing",
+        "project": "Sentry Queue",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-10715",
+        "title": "Rock donation normalizer silently creates $0 rows when FinancialTransactionDetail.Amount is missing",
+        "url": "https://linear.app/differential/issue/APO-10715/rock-donation-normalizer-silently-creates-dollar0-rows-when",
+        "project": "Unified Giving History",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-10712",
+        "title": "Fix cross-tenant fund lookup in rock_funds.get_parent_fund_id (missing church_slug filter)",
+        "url": "https://linear.app/differential/issue/APO-10712/fix-cross-tenant-fund-lookup-in-rock-fundsget-parent-fund-id-missing",
+        "project": "Unified Giving History",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-10714",
+        "title": "Guard backfill cleanup() against deleting valid donations on partial API fetch",
+        "url": "https://linear.app/differential/issue/APO-10714/guard-backfill-cleanup-against-deleting-valid-donations-on-partial-api",
+        "project": "Unified Giving History",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17068",
+        "title": "Apollos has no family unit, so a family's gifts can't be grouped in giving history",
+        "url": "https://linear.app/differential/issue/APO-17068/apollos-has-no-family-unit-so-a-familys-gifts-cant-be-grouped-in",
+        "project": "Unified Giving History",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17067",
+        "title": "Decide whether admin shows ChMS gifts, and where",
+        "url": "https://linear.app/differential/issue/APO-17067/decide-whether-admin-shows-chms-gifts-and-where",
+        "project": "Unified Giving History",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15363",
+        "title": "MCP: list Apollos in the Claude and ChatGPT directories",
+        "url": "https://linear.app/differential/issue/APO-15363/mcp-list-apollos-in-the-claude-and-chatgpt-directories",
+        "project": "Apollos MCP",
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-17030",
+        "title": "Cluster should still load a feed when an action relatedNode has no Node type (APOLLOS-CLUSTER-80M)",
+        "url": "https://linear.app/differential/issue/APO-17030/cluster-should-still-load-a-feed-when-an-action-relatednode-has-no",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17028",
+        "title": "Cluster should not report Twilio invalid-To OTP errors to Sentry (APOLLOS-CLUSTER-35N)",
+        "url": "https://linear.app/differential/issue/APO-17028/cluster-should-not-report-twilio-invalid-to-otp-errors-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17027",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 404 (APOLLOS-CLUSTER-8QN)",
+        "url": "https://linear.app/differential/issue/APO-17027/cluster-should-not-fail-graphql-when-studioc-tracking-returns-404",
+        "project": "Sentry Queue",
+        "state": "Done"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "Giving history: read the church time zone from merged config (APO-17366)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6385",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-06T22:08:07Z",
+        "additions": 17,
+        "deletions": 12,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(web): mute and loosen the History delay note (APO-17354)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6325",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-06T21:57:35Z",
+        "additions": 23,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(web): show year and time on the gift page date",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6322",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-06T22:04:13Z",
+        "additions": 18,
+        "deletions": 7,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(web): Edit link on a recurring gift uses the link color in dark mode",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6320",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-06T22:12:21Z",
+        "additions": 10,
+        "deletions": 9,
+        "changed_files": 2
+      },
+      {
+        "title": "Add a year filter and years list to giving history (APO-17221)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6366",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-06T20:44:54Z",
+        "additions": 517,
+        "deletions": 111,
+        "changed_files": 5
+      },
+      {
+        "title": "Show the Visa logo on a white backing in dark mode",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6309",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-06T15:42:13Z",
+        "additions": 12,
+        "deletions": 5,
+        "changed_files": 6
+      },
+      {
+        "title": "fix(mobile): restore padding and spacing on the First and Last Name fields (APO-17252)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8071",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-05T00:06:51Z",
+        "additions": 48,
+        "deletions": 3,
+        "changed_files": 4
+      },
+      {
+        "title": "Show a locked screen on web for content the viewer's tags don't open (APO-17274)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6262",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-04T23:48:26Z",
+        "additions": 372,
+        "deletions": 20,
+        "changed_files": 9
+      },
+      {
+        "title": "Limit synced gifts in giving history to 2024 on",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6320",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-04T21:36:56Z",
+        "additions": 30,
+        "deletions": 6,
+        "changed_files": 2
+      },
+      {
+        "title": "Use one status word and fix giving history actions and icons",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6243",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-04T21:35:57Z",
+        "additions": 228,
+        "deletions": 13,
+        "changed_files": 11
+      },
+      {
+        "title": "Hide negative synced gifts from giving history",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6305",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-04T16:32:43Z",
+        "additions": 5,
+        "deletions": 4,
+        "changed_files": 2
+      },
+      {
+        "title": "Seed GIVING.UNIFIED_HISTORY for apollos_demo (APO-17092)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6299",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-04T20:47:25Z",
+        "additions": 5,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(donations): only delete gifts when a backfill run asks (APO-10714)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2170",
+        "repo": "apollos-shovel",
+        "merged_at": "2026-11-03T22:14:52Z",
+        "additions": 51,
+        "deletions": 14,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(admin): stop reporting a cleared legacy body as a failed save",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6216",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-03T22:23:31Z",
+        "additions": 39,
+        "deletions": 21,
+        "changed_files": 2
+      },
+      {
+        "title": "feat(donations): start Rock gift backfills at Jan 1, 2025 (APO-17160)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2167",
+        "repo": "apollos-shovel",
+        "merged_at": "2026-11-03T20:20:26Z",
+        "additions": 198,
+        "deletions": 6,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(donations): fetch a backfill batch's details in one Rock request (APO-17132)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2166",
+        "repo": "apollos-shovel",
+        "merged_at": "2026-11-03T20:20:26Z",
+        "additions": 137,
+        "deletions": 3,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(rock): retry transient Rock errors so one blip can't restart a backfill (APO-17131)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2165",
+        "repo": "apollos-shovel",
+        "merged_at": "2026-11-03T20:20:26Z",
+        "additions": 144,
+        "deletions": 5,
+        "changed_files": 3
+      },
+      {
+        "title": "Gate synced gifts in giving history per church and show each gift once (APO-17092)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6254",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-03T22:21:22Z",
+        "additions": 294,
+        "deletions": 1,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(donations): Rock gift sync marks every synced gift pending (APO-17107)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2164",
+        "repo": "apollos-shovel",
+        "merged_at": "2026-11-03T20:20:26Z",
+        "additions": 120,
+        "deletions": 33,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(admin): get apps/admin to zero type errors and gate it in CI (APO-12561)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6157",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-02T19:25:39Z",
+        "additions": 120,
+        "deletions": 32,
+        "changed_files": 21
+      },
+      {
+        "title": "Keep a feature feed loading when an action relatedNode has no type",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6201",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-02T22:00:27Z",
+        "additions": 96,
+        "deletions": 41,
+        "changed_files": 4
+      },
+      {
+        "title": "Treat a Twilio invalid To number as user input",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6199",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-03T14:11:37Z",
+        "additions": 110,
+        "deletions": 4,
+        "changed_files": 4
+      },
+      {
+        "title": "Treat a missing StudioC tracking target as a no-op",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6196",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-03T14:41:51Z",
+        "additions": 85,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "APO-16955: Keep a tab's shown segments when switching tabs before saving",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6146",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-02T22:03:03Z",
+        "additions": 45,
+        "deletions": 7,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(mobile): catch Linking.openURL failures when opening an external URL",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8014",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-03T19:43:22Z",
+        "additions": 244,
+        "deletions": 9,
+        "changed_files": 8
+      },
+      {
+        "title": "fix(cluster): log database restart errors to Better Stack, not Sentry",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6157",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-03T17:56:06Z",
+        "additions": 68,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(cluster): answer an in-use chat phone with BAD_USER_INPUT",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6156",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-02T22:49:53Z",
+        "additions": 3,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "Mobile should never use a chat token from a failed fetch",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7918",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-02T21:01:04Z",
+        "additions": 44,
+        "deletions": 0,
+        "changed_files": 1
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "Make the phone optional on the card and bank give form (APO-15088)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6329",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(web): use the wide desktop width on every Giving History page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6327",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(web): show church logo on a dark circle beside Giving on History",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6326",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "feat(web): lead gift pages with the amount and show details as rows",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6324",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(web): show page X of Y beside the Giving History pager",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6323",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "fix(web): title gift pages Gift / Recurring Gift and use Details heading",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6321",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Add a year dropdown to giving history (APO-17221)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6310",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Mobile should not report NativePlayer TLS and connection failures to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8072",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "docs(cluster): say where production logs actually go",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6315",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "fix(mobile): skip expected chat invite and auth GraphQL errors (APOLLOS-MOBILE-FGR)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8061",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "fix(mobile): keep Network request failed on token refresh (APOLLOS-MOBILE-FA3)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8048",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "fix(mobile): skip Sentry when church cache write hits a full disk (APOLLOS-MOBILE-EY7)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8047",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "fix(mobile): skip Sentry when Give mint fails offline (APOLLOS-MOBILE-EZB)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8045",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "fix(mobile): skip Sentry for WebView HTTP 4xx (APOLLOS-MOBILE-FR9)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8044",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "fix(rock): return null when Rock refuses an impersonation token",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6260",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Skip expected give-intent Transaction forbidden in Sentry",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6258",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Keep content items loading when html-to-text overflows",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6257",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Save the Apollos profile when the church ChMS returns 401",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6155",
+        "repo": "apollos-cluster",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "fix(web): show church logo on a dark circle beside Giving on History",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6326",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-06T22:03:48Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(web): lead gift pages with the amount and show details as rows",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6324",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-06T22:03:50Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(web): show page X of Y beside the Giving History pager",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6323",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-06T22:06:20Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(web): title gift pages Gift / Recurring Gift and use Details heading",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6321",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-06T22:06:07Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(web): Edit link on a recurring gift uses the link color in dark mode",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6320",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-06T22:03:53Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Keep Creator from crashing when the AI sends no follow-up questions",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6314",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-06T19:30:13Z",
+        "reviewed_at": "2026-11-06T19:30:22Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "feat(admin): transactions pagination bar with numbered pages and row range",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6313",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-06T17:29:04Z",
+        "reviewed_at": "2026-11-06T18:24:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.92
+      },
+      {
+        "title": "Add a year filter and years list to giving history (APO-17221)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6366",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-11-06T18:15:53Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(mobile): show unavailable for missing content and events",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8093",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-06T11:46:10Z",
+        "reviewed_at": "2026-11-06T14:44:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "refactor(admin): move campus.server.js onto Cluster's PostgREST lane (APO-12275)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6307",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-06T10:54:31Z",
+        "reviewed_at": "2026-11-06T14:44:43Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(admin): stack feed editor above SideNavBar so back works (APO-17330)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6306",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-06T10:42:18Z",
+        "reviewed_at": "2026-11-06T14:42:13Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): stop Android Bible swipe cancel via unused PagerView (APO-16761)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8092",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-06T07:37:56Z",
+        "reviewed_at": "2026-11-06T14:42:54Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): translate login Yup phone/email errors (APO-15940)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8091",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-06T05:34:09Z",
+        "reviewed_at": "2026-11-06T14:41:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): fit Android native video to the landscape livestream",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8089",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-06T13:53:47Z",
+        "reviewed_at": "2026-11-06T14:46:12Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "refactor(giving): drop the DL1 prefix from giving error reports (APO-15030)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8088",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-06T02:52:50Z",
+        "reviewed_at": "2026-11-06T14:44:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "refactor(giving): drop the DL1 prefix from give-flow Sentry errors (APO-15030)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6303",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-06T01:52:46Z",
+        "reviewed_at": "2026-11-06T14:45:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): avoid empty native image sources in legacy ImageMedia",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8085",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-06T01:13:46Z",
+        "reviewed_at": "2026-11-06T14:43:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "feat(admin): Group finder URL on Community tab setup (APO-11438)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6299",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-05T20:59:54Z",
+        "reviewed_at": "2026-11-06T14:41:20Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 2
+      },
+      {
+        "title": "fix(mobile): wire communityFinderUrl into finder card (APO-11438)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8084",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-05T20:59:51Z",
+        "reviewed_at": "2026-11-06T14:41:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2
+      },
+      {
+        "title": "Remove tautological CenteredView smoke tests",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8083",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-05T21:06:51Z",
+        "reviewed_at": "2026-11-06T14:57:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.89
+      },
+      {
+        "title": "fix(mobile): replace dead demo cover image with AWS imgproxy URL (APO-17313)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8080",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-05T19:37:18Z",
+        "reviewed_at": "2026-11-06T14:40:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.38
+      },
+      {
+        "title": "fix(admin): return the first draft when the assistant retries a call (APO-17231)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6282",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-05T16:45:23Z",
+        "reviewed_at": "2026-11-06T14:36:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.24
+      },
+      {
+        "title": "fix(admin): give every assistant tool error a message and name the field (APO-17225)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6278",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-05T15:19:27Z",
+        "reviewed_at": "2026-11-06T14:36:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.68
+      },
+      {
+        "title": "fix(admin): title every assistant tool and the server, and mark update_content as changing data (APO-17225)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6277",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-05T15:19:24Z",
+        "reviewed_at": "2026-11-06T14:33:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.68
+      },
+      {
+        "title": "fix(admin): delete old assistant sign-in rows (APO-17245)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6276",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-05T16:45:39Z",
+        "reviewed_at": "2026-11-06T14:34:53Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.24
+      },
+      {
+        "title": "refactor(web): share Sentry exception matching across client filters (APO-17276)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6272",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-05T16:54:29Z",
+        "reviewed_at": "2026-11-06T14:35:12Z",
+        "review_state": "APPROVED",
+        "latency_hours": 6.09
+      },
+      {
+        "title": "Trim the assistant read tools",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6268",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-05T18:57:08Z",
+        "reviewed_at": "2026-11-06T14:39:06Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 4.05
+      },
+      {
+        "title": "fix(admin): let the Grok bot and Cursor sign in to the MCP (APO-17254)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6267",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T21:58:12Z",
+        "reviewed_at": "2026-11-04T22:58:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1
+      },
+      {
+        "title": "fix(admin): keep MCP connections when the flag cannot be read on refresh (APO-17241)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6266",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T22:15:11Z",
+        "reviewed_at": "2026-11-06T14:36:12Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 8.75
+      },
+      {
+        "title": "fix(admin): keep the sign-in details when consent sends a person to login (APO-17244)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6263",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T21:58:18Z",
+        "reviewed_at": "2026-11-04T22:58:13Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1
+      },
+      {
+        "title": "Remove commented-out HTMLView image snapshot tests",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8070",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-04T21:03:18Z",
+        "reviewed_at": "2026-11-04T22:57:08Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.9
+      },
+      {
+        "title": "Type originalChargeCreatedAt as DateInput | null in the Rock batch data source",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6323",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-04T20:40:44Z",
+        "reviewed_at": "2026-11-04T22:58:01Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.29
+      },
+      {
+        "title": "fix(admin): key the client sign-up limit on the caller Cloudflare saw (APO-17233)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6259",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-05T14:57:11Z",
+        "reviewed_at": "2026-11-06T14:38:32Z",
+        "review_state": "APPROVED",
+        "latency_hours": 8
+      },
+      {
+        "title": "fix(admin): share the client sign-up limit across Admin servers (APO-17233)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6258",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T20:07:12Z",
+        "reviewed_at": "2026-11-04T20:38:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.52
+      },
+      {
+        "title": "fix(admin): read a client's metadata document again after a day (APO-17233)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6257",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T20:07:07Z",
+        "reviewed_at": "2026-11-04T20:36:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.49
+      },
+      {
+        "title": "fix(admin): name the issuer on sign-in redirects and refuse hidden private addresses (APO-17233)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6256",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T20:07:02Z",
+        "reviewed_at": "2026-11-04T20:34:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.46
+      },
+      {
+        "title": "fix(admin): cap MCP client sign-up and end a sign-in when its code comes back (APO-17227)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6253",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T20:06:56Z",
+        "reviewed_at": "2026-11-04T20:40:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "fix(admin): ask for scheduling permission before update_content changes a scheduled item (APO-17236)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6251",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T20:07:42Z",
+        "reviewed_at": "2026-11-04T20:37:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.5
+      },
+      {
+        "title": "fix(dashboard): track the Crossroads API's daily release and continuous staging (APO-17238)",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/149",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-11-04T22:08:09Z",
+        "reviewed_at": "2026-11-04T23:01:17Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.86
+      },
+      {
+        "title": "fix(admin): give live editor calls a 10 second limit and keep its token briefly (APO-17226)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6249",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T19:10:33Z",
+        "reviewed_at": "2026-11-04T20:34:23Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.4
+      },
+      {
+        "title": "fix(admin): give the assistant consent page a way out and plain error sentences (APO-17230)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6247",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T20:06:51Z",
+        "reviewed_at": "2026-11-04T20:32:46Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.43
+      },
+      {
+        "title": "fix(mobile): use the message text for PubNub text links (APO-16074)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8068",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-04T18:57:30Z",
+        "reviewed_at": "2026-11-04T20:44:57Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 1.79
+      },
+      {
+        "title": "feat(web, web-embeds): open church links in a new tab signed in from the embed (APO-17220)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6246",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T22:10:54Z",
+        "reviewed_at": "2026-11-04T23:03:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.82
+      },
+      {
+        "title": "fix(mobile): restore Black weight on auth title",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8066",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-04T17:40:23Z",
+        "reviewed_at": "2026-11-04T20:38:46Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.97
+      },
+      {
+        "title": "fix(web): clear type errors in the giving payment routes and tests",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6242",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T15:31:51Z",
+        "reviewed_at": "2026-11-04T15:52:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.34
+      },
+      {
+        "title": "Keep transaction filters cleared after Clear all",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6238",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T15:37:44Z",
+        "reviewed_at": "2026-11-04T15:54:12Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.27
+      },
+      {
+        "title": "refactor(admin): move six tab.server.js functions to Cluster's PostgREST lane (APO-12274)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6237",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T10:46:38Z",
+        "reviewed_at": "2026-11-04T17:25:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.43
+      },
+      {
+        "title": "fix(mobile): re-announce a repeated sign-in code error or notice (APO-15920)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8062",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-04T06:55:52Z",
+        "reviewed_at": "2026-11-04T15:43:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.72
+      },
+      {
+        "title": "fix(mobile): show the localized message when joining a community fails (APO-15933)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8060",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-04T03:40:23Z",
+        "reviewed_at": "2026-11-04T15:44:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.74
+      },
+      {
+        "title": "fix(mobile): ignore zero-width-only text in composers (APO-16980)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8059",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-04T00:38:03Z",
+        "reviewed_at": "2026-11-04T15:43:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.72
+      },
+      {
+        "title": "Revert \"fix(mobile): log recovered storage failures instead of sending them to Sentry (APO-17179)\"",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8057",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-03T22:47:07Z",
+        "reviewed_at": "2026-11-04T15:41:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.9
+      },
+      {
+        "title": "Revert \"fix(admin): log recovered Astronomer, PCO, media and BigQuery failures instead of reporting them to Sentry (APO-17177) (#6219)\"",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6232",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-03T22:46:58Z",
+        "reviewed_at": "2026-11-04T15:45:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.98
+      },
+      {
+        "title": "fix(web): load the church support email for give page payment errors",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6230",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T14:32:31Z",
+        "reviewed_at": "2026-11-04T15:49:07Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.82
+      },
+      {
+        "title": "fix(web): clear type errors on the church layout page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6229",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T14:50:13Z",
+        "reviewed_at": "2026-11-04T15:48:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.81
+      },
+      {
+        "title": "refactor(admin): remove unused PeopleIcon tooltip measurement",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6227",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-03T22:09:55Z",
+        "reviewed_at": "2026-11-04T15:40:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.5
+      },
+      {
+        "title": "fix(web): fix type errors on the give page",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6226",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-03T22:04:41Z",
+        "reviewed_at": "2026-11-04T17:26:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 3.36
+      },
+      {
+        "title": "fix(web): fix type errors in sign in and session code",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6223",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-03T21:45:45Z",
+        "reviewed_at": "2026-11-04T15:42:07Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.94
+      },
+      {
+        "title": "Clear production npm audit minimatch findings",
+        "url": "https://github.com/ApollosProject/bug-board/pull/706",
+        "repo": "bug-board",
+        "requested_at": "2026-11-03T21:06:19Z",
+        "reviewed_at": "2026-11-03T21:07:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.02
+      },
+      {
+        "title": "fix(admin): log recovered Astronomer, PCO, media and BigQuery failures instead of reporting them to Sentry (APO-17177)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6219",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-03T21:23:14Z",
+        "reviewed_at": "2026-11-03T21:29:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.1
+      },
+      {
+        "title": "fix(admin): log config warnings instead of sending them to Better Stack and Sentry (APO-17177)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6218",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-03T21:23:24Z",
+        "reviewed_at": "2026-11-03T21:29:12Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.1
+      },
+      {
+        "title": "fix(mobile): log recovered brand font failures instead of sending them to Sentry (APO-17179)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8050",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-03T21:23:50Z",
+        "reviewed_at": "2026-11-03T21:29:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.09
+      },
+      {
+        "title": "fix(mobile): log recovered storage failures instead of sending them to Sentry (APO-17179)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8049",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-03T21:24:00Z",
+        "reviewed_at": "2026-11-03T21:30:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.1
+      },
+      {
+        "title": "APO-17180: Remove the Heroku-era replication watchdog",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6284",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-03T21:24:12Z",
+        "reviewed_at": "2026-11-03T21:29:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.09
+      },
+      {
+        "title": "fix(giving): stop guessing a page total on the Payouts tab",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6217",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-03T20:22:49Z",
+        "reviewed_at": "2026-11-03T20:31:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.14
+      },
+      {
+        "title": "feat(giving): snapshot each charge's billing details at ingest, never overwrite (APO-17170)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6282",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-04T22:01:59Z",
+        "reviewed_at": "2026-11-04T22:59:57Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.97
+      },
+      {
+        "title": "feat(db): add charges.billing_details for the charge's own billing details (APO-17170)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6281",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-04T04:23:09Z",
+        "reviewed_at": "2026-11-04T15:41:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.69
+      },
+      {
+        "title": "fix(ugc): soft-delete comments, gratitude posts, journals, prayer updates",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6280",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-03T21:56:31Z",
+        "reviewed_at": "2026-11-04T15:47:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.84
+      },
+      {
+        "title": "feat(db): add deleted_at to comments, gratitude posts, journals, prayer updates",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6279",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-03T19:51:50Z",
+        "reviewed_at": "2026-11-03T20:17:23Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.43
+      },
+      {
+        "title": "fix(donations): fetch a backfill batch's details in one Rock request (APO-17132)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2166",
+        "repo": "apollos-shovel",
+        "requested_at": null,
+        "reviewed_at": "2026-11-03T19:11:43Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(reports): date-only transactionDay column for V2 Failed (APO-17121)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6256",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-03T19:15:45Z",
+        "reviewed_at": "2026-11-03T19:40:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.41
+      },
+      {
+        "title": "APO-17091: Let assistant activity save any call, and let Metabase read it",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6179",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-03T14:58:17Z",
+        "reviewed_at": "2026-11-03T19:04:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.07
+      },
+      {
+        "title": "fix(web): return search, link, join, privacy and profile loader data with data()",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6165",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-02T19:48:47Z",
+        "reviewed_at": "2026-11-02T20:12:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.4
+      },
+      {
+        "title": "fix(web): return layout and content route loader data with data()",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6164",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-02T19:28:30Z",
+        "reviewed_at": "2026-11-02T20:13:46Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.75
+      },
+      {
+        "title": "feat(admin): show the assistant by name in an open editor while it writes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6163",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-03T16:02:33Z",
+        "reviewed_at": "2026-11-03T19:08:24Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 3.1
+      },
+      {
+        "title": "perf(content-item): batch parentChannel category reads on a page",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6251",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-03T01:26:50Z",
+        "reviewed_at": "2026-11-03T19:04:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.07
+      },
+      {
+        "title": "fix(mobile): keep link color on bold and italic text inside links",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8029",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-30T23:37:27Z",
+        "reviewed_at": "2026-11-02T19:04:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.07
+      },
+      {
+        "title": "fix(admin): a doubled refresh or a second sign-in no longer signs the person out",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6141",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-02T17:36:54Z",
+        "reviewed_at": "2026-11-02T19:05:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.47
+      },
+      {
+        "title": "fix(mobile): expose SearchInput Cancel and Clear state to screen readers (APO-15929)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8026",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-30T17:41:21Z",
+        "reviewed_at": "2026-11-02T19:04:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 8.39
+      },
+      {
+        "title": "fix(apps): keep the Daily tab's feedId when the Mobile app publishes (APO-16729)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6138",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-05T15:37:11Z",
+        "reviewed_at": "2026-11-06T14:34:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.38
+      },
+      {
+        "title": "APO-9387: Private, autosaving note box in a message",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/7962",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-10-29T16:03:17Z",
+        "reviewed_at": "2026-11-04T15:42:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 30.65
+      },
+      {
+        "title": "APO-9387: Note box block in the canvas editor",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5955",
+        "repo": "apollos-admin",
+        "requested_at": "2026-10-27T01:43:32Z",
+        "reviewed_at": "2026-11-04T15:45:21Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 48.76
+      },
+      {
+        "title": "feat(content-item): add completion_mode column (APO-9902)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5912",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-03T18:04:03Z",
+        "reviewed_at": "2026-11-03T19:04:27Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.01
+      },
+      {
+        "title": "feat(integrations): add Rock 'Write Lists back to Rock' setting (APO-9982)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5859",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-03T18:03:59Z",
+        "reviewed_at": "2026-11-06T14:34:54Z",
+        "review_state": "APPROVED",
+        "latency_hours": 20.93
+      },
+      {
+        "title": "feat(rock): write List assignments back to Rock as a person attribute (APO-9982)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5911",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-03T18:03:53Z",
+        "reviewed_at": "2026-11-03T19:05:34Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.03
+      },
+      {
+        "title": "feat(polls): share savePoll persistence and add an API-key REST route for saving polls",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5148",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-05T21:00:07Z",
+        "reviewed_at": "2026-11-06T14:55:54Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2
+      },
+      {
+        "title": "test(artillery): hand rotated refresh tokens between virtual users",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/5133",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-10-28T17:39:13Z",
+        "reviewed_at": "2026-11-02T19:06:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 24.46
+      },
+      {
+        "title": "perf(admin): load the icon-by-name registry and video player on demand (APO-13783)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5066",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-22T17:20:05Z",
+        "reviewed_at": "2026-11-06T14:33:41Z",
+        "review_state": "APPROVED",
+        "latency_hours": 260.67
+      },
+      {
+        "title": "Consolidate churchSlug guard + error-fallback boilerplate in bigQuery.server.js",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4990",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-18T12:12:50Z",
+        "reviewed_at": "2026-11-04T15:46:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 264.78
+      },
+      {
+        "title": "fix(admin): require Super Admin for Apollos Admin plan changes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/4554",
+        "repo": "apollos-admin",
+        "requested_at": "2026-09-08T00:16:35Z",
+        "reviewed_at": "2026-11-06T14:39:49Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 344
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Tuesday",
+      "content": "- feat(donations): start Rock gift backfills at Jan 1, 2025 (APO-17160)\n- fix(donations): fetch a backfill batch's details in one Rock request (APO-17132)\n- fix(rock): retry transient Rock errors so one blip can't restart a backfill (APO-17131)\n- fix(donations): Rock gift sync marks every synced gift pending (APO-17107)\n- fix(admin): get apps/admin to zero type errors and gate it in CI (APO-12561)\n- Keep a feature feed loading when an action relatedNode has no type\n- Treat a Twilio invalid To number as user input\n- Treat a missing StudioC tracking target as a no-op\n- APO-16955: Keep a tab's shown segments when switching tabs before saving\n- fix(mobile): catch Linking.openURL failures when opening an external URL\n- fix(cluster): log database restart errors to Better Stack, not Sentry\n- fix(cluster): answer an in-use chat phone with BAD_USER_INPUT\n- …and 1 more (see Weekly Summary)\n- Reviewed: fix(giving): stop guessing a page total on the Payouts tab\n- Reviewed: feat(db): add deleted_at to comments, gratitude posts, journals, prayer updates\n- Reviewed: fix(donations): fetch a backfill batch's details in one Rock request (APO-17132)\n- Reviewed: feat(reports): date-only transactionDay column for V2 Failed (APO-17121)\n- Reviewed: APO-17091: Let assistant activity save any call, and let Metabase read it\n- Reviewed: fix(web): return search, link, join, privacy and profile loader data with data()\n- Reviewed: fix(web): return layout and content route loader data with data()\n- Reviewed: feat(admin): show the assistant by name in an open editor while it writes\n- Reviewed: perf(content-item): batch parentChannel category reads on a page\n- Reviewed: fix(mobile): keep link color on bold and italic text inside links\n- Reviewed: fix(admin): a doubled refresh or a second sign-in no longer signs the person out\n- Reviewed: fix(mobile): expose SearchInput Cancel and Clear state to screen readers (APO-15929)\n- …and 3 more reviews\n- Done: APO-17160: Rock gift backfill copies all history when donors only need two tax years\n- Done: APO-17132: Rock gift backfill makes 50 requests per batch to fetch transaction details\n- Done: APO-17131: Rock sync restarts a whole backfill after one transient Rock error\n- Done: APO-17107: Rock gift sync marks every synced gift pending\n- Done: APO-17068: Apollos has no family unit, so a family's gifts can't be grouped in giving history\n- Done: APO-17067: Decide whether admin shows ChMS gifts, and where\n- Done: APO-17030: Cluster should still load a feed when an action relatedNode has no Node type (APOLLOS-CLUSTER-80M)\n- Done: APO-17028: Cluster should not report Twilio invalid-To OTP errors to Sentry (APOLLOS-CLUSTER-35N)\n- Done: APO-17027: Cluster should not fail GraphQL when StudioC tracking returns 404 (APOLLOS-CLUSTER-8QN)\n- Done: APO-16967: Cluster should not report community-chat membership FORBIDDEN to Sentry (APOLLOS-CLUSTER-814)\n- Done: APO-16963: Cluster should not report in-use phone FORBIDDEN to Sentry (APOLLOS-CLUSTER-7Y9)\n- Done: APO-16961: Saving a mobile tab with Personalization collapsed wipes its segments\n- …and 12 more completed issues\n- Wrapped up project: FreedUp paid access\n- In progress: APO-17167: Mobile should not report token refresh Network request failed to Sentry (Sentry APOLLOS-MOBILE-FA3)\n- In progress: APO-17164: Mobile should not report a full-disk church cache write to Sentry (Sentry APOLLOS-MOBILE-EY7)\n- In progress: APO-17156: Mobile Give handoff should not report mint Network request failed to Sentry (Sentry APOLLOS-MOBILE-EZB)\n- In progress: APO-17154: Mobile WebView should not report HTTP 404s to Sentry (Sentry APOLLOS-MOBILE-FR9)\n- In progress: APO-17125: Cluster should still load currentUser when Rock authToken lookup returns 401 (APOLLOS-CLUSTER-8F8)\n- In progress: APO-17124: Cluster should not report expected give-intent Transaction forbidden to Sentry (APOLLOS-CLUSTER-7HD)\n- In progress: APO-17122: Cluster should still load a content item when html-to-text overflows on Html export (APOLLOS-CLUSTER-8SS)\n- In progress: APO-17115: Admin content editor reports a kept-body autosave as Content could not be saved (APOLLOS-ADMIN-78P)\n- In progress: APO-17092: Giving history: gate synced ChMS gifts per church and show each Apollos gift once\n- In progress: APO-16491: Mobile should not report expected join-chat and like GraphQL errors to Sentry\n- In progress: APO-10714: Guard backfill cleanup() against deleting valid donations on partial API fetch\n- Filed 30 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- Limit synced gifts in giving history to 2024 on\n- Use one status word and fix giving history actions and icons\n- Hide negative synced gifts from giving history\n- Seed GIVING.UNIFIED_HISTORY for apollos_demo (APO-17092)\n- fix(donations): only delete gifts when a backfill run asks (APO-10714)\n- fix(admin): stop reporting a cleared legacy body as a failed save\n- Gate synced gifts in giving history per church and show each gift once (APO-17092)\n- Reviewed: fix(admin): let the Grok bot and Cursor sign in to the MCP (APO-17254)\n- Reviewed: fix(admin): keep the sign-in details when consent sends a person to login (APO-17244)\n- Reviewed: Remove commented-out HTMLView image snapshot tests\n- Reviewed: Type originalChargeCreatedAt as DateInput | null in the Rock batch data source\n- Reviewed: fix(admin): share the client sign-up limit across Admin servers (APO-17233)\n- Reviewed: fix(admin): read a client's metadata document again after a day (APO-17233)\n- Reviewed: fix(admin): name the issuer on sign-in redirects and refuse hidden private addresses (APO-17233)\n- Reviewed: fix(admin): cap MCP client sign-up and end a sign-in when its code comes back (APO-17227)\n- Reviewed: fix(admin): ask for scheduling permission before update_content changes a scheduled item (APO-17236)\n- Reviewed: fix(admin): give live editor calls a 10 second limit and keep its token briefly (APO-17226)\n- Reviewed: fix(admin): give the assistant consent page a way out and plain error sentences (APO-17230)\n- Reviewed: fix(mobile): use the message text for PubNub text links (APO-16074)\n- …and 25 more reviews\n- Done: APO-17093: Giving history: one word for finished gifts, \"View your Gift\" on Pushpay only, bank icon\n- Done: APO-17092: Giving history: gate synced ChMS gifts per church and show each Apollos gift once\n- Done: APO-16966: Cluster should not report Postgres ECONNRESET GraphQL errors to Sentry (APOLLOS-CLUSTER-8RW)\n- Done: APO-16964: Cluster should not report Postgres shutdown GraphQL errors to Sentry (APOLLOS-CLUSTER-8P8)\n- Done: APO-10714: Guard backfill cleanup() against deleting valid donations on partial API fetch\n- Done: APO-17195: Giving history: how should refunds and corrections from Rock show?\n- In progress: APO-17274: Show a locked screen on web for FreedUp content behind the purchase tag\n- In progress: APO-17267: Mobile should not report NativePlayer TLS and connection failures to Sentry (APOLLOS-MOBILE-ERT)\n- In progress: APO-17262: Mary: don't treat the donation-embed translation file as giving code\n- In progress: APO-17252: [Mobile] First and Last Name fields lost their padding and spacing on Complete Your Profile and Personal Details (regression from #7701)\n- In progress: APO-17196: Mobile should not report expected chat invite and auth GraphQL errors to Sentry (APOLLOS-MOBILE-FGR)\n- In progress: APO-17154: Mobile WebView should not report HTTP 404s to Sentry (Sentry APOLLOS-MOBILE-FR9)\n- In progress: APO-17122: Cluster should still load a content item when html-to-text overflows on Html export (APOLLOS-CLUSTER-8SS)\n- In progress: APO-17094: Turn on Christ Fellowship's Rock gift sync and check it before donors see it\n- In progress: APO-16962: Cluster should still save a profile when Rock returns 401 (APOLLOS-CLUSTER-8FZ)\n- Filed 10 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- Giving history: read the church time zone from merged config (APO-17366)\n- fix(web): mute and loosen the History delay note (APO-17354)\n- fix(web): show year and time on the gift page date\n- fix(web): Edit link on a recurring gift uses the link color in dark mode\n- Add a year filter and years list to giving history (APO-17221)\n- Show the Visa logo on a white backing in dark mode\n- fix(mobile): restore padding and spacing on the First and Last Name fields (APO-17252)\n- Show a locked screen on web for content the viewer's tags don't open (APO-17274)\n- Reviewed: fix(web): show church logo on a dark circle beside Giving on History\n- Reviewed: feat(web): lead gift pages with the amount and show details as rows\n- Reviewed: fix(web): show page X of Y beside the Giving History pager\n- Reviewed: fix(web): title gift pages Gift / Recurring Gift and use Details heading\n- Reviewed: fix(web): Edit link on a recurring gift uses the link color in dark mode\n- Reviewed: Keep Creator from crashing when the AI sends no follow-up questions\n- Reviewed: feat(admin): transactions pagination bar with numbered pages and row range\n- Reviewed: Add a year filter and years list to giving history (APO-17221)\n- Reviewed: fix(mobile): show unavailable for missing content and events\n- Reviewed: refactor(admin): move campus.server.js onto Cluster's PostgREST lane (APO-12275)\n- Reviewed: fix(admin): stack feed editor above SideNavBar so back works (APO-17330)\n- Reviewed: fix(mobile): stop Android Bible swipe cancel via unused PagerView (APO-16761)\n- …and 27 more reviews\n- Done: APO-17274: Show a locked screen on web for FreedUp content behind the purchase tag\n- Done: APO-17234: Giving history: Visa logo is hard to see in dark mode\n- Done: APO-17165: Existing synced gifts at City First and Willow Creek stay Pending after the status fix\n- Done: APO-17094: Turn on Christ Fellowship's Rock gift sync and check it before donors see it\n- In progress: APO-17364: Giving history: lead gift pages with the amount and show details as rows\n- In progress: APO-17358: Giving history: pager doesn't say which page you're on\n- In progress: APO-17357: Giving history: pages change width on desktop\n- In progress: APO-17356: Giving history: church logo next to \"Giving\" is nearly invisible in light mode\n- In progress: APO-17355: Giving history: gift page says \"Transaction Details\" twice\n- In progress: APO-17124: Cluster should not report expected give-intent Transaction forbidden to Sentry (APOLLOS-CLUSTER-7HD)\n- In progress: APO-16491: Mobile should not report expected join-chat and like GraphQL errors to Sentry\n- In progress: APO-15088: Remove the phone number requirement when giving (converted to project)\n- Filed 12 new Linear tickets\n- Left comments on PRs and in Linear"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 28\n  • PR reviews: 89\n  • Commits pushed: 113\n  • Code volume: +3083 / -371 (117 files)\n  • Median review latency (working hours): 0.99h\n  • Linear issues completed: 32\n  • Linear projects completed: 1\n  • Linear issues worked on: 48\n  • Linear issues created: 52\n  • Linear replies: 27\n  • Repos: apollos-admin, apollos-cluster, apollos-infrastructure, apollos-platforms, apollos-shovel, bug-board\n\n📝 Check-ins:\n\n  Tuesday: - feat(donations): start Rock gift backfills at Jan 1, 2025 (APO-17160)\n- fix(do...\n  Wednesday: - Limit synced gifts in giving history to 2024 on\n- Use one status word and fix ...\n  Friday: - Giving history: read the church time zone from merged config (APO-17366)\n- fix...\n",
+  "formatted_output": null
+}
