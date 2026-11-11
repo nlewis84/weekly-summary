@@ -260,3 +260,25 @@ export function buildCheckInsFromSnapshots(weekEnding: string): string {
   }
   return parts.join("\n\n");
 }
+
+// Kept out of daily-snapshots/ because every *.json there is read as a Payload.
+const ANSWER_STORE = join(process.cwd(), ".cache", "basecamp-answers.json");
+
+function readAnswerStore(): Record<string, number> {
+  try {
+    return JSON.parse(readFileSync(ANSWER_STORE, "utf8")) as Record<string, number>;
+  } catch {
+    return {};
+  }
+}
+
+export function getBasecampAnswerId(date: string): number | undefined {
+  return readAnswerStore()[date];
+}
+
+export function setBasecampAnswerId(date: string, answerId: number): void {
+  const store = readAnswerStore();
+  store[date] = answerId;
+  mkdirSync(join(process.cwd(), ".cache"), { recursive: true });
+  writeFileSync(ANSWER_STORE, JSON.stringify(store, null, 2), "utf8");
+}

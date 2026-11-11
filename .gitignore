@@ -11,3 +11,4 @@ playwright/.cache/
 *.log
 daily-snapshots/
 .DS_Store
+.cache/

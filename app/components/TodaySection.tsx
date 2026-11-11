@@ -8,6 +8,14 @@ import { RefreshButton } from "./RefreshButton";
 import { ErrorBanner } from "./ErrorBanner";
 import { useToast } from "./Toast";
 import type { Payload } from "../../lib/types";
+import type { MentionRules, RosterPersonPublic } from "../../lib/checkin-types";
+
+function screenshotFileName(d = new Date()): string {
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const h = d.getHours();
+  const h12 = h % 12 === 0 ? 12 : h % 12;
+  return `Screenshot ${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} at ${h12}.${pad(d.getMinutes())}.${pad(d.getSeconds())} ${h < 12 ? "AM" : "PM"}.png`;
+}
 
 type SnapshotFetcherData =
   | {
@@ -16,6 +24,9 @@ type SnapshotFetcherData =
       draft: string;
       date: string;
       granolaWarning?: string;
+      writerNotes?: string;
+      roster: RosterPersonPublic[];
+      mentionRules: MentionRules;
     }
   | {
       ok: true;
@@ -77,6 +88,26 @@ export function TodaySection({
   const [previewOpen, setPreviewOpen] = useState(false);
   const [modalDraft, setModalDraft] = useState("");
   const [modalGranolaWarning, setModalGranolaWarning] = useState("");
+  const [modalWriterNotes, setModalWriterNotes] = useState("");
+  const [modalRoster, setModalRoster] = useState<RosterPersonPublic[]>([]);
+  const [modalRules, setModalRules] = useState<MentionRules>({
+    plain: [],
+    ambiguous: [],
+  });
+  const [screenshot, setScreenshot] = useState<File | null>(null);
+  const [screenshotUrl, setScreenshotUrl] = useState<string | undefined>();
+  const [screenshotError, setScreenshotError] = useState("");
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!screenshot) {
+      setScreenshotUrl(undefined);
+      return;
+    }
+    const url = URL.createObjectURL(screenshot);
+    setScreenshotUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [screenshot]);
 
   // Snapshot files are keyed by the local calendar day the period ends on
   // (capture day), not window_start — which may be a prior capture.
@@ -116,6 +147,9 @@ export function TodaySection({
     if (isSnapshotPreview(fetcher.data)) {
       setModalDraft(fetcher.data.draft);
       setModalGranolaWarning(fetcher.data.granolaWarning ?? "");
+      setModalWriterNotes(fetcher.data.writerNotes ?? "");
+      setModalRoster(fetcher.data.roster ?? []);
+      setModalRules(fetcher.data.mentionRules ?? { plain: [], ambiguous: [] });
       setPreviewOpen(true);
     }
   }, [fetcher.data, fetcher.state]);
@@ -142,8 +176,12 @@ export function TodaySection({
           ? "updated"
           : "captured";
         let msg = `Today's data ${verb}`;
-        if (d.basecampPosted) msg += " + posted to Basecamp";
-        else if (d.basecampError) msg += " (Basecamp post failed)";
+        if (d.basecampPosted) {
+          msg += " + posted to Basecamp";
+          if (d.basecampError) msg += ` (${d.basecampError})`;
+        } else if (d.basecampError) {
+          msg += ` (Basecamp post failed: ${d.basecampError})`;
+        }
         toast(msg);
       }
     }
@@ -153,9 +191,25 @@ export function TodaySection({
     fetcher.submit(body, { method: "post", action: "/api/snapshot" });
   };
 
-  const handleCapture = () => {
+  const handleCapture = async () => {
     if (!captureDate) return;
     if (useBasecampPreviewFlow) {
+      setScreenshot(null);
+      setScreenshotError("");
+      try {
+        if (!rootRef.current) throw new Error("Today section not mounted");
+        const { domToPng } = await import("modern-screenshot");
+        const dataUrl = await domToPng(rootRef.current, {
+          scale: 2,
+          backgroundColor: getComputedStyle(document.body).backgroundColor,
+        });
+        const blob = await (await fetch(dataUrl)).blob();
+        setScreenshot(
+          new File([blob], screenshotFileName(), { type: "image/png" })
+        );
+      } catch (e) {
+        setScreenshotError(e instanceof Error ? e.message : String(e));
+      }
       submitSnapshot({
         date: captureDate,
         previewBasecamp: "true",
@@ -170,10 +224,15 @@ export function TodaySection({
 
   const handleModalPost = () => {
     if (!captureDate) return;
-    submitSnapshot({
-      date: captureDate,
-      postToBasecamp: "true",
-      checkInBody: modalDraft,
+    const formData = new FormData();
+    formData.set("date", captureDate);
+    formData.set("postToBasecamp", "true");
+    formData.set("checkInBody", modalDraft);
+    if (screenshot) formData.set("screenshot", screenshot);
+    fetcher.submit(formData, {
+      method: "post",
+      action: "/api/snapshot",
+      encType: "multipart/form-data",
     });
   };
 
@@ -194,13 +253,18 @@ export function TodaySection({
       : "Capture Today";
 
   return (
-    <div className="xl:flex xl:flex-col xl:min-h-0">
+    <div ref={rootRef} className="xl:flex xl:flex-col xl:min-h-0">
       <BasecampCheckInPreviewDialog
         open={previewOpen}
         draft={modalDraft}
         onDraftChange={setModalDraft}
         granolaWarning={modalGranolaWarning}
         granolaConfigured={granolaConfigured}
+        screenshotUrl={screenshotUrl}
+        screenshotError={screenshotError || undefined}
+        writerNotes={modalWriterNotes || undefined}
+        roster={modalRoster}
+        mentionRules={modalRules}
         isBusy={isWorking}
         onCancel={() => setPreviewOpen(false)}
         onPost={handleModalPost}

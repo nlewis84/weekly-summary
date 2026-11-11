@@ -1,18 +1,78 @@
+import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { data } from "react-router";
 import type { ActionFunctionArgs } from "react-router";
-import { buildDailyCheckInDraft } from "../../lib/checkin-draft";
+import { fetchMyRecentCheckIns } from "../../lib/basecamp-fetch";
 import {
+  attachFileToBasecamp,
+  isBasecampConfigured,
+  upsertHtmlCheckIn,
+} from "../../lib/basecamp-post";
+import {
+  loadMentionRules,
+  loadRoster,
+  toPublicRoster,
+} from "../../lib/basecamp-roster";
+import { buildCheckInHtml } from "../../lib/checkin-mentions";
+import { answerHtmlToText, writeCheckInDraft } from "../../lib/checkin-writer";
+import {
+  getBasecampAnswerId,
   localDateString,
   saveDailySnapshot,
+  setBasecampAnswerId,
 } from "../../lib/daily-snapshot";
 import {
   fetchGranolaNotesForWindow,
   isGranolaConfigured,
 } from "../../lib/granola-client";
-import { isBasecampConfigured, postCheckInToBasecamp } from "../../lib/basecamp-post";
 import { getCachedRunSummary } from "../../lib/summary";
 
 const CHECKIN_BODY_MAX_CHARS = 32_000;
+const SCREENSHOT_MAX_BYTES = 10 * 1024 * 1024;
+const RECENT_ANSWERS_FOR_TONE = 10;
+
+/** fetchMyRecentCheckIns returns sanitized HTML; drop the image wrappers so filenames don't read as bullets. */
+function recentAnswerText(html: string): string {
+  return answerHtmlToText(
+    html.replace(/<span class="bc-image-wrapper">[\s\S]*?<\/span><\/span>/g, "")
+  );
+}
+
+async function loadRecentAnswers(): Promise<string[]> {
+  try {
+    const answers = await fetchMyRecentCheckIns({
+      limit: RECENT_ANSWERS_FOR_TONE,
+      kind: "daily",
+    });
+    return answers.map((a) => recentAnswerText(a.content)).filter(Boolean);
+  } catch (err) {
+    console.error("Could not load recent check-ins for tone:", err);
+    return [];
+  }
+}
+
+function screenshotFilename(file: File): string {
+  const base = file.name.replace(/[^\w .-]/g, "").trim();
+  return base.toLowerCase().endsWith(".png") ? base : "screenshot.png";
+}
+
+async function attachScreenshot(
+  file: File
+): Promise<{ sgid?: string; error?: string }> {
+  if (file.type !== "image/png" || file.size > SCREENSHOT_MAX_BYTES) {
+    return { error: "Screenshot was not a PNG under 10 MB" };
+  }
+  const dir = mkdtempSync(join(tmpdir(), "weekly-summary-shot-"));
+  try {
+    const path = join(dir, screenshotFilename(file));
+    writeFileSync(path, Buffer.from(await file.arrayBuffer()));
+    const result = await attachFileToBasecamp(path);
+    return result.ok ? { sgid: result.sgid } : { error: result.error };
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+}
 
 export async function action({ request }: ActionFunctionArgs) {
   if (request.method !== "POST") {
@@ -24,16 +84,26 @@ export async function action({ request }: ActionFunctionArgs) {
   const previewBasecamp = formData.get("previewBasecamp") === "true";
   const dateOverride = formData.get("date") as string | null;
   const checkInBodyRaw = formData.get("checkInBody");
+  const screenshot = formData.get("screenshot");
 
   try {
     if (previewBasecamp) {
-      const result = await getCachedRunSummary({
-        todayMode: true,
-        checkInsText: "",
-        outputDir: null,
-        forCapture: true,
-        bust: true,
-      });
+      const [result, roster, recentAnswers] = await Promise.all([
+        getCachedRunSummary({
+          todayMode: true,
+          checkInsText: "",
+          outputDir: null,
+          forCapture: true,
+          bust: true,
+        }),
+        loadRoster().catch((err) => {
+          console.error("Could not load Basecamp roster:", err);
+          return [];
+        }),
+        loadRecentAnswers(),
+      ]);
+      const rules = loadMentionRules();
+      const publicRoster = toPublicRoster(roster);
 
       const snapshotDate =
         dateOverride || localDateString(result.payload.meta.window_end);
@@ -52,18 +122,30 @@ export async function action({ request }: ActionFunctionArgs) {
         granolaWarning = gr.warning;
       }
 
-      const draft = buildDailyCheckInDraft(
-        snapshotDate,
-        result.payload,
-        meetingNotes
-      );
+      const written = await writeCheckInDraft({
+        date: snapshotDate,
+        payload: result.payload,
+        meetingNotes,
+        roster: publicRoster,
+        rules,
+        recentAnswers,
+      });
+
+      const rosterNote =
+        roster.length === 0
+          ? "Could not load Basecamp people, so no one will be tagged."
+          : undefined;
 
       return data({
         ok: true,
         preview: true,
-        draft,
+        draft: written.draft,
         date: snapshotDate,
         granolaWarning,
+        writerNotes:
+          [written.notes, rosterNote].filter(Boolean).join(" ") || undefined,
+        roster: publicRoster,
+        mentionRules: rules,
       });
     }
 
@@ -81,6 +163,7 @@ export async function action({ request }: ActionFunctionArgs) {
 
     let basecampPosted = false;
     let basecampError: string | undefined;
+    let basecampUrl: string | undefined;
 
     if (postToBasecamp && isBasecampConfigured()) {
       const trimmed =
@@ -102,9 +185,33 @@ export async function action({ request }: ActionFunctionArgs) {
           { status: 400 }
         );
       }
-      const bcResult = await postCheckInToBasecamp(snapshotDate, trimmed);
+
+      const [roster, shot] = await Promise.all([
+        loadRoster().catch(() => []),
+        screenshot instanceof File && screenshot.size > 0
+          ? attachScreenshot(screenshot)
+          : Promise.resolve<{ sgid?: string; error?: string }>({}),
+      ]);
+
+      const html = buildCheckInHtml(
+        trimmed,
+        roster,
+        loadMentionRules(),
+        shot.sgid
+      );
+      const bcResult = await upsertHtmlCheckIn(
+        snapshotDate,
+        html,
+        getBasecampAnswerId(snapshotDate)
+      );
       basecampPosted = bcResult.ok;
-      basecampError = bcResult.error;
+      basecampUrl = bcResult.appUrl;
+      basecampError = bcResult.ok
+        ? shot.error && `posted without the screenshot: ${shot.error}`
+        : bcResult.error;
+      if (bcResult.ok && bcResult.answerId) {
+        setBasecampAnswerId(snapshotDate, bcResult.answerId);
+      }
     }
 
     return data({
@@ -112,6 +219,7 @@ export async function action({ request }: ActionFunctionArgs) {
       date: snapshotDate,
       basecampPosted,
       basecampError,
+      basecampUrl,
     });
   } catch (err) {
     console.error("Snapshot capture error:", err);

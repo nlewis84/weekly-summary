@@ -82,6 +82,7 @@ export function isBasecampConfigured(): boolean {
 interface BasecampResult {
   ok: boolean;
   error?: string;
+  data?: unknown;
 }
 
 /**
@@ -98,6 +99,7 @@ function parseBasecampOutput(stdout: unknown): BasecampResult | null {
       ok?: boolean;
       error?: string;
       code?: string;
+      data?: unknown;
     };
     if (parsed.ok === false) {
       const detail = [parsed.error, parsed.code && `(${parsed.code})`]
@@ -105,7 +107,7 @@ function parseBasecampOutput(stdout: unknown): BasecampResult | null {
         .join(" ");
       return { ok: false, error: detail || "basecamp CLI reported a failure" };
     }
-    return { ok: true };
+    return { ok: true, data: parsed.data };
   } catch {
     return null;
   }
@@ -191,4 +193,88 @@ export async function postWeeklySummaryToBasecamp(
     "--",
     markdown,
   ]);
+}
+
+/** Uploads a file and returns the sgid used to embed it in rich text. */
+export async function attachFileToBasecamp(
+  filePath: string
+): Promise<{ ok: true; sgid: string } | { ok: false; error: string }> {
+  const result = await runBasecamp(["attach", filePath, "--json"]);
+  if (!result.ok) return { ok: false, error: result.error ?? "attach failed" };
+  const first = Array.isArray(result.data)
+    ? (result.data[0] as { attachable_sgid?: string } | undefined)
+    : undefined;
+  if (!first?.attachable_sgid) {
+    return { ok: false, error: "basecamp attach returned no sgid" };
+  }
+  return { ok: true, sgid: first.attachable_sgid };
+}
+
+/**
+ * Posts an HTML check-in answer, or replaces the one already posted for this
+ * date. The CLI skips its markdown conversion once the body holds any HTML, so
+ * callers pass finished HTML (see buildCheckInHtml). An update that fails (for
+ * example, the earlier answer was trashed) falls back to a new answer.
+ */
+export async function upsertHtmlCheckIn(
+  date: string,
+  html: string,
+  existingAnswerId?: number
+): Promise<BasecampResult & { answerId?: number; appUrl?: string }> {
+  const projectId = getProjectId();
+  const questionId = getCheckInQuestionId();
+
+  const read = (r: BasecampResult) => {
+    const d = r.data as { id?: number; app_url?: string } | undefined;
+    return { ...r, answerId: d?.id, appUrl: d?.app_url };
+  };
+
+  const existing = existingAnswerId
+    ? await runBasecamp([
+        "checkins",
+        "answer",
+        "show",
+        String(existingAnswerId),
+        "--in",
+        projectId,
+        "--json",
+      ])
+    : null;
+  const existingIsLive =
+    existing?.ok &&
+    (existing.data as { status?: string } | undefined)?.status === "active";
+
+  if (existingAnswerId && existingIsLive) {
+    const updated = await runBasecamp([
+      "checkins",
+      "answer",
+      "update",
+      String(existingAnswerId),
+      "--in",
+      projectId,
+      "--json",
+      "--",
+      html,
+    ]);
+    if (updated.ok) return read(updated);
+    console.error(
+      `Updating Basecamp answer ${existingAnswerId} failed (${updated.error}); posting a new one`
+    );
+  }
+
+  return read(
+    await runBasecamp([
+      "checkins",
+      "answer",
+      "create",
+      questionId,
+      "--in",
+      projectId,
+      "--date",
+      date,
+      "--json",
+      "--",
+      html,
+    ])
+  );
 }
