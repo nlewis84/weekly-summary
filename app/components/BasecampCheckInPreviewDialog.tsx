@@ -12,7 +12,11 @@ interface BasecampCheckInPreviewDialogProps {
   onDraftChange: (value: string) => void;
   granolaWarning?: string | null;
   granolaConfigured?: boolean;
+  title?: string;
+  description?: string;
+  postLabel?: string;
   screenshotUrl?: string;
+  screenshots?: { url: string; name: string }[];
   screenshotError?: string;
   writerNotes?: string;
   roster?: RosterPersonPublic[];
@@ -20,7 +24,7 @@ interface BasecampCheckInPreviewDialogProps {
   isBusy: boolean;
   onCancel: () => void;
   onPost: () => void;
-  onSaveOnly: () => void;
+  onSaveOnly?: () => void;
 }
 
 export function BasecampCheckInPreviewDialog({
@@ -29,7 +33,11 @@ export function BasecampCheckInPreviewDialog({
   onDraftChange,
   granolaWarning,
   granolaConfigured = false,
+  title = "Preview Basecamp check-in",
+  description,
+  postLabel = "Post to Basecamp",
   screenshotUrl,
+  screenshots,
   screenshotError,
   writerNotes,
   roster = [],
@@ -40,6 +48,9 @@ export function BasecampCheckInPreviewDialog({
   onSaveOnly,
 }: BasecampCheckInPreviewDialogProps) {
   const titleId = useId();
+  const shots =
+    screenshots ??
+    (screenshotUrl ? [{ url: screenshotUrl, name: "Screenshot" }] : []);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
@@ -68,15 +79,31 @@ export function BasecampCheckInPreviewDialog({
         .map((l) => {
           const bullet = l.startsWith("- ");
           const text = bullet ? l.slice(2) : l;
-          return {
-            bullet,
-            tokens: tokenizeMentions(text, roster, mentionRules),
-          };
+          return { bullet, segments: splitBold(text, bullet, roster, mentionRules) };
         }),
     [draft, roster, mentionRules]
   );
 
   if (!open) return null;
+
+  const renderSegments = (segments: Segment[]) =>
+    segments.map((seg, si) => {
+      if (seg.kind === "bold") {
+        return (
+          <strong
+            key={si}
+            className={
+              seg.highlight
+                ? "rounded bg-amber-500/20 px-1 font-semibold"
+                : "font-semibold"
+            }
+          >
+            {seg.text}
+          </strong>
+        );
+      }
+      return <span key={si}>{renderTokens(seg.tokens)}</span>;
+    });
 
   const renderTokens = (tokens: MentionToken[]) =>
     tokens.map((t, i) => {
@@ -133,13 +160,15 @@ export function BasecampCheckInPreviewDialog({
             id={titleId}
             className="text-lg font-semibold text-(--color-text)"
           >
-            Preview Basecamp check-in
+            {title}
           </h2>
           <p className="mt-1 text-xs text-text-muted">
-            Edit the text below, then post to Basecamp or save the snapshot only.
-            {granolaConfigured
-              ? " Meeting lines come from Granola when your API key is set."
-              : " Add GRANOLA_API_KEY to include meeting summaries from Granola."}
+            {description ??
+              `Edit the text below, then post to Basecamp or save the snapshot only.${
+                granolaConfigured
+                  ? " Meeting lines come from Granola when your API key is set."
+                  : " Add GRANOLA_API_KEY to include meeting summaries from Granola."
+              }`}
           </p>
         </div>
 
@@ -187,13 +216,13 @@ export function BasecampCheckInPreviewDialog({
                   g.bullet ? (
                     <ul key={gi} className="list-disc space-y-1 pl-5">
                       {g.items.map((it, i) => (
-                        <li key={i}>{renderTokens(it)}</li>
+                        <li key={i}>{renderSegments(it)}</li>
                       ))}
                     </ul>
                   ) : (
                     g.items.map((it, i) => (
                       <p key={`${gi}-${i}`} className="my-1">
-                        {renderTokens(it)}
+                        {renderSegments(it)}
                       </p>
                     ))
                   )
@@ -202,15 +231,17 @@ export function BasecampCheckInPreviewDialog({
             )}
           </div>
 
-          <div className="mt-3">
-            {screenshotUrl ? (
-              <a href={screenshotUrl} target="_blank" rel="noreferrer">
-                <img
-                  src={screenshotUrl}
-                  alt="Screenshot attached to the check-in"
-                  className="max-h-40 rounded-lg border border-(--color-border)"
-                />
-              </a>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {shots.length > 0 ? (
+              shots.map((shot) => (
+                <a key={shot.url} href={shot.url} target="_blank" rel="noreferrer">
+                  <img
+                    src={shot.url}
+                    alt={`Screenshot: ${shot.name}`}
+                    className="max-h-40 rounded-lg border border-(--color-border)"
+                  />
+                </a>
+              ))
             ) : (
               <p className="text-xs text-text-muted">No screenshot</p>
             )}
@@ -226,21 +257,23 @@ export function BasecampCheckInPreviewDialog({
           >
             Cancel
           </button>
-          <button
-            type="button"
-            onClick={onSaveOnly}
-            disabled={isBusy}
-            className="rounded-lg border border-(--color-border) px-3 py-2 text-sm text-(--color-text) transition-colors hover:bg-surface-elevated disabled:opacity-50"
-          >
-            Save without posting
-          </button>
+          {onSaveOnly ? (
+            <button
+              type="button"
+              onClick={onSaveOnly}
+              disabled={isBusy}
+              className="rounded-lg border border-(--color-border) px-3 py-2 text-sm text-(--color-text) transition-colors hover:bg-surface-elevated disabled:opacity-50"
+            >
+              Save without posting
+            </button>
+          ) : null}
           <button
             type="button"
             onClick={onPost}
             disabled={isBusy || !draft.trim()}
             className="rounded-lg bg-primary-600 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-500 disabled:opacity-50"
           >
-            Post to Basecamp
+            {postLabel}
           </button>
         </div>
       </div>
@@ -248,14 +281,47 @@ export function BasecampCheckInPreviewDialog({
   );
 }
 
+type Segment =
+  | { kind: "bold"; text: string; highlight: boolean }
+  | { kind: "tokens"; tokens: MentionToken[] };
+
+type Line = { bullet: boolean; segments: Segment[] };
+
+/** Splits `**bold**` runs out of a line; mentions are tokenized in the rest. */
+function splitBold(
+  text: string,
+  bullet: boolean,
+  roster: RosterPersonPublic[],
+  rules: MentionRules
+): Segment[] {
+  const segments: Segment[] = [];
+  const re = /\*\*(.+?)\*\*/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  const pushText = (t: string) => {
+    if (t) segments.push({ kind: "tokens", tokens: tokenizeMentions(t, roster, rules) });
+  };
+  while ((m = re.exec(text))) {
+    pushText(text.slice(last, m.index));
+    segments.push({
+      kind: "bold",
+      text: m[1],
+      highlight: bullet && m.index === 0,
+    });
+    last = m.index + m[0].length;
+  }
+  pushText(text.slice(last));
+  return segments;
+}
+
 function groupLines(
-  lines: { bullet: boolean; tokens: MentionToken[] }[]
-): { bullet: boolean; items: MentionToken[][] }[] {
-  const groups: { bullet: boolean; items: MentionToken[][] }[] = [];
+  lines: Line[]
+): { bullet: boolean; items: Segment[][] }[] {
+  const groups: { bullet: boolean; items: Segment[][] }[] = [];
   for (const l of lines) {
     const last = groups[groups.length - 1];
-    if (last && last.bullet === l.bullet) last.items.push(l.tokens);
-    else groups.push({ bullet: l.bullet, items: [l.tokens] });
+    if (last && last.bullet === l.bullet) last.items.push(l.segments);
+    else groups.push({ bullet: l.bullet, items: [l.segments] });
   }
   return groups;
 }

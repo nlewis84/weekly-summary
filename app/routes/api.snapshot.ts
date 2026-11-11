@@ -15,7 +15,7 @@ import {
   toPublicRoster,
 } from "../../lib/basecamp-roster";
 import { buildCheckInHtml } from "../../lib/checkin-mentions";
-import { answerHtmlToText, writeCheckInDraft } from "../../lib/checkin-writer";
+import { sanitizedAnswerToText, writeCheckInDraft } from "../../lib/checkin-writer";
 import {
   getBasecampAnswerId,
   localDateString,
@@ -32,20 +32,13 @@ const CHECKIN_BODY_MAX_CHARS = 32_000;
 const SCREENSHOT_MAX_BYTES = 10 * 1024 * 1024;
 const RECENT_ANSWERS_FOR_TONE = 10;
 
-/** fetchMyRecentCheckIns returns sanitized HTML; drop the image wrappers so filenames don't read as bullets. */
-function recentAnswerText(html: string): string {
-  return answerHtmlToText(
-    html.replace(/<span class="bc-image-wrapper">[\s\S]*?<\/span><\/span>/g, "")
-  );
-}
-
 async function loadRecentAnswers(): Promise<string[]> {
   try {
     const answers = await fetchMyRecentCheckIns({
       limit: RECENT_ANSWERS_FOR_TONE,
       kind: "daily",
     });
-    return answers.map((a) => recentAnswerText(a.content)).filter(Boolean);
+    return answers.map((a) => sanitizedAnswerToText(a.content)).filter(Boolean);
   } catch (err) {
     console.error("Could not load recent check-ins for tone:", err);
     return [];

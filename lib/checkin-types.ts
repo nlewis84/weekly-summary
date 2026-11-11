@@ -36,3 +36,20 @@ export interface CheckInWriterResult {
   /** True when the LLM failed and the draft is the old formatter's output. */
   usedFallback: boolean;
 }
+
+/** A weekly screenshot the server captured, sent to the browser for the thumbnail. */
+export interface WeeklyScreenshotPreview {
+  name: string;
+  dataUrl: string;
+}
+
+/** Returned by /api/summary when "Post to Basecamp" is checked on Generate & Save. */
+export interface WeeklyBasecampPreview {
+  weekEnding: string;
+  draft: string;
+  notes?: string;
+  usedFallback: boolean;
+  roster: RosterPersonPublic[];
+  mentionRules: MentionRules;
+  screenshots: WeeklyScreenshotPreview[];
+}

@@ -2,8 +2,8 @@ import { data } from "react-router";
 import type { ActionFunctionArgs } from "react-router";
 import { getCachedRunSummary, runSummary } from "../../lib/summary";
 import { saveSummaryToGitHub } from "../../lib/github-persist";
-import { buildBasecampSummary } from "../../lib/markdown";
-import { isBasecampConfigured, postWeeklySummaryToBasecamp } from "../../lib/basecamp-post";
+import { getWeeklyQuestionId, isBasecampConfigured } from "../../lib/basecamp-post";
+import { buildWeeklyBasecampPreview } from "../../lib/weekly-preview.server";
 
 export async function action({ request }: ActionFunctionArgs) {
   if (request.method !== "POST") {
@@ -31,28 +31,24 @@ export async function action({ request }: ActionFunctionArgs) {
       ? await runSummary(summaryArgs)
       : await getCachedRunSummary(summaryArgs);
 
-    let basecampPosted = false;
-    let basecampError: string | undefined;
-
     if (shouldSave) {
       const repoSpec = process.env.GITHUB_REPO ?? "nlewis84/weekly-summary";
       await saveSummaryToGitHub(result.payload, repoSpec);
 
-      if (postToBasecamp && isBasecampConfigured()) {
-        const markdown = buildBasecampSummary(result.payload);
-        const bcResult = await postWeeklySummaryToBasecamp(
-          result.payload.meta.week_ending,
-          markdown
-        );
-        basecampPosted = bcResult.ok;
-        basecampError = bcResult.error;
-      }
+      // Saved first: the week page screenshot reads the summary just written.
+      const basecampPreview =
+        postToBasecamp && isBasecampConfigured() && getWeeklyQuestionId()
+          ? await buildWeeklyBasecampPreview(
+              result.payload,
+              new URL(request.url).origin,
+              request.headers.get("cookie") ?? ""
+            )
+          : undefined;
 
       return data({
         payload: result.payload,
         saved: true,
-        basecampPosted,
-        basecampError,
+        basecampPreview,
         builtAt: new Date().toISOString(),
         weekEnding: result.payload.meta.week_ending,
       });

@@ -246,3 +246,73 @@ export function buildCheckInHtml(
 
   return parts.join("");
 }
+
+// Basecamp's highlight palette has 9 colors; Nathan uses a different one per callout.
+const HIGHLIGHT_COUNT = 9;
+
+function pickHighlights(count: number, random: () => number): number[] {
+  const pool = Array.from({ length: HIGHLIGHT_COUNT }, (_, i) => i + 1);
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return Array.from({ length: count }, (_, i) => pool[i % HIGHLIGHT_COUNT]);
+}
+
+const CALLOUT = /^\*\*(.+?)\*\*\s*:?\s*(.*)$/;
+
+/**
+ * Builds the weekly "Callouts for:" body. A "- **Theme**: text" line becomes a
+ * highlighted bold theme plus text; a "**text**" line becomes a bold paragraph
+ * (the OOO line); images follow the list with a blank paragraph between them.
+ */
+export function buildWeeklyCalloutsHtml(
+  body: string,
+  roster: RosterPerson[],
+  rules: MentionRules,
+  imageSgids: string[] = [],
+  random: () => number = Math.random
+): string {
+  const sgidById = new Map(roster.map((p) => [p.id, p.sgid]));
+  const lines = parseLines(body);
+  const calloutCount = lines.filter((l) => l.bullet && CALLOUT.test(l.content)).length;
+  const colors = pickHighlights(calloutCount, random);
+  const render = (text: string) => renderTokens(tokenizeMentions(text, roster, rules), sgidById);
+
+  const parts: string[] = [];
+  let listOpen = false;
+  let calloutIndex = 0;
+
+  for (const line of lines) {
+    const callout = line.content.match(CALLOUT);
+    if (line.bullet) {
+      if (!listOpen) {
+        parts.push("<ul>");
+        listOpen = true;
+      }
+      if (callout) {
+        const n = colors[calloutIndex++];
+        parts.push(
+          `<li><mark style="color: var(--highlight-${n});background-color: var(--highlight-bg-${n});"><strong>${escapeHtml(callout[1].trim())}</strong></mark><strong>:</strong> ${render(callout[2])}</li>`
+        );
+      } else {
+        parts.push(`<li>${render(line.content)}</li>`);
+      }
+      continue;
+    }
+    if (listOpen) {
+      parts.push("</ul>");
+      listOpen = false;
+    }
+    const bold = line.content.match(/^\*\*(.+)\*\*$/);
+    parts.push(bold ? `<p><strong>${render(bold[1])}</strong></p>` : `<p>${render(line.content)}</p>`);
+  }
+  if (listOpen) parts.push("</ul>");
+
+  parts.push(
+    imageSgids
+      .map((sgid) => `<bc-attachment sgid="${escapeHtml(sgid)}"></bc-attachment>`)
+      .join("<p><br></p>")
+  );
+  return parts.join("");
+}

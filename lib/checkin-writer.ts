@@ -99,20 +99,24 @@ export function buildPrompt(input: WriteCheckInInput): string {
   ].join("\n");
 }
 
-function defaultRun(prompt: string): Promise<string> {
+/** Runs headless Claude Code with only the read-only Slack search tool. */
+export function runClaude(
+  prompt: string,
+  opts: { model: string; timeoutMs: number }
+): Promise<string> {
   return new Promise((resolve, reject) => {
     const child = execFile(
       "claude",
       [
         "-p",
         "--model",
-        "haiku",
+        opts.model,
         "--allowedTools",
         "mcp__claude_ai_Slack__slack_search_public_and_private",
         "--output-format",
         "json",
       ],
-      { timeout: TIMEOUT_MS, maxBuffer: 10 * 1024 * 1024, cwd: os.tmpdir() },
+      { timeout: opts.timeoutMs, maxBuffer: 10 * 1024 * 1024, cwd: os.tmpdir() },
       (err, stdout) => {
         if (err) return reject(err);
         resolve(stdout);
@@ -123,7 +127,10 @@ function defaultRun(prompt: string): Promise<string> {
   });
 }
 
-function extractJsonObject(text: string): unknown {
+const defaultRun = (prompt: string) =>
+  runClaude(prompt, { model: "haiku", timeoutMs: TIMEOUT_MS });
+
+export function extractJsonObject(text: string): unknown {
   const start = text.indexOf("{");
   if (start === -1) throw new Error("no JSON object in output");
   let depth = 0;
@@ -147,7 +154,7 @@ function extractJsonObject(text: string): unknown {
 }
 
 /** Accepts the CLI envelope ({result: "..."}) or the bare model text. */
-function unwrap(raw: string): string {
+export function unwrap(raw: string): string {
   try {
     const env = JSON.parse(raw) as { result?: unknown; is_error?: boolean };
     if (env && typeof env === "object" && "result" in env) {
@@ -246,4 +253,11 @@ export function answerHtmlToText(html: string): string {
     .map((l) => l.replace(/[ \t]+/g, " ").trim())
     .filter((l) => l && l !== "-")
     .join("\n");
+}
+
+/** Like answerHtmlToText, for answers already run through basecamp-fetch's sanitizer (images become wrapped spans). */
+export function sanitizedAnswerToText(html: string): string {
+  return answerHtmlToText(
+    html.replace(/<span class="bc-image-wrapper">[\s\S]*?<\/span><\/span>/g, "")
+  );
 }

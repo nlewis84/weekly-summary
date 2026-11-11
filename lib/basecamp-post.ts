@@ -68,7 +68,7 @@ function getCheckInQuestionId(): string {
   return id;
 }
 
-function getWeeklyQuestionId(): string | null {
+export function getWeeklyQuestionId(): string | null {
   return process.env.BASECAMP_WEEKLY_QUESTION_ID ?? null;
 }
 
@@ -219,10 +219,10 @@ export async function attachFileToBasecamp(
 export async function upsertHtmlCheckIn(
   date: string,
   html: string,
-  existingAnswerId?: number
+  existingAnswerId?: number,
+  questionId: string = getCheckInQuestionId()
 ): Promise<BasecampResult & { answerId?: number; appUrl?: string }> {
   const projectId = getProjectId();
-  const questionId = getCheckInQuestionId();
 
   const read = (r: BasecampResult) => {
     const d = r.data as { id?: number; app_url?: string } | undefined;

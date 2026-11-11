@@ -39,8 +39,6 @@ interface FullSummaryFormProps {
   isSubmitting: boolean;
   error?: string;
   saved?: boolean;
-  basecampPosted?: boolean;
-  basecampError?: string;
   builtAt?: string;
   weekEnding?: string;
   payload?: Payload | null;
@@ -66,8 +64,6 @@ export function FullSummaryForm({
   isSubmitting,
   error,
   saved,
-  basecampPosted,
-  basecampError,
   builtAt,
   weekEnding,
   payload,
@@ -119,18 +115,14 @@ export function FullSummaryForm({
   useEffect(() => {
     if (saved && builtAt && weekEnding && !savedRef.current) {
       savedRef.current = true;
-      let msg = "Summary saved to repository";
-      if (basecampPosted) msg += " + posted to Basecamp";
-      else if (basecampError) msg += " (Basecamp post failed)";
-      else if (basecampConfigured) msg += " (not posted to Basecamp)";
-      toast(msg);
+      toast("Summary saved to repository");
       const entry = { builtAt, weekEnding };
       setLastBuilt(entry);
       setIsFormExpanded(false);
       writePref(LAST_BUILT_KEY, JSON.stringify(entry));
     }
     if (!saved) savedRef.current = false;
-  }, [saved, builtAt, weekEnding, basecampPosted, basecampError, toast]);
+  }, [saved, builtAt, weekEnding, toast]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -228,7 +220,7 @@ export function FullSummaryForm({
           method="post"
           action={action}
           className="space-y-4"
-          onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+          onSubmit={() => {
             const parts: string[] = [];
             for (const snap of snapshots) {
               if (selectedDates.has(snap.date) && snap.checkInText) {
@@ -358,7 +350,11 @@ export function FullSummaryForm({
             disabled={isSubmitting}
             className="min-h-[44px] px-4 py-2.5 bg-primary-600 hover:bg-primary-500 hover:-translate-y-0.5 hover:shadow-(--shadow-skeuo-button-hover) disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none text-white font-medium rounded-xl shadow-(--shadow-skeuo-button) transition-all duration-300 active:translate-y-0 active:shadow-(--shadow-skeuo-button)"
           >
-            {isSubmitting ? "Generating…" : "Generate & Save"}
+            {isSubmitting
+              ? basecampConfigured && postToBasecamp
+                ? "Drafting callouts…"
+                : "Generating…"
+              : "Generate & Save"}
           </button>
         </Form>
 
@@ -370,22 +366,11 @@ export function FullSummaryForm({
               <LottieIcon name="check" size={48} loop={false} />
               <div className="flex-1">
                 <p className="font-medium text-success-500">
-                  Saved to repository
-                  {basecampPosted
-                    ? " + posted to Basecamp"
-                    : basecampConfigured && !basecampError
-                      ? " — not posted to Basecamp"
-                      : ""}
-                  .
+                  Saved to repository.
                 </p>
                 <p className="text-sm text-text-muted mt-0.5">
                   Your weekly summary has been generated and committed.
                 </p>
-                {basecampError && (
-                  <p className="text-sm text-warning-500 mt-0.5">
-                    Basecamp post failed: {basecampError}
-                  </p>
-                )}
               </div>
             </div>
           </div>
