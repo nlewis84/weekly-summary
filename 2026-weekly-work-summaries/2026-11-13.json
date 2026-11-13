@@ -1,0 +1,3852 @@
+{
+  "meta": {
+    "generated_at": "2026-11-13T22:38:20.484Z",
+    "window_start": "2026-11-07T06:00:00.000Z",
+    "window_end": "2026-11-14T05:59:59.999Z",
+    "week_ending": "2026-11-13",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 148,
+    "prs_total": 166,
+    "pr_reviews": 68,
+    "pr_comments": 83,
+    "commits_pushed": 161,
+    "linear_completed": 56,
+    "linear_projects_completed": 2,
+    "linear_worked_on": 64,
+    "linear_issues_created": 60,
+    "linear_comments": 43,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-infrastructure",
+      "apollos-platforms",
+      "apollos-shovel"
+    ],
+    "lines_added": 36891,
+    "lines_deleted": 3130,
+    "files_changed": 546,
+    "median_review_latency_hours": 1.01
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-17751",
+        "title": "Course playbook leaves hand-written navigation in post bodies (Begin buttons, Back links, lists of parts)",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17751/course-playbook-leaves-hand-written-navigation-in-post-bodies-begin",
+        "completedAt": "2026-11-13T22:27:35.002Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17716",
+        "title": "Agent sends the same \"broken\" share link again after the user says it doesn't work",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17716/agent-sends-the-same-broken-share-link-again-after-the-user-says-it",
+        "completedAt": "2026-11-13T18:32:24.614Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17715",
+        "title": "Agent's \"parent\" writes skip content_item_connection, so series it builds show no children in the app",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17715/agents-parent-writes-skip-content-item-connection-so-series-it-builds",
+        "completedAt": "2026-11-13T19:23:26.997Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17644",
+        "title": "Cluster hands out generated audio for content items with nothing to narrate (APOLLOS-MOBILE-ERT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17644/cluster-hands-out-generated-audio-for-content-items-with-nothing-to",
+        "completedAt": "2026-11-13T17:20:59.465Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17621",
+        "title": "Mobile reports GetTabs HTTP 401 to Sentry when token refresh fails offline (APOLLOS-MOBILE-FJ8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17621/mobile-reports-gettabs-http-401-to-sentry-when-token-refresh-fails",
+        "completedAt": "2026-11-12T16:38:48.893Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17620",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 504 (APOLLOS-MOBILE-FGS)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17620/cluster-should-not-fail-graphql-when-studioc-tracking-returns-504",
+        "completedAt": "2026-11-12T16:27:48.787Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17618",
+        "title": "Mobile reports GetUserCampusID Network request failed as a tabs-error Sentry event (APOLLOS-MOBILE-F3S)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17618/mobile-reports-getusercampusid-network-request-failed-as-a-tabs-error",
+        "completedAt": "2026-11-12T18:07:47.825Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17616",
+        "title": "Mobile Chat.init reports a PubNub timeout to Sentry on every useChat mount (APOLLOS-MOBILE-FKA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17616/mobile-chatinit-reports-a-pubnub-timeout-to-sentry-on-every-usechat",
+        "completedAt": "2026-11-12T18:07:46.898Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17608",
+        "title": "Mobile reports a failed prayer or gratitude share to Sentry when the device is offline (APOLLOS-MOBILE-ESQ)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17608/mobile-reports-a-failed-prayer-or-gratitude-share-to-sentry-when-the",
+        "completedAt": "2026-11-12T17:46:18.278Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17606",
+        "title": "Cluster should lookup a StudioC person once per request (APOLLOS-CLUSTER-8TA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17606/cluster-should-lookup-a-studioc-person-once-per-request-apollos",
+        "completedAt": "2026-11-12T16:27:50.959Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17602",
+        "title": "Mobile should not report a designed webview stall fallback to Sentry (APOLLOS-MOBILE-FTD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17602/mobile-should-not-report-a-designed-webview-stall-fallback-to-sentry",
+        "completedAt": "2026-11-12T17:46:17.036Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17595",
+        "title": "Rock gift sync never links a gift whose Rock profile reaches Apollos after the gift",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17595/rock-gift-sync-never-links-a-gift-whose-rock-profile-reaches-apollos",
+        "completedAt": "2026-11-12T18:20:09.208Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17583",
+        "title": "Send App Review a new FreedUp build with the reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "url": "https://linear.app/differential/issue/APO-17583/send-app-review-a-new-freedup-build-with-the-reply",
+        "completedAt": "2026-11-13T21:33:50.874Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17582",
+        "title": "Make the FreedUp app match the App Review reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "url": "https://linear.app/differential/issue/APO-17582/make-the-freedup-app-match-the-app-review-reply",
+        "completedAt": "2026-11-13T21:33:49.415Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17520",
+        "title": "Giving history: \"up to 24 hours\" note is wrong now that Rock gifts show there",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17520/giving-history-up-to-24-hours-note-is-wrong-now-that-rock-gifts-show",
+        "completedAt": "2026-11-10T20:13:26.393Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17513",
+        "title": "Gap cursor next to an expandable section shows as a horizontal line instead of a text caret",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17513/gap-cursor-next-to-an-expandable-section-shows-as-a-horizontal-line",
+        "completedAt": "2026-11-10T17:54:55.736Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17506",
+        "title": "Shared apollos.com church links show no preview image",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17506/shared-apolloscom-church-links-show-no-preview-image",
+        "completedAt": "2026-11-10T21:14:45.788Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17484",
+        "title": "Giving history: returned Pushpay bank gifts show as Pending forever",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17484/giving-history-returned-pushpay-bank-gifts-show-as-pending-forever",
+        "completedAt": "2026-11-10T15:55:17.554Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17465",
+        "title": "Web confidence gate: Express Checkout iframe test fails whenever it misses a half-second window",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17465/web-confidence-gate-express-checkout-iframe-test-fails-whenever-it",
+        "completedAt": "2026-11-10T13:24:23.930Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17427",
+        "title": "Giving history: past due, unpaid and paused recurring gifts show Edit, then fail on Save",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17427/giving-history-past-due-unpaid-and-paused-recurring-gifts-show-edit",
+        "completedAt": "2026-11-10T17:09:51.377Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17380",
+        "title": "Giving history: a solid black church logo is hard to see on the dark logo circle",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17380/giving-history-a-solid-black-church-logo-is-hard-to-see-on-the-dark",
+        "completedAt": "2026-11-10T21:03:07.011Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17379",
+        "title": "Giving history: a refunded card gift says \"Complete\" on its gift page",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17379/giving-history-a-refunded-card-gift-says-complete-on-its-gift-page",
+        "completedAt": "2026-11-10T20:55:32.132Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17367",
+        "title": "Giving history shows gift times in UTC",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17367/giving-history-shows-gift-times-in-utc",
+        "completedAt": "2026-11-09T17:55:19.800Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17366",
+        "title": "Giving history: read the church time zone from merged config",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17366/giving-history-read-the-church-time-zone-from-merged-config",
+        "completedAt": "2026-11-09T02:41:14.739Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17364",
+        "title": "Giving history: lead gift pages with the amount and show details as rows",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17364/giving-history-lead-gift-pages-with-the-amount-and-show-details-as",
+        "completedAt": "2026-11-09T14:47:25.434Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17363",
+        "title": "Giving history: Edit link on a recurring gift doesn't look like a link in dark mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17363/giving-history-edit-link-on-a-recurring-gift-doesnt-look-like-a-link",
+        "completedAt": "2026-11-07T17:08:00.727Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17357",
+        "title": "Giving history: pages change width on desktop",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17357/giving-history-pages-change-width-on-desktop",
+        "completedAt": "2026-11-07T17:08:00.806Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17356",
+        "title": "Giving history: church logo next to \"Giving\" is nearly invisible in light mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17356/giving-history-church-logo-next-to-giving-is-nearly-invisible-in-light",
+        "completedAt": "2026-11-07T17:08:00.945Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17354",
+        "title": "Giving history: \"up to 24 hours\" note is black and cramped in light mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17354/giving-history-up-to-24-hours-note-is-black-and-cramped-in-light-mode",
+        "completedAt": "2026-11-07T17:08:00.839Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17353",
+        "title": "Giving history: gift page shows the date without the year or time",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17353/giving-history-gift-page-shows-the-date-without-the-year-or-time",
+        "completedAt": "2026-11-07T17:08:00.978Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17267",
+        "title": "Mobile should not report NativePlayer TLS and connection failures to Sentry (APOLLOS-MOBILE-ERT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17267/mobile-should-not-report-nativeplayer-tls-and-connection-failures-to",
+        "completedAt": "2026-11-11T18:11:27.238Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17262",
+        "title": "Mary: don't treat the donation-embed translation file as giving code",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17262/mary-dont-treat-the-donation-embed-translation-file-as-giving-code",
+        "completedAt": "2026-11-11T15:40:27.027Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17252",
+        "title": "[Mobile] First and Last Name fields lost their padding and spacing on Complete Your Profile and Personal Details (regression from #7701)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17252/mobile-first-and-last-name-fields-lost-their-padding-and-spacing-on",
+        "completedAt": "2026-11-10T23:47:25.514Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17221",
+        "title": "Giving history: choose a year, from only the years with gifts",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17221/giving-history-choose-a-year-from-only-the-years-with-gifts",
+        "completedAt": "2026-11-09T17:49:42.740Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17196",
+        "title": "Mobile should not report expected chat invite and auth GraphQL errors to Sentry (APOLLOS-MOBILE-FGR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17196/mobile-should-not-report-expected-chat-invite-and-auth-graphql-errors",
+        "completedAt": "2026-11-12T01:20:19.889Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17167",
+        "title": "Mobile should not report token refresh Network request failed to Sentry (Sentry APOLLOS-MOBILE-FA3)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17167/mobile-should-not-report-token-refresh-network-request-failed-to",
+        "completedAt": "2026-11-11T22:14:35.877Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17164",
+        "title": "Mobile should not report a full-disk church cache write to Sentry (Sentry APOLLOS-MOBILE-EY7)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17164/mobile-should-not-report-a-full-disk-church-cache-write-to-sentry",
+        "completedAt": "2026-11-11T18:42:46.285Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17156",
+        "title": "Mobile Give handoff should not report mint Network request failed to Sentry (Sentry APOLLOS-MOBILE-EZB)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17156/mobile-give-handoff-should-not-report-mint-network-request-failed-to",
+        "completedAt": "2026-11-12T22:37:25.907Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17154",
+        "title": "Mobile WebView should not report HTTP 404s to Sentry (Sentry APOLLOS-MOBILE-FR9)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17154/mobile-webview-should-not-report-http-404s-to-sentry-sentry-apollos",
+        "completedAt": "2026-11-11T17:33:33.571Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17125",
+        "title": "Cluster should still load currentUser when Rock authToken lookup returns 401 (APOLLOS-CLUSTER-8F8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17125/cluster-should-still-load-currentuser-when-rock-authtoken-lookup",
+        "completedAt": "2026-11-11T18:51:41.719Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17124",
+        "title": "Cluster should not report expected give-intent Transaction forbidden to Sentry (APOLLOS-CLUSTER-7HD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17124/cluster-should-not-report-expected-give-intent-transaction-forbidden",
+        "completedAt": "2026-11-11T22:45:24.863Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17122",
+        "title": "Cluster should still load a content item when html-to-text overflows on Html export (APOLLOS-CLUSTER-8SS)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17122/cluster-should-still-load-a-content-item-when-html-to-text-overflows",
+        "completedAt": "2026-11-11T17:55:58.049Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16965",
+        "title": "Mobile should catch a failed external URL open instead of reporting it to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16965/mobile-should-catch-a-failed-external-url-open-instead-of-reporting-it",
+        "completedAt": "2026-11-10T23:47:27.847Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16892",
+        "title": "Resolve Sentry issues whose fixes shipped to production (2026-10-29 run)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16892/resolve-sentry-issues-whose-fixes-shipped-to-production-2026-10-29-run",
+        "completedAt": "2026-11-09T20:13:01.061Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16477",
+        "title": "Mobile should not report transient PubNub REST API errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16477/mobile-should-not-report-transient-pubnub-rest-api-errors-to-sentry",
+        "completedAt": "2026-11-10T23:47:30.682Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15088",
+        "title": "Remove the phone number requirement when giving (converted to project)",
+        "project": "Remove the phone number requirement when giving",
+        "url": "https://linear.app/differential/issue/APO-15088/remove-the-phone-number-requirement-when-giving-converted-to-project",
+        "completedAt": "2026-11-10T14:59:21.229Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14402",
+        "title": "Admin AI Writer crashes when attaching server video after the doc changed",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14402/admin-ai-writer-crashes-when-attaching-server-video-after-the-doc",
+        "completedAt": "2026-11-11T15:32:53.473Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14398",
+        "title": "Admin Insert Page crashes with mismatched transaction when pages already exist",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14398/admin-insert-page-crashes-with-mismatched-transaction-when-pages",
+        "completedAt": "2026-11-11T15:33:18.105Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14327",
+        "title": "Admin: adding feed section content crashes when algorithms is missing",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14327/admin-adding-feed-section-content-crashes-when-algorithms-is-missing",
+        "completedAt": "2026-11-11T16:54:08.059Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11192",
+        "title": "Admin: feed template tracking passes wrong Segment event key",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-11192/admin-feed-template-tracking-passes-wrong-segment-event-key",
+        "completedAt": "2026-11-11T15:33:19.059Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17651",
+        "title": "Agent block edits end on silent approval cards, and a repeat request says the block can't be found",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17651/agent-block-edits-end-on-silent-approval-cards-and-a-repeat-request",
+        "completedAt": "2026-11-13T19:08:47.702Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17592",
+        "title": "Agent can't build a functional multi-week course from a PRD; feed link only lands in an unpublished draft",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17592/agent-cant-build-a-functional-multi-week-course-from-a-prd-feed-link",
+        "completedAt": "2026-11-13T19:41:25.572Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17580",
+        "title": "Get Conrad's OK on the App Review reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "url": "https://linear.app/differential/issue/APO-17580/get-conrads-ok-on-the-app-review-reply",
+        "completedAt": "2026-11-13T21:33:40.707Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17463",
+        "title": "QA Giving History at Christ Fellowship in production",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17463/qa-giving-history-at-christ-fellowship-in-production",
+        "completedAt": "2026-11-11T19:27:22.935Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [
+      {
+        "identifier": "Project",
+        "title": "Remove the phone number requirement when giving",
+        "project": "Remove the phone number requirement when giving",
+        "url": "https://linear.app/differential/project/remove-the-phone-number-requirement-when-giving-14d9305af429",
+        "completedAt": "2026-11-10T14:59:30.733Z",
+        "state": "Complete",
+        "description": "Signed-in givers can leave the phone blank. Guests keep it. Web only, no app release.",
+        "startedAt": "2026-11-09T16:31:19.030Z",
+        "targetDate": "2026-11-13",
+        "lead": "Nathan Lewis",
+        "issue_count": 1,
+        "completed_issue_count": 1
+      },
+      {
+        "identifier": "Project",
+        "title": "Apollos MCP",
+        "project": "Apollos MCP",
+        "url": "https://linear.app/differential/project/apollos-mcp-5e5a07fe5b44",
+        "completedAt": "2026-11-09T14:05:30.618Z",
+        "state": "Complete",
+        "description": "Help the one person who makes a church's content build the week from the AI assistant they already use. Content workflows, plus internal Super Admin tools for support and Medic.",
+        "startedAt": "2026-10-14T23:21:06.533Z",
+        "targetDate": "2026-11-09",
+        "lead": "Austin Witherow",
+        "issue_count": 142,
+        "completed_issue_count": 141
+      }
+    ],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-17751",
+        "title": "Course playbook leaves hand-written navigation in post bodies (Begin buttons, Back links, lists of parts)",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17751/course-playbook-leaves-hand-written-navigation-in-post-bodies-begin",
+        "completedAt": "2026-11-13T22:27:35.002Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17747",
+        "title": "Planning Center gifts don't reach Giving History",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17747/planning-center-gifts-dont-reach-giving-history",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17716",
+        "title": "Agent sends the same \"broken\" share link again after the user says it doesn't work",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17716/agent-sends-the-same-broken-share-link-again-after-the-user-says-it",
+        "completedAt": "2026-11-13T18:32:24.614Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17715",
+        "title": "Agent's \"parent\" writes skip content_item_connection, so series it builds show no children in the app",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17715/agents-parent-writes-skip-content-item-connection-so-series-it-builds",
+        "completedAt": "2026-11-13T19:23:26.997Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17694",
+        "title": "Cluster should not report expected SMS-region OTP blocks to Sentry (APOLLOS-CLUSTER-8P6)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17694/cluster-should-not-report-expected-sms-region-otp-blocks-to-sentry",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17693",
+        "title": "Cluster should round a fractional video duration to an Int (APOLLOS-CLUSTER-8SH)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17693/cluster-should-round-a-fractional-video-duration-to-an-int-apollos",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17692",
+        "title": "Cluster should still change campus when Rock People GET times out (APOLLOS-CLUSTER-8QR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17692/cluster-should-still-change-campus-when-rock-people-get-times-out",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17690",
+        "title": "Cluster should still change campus when Planning Center says the person is gone (APOLLOS-CLUSTER-3QB)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17690/cluster-should-still-change-campus-when-planning-center-says-the",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17689",
+        "title": "Cluster should treat a status-less PubNub REST error as a typed chat outage (APOLLOS-CLUSTER-8RZ)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17689/cluster-should-treat-a-status-less-pubnub-rest-error-as-a-typed-chat",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17688",
+        "title": "Cluster should still mint a chat token when the PubNub user stamp returns 400 (APOLLOS-CLUSTER-8SR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17688/cluster-should-still-mint-a-chat-token-when-the-pubnub-user-stamp",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17687",
+        "title": "Cluster should treat a duplicate follow request as the existing row (APOLLOS-CLUSTER-8J2)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17687/cluster-should-treat-a-duplicate-follow-request-as-the-existing-row",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17685",
+        "title": "Mobile plays an online.church live page as a video file (APOLLOS-MOBILE-EVG)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17685/mobile-plays-an-onlinechurch-live-page-as-a-video-file-apollos-mobile",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17644",
+        "title": "Cluster hands out generated audio for content items with nothing to narrate (APOLLOS-MOBILE-ERT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17644/cluster-hands-out-generated-audio-for-content-items-with-nothing-to",
+        "completedAt": "2026-11-13T17:20:59.465Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17641",
+        "title": "Mobile reports a failed PubNub church-slug stamp as PubNubError REST to Sentry (APOLLOS-MOBILE-EYA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17641/mobile-reports-a-failed-pubnub-church-slug-stamp-as-pubnuberror-rest",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17622",
+        "title": "Mobile getChurch hashed GET hits CDN 504 at launch (APOLLOS-MOBILE-F35)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17622/mobile-getchurch-hashed-get-hits-cdn-504-at-launch-apollos-mobile-f35",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17621",
+        "title": "Mobile reports GetTabs HTTP 401 to Sentry when token refresh fails offline (APOLLOS-MOBILE-FJ8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17621/mobile-reports-gettabs-http-401-to-sentry-when-token-refresh-fails",
+        "completedAt": "2026-11-12T16:38:48.893Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17620",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 504 (APOLLOS-MOBILE-FGS)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17620/cluster-should-not-fail-graphql-when-studioc-tracking-returns-504",
+        "completedAt": "2026-11-12T16:27:48.787Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17618",
+        "title": "Mobile reports GetUserCampusID Network request failed as a tabs-error Sentry event (APOLLOS-MOBILE-F3S)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17618/mobile-reports-getusercampusid-network-request-failed-as-a-tabs-error",
+        "completedAt": "2026-11-12T18:07:47.825Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17616",
+        "title": "Mobile Chat.init reports a PubNub timeout to Sentry on every useChat mount (APOLLOS-MOBILE-FKA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17616/mobile-chatinit-reports-a-pubnub-timeout-to-sentry-on-every-usechat",
+        "completedAt": "2026-11-12T18:07:46.898Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17608",
+        "title": "Mobile reports a failed prayer or gratitude share to Sentry when the device is offline (APOLLOS-MOBILE-ESQ)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17608/mobile-reports-a-failed-prayer-or-gratitude-share-to-sentry-when-the",
+        "completedAt": "2026-11-12T17:46:18.278Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17606",
+        "title": "Cluster should lookup a StudioC person once per request (APOLLOS-CLUSTER-8TA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17606/cluster-should-lookup-a-studioc-person-once-per-request-apollos",
+        "completedAt": "2026-11-12T16:27:50.959Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17602",
+        "title": "Mobile should not report a designed webview stall fallback to Sentry (APOLLOS-MOBILE-FTD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17602/mobile-should-not-report-a-designed-webview-stall-fallback-to-sentry",
+        "completedAt": "2026-11-12T17:46:17.036Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17595",
+        "title": "Rock gift sync never links a gift whose Rock profile reaches Apollos after the gift",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17595/rock-gift-sync-never-links-a-gift-whose-rock-profile-reaches-apollos",
+        "completedAt": "2026-11-12T18:20:09.208Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17583",
+        "title": "Send App Review a new FreedUp build with the reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "url": "https://linear.app/differential/issue/APO-17583/send-app-review-a-new-freedup-build-with-the-reply",
+        "completedAt": "2026-11-13T21:33:50.874Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17582",
+        "title": "Make the FreedUp app match the App Review reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "url": "https://linear.app/differential/issue/APO-17582/make-the-freedup-app-match-the-app-review-reply",
+        "completedAt": "2026-11-13T21:33:49.415Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17520",
+        "title": "Giving history: \"up to 24 hours\" note is wrong now that Rock gifts show there",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17520/giving-history-up-to-24-hours-note-is-wrong-now-that-rock-gifts-show",
+        "completedAt": "2026-11-10T20:13:26.393Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17513",
+        "title": "Gap cursor next to an expandable section shows as a horizontal line instead of a text caret",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17513/gap-cursor-next-to-an-expandable-section-shows-as-a-horizontal-line",
+        "completedAt": "2026-11-10T17:54:55.736Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17506",
+        "title": "Shared apollos.com church links show no preview image",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17506/shared-apolloscom-church-links-show-no-preview-image",
+        "completedAt": "2026-11-10T21:14:45.788Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17484",
+        "title": "Giving history: returned Pushpay bank gifts show as Pending forever",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17484/giving-history-returned-pushpay-bank-gifts-show-as-pending-forever",
+        "completedAt": "2026-11-10T15:55:17.554Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17465",
+        "title": "Web confidence gate: Express Checkout iframe test fails whenever it misses a half-second window",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17465/web-confidence-gate-express-checkout-iframe-test-fails-whenever-it",
+        "completedAt": "2026-11-10T13:24:23.930Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17427",
+        "title": "Giving history: past due, unpaid and paused recurring gifts show Edit, then fail on Save",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17427/giving-history-past-due-unpaid-and-paused-recurring-gifts-show-edit",
+        "completedAt": "2026-11-10T17:09:51.377Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17380",
+        "title": "Giving history: a solid black church logo is hard to see on the dark logo circle",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17380/giving-history-a-solid-black-church-logo-is-hard-to-see-on-the-dark",
+        "completedAt": "2026-11-10T21:03:07.011Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17379",
+        "title": "Giving history: a refunded card gift says \"Complete\" on its gift page",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17379/giving-history-a-refunded-card-gift-says-complete-on-its-gift-page",
+        "completedAt": "2026-11-10T20:55:32.132Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17367",
+        "title": "Giving history shows gift times in UTC",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17367/giving-history-shows-gift-times-in-utc",
+        "completedAt": "2026-11-09T17:55:19.800Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17366",
+        "title": "Giving history: read the church time zone from merged config",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17366/giving-history-read-the-church-time-zone-from-merged-config",
+        "completedAt": "2026-11-09T02:41:14.739Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17364",
+        "title": "Giving history: lead gift pages with the amount and show details as rows",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17364/giving-history-lead-gift-pages-with-the-amount-and-show-details-as",
+        "completedAt": "2026-11-09T14:47:25.434Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17363",
+        "title": "Giving history: Edit link on a recurring gift doesn't look like a link in dark mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17363/giving-history-edit-link-on-a-recurring-gift-doesnt-look-like-a-link",
+        "completedAt": "2026-11-07T17:08:00.727Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17357",
+        "title": "Giving history: pages change width on desktop",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17357/giving-history-pages-change-width-on-desktop",
+        "completedAt": "2026-11-07T17:08:00.806Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17356",
+        "title": "Giving history: church logo next to \"Giving\" is nearly invisible in light mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17356/giving-history-church-logo-next-to-giving-is-nearly-invisible-in-light",
+        "completedAt": "2026-11-07T17:08:00.945Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17354",
+        "title": "Giving history: \"up to 24 hours\" note is black and cramped in light mode",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17354/giving-history-up-to-24-hours-note-is-black-and-cramped-in-light-mode",
+        "completedAt": "2026-11-07T17:08:00.839Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17353",
+        "title": "Giving history: gift page shows the date without the year or time",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17353/giving-history-gift-page-shows-the-date-without-the-year-or-time",
+        "completedAt": "2026-11-07T17:08:00.978Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17267",
+        "title": "Mobile should not report NativePlayer TLS and connection failures to Sentry (APOLLOS-MOBILE-ERT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17267/mobile-should-not-report-nativeplayer-tls-and-connection-failures-to",
+        "completedAt": "2026-11-11T18:11:27.238Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17262",
+        "title": "Mary: don't treat the donation-embed translation file as giving code",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17262/mary-dont-treat-the-donation-embed-translation-file-as-giving-code",
+        "completedAt": "2026-11-11T15:40:27.027Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17252",
+        "title": "[Mobile] First and Last Name fields lost their padding and spacing on Complete Your Profile and Personal Details (regression from #7701)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17252/mobile-first-and-last-name-fields-lost-their-padding-and-spacing-on",
+        "completedAt": "2026-11-10T23:47:25.514Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17221",
+        "title": "Giving history: choose a year, from only the years with gifts",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17221/giving-history-choose-a-year-from-only-the-years-with-gifts",
+        "completedAt": "2026-11-09T17:49:42.740Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17196",
+        "title": "Mobile should not report expected chat invite and auth GraphQL errors to Sentry (APOLLOS-MOBILE-FGR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17196/mobile-should-not-report-expected-chat-invite-and-auth-graphql-errors",
+        "completedAt": "2026-11-12T01:20:19.889Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17167",
+        "title": "Mobile should not report token refresh Network request failed to Sentry (Sentry APOLLOS-MOBILE-FA3)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17167/mobile-should-not-report-token-refresh-network-request-failed-to",
+        "completedAt": "2026-11-11T22:14:35.877Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17164",
+        "title": "Mobile should not report a full-disk church cache write to Sentry (Sentry APOLLOS-MOBILE-EY7)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17164/mobile-should-not-report-a-full-disk-church-cache-write-to-sentry",
+        "completedAt": "2026-11-11T18:42:46.285Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17156",
+        "title": "Mobile Give handoff should not report mint Network request failed to Sentry (Sentry APOLLOS-MOBILE-EZB)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17156/mobile-give-handoff-should-not-report-mint-network-request-failed-to",
+        "completedAt": "2026-11-12T22:37:25.907Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17154",
+        "title": "Mobile WebView should not report HTTP 404s to Sentry (Sentry APOLLOS-MOBILE-FR9)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17154/mobile-webview-should-not-report-http-404s-to-sentry-sentry-apollos",
+        "completedAt": "2026-11-11T17:33:33.571Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17125",
+        "title": "Cluster should still load currentUser when Rock authToken lookup returns 401 (APOLLOS-CLUSTER-8F8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17125/cluster-should-still-load-currentuser-when-rock-authtoken-lookup",
+        "completedAt": "2026-11-11T18:51:41.719Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17124",
+        "title": "Cluster should not report expected give-intent Transaction forbidden to Sentry (APOLLOS-CLUSTER-7HD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17124/cluster-should-not-report-expected-give-intent-transaction-forbidden",
+        "completedAt": "2026-11-11T22:45:24.863Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17122",
+        "title": "Cluster should still load a content item when html-to-text overflows on Html export (APOLLOS-CLUSTER-8SS)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17122/cluster-should-still-load-a-content-item-when-html-to-text-overflows",
+        "completedAt": "2026-11-11T17:55:58.049Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17097",
+        "title": "Turn on unified giving history for the other Rock giving churches",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17097/turn-on-unified-giving-history-for-the-other-rock-giving-churches",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16965",
+        "title": "Mobile should catch a failed external URL open instead of reporting it to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16965/mobile-should-catch-a-failed-external-url-open-instead-of-reporting-it",
+        "completedAt": "2026-11-10T23:47:27.847Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16962",
+        "title": "Cluster should still save a profile when Rock returns 401 (APOLLOS-CLUSTER-8FZ)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16962/cluster-should-still-save-a-profile-when-rock-returns-401-apollos",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16892",
+        "title": "Resolve Sentry issues whose fixes shipped to production (2026-10-29 run)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16892/resolve-sentry-issues-whose-fixes-shipped-to-production-2026-10-29-run",
+        "completedAt": "2026-11-09T20:13:01.061Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16491",
+        "title": "Mobile should not report expected join-chat and like GraphQL errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16491/mobile-should-not-report-expected-join-chat-and-like-graphql-errors-to",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16477",
+        "title": "Mobile should not report transient PubNub REST API errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16477/mobile-should-not-report-transient-pubnub-rest-api-errors-to-sentry",
+        "completedAt": "2026-11-10T23:47:30.682Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15088",
+        "title": "Remove the phone number requirement when giving (converted to project)",
+        "project": "Remove the phone number requirement when giving",
+        "url": "https://linear.app/differential/issue/APO-15088/remove-the-phone-number-requirement-when-giving-converted-to-project",
+        "completedAt": "2026-11-10T14:59:21.229Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14402",
+        "title": "Admin AI Writer crashes when attaching server video after the doc changed",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14402/admin-ai-writer-crashes-when-attaching-server-video-after-the-doc",
+        "completedAt": "2026-11-11T15:32:53.473Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14398",
+        "title": "Admin Insert Page crashes with mismatched transaction when pages already exist",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14398/admin-insert-page-crashes-with-mismatched-transaction-when-pages",
+        "completedAt": "2026-11-11T15:33:18.105Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-14327",
+        "title": "Admin: adding feed section content crashes when algorithms is missing",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-14327/admin-adding-feed-section-content-crashes-when-algorithms-is-missing",
+        "completedAt": "2026-11-11T16:54:08.059Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11192",
+        "title": "Admin: feed template tracking passes wrong Segment event key",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-11192/admin-feed-template-tracking-passes-wrong-segment-event-key",
+        "completedAt": "2026-11-11T15:33:19.059Z",
+        "state": "Done"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-17751",
+        "title": "Course playbook leaves hand-written navigation in post bodies (Begin buttons, Back links, lists of parts)",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17751/course-playbook-leaves-hand-written-navigation-in-post-bodies-begin",
+        "createdAt": "2026-11-13T21:35:23.523Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17749",
+        "title": "Check FreedUp's App Review status",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "url": "https://linear.app/differential/issue/APO-17749/check-freedups-app-review-status",
+        "createdAt": "2026-11-13T21:33:39.937Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17747",
+        "title": "Planning Center gifts don't reach Giving History",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17747/planning-center-gifts-dont-reach-giving-history",
+        "createdAt": "2026-11-13T21:21:39.793Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17716",
+        "title": "Agent sends the same \"broken\" share link again after the user says it doesn't work",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17716/agent-sends-the-same-broken-share-link-again-after-the-user-says-it",
+        "createdAt": "2026-11-13T17:19:06.497Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17715",
+        "title": "Agent's \"parent\" writes skip content_item_connection, so series it builds show no children in the app",
+        "project": "Admin V2",
+        "url": "https://linear.app/differential/issue/APO-17715/agents-parent-writes-skip-content-item-connection-so-series-it-builds",
+        "createdAt": "2026-11-13T17:19:01.407Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17694",
+        "title": "Cluster should not report expected SMS-region OTP blocks to Sentry (APOLLOS-CLUSTER-8P6)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17694/cluster-should-not-report-expected-sms-region-otp-blocks-to-sentry",
+        "createdAt": "2026-11-13T06:37:10.997Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17693",
+        "title": "Cluster should round a fractional video duration to an Int (APOLLOS-CLUSTER-8SH)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17693/cluster-should-round-a-fractional-video-duration-to-an-int-apollos",
+        "createdAt": "2026-11-13T05:36:26.777Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17692",
+        "title": "Cluster should still change campus when Rock People GET times out (APOLLOS-CLUSTER-8QR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17692/cluster-should-still-change-campus-when-rock-people-get-times-out",
+        "createdAt": "2026-11-13T05:09:39.038Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17691",
+        "title": "Cluster GraphQL validation catch-all 8QJ is leftover of #6426 plus demo/review-app probes",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17691/cluster-graphql-validation-catch-all-8qj-is-leftover-of-6426-plus",
+        "createdAt": "2026-11-13T04:37:52.748Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17690",
+        "title": "Cluster should still change campus when Planning Center says the person is gone (APOLLOS-CLUSTER-3QB)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17690/cluster-should-still-change-campus-when-planning-center-says-the",
+        "createdAt": "2026-11-13T04:03:32.702Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17689",
+        "title": "Cluster should treat a status-less PubNub REST error as a typed chat outage (APOLLOS-CLUSTER-8RZ)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17689/cluster-should-treat-a-status-less-pubnub-rest-error-as-a-typed-chat",
+        "createdAt": "2026-11-13T03:36:10.502Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17688",
+        "title": "Cluster should still mint a chat token when the PubNub user stamp returns 400 (APOLLOS-CLUSTER-8SR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17688/cluster-should-still-mint-a-chat-token-when-the-pubnub-user-stamp",
+        "createdAt": "2026-11-13T03:05:17.885Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17687",
+        "title": "Cluster should treat a duplicate follow request as the existing row (APOLLOS-CLUSTER-8J2)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17687/cluster-should-treat-a-duplicate-follow-request-as-the-existing-row",
+        "createdAt": "2026-11-13T02:35:47.388Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17685",
+        "title": "Mobile plays an online.church live page as a video file (APOLLOS-MOBILE-EVG)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17685/mobile-plays-an-onlinechurch-live-page-as-a-video-file-apollos-mobile",
+        "createdAt": "2026-11-13T02:06:13.662Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17684",
+        "title": "iOS __guard(main) Network request failed grouping 72E is leftover old-runtime noise (same as EXM / #7912)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17684/ios-guardmain-network-request-failed-grouping-72e-is-leftover-old",
+        "createdAt": "2026-11-13T01:34:00.567Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17681",
+        "title": "iOS NativePlayer URL-not-found grouping AK7 is leftover old-runtime noise (same as ESP / #7961)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17681/ios-nativeplayer-url-not-found-grouping-ak7-is-leftover-old-runtime",
+        "createdAt": "2026-11-13T01:05:26.365Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17680",
+        "title": "iOS App Hang Non Fully Blocked FKK is a native Cocoa hang with idle main and JS (current runtimes)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17680/ios-app-hang-non-fully-blocked-fkk-is-a-native-cocoa-hang-with-idle",
+        "createdAt": "2026-11-13T00:35:05.233Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17677",
+        "title": "iOS WatchdogTermination 1DS is a native RAM kill with no JS stack (current runtimes)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17677/ios-watchdogtermination-1ds-is-a-native-ram-kill-with-no-js-stack",
+        "createdAt": "2026-11-13T00:04:47.186Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17676",
+        "title": "iOS NativePlayer FunctionCallException AQR is leftover old-runtime noise (same as #7526)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17676/ios-nativeplayer-functioncallexception-aqr-is-leftover-old-runtime",
+        "createdAt": "2026-11-12T23:34:13.977Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17673",
+        "title": "iOS App Hanging 7AX is leftover old-runtime Cocoa AppHang noise",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17673/ios-app-hanging-7ax-is-leftover-old-runtime-cocoa-apphang-noise",
+        "createdAt": "2026-11-12T23:04:41.130Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17670",
+        "title": "Android ScreenStackHeaderConfig addViewInner crash A2E is leftover old-runtime noise",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17670/android-screenstackheaderconfig-addviewinner-crash-a2e-is-leftover-old",
+        "createdAt": "2026-11-12T22:37:52.242Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17668",
+        "title": "handlePress cyclical JSON grouping EVA is leftover old-runtime noise (same as APO-13956)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17668/handlepress-cyclical-json-grouping-eva-is-leftover-old-runtime-noise",
+        "createdAt": "2026-11-12T22:07:00.066Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17666",
+        "title": "call(native) 504 grouping ESK is leftover old-runtime noise (same as FGS)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17666/callnative-504-grouping-esk-is-leftover-old-runtime-noise-same-as-fgs",
+        "createdAt": "2026-11-12T21:35:05.810Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17658",
+        "title": "Android crashes in RenderScript ObjectBase::decUserRef (APOLLOS-MOBILE-AK9)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17658/android-crashes-in-renderscript-objectbasedecuserref-apollos-mobile",
+        "createdAt": "2026-11-12T21:06:56.769Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17656",
+        "title": "promiseMethodWrapper(main) Unable to open URL grouping AKA is leftover old-runtime noise (same as F1J)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17656/promisemethodwrappermain-unable-to-open-url-grouping-aka-is-leftover",
+        "createdAt": "2026-11-12T20:34:43.896Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17653",
+        "title": "tryCallTwo(main) trackEvent 504 grouping EXQ is leftover old-runtime noise (same as FGS)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17653/trycalltwomain-trackevent-504-grouping-exq-is-leftover-old-runtime",
+        "createdAt": "2026-11-12T20:05:03.481Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17652",
+        "title": "Android _construct PubNub REST grouping D2V is leftover old-runtime noise (same as EXR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17652/android-construct-pubnub-rest-grouping-d2v-is-leftover-old-runtime",
+        "createdAt": "2026-11-12T19:36:12.398Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17650",
+        "title": "openUrl href-parse grouping ETH is leftover old-runtime noise (same as F0P)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17650/openurl-href-parse-grouping-eth-is-leftover-old-runtime-noise-same-as",
+        "createdAt": "2026-11-12T19:04:12.491Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17647",
+        "title": "anonymous(main) addDevMenuCallbacks grouping AN8 is leftover old-runtime noise (same as A4N)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17647/anonymousmain-adddevmenucallbacks-grouping-an8-is-leftover-old-runtime",
+        "createdAt": "2026-11-12T18:35:21.540Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17645",
+        "title": "Android crashes in RenderScript rsdScriptSetGlobalObj (APOLLOS-MOBILE-A4)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17645/android-crashes-in-renderscript-rsdscriptsetglobalobj-apollos-mobile",
+        "createdAt": "2026-11-12T18:05:07.947Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17644",
+        "title": "Cluster hands out generated audio for content items with nothing to narrate (APOLLOS-MOBILE-ERT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17644/cluster-hands-out-generated-audio-for-content-items-with-nothing-to",
+        "createdAt": "2026-11-12T17:52:31.252Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17643",
+        "title": "apollo-upload-client fetch.umd Network request failed grouping 9FK is leftover old-runtime noise (same as EXM)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17643/apollo-upload-client-fetchumd-network-request-failed-grouping-9fk-is",
+        "createdAt": "2026-11-12T17:36:58.026Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17641",
+        "title": "Mobile reports a failed PubNub church-slug stamp as PubNubError REST to Sentry (APOLLOS-MOBILE-EYA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17641/mobile-reports-a-failed-pubnub-church-slug-stamp-as-pubnuberror-rest",
+        "createdAt": "2026-11-12T16:40:55.337Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17640",
+        "title": "Mobile Sentry receives events from a test-lab phone (likely Google Play pre-launch reports)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17640/mobile-sentry-receives-events-from-a-test-lab-phone-likely-google-play",
+        "createdAt": "2026-11-12T16:40:08.217Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-17639",
+        "title": "iOS webview tabs never preload: allowOffscreenPreload does nothing under the New Architecture",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17639/ios-webview-tabs-never-preload-allowoffscreenpreload-does-nothing",
+        "createdAt": "2026-11-12T16:40:01.500Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-17622",
+        "title": "Mobile getChurch hashed GET hits CDN 504 at launch (APOLLOS-MOBILE-F35)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17622/mobile-getchurch-hashed-get-hits-cdn-504-at-launch-apollos-mobile-f35",
+        "createdAt": "2026-11-12T04:39:11.371Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17621",
+        "title": "Mobile reports GetTabs HTTP 401 to Sentry when token refresh fails offline (APOLLOS-MOBILE-FJ8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17621/mobile-reports-gettabs-http-401-to-sentry-when-token-refresh-fails",
+        "createdAt": "2026-11-12T04:10:30.424Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17620",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 504 (APOLLOS-MOBILE-FGS)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17620/cluster-should-not-fail-graphql-when-studioc-tracking-returns-504",
+        "createdAt": "2026-11-12T03:39:43.068Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17618",
+        "title": "Mobile reports GetUserCampusID Network request failed as a tabs-error Sentry event (APOLLOS-MOBILE-F3S)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17618/mobile-reports-getusercampusid-network-request-failed-as-a-tabs-error",
+        "createdAt": "2026-11-12T03:10:00.092Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17616",
+        "title": "Mobile Chat.init reports a PubNub timeout to Sentry on every useChat mount (APOLLOS-MOBILE-FKA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17616/mobile-chatinit-reports-a-pubnub-timeout-to-sentry-on-every-usechat",
+        "createdAt": "2026-11-12T02:37:29.776Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17613",
+        "title": "Mobile GraphQL fetch timeout is the uncovered twin of Network request failed (APOLLOS-MOBILE-EY5)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17613/mobile-graphql-fetch-timeout-is-the-uncovered-twin-of-network-request",
+        "createdAt": "2026-11-12T02:10:36.520Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17608",
+        "title": "Mobile reports a failed prayer or gratitude share to Sentry when the device is offline (APOLLOS-MOBILE-ESQ)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17608/mobile-reports-a-failed-prayer-or-gratitude-share-to-sentry-when-the",
+        "createdAt": "2026-11-12T01:39:42.185Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17607",
+        "title": "Mobile ApolloError tryCallTwo grouping mixes cluster 5xx and expected GraphQL (APOLLOS-MOBILE-FJ2)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17607/mobile-apolloerror-trycalltwo-grouping-mixes-cluster-5xx-and-expected",
+        "createdAt": "2026-11-12T01:08:33.291Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17606",
+        "title": "Cluster should lookup a StudioC person once per request (APOLLOS-CLUSTER-8TA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17606/cluster-should-lookup-a-studioc-person-once-per-request-apollos",
+        "createdAt": "2026-11-12T00:35:14.451Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17605",
+        "title": "StudioC Messages/News 504 fails the Home feed (APOLLOS-CLUSTER-8QG)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17605/studioc-messagesnews-504-fails-the-home-feed-apollos-cluster-8qg",
+        "createdAt": "2026-11-12T00:09:09.390Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17604",
+        "title": "StudioC person lookup 504 fails the Home feed (APOLLOS-CLUSTER-8H9)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17604/studioc-person-lookup-504-fails-the-home-feed-apollos-cluster-8h9",
+        "createdAt": "2026-11-11T23:38:42.720Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17603",
+        "title": "iOS anonymous(main) GraphQL grouping 8BN is leftover old-runtime noise (F0Q / GetChatAdmins)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17603/ios-anonymousmain-graphql-grouping-8bn-is-leftover-old-runtime-noise",
+        "createdAt": "2026-11-11T22:36:19.980Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17602",
+        "title": "Mobile should not report a designed webview stall fallback to Sentry (APOLLOS-MOBILE-FTD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17602/mobile-should-not-report-a-designed-webview-stall-fallback-to-sentry",
+        "createdAt": "2026-11-11T22:10:12.804Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17595",
+        "title": "Rock gift sync never links a gift whose Rock profile reaches Apollos after the gift",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17595/rock-gift-sync-never-links-a-gift-whose-rock-profile-reaches-apollos",
+        "createdAt": "2026-11-11T20:22:34.480Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17583",
+        "title": "Send App Review a new FreedUp build with the reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "url": "https://linear.app/differential/issue/APO-17583/send-app-review-a-new-freedup-build-with-the-reply",
+        "createdAt": "2026-11-11T19:15:50.723Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17582",
+        "title": "Make the FreedUp app match the App Review reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "url": "https://linear.app/differential/issue/APO-17582/make-the-freedup-app-match-the-app-review-reply",
+        "createdAt": "2026-11-11T19:15:46.189Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17580",
+        "title": "Get Conrad's OK on the App Review reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "url": "https://linear.app/differential/issue/APO-17580/get-conrads-ok-on-the-app-review-reply",
+        "createdAt": "2026-11-11T19:15:34.998Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17573",
+        "title": "Android e2e may run the production OTA instead of the PR's JS",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17573/android-e2e-may-run-the-production-ota-instead-of-the-prs-js",
+        "createdAt": "2026-11-11T17:33:25.781Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17520",
+        "title": "Giving history: \"up to 24 hours\" note is wrong now that Rock gifts show there",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17520/giving-history-up-to-24-hours-note-is-wrong-now-that-rock-gifts-show",
+        "createdAt": "2026-11-10T18:21:03.348Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17513",
+        "title": "Gap cursor next to an expandable section shows as a horizontal line instead of a text caret",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17513/gap-cursor-next-to-an-expandable-section-shows-as-a-horizontal-line",
+        "createdAt": "2026-11-10T16:47:52.403Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17506",
+        "title": "Shared apollos.com church links show no preview image",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17506/shared-apolloscom-church-links-show-no-preview-image",
+        "createdAt": "2026-11-10T15:44:42.537Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17484",
+        "title": "Giving history: returned Pushpay bank gifts show as Pending forever",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17484/giving-history-returned-pushpay-bank-gifts-show-as-pending-forever",
+        "createdAt": "2026-11-09T22:51:50.604Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17465",
+        "title": "Web confidence gate: Express Checkout iframe test fails whenever it misses a half-second window",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-17465/web-confidence-gate-express-checkout-iframe-test-fails-whenever-it",
+        "createdAt": "2026-11-09T19:10:17.812Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17463",
+        "title": "QA Giving History at Christ Fellowship in production",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17463/qa-giving-history-at-christ-fellowship-in-production",
+        "createdAt": "2026-11-09T17:51:49.130Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17427",
+        "title": "Giving history: past due, unpaid and paused recurring gifts show Edit, then fail on Save",
+        "project": "Unified Giving History",
+        "url": "https://linear.app/differential/issue/APO-17427/giving-history-past-due-unpaid-and-paused-recurring-gifts-show-edit",
+        "createdAt": "2026-11-09T15:58:03.810Z",
+        "state": "Done"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-17583",
+        "title": "Send App Review a new FreedUp build with the reply",
+        "url": "https://linear.app/differential/issue/APO-17583/send-app-review-a-new-freedup-build-with-the-reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17582",
+        "title": "Make the FreedUp app match the App Review reply",
+        "url": "https://linear.app/differential/issue/APO-17582/make-the-freedup-app-match-the-app-review-reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17580",
+        "title": "Get Conrad's OK on the App Review reply",
+        "url": "https://linear.app/differential/issue/APO-17580/get-conrads-ok-on-the-app-review-reply",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17095",
+        "title": "Ask Crossroads whether to turn on unified giving history in the app",
+        "url": "https://linear.app/differential/issue/APO-17095/ask-crossroads-whether-to-turn-on-unified-giving-history-in-the-app",
+        "project": "Unified Giving History",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17716",
+        "title": "Agent sends the same \"broken\" share link again after the user says it doesn't work",
+        "url": "https://linear.app/differential/issue/APO-17716/agent-sends-the-same-broken-share-link-again-after-the-user-says-it",
+        "project": "Admin V2",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17097",
+        "title": "Turn on unified giving history for the other Rock giving churches",
+        "url": "https://linear.app/differential/issue/APO-17097/turn-on-unified-giving-history-for-the-other-rock-giving-churches",
+        "project": "Unified Giving History",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17692",
+        "title": "Cluster should still change campus when Rock People GET times out (APOLLOS-CLUSTER-8QR)",
+        "url": "https://linear.app/differential/issue/APO-17692/cluster-should-still-change-campus-when-rock-people-get-times-out",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17690",
+        "title": "Cluster should still change campus when Planning Center says the person is gone (APOLLOS-CLUSTER-3QB)",
+        "url": "https://linear.app/differential/issue/APO-17690/cluster-should-still-change-campus-when-planning-center-says-the",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17689",
+        "title": "Cluster should treat a status-less PubNub REST error as a typed chat outage (APOLLOS-CLUSTER-8RZ)",
+        "url": "https://linear.app/differential/issue/APO-17689/cluster-should-treat-a-status-less-pubnub-rest-error-as-a-typed-chat",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17687",
+        "title": "Cluster should treat a duplicate follow request as the existing row (APOLLOS-CLUSTER-8J2)",
+        "url": "https://linear.app/differential/issue/APO-17687/cluster-should-treat-a-duplicate-follow-request-as-the-existing-row",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17641",
+        "title": "Mobile reports a failed PubNub church-slug stamp as PubNubError REST to Sentry (APOLLOS-MOBILE-EYA)",
+        "url": "https://linear.app/differential/issue/APO-17641/mobile-reports-a-failed-pubnub-church-slug-stamp-as-pubnuberror-rest",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17622",
+        "title": "Mobile getChurch hashed GET hits CDN 504 at launch (APOLLOS-MOBILE-F35)",
+        "url": "https://linear.app/differential/issue/APO-17622/mobile-getchurch-hashed-get-hits-cdn-504-at-launch-apollos-mobile-f35",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17621",
+        "title": "Mobile reports GetTabs HTTP 401 to Sentry when token refresh fails offline (APOLLOS-MOBILE-FJ8)",
+        "url": "https://linear.app/differential/issue/APO-17621/mobile-reports-gettabs-http-401-to-sentry-when-token-refresh-fails",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17620",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 504 (APOLLOS-MOBILE-FGS)",
+        "url": "https://linear.app/differential/issue/APO-17620/cluster-should-not-fail-graphql-when-studioc-tracking-returns-504",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17618",
+        "title": "Mobile reports GetUserCampusID Network request failed as a tabs-error Sentry event (APOLLOS-MOBILE-F3S)",
+        "url": "https://linear.app/differential/issue/APO-17618/mobile-reports-getusercampusid-network-request-failed-as-a-tabs-error",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17616",
+        "title": "Mobile Chat.init reports a PubNub timeout to Sentry on every useChat mount (APOLLOS-MOBILE-FKA)",
+        "url": "https://linear.app/differential/issue/APO-17616/mobile-chatinit-reports-a-pubnub-timeout-to-sentry-on-every-usechat",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17608",
+        "title": "Mobile reports a failed prayer or gratitude share to Sentry when the device is offline (APOLLOS-MOBILE-ESQ)",
+        "url": "https://linear.app/differential/issue/APO-17608/mobile-reports-a-failed-prayer-or-gratitude-share-to-sentry-when-the",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17604",
+        "title": "StudioC person lookup 504 fails the Home feed (APOLLOS-CLUSTER-8H9)",
+        "url": "https://linear.app/differential/issue/APO-17604/studioc-person-lookup-504-fails-the-home-feed-apollos-cluster-8h9",
+        "project": "Sentry Queue",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17606",
+        "title": "Cluster should lookup a StudioC person once per request (APOLLOS-CLUSTER-8TA)",
+        "url": "https://linear.app/differential/issue/APO-17606/cluster-should-lookup-a-studioc-person-once-per-request-apollos",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17142",
+        "title": "Cluster returns HTTP 500 for GetCurrentUserCommunitiesForHook (Sentry APOLLOS-MOBILE-F9F)",
+        "url": "https://linear.app/differential/issue/APO-17142/cluster-returns-http-500-for-getcurrentusercommunitiesforhook-sentry",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17144",
+        "title": "Cluster returns HTTP 500 for getDailyPrayerResults (Sentry APOLLOS-MOBILE-F6W)",
+        "url": "https://linear.app/differential/issue/APO-17144/cluster-returns-http-500-for-getdailyprayerresults-sentry-apollos",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16600",
+        "title": "Cluster returns HTTP 500 for getPrayerRequest (Sentry APOLLOS-MOBILE-F9H)",
+        "url": "https://linear.app/differential/issue/APO-16600/cluster-returns-http-500-for-getprayerrequest-sentry-apollos-mobile",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16598",
+        "title": "Cluster returns HTTP 500 for getCurrentUserForOnboarding (Sentry APOLLOS-MOBILE-F3Q)",
+        "url": "https://linear.app/differential/issue/APO-16598/cluster-returns-http-500-for-getcurrentuserforonboarding-sentry",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16490",
+        "title": "Cluster returns HTTP 500 for Poll (Sentry APOLLOS-MOBILE-F5E)",
+        "url": "https://linear.app/differential/issue/APO-16490/cluster-returns-http-500-for-poll-sentry-apollos-mobile-f5e",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16489",
+        "title": "Cluster returns HTTP 500 for GratitudePaginated (Sentry APOLLOS-MOBILE-F51)",
+        "url": "https://linear.app/differential/issue/APO-16489/cluster-returns-http-500-for-gratitudepaginated-sentry-apollos-mobile",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16486",
+        "title": "Cluster returns HTTP 500 for getCurrentUserDailyHabitStreak (Sentry APOLLOS-MOBILE-F52)",
+        "url": "https://linear.app/differential/issue/APO-16486/cluster-returns-http-500-for-getcurrentuserdailyhabitstreak-sentry",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16485",
+        "title": "Cluster returns HTTP 500 for getNotifications (Sentry APOLLOS-MOBILE-F6E)",
+        "url": "https://linear.app/differential/issue/APO-16485/cluster-returns-http-500-for-getnotifications-sentry-apollos-mobile",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17512",
+        "title": "(Liquid and all churches) Older Images with Rock Content Items no longer pulling",
+        "url": "https://linear.app/differential/issue/APO-17512/liquid-and-all-churches-older-images-with-rock-content-items-no-longer",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16484",
+        "title": "Cluster returns HTTP 500 for mintRedirectCode (Sentry APOLLOS-MOBILE-F3M)",
+        "url": "https://linear.app/differential/issue/APO-16484/cluster-returns-http-500-for-mintredirectcode-sentry-apollos-mobile",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16446",
+        "title": "Cluster returns HTTP 500 for getDailyHabitsStreak (Sentry APOLLOS-MOBILE-F3Y)",
+        "url": "https://linear.app/differential/issue/APO-16446/cluster-returns-http-500-for-getdailyhabitsstreak-sentry-apollos",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17602",
+        "title": "Mobile should not report a designed webview stall fallback to Sentry (APOLLOS-MOBILE-FTD)",
+        "url": "https://linear.app/differential/issue/APO-17602/mobile-should-not-report-a-designed-webview-stall-fallback-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16439",
+        "title": "Cluster returns HTTP 500 for getContentItemScreen (Sentry APOLLOS-MOBILE-F3J)",
+        "url": "https://linear.app/differential/issue/APO-16439/cluster-returns-http-500-for-getcontentitemscreen-sentry-apollos",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16429",
+        "title": "Cluster returns HTTP 500 for RequestChatToken (Sentry APOLLOS-MOBILE-F3V)",
+        "url": "https://linear.app/differential/issue/APO-16429/cluster-returns-http-500-for-requestchattoken-sentry-apollos-mobile",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-16420",
+        "title": "Cluster returns HTTP 500 for getChurch (Sentry APOLLOS-MOBILE-F4F)",
+        "url": "https://linear.app/differential/issue/APO-16420/cluster-returns-http-500-for-getchurch-sentry-apollos-mobile-f4f",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17463",
+        "title": "QA Giving History at Christ Fellowship in production",
+        "url": "https://linear.app/differential/issue/APO-17463/qa-giving-history-at-christ-fellowship-in-production",
+        "project": "Unified Giving History",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16962",
+        "title": "Cluster should still save a profile when Rock returns 401 (APOLLOS-CLUSTER-8FZ)",
+        "url": "https://linear.app/differential/issue/APO-16962/cluster-should-still-save-a-profile-when-rock-returns-401-apollos",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17154",
+        "title": "Mobile WebView should not report HTTP 404s to Sentry (Sentry APOLLOS-MOBILE-FR9)",
+        "url": "https://linear.app/differential/issue/APO-17154/mobile-webview-should-not-report-http-404s-to-sentry-sentry-apollos",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17553",
+        "title": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase (converted to project)",
+        "url": "https://linear.app/differential/issue/APO-17553/freedup-ios-rejected-sell-weeks-2-6-through-in-app-purchase-converted",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17273",
+        "title": "Mark original Rock gifts with their refunded amounts",
+        "url": "https://linear.app/differential/issue/APO-17273/mark-original-rock-gifts-with-their-refunded-amounts",
+        "project": null,
+        "state": "Triage"
+      },
+      {
+        "identifier": "APO-17484",
+        "title": "Giving history: returned Pushpay bank gifts show as Pending forever",
+        "url": "https://linear.app/differential/issue/APO-17484/giving-history-returned-pushpay-bank-gifts-show-as-pending-forever",
+        "project": "Unified Giving History",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16892",
+        "title": "Resolve Sentry issues whose fixes shipped to production (2026-10-29 run)",
+        "url": "https://linear.app/differential/issue/APO-16892/resolve-sentry-issues-whose-fixes-shipped-to-production-2026-10-29-run",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16171",
+        "title": "Web should not report Amplitude localStorage SecurityError to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16171/web-should-not-report-amplitude-localstorage-securityerror-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17465",
+        "title": "Web confidence gate: Express Checkout iframe test fails whenever it misses a half-second window",
+        "url": "https://linear.app/differential/issue/APO-17465/web-confidence-gate-express-checkout-iframe-test-fails-whenever-it",
+        "project": null,
+        "state": "Done"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat(dashboard): a merge queue island on /trains, with a launcher and ring gates",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/307",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T22:09:56Z",
+        "additions": 1880,
+        "deletions": 7,
+        "changed_files": 10
+      },
+      {
+        "title": "fix(agent): course playbook keeps navigation out of post bodies (APO-17751)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6493",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-13T22:27:03Z",
+        "additions": 28,
+        "deletions": 4,
+        "changed_files": 2
+      },
+      {
+        "title": "chore(dashboard): viewer gulls beat every 60 s to fit a free Redis store",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/304",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T21:30:43Z",
+        "additions": 6,
+        "deletions": 6,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(agent): parent writes connect the series in the app (APO-17715)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6486",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-13T19:22:14Z",
+        "additions": 599,
+        "deletions": 13,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(agent): build courses as series (APO-17592)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6485",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-13T19:41:19Z",
+        "additions": 107,
+        "deletions": 13,
+        "changed_files": 9
+      },
+      {
+        "title": "fix(agent): keep the id in share links the reply sends (APO-17716)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6484",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-13T18:32:17Z",
+        "additions": 39,
+        "deletions": 6,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): hidden command palette on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/294",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T18:29:49Z",
+        "additions": 795,
+        "deletions": 24,
+        "changed_files": 8
+      },
+      {
+        "title": "fix(dashboard): end-of-day credits read INACTIVE revisions for cluster and admin",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/290",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T17:16:22Z",
+        "additions": 58,
+        "deletions": 38,
+        "changed_files": 4
+      },
+      {
+        "title": "feat(dashboard): Yesterday in 60 seconds, a replay of a finished day on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/289",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T17:09:41Z",
+        "additions": 871,
+        "deletions": 16,
+        "changed_files": 12
+      },
+      {
+        "title": "feat(dashboard): a dragon on Mount Pager sleeps on this month's AWS cost",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/288",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T16:46:52Z",
+        "additions": 644,
+        "deletions": 2,
+        "changed_files": 10
+      },
+      {
+        "title": "feat(dashboard): viewer gulls for open /trains tabs",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/287",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T16:41:21Z",
+        "additions": 395,
+        "deletions": 2,
+        "changed_files": 8
+      },
+      {
+        "title": "feat(dashboard): morning roll call tour on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/286",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T16:36:55Z",
+        "additions": 244,
+        "deletions": 5,
+        "changed_files": 4
+      },
+      {
+        "title": "feat(dashboard): birthday cake and anniversary plaque on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/285",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T16:18:41Z",
+        "additions": 226,
+        "deletions": 4,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): end-of-day credits on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/282",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T16:23:25Z",
+        "additions": 643,
+        "deletions": 3,
+        "changed_files": 12
+      },
+      {
+        "title": "feat(dashboard): land a fish crate on Commitville's quay for each merge today",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/281",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T16:01:53Z",
+        "additions": 400,
+        "deletions": 21,
+        "changed_files": 10
+      },
+      {
+        "title": "feat(dashboard): grow a spoil heap from PRs that delete code on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/280",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T16:04:16Z",
+        "additions": 491,
+        "deletions": 2,
+        "changed_files": 7
+      },
+      {
+        "title": "feat(dashboard): fog over a /trains town while its CloudWatch alarm fires",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/279",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T16:18:16Z",
+        "additions": 279,
+        "deletions": 4,
+        "changed_files": 6
+      },
+      {
+        "title": "feat(dashboard): lift a release balloon over Production City on a new release tag",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/277",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T15:57:21Z",
+        "additions": 191,
+        "deletions": 2,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): narrate WANDER train captions like a nature documentary",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/276",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T16:03:47Z",
+        "additions": 94,
+        "deletions": 5,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): cars on /trains rust the longer their commit waits",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/275",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T15:53:53Z",
+        "additions": 99,
+        "deletions": 6,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): announce trains reaching Production on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/272",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T15:38:53Z",
+        "additions": 217,
+        "deletions": 1,
+        "changed_files": 4
+      },
+      {
+        "title": "feat(dashboard): add a postcard button that copies the /trains view as a stamped image",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/271",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T15:32:39Z",
+        "additions": 172,
+        "deletions": 1,
+        "changed_files": 4
+      },
+      {
+        "title": "feat(dashboard): task chimneys on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/268",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T15:36:05Z",
+        "additions": 133,
+        "deletions": 5,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): Safety First boards on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/267",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T15:50:27Z",
+        "additions": 351,
+        "deletions": 5,
+        "changed_files": 6
+      },
+      {
+        "title": "feat(dashboard): a whale breaches for a giant PR reaching production on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/266",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T15:11:36Z",
+        "additions": 205,
+        "deletions": 2,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): Sunday bells ring over Commitville's chapel on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/265",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T15:05:09Z",
+        "additions": 118,
+        "deletions": 4,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): cars on /trains carry cargo by commit kind",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/264",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T15:29:15Z",
+        "additions": 119,
+        "deletions": 6,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): type spells on /trains and open a spellbook with the Konami code",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/263",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T15:17:40Z",
+        "additions": 373,
+        "deletions": 32,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): summer fireflies, winter coats and spring flowers on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/262",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T05:23:50Z",
+        "additions": 176,
+        "deletions": 20,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): Halloween for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/257",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:43:06Z",
+        "additions": 460,
+        "deletions": 26,
+        "changed_files": 6
+      },
+      {
+        "title": "feat(dashboard): Easter for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/256",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:29:39Z",
+        "additions": 344,
+        "deletions": 21,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): Veterans Day for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/255",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:21:10Z",
+        "additions": 116,
+        "deletions": 30,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): Father's Day for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/254",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:11:35Z",
+        "additions": 248,
+        "deletions": 9,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): Independence Day for the /trains almanac, fireworks over the sea",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/253",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:18:22Z",
+        "additions": 409,
+        "deletions": 18,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): Harvest scenes for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/252",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:39:46Z",
+        "additions": 186,
+        "deletions": 3,
+        "changed_files": 4
+      },
+      {
+        "title": "feat(dashboard): St. Patrick's Day for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/251",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:26:57Z",
+        "additions": 574,
+        "deletions": 32,
+        "changed_files": 6
+      },
+      {
+        "title": "feat(dashboard): Juneteenth for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/250",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:08:58Z",
+        "additions": 219,
+        "deletions": 4,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): Labor Day and back to school for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/249",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:36:43Z",
+        "additions": 260,
+        "deletions": 7,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): Mother's Day for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/248",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:06:20Z",
+        "additions": 214,
+        "deletions": 4,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): Memorial Day for the /trains almanac, with a shared flagpole",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/247",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T04:15:25Z",
+        "additions": 283,
+        "deletions": 7,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): conductors wear holiday outfits on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/246",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T03:47:37Z",
+        "additions": 196,
+        "deletions": 37,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): Valentine's Day for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/244",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T03:16:29Z",
+        "additions": 286,
+        "deletions": 11,
+        "changed_files": 4
+      },
+      {
+        "title": "feat(dashboard): Groundhog Day for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/241",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T02:43:33Z",
+        "additions": 236,
+        "deletions": 12,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): Martin Luther King Jr. Day of service for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/238",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T02:43:19Z",
+        "additions": 209,
+        "deletions": 6,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): fireworks on /trains mean a production deploy, shown at the platform",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/237",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T02:03:59Z",
+        "additions": 308,
+        "deletions": 59,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): snow spells and pond ice follow the season on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/236",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T02:00:33Z",
+        "additions": 296,
+        "deletions": 231,
+        "changed_files": 4
+      },
+      {
+        "title": "feat(dashboard): sleet instead of rain on cold days on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/235",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T01:29:45Z",
+        "additions": 61,
+        "deletions": 8,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): grass and leaves follow the season on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/234",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T01:18:39Z",
+        "additions": 405,
+        "deletions": 67,
+        "changed_files": 2
+      },
+      {
+        "title": "refactor(dashboard): rename trains seasons/ to holidays/ and the \"season\" phase to \"tide\"",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/233",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T01:05:43Z",
+        "additions": 14,
+        "deletions": 14,
+        "changed_files": 7
+      },
+      {
+        "title": "feat(dashboard): New Year fireworks, crowd, bell and plunge for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/232",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T01:02:28Z",
+        "additions": 450,
+        "deletions": 13,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): real sunrise and sunset by date on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/231",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T00:48:52Z",
+        "additions": 272,
+        "deletions": 22,
+        "changed_files": 2
+      },
+      {
+        "title": "feat(dashboard): nativity, snow, skating and wise men for the /trains almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/230",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-13T00:14:54Z",
+        "additions": 485,
+        "deletions": 42,
+        "changed_files": 4
+      },
+      {
+        "title": "feat(dashboard): Christmas decorations for the /trains island almanac",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/229",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T23:42:27Z",
+        "additions": 429,
+        "deletions": 18,
+        "changed_files": 4
+      },
+      {
+        "title": "feat(dashboard): island almanac and Thanksgiving for /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/228",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T23:11:17Z",
+        "additions": 1323,
+        "deletions": 18,
+        "changed_files": 7
+      },
+      {
+        "title": "feat(dashboard): wreck crews on /trains panic again every 3 minutes",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/227",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T22:52:16Z",
+        "additions": 13,
+        "deletions": 2,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): make /trains cards suit a finger",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/226",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T20:14:10Z",
+        "additions": 82,
+        "deletions": 50,
+        "changed_files": 2
+      },
+      {
+        "title": "feat(dashboard): a finger-words hint on touch screens for /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/225",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T20:10:55Z",
+        "additions": 25,
+        "deletions": 1,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): stop /trains zooming out past 0.75 on phones",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/224",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T20:05:21Z",
+        "additions": 21,
+        "deletions": 5,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): show the /trains station timetable as a bottom sheet on phones",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/223",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T20:05:49Z",
+        "additions": 137,
+        "deletions": 69,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): one-line header and a thumb bar on phones for /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/222",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T20:01:54Z",
+        "additions": 94,
+        "deletions": 20,
+        "changed_files": 2
+      },
+      {
+        "title": "feat(dashboard): open the /trains departures board as a bottom sheet on phones",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/220",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T19:55:19Z",
+        "additions": 199,
+        "deletions": 71,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(dashboard): stop page pinch-zoom on /trains and respect safe areas",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/219",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T19:48:26Z",
+        "additions": 22,
+        "deletions": 13,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(dashboard): fit tour captions on phones",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/218",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T19:47:33Z",
+        "additions": 16,
+        "deletions": 4,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(dashboard): calmer minimap drag under a finger on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/217",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T19:46:02Z",
+        "additions": 50,
+        "deletions": 4,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(dashboard): start /trains wider on phones, board shut on short screens",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/216",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T19:43:11Z",
+        "additions": 9,
+        "deletions": 5,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(dashboard): zap bugs dragged or dropped next to Wizard Tyler",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/215",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T19:20:45Z",
+        "additions": 14,
+        "deletions": 2,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): put the M&J logo's sun and cloud on the /trains studio sign",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/214",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T19:02:20Z",
+        "additions": 14,
+        "deletions": 9,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): move M&J in the Morning to Production's park and add episodes",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/213",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T18:55:41Z",
+        "additions": 60,
+        "deletions": 34,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): build Commitville as a harbour village with hamlets",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/212",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T18:51:14Z",
+        "additions": 358,
+        "deletions": 88,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): light the north, west and south capes on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/211",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T18:42:58Z",
+        "additions": 221,
+        "deletions": 8,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): build Production City on streets round a park",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/210",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T18:37:54Z",
+        "additions": 409,
+        "deletions": 128,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): broadcast M&J in the Morning from Staging's square on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/209",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T18:29:46Z",
+        "additions": 393,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "feat(dashboard): put the /trains lighthouse on a rock island with a dock",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/208",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T18:14:55Z",
+        "additions": 339,
+        "deletions": 10,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(mobile): skip Sentry on Firebase Test Lab devices (APO-17640)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8164",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-13T17:42:17Z",
+        "additions": 225,
+        "deletions": 13,
+        "changed_files": 16
+      },
+      {
+        "title": "feat(dashboard): build Staging Junction on lots along its streets",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/207",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T17:56:13Z",
+        "additions": 854,
+        "deletions": 26,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): lay /trains roads from an autotiled road tileset",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/206",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T17:37:09Z",
+        "additions": 645,
+        "deletions": 19,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): let /trains cloud and rain shade fall on what stands",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/205",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T17:12:26Z",
+        "additions": 99,
+        "deletions": 1,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): draw /trains smoke, clouds and planes above the night lights",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/204",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T16:49:36Z",
+        "additions": 70,
+        "deletions": 14,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): draw everything that stands on /trains in one pass by foot",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/203",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T16:36:34Z",
+        "additions": 252,
+        "deletions": 208,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): draw /trains bends as rings and turn cars eight ways",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/202",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T16:15:21Z",
+        "additions": 389,
+        "deletions": 177,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): Captain Sean sails his pirate ship on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/201",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T16:11:32Z",
+        "additions": 499,
+        "deletions": 3,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): hide night lights behind what stands in front of them",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/200",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T16:02:45Z",
+        "additions": 45,
+        "deletions": 4,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): draw riding conductors in foot order on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/199",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T15:59:46Z",
+        "additions": 7,
+        "deletions": 1,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): lay plane, gull and bomb shadows on the /trains ground layer",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/198",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T16:05:48Z",
+        "additions": 89,
+        "deletions": 36,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): keep train tags and station plates off the city names",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/197",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T15:50:10Z",
+        "additions": 31,
+        "deletions": 10,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): tell blocking checks, failing checks and fires apart by their smoke on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/196",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T15:52:46Z",
+        "additions": 151,
+        "deletions": 45,
+        "changed_files": 6
+      },
+      {
+        "title": "fix(dashboard): draw weather clouds and rain above smoke on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/195",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T15:47:40Z",
+        "additions": 18,
+        "deletions": 2,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): draw the /trains wizard on top of trains and crew",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/194",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T15:37:10Z",
+        "additions": 3,
+        "deletions": 2,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): hut flag for passing /trains towns, red plate for failing ones",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/193",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T15:32:16Z",
+        "additions": 32,
+        "deletions": 24,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): rain shades the ground and leaves puddles under a red build on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/192",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T15:27:18Z",
+        "additions": 361,
+        "deletions": 4,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): draw /trains bugs at their original size so they can be seen",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/191",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T15:27:10Z",
+        "additions": 16,
+        "deletions": 6,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): colour the /trains day by the hour and shorten shadows toward noon",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/190",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T15:02:49Z",
+        "additions": 52,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): cloud shadows drift over the /trains ground by day",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/189",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:59:52Z",
+        "additions": 75,
+        "deletions": 7,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): redraw Nathan's and Vincent's conductors on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/188",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:55:20Z",
+        "additions": 46,
+        "deletions": 12,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): mouse wheel zooms /trains toward the pointer",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/187",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:55:10Z",
+        "additions": 42,
+        "deletions": 12,
+        "changed_files": 2
+      },
+      {
+        "title": "feat(dashboard): one east wind for steam, rain, the pennant and gusts on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/186",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:52:17Z",
+        "additions": 143,
+        "deletions": 6,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): foam, softer coasts and a wake on /trains water by day",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/185",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:39:53Z",
+        "additions": 280,
+        "deletions": 2,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): sun shadows on /trains by day",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/184",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:34:59Z",
+        "additions": 419,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): sheep graze and gulls wheel over the coast on /trains by day",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/183",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:48:54Z",
+        "additions": 278,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): a crowd gathers on the platform of a held station on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/182",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:45:49Z",
+        "additions": 207,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): a rainbow over a /trains town for a minute after its build goes green",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/181",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:42:43Z",
+        "additions": 58,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): round the square corners of /trains track",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/180",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:30:53Z",
+        "additions": 143,
+        "deletions": 9,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(dashboard): keep tall /trains buildings off the track and runways behind them",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/179",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T14:28:18Z",
+        "additions": 30,
+        "deletions": 2,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): darker sea, glints and a moon on /trains water at night",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/178",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T06:30:29Z",
+        "additions": 262,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): a lighthouse and turning airport beacons on /trains after dark",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/177",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T06:23:10Z",
+        "additions": 312,
+        "deletions": 2,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): blend the /trains sky by the minute instead of cutting on the hour",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/176",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T04:34:51Z",
+        "additions": 46,
+        "deletions": 16,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): fires on /trains throw a wide, flickering glow at night",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/175",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T04:38:19Z",
+        "additions": 98,
+        "deletions": 19,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): give /trains engines a headlamp beam at night",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/174",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T04:31:13Z",
+        "additions": 69,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): fireflies in the forest on /trains after dark",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/173",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T04:26:56Z",
+        "additions": 43,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): give each window on /trains its own bedtime",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/172",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T04:20:28Z",
+        "additions": 58,
+        "deletions": 9,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): lights on /trains light the ground around them at night",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/170",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T04:02:20Z",
+        "additions": 182,
+        "deletions": 23,
+        "changed_files": 1
+      },
+      {
+        "title": "Treat StudioC tracking 504 as a no-op like 404",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6486",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-12T16:18:32Z",
+        "additions": 39,
+        "deletions": 7,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(dashboard): keep HMS Roku off the shore on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/169",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T03:48:57Z",
+        "additions": 20,
+        "deletions": 2,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): pin the time of day on /trains with ?hour=",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/168",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T03:39:16Z",
+        "additions": 57,
+        "deletions": 5,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(mobile): skip Sentry for offline GetTabs launch, retry Refresh",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8155",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-12T18:07:32Z",
+        "additions": 120,
+        "deletions": 55,
+        "changed_files": 6
+      },
+      {
+        "title": "fix(mobile): stop retrying Chat.init after a PubNub timeout",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8153",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-12T18:07:32Z",
+        "additions": 150,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "feat(dashboard): conductors panic when a /trains train wrecks",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/167",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T01:59:16Z",
+        "additions": 293,
+        "deletions": 15,
+        "changed_files": 1
+      },
+      {
+        "title": "feat(dashboard): press and hold the /trains minimap to drag the camera",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/166",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-12T01:54:37Z",
+        "additions": 48,
+        "deletions": 6,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(mobile): do not report an offline share failure to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8152",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-12T17:45:00Z",
+        "additions": 80,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "Cluster should lookup a StudioC person once per Home feed request",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6478",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-12T16:25:50Z",
+        "additions": 228,
+        "deletions": 8,
+        "changed_files": 5
+      },
+      {
+        "title": "fix(mobile): log a stalled webview locally instead of Sentry (APOLLOS-MOBILE-FTD)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8151",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-12T17:45:00Z",
+        "additions": 49,
+        "deletions": 8,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(donations): link Rock gifts whose person synced after the gift (APO-17595)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2216",
+        "repo": "apollos-shovel",
+        "merged_at": "2026-11-12T18:16:55Z",
+        "additions": 307,
+        "deletions": 108,
+        "changed_files": 4
+      },
+      {
+        "title": "Log BigQuery cost over 2GB instead of sending it to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6395",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-11T17:55:27Z",
+        "additions": 16,
+        "deletions": 19,
+        "changed_files": 2
+      },
+      {
+        "title": "Log idle Cluster pool errors instead of crashing (APOLLOS-ADMIN-798)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6394",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-12T00:30:01Z",
+        "additions": 67,
+        "deletions": 2,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(admin): stop Add Content crashing on sections with no algorithms (APO-14327)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6388",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-11T16:53:38Z",
+        "additions": 106,
+        "deletions": 9,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(web): show refund status on a refunded gift's page (APO-17379)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6372",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-10T20:24:38Z",
+        "additions": 47,
+        "deletions": 33,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(web): stop promising 24 hours on the Giving History note (APO-17520)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6369",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-10T20:13:01Z",
+        "additions": 4,
+        "deletions": 4,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(web): put the church logo on its theme icon background on History",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6368",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-10T20:54:58Z",
+        "additions": 35,
+        "deletions": 4,
+        "changed_files": 2
+      },
+      {
+        "title": "feat(web): church share cards for link previews (APO-17506)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6365",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-10T21:11:29Z",
+        "additions": 4212,
+        "deletions": 212,
+        "changed_files": 56
+      },
+      {
+        "title": "fix(admin): draw the editor's gap cursor as a text caret (APO-17513)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6363",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-10T17:50:30Z",
+        "additions": 18,
+        "deletions": 0,
+        "changed_files": 1
+      },
+      {
+        "title": "Keep bot-authored PRs in the review queue until two humans approve",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/95",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-11-10T15:13:44Z",
+        "additions": 51,
+        "deletions": 27,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(giving-history): hide returned Pushpay bank gifts (APO-17484)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6410",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-10T14:57:02Z",
+        "additions": 123,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Skip generated audio for content items with nothing to narrate",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6403",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-12T20:16:18Z",
+        "additions": 272,
+        "deletions": 2,
+        "changed_files": 6
+      },
+      {
+        "title": "test(web): stop the Express Checkout gate test racing Stripe's onReady (APO-17465)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6351",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-09T20:15:10Z",
+        "additions": 51,
+        "deletions": 15,
+        "changed_files": 1
+      },
+      {
+        "title": "fix(web): hide Edit on recurring gifts Cluster won't update (APO-17427)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6347",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-09T21:19:12Z",
+        "additions": 123,
+        "deletions": 77,
+        "changed_files": 5
+      },
+      {
+        "title": "fix(web): show giving history times in the church's time zone (APO-17367)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6346",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-09T17:46:16Z",
+        "additions": 182,
+        "deletions": 30,
+        "changed_files": 7
+      },
+      {
+        "title": "Make the phone optional on the card and bank give form (APO-15088)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6329",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-10T14:55:41Z",
+        "additions": 267,
+        "deletions": 58,
+        "changed_files": 18
+      },
+      {
+        "title": "feat(web): lead gift pages with the amount and show details as rows",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6324",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-09T14:41:59Z",
+        "additions": 433,
+        "deletions": 118,
+        "changed_files": 5
+      },
+      {
+        "title": "Add a year dropdown to giving history (APO-17221)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6310",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-09T17:46:16Z",
+        "additions": 272,
+        "deletions": 1,
+        "changed_files": 3
+      },
+      {
+        "title": "Skip Sentry for NativePlayer connection drops, keep certificate errors",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8072",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-11T18:10:11Z",
+        "additions": 97,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "docs(cluster): say where production logs actually go",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6315",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-09T21:21:46Z",
+        "additions": 6,
+        "deletions": 5,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(mobile): hide uninvitable people in the share sheet, skip only restricted-account errors (APOLLOS-MOBILE-FGR)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8061",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-12T01:11:41Z",
+        "additions": 505,
+        "deletions": 5,
+        "changed_files": 11
+      },
+      {
+        "title": "fix(mobile): refresh the token once, in the foreground, with one retry (APOLLOS-MOBILE-FA3)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8048",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-11T21:45:11Z",
+        "additions": 286,
+        "deletions": 20,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(mobile): write the church cache once and skip full-disk errors (APOLLOS-MOBILE-EY7)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8047",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-11T18:41:15Z",
+        "additions": 146,
+        "deletions": 19,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(mobile): mint the Give redirect code on focus and retry once (APOLLOS-MOBILE-EZB)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8045",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-12T22:26:46Z",
+        "additions": 601,
+        "deletions": 26,
+        "changed_files": 4
+      },
+      {
+        "title": "fix(rock): return null when Rock refuses an impersonation token",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6260",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-11T18:20:29Z",
+        "additions": 108,
+        "deletions": 7,
+        "changed_files": 3
+      },
+      {
+        "title": "Skip expected give-intent Transaction forbidden in Sentry",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6258",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-11T22:26:26Z",
+        "additions": 73,
+        "deletions": 0,
+        "changed_files": 4
+      },
+      {
+        "title": "Skip images when converting Html features to text",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6257",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-11T17:55:30Z",
+        "additions": 58,
+        "deletions": 4,
+        "changed_files": 4
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "fix(dashboard): draw the viewer gull ring on the ground",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/308",
+        "repo": "apollos-infrastructure",
+        "state": "open"
+      },
+      {
+        "title": "feat(donations): sync Planning Center gifts into giving history (APO-17747)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2229",
+        "repo": "apollos-shovel",
+        "state": "open"
+      },
+      {
+        "title": "feat(account): let the dashboard's AWS user read Cost Explorer for the /trains dragon's hoard",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/291",
+        "repo": "apollos-infrastructure",
+        "state": "open"
+      },
+      {
+        "title": "Stop paging Sentry for expected SMS-region OTP blocks",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6525",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Serve a fractional video duration as a whole number of seconds.",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6521",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Still change campus when Rock People GET times out",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6520",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Still change campus when Planning Center says the person is gone",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6519",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Treat a status-less PubNub REST error as a typed chat outage",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6518",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Still mint a chat token when the PubNub user stamp returns 400",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6517",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Return the existing follow on a duplicate request",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6516",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Play online.church live pages in a WebView",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8172",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "Retry a transient PubNub church-slug stamp before reporting it to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8162",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "fix(mobile): retry hashed GraphQL GET 504 as POST",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8157",
+        "repo": "apollos-platforms",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "feat(donations): sync Planning Center gifts into giving history (APO-17747)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2229",
+        "repo": "apollos-shovel",
+        "requested_at": null,
+        "reviewed_at": "2026-11-13T22:16:32Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Check report status every second on the Reports page (APO-17745)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6492",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-13T21:39:14Z",
+        "reviewed_at": "2026-11-13T22:34:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.92
+      },
+      {
+        "title": "fix(contentful): stringify shadowed entry ids in deletion sync",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2227",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-11-13T21:19:08Z",
+        "reviewed_at": "2026-11-13T22:33:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.23
+      },
+      {
+        "title": "Pace /trains journeys to deploy duration, with late cows and early afterburners",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/299",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-11-13T19:06:07Z",
+        "reviewed_at": "2026-11-13T19:48:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.71
+      },
+      {
+        "title": "feat(agent): one approval card for a change across many posts (APO-17706)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6483",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-13T17:53:11Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(androidtv): keep focus on the player when its controls hide",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8174",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-13T04:37:40Z",
+        "reviewed_at": "2026-11-13T15:59:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1
+      },
+      {
+        "title": "ci(tv): daily VibeView-gated TV release, PR previews and Linear sync",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8173",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-13T04:37:38Z",
+        "reviewed_at": "2026-11-13T16:05:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.09
+      },
+      {
+        "title": "feat(dashboard): David flies a Tesla Roadster on cold gas thrusters on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/242",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-11-13T03:01:00Z",
+        "reviewed_at": "2026-11-13T03:19:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "ci: pin the test Postgres image to 16.15",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6513",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-13T01:25:18Z",
+        "reviewed_at": "2026-11-13T01:33:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "Wire channel detail history to GraphQL under the shared latch",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8169",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-13T09:50:59Z",
+        "reviewed_at": "2026-11-13T16:04:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.07
+      },
+      {
+        "title": "fix(mobile): make a locked guide row's reason readable (APO-14599)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8168",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-12T21:37:52Z",
+        "reviewed_at": "2026-11-12T22:39:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.03
+      },
+      {
+        "title": "fix(mobile): no Completed pill on standalone content items (APO-17655)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8167",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-13T12:29:34Z",
+        "reviewed_at": "2026-11-13T22:35:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.6
+      },
+      {
+        "title": "fix(admin): show full emails on the Super Admins list (APO-17667)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6457",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-12T20:54:00Z",
+        "reviewed_at": "2026-11-12T22:41:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.79
+      },
+      {
+        "title": "fix(agent): say when work waits on cards, and tell later work about them (APO-17651)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6454",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-13T18:00:21Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): close the Mobile tab editor when the Mobile link is clicked (APO-16867)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6451",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-12T19:53:10Z",
+        "reviewed_at": "2026-11-13T22:35:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 10.7
+      },
+      {
+        "title": "fix(admin): link a campus with no coordinates to an address search",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6450",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-12T19:53:18Z",
+        "reviewed_at": "2026-11-13T22:35:09Z",
+        "review_state": "APPROVED",
+        "latency_hours": 10.7
+      },
+      {
+        "title": "fix(admin): leave people already on the Suggested Follows list out of its search (APO-17588)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6448",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-12T18:58:40Z",
+        "reviewed_at": "2026-11-13T22:34:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 11.61
+      },
+      {
+        "title": "fix(mobile): expose pill chips as buttons to screen readers (APO-15918)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8159",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-12T15:18:59Z",
+        "reviewed_at": "2026-11-12T15:32:32Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.23
+      },
+      {
+        "title": "refactor(admin): magic-link, sender-domain and generated-audio wrappers use clusterRest (APO-12270)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6427",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-12T10:28:25Z",
+        "reviewed_at": "2026-11-12T14:49:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "Open the push notification people search on click and select its text",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6410",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-12T17:42:16Z",
+        "reviewed_at": "2026-11-13T22:34:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 12.87
+      },
+      {
+        "title": "feat(admin): edit and pick Child Content by Category feed selector (CUS-239)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6408",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-11T21:47:13Z",
+        "reviewed_at": "2026-11-12T14:49:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.21
+      },
+      {
+        "title": "refactor(admin): dedupe stream hosts with Set instead of lodash",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6401",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-11T19:02:29Z",
+        "reviewed_at": "2026-11-11T19:39:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.62
+      },
+      {
+        "title": "fix(admin): send giving report failures to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6398",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-11T18:38:28Z",
+        "reviewed_at": "2026-11-11T19:41:20Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.05
+      },
+      {
+        "title": "fix(mobile): cap Community tab title growth at accessibility text sizes (APO-17568)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8142",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-11T15:41:11Z",
+        "reviewed_at": "2026-11-11T16:03:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.38
+      },
+      {
+        "title": "fix(admin): label Giving overview cards that cover all funds when a fund is picked",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6387",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-11T15:54:41Z",
+        "reviewed_at": "2026-11-11T16:03:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.15
+      },
+      {
+        "title": "ci(admin): fail PRs that call Cluster REST routes production does not serve (APO-12041)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6386",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-11T15:47:30Z",
+        "reviewed_at": "2026-11-11T16:06:10Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.31
+      },
+      {
+        "title": "fix(mobile): save chat invite preference immediately instead of a cancelable debounce",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8141",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-12T16:38:20Z",
+        "reviewed_at": "2026-11-12T17:16:55Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.64
+      },
+      {
+        "title": "fix(reverse-proxy): keep visitor cookies and Framer cookies off the marketing proxy",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6384",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-11T20:36:41Z",
+        "reviewed_at": "2026-11-11T20:38:37Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.03
+      },
+      {
+        "title": "refactor(admin): create and edit funds through Cluster's PostgREST lane (APO-12276)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6383",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-11T10:39:44Z",
+        "reviewed_at": "2026-11-12T14:48:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 8
+      },
+      {
+        "title": "Remove duplicate PrayerExperienceSwiper smoke test",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8135",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-10T23:30:59Z",
+        "reviewed_at": "2026-11-11T15:33:18Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "fix(admin): scope hosted-video deletion to its environment (APO-17526)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6375",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T21:38:03Z",
+        "reviewed_at": "2026-11-10T21:40:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.03
+      },
+      {
+        "title": "Hide follow when the server will not let you follow a minor",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8129",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-11T01:25:40Z",
+        "reviewed_at": "2026-11-11T16:02:10Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.04
+      },
+      {
+        "title": "ci(simulator-build): skip Sentry upload for simulator builds",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8127",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-10T20:54:25Z",
+        "reviewed_at": "2026-11-10T21:04:16Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.16
+      },
+      {
+        "title": "fix(canvas-ui-web): play body YouTube links inline on web (APO-17521)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6371",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T19:55:52Z",
+        "reviewed_at": "2026-11-10T21:05:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.16
+      },
+      {
+        "title": "perf(polls): batch option vote counts on a page",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6431",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-10T21:23:40Z",
+        "reviewed_at": "2026-11-10T21:34:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.18
+      },
+      {
+        "title": "test(web): drop tautological GiveRoute export checks",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6370",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T19:05:45Z",
+        "reviewed_at": "2026-11-10T19:54:53Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.82
+      },
+      {
+        "title": "fix: label cluster frequency aliases the same way on web and admin",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6367",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T21:23:55Z",
+        "reviewed_at": "2026-11-10T21:33:50Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.17
+      },
+      {
+        "title": "feat(web): church share cards for link previews (APO-17506)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6365",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-10T18:14:36Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(admin): default web embeds setup to v2 and port the Ask bar search settings",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6364",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T17:19:44Z",
+        "reviewed_at": "2026-11-10T19:52:04Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.54
+      },
+      {
+        "title": "fix(admin): return 400 when signup email is missing or unparsable",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6362",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T17:28:24Z",
+        "reviewed_at": "2026-11-10T19:54:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.44
+      },
+      {
+        "title": "fix(mobile): expose PressableButton as a button and forward a11y props (APO-17503)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8120",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-10T15:42:25Z",
+        "reviewed_at": "2026-11-10T19:55:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 4.22
+      },
+      {
+        "title": "fix(admin): label a scheduled item Scheduled, not Published, in its detail view (APO-17494)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6361",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T08:39:00Z",
+        "reviewed_at": "2026-11-10T15:15:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.26
+      },
+      {
+        "title": "feat(deploy): mark production runs for Admin's last-deploy status (APO-17475)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8116",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-10T00:17:21Z",
+        "reviewed_at": "2026-11-10T15:17:04Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.28
+      },
+      {
+        "title": "fix(admin): show a no-matches note, not the new-collection welcome, under a status filter (APO-17407)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6352",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-09T20:38:22Z",
+        "reviewed_at": "2026-11-10T19:53:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.25
+      },
+      {
+        "title": "fix(mobile): keep Daily day sheet Close visible while scrolling (APO-17461)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8113",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-09T18:34:44Z",
+        "reviewed_at": "2026-11-09T19:31:34Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.95
+      },
+      {
+        "title": "fix(web): show giving history times in the church's time zone (APO-17367)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6346",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-09T17:58:12Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(mobile): keep an expanded journal open when its feed row is recycled (APO-17426)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8112",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-09T15:47:04Z",
+        "reviewed_at": "2026-11-09T16:03:04Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.27
+      },
+      {
+        "title": "refactor(admin): move chat, chat-verification, community-chat and notifications wrappers onto clusterRest (APO-12270)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6345",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-09T10:46:33Z",
+        "reviewed_at": "2026-11-09T16:02:50Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.05
+      },
+      {
+        "title": "fix(mobile): fold smart apostrophes in Find People search (APO-15924)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8107",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-07T12:35:42Z",
+        "reviewed_at": "2026-11-09T16:01:03Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.02
+      },
+      {
+        "title": "refactor(admin-insights): share the UTC execution-date formatting (APO-17390)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2192",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-11-09T14:01:16Z",
+        "reviewed_at": "2026-11-09T16:01:41Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.03
+      },
+      {
+        "title": "fix(mobile): let Personal Details Save and Complete profile Next grow at large text (APO-16318)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8104",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-07T04:44:01Z",
+        "reviewed_at": "2026-11-09T16:00:49Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.01
+      },
+      {
+        "title": "fix(mobile): expose Daily day sheet Close to iOS a11y (APO-15887)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8102",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-07T00:36:13Z",
+        "reviewed_at": "2026-11-09T16:00:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.01
+      },
+      {
+        "title": "Make the phone optional on the card and bank give form (APO-15088)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6329",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-10T00:20:26Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(web): lead gift pages with the amount and show details as rows",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6324",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-09T15:10:33Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(admin): Stripe-only V1 Failed Fund/Campus via expanded invoice.subscription",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6312",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-09T15:04:28Z",
+        "reviewed_at": "2026-11-09T16:16:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.19
+      },
+      {
+        "title": "Add a year dropdown to giving history (APO-17221)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6310",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-09T17:53:29Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "Wire Channels list to GraphQL behind a flag (default off)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8094",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-11-09T20:41:07Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(admin): Group finder URL on Community tab setup (APO-11438)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6299",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-05T20:59:54Z",
+        "reviewed_at": "2026-11-10T15:15:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 18.25
+      },
+      {
+        "title": "Show plain tool names, link activity items, and say when the level is saved",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6255",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-05T17:54:28Z",
+        "reviewed_at": "2026-11-13T22:34:04Z",
+        "review_state": "APPROVED",
+        "latency_hours": 52.66
+      },
+      {
+        "title": "Say when a search has more and link each item to Admin",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6254",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T20:07:16Z",
+        "reviewed_at": "2026-11-13T22:33:53Z",
+        "review_state": "APPROVED",
+        "latency_hours": 58.44
+      },
+      {
+        "title": "Group activity filter choices in Postgres instead of loading every row",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6252",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-04T19:52:22Z",
+        "reviewed_at": "2026-11-13T22:33:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 58.69
+      },
+      {
+        "title": "fix(mobile): refresh the token once, in the foreground, with one retry (APOLLOS-MOBILE-FA3)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8048",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-11-11T18:53:37Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(mobile): mint the Give redirect code on focus and retry once (APOLLOS-MOBILE-EZB)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8045",
+        "repo": "apollos-platforms",
+        "requested_at": null,
+        "reviewed_at": "2026-11-11T21:14:20Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(admin): export Prayers tab to CSV",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6193",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T16:21:40Z",
+        "reviewed_at": "2026-11-10T19:59:10Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 3.63
+      },
+      {
+        "title": "Remove person UUID from admin people side panel",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5644",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-09T19:05:50Z",
+        "reviewed_at": "2026-11-09T19:28:43Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.38
+      },
+      {
+        "title": "feat(web): smart app-download link at /:handle/app (APO-10376)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5573",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T14:41:54Z",
+        "reviewed_at": "2026-11-10T15:17:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.29
+      },
+      {
+        "title": "feat(admin): collection-scoped Creator access for team members (APO-10159)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5533",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T13:18:39Z",
+        "reviewed_at": "2026-11-10T15:21:15Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.35
+      },
+      {
+        "title": "feat(admin): folders to organize feeds in the feed list (APO-10158)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/5532",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-10T14:47:49Z",
+        "reviewed_at": "2026-11-10T15:20:36Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0.34
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- test(web): stop the Express Checkout gate test racing Stripe's onReady (APO-17465)\n- fix(web): hide Edit on recurring gifts Cluster won't update (APO-17427)\n- fix(web): show giving history times in the church's time zone (APO-17367)\n- chore(web): drop unused history strings and test donation gift title\n- fix(web): use the wide desktop width on every Giving History page\n- fix(web): show church logo on a dark circle beside Giving on History\n- feat(web): lead gift pages with the amount and show details as rows\n- fix(web): show page X of Y beside the Giving History pager\n- fix(web): title gift pages Gift / Recurring Gift and use Details heading\n- Add a year dropdown to giving history (APO-17221)\n- Reviewed: fix(mobile): keep Daily day sheet Close visible while scrolling (APO-17461)\n- Reviewed: fix(web): show giving history times in the church's time zone (APO-17367)\n- Reviewed: fix(mobile): keep an expanded journal open when its feed row is recycled (APO-17426)\n- Reviewed: refactor(admin): move chat, chat-verification, community-chat and notifications wrappers onto clusterRest (APO-12270)\n- Reviewed: fix(mobile): fold smart apostrophes in Find People search (APO-15924)\n- Reviewed: refactor(admin-insights): share the UTC execution-date formatting (APO-17390)\n- Reviewed: fix(mobile): let Personal Details Save and Complete profile Next grow at large text (APO-16318)\n- Reviewed: fix(mobile): expose Daily day sheet Close to iOS a11y (APO-15887)\n- Reviewed: feat(web): lead gift pages with the amount and show details as rows\n- Reviewed: fix(web): title gift pages Gift / Recurring Gift and use Details heading\n- Reviewed: fix(admin): Stripe-only V1 Failed Fund/Campus via expanded invoice.subscription\n- Reviewed: Add a year dropdown to giving history (APO-17221)\n- …and 2 more reviews\n- Done: APO-17367: Giving history shows gift times in UTC\n- Done: APO-17366: Giving history: read the church time zone from merged config\n- Done: APO-17364: Giving history: lead gift pages with the amount and show details as rows\n- Done: APO-17363: Giving history: Edit link on a recurring gift doesn't look like a link in dark mode\n- Done: APO-17358: Giving history: pager doesn't say which page you're on\n- Done: APO-17357: Giving history: pages change width on desktop\n- Done: APO-17356: Giving history: church logo next to \"Giving\" is nearly invisible in light mode\n- Done: APO-17355: Giving history: gift page says \"Transaction Details\" twice\n- Done: APO-17354: Giving history: \"up to 24 hours\" note is black and cramped in light mode\n- Done: APO-17353: Giving history: gift page shows the date without the year or time\n- Done: APO-17221: Giving history: choose a year, from only the years with gifts\n- Done: APO-16892: Resolve Sentry issues whose fixes shipped to production (2026-10-29 run)\n- Wrapped up project: Apollos MCP\n- In progress: APO-16962: Cluster should still save a profile when Rock returns 401 (APOLLOS-CLUSTER-8FZ)\n- In progress: APO-15088: Remove the phone number requirement when giving (converted to project)\n- Filed 3 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- fix(web): show refund status on a refunded gift's page (APO-17379)\n- fix(web): stop promising 24 hours on the Giving History note (APO-17520)\n- fix(web): put the church logo on its theme icon background on History\n- feat(web): church share cards for link previews (APO-17506)\n- fix(admin): draw the editor's gap cursor as a text caret (APO-17513)\n- Keep bot-authored PRs in the review queue until two humans approve\n- fix(giving-history): hide returned Pushpay bank gifts (APO-17484)\n- Make the phone optional on the card and bank give form (APO-15088)\n- docs(cluster): say where production logs actually go\n- Reviewed: fix(admin): scope hosted-video deletion to its environment (APO-17526)\n- Reviewed: ci(simulator-build): skip Sentry upload for simulator builds\n- Reviewed: fix(canvas-ui-web): play body YouTube links inline on web (APO-17521)\n- Reviewed: perf(polls): batch option vote counts on a page\n- Reviewed: test(web): drop tautological GiveRoute export checks\n- Reviewed: fix: label cluster frequency aliases the same way on web and admin\n- Reviewed: feat(web): church share cards for link previews (APO-17506)\n- Reviewed: feat(admin): default web embeds setup to v2 and port the Ask bar search settings\n- Reviewed: fix(admin): return 400 when signup email is missing or unparsable\n- Reviewed: fix(mobile): expose PressableButton as a button and forward a11y props (APO-17503)\n- Reviewed: fix(admin): label a scheduled item Scheduled, not Published, in its detail view (APO-17494)\n- Reviewed: feat(deploy): mark production runs for Admin's last-deploy status (APO-17475)\n- …and 7 more reviews\n- Done: APO-17520: Giving history: \"up to 24 hours\" note is wrong now that Rock gifts show there\n- Done: APO-17513: Gap cursor next to an expandable section shows as a horizontal line instead of a text caret\n- Done: APO-17506: Shared apollos.com church links show no preview image\n- Done: APO-17484: Giving history: returned Pushpay bank gifts show as Pending forever\n- Done: APO-17465: Web confidence gate: Express Checkout iframe test fails whenever it misses a half-second window\n- Done: APO-17427: Giving history: past due, unpaid and paused recurring gifts show Edit, then fail on Save\n- Done: APO-17380: Giving history: a solid black church logo is hard to see on the dark logo circle\n- Done: APO-17379: Giving history: a refunded card gift says \"Complete\" on its gift page\n- Done: APO-15088: Remove the phone number requirement when giving (converted to project)\n- Wrapped up project: Remove the phone number requirement when giving\n- Filed 4 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- Log BigQuery cost over 2GB instead of sending it to Sentry\n- fix(admin): stop Add Content crashing on sections with no algorithms (APO-14327)\n- Skip Sentry for NativePlayer connection drops, keep certificate errors\n- fix(mobile): write the church cache once and skip full-disk errors (APOLLOS-MOBILE-EY7)\n- fix(rock): return null when Rock refuses an impersonation token\n- Skip images when converting Html features to text\n- Reviewed: refactor(admin): dedupe stream hosts with Set instead of lodash\n- Reviewed: fix(admin): send giving report failures to Sentry\n- Reviewed: fix(mobile): cap Community tab title growth at accessibility text sizes (APO-17568)\n- Reviewed: fix(admin): label Giving overview cards that cover all funds when a fund is picked\n- Reviewed: ci(admin): fail PRs that call Cluster REST routes production does not serve (APO-12041)\n- Reviewed: fix(reverse-proxy): keep visitor cookies and Framer cookies off the marketing proxy\n- Reviewed: Remove duplicate PrayerExperienceSwiper smoke test\n- Reviewed: Hide follow when the server will not let you follow a minor\n- Reviewed: fix(mobile): refresh the token once, in the foreground, with one retry (APOLLOS-MOBILE-FA3)\n- Reviewed: fix(mobile): mint the Give redirect code on focus and retry once (APOLLOS-MOBILE-EZB)\n- Done: APO-17267: Mobile should not report NativePlayer TLS and connection failures to Sentry (APOLLOS-MOBILE-ERT)\n- Done: APO-17262: Mary: don't treat the donation-embed translation file as giving code\n- Done: APO-17252: [Mobile] First and Last Name fields lost their padding and spacing on Complete Your Profile and Personal Details (regression from #7701)\n- Done: APO-17164: Mobile should not report a full-disk church cache write to Sentry (Sentry APOLLOS-MOBILE-EY7)\n- Done: APO-17154: Mobile WebView should not report HTTP 404s to Sentry (Sentry APOLLOS-MOBILE-FR9)\n- Done: APO-17125: Cluster should still load currentUser when Rock authToken lookup returns 401 (APOLLOS-CLUSTER-8F8)\n- Done: APO-17122: Cluster should still load a content item when html-to-text overflows on Html export (APOLLOS-CLUSTER-8SS)\n- Done: APO-16965: Mobile should catch a failed external URL open instead of reporting it to Sentry\n- Done: APO-16477: Mobile should not report transient PubNub REST API errors to Sentry\n- Done: APO-14402: Admin AI Writer crashes when attaching server video after the doc changed\n- Done: APO-14398: Admin Insert Page crashes with mismatched transaction when pages already exist\n- Done: APO-14327: Admin: adding feed section content crashes when algorithms is missing\n- …and 2 more completed issues\n- In progress: APO-17595: Rock gift sync never links a gift whose Rock profile reaches Apollos after the gift\n- In progress: APO-17156: Mobile Give handoff should not report mint Network request failed to Sentry (Sentry APOLLOS-MOBILE-EZB)\n- In progress: APO-17124: Cluster should not report expected give-intent Transaction forbidden to Sentry (APOLLOS-CLUSTER-7HD)\n- In progress: APO-16962: Cluster should still save a profile when Rock returns 401 (APOLLOS-CLUSTER-8FZ)\n- In progress: APO-16491: Mobile should not report expected join-chat and like GraphQL errors to Sentry\n- Filed 5 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Thursday",
+      "content": "- fix(dashboard): make /trains cards suit a finger\n- feat(dashboard): a finger-words hint on touch screens for /trains\n- fix(dashboard): stop /trains zooming out past 0.75 on phones\n- fix(dashboard): show the /trains station timetable as a bottom sheet on phones\n- feat(dashboard): one-line header and a thumb bar on phones for /trains\n- feat(dashboard): open the /trains departures board as a bottom sheet on phones\n- fix(dashboard): stop page pinch-zoom on /trains and respect safe areas\n- fix(dashboard): fit tour captions on phones\n- fix(dashboard): calmer minimap drag under a finger on /trains\n- fix(dashboard): start /trains wider on phones, board shut on short screens\n- fix(dashboard): zap bugs dragged or dropped next to Wizard Tyler\n- feat(dashboard): put the M&J logo's sun and cloud on the /trains studio sign\n- …and 60 more (see Weekly Summary)\n- Reviewed: fix(mobile): make a locked guide row's reason readable (APO-14599)\n- Reviewed: fix(admin): show full emails on the Super Admins list (APO-17667)\n- Reviewed: fix(mobile): expose pill chips as buttons to screen readers (APO-15918)\n- Reviewed: refactor(admin): magic-link, sender-domain and generated-audio wrappers use clusterRest (APO-12270)\n- Reviewed: feat(admin): edit and pick Child Content by Category feed selector (CUS-239)\n- Reviewed: fix(mobile): save chat invite preference immediately instead of a cancelable debounce\n- Reviewed: refactor(admin): create and edit funds through Cluster's PostgREST lane (APO-12276)\n- Reviewed: fix(mobile): mint the Give redirect code on focus and retry once (APOLLOS-MOBILE-EZB)\n- Done: APO-17621: Mobile reports GetTabs HTTP 401 to Sentry when token refresh fails offline (APOLLOS-MOBILE-FJ8)\n- Done: APO-17620: Cluster should not fail GraphQL when StudioC tracking returns 504 (APOLLOS-MOBILE-FGS)\n- Done: APO-17618: Mobile reports GetUserCampusID Network request failed as a tabs-error Sentry event (APOLLOS-MOBILE-F3S)\n- Done: APO-17616: Mobile Chat.init reports a PubNub timeout to Sentry on every useChat mount (APOLLOS-MOBILE-FKA)\n- Done: APO-17608: Mobile reports a failed prayer or gratitude share to Sentry when the device is offline (APOLLOS-MOBILE-ESQ)\n- Done: APO-17606: Cluster should lookup a StudioC person once per request (APOLLOS-CLUSTER-8TA)\n- Done: APO-17602: Mobile should not report a designed webview stall fallback to Sentry (APOLLOS-MOBILE-FTD)\n- Done: APO-17595: Rock gift sync never links a gift whose Rock profile reaches Apollos after the gift\n- Done: APO-17196: Mobile should not report expected chat invite and auth GraphQL errors to Sentry (APOLLOS-MOBILE-FGR)\n- Done: APO-17167: Mobile should not report token refresh Network request failed to Sentry (Sentry APOLLOS-MOBILE-FA3)\n- Done: APO-17156: Mobile Give handoff should not report mint Network request failed to Sentry (Sentry APOLLOS-MOBILE-EZB)\n- Done: APO-17124: Cluster should not report expected give-intent Transaction forbidden to Sentry (APOLLOS-CLUSTER-7HD)\n- In progress: APO-17641: Mobile reports a failed PubNub church-slug stamp as PubNubError REST to Sentry (APOLLOS-MOBILE-EYA)\n- In progress: APO-17640: Mobile Sentry receives events from a test-lab phone (likely Google Play pre-launch reports)\n- In progress: APO-17622: Mobile getChurch hashed GET hits CDN 504 at launch (APOLLOS-MOBILE-F35)\n- Filed 28 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Friday",
+      "content": "- feat(dashboard): a merge queue island on /trains, with a launcher and ring gates\n- fix(agent): course playbook keeps navigation out of post bodies (APO-17751)\n- chore(dashboard): viewer gulls beat every 60 s to fit a free Redis store\n- fix(agent): parent writes connect the series in the app (APO-17715)\n- feat(agent): build courses as series (APO-17592)\n- fix(agent): keep the id in share links the reply sends (APO-17716)\n- feat(dashboard): hidden command palette on /trains\n- fix(dashboard): end-of-day credits read INACTIVE revisions for cluster and admin\n- feat(dashboard): Yesterday in 60 seconds, a replay of a finished day on /trains\n- feat(dashboard): a dragon on Mount Pager sleeps on this month's AWS cost\n- feat(dashboard): viewer gulls for open /trains tabs\n- feat(dashboard): morning roll call tour on /trains\n- …and 44 more (see Weekly Summary)\n- Reviewed: feat(donations): sync Planning Center gifts into giving history (APO-17747)\n- Reviewed: Check report status every second on the Reports page (APO-17745)\n- Reviewed: fix(contentful): stringify shadowed entry ids in deletion sync\n- Reviewed: Pace /trains journeys to deploy duration, with late cows and early afterburners\n- Reviewed: feat(agent): one approval card for a change across many posts (APO-17706)\n- Reviewed: fix(androidtv): keep focus on the player when its controls hide\n- Reviewed: ci(tv): daily VibeView-gated TV release, PR previews and Linear sync\n- Reviewed: feat(dashboard): David flies a Tesla Roadster on cold gas thrusters on /trains\n- Reviewed: ci: pin the test Postgres image to 16.15\n- Reviewed: Wire channel detail history to GraphQL under the shared latch\n- Reviewed: fix(mobile): no Completed pill on standalone content items (APO-17655)\n- Reviewed: fix(agent): say when work waits on cards, and tell later work about them (APO-17651)\n- …and 7 more reviews\n- Done: APO-17751: Course playbook leaves hand-written navigation in post bodies (Begin buttons, Back links, lists of parts)\n- Done: APO-17716: Agent sends the same \"broken\" share link again after the user says it doesn't work\n- Done: APO-17715: Agent's \"parent\" writes skip content_item_connection, so series it builds show no children in the app\n- Done: APO-17644: Cluster hands out generated audio for content items with nothing to narrate (APOLLOS-MOBILE-ERT)\n- Done: APO-17583: Send App Review a new FreedUp build with the reply\n- Done: APO-17582: Make the FreedUp app match the App Review reply\n- Done: APO-17651: Agent block edits end on silent approval cards, and a repeat request says the block can't be found\n- Done: APO-17592: Agent can't build a functional multi-week course from a PRD; feed link only lands in an unpublished draft\n- Done: APO-17580: Get Conrad's OK on the App Review reply\n- In progress: APO-17747: Planning Center gifts don't reach Giving History\n- In progress: APO-17694: Cluster should not report expected SMS-region OTP blocks to Sentry (APOLLOS-CLUSTER-8P6)\n- In progress: APO-17693: Cluster should round a fractional video duration to an Int (APOLLOS-CLUSTER-8SH)\n- In progress: APO-17692: Cluster should still change campus when Rock People GET times out (APOLLOS-CLUSTER-8QR)\n- In progress: APO-17690: Cluster should still change campus when Planning Center says the person is gone (APOLLOS-CLUSTER-3QB)\n- In progress: APO-17689: Cluster should treat a status-less PubNub REST error as a typed chat outage (APOLLOS-CLUSTER-8RZ)\n- In progress: APO-17688: Cluster should still mint a chat token when the PubNub user stamp returns 400 (APOLLOS-CLUSTER-8SR)\n- In progress: APO-17687: Cluster should treat a duplicate follow request as the existing row (APOLLOS-CLUSTER-8J2)\n- In progress: APO-17685: Mobile plays an online.church live page as a video file (APOLLOS-MOBILE-EVG)\n- In progress: APO-17097: Turn on unified giving history for the other Rock giving churches\n- Filed 20 new Linear tickets\n- Left comments on PRs and in Linear"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 148\n  • PR reviews: 68\n  • Commits pushed: 161\n  • Code volume: +36891 / -3130 (546 files)\n  • Median review latency (working hours): 1.01h\n  • Linear issues completed: 54\n  • Linear projects completed: 2\n  • Linear issues worked on: 64\n  • Linear issues created: 60\n  • Linear replies: 43\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-infrastructure, apollos-platforms, apollos-shovel\n\n📝 Check-ins:\n\n  Monday: - test(web): stop the Express Checkout gate test racing Stripe's onReady (APO-17...\n  Tuesday: - fix(web): show refund status on a refunded gift's page (APO-17379)\n- fix(web):...\n  Wednesday: - Log BigQuery cost over 2GB instead of sending it to Sentry\n- fix(admin): stop ...\n  Thursday: - fix(dashboard): make /trains cards suit a finger\n- feat(dashboard): a finger-w...\n  Friday: - feat(dashboard): a merge queue island on /trains, with a launcher and ring gat...\n",
+  "formatted_output": null
+}
