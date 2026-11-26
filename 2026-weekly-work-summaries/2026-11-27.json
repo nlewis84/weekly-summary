@@ -1,0 +1,3613 @@
+{
+  "meta": {
+    "generated_at": "2026-11-26T00:36:13.324Z",
+    "window_start": "2026-11-21T06:00:00.000Z",
+    "window_end": "2026-11-26T05:59:59.999Z",
+    "week_ending": "2026-11-27",
+    "source_of_truth": "End-of-year review and career narrative. Document leadership, ownership, mentoring, cross-team work, and technical impact."
+  },
+  "stats": {
+    "prs_merged": 40,
+    "prs_total": 60,
+    "pr_reviews": 68,
+    "pr_comments": 104,
+    "commits_pushed": 134,
+    "linear_completed": 66,
+    "linear_projects_completed": 0,
+    "linear_worked_on": 76,
+    "linear_issues_created": 58,
+    "linear_comments": 133,
+    "repos": [
+      "apollos-admin",
+      "apollos-cluster",
+      "apollos-code-reviewer",
+      "apollos-infrastructure",
+      "apollos-platforms",
+      "apollos-shovel"
+    ],
+    "lines_added": 7824,
+    "lines_deleted": 1133,
+    "files_changed": 195,
+    "median_review_latency_hours": 0.33
+  },
+  "linear": {
+    "completed_issues": [
+      {
+        "identifier": "APO-18666",
+        "title": "Christ Fellowship Giving Admin shows blank or setup screen",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18666/christ-fellowship-giving-admin-shows-blank-or-setup-screen",
+        "completedAt": "2026-11-25T23:21:26.848Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18660",
+        "title": "Staging Tiptap tokens were left on old values after rotation, so the staging gate blocked every Admin release",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18660/staging-tiptap-tokens-were-left-on-old-values-after-rotation-so-the",
+        "completedAt": "2026-11-25T18:38:19.324Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18653",
+        "title": "Staging Admin's BigQuery key was revoked: dashboard charts empty and the staging gate blocks every Admin release",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18653/staging-admins-bigquery-key-was-revoked-dashboard-charts-empty-and-the",
+        "completedAt": "2026-11-25T18:38:18.465Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18605",
+        "title": "Delete FreedUp Woo Astro variables after #2270 deploys",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18605/delete-freedup-woo-astro-variables-after-2270-deploys",
+        "completedAt": "2026-11-24T23:00:54.756Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18604",
+        "title": "Admin Config: saving an encrypted row re-encrypts the stored ciphertext",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18604/admin-config-saving-an-encrypted-row-re-encrypts-the-stored-ciphertext",
+        "completedAt": "2026-11-25T18:38:17.664Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18581",
+        "title": "Move WooCommerce credentials to cluster DB and rotate them",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18581/move-woocommerce-credentials-to-cluster-db-and-rotate-them",
+        "completedAt": "2026-11-24T22:07:40.763Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18560",
+        "title": "Fix DEMO Stripe webhook secrets in production config (what was done for APO-18554)",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18560/fix-demo-stripe-webhook-secrets-in-production-config-what-was-done-for",
+        "completedAt": "2026-11-24T17:29:48.265Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18554",
+        "title": "Stripe webhook events fail signature checks after the Stripe rotation",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18554/stripe-webhook-events-fail-signature-checks-after-the-stripe-rotation",
+        "completedAt": "2026-11-24T17:07:36.393Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18544",
+        "title": "Update staging Algolia keys after the production Algolia rotation",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18544/update-staging-algolia-keys-after-the-production-algolia-rotation",
+        "completedAt": "2026-11-24T17:29:21.760Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18543",
+        "title": "Rotate the apollos_demo PubNub secret override (demo chat can't send)",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18543/rotate-the-apollos-demo-pubnub-secret-override-demo-chat-cant-send",
+        "completedAt": "2026-11-24T15:01:24.528Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18537",
+        "title": "iOS kills the app while autocorrect updates a multiline TextInput (APOLLOS-MOBILE-FB5)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18537/ios-kills-the-app-while-autocorrect-updates-a-multiline-textinput",
+        "completedAt": "2026-11-25T14:31:02.365Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18526",
+        "title": "Chat still reports pending-invite send refusals to Sentry (APOLLOS-MOBILE-FBA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18526/chat-still-reports-pending-invite-send-refusals-to-sentry-apollos",
+        "completedAt": "2026-11-25T05:22:12.478Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18525",
+        "title": "Hashed GraphQL GET times out and is not retried as POST (APOLLOS-MOBILE-G1G)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18525/hashed-graphql-get-times-out-and-is-not-retried-as-post-apollos-mobile",
+        "completedAt": "2026-11-25T14:31:01.568Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18482",
+        "title": "Cluster reports every OpenAI credit-exhausted request to Sentry (APOLLOS-CLUSTER-8VC)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18482/cluster-reports-every-openai-credit-exhausted-request-to-sentry",
+        "completedAt": "2026-11-25T06:18:49.320Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18481",
+        "title": "Mobile still reports Prayer render diagnostic after the investigation closed (APOLLOS-MOBILE-FF3)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18481/mobile-still-reports-prayer-render-diagnostic-after-the-investigation",
+        "completedAt": "2026-11-25T14:30:59.658Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18472",
+        "title": "Android reports lockAsync as a Sentry error after the activity is gone (APOLLOS-MOBILE-APF)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18472/android-reports-lockasync-as-a-sentry-error-after-the-activity-is-gone",
+        "completedAt": "2026-11-25T06:44:03.759Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18347",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 500 (APOLLOS-MOBILE-G11)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18347/cluster-should-not-fail-graphql-when-studioc-tracking-returns-500",
+        "completedAt": "2026-11-23T22:44:10.756Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18345",
+        "title": "iOS audio session OSStatus reports as an unhandled Sentry rejection (APOLLOS-MOBILE-FTF)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18345/ios-audio-session-osstatus-reports-as-an-unhandled-sentry-rejection",
+        "completedAt": "2026-11-25T21:14:12.747Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18344",
+        "title": "Local com.apollos.dev builds report post-reaction failures as production Sentry (APOLLOS-MOBILE-G0R)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18344/local-comapollosdev-builds-report-post-reaction-failures-as-production",
+        "completedAt": "2026-11-25T21:14:11.395Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18343",
+        "title": "Demo-channel simulator builds report PubNub errors as production Sentry (APOLLOS-MOBILE-G0X)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18343/demo-channel-simulator-builds-report-pubnub-errors-as-production",
+        "completedAt": "2026-11-25T21:14:14.381Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18342",
+        "title": "Faith Promise expo-av AVPlayerItem grouping FCN is leftover old-runtime noise",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18342/faith-promise-expo-av-avplayeritem-grouping-fcn-is-leftover-old",
+        "completedAt": "2026-11-23T16:08:07.360Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18336",
+        "title": "iOS token refresh fails when fetch cannot read the JSON body blob (APOLLOS-MOBILE-FST)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18336/ios-token-refresh-fails-when-fetch-cannot-read-the-json-body-blob",
+        "completedAt": "2026-11-25T21:14:12.512Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18334",
+        "title": "iOS NativePlayer reports Resi resource-unavailable and invalid-certificate as Sentry errors (APOLLOS-MOBILE-EZD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18334/ios-nativeplayer-reports-resi-resource-unavailable-and-invalid",
+        "completedAt": "2026-11-25T21:14:12.842Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18332",
+        "title": "Node resolveType returns the Media interface instead of VideoMedia/AudioMedia/ImageMedia (APOLLOS-MOBILE-FQE)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18332/node-resolvetype-returns-the-media-interface-instead-of",
+        "completedAt": "2026-11-22T15:03:13.955Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18324",
+        "title": "Leaving phone verification reports a Sentry error (APOLLOS-MOBILE-ESR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18324/leaving-phone-verification-reports-a-sentry-error-apollos-mobile-esr",
+        "completedAt": "2026-11-25T21:14:15.751Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18322",
+        "title": "Apple Pay reports a bad email or an offline network drop as a Sentry error (APOLLOS-MOBILE-FWA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18322/apple-pay-reports-a-bad-email-or-an-offline-network-drop-as-a-sentry",
+        "completedAt": "2026-11-25T21:14:13.979Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18321",
+        "title": "YouTube short links with extra path characters play as a broken native video (APOLLOS-MOBILE-FCX)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18321/youtube-short-links-with-extra-path-characters-play-as-a-broken-native",
+        "completedAt": "2026-11-25T21:14:12.212Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18320",
+        "title": "Android crashes when a habit reminder switch gets a network error as disabled (APOLLOS-MOBILE-FK2)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18320/android-crashes-when-a-habit-reminder-switch-gets-a-network-error-as",
+        "completedAt": "2026-11-25T21:14:15.912Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18298",
+        "title": "Percent-encoded Resi HTML is played as a video file (APOLLOS-MOBILE-EX7)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18298/percent-encoded-resi-html-is-played-as-a-video-file-apollos-mobile-ex7",
+        "completedAt": "2026-11-25T21:14:15.321Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18297",
+        "title": "Starting a new DM reports Failed to send message when PubNub has not listed the other member yet (APOLLOS-MOBILE-FBW)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18297/starting-a-new-dm-reports-failed-to-send-message-when-pubnub-has-not",
+        "completedAt": "2026-11-25T21:14:11.449Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18291",
+        "title": "GetStream StreamApp crash 3R3 is leftover old-binary noise (code gone from master)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18291/getstream-streamapp-crash-3r3-is-leftover-old-binary-noise-code-gone",
+        "completedAt": "2026-11-23T16:13:30.211Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18284",
+        "title": "Chat reports a cancelled or failed birthday check to Sentry (APOLLOS-MOBILE-EYV)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18284/chat-reports-a-cancelled-or-failed-birthday-check-to-sentry-apollos",
+        "completedAt": "2026-11-25T21:14:14.791Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18276",
+        "title": "unsymbolicated onCompleted(main) grouping C8P is leftover old-runtime noise (same as CCP / APO-11189)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18276/unsymbolicated-oncompletedmain-grouping-c8p-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:30.997Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18274",
+        "title": "Logout on a full disk reports every AsyncStorage retry to Sentry (APOLLOS-MOBILE-FSK)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18274/logout-on-a-full-disk-reports-every-asyncstorage-retry-to-sentry",
+        "completedAt": "2026-11-25T21:14:11.524Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18263",
+        "title": "Question block comments fail when the block id is not a UUID (APOLLOS-CLUSTER-8TE)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18263/question-block-comments-fail-when-the-block-id-is-not-a-uuid-apollos",
+        "completedAt": "2026-11-22T05:23:46.679Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18247",
+        "title": "Cluster reports OneSignal fetch failures as Sentry errors (APOLLOS-CLUSTER-8S1)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18247/cluster-reports-onesignal-fetch-failures-as-sentry-errors-apollos",
+        "completedAt": "2026-11-22T05:23:46.655Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18245",
+        "title": "Cluster attaches phone-only people to Rock and reports a Sentry error (APOLLOS-CLUSTER-8FT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18245/cluster-attaches-phone-only-people-to-rock-and-reports-a-sentry-error",
+        "completedAt": "2026-11-22T05:57:06.751Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18236",
+        "title": "Community chat sync fails when removing too many members at once (APOLLOS-CLUSTER-8CM)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18236/community-chat-sync-fails-when-removing-too-many-members-at-once",
+        "completedAt": "2026-11-22T05:57:06.713Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18096",
+        "title": "Daily Habits fails when a hashed GET to the CDN returns 504 (APOLLOS-MOBILE-F4C)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18096/daily-habits-fails-when-a-hashed-get-to-the-cdn-returns-504-apollos",
+        "completedAt": "2026-11-25T21:14:10.930Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18095",
+        "title": "unsymbolicated user-of-undefined grouping 542 is leftover old-runtime noise (same as ESG / #7017)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18095/unsymbolicated-user-of-undefined-grouping-542-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:32.049Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18091",
+        "title": "iOS crashes when leaving a native fullscreen video (APOLLOS-MOBILE-BBD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18091/ios-crashes-when-leaving-a-native-fullscreen-video-apollos-mobile-bbd",
+        "completedAt": "2026-11-25T21:14:14.165Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18075",
+        "title": "Chat voice notes fail to load and report Audio failed to load (APOLLOS-MOBILE-F83)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18075/chat-voice-notes-fail-to-load-and-report-audio-failed-to-load-apollos",
+        "completedAt": "2026-11-25T21:14:15.532Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18074",
+        "title": "Prayer swiper crashes when Pray advances past the last loaded slide (APOLLOS-MOBILE-ET0)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18074/prayer-swiper-crashes-when-pray-advances-past-the-last-loaded-slide",
+        "completedAt": "2026-11-25T21:14:13.497Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18070",
+        "title": "Mobile WebView reports every HTTP error as an ungrouped object (APOLLOS-MOBILE-FCH)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18070/mobile-webview-reports-every-http-error-as-an-ungrouped-object-apollos",
+        "completedAt": "2026-11-25T21:14:14.007Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18051",
+        "title": "Mobile reports AsyncStorage manifest.json writes when the phone is out of disk (APOLLOS-MOBILE-F5T)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18051/mobile-reports-asyncstorage-manifestjson-writes-when-the-phone-is-out",
+        "completedAt": "2026-11-25T21:14:14.044Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17914",
+        "title": "Prayer reply button crashes when the prayer card has no attachment (APOLLOS-MOBILE-EQ2)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17914/prayer-reply-button-crashes-when-the-prayer-card-has-no-attachment",
+        "completedAt": "2026-11-25T21:14:14.084Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17850",
+        "title": "whatwg-fetch Network request failed grouping F1A is leftover old-runtime noise (same as EXM / #7912)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17850/whatwg-fetch-network-request-failed-grouping-f1a-is-leftover-old",
+        "completedAt": "2026-11-23T16:07:08.249Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17848",
+        "title": "Chat.init captureMessage grouping EGG is leftover old-runtime noise (same as FKA / #8153)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17848/chatinit-capturemessage-grouping-egg-is-leftover-old-runtime-noise",
+        "completedAt": "2026-11-23T16:13:34.097Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17837",
+        "title": "whatwg-fetch Network request failed grouping EXP is leftover old-runtime noise (same as EXM / #7912)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17837/whatwg-fetch-network-request-failed-grouping-exp-is-leftover-old",
+        "completedAt": "2026-11-23T16:13:35.994Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17832",
+        "title": "GetTabs launch-critical transport grouping F3H is leftover of #8155 on runtime 128",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17832/gettabs-launch-critical-transport-grouping-f3h-is-leftover-of-8155-on",
+        "completedAt": "2026-11-23T16:13:32.759Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17691",
+        "title": "Cluster GraphQL validation catch-all 8QJ is leftover of #6426 plus demo/review-app probes",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17691/cluster-graphql-validation-catch-all-8qj-is-leftover-of-6426-plus",
+        "completedAt": "2026-11-23T16:13:48.750Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17684",
+        "title": "iOS __guard(main) Network request failed grouping 72E is leftover old-runtime noise (same as EXM / #7912)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17684/ios-guardmain-network-request-failed-grouping-72e-is-leftover-old",
+        "completedAt": "2026-11-23T16:13:37.367Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17681",
+        "title": "iOS NativePlayer URL-not-found grouping AK7 is leftover old-runtime noise (same as ESP / #7961)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17681/ios-nativeplayer-url-not-found-grouping-ak7-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:38.214Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17676",
+        "title": "iOS NativePlayer FunctionCallException AQR is leftover old-runtime noise (same as #7526)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17676/ios-nativeplayer-functioncallexception-aqr-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:38.992Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17668",
+        "title": "handlePress cyclical JSON grouping EVA is leftover old-runtime noise (same as APO-13956)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17668/handlepress-cyclical-json-grouping-eva-is-leftover-old-runtime-noise",
+        "completedAt": "2026-11-23T16:13:40.037Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17656",
+        "title": "promiseMethodWrapper(main) Unable to open URL grouping AKA is leftover old-runtime noise (same as F1J)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17656/promisemethodwrappermain-unable-to-open-url-grouping-aka-is-leftover",
+        "completedAt": "2026-11-23T16:13:41.323Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17652",
+        "title": "Android _construct PubNub REST grouping D2V is leftover old-runtime noise (same as EXR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17652/android-construct-pubnub-rest-grouping-d2v-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:42.803Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17650",
+        "title": "openUrl href-parse grouping ETH is leftover old-runtime noise (same as F0P)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17650/openurl-href-parse-grouping-eth-is-leftover-old-runtime-noise-same-as",
+        "completedAt": "2026-11-23T16:13:43.628Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17647",
+        "title": "anonymous(main) addDevMenuCallbacks grouping AN8 is leftover old-runtime noise (same as A4N)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17647/anonymousmain-adddevmenucallbacks-grouping-an8-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:45.909Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17643",
+        "title": "apollo-upload-client fetch.umd Network request failed grouping 9FK is leftover old-runtime noise (same as EXM)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17643/apollo-upload-client-fetchumd-network-request-failed-grouping-9fk-is",
+        "completedAt": "2026-11-23T16:13:35.183Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17603",
+        "title": "iOS anonymous(main) GraphQL grouping 8BN is leftover old-runtime noise (F0Q / GetChatAdmins)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17603/ios-anonymousmain-graphql-grouping-8bn-is-leftover-old-runtime-noise",
+        "completedAt": "2026-11-23T16:13:47.474Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17261",
+        "title": "Mobile captureMessage catch-all mixes PubNub init, schema introspection, and share failures (APOLLOS-MOBILE-BWY)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17261/mobile-capturemessage-catch-all-mixes-pubnub-init-schema-introspection",
+        "completedAt": "2026-11-23T22:30:56.210Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16728",
+        "title": "Admin page-changes poll reports Cluster 404 as a Sentry error (APOLLOS-ADMIN-78H)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16728/admin-page-changes-poll-reports-cluster-404-as-a-sentry-error-apollos",
+        "completedAt": "2026-11-23T17:37:25.185Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15680",
+        "title": "[Mobile QA] Daily › Add Prayer Request: the text box has no accessible name or testID (placeholder is a separate overlay)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15680/mobile-qa-daily-add-prayer-request-the-text-box-has-no-accessible-name",
+        "completedAt": "2026-11-25T21:14:11.179Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18668",
+        "title": "Stripe paused payouts on the Apollos platform for an \"API key takeover\"; every church's account is Restricted",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18668/stripe-paused-payouts-on-the-apollos-platform-for-an-api-key-takeover",
+        "completedAt": "2026-11-25T23:25:38.652Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18539",
+        "title": "4 Churches Now Without Access to App",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18539/4-churches-now-without-access-to-app",
+        "completedAt": "2026-11-24T15:17:48.665Z",
+        "state": "Done"
+      }
+    ],
+    "completed_projects": [],
+    "worked_on_issues": [
+      {
+        "identifier": "APO-18676",
+        "title": "Dispute-email webhooks deadlock staging Admin's Cluster DB pool and loop on Stripe retries",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18676/dispute-email-webhooks-deadlock-staging-admins-cluster-db-pool-and",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18666",
+        "title": "Christ Fellowship Giving Admin shows blank or setup screen",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18666/christ-fellowship-giving-admin-shows-blank-or-setup-screen",
+        "completedAt": "2026-11-25T23:21:26.848Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18663",
+        "title": "Decide when to move sign-in codes from Twilio Verify back to plain SMS",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18663/decide-when-to-move-sign-in-codes-from-twilio-verify-back-to-plain-sms",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18660",
+        "title": "Staging Tiptap tokens were left on old values after rotation, so the staging gate blocked every Admin release",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18660/staging-tiptap-tokens-were-left-on-old-values-after-rotation-so-the",
+        "completedAt": "2026-11-25T18:38:19.324Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18653",
+        "title": "Staging Admin's BigQuery key was revoked: dashboard charts empty and the staging gate blocks every Admin release",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18653/staging-admins-bigquery-key-was-revoked-dashboard-charts-empty-and-the",
+        "completedAt": "2026-11-25T18:38:18.465Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18645",
+        "title": "TTS reports every OpenAI 429 to Sentry instead of the credit cooldown (APOLLOS-CLUSTER-8S8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18645/tts-reports-every-openai-429-to-sentry-instead-of-the-credit-cooldown",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18644",
+        "title": "Test-mode Stripe webhooks 400 and Sentry when the live secret does not match (APOLLOS-CLUSTER-8VG)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18644/test-mode-stripe-webhooks-400-and-sentry-when-the-live-secret-does-not",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18643",
+        "title": "Launch IsLoggedIn reports Invalid Token to Sentry instead of refreshing (APOLLOS-MOBILE-FSD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18643/launch-isloggedin-reports-invalid-token-to-sentry-instead-of",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-18605",
+        "title": "Delete FreedUp Woo Astro variables after #2270 deploys",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18605/delete-freedup-woo-astro-variables-after-2270-deploys",
+        "completedAt": "2026-11-24T23:00:54.756Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18604",
+        "title": "Admin Config: saving an encrypted row re-encrypts the stored ciphertext",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18604/admin-config-saving-an-encrypted-row-re-encrypts-the-stored-ciphertext",
+        "completedAt": "2026-11-25T18:38:17.664Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18581",
+        "title": "Move WooCommerce credentials to cluster DB and rotate them",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18581/move-woocommerce-credentials-to-cluster-db-and-rotate-them",
+        "completedAt": "2026-11-24T22:07:40.763Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18560",
+        "title": "Fix DEMO Stripe webhook secrets in production config (what was done for APO-18554)",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18560/fix-demo-stripe-webhook-secrets-in-production-config-what-was-done-for",
+        "completedAt": "2026-11-24T17:29:48.265Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18554",
+        "title": "Stripe webhook events fail signature checks after the Stripe rotation",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18554/stripe-webhook-events-fail-signature-checks-after-the-stripe-rotation",
+        "completedAt": "2026-11-24T17:07:36.393Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18544",
+        "title": "Update staging Algolia keys after the production Algolia rotation",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18544/update-staging-algolia-keys-after-the-production-algolia-rotation",
+        "completedAt": "2026-11-24T17:29:21.760Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18543",
+        "title": "Rotate the apollos_demo PubNub secret override (demo chat can't send)",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18543/rotate-the-apollos-demo-pubnub-secret-override-demo-chat-cant-send",
+        "completedAt": "2026-11-24T15:01:24.528Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18537",
+        "title": "iOS kills the app while autocorrect updates a multiline TextInput (APOLLOS-MOBILE-FB5)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18537/ios-kills-the-app-while-autocorrect-updates-a-multiline-textinput",
+        "completedAt": "2026-11-25T14:31:02.365Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18526",
+        "title": "Chat still reports pending-invite send refusals to Sentry (APOLLOS-MOBILE-FBA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18526/chat-still-reports-pending-invite-send-refusals-to-sentry-apollos",
+        "completedAt": "2026-11-25T05:22:12.478Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18525",
+        "title": "Hashed GraphQL GET times out and is not retried as POST (APOLLOS-MOBILE-G1G)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18525/hashed-graphql-get-times-out-and-is-not-retried-as-post-apollos-mobile",
+        "completedAt": "2026-11-25T14:31:01.568Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18482",
+        "title": "Cluster reports every OpenAI credit-exhausted request to Sentry (APOLLOS-CLUSTER-8VC)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18482/cluster-reports-every-openai-credit-exhausted-request-to-sentry",
+        "completedAt": "2026-11-25T06:18:49.320Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18481",
+        "title": "Mobile still reports Prayer render diagnostic after the investigation closed (APOLLOS-MOBILE-FF3)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18481/mobile-still-reports-prayer-render-diagnostic-after-the-investigation",
+        "completedAt": "2026-11-25T14:30:59.658Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18472",
+        "title": "Android reports lockAsync as a Sentry error after the activity is gone (APOLLOS-MOBILE-APF)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18472/android-reports-lockasync-as-a-sentry-error-after-the-activity-is-gone",
+        "completedAt": "2026-11-25T06:44:03.759Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18350",
+        "title": "Resolve Sentry issues whose fixes shipped to production (2026-11-22 run, cluster + mobile)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18350/resolve-sentry-issues-whose-fixes-shipped-to-production-2026-11-22-run",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-18347",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 500 (APOLLOS-MOBILE-G11)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18347/cluster-should-not-fail-graphql-when-studioc-tracking-returns-500",
+        "completedAt": "2026-11-23T22:44:10.756Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18345",
+        "title": "iOS audio session OSStatus reports as an unhandled Sentry rejection (APOLLOS-MOBILE-FTF)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18345/ios-audio-session-osstatus-reports-as-an-unhandled-sentry-rejection",
+        "completedAt": "2026-11-25T21:14:12.747Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18344",
+        "title": "Local com.apollos.dev builds report post-reaction failures as production Sentry (APOLLOS-MOBILE-G0R)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18344/local-comapollosdev-builds-report-post-reaction-failures-as-production",
+        "completedAt": "2026-11-25T21:14:11.395Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18343",
+        "title": "Demo-channel simulator builds report PubNub errors as production Sentry (APOLLOS-MOBILE-G0X)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18343/demo-channel-simulator-builds-report-pubnub-errors-as-production",
+        "completedAt": "2026-11-25T21:14:14.381Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18342",
+        "title": "Faith Promise expo-av AVPlayerItem grouping FCN is leftover old-runtime noise",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18342/faith-promise-expo-av-avplayeritem-grouping-fcn-is-leftover-old",
+        "completedAt": "2026-11-23T16:08:07.360Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18336",
+        "title": "iOS token refresh fails when fetch cannot read the JSON body blob (APOLLOS-MOBILE-FST)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18336/ios-token-refresh-fails-when-fetch-cannot-read-the-json-body-blob",
+        "completedAt": "2026-11-25T21:14:12.512Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18334",
+        "title": "iOS NativePlayer reports Resi resource-unavailable and invalid-certificate as Sentry errors (APOLLOS-MOBILE-EZD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18334/ios-nativeplayer-reports-resi-resource-unavailable-and-invalid",
+        "completedAt": "2026-11-25T21:14:12.842Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18332",
+        "title": "Node resolveType returns the Media interface instead of VideoMedia/AudioMedia/ImageMedia (APOLLOS-MOBILE-FQE)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18332/node-resolvetype-returns-the-media-interface-instead-of",
+        "completedAt": "2026-11-22T15:03:13.955Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18324",
+        "title": "Leaving phone verification reports a Sentry error (APOLLOS-MOBILE-ESR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18324/leaving-phone-verification-reports-a-sentry-error-apollos-mobile-esr",
+        "completedAt": "2026-11-25T21:14:15.751Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18322",
+        "title": "Apple Pay reports a bad email or an offline network drop as a Sentry error (APOLLOS-MOBILE-FWA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18322/apple-pay-reports-a-bad-email-or-an-offline-network-drop-as-a-sentry",
+        "completedAt": "2026-11-25T21:14:13.979Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18321",
+        "title": "YouTube short links with extra path characters play as a broken native video (APOLLOS-MOBILE-FCX)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18321/youtube-short-links-with-extra-path-characters-play-as-a-broken-native",
+        "completedAt": "2026-11-25T21:14:12.212Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18320",
+        "title": "Android crashes when a habit reminder switch gets a network error as disabled (APOLLOS-MOBILE-FK2)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18320/android-crashes-when-a-habit-reminder-switch-gets-a-network-error-as",
+        "completedAt": "2026-11-25T21:14:15.912Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18298",
+        "title": "Percent-encoded Resi HTML is played as a video file (APOLLOS-MOBILE-EX7)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18298/percent-encoded-resi-html-is-played-as-a-video-file-apollos-mobile-ex7",
+        "completedAt": "2026-11-25T21:14:15.321Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18297",
+        "title": "Starting a new DM reports Failed to send message when PubNub has not listed the other member yet (APOLLOS-MOBILE-FBW)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18297/starting-a-new-dm-reports-failed-to-send-message-when-pubnub-has-not",
+        "completedAt": "2026-11-25T21:14:11.449Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18291",
+        "title": "GetStream StreamApp crash 3R3 is leftover old-binary noise (code gone from master)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18291/getstream-streamapp-crash-3r3-is-leftover-old-binary-noise-code-gone",
+        "completedAt": "2026-11-23T16:13:30.211Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18284",
+        "title": "Chat reports a cancelled or failed birthday check to Sentry (APOLLOS-MOBILE-EYV)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18284/chat-reports-a-cancelled-or-failed-birthday-check-to-sentry-apollos",
+        "completedAt": "2026-11-25T21:14:14.791Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18276",
+        "title": "unsymbolicated onCompleted(main) grouping C8P is leftover old-runtime noise (same as CCP / APO-11189)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18276/unsymbolicated-oncompletedmain-grouping-c8p-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:30.997Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18274",
+        "title": "Logout on a full disk reports every AsyncStorage retry to Sentry (APOLLOS-MOBILE-FSK)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18274/logout-on-a-full-disk-reports-every-asyncstorage-retry-to-sentry",
+        "completedAt": "2026-11-25T21:14:11.524Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18263",
+        "title": "Question block comments fail when the block id is not a UUID (APOLLOS-CLUSTER-8TE)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18263/question-block-comments-fail-when-the-block-id-is-not-a-uuid-apollos",
+        "completedAt": "2026-11-22T05:23:46.679Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18260",
+        "title": "StudioC Checkins 5xx empties the check-in widget and reports to Sentry (APOLLOS-CLUSTER-8QY)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18260/studioc-checkins-5xx-empties-the-check-in-widget-and-reports-to-sentry",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-18247",
+        "title": "Cluster reports OneSignal fetch failures as Sentry errors (APOLLOS-CLUSTER-8S1)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18247/cluster-reports-onesignal-fetch-failures-as-sentry-errors-apollos",
+        "completedAt": "2026-11-22T05:23:46.655Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18245",
+        "title": "Cluster attaches phone-only people to Rock and reports a Sentry error (APOLLOS-CLUSTER-8FT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18245/cluster-attaches-phone-only-people-to-rock-and-reports-a-sentry-error",
+        "completedAt": "2026-11-22T05:57:06.751Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18236",
+        "title": "Community chat sync fails when removing too many members at once (APOLLOS-CLUSTER-8CM)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18236/community-chat-sync-fails-when-removing-too-many-members-at-once",
+        "completedAt": "2026-11-22T05:57:06.713Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18096",
+        "title": "Daily Habits fails when a hashed GET to the CDN returns 504 (APOLLOS-MOBILE-F4C)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18096/daily-habits-fails-when-a-hashed-get-to-the-cdn-returns-504-apollos",
+        "completedAt": "2026-11-25T21:14:10.930Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18095",
+        "title": "unsymbolicated user-of-undefined grouping 542 is leftover old-runtime noise (same as ESG / #7017)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18095/unsymbolicated-user-of-undefined-grouping-542-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:32.049Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18091",
+        "title": "iOS crashes when leaving a native fullscreen video (APOLLOS-MOBILE-BBD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18091/ios-crashes-when-leaving-a-native-fullscreen-video-apollos-mobile-bbd",
+        "completedAt": "2026-11-25T21:14:14.165Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18075",
+        "title": "Chat voice notes fail to load and report Audio failed to load (APOLLOS-MOBILE-F83)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18075/chat-voice-notes-fail-to-load-and-report-audio-failed-to-load-apollos",
+        "completedAt": "2026-11-25T21:14:15.532Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18074",
+        "title": "Prayer swiper crashes when Pray advances past the last loaded slide (APOLLOS-MOBILE-ET0)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18074/prayer-swiper-crashes-when-pray-advances-past-the-last-loaded-slide",
+        "completedAt": "2026-11-25T21:14:13.497Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18070",
+        "title": "Mobile WebView reports every HTTP error as an ungrouped object (APOLLOS-MOBILE-FCH)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18070/mobile-webview-reports-every-http-error-as-an-ungrouped-object-apollos",
+        "completedAt": "2026-11-25T21:14:14.007Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18051",
+        "title": "Mobile reports AsyncStorage manifest.json writes when the phone is out of disk (APOLLOS-MOBILE-F5T)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18051/mobile-reports-asyncstorage-manifestjson-writes-when-the-phone-is-out",
+        "completedAt": "2026-11-25T21:14:14.044Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17914",
+        "title": "Prayer reply button crashes when the prayer card has no attachment (APOLLOS-MOBILE-EQ2)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17914/prayer-reply-button-crashes-when-the-prayer-card-has-no-attachment",
+        "completedAt": "2026-11-25T21:14:14.084Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17850",
+        "title": "whatwg-fetch Network request failed grouping F1A is leftover old-runtime noise (same as EXM / #7912)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17850/whatwg-fetch-network-request-failed-grouping-f1a-is-leftover-old",
+        "completedAt": "2026-11-23T16:07:08.249Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17848",
+        "title": "Chat.init captureMessage grouping EGG is leftover old-runtime noise (same as FKA / #8153)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17848/chatinit-capturemessage-grouping-egg-is-leftover-old-runtime-noise",
+        "completedAt": "2026-11-23T16:13:34.097Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17837",
+        "title": "whatwg-fetch Network request failed grouping EXP is leftover old-runtime noise (same as EXM / #7912)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17837/whatwg-fetch-network-request-failed-grouping-exp-is-leftover-old",
+        "completedAt": "2026-11-23T16:13:35.994Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17832",
+        "title": "GetTabs launch-critical transport grouping F3H is leftover of #8155 on runtime 128",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17832/gettabs-launch-critical-transport-grouping-f3h-is-leftover-of-8155-on",
+        "completedAt": "2026-11-23T16:13:32.759Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17691",
+        "title": "Cluster GraphQL validation catch-all 8QJ is leftover of #6426 plus demo/review-app probes",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17691/cluster-graphql-validation-catch-all-8qj-is-leftover-of-6426-plus",
+        "completedAt": "2026-11-23T16:13:48.750Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17684",
+        "title": "iOS __guard(main) Network request failed grouping 72E is leftover old-runtime noise (same as EXM / #7912)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17684/ios-guardmain-network-request-failed-grouping-72e-is-leftover-old",
+        "completedAt": "2026-11-23T16:13:37.367Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17681",
+        "title": "iOS NativePlayer URL-not-found grouping AK7 is leftover old-runtime noise (same as ESP / #7961)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17681/ios-nativeplayer-url-not-found-grouping-ak7-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:38.214Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17676",
+        "title": "iOS NativePlayer FunctionCallException AQR is leftover old-runtime noise (same as #7526)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17676/ios-nativeplayer-functioncallexception-aqr-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:38.992Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17668",
+        "title": "handlePress cyclical JSON grouping EVA is leftover old-runtime noise (same as APO-13956)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17668/handlepress-cyclical-json-grouping-eva-is-leftover-old-runtime-noise",
+        "completedAt": "2026-11-23T16:13:40.037Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17656",
+        "title": "promiseMethodWrapper(main) Unable to open URL grouping AKA is leftover old-runtime noise (same as F1J)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17656/promisemethodwrappermain-unable-to-open-url-grouping-aka-is-leftover",
+        "completedAt": "2026-11-23T16:13:41.323Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17652",
+        "title": "Android _construct PubNub REST grouping D2V is leftover old-runtime noise (same as EXR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17652/android-construct-pubnub-rest-grouping-d2v-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:42.803Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17650",
+        "title": "openUrl href-parse grouping ETH is leftover old-runtime noise (same as F0P)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17650/openurl-href-parse-grouping-eth-is-leftover-old-runtime-noise-same-as",
+        "completedAt": "2026-11-23T16:13:43.628Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17647",
+        "title": "anonymous(main) addDevMenuCallbacks grouping AN8 is leftover old-runtime noise (same as A4N)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17647/anonymousmain-adddevmenucallbacks-grouping-an8-is-leftover-old-runtime",
+        "completedAt": "2026-11-23T16:13:45.909Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17643",
+        "title": "apollo-upload-client fetch.umd Network request failed grouping 9FK is leftover old-runtime noise (same as EXM)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17643/apollo-upload-client-fetchumd-network-request-failed-grouping-9fk-is",
+        "completedAt": "2026-11-23T16:13:35.183Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17603",
+        "title": "iOS anonymous(main) GraphQL grouping 8BN is leftover old-runtime noise (F0Q / GetChatAdmins)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17603/ios-anonymousmain-graphql-grouping-8bn-is-leftover-old-runtime-noise",
+        "completedAt": "2026-11-23T16:13:47.474Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17261",
+        "title": "Mobile captureMessage catch-all mixes PubNub init, schema introspection, and share failures (APOLLOS-MOBILE-BWY)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-17261/mobile-capturemessage-catch-all-mixes-pubnub-init-schema-introspection",
+        "completedAt": "2026-11-23T22:30:56.210Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16728",
+        "title": "Admin page-changes poll reports Cluster 404 as a Sentry error (APOLLOS-ADMIN-78H)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16728/admin-page-changes-poll-reports-cluster-404-as-a-sentry-error-apollos",
+        "completedAt": "2026-11-23T17:37:25.185Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16491",
+        "title": "Mobile should not report expected join-chat and like GraphQL errors to Sentry",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-16491/mobile-should-not-report-expected-join-chat-and-like-graphql-errors-to",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-16452",
+        "title": "QA delta: PR #7836 chat link punycode (APO-16070): live PASS, plus UX gaps (legit non-Latin domains always shown as punycode; fullwidth/zero-width hosts get a wrong xn-- address)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-16452/qa-delta-pr-7836-chat-link-punycode-apo-16070-live-pass-plus-ux-gaps",
+        "completedAt": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-15934",
+        "title": "[Mobile QA] Login code retry (#7783) also fires on iOS timeouts and other \"no status\" failures where the server may already have sent a code: a silent second SMS/email rotates the OTP and the first code is rejected as wrong",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15934/mobile-qa-login-code-retry-7783-also-fires-on-ios-timeouts-and-other",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15680",
+        "title": "[Mobile QA] Daily › Add Prayer Request: the text box has no accessible name or testID (placeholder is a separate overlay)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15680/mobile-qa-daily-add-prayer-request-the-text-box-has-no-accessible-name",
+        "completedAt": "2026-11-25T21:14:11.179Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15175",
+        "title": "[QA delta] PR #7626 blocked-DM unread fix (APO-14409): leftover gaps, and no way to retest it live on DEMO",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-15175/qa-delta-pr-7626-blocked-dm-unread-fix-apo-14409-leftover-gaps-and-no",
+        "completedAt": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-11364",
+        "title": "Fix PubNub token limits with membership-scoped patterns and safe pagination",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-11364/fix-pubnub-token-limits-with-membership-scoped-patterns-and-safe",
+        "completedAt": null,
+        "state": "In Review"
+      }
+    ],
+    "created_issues": [
+      {
+        "identifier": "APO-18676",
+        "title": "Dispute-email webhooks deadlock staging Admin's Cluster DB pool and loop on Stripe retries",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18676/dispute-email-webhooks-deadlock-staging-admins-cluster-db-pool-and",
+        "createdAt": "2026-11-25T22:39:50.529Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18669",
+        "title": "Battle Creek Ministry Platform Contacts GET returns 401 on last-activity (APOLLOS-CLUSTER-8EG)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18669/battle-creek-ministry-platform-contacts-get-returns-401-on-last",
+        "createdAt": "2026-11-25T21:36:31.159Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18668",
+        "title": "Stripe paused payouts on the Apollos platform for an \"API key takeover\"; every church's account is Restricted",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18668/stripe-paused-payouts-on-the-apollos-platform-for-an-api-key-takeover",
+        "createdAt": "2026-11-25T20:49:49.569Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18663",
+        "title": "Decide when to move sign-in codes from Twilio Verify back to plain SMS",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18663/decide-when-to-move-sign-in-codes-from-twilio-verify-back-to-plain-sms",
+        "createdAt": "2026-11-25T18:56:31.840Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18660",
+        "title": "Staging Tiptap tokens were left on old values after rotation, so the staging gate blocked every Admin release",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18660/staging-tiptap-tokens-were-left-on-old-values-after-rotation-so-the",
+        "createdAt": "2026-11-25T17:33:53.686Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18653",
+        "title": "Staging Admin's BigQuery key was revoked: dashboard charts empty and the staging gate blocks every Admin release",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18653/staging-admins-bigquery-key-was-revoked-dashboard-charts-empty-and-the",
+        "createdAt": "2026-11-25T15:17:02.261Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18645",
+        "title": "TTS reports every OpenAI 429 to Sentry instead of the credit cooldown (APOLLOS-CLUSTER-8S8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18645/tts-reports-every-openai-429-to-sentry-instead-of-the-credit-cooldown",
+        "createdAt": "2026-11-25T13:07:33.979Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18644",
+        "title": "Test-mode Stripe webhooks 400 and Sentry when the live secret does not match (APOLLOS-CLUSTER-8VG)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18644/test-mode-stripe-webhooks-400-and-sentry-when-the-live-secret-does-not",
+        "createdAt": "2026-11-25T12:08:15.991Z",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18643",
+        "title": "Launch IsLoggedIn reports Invalid Token to Sentry instead of refreshing (APOLLOS-MOBILE-FSD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18643/launch-isloggedin-reports-invalid-token-to-sentry-instead-of",
+        "createdAt": "2026-11-25T11:36:30.001Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-18605",
+        "title": "Delete FreedUp Woo Astro variables after #2270 deploys",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18605/delete-freedup-woo-astro-variables-after-2270-deploys",
+        "createdAt": "2026-11-24T21:31:43.690Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18604",
+        "title": "Admin Config: saving an encrypted row re-encrypts the stored ciphertext",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18604/admin-config-saving-an-encrypted-row-re-encrypts-the-stored-ciphertext",
+        "createdAt": "2026-11-24T21:21:04.091Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18565",
+        "title": "T-Mobile users get no sign-in texts: Twilio daily cap hit after the forced sign-out",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18565/t-mobile-users-get-no-sign-in-texts-twilio-daily-cap-hit-after-the",
+        "createdAt": "2026-11-24T17:52:20.894Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18562",
+        "title": "Stripe webhooks go to an arbitrary church when two churches share a connected account",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18562/stripe-webhooks-go-to-an-arbitrary-church-when-two-churches-share-a",
+        "createdAt": "2026-11-24T17:05:49.222Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18561",
+        "title": "Admin Config page should show read-only rows and block edits to them",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18561/admin-config-page-should-show-read-only-rows-and-block-edits-to-them",
+        "createdAt": "2026-11-24T17:05:42.568Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18560",
+        "title": "Fix DEMO Stripe webhook secrets in production config (what was done for APO-18554)",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18560/fix-demo-stripe-webhook-secrets-in-production-config-what-was-done-for",
+        "createdAt": "2026-11-24T17:05:26.981Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18555",
+        "title": "Production Admin builds overwrite staging's image tag, so staging can't save forms",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18555/production-admin-builds-overwrite-stagings-image-tag-so-staging-cant",
+        "createdAt": "2026-11-24T16:15:05.851Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-18554",
+        "title": "Stripe webhook events fail signature checks after the Stripe rotation",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18554/stripe-webhook-events-fail-signature-checks-after-the-stripe-rotation",
+        "createdAt": "2026-11-24T15:50:30.128Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18544",
+        "title": "Update staging Algolia keys after the production Algolia rotation",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18544/update-staging-algolia-keys-after-the-production-algolia-rotation",
+        "createdAt": "2026-11-24T14:48:41.778Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18543",
+        "title": "Rotate the apollos_demo PubNub secret override (demo chat can't send)",
+        "project": "Airflow compromise: credential rotation",
+        "url": "https://linear.app/differential/issue/APO-18543/rotate-the-apollos-demo-pubnub-secret-override-demo-chat-cant-send",
+        "createdAt": "2026-11-24T14:48:40.292Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18537",
+        "title": "iOS kills the app while autocorrect updates a multiline TextInput (APOLLOS-MOBILE-FB5)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18537/ios-kills-the-app-while-autocorrect-updates-a-multiline-textinput",
+        "createdAt": "2026-11-24T13:05:04.937Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18534",
+        "title": "Chat channel list refetches in a loop when Cluster returns a PubNub REST GraphQL error (APOLLOS-MOBILE-G2C)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18534/chat-channel-list-refetches-in-a-loop-when-cluster-returns-a-pubnub",
+        "createdAt": "2026-11-24T11:08:59.334Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18533",
+        "title": "Chat send reports a PubNub NullPointerException wrapper to Sentry (APOLLOS-MOBILE-FNH)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18533/chat-send-reports-a-pubnub-nullpointerexception-wrapper-to-sentry",
+        "createdAt": "2026-11-24T10:41:42.783Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18531",
+        "title": "Webview mint reports to Sentry when the session is already gone (APOLLOS-MOBILE-G1X)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18531/webview-mint-reports-to-sentry-when-the-session-is-already-gone",
+        "createdAt": "2026-11-24T10:05:18.943Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-18526",
+        "title": "Chat still reports pending-invite send refusals to Sentry (APOLLOS-MOBILE-FBA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18526/chat-still-reports-pending-invite-send-refusals-to-sentry-apollos",
+        "createdAt": "2026-11-24T07:07:28.421Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18525",
+        "title": "Hashed GraphQL GET times out and is not retried as POST (APOLLOS-MOBILE-G1G)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18525/hashed-graphql-get-times-out-and-is-not-retried-as-post-apollos-mobile",
+        "createdAt": "2026-11-24T06:38:29.449Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18491",
+        "title": "CDN returns HTTP 504 on GraphQL while sibling queries succeed (APOLLOS-MOBILE-G0E)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18491/cdn-returns-http-504-on-graphql-while-sibling-queries-succeed-apollos",
+        "createdAt": "2026-11-24T02:37:27.973Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18490",
+        "title": "Expo Updates falls back to the embedded bundle because the updates database has no launchable row (APOLLOS-MOBILE-FH8)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18490/expo-updates-falls-back-to-the-embedded-bundle-because-the-updates",
+        "createdAt": "2026-11-24T02:07:42.805Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18489",
+        "title": "Cedar Creek profile save fails because Rock People GET returns 401 (APOLLOS-CLUSTER-8TV)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18489/cedar-creek-profile-save-fails-because-rock-people-get-returns-401",
+        "createdAt": "2026-11-24T01:39:15.229Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18488",
+        "title": "Login OpenID provider list times out because cluster rediscovers issuers on every request (APOLLOS-MOBILE-F49)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18488/login-openid-provider-list-times-out-because-cluster-rediscovers",
+        "createdAt": "2026-11-24T01:08:39.410Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18487",
+        "title": "CDN returns HTTP 504 on addPrayerRequest POST while other GraphQL GETs succeed (APOLLOS-MOBILE-FJZ)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18487/cdn-returns-http-504-on-addprayerrequest-post-while-other-graphql-gets",
+        "createdAt": "2026-11-24T00:07:35.258Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18482",
+        "title": "Cluster reports every OpenAI credit-exhausted request to Sentry (APOLLOS-CLUSTER-8VC)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18482/cluster-reports-every-openai-credit-exhausted-request-to-sentry",
+        "createdAt": "2026-11-23T22:08:32.420Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18481",
+        "title": "Mobile still reports Prayer render diagnostic after the investigation closed (APOLLOS-MOBILE-FF3)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18481/mobile-still-reports-prayer-render-diagnostic-after-the-investigation",
+        "createdAt": "2026-11-23T21:40:57.743Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18477",
+        "title": "Listen audio returns HTTP 400 when OpenAI TTS is rate-limited (APOLLOS-MOBILE-F1Y)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18477/listen-audio-returns-http-400-when-openai-tts-is-rate-limited-apollos",
+        "createdAt": "2026-11-23T21:08:03.031Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18472",
+        "title": "Android reports lockAsync as a Sentry error after the activity is gone (APOLLOS-MOBILE-APF)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18472/android-reports-lockasync-as-a-sentry-error-after-the-activity-is-gone",
+        "createdAt": "2026-11-23T20:46:21.714Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18429",
+        "title": "Test: iOS token refresh XHR fallback signs out on UNAUTHENTICATED",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18429/test-ios-token-refresh-xhr-fallback-signs-out-on-unauthenticated",
+        "createdAt": "2026-11-23T16:27:03.009Z",
+        "state": "Not Now"
+      },
+      {
+        "identifier": "APO-18428",
+        "title": "Phone verification: report a chat token refresh failure after the code is accepted",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18428/phone-verification-report-a-chat-token-refresh-failure-after-the-code",
+        "createdAt": "2026-11-23T16:27:00.028Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-18377",
+        "title": "(Crossroads) New Prayer form closes itself right after it opens",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18377/crossroads-new-prayer-form-closes-itself-right-after-it-opens",
+        "createdAt": "2026-11-23T15:37:59.164Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-18376",
+        "title": "Show flaky mobile e2e tests in release-gate runs",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18376/show-flaky-mobile-e2e-tests-in-release-gate-runs",
+        "createdAt": "2026-11-23T15:34:19.082Z",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-18350",
+        "title": "Resolve Sentry issues whose fixes shipped to production (2026-11-22 run, cluster + mobile)",
+        "project": null,
+        "url": "https://linear.app/differential/issue/APO-18350/resolve-sentry-issues-whose-fixes-shipped-to-production-2026-11-22-run",
+        "createdAt": "2026-11-22T19:33:57.395Z",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-18348",
+        "title": "Chat still reports You cannot invite to Sentry via console.error (APOLLOS-MOBILE-FS5)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18348/chat-still-reports-you-cannot-invite-to-sentry-via-consoleerror",
+        "createdAt": "2026-11-22T17:37:08.622Z",
+        "state": "Duplicate"
+      },
+      {
+        "identifier": "APO-18347",
+        "title": "Cluster should not fail GraphQL when StudioC tracking returns 500 (APOLLOS-MOBILE-G11)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18347/cluster-should-not-fail-graphql-when-studioc-tracking-returns-500",
+        "createdAt": "2026-11-22T17:06:01.290Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18345",
+        "title": "iOS audio session OSStatus reports as an unhandled Sentry rejection (APOLLOS-MOBILE-FTF)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18345/ios-audio-session-osstatus-reports-as-an-unhandled-sentry-rejection",
+        "createdAt": "2026-11-22T16:40:16.478Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18344",
+        "title": "Local com.apollos.dev builds report post-reaction failures as production Sentry (APOLLOS-MOBILE-G0R)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18344/local-comapollosdev-builds-report-post-reaction-failures-as-production",
+        "createdAt": "2026-11-22T16:06:14.317Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18343",
+        "title": "Demo-channel simulator builds report PubNub errors as production Sentry (APOLLOS-MOBILE-G0X)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18343/demo-channel-simulator-builds-report-pubnub-errors-as-production",
+        "createdAt": "2026-11-22T15:35:53.664Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18342",
+        "title": "Faith Promise expo-av AVPlayerItem grouping FCN is leftover old-runtime noise",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18342/faith-promise-expo-av-avplayeritem-grouping-fcn-is-leftover-old",
+        "createdAt": "2026-11-22T15:05:35.923Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18339",
+        "title": "QA custom-block fixtures report CustomBlockStop as a production Sentry error (APOLLOS-MOBILE-FZA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18339/qa-custom-block-fixtures-report-customblockstop-as-a-production-sentry",
+        "createdAt": "2026-11-22T14:36:39.504Z",
+        "state": "Duplicate"
+      },
+      {
+        "identifier": "APO-18338",
+        "title": "iOS simulator crashes in native _platform_memmove during launch (APOLLOS-MOBILE-E5G)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18338/ios-simulator-crashes-in-native-platform-memmove-during-launch-apollos",
+        "createdAt": "2026-11-22T14:05:57.915Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18337",
+        "title": "Old LiquidChurch and C2C binaries report OneSignal notification press noise (APOLLOS-MOBILE-47N)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18337/old-liquidchurch-and-c2c-binaries-report-onesignal-notification-press",
+        "createdAt": "2026-11-22T13:37:36.783Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18336",
+        "title": "iOS token refresh fails when fetch cannot read the JSON body blob (APOLLOS-MOBILE-FST)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18336/ios-token-refresh-fails-when-fetch-cannot-read-the-json-body-blob",
+        "createdAt": "2026-11-22T10:04:47.864Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18334",
+        "title": "iOS NativePlayer reports Resi resource-unavailable and invalid-certificate as Sentry errors (APOLLOS-MOBILE-EZD)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18334/ios-nativeplayer-reports-resi-resource-unavailable-and-invalid",
+        "createdAt": "2026-11-22T09:37:49.887Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18333",
+        "title": "iOS crashes in native OneSignal OSUserInternal dealloc after a user 404 (APOLLOS-MOBILE-FNT)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18333/ios-crashes-in-native-onesignal-osuserinternal-dealloc-after-a-user",
+        "createdAt": "2026-11-22T09:06:10.749Z",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18332",
+        "title": "Node resolveType returns the Media interface instead of VideoMedia/AudioMedia/ImageMedia (APOLLOS-MOBILE-FQE)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18332/node-resolvetype-returns-the-media-interface-instead-of",
+        "createdAt": "2026-11-22T08:37:42.748Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18324",
+        "title": "Leaving phone verification reports a Sentry error (APOLLOS-MOBILE-ESR)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18324/leaving-phone-verification-reports-a-sentry-error-apollos-mobile-esr",
+        "createdAt": "2026-11-22T08:04:41.520Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18323",
+        "title": "Chat reports a PubNub 403 on every ChatProvider remount (APOLLOS-MOBILE-FNM)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18323/chat-reports-a-pubnub-403-on-every-chatprovider-remount-apollos-mobile",
+        "createdAt": "2026-11-22T07:38:59.990Z",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18322",
+        "title": "Apple Pay reports a bad email or an offline network drop as a Sentry error (APOLLOS-MOBILE-FWA)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18322/apple-pay-reports-a-bad-email-or-an-offline-network-drop-as-a-sentry",
+        "createdAt": "2026-11-22T07:07:59.735Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18321",
+        "title": "YouTube short links with extra path characters play as a broken native video (APOLLOS-MOBILE-FCX)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18321/youtube-short-links-with-extra-path-characters-play-as-a-broken-native",
+        "createdAt": "2026-11-22T06:37:16.080Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18320",
+        "title": "Android crashes when a habit reminder switch gets a network error as disabled (APOLLOS-MOBILE-FK2)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18320/android-crashes-when-a-habit-reminder-switch-gets-a-network-error-as",
+        "createdAt": "2026-11-22T06:04:58.200Z",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18319",
+        "title": "Brand font download retries a filesystem failure on every remount (APOLLOS-MOBILE-FX6)",
+        "project": "Sentry Queue",
+        "url": "https://linear.app/differential/issue/APO-18319/brand-font-download-retries-a-filesystem-failure-on-every-remount",
+        "createdAt": "2026-11-22T05:41:17.968Z",
+        "state": "Canceled"
+      }
+    ],
+    "commented_issues": [
+      {
+        "identifier": "APO-18292",
+        "title": "iOS crashes in native SubtitleTrack dealloc while playing video (APOLLOS-MOBILE-FAH)",
+        "url": "https://linear.app/differential/issue/APO-18292/ios-crashes-in-native-subtitletrack-dealloc-while-playing-video",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18668",
+        "title": "Stripe paused payouts on the Apollos platform for an \"API key takeover\"; every church's account is Restricted",
+        "url": "https://linear.app/differential/issue/APO-18668/stripe-paused-payouts-on-the-apollos-platform-for-an-api-key-takeover",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18666",
+        "title": "Christ Fellowship Giving Admin shows blank or setup screen",
+        "url": "https://linear.app/differential/issue/APO-18666/christ-fellowship-giving-admin-shows-blank-or-setup-screen",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18663",
+        "title": "Decide when to move sign-in codes from Twilio Verify back to plain SMS",
+        "url": "https://linear.app/differential/issue/APO-18663/decide-when-to-move-sign-in-codes-from-twilio-verify-back-to-plain-sms",
+        "project": "Airflow compromise: credential rotation",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18604",
+        "title": "Admin Config: saving an encrypted row re-encrypts the stored ciphertext",
+        "url": "https://linear.app/differential/issue/APO-18604/admin-config-saving-an-encrypted-row-re-encrypts-the-stored-ciphertext",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18557",
+        "title": "Rotate miscellaneous Apollos-owned config credentials",
+        "url": "https://linear.app/differential/issue/APO-18557/rotate-miscellaneous-apollos-owned-config-credentials",
+        "project": "Airflow compromise: credential rotation",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-18660",
+        "title": "Staging Tiptap tokens were left on old values after rotation, so the staging gate blocked every Admin release",
+        "url": "https://linear.app/differential/issue/APO-18660/staging-tiptap-tokens-were-left-on-old-values-after-rotation-so-the",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18653",
+        "title": "Staging Admin's BigQuery key was revoked: dashboard charts empty and the staging gate blocks every Admin release",
+        "url": "https://linear.app/differential/issue/APO-18653/staging-admins-bigquery-key-was-revoked-dashboard-charts-empty-and-the",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17666",
+        "title": "call(native) 504 grouping ESK is leftover old-runtime noise (same as FGS)",
+        "url": "https://linear.app/differential/issue/APO-17666/callnative-504-grouping-esk-is-leftover-old-runtime-noise-same-as-fgs",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18337",
+        "title": "Old LiquidChurch and C2C binaries report OneSignal notification press noise (APOLLOS-MOBILE-47N)",
+        "url": "https://linear.app/differential/issue/APO-18337/old-liquidchurch-and-c2c-binaries-report-onesignal-notification-press",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17604",
+        "title": "StudioC person lookup 504 fails the Home feed (APOLLOS-CLUSTER-8H9)",
+        "url": "https://linear.app/differential/issue/APO-17604/studioc-person-lookup-504-fails-the-home-feed-apollos-cluster-8h9",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-17605",
+        "title": "StudioC Messages/News 504 fails the Home feed (APOLLOS-CLUSTER-8QG)",
+        "url": "https://linear.app/differential/issue/APO-17605/studioc-messagesnews-504-fails-the-home-feed-apollos-cluster-8qg",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18544",
+        "title": "Update staging Algolia keys after the production Algolia rotation",
+        "url": "https://linear.app/differential/issue/APO-18544/update-staging-algolia-keys-after-the-production-algolia-rotation",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18645",
+        "title": "TTS reports every OpenAI 429 to Sentry instead of the credit cooldown (APOLLOS-CLUSTER-8S8)",
+        "url": "https://linear.app/differential/issue/APO-18645/tts-reports-every-openai-429-to-sentry-instead-of-the-credit-cooldown",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18644",
+        "title": "Test-mode Stripe webhooks 400 and Sentry when the live secret does not match (APOLLOS-CLUSTER-8VG)",
+        "url": "https://linear.app/differential/issue/APO-18644/test-mode-stripe-webhooks-400-and-sentry-when-the-live-secret-does-not",
+        "project": "Sentry Queue",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18643",
+        "title": "Launch IsLoggedIn reports Invalid Token to Sentry instead of refreshing (APOLLOS-MOBILE-FSD)",
+        "url": "https://linear.app/differential/issue/APO-18643/launch-isloggedin-reports-invalid-token-to-sentry-instead-of",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-18534",
+        "title": "Chat channel list refetches in a loop when Cluster returns a PubNub REST GraphQL error (APOLLOS-MOBILE-G2C)",
+        "url": "https://linear.app/differential/issue/APO-18534/chat-channel-list-refetches-in-a-loop-when-cluster-returns-a-pubnub",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18533",
+        "title": "Chat send reports a PubNub NullPointerException wrapper to Sentry (APOLLOS-MOBILE-FNH)",
+        "url": "https://linear.app/differential/issue/APO-18533/chat-send-reports-a-pubnub-nullpointerexception-wrapper-to-sentry",
+        "project": "Sentry Queue",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18526",
+        "title": "Chat still reports pending-invite send refusals to Sentry (APOLLOS-MOBILE-FBA)",
+        "url": "https://linear.app/differential/issue/APO-18526/chat-still-reports-pending-invite-send-refusals-to-sentry-apollos",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18477",
+        "title": "Listen audio returns HTTP 400 when OpenAI TTS is rate-limited (APOLLOS-MOBILE-F1Y)",
+        "url": "https://linear.app/differential/issue/APO-18477/listen-audio-returns-http-400-when-openai-tts-is-rate-limited-apollos",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18350",
+        "title": "Resolve Sentry issues whose fixes shipped to production (2026-11-22 run, cluster + mobile)",
+        "url": "https://linear.app/differential/issue/APO-18350/resolve-sentry-issues-whose-fixes-shipped-to-production-2026-11-22-run",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-18236",
+        "title": "Community chat sync fails when removing too many members at once (APOLLOS-CLUSTER-8CM)",
+        "url": "https://linear.app/differential/issue/APO-18236/community-chat-sync-fails-when-removing-too-many-members-at-once",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18605",
+        "title": "Delete FreedUp Woo Astro variables after #2270 deploys",
+        "url": "https://linear.app/differential/issue/APO-18605/delete-freedup-woo-astro-variables-after-2270-deploys",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18586",
+        "title": "Rotate the SendGrid key in Astronomer's SMTP settings (AIRFLOW__SMTP__SMTP_PASSWORD)",
+        "url": "https://linear.app/differential/issue/APO-18586/rotate-the-sendgrid-key-in-astronomers-smtp-settings-airflow-smtp-smtp",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18581",
+        "title": "Move WooCommerce credentials to cluster DB and rotate them",
+        "url": "https://linear.app/differential/issue/APO-18581/move-woocommerce-credentials-to-cluster-db-and-rotate-them",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18565",
+        "title": "T-Mobile users get no sign-in texts: Twilio daily cap hit after the forced sign-out",
+        "url": "https://linear.app/differential/issue/APO-18565/t-mobile-users-get-no-sign-in-texts-twilio-daily-cap-hit-after-the",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18560",
+        "title": "Fix DEMO Stripe webhook secrets in production config (what was done for APO-18554)",
+        "url": "https://linear.app/differential/issue/APO-18560/fix-demo-stripe-webhook-secrets-in-production-config-what-was-done-for",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18498",
+        "title": "6. Rotate identity and signing credentials",
+        "url": "https://linear.app/differential/issue/APO-18498/6-rotate-identity-and-signing-credentials",
+        "project": "Airflow compromise: credential rotation",
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-18516",
+        "title": "Rotate Cluster API keys for Crossroads",
+        "url": "https://linear.app/differential/issue/APO-18516/rotate-cluster-api-keys-for-crossroads",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18497",
+        "title": "5. Rotate payment credentials",
+        "url": "https://linear.app/differential/issue/APO-18497/5-rotate-payment-credentials",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18554",
+        "title": "Stripe webhook events fail signature checks after the Stripe rotation",
+        "url": "https://linear.app/differential/issue/APO-18554/stripe-webhook-events-fail-signature-checks-after-the-stripe-rotation",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18539",
+        "title": "4 Churches Now Without Access to App",
+        "url": "https://linear.app/differential/issue/APO-18539/4-churches-now-without-access-to-app",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18543",
+        "title": "Rotate the apollos_demo PubNub secret override (demo chat can't send)",
+        "url": "https://linear.app/differential/issue/APO-18543/rotate-the-apollos-demo-pubnub-secret-override-demo-chat-cant-send",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18513",
+        "title": "10f. Audit cluster logs for config API and token endpoint abuse",
+        "url": "https://linear.app/differential/issue/APO-18513/10f-audit-cluster-logs-for-config-api-and-token-endpoint-abuse",
+        "project": "Airflow compromise: credential rotation",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18531",
+        "title": "Webview mint reports to Sentry when the session is already gone (APOLLOS-MOBILE-G1X)",
+        "url": "https://linear.app/differential/issue/APO-18531/webview-mint-reports-to-sentry-when-the-session-is-already-gone",
+        "project": "Sentry Queue",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-18047",
+        "title": "Cedar Creek campus change fails because Rock People GET returns 401 (APOLLOS-CLUSTER-8GE)",
+        "url": "https://linear.app/differential/issue/APO-18047/cedar-creek-campus-change-fails-because-rock-people-get-returns-401",
+        "project": "Sentry Queue",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18481",
+        "title": "Mobile still reports Prayer render diagnostic after the investigation closed (APOLLOS-MOBILE-FF3)",
+        "url": "https://linear.app/differential/issue/APO-18481/mobile-still-reports-prayer-render-diagnostic-after-the-investigation",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18472",
+        "title": "Android reports lockAsync as a Sentry error after the activity is gone (APOLLOS-MOBILE-APF)",
+        "url": "https://linear.app/differential/issue/APO-18472/android-reports-lockasync-as-a-sentry-error-after-the-activity-is-gone",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18339",
+        "title": "QA custom-block fixtures report CustomBlockStop as a production Sentry error (APOLLOS-MOBILE-FZA)",
+        "url": "https://linear.app/differential/issue/APO-18339/qa-custom-block-fixtures-report-customblockstop-as-a-production-sentry",
+        "project": "Sentry Queue",
+        "state": "Duplicate"
+      },
+      {
+        "identifier": "APO-18348",
+        "title": "Chat still reports You cannot invite to Sentry via console.error (APOLLOS-MOBILE-FS5)",
+        "url": "https://linear.app/differential/issue/APO-18348/chat-still-reports-you-cannot-invite-to-sentry-via-consoleerror",
+        "project": "Sentry Queue",
+        "state": "Duplicate"
+      },
+      {
+        "identifier": "APO-17261",
+        "title": "Mobile captureMessage catch-all mixes PubNub init, schema introspection, and share failures (APOLLOS-MOBILE-BWY)",
+        "url": "https://linear.app/differential/issue/APO-17261/mobile-capturemessage-catch-all-mixes-pubnub-init-schema-introspection",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17613",
+        "title": "Mobile GraphQL fetch timeout is the uncovered twin of Network request failed (APOLLOS-MOBILE-EY5)",
+        "url": "https://linear.app/differential/issue/APO-17613/mobile-graphql-fetch-timeout-is-the-uncovered-twin-of-network-request",
+        "project": "Sentry Queue",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18264",
+        "title": "Crossroads Android reports TOKEN_EXPIRED as an unhandled ApolloError (APOLLOS-MOBILE-E2Y)",
+        "url": "https://linear.app/differential/issue/APO-18264/crossroads-android-reports-token-expired-as-an-unhandled-apolloerror",
+        "project": "Sentry Queue",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18064",
+        "title": "Demo/dev custom-data queries report unpublished blocks as Sentry errors (APOLLOS-CLUSTER-8TK)",
+        "url": "https://linear.app/differential/issue/APO-18064/demodev-custom-data-queries-report-unpublished-blocks-as-sentry-errors",
+        "project": "Sentry Queue",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-18260",
+        "title": "StudioC Checkins 5xx empties the check-in widget and reports to Sentry (APOLLOS-CLUSTER-8QY)",
+        "url": "https://linear.app/differential/issue/APO-18260/studioc-checkins-5xx-empties-the-check-in-widget-and-reports-to-sentry",
+        "project": "Sentry Queue",
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-18377",
+        "title": "(Crossroads) New Prayer form closes itself right after it opens",
+        "url": "https://linear.app/differential/issue/APO-18377/crossroads-new-prayer-form-closes-itself-right-after-it-opens",
+        "project": null,
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-16728",
+        "title": "Admin page-changes poll reports Cluster 404 as a Sentry error (APOLLOS-ADMIN-78H)",
+        "url": "https://linear.app/differential/issue/APO-16728/admin-page-changes-poll-reports-cluster-404-as-a-sentry-error-apollos",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17876",
+        "title": "Public prayer requests reassigned to another member in Apollos Demo",
+        "url": "https://linear.app/differential/issue/APO-17876/public-prayer-requests-reassigned-to-another-member-in-apollos-demo",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-17218",
+        "title": "(Crossroads) Giving campaign links opened in the Crossroads app drop the campaign",
+        "url": "https://linear.app/differential/issue/APO-17218/crossroads-giving-campaign-links-opened-in-the-crossroads-app-drop-the",
+        "project": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17930",
+        "title": "[Mobile QA] iOS: tapping outside the stock reaction tray doesn't close it; the tray traps the Community feed until you pick an emoji or open More",
+        "url": "https://linear.app/differential/issue/APO-17930/mobile-qa-ios-tapping-outside-the-stock-reaction-tray-doesnt-close-it",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18289",
+        "title": "iOS doesn't offer \"From Messages\" autofill for the SMS sign-in code on Verification screen",
+        "url": "https://linear.app/differential/issue/APO-18289/ios-doesnt-offer-from-messages-autofill-for-the-sms-sign-in-code-on",
+        "project": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-14920",
+        "title": "[Mobile QA] Activity Center (bell) is blank — no empty state, spinner, or error",
+        "url": "https://linear.app/differential/issue/APO-14920/mobile-qa-activity-center-bell-is-blank-no-empty-state-spinner-or",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15234",
+        "title": "[Mobile QA] After a sign-up code succeeds, Back from the profile screen lands on a dead code screen (Verify disabled, Resend does nothing)",
+        "url": "https://linear.app/differential/issue/APO-15234/mobile-qa-after-a-sign-up-code-succeeds-back-from-the-profile-screen",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16634",
+        "title": "Mobile search shows stale results when revisiting a cached query",
+        "url": "https://linear.app/differential/issue/APO-16634/mobile-search-shows-stale-results-when-revisiting-a-cached-query",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16149",
+        "title": "Cluster: /change_data Stellate cache purge fails with connect timeout (TypeError: fetch failed)",
+        "url": "https://linear.app/differential/issue/APO-16149/cluster-change-data-stellate-cache-purge-fails-with-connect-timeout",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-14772",
+        "title": "Error: Error while refreshing Apollos token.",
+        "url": "https://linear.app/differential/issue/APO-14772/error-error-while-refreshing-apollos-token",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13933",
+        "title": "Headphones button offers narration that doesn't exist and fails silently",
+        "url": "https://linear.app/differential/issue/APO-13933/headphones-button-offers-narration-that-doesnt-exist-and-fails",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13922",
+        "title": "Killing the app right after Apple Pay completes the gift but tells the donor nothing",
+        "url": "https://linear.app/differential/issue/APO-13922/killing-the-app-right-after-apple-pay-completes-the-gift-but-tells-the",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13923",
+        "title": "Android: reopening the app from its icon mid-payment throws away the checkout",
+        "url": "https://linear.app/differential/issue/APO-13923/android-reopening-the-app-from-its-icon-mid-payment-throws-away-the",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-13930",
+        "title": "A pasted prayer over 280 characters is cut off mid-word with no warning",
+        "url": "https://linear.app/differential/issue/APO-13930/a-pasted-prayer-over-280-characters-is-cut-off-mid-word-with-no",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16216",
+        "title": "[Mobile QA] Search: result rows and AI answer citation chips aren't exposed as buttons to VoiceOver, and have no testIDs",
+        "url": "https://linear.app/differential/issue/APO-16216/mobile-qa-search-result-rows-and-ai-answer-citation-chips-arent",
+        "project": null,
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-15681",
+        "title": "[Mobile QA] Daily history a11y: day sheet's Close (X) isn't in the accessibility tree, habit icons show done/not done by color only, History grid days read as bare numbers",
+        "url": "https://linear.app/differential/issue/APO-15681/mobile-qa-daily-history-a11y-day-sheets-close-x-isnt-in-the",
+        "project": null,
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-15762",
+        "title": "[Mobile QA] Profile/Settings a11y: Personal Details name fields have no accessible name; the current Gender and Chat privacy choice isn't exposed (check icon only); My Prayers + is unlabeled",
+        "url": "https://linear.app/differential/issue/APO-15762/mobile-qa-profilesettings-a11y-personal-details-name-fields-have-no",
+        "project": null,
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-15763",
+        "title": "[Mobile QA] Profile is unreadable at large Dynamic Type: row titles clip to slivers (already clipped at XXXL, illegible at AX-XXXL), name and section headers hidden, Done truncated; Personal Details captions overlap values",
+        "url": "https://linear.app/differential/issue/APO-15763/mobile-qa-profile-is-unreadable-at-large-dynamic-type-row-titles-clip",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15983",
+        "title": "[Mobile QA] An email-only member can join a community but then can never open or leave it: every tap on its tile demands phone verification, and Find no longer lists it",
+        "url": "https://linear.app/differential/issue/APO-15983/mobile-qa-an-email-only-member-can-join-a-community-but-then-can-never",
+        "project": null,
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-15981",
+        "title": "[Mobile QA] Pray for others: a returning user restarts on requests they already prayed for (server sorts by prayerCount, ignores currentPersonPrayedFor; offset paging over a key that changes as you pray)",
+        "url": "https://linear.app/differential/issue/APO-15981/mobile-qa-pray-for-others-a-returning-user-restarts-on-requests-they",
+        "project": null,
+        "state": "In Progress"
+      },
+      {
+        "identifier": "APO-15680",
+        "title": "[Mobile QA] Daily › Add Prayer Request: the text box has no accessible name or testID (placeholder is a separate overlay)",
+        "url": "https://linear.app/differential/issue/APO-15680/mobile-qa-daily-add-prayer-request-the-text-box-has-no-accessible-name",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-15761",
+        "title": "[Mobile QA] Profile footer \"App Version:\" shows the Expo runtimeVersion (e.g. 120), not the app version/build, and is blank when expo-updates is off",
+        "url": "https://linear.app/differential/issue/APO-15761/mobile-qa-profile-footer-app-version-shows-the-expo-runtimeversion-eg",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15760",
+        "title": "[Mobile QA] Profile › Follows: all three tabs (Following Me / I'm Following / Hidden) are blank black screens with no empty or error state, and the header has no title",
+        "url": "https://linear.app/differential/issue/APO-15760/mobile-qa-profile-follows-all-three-tabs-following-me-im-following",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15683",
+        "title": "[Mobile QA] Daily Gratitude card always says \"Others are grateful\", even when the public gratitude list is empty (\"No daily gratitude yet – Start the conversation.\" with no button)",
+        "url": "https://linear.app/differential/issue/APO-15683/mobile-qa-daily-gratitude-card-always-says-others-are-grateful-even",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15682",
+        "title": "[Mobile QA] Prayer flow shows the requester's last initial (\"TL\") on the Reply avatar and the intro bubbles, but the byline hides the last name (\"T\")",
+        "url": "https://linear.app/differential/issue/APO-15682/mobile-qa-prayer-flow-shows-the-requesters-last-initial-tl-on-the",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15808",
+        "title": "[Mobile QA] Login code screen: \"New code sent\", code errors and resend cooldown are visual only — nothing announced to VoiceOver/TalkBack",
+        "url": "https://linear.app/differential/issue/APO-15808/mobile-qa-login-code-screen-new-code-sent-code-errors-and-resend",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15827",
+        "title": "[Mobile QA] After leaving a community, Find Communities and the Chat list's community rows don't update until pull to refresh",
+        "url": "https://linear.app/differential/issue/APO-15827/mobile-qa-after-leaving-a-community-find-communities-and-the-chat",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15199",
+        "title": "[Mobile QA] Login code screen: doesn't show where the code went, Resend quietly invalidates the earlier code with no \"use the newest code\" hint, and the Resend link is a tiny tap target with no button role (soft UX + a11y)",
+        "url": "https://linear.app/differential/issue/APO-15199/mobile-qa-login-code-screen-doesnt-show-where-the-code-went-resend",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15815",
+        "title": "iOS: every other react-native-webview (WebviewPlayer, Vimeo, Wistia, any new one) still starts with deceleration 0, so overflowing content stops dead; default it in our patch",
+        "url": "https://linear.app/differential/issue/APO-15815/ios-every-other-react-native-webview-webviewplayer-vimeo-wistia-any",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15902",
+        "title": "[Mobile QA] Feature-action double-tap guard is a fixed 500 ms window, so slow async actions (Message person, open URL externally) can still run twice, and no Maestro double-tap regression is in the repo",
+        "url": "https://linear.app/differential/issue/APO-15902/mobile-qa-feature-action-double-tap-guard-is-a-fixed-500-ms-window-so",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16067",
+        "title": "[Mobile QA] Chat phone-verification code step is hard to use with a screen reader: 6 unlabeled code boxes, wrong code shown only by red color + shake, no \"code sent\" confirmation, unlabeled close X",
+        "url": "https://linear.app/differential/issue/APO-16067/mobile-qa-chat-phone-verification-code-step-is-hard-to-use-with-a",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15203",
+        "title": "[Mobile QA] iOS: Find People rows are one VoiceOver element, so the new photo/name \"open profile\" buttons and the row's Follow button can't be reached on their own (PR #7683)",
+        "url": "https://linear.app/differential/issue/APO-15203/mobile-qa-ios-find-people-rows-are-one-voiceover-element-so-the-new",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15185",
+        "title": "[Mobile QA] confirm() follow-ups after #6970: Android back now dismisses destructive confirms (promise never settles), report error gaps, live dialogs unverified",
+        "url": "https://linear.app/differential/issue/APO-15185/mobile-qa-confirm-follow-ups-after-6970-android-back-now-dismisses",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15821",
+        "title": "[Mobile QA] Chat list rows: unread and muted state are visual only, the declined-chat leave icon has no name or role, and swipe-to-Leave has no VoiceOver/TalkBack action",
+        "url": "https://linear.app/differential/issue/APO-15821/mobile-qa-chat-list-rows-unread-and-muted-state-are-visual-only-the",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16294",
+        "title": "The \"Share with the community\" switch is announced as \"1\", and the giving keypad's backspace has no name",
+        "url": "https://linear.app/differential/issue/APO-16294/the-share-with-the-community-switch-is-announced-as-1-and-the-giving",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15819",
+        "title": "[Mobile QA] Shared Input: the visible `label` isn't the field's accessible name and tapping it doesn't focus (Community edit Location/Details, Chat phone verification); #7701 fixed only the 4 name fields with a per-screen copy",
+        "url": "https://linear.app/differential/issue/APO-15819/mobile-qa-shared-input-the-visible-label-isnt-the-fields-accessible",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-15068",
+        "title": "[Mobile QA] At Accessibility text sizes, Church tab text is clipped (greeting, sermon title, \"View More\") and Search results shrink to one truncated line",
+        "url": "https://linear.app/differential/issue/APO-15068/mobile-qa-at-accessibility-text-sizes-church-tab-text-is-clipped",
+        "project": null,
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-17691",
+        "title": "Cluster GraphQL validation catch-all 8QJ is leftover of #6426 plus demo/review-app probes",
+        "url": "https://linear.app/differential/issue/APO-17691/cluster-graphql-validation-catch-all-8qj-is-leftover-of-6426-plus",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17603",
+        "title": "iOS anonymous(main) GraphQL grouping 8BN is leftover old-runtime noise (F0Q / GetChatAdmins)",
+        "url": "https://linear.app/differential/issue/APO-17603/ios-anonymousmain-graphql-grouping-8bn-is-leftover-old-runtime-noise",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17647",
+        "title": "anonymous(main) addDevMenuCallbacks grouping AN8 is leftover old-runtime noise (same as A4N)",
+        "url": "https://linear.app/differential/issue/APO-17647/anonymousmain-adddevmenucallbacks-grouping-an8-is-leftover-old-runtime",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17650",
+        "title": "openUrl href-parse grouping ETH is leftover old-runtime noise (same as F0P)",
+        "url": "https://linear.app/differential/issue/APO-17650/openurl-href-parse-grouping-eth-is-leftover-old-runtime-noise-same-as",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17652",
+        "title": "Android _construct PubNub REST grouping D2V is leftover old-runtime noise (same as EXR)",
+        "url": "https://linear.app/differential/issue/APO-17652/android-construct-pubnub-rest-grouping-d2v-is-leftover-old-runtime",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17656",
+        "title": "promiseMethodWrapper(main) Unable to open URL grouping AKA is leftover old-runtime noise (same as F1J)",
+        "url": "https://linear.app/differential/issue/APO-17656/promisemethodwrappermain-unable-to-open-url-grouping-aka-is-leftover",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17668",
+        "title": "handlePress cyclical JSON grouping EVA is leftover old-runtime noise (same as APO-13956)",
+        "url": "https://linear.app/differential/issue/APO-17668/handlepress-cyclical-json-grouping-eva-is-leftover-old-runtime-noise",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17676",
+        "title": "iOS NativePlayer FunctionCallException AQR is leftover old-runtime noise (same as #7526)",
+        "url": "https://linear.app/differential/issue/APO-17676/ios-nativeplayer-functioncallexception-aqr-is-leftover-old-runtime",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17681",
+        "title": "iOS NativePlayer URL-not-found grouping AK7 is leftover old-runtime noise (same as ESP / #7961)",
+        "url": "https://linear.app/differential/issue/APO-17681/ios-nativeplayer-url-not-found-grouping-ak7-is-leftover-old-runtime",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17684",
+        "title": "iOS __guard(main) Network request failed grouping 72E is leftover old-runtime noise (same as EXM / #7912)",
+        "url": "https://linear.app/differential/issue/APO-17684/ios-guardmain-network-request-failed-grouping-72e-is-leftover-old",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17837",
+        "title": "whatwg-fetch Network request failed grouping EXP is leftover old-runtime noise (same as EXM / #7912)",
+        "url": "https://linear.app/differential/issue/APO-17837/whatwg-fetch-network-request-failed-grouping-exp-is-leftover-old",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17643",
+        "title": "apollo-upload-client fetch.umd Network request failed grouping 9FK is leftover old-runtime noise (same as EXM)",
+        "url": "https://linear.app/differential/issue/APO-17643/apollo-upload-client-fetchumd-network-request-failed-grouping-9fk-is",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17848",
+        "title": "Chat.init captureMessage grouping EGG is leftover old-runtime noise (same as FKA / #8153)",
+        "url": "https://linear.app/differential/issue/APO-17848/chatinit-capturemessage-grouping-egg-is-leftover-old-runtime-noise",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17832",
+        "title": "GetTabs launch-critical transport grouping F3H is leftover of #8155 on runtime 128",
+        "url": "https://linear.app/differential/issue/APO-17832/gettabs-launch-critical-transport-grouping-f3h-is-leftover-of-8155-on",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18095",
+        "title": "unsymbolicated user-of-undefined grouping 542 is leftover old-runtime noise (same as ESG / #7017)",
+        "url": "https://linear.app/differential/issue/APO-18095/unsymbolicated-user-of-undefined-grouping-542-is-leftover-old-runtime",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18276",
+        "title": "unsymbolicated onCompleted(main) grouping C8P is leftover old-runtime noise (same as CCP / APO-11189)",
+        "url": "https://linear.app/differential/issue/APO-18276/unsymbolicated-oncompletedmain-grouping-c8p-is-leftover-old-runtime",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18291",
+        "title": "GetStream StreamApp crash 3R3 is leftover old-binary noise (code gone from master)",
+        "url": "https://linear.app/differential/issue/APO-18291/getstream-streamapp-crash-3r3-is-leftover-old-binary-noise-code-gone",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18342",
+        "title": "Faith Promise expo-av AVPlayerItem grouping FCN is leftover old-runtime noise",
+        "url": "https://linear.app/differential/issue/APO-18342/faith-promise-expo-av-avplayeritem-grouping-fcn-is-leftover-old",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17850",
+        "title": "whatwg-fetch Network request failed grouping F1A is leftover old-runtime noise (same as EXM / #7912)",
+        "url": "https://linear.app/differential/issue/APO-17850/whatwg-fetch-network-request-failed-grouping-f1a-is-leftover-old",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16452",
+        "title": "QA delta: PR #7836 chat link punycode (APO-16070): live PASS, plus UX gaps (legit non-Latin domains always shown as punycode; fullwidth/zero-width hosts get a wrong xn-- address)",
+        "url": "https://linear.app/differential/issue/APO-16452/qa-delta-pr-7836-chat-link-punycode-apo-16070-live-pass-plus-ux-gaps",
+        "project": null,
+        "state": "In Review"
+      },
+      {
+        "identifier": "APO-17749",
+        "title": "Check FreedUp's App Review status",
+        "url": "https://linear.app/differential/issue/APO-17749/check-freedups-app-review-status",
+        "project": "FreedUp iOS rejected: sell weeks 2–6 through in-app purchase",
+        "state": "To Do"
+      },
+      {
+        "identifier": "APO-16609",
+        "title": "(Android) Answer box on content stops accepting text and the app freezes (must force close)",
+        "url": "https://linear.app/differential/issue/APO-16609/android-answer-box-on-content-stops-accepting-text-and-the-app-freezes",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-11983",
+        "title": "Mobile: MapView campus select crashes when campus is undefined",
+        "url": "https://linear.app/differential/issue/APO-11983/mobile-mapview-campus-select-crashes-when-campus-is-undefined",
+        "project": null,
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17606",
+        "title": "Cluster should lookup a StudioC person once per request (APOLLOS-CLUSTER-8TA)",
+        "url": "https://linear.app/differential/issue/APO-17606/cluster-should-lookup-a-studioc-person-once-per-request-apollos",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17689",
+        "title": "Cluster should treat a status-less PubNub REST error as a typed chat outage (APOLLOS-CLUSTER-8RZ)",
+        "url": "https://linear.app/differential/issue/APO-17689/cluster-should-treat-a-status-less-pubnub-rest-error-as-a-typed-chat",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16597",
+        "title": "Daily feed cards without a Node type fail GraphQL (Sentry APOLLOS-CLUSTER-8RF)",
+        "url": "https://linear.app/differential/issue/APO-16597/daily-feed-cards-without-a-node-type-fail-graphql-sentry-apollos",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16964",
+        "title": "Cluster should not report Postgres shutdown GraphQL errors to Sentry (APOLLOS-CLUSTER-8P8)",
+        "url": "https://linear.app/differential/issue/APO-16964/cluster-should-not-report-postgres-shutdown-graphql-errors-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16494",
+        "title": "Cluster should treat a missing follow accept/ignore as user input, not a Sentry error",
+        "url": "https://linear.app/differential/issue/APO-16494/cluster-should-treat-a-missing-follow-acceptignore-as-user-input-not-a",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16585",
+        "title": "Cluster should still change campus when Planning Center OAuth is invalid_grant",
+        "url": "https://linear.app/differential/issue/APO-16585/cluster-should-still-change-campus-when-planning-center-oauth-is",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16570",
+        "title": "Cluster should not report expected chat birthdate FORBIDDEN to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16570/cluster-should-not-report-expected-chat-birthdate-forbidden-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17872",
+        "title": "Cluster should not report expected carrier-blocklist OTP blocks to Sentry (APOLLOS-CLUSTER-880)",
+        "url": "https://linear.app/differential/issue/APO-17872/cluster-should-not-report-expected-carrier-blocklist-otp-blocks-to",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17868",
+        "title": "Cluster should not report expected VoIP OTP blocks to Sentry (APOLLOS-CLUSTER-87Z)",
+        "url": "https://linear.app/differential/issue/APO-17868/cluster-should-not-report-expected-voip-otp-blocks-to-sentry-apollos",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17869",
+        "title": "Cluster should not report disabled notification types to Sentry (APOLLOS-CLUSTER-838)",
+        "url": "https://linear.app/differential/issue/APO-17869/cluster-should-not-report-disabled-notification-types-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16967",
+        "title": "Cluster should not report community-chat membership FORBIDDEN to Sentry (APOLLOS-CLUSTER-814)",
+        "url": "https://linear.app/differential/issue/APO-16967/cluster-should-not-report-community-chat-membership-forbidden-to",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17030",
+        "title": "Cluster should still load a feed when an action relatedNode has no Node type (APOLLOS-CLUSTER-80M)",
+        "url": "https://linear.app/differential/issue/APO-17030/cluster-should-still-load-a-feed-when-an-action-relatednode-has-no",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16577",
+        "title": "Cluster should not report expected chat invite FORBIDDEN to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16577/cluster-should-not-report-expected-chat-invite-forbidden-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16493",
+        "title": "Cluster should not report expected chat membership FORBIDDEN to Sentry",
+        "url": "https://linear.app/differential/issue/APO-16493/cluster-should-not-report-expected-chat-membership-forbidden-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-17124",
+        "title": "Cluster should not report expected give-intent Transaction forbidden to Sentry (APOLLOS-CLUSTER-7HD)",
+        "url": "https://linear.app/differential/issue/APO-17124/cluster-should-not-report-expected-give-intent-transaction-forbidden",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16593",
+        "title": "Cluster reports already-registered church connect as a server error",
+        "url": "https://linear.app/differential/issue/APO-16593/cluster-reports-already-registered-church-connect-as-a-server-error",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-16741",
+        "title": "Chat token request reports PubNub Chat SDK getMembership failures as GraphQL errors (APOLLOS-CLUSTER-2Y7)",
+        "url": "https://linear.app/differential/issue/APO-16741/chat-token-request-reports-pubnub-chat-sdk-getmembership-failures-as",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18345",
+        "title": "iOS audio session OSStatus reports as an unhandled Sentry rejection (APOLLOS-MOBILE-FTF)",
+        "url": "https://linear.app/differential/issue/APO-18345/ios-audio-session-osstatus-reports-as-an-unhandled-sentry-rejection",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18323",
+        "title": "Chat reports a PubNub 403 on every ChatProvider remount (APOLLOS-MOBILE-FNM)",
+        "url": "https://linear.app/differential/issue/APO-18323/chat-reports-a-pubnub-403-on-every-chatprovider-remount-apollos-mobile",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18319",
+        "title": "Brand font download retries a filesystem failure on every remount (APOLLOS-MOBILE-FX6)",
+        "url": "https://linear.app/differential/issue/APO-18319/brand-font-download-retries-a-filesystem-failure-on-every-remount",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      },
+      {
+        "identifier": "APO-18336",
+        "title": "iOS token refresh fails when fetch cannot read the JSON body blob (APOLLOS-MOBILE-FST)",
+        "url": "https://linear.app/differential/issue/APO-18336/ios-token-refresh-fails-when-fetch-cannot-read-the-json-body-blob",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18334",
+        "title": "iOS NativePlayer reports Resi resource-unavailable and invalid-certificate as Sentry errors (APOLLOS-MOBILE-EZD)",
+        "url": "https://linear.app/differential/issue/APO-18334/ios-nativeplayer-reports-resi-resource-unavailable-and-invalid",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18332",
+        "title": "Node resolveType returns the Media interface instead of VideoMedia/AudioMedia/ImageMedia (APOLLOS-MOBILE-FQE)",
+        "url": "https://linear.app/differential/issue/APO-18332/node-resolvetype-returns-the-media-interface-instead-of",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18324",
+        "title": "Leaving phone verification reports a Sentry error (APOLLOS-MOBILE-ESR)",
+        "url": "https://linear.app/differential/issue/APO-18324/leaving-phone-verification-reports-a-sentry-error-apollos-mobile-esr",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18322",
+        "title": "Apple Pay reports a bad email or an offline network drop as a Sentry error (APOLLOS-MOBILE-FWA)",
+        "url": "https://linear.app/differential/issue/APO-18322/apple-pay-reports-a-bad-email-or-an-offline-network-drop-as-a-sentry",
+        "project": "Sentry Queue",
+        "state": "Done"
+      },
+      {
+        "identifier": "APO-18272",
+        "title": "Sharing a prayer to chat reports an expected invite refusal to Sentry (APOLLOS-MOBILE-ETJ)",
+        "url": "https://linear.app/differential/issue/APO-18272/sharing-a-prayer-to-chat-reports-an-expected-invite-refusal-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Merged"
+      },
+      {
+        "identifier": "APO-18286",
+        "title": "NFC tap timeout reports the designed browser fallback to Sentry (APOLLOS-MOBILE-F02)",
+        "url": "https://linear.app/differential/issue/APO-18286/nfc-tap-timeout-reports-the-designed-browser-fallback-to-sentry",
+        "project": "Sentry Queue",
+        "state": "Canceled"
+      }
+    ]
+  },
+  "github": {
+    "merged_prs": [
+      {
+        "title": "feat(dashboard): start the /trains monorail in the mountains south of Crossroads API",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/559",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-25T19:28:39Z",
+        "additions": 48,
+        "deletions": 7,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): redraw the /trains offshore wind turbines",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/558",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-25T18:31:45Z",
+        "additions": 347,
+        "deletions": 58,
+        "changed_files": 3
+      },
+      {
+        "title": "feat(dashboard): redraw /trains engines and cars at native 2x resolution",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/554",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-25T16:47:44Z",
+        "additions": 791,
+        "deletions": 103,
+        "changed_files": 3
+      },
+      {
+        "title": "fix(admin): stop re-encrypting the stored ciphertext when saving a config row (APO-18604)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6749",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-25T14:29:43Z",
+        "additions": 215,
+        "deletions": 17,
+        "changed_files": 3
+      },
+      {
+        "title": "Read FreedUp's Woo key from cluster config (APO-18581)",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2270",
+        "repo": "apollos-shovel",
+        "merged_at": "2026-11-24T21:55:07Z",
+        "additions": 20,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(mobile): enforce prayer and gratitude limits in JS so iOS can't hang on truncation",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8456",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-25T08:24:28Z",
+        "additions": 230,
+        "deletions": 10,
+        "changed_files": 12
+      },
+      {
+        "title": "fix(mobile): skip the mint report only when the session really ended",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8452",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-25T14:50:15Z",
+        "additions": 219,
+        "deletions": 2,
+        "changed_files": 5
+      },
+      {
+        "title": "fix(mobile): retry hashed GraphQL GET as POST when iOS fetch times out",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8450",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-25T07:31:01Z",
+        "additions": 134,
+        "deletions": 1,
+        "changed_files": 5
+      },
+      {
+        "title": "Report OpenAI credit exhaustion to Sentry once per cooldown",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6769",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-25T06:09:06Z",
+        "additions": 82,
+        "deletions": 10,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(mobile): stop sending Prayer render diagnostic after APO-13589",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8441",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-25T07:31:01Z",
+        "additions": 53,
+        "deletions": 628,
+        "changed_files": 9
+      },
+      {
+        "title": "fix(mobile): retry portrait lock when the Android activity is gone",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8435",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-25T06:24:25Z",
+        "additions": 386,
+        "deletions": 10,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(dashboard): /trains Island Almanac calendar image",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/545",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-23T19:37:27Z",
+        "additions": 650,
+        "deletions": 1,
+        "changed_files": 5
+      },
+      {
+        "title": "feat(trains): say WRECKED only for a crash the counter takes",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/544",
+        "repo": "apollos-infrastructure",
+        "merged_at": "2026-11-23T19:05:22Z",
+        "additions": 42,
+        "deletions": 8,
+        "changed_files": 5
+      },
+      {
+        "title": "fix(mobile): name Daily habit icons and make the day sheet modal for VoiceOver (APO-15681)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8422",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-24T20:02:27Z",
+        "additions": 107,
+        "deletions": 8,
+        "changed_files": 10
+      },
+      {
+        "title": "fix(mobile): label unnamed Profile and Prayer controls for screen readers (APO-15762)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8421",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-24T20:02:27Z",
+        "additions": 50,
+        "deletions": 2,
+        "changed_files": 12
+      },
+      {
+        "title": "fix(mobile): name the prayer request text box for screen readers (APO-15680)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8420",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-23T19:55:45Z",
+        "additions": 38,
+        "deletions": 1,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(chat): keep full-width # / ? @ : from making a fake chat link address look real (APO-18375)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8416",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-24T20:23:28Z",
+        "additions": 35,
+        "deletions": 3,
+        "changed_files": 2
+      },
+      {
+        "title": "Quality agent: flag duplication only at 3+ copies or large blocks",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/117",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-11-23T15:16:23Z",
+        "additions": 4,
+        "deletions": 1,
+        "changed_files": 1
+      },
+      {
+        "title": "Plan 31: correctness agent and one hop of definitions",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/116",
+        "repo": "apollos-code-reviewer",
+        "merged_at": "2026-11-23T16:29:21Z",
+        "additions": 1405,
+        "deletions": 25,
+        "changed_files": 27
+      },
+      {
+        "title": "Treat StudioC tracking HTTP 500 as a no-op like 404 and 504",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6749",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-23T20:40:04Z",
+        "additions": 168,
+        "deletions": 9,
+        "changed_files": 4
+      },
+      {
+        "title": "iOS audio session OSStatus should not report as an unhandled Sentry rejection",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8403",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-23T23:27:39Z",
+        "additions": 107,
+        "deletions": 6,
+        "changed_files": 5
+      },
+      {
+        "title": "Local com.apollos.dev builds should not report Sentry errors as production",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8402",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-24T00:13:29Z",
+        "additions": 45,
+        "deletions": 0,
+        "changed_files": 2
+      },
+      {
+        "title": "Demo-channel builds should not report Sentry errors as production",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8401",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-24T02:24:48Z",
+        "additions": 117,
+        "deletions": 9,
+        "changed_files": 2
+      },
+      {
+        "title": "Keep a signed-in session when iOS cannot read the token-refresh blob",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8397",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-23T18:45:52Z",
+        "additions": 344,
+        "deletions": 18,
+        "changed_files": 2
+      },
+      {
+        "title": "Mobile should not report a Resi stream iOS cannot load as a Sentry error",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8396",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-22T15:33:46Z",
+        "additions": 114,
+        "deletions": 2,
+        "changed_files": 2
+      },
+      {
+        "title": "Map stored Media rows to VideoMedia, AudioMedia, or ImageMedia",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6748",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-22T14:35:58Z",
+        "additions": 195,
+        "deletions": 10,
+        "changed_files": 9
+      },
+      {
+        "title": "Treat dismissed chat phone verification as expected, not a Sentry error",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8395",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-23T18:45:52Z",
+        "additions": 72,
+        "deletions": 13,
+        "changed_files": 4
+      },
+      {
+        "title": "Stop reporting Apple Pay email typos and dropped connections to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8393",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-23T17:11:53Z",
+        "additions": 169,
+        "deletions": 11,
+        "changed_files": 7
+      },
+      {
+        "title": "Play YouTube short links with extra path characters in the YouTube player",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8392",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-22T15:56:42Z",
+        "additions": 95,
+        "deletions": 14,
+        "changed_files": 5
+      },
+      {
+        "title": "Android crashes when a habit reminder switch gets a network error as disabled",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8391",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-22T15:32:23Z",
+        "additions": 67,
+        "deletions": 11,
+        "changed_files": 5
+      },
+      {
+        "title": "test(web-embeds): serve a production build of apps/web in CI e2e",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6701",
+        "repo": "apollos-admin",
+        "merged_at": "2026-11-23T13:38:00Z",
+        "additions": 8,
+        "deletions": 1,
+        "changed_files": 1
+      },
+      {
+        "title": "Mobile should play percent-encoded Resi HTML embeds instead of treating them as a video file",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8370",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-22T07:24:55Z",
+        "additions": 88,
+        "deletions": 13,
+        "changed_files": 3
+      },
+      {
+        "title": "Mobile should send the first DM even if PubNub has not listed the other member yet",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8369",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-22T05:36:21Z",
+        "additions": 102,
+        "deletions": 9,
+        "changed_files": 2
+      },
+      {
+        "title": "Mobile should not report a cancelled birthday check to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8359",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-22T06:51:08Z",
+        "additions": 234,
+        "deletions": 19,
+        "changed_files": 5
+      },
+      {
+        "title": "Mobile should not report a full-disk logout AsyncStorage failure to Sentry",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8358",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-23T20:49:56Z",
+        "additions": 272,
+        "deletions": 47,
+        "changed_files": 6
+      },
+      {
+        "title": "Skip comments and liked-count queries for non-uuid feature ids",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6723",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-22T04:55:34Z",
+        "additions": 305,
+        "deletions": 1,
+        "changed_files": 5
+      },
+      {
+        "title": "Warn instead of paging Sentry when OneSignal fetch fails",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6711",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-22T04:55:50Z",
+        "additions": 177,
+        "deletions": 8,
+        "changed_files": 2
+      },
+      {
+        "title": "Skip Rock create when attaching a person with no name",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6705",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-22T05:29:51Z",
+        "additions": 176,
+        "deletions": 19,
+        "changed_files": 4
+      },
+      {
+        "title": "Batch PubNub community member removals so large syncs do not 413",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6704",
+        "repo": "apollos-cluster",
+        "merged_at": "2026-11-22T05:28:40Z",
+        "additions": 74,
+        "deletions": 15,
+        "changed_files": 2
+      },
+      {
+        "title": "fix(chat): show the address a chat link opens when the link has a hidden or full-width character (APO-16452)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8346",
+        "repo": "apollos-platforms",
+        "merged_at": "2026-11-23T15:26:09Z",
+        "additions": 39,
+        "deletions": 1,
+        "changed_files": 2
+      }
+    ],
+    "open_prs": [
+      {
+        "title": "Don't hold a DB connection while waiting on the dispute-email lock (APO-18676)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6772",
+        "repo": "apollos-admin",
+        "state": "open"
+      },
+      {
+        "title": "Resend capped sign-in codes through Verify on Twilio error 30023 (APO-18663)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6800",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Send T-Mobile sign-in codes through Verify past a daily threshold (APO-18663)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6799",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "Report TTS billing 429s through the OpenAI credit cooldown",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6795",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "fix(cluster): drop test-mode Stripe webhooks that fail live signature check",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6794",
+        "repo": "apollos-cluster",
+        "state": "open"
+      },
+      {
+        "title": "fix(mobile): skip Sentry for cluster Invalid Token session errors",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8471",
+        "repo": "apollos-platforms",
+        "state": "open"
+      },
+      {
+        "title": "Plan 31: give the advocate the runtime-timing rule",
+        "url": "https://github.com/ApollosProject/apollos-code-reviewer/pull/118",
+        "repo": "apollos-code-reviewer",
+        "state": "open"
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Don't hold a DB connection while waiting on the dispute-email lock (APO-18676)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6772",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-25T23:16:17Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(mobile): pass the first tap through on content pages with the keyboard up (APO-18670)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8487",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-25T22:36:50Z",
+        "reviewed_at": "2026-11-25T22:48:42Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.2
+      },
+      {
+        "title": "Stop giving Cluster tasks a Sentry auth token",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/560",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-11-25T22:19:30Z",
+        "reviewed_at": "2026-11-25T22:48:59Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.49
+      },
+      {
+        "title": "Keep the Giving dashboard open while Stripe holds a church's payouts",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6769",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-25T21:34:58Z",
+        "reviewed_at": "2026-11-25T21:37:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.04
+      },
+      {
+        "title": "Send T-Mobile sign-in codes through Verify past a daily threshold (APO-18663)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6799",
+        "repo": "apollos-cluster",
+        "requested_at": null,
+        "reviewed_at": "2026-11-25T23:13:08Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "fix(mobile): let community hosts ban and mute from the community members list (APO-15792)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8482",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-25T18:56:16Z",
+        "reviewed_at": "2026-11-25T19:06:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.17
+      },
+      {
+        "title": "fix(mobile): let community hosts ban and mute from the chat members list (APO-15792)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8481",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-25T17:52:23Z",
+        "reviewed_at": "2026-11-25T18:13:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.36
+      },
+      {
+        "title": "ci(admin): give the confidence gate its own AI Gateway key",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6766",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-25T18:01:23Z",
+        "reviewed_at": "2026-11-25T18:14:14Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.21
+      },
+      {
+        "title": "feat(dashboard): a Coldplay concert in the rift",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/555",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-11-25T16:39:29Z",
+        "reviewed_at": "2026-11-25T17:26:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.78
+      },
+      {
+        "title": "fix(mobile): report a chat setup failure after the phone code is accepted",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8478",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-25T16:38:20Z",
+        "reviewed_at": "2026-11-25T17:24:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.77
+      },
+      {
+        "title": "feat(mobile): give every church Liquid Glass by removing the liquid_glass flag",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8477",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-25T17:39:47Z",
+        "reviewed_at": "2026-11-25T18:17:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.63
+      },
+      {
+        "title": "fix(app-clip): show the decline message when Apple Pay is declined (APO-18607)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8475",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-25T18:05:30Z",
+        "reviewed_at": "2026-11-25T18:17:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.2
+      },
+      {
+        "title": "fix(mobile): keep the saved chat file url when there is no PubNub file (APO-18459)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8474",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-25T15:37:48Z",
+        "reviewed_at": "2026-11-25T17:26:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.81
+      },
+      {
+        "title": "feat(dashboard): the Astronomer Rift, a bottomless crack trains fall into and ride out of",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/553",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-11-25T15:36:05Z",
+        "reviewed_at": "2026-11-25T15:37:57Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.03
+      },
+      {
+        "title": "fix(admin): require the creator skill for church poll reads and writes",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6761",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-25T20:36:16Z",
+        "reviewed_at": "2026-11-25T22:52:48Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.28
+      },
+      {
+        "title": "fix(admin): stop re-encrypting the stored ciphertext when saving a config row (APO-18604)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6749",
+        "repo": "apollos-admin",
+        "requested_at": null,
+        "reviewed_at": "2026-11-24T22:38:02Z",
+        "review_state": "COMMENTED",
+        "latency_hours": null
+      },
+      {
+        "title": "feat(admin): link integration setup guides",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6747",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-25T00:19:17Z",
+        "reviewed_at": "2026-11-25T05:09:26Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(planning-center): save refreshed OAuth tokens encrypted through Config.updateConfig",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6788",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-24T20:02:30Z",
+        "reviewed_at": "2026-11-24T20:22:07Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.33
+      },
+      {
+        "title": "Send login codes through Twilio Verify behind a config flag",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6787",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-24T19:22:02Z",
+        "reviewed_at": "2026-11-24T19:33:31Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.19
+      },
+      {
+        "title": "fix(admin): show read-only config rows and stop reporting refused writes as saved (APO-18561)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6738",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-24T18:41:05Z",
+        "reviewed_at": "2026-11-24T20:18:00Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 1.62
+      },
+      {
+        "title": "fix(stripe): refuse webhooks whose account is listed by more than one church",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6785",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-24T17:37:39Z",
+        "reviewed_at": "2026-11-24T20:19:00Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.69
+      },
+      {
+        "title": "feat(dashboard): full-body Thanksgiving and Christmas costumes on /trains",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/548",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-11-24T19:10:23Z",
+        "reviewed_at": "2026-11-24T20:15:36Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.09
+      },
+      {
+        "title": "fix(ci): tag production Admin images prod-sha- so staging rollback keeps its own build (APO-18555)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6736",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-24T16:29:31Z",
+        "reviewed_at": "2026-11-24T17:26:21Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.95
+      },
+      {
+        "title": "Overlap the dashboard loader's config reads",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6734",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-24T21:05:36Z",
+        "reviewed_at": "2026-11-25T05:10:56Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.91
+      },
+      {
+        "title": "fix(mobile): keep the church's action color on ui-kit buttons (APO-18535)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8455",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-24T12:40:35Z",
+        "reviewed_at": "2026-11-24T17:29:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.49
+      },
+      {
+        "title": "sql: add the default messages for four giving emails (APO-18515)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6772",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-25T17:26:13Z",
+        "reviewed_at": "2026-11-25T18:15:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.82
+      },
+      {
+        "title": "Giving emails: remove the built-in sign-off from three emails",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6728",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-25T18:38:03Z",
+        "reviewed_at": "2026-11-25T18:53:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.25
+      },
+      {
+        "title": "fix(mobile): refresh profile campus funds so hidden funds drop off Give (APO-18486)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8445",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-23T23:42:22Z",
+        "reviewed_at": "2026-11-24T17:27:17Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.45
+      },
+      {
+        "title": "fix(studio-c): don't report Checkins 400 for people StudioC says already exist (APO-18260)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6768",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-23T22:08:28Z",
+        "reviewed_at": "2026-11-23T22:29:07Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.34
+      },
+      {
+        "title": "feat(deploy): capture missing store screenshots inside fastlane, like tvOS",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8440",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-24T06:08:13Z",
+        "reviewed_at": "2026-11-24T17:32:39Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.54
+      },
+      {
+        "title": "chore(deps): bump i18next from 25.3.6 to 26.3.4 in /templates/mobile",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8439",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-24T13:03:08Z",
+        "reviewed_at": "2026-11-24T17:27:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.46
+      },
+      {
+        "title": "feat(agent): carry agent runs over deploys (APO-18461)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6722",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-23T21:16:38Z",
+        "reviewed_at": "2026-11-23T22:39:03Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.37
+      },
+      {
+        "title": "Retry giving emails when the saved message can't be read",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6719",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-23T22:15:06Z",
+        "reviewed_at": "2026-11-23T22:35:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.34
+      },
+      {
+        "title": "chore(ts): upgrade to TypeScript 6; typecheck with TypeScript 7",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6757",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-23T21:31:39Z",
+        "reviewed_at": "2026-11-23T22:32:01Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.01
+      },
+      {
+        "title": "fix: resolve remaining knip warnings and run full knip in CI",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6714",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-23T18:34:18Z",
+        "reviewed_at": "2026-11-23T20:09:49Z",
+        "review_state": "APPROVED",
+        "latency_hours": 1.59
+      },
+      {
+        "title": "fix(sentry): run on sentry-sdk 3",
+        "url": "https://github.com/ApollosProject/apollos-shovel/pull/2262",
+        "repo": "apollos-shovel",
+        "requested_at": "2026-11-23T17:21:57Z",
+        "reviewed_at": "2026-11-23T20:07:40Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.76
+      },
+      {
+        "title": "Remove the hardcoded Crossroads text from giving emails",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6712",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-24T16:45:28Z",
+        "reviewed_at": "2026-11-24T17:30:28Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.75
+      },
+      {
+        "title": "refactor(admin): fold the verifyEmail alias into getUserByEmail",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6711",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-23T18:13:57Z",
+        "reviewed_at": "2026-11-23T20:08:55Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 1.92
+      },
+      {
+        "title": "feat(cloudfront): serve production imgproxy from img.apollos.app",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/541",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-11-23T16:28:54Z",
+        "reviewed_at": "2026-11-23T16:41:22Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.21
+      },
+      {
+        "title": "perf(mobile): refresh gratitude posts only while the sheet is open (APO-18124)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8418",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-24T20:03:47Z",
+        "reviewed_at": "2026-11-25T14:39:46Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 2.94
+      },
+      {
+        "title": "fix(mobile): keep the web page tab's buttons above the iOS tab bar (APO-18371)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8417",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-23T17:31:10Z",
+        "reviewed_at": "2026-11-23T20:06:33Z",
+        "review_state": "APPROVED",
+        "latency_hours": 2.59
+      },
+      {
+        "title": "feat(slack-alerts): pretty-print the log JSON in moderation alerts",
+        "url": "https://github.com/ApollosProject/apollos-infrastructure/pull/539",
+        "repo": "apollos-infrastructure",
+        "requested_at": "2026-11-23T14:47:55Z",
+        "reviewed_at": "2026-11-23T14:56:40Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "feat(chat): link the PubNub moderation view on chat moderation reviews",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6752",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-23T14:47:50Z",
+        "reviewed_at": "2026-11-23T14:55:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "feat(admin): import a file from a link in the S3 picker (APO-17929)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6705",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-23T14:31:12Z",
+        "reviewed_at": "2026-11-23T15:22:28Z",
+        "review_state": "CHANGES_REQUESTED",
+        "latency_hours": 0.37
+      },
+      {
+        "title": "fix(mobile): keep a swapped live input on Starting soon until it is checked (APO-18349)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8405",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-22T19:10:45Z",
+        "reviewed_at": "2026-11-23T14:50:53Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "feat(mobile): move Export Notes into the content item menu (APO-18341)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8400",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-22T15:59:44Z",
+        "reviewed_at": "2026-11-23T14:51:30Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "feat(mobile): icons for Save and Share in the content item menu, Android too (APO-18340)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8399",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-22T17:07:25Z",
+        "reviewed_at": "2026-11-23T14:52:31Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(web): delete unused redirectIfLoggedIn helper",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6700",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-22T00:56:25Z",
+        "reviewed_at": "2026-11-22T17:47:51Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(web): step Lato's medium headings up to 700 (APO-11787)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6699",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-21T18:40:49Z",
+        "reviewed_at": "2026-11-22T17:49:35Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): stack the Daily hero card art above its text at Accessibility sizes (APO-18233)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8388",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-21T17:35:03Z",
+        "reviewed_at": "2026-11-22T17:47:11Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "test(mobile): assert the 44pt resend target on Verify Phone (APO-16068)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8386",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-21T16:36:40Z",
+        "reviewed_at": "2026-11-22T17:45:19Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): fill earlier page segments when the last page jumps active (APO-15938)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8379",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-21T10:32:29Z",
+        "reviewed_at": "2026-11-22T17:44:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "chore(knip): stop ignoring dataSource and resolver exports",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6734",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-22T19:44:16Z",
+        "reviewed_at": "2026-11-23T14:52:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "ci: require zero unused files from knip",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6692",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-22T19:46:47Z",
+        "reviewed_at": "2026-11-23T14:56:24Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "chore(knip): drop stale ignores and unused @types/redis-info",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6733",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-21T02:59:10Z",
+        "reviewed_at": "2026-11-22T17:43:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "refactor(mobile): absorb packages/apollos-ui-kit into the mobile template",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8378",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-21T20:57:30Z",
+        "reviewed_at": "2026-11-22T17:47:25Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix: resolve unused exports knip warnings (APO-18304)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8376",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-21T03:25:20Z",
+        "reviewed_at": "2026-11-22T17:51:58Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix: resolve unused files knip warnings",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6691",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-21T03:01:20Z",
+        "reviewed_at": "2026-11-22T17:49:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "test(mobile): share the SystemThemeProvider render helper",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8373",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-21T02:45:59Z",
+        "reviewed_at": "2026-11-22T17:42:15Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(mobile): tighten the livestream Starting soon check (APO-18159)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8371",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-21T13:15:16Z",
+        "reviewed_at": "2026-11-22T17:46:06Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0
+      },
+      {
+        "title": "Giving: move Emails between Web Embed and Migration (APO-18290)",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6685",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-23T16:07:44Z",
+        "reviewed_at": "2026-11-23T16:41:02Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.56
+      },
+      {
+        "title": "fix(mobile): use native Liquid Glass header buttons on Giving and Chat List (APO-18267)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8364",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-20T23:21:55Z",
+        "reviewed_at": "2026-11-23T14:54:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(admin): require the TV skill on the server for the TV app action",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6666",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-20T20:37:19Z",
+        "reviewed_at": "2026-11-23T20:05:29Z",
+        "review_state": "APPROVED",
+        "latency_hours": 7.47
+      },
+      {
+        "title": "fix(mobile): use native Liquid Glass header buttons on iOS 26 (APO-18180)",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8340",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-20T16:50:05Z",
+        "reviewed_at": "2026-11-23T14:54:16Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 6.17
+      },
+      {
+        "title": "feat(feeds): REST routes to reuse a feed section across feeds (APO-12044)",
+        "url": "https://github.com/ApollosProject/apollos-cluster/pull/6686",
+        "repo": "apollos-cluster",
+        "requested_at": "2026-11-19T22:39:12Z",
+        "reviewed_at": "2026-11-23T22:28:45Z",
+        "review_state": "APPROVED",
+        "latency_hours": 15.83
+      },
+      {
+        "title": "feat(tv): capture and upload missing Android TV and Fire TV store screenshots",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8336",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-21T02:55:49Z",
+        "reviewed_at": "2026-11-22T17:47:56Z",
+        "review_state": "COMMENTED",
+        "latency_hours": 0
+      },
+      {
+        "title": "fix(admin): gate Organization Profile billing and safety settings to Organization Admins",
+        "url": "https://github.com/ApollosProject/apollos-admin/pull/6617",
+        "repo": "apollos-admin",
+        "requested_at": "2026-11-23T16:38:26Z",
+        "reviewed_at": "2026-11-23T16:45:05Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.11
+      },
+      {
+        "title": "fix(roku): ship the church Segment key on deploy",
+        "url": "https://github.com/ApollosProject/apollos-platforms/pull/8243",
+        "repo": "apollos-platforms",
+        "requested_at": "2026-11-23T16:29:29Z",
+        "reviewed_at": "2026-11-23T16:43:25Z",
+        "review_state": "APPROVED",
+        "latency_hours": 0.23
+      }
+    ]
+  },
+  "check_ins": [
+    {
+      "day": "Monday",
+      "content": "- feat(dashboard): /trains Island Almanac calendar image\n- feat(trains): say WRECKED only for a crash the counter takes\n- fix(mobile): name the prayer request text box for screen readers (APO-15680)\n- Quality agent: flag duplication only at 3+ copies or large blocks\n- Plan 31: correctness agent and one hop of definitions\n- Treat StudioC tracking HTTP 500 as a no-op like 404 and 504\n- Keep a signed-in session when iOS cannot read the token-refresh blob\n- Mobile should not report a Resi stream iOS cannot load as a Sentry error\n- Map stored Media rows to VideoMedia, AudioMedia, or ImageMedia\n- Treat dismissed chat phone verification as expected, not a Sentry error\n- Stop reporting Apple Pay email typos and dropped connections to Sentry\n- Play YouTube short links with extra path characters in the YouTube player\n- …and 14 more (see Weekly Summary)\n- Reviewed: fix(studio-c): don't report Checkins 400 for people StudioC says already exist (APO-18260)\n- Reviewed: feat(agent): carry agent runs over deploys (APO-18461)\n- Reviewed: Retry giving emails when the saved message can't be read\n- Reviewed: chore(ts): upgrade to TypeScript 6; typecheck with TypeScript 7\n- Reviewed: fix: resolve remaining knip warnings and run full knip in CI\n- Reviewed: fix(sentry): run on sentry-sdk 3\n- Reviewed: refactor(admin): fold the verifyEmail alias into getUserByEmail\n- Reviewed: feat(cloudfront): serve production imgproxy from img.apollos.app\n- Reviewed: fix(mobile): keep the web page tab's buttons above the iOS tab bar (APO-18371)\n- Reviewed: feat(slack-alerts): pretty-print the log JSON in moderation alerts\n- Reviewed: feat(chat): link the PubNub moderation view on chat moderation reviews\n- Reviewed: feat(admin): import a file from a link in the S3 picker (APO-17929)\n- …and 25 more reviews\n- Done: APO-18342: Faith Promise expo-av AVPlayerItem grouping FCN is leftover old-runtime noise\n- Done: APO-18332: Node resolveType returns the Media interface instead of VideoMedia/AudioMedia/ImageMedia (APOLLOS-MOBILE-FQE)\n- Done: APO-18291: GetStream StreamApp crash 3R3 is leftover old-binary noise (code gone from master)\n- Done: APO-18276: unsymbolicated onCompleted(main) grouping C8P is leftover old-runtime noise (same as CCP / APO-11189)\n- Done: APO-18263: Question block comments fail when the block id is not a UUID (APOLLOS-CLUSTER-8TE)\n- Done: APO-18247: Cluster reports OneSignal fetch failures as Sentry errors (APOLLOS-CLUSTER-8S1)\n- Done: APO-18245: Cluster attaches phone-only people to Rock and reports a Sentry error (APOLLOS-CLUSTER-8FT)\n- Done: APO-18236: Community chat sync fails when removing too many members at once (APOLLOS-CLUSTER-8CM)\n- Done: APO-18095: unsymbolicated user-of-undefined grouping 542 is leftover old-runtime noise (same as ESG / #7017)\n- Done: APO-17850: whatwg-fetch Network request failed grouping F1A is leftover old-runtime noise (same as EXM / #7912)\n- Done: APO-17848: Chat.init captureMessage grouping EGG is leftover old-runtime noise (same as FKA / #8153)\n- Done: APO-17837: whatwg-fetch Network request failed grouping EXP is leftover old-runtime noise (same as EXM / #7912)\n- …and 14 more completed issues\n- In progress: APO-18482: Cluster reports every OpenAI credit-exhausted request to Sentry (APOLLOS-CLUSTER-8VC)\n- In progress: APO-18481: Mobile still reports Prayer render diagnostic after the investigation closed (APOLLOS-MOBILE-FF3)\n- In progress: APO-18477: Listen audio returns HTTP 400 when OpenAI TTS is rate-limited (APOLLOS-MOBILE-F1Y)\n- In progress: APO-18472: Android reports lockAsync as a Sentry error after the activity is gone (APOLLOS-MOBILE-APF)\n- In progress: APO-18377: (Crossroads) New Prayer form closes itself right after it opens\n- In progress: APO-18376: Show flaky mobile e2e tests in release-gate runs\n- In progress: APO-18375: Mobile QA: chat link address can show a fake-looking real host when a full-width / ? # @ or ℀ folds into the host (after PR #8346)\n- In progress: APO-18350: Resolve Sentry issues whose fixes shipped to production (2026-11-22 run, cluster + mobile)\n- In progress: APO-18345: iOS audio session OSStatus reports as an unhandled Sentry rejection (APOLLOS-MOBILE-FTF)\n- In progress: APO-18344: Local com.apollos.dev builds report post-reaction failures as production Sentry (APOLLOS-MOBILE-G0R)\n- In progress: APO-18343: Demo-channel simulator builds report PubNub errors as production Sentry (APOLLOS-MOBILE-G0X)\n- In progress: APO-18260: StudioC Checkins 5xx empties the check-in widget and reports to Sentry (APOLLOS-CLUSTER-8QY)\n- …and 5 more in-flight issues\n- Filed 32 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Tuesday",
+      "content": "- Read FreedUp's Woo key from cluster config (APO-18581)\n- fix(mobile): name Daily habit icons and make the day sheet modal for VoiceOver (APO-15681)\n- fix(mobile): label unnamed Profile and Prayer controls for screen readers (APO-15762)\n- fix(chat): keep full-width # / ? @ : from making a fake chat link address look real (APO-18375)\n- iOS audio session OSStatus should not report as an unhandled Sentry rejection\n- Local com.apollos.dev builds should not report Sentry errors as production\n- Demo-channel builds should not report Sentry errors as production\n- Reviewed: fix(admin): stop re-encrypting the stored ciphertext when saving a config row (APO-18604)\n- Reviewed: fix(planning-center): save refreshed OAuth tokens encrypted through Config.updateConfig\n- Reviewed: Send login codes through Twilio Verify behind a config flag\n- Reviewed: fix(admin): show read-only config rows and stop reporting refused writes as saved (APO-18561)\n- Reviewed: fix(stripe): refuse webhooks whose account is listed by more than one church\n- Reviewed: feat(dashboard): full-body Thanksgiving and Christmas costumes on /trains\n- Reviewed: fix(ci): tag production Admin images prod-sha- so staging rollback keeps its own build (APO-18555)\n- Reviewed: fix(mobile): keep the church's action color on ui-kit buttons (APO-18535)\n- Reviewed: fix(mobile): refresh profile campus funds so hidden funds drop off Give (APO-18486)\n- Reviewed: feat(deploy): capture missing store screenshots inside fastlane, like tvOS\n- Reviewed: chore(deps): bump i18next from 25.3.6 to 26.3.4 in /templates/mobile\n- Reviewed: Remove the hardcoded Crossroads text from giving emails\n- Done: APO-18605: Delete FreedUp Woo Astro variables after #2270 deploys\n- Done: APO-18581: Move WooCommerce credentials to cluster DB and rotate them\n- Done: APO-18565: T-Mobile users get no sign-in texts: Twilio daily cap hit after the forced sign-out\n- Done: APO-18560: Fix DEMO Stripe webhook secrets in production config (what was done for APO-18554)\n- Done: APO-18554: Stripe webhook events fail signature checks after the Stripe rotation\n- Done: APO-18544: Update staging Algolia keys after the production Algolia rotation\n- Done: APO-18543: Rotate the apollos_demo PubNub secret override (demo chat can't send)\n- Done: APO-18347: Cluster should not fail GraphQL when StudioC tracking returns 500 (APOLLOS-MOBILE-G11)\n- Done: APO-18539: 4 Churches Now Without Access to App\n- In progress: APO-18604: Admin Config: saving an encrypted row re-encrypts the stored ciphertext\n- In progress: APO-18537: iOS kills the app while autocorrect updates a multiline TextInput (APOLLOS-MOBILE-FB5)\n- In progress: APO-18534: Chat channel list refetches in a loop when Cluster returns a PubNub REST GraphQL error (APOLLOS-MOBILE-G2C)\n- In progress: APO-18533: Chat send reports a PubNub NullPointerException wrapper to Sentry (APOLLOS-MOBILE-FNH)\n- In progress: APO-18531: Webview mint reports to Sentry when the session is already gone (APOLLOS-MOBILE-G1X)\n- In progress: APO-18526: Chat still reports pending-invite send refusals to Sentry (APOLLOS-MOBILE-FBA)\n- In progress: APO-18525: Hashed GraphQL GET times out and is not retried as POST (APOLLOS-MOBILE-G1G)\n- In progress: APO-18260: StudioC Checkins 5xx empties the check-in widget and reports to Sentry (APOLLOS-CLUSTER-8QY)\n- In progress: APO-16452: QA delta: PR #7836 chat link punycode (APO-16070): live PASS, plus UX gaps (legit non-Latin domains always shown as punycode; fullwidth/zero-width hosts get a wrong xn-- address)\n- In progress: APO-15175: [QA delta] PR #7626 blocked-DM unread fix (APO-14409): leftover gaps, and no way to retest it live on DEMO\n- In progress: APO-11364: Fix PubNub token limits with membership-scoped patterns and safe pagination\n- Filed 21 new Linear tickets\n- Left comments on PRs and in Linear"
+    },
+    {
+      "day": "Wednesday",
+      "content": "- feat(dashboard): start the /trains monorail in the mountains south of Crossroads API\n- feat(dashboard): redraw the /trains offshore wind turbines\n- feat(dashboard): redraw /trains engines and cars at native 2x resolution\n- fix(admin): stop re-encrypting the stored ciphertext when saving a config row (APO-18604)\n- fix(mobile): enforce prayer and gratitude limits in JS so iOS can't hang on truncation\n- fix(mobile): skip the mint report only when the session really ended\n- fix(mobile): retry hashed GraphQL GET as POST when iOS fetch times out\n- Report OpenAI credit exhaustion to Sentry once per cooldown\n- fix(mobile): stop sending Prayer render diagnostic after APO-13589\n- fix(mobile): retry portrait lock when the Android activity is gone\n- Reviewed: fix(mobile): pass the first tap through on content pages with the keyboard up (APO-18670)\n- Reviewed: Stop giving Cluster tasks a Sentry auth token\n- Reviewed: Keep the Giving dashboard open while Stripe holds a church's payouts\n- Reviewed: fix(mobile): let community hosts ban and mute from the community members list (APO-15792)\n- Reviewed: fix(mobile): let community hosts ban and mute from the chat members list (APO-15792)\n- Reviewed: ci(admin): give the confidence gate its own AI Gateway key\n- Reviewed: feat(dashboard): a Coldplay concert in the rift\n- Reviewed: fix(mobile): report a chat setup failure after the phone code is accepted\n- Reviewed: feat(mobile): give every church Liquid Glass by removing the liquid_glass flag\n- Reviewed: fix(app-clip): show the decline message when Apple Pay is declined (APO-18607)\n- Reviewed: fix(mobile): keep the saved chat file url when there is no PubNub file (APO-18459)\n- Reviewed: feat(dashboard): the Astronomer Rift, a bottomless crack trains fall into and ride out of\n- …and 6 more reviews\n- Done: APO-18660: Staging Tiptap tokens were left on old values after rotation, so the staging gate blocked every Admin release\n- Done: APO-18653: Staging Admin's BigQuery key was revoked: dashboard charts empty and the staging gate blocks every Admin release\n- Done: APO-18604: Admin Config: saving an encrypted row re-encrypts the stored ciphertext\n- Done: APO-18537: iOS kills the app while autocorrect updates a multiline TextInput (APOLLOS-MOBILE-FB5)\n- Done: APO-18526: Chat still reports pending-invite send refusals to Sentry (APOLLOS-MOBILE-FBA)\n- Done: APO-18525: Hashed GraphQL GET times out and is not retried as POST (APOLLOS-MOBILE-G1G)\n- Done: APO-18482: Cluster reports every OpenAI credit-exhausted request to Sentry (APOLLOS-CLUSTER-8VC)\n- Done: APO-18481: Mobile still reports Prayer render diagnostic after the investigation closed (APOLLOS-MOBILE-FF3)\n- Done: APO-18472: Android reports lockAsync as a Sentry error after the activity is gone (APOLLOS-MOBILE-APF)\n- Done: APO-18345: iOS audio session OSStatus reports as an unhandled Sentry rejection (APOLLOS-MOBILE-FTF)\n- Done: APO-18344: Local com.apollos.dev builds report post-reaction failures as production Sentry (APOLLOS-MOBILE-G0R)\n- Done: APO-18343: Demo-channel simulator builds report PubNub errors as production Sentry (APOLLOS-MOBILE-G0X)\n- …and 18 more completed issues\n- In progress: APO-18676: Dispute-email webhooks deadlock staging Admin's Cluster DB pool and loop on Stripe retries\n- In progress: APO-18663: Decide when to move sign-in codes from Twilio Verify back to plain SMS\n- In progress: APO-18645: TTS reports every OpenAI 429 to Sentry instead of the credit cooldown (APOLLOS-CLUSTER-8S8)\n- In progress: APO-18644: Test-mode Stripe webhooks 400 and Sentry when the live secret does not match (APOLLOS-CLUSTER-8VG)\n- In progress: APO-18643: Launch IsLoggedIn reports Invalid Token to Sentry instead of refreshing (APOLLOS-MOBILE-FSD)\n- In progress: APO-18350: Resolve Sentry issues whose fixes shipped to production (2026-11-22 run, cluster + mobile)\n- In progress: APO-18260: StudioC Checkins 5xx empties the check-in widget and reports to Sentry (APOLLOS-CLUSTER-8QY)\n- In progress: APO-16491: Mobile should not report expected join-chat and like GraphQL errors to Sentry\n- In progress: APO-16452: QA delta: PR #7836 chat link punycode (APO-16070): live PASS, plus UX gaps (legit non-Latin domains always shown as punycode; fullwidth/zero-width hosts get a wrong xn-- address)\n- In progress: APO-15175: [QA delta] PR #7626 blocked-DM unread fix (APO-14409): leftover gaps, and no way to retest it live on DEMO\n- In progress: APO-11364: Fix PubNub token limits with membership-scoped patterns and safe pagination\n- Filed 9 new Linear tickets\n- Left comments on PRs and in Linear"
+    }
+  ],
+  "terminal_output": "\n╔══════════════════════════════════════════════════════════╗\n║     Weekly Work Summary                                  ║\n╚══════════════════════════════════════════════════════════╝\n\n📊 Stats:\n\n  • PRs merged: 40\n  • PR reviews: 68\n  • Commits pushed: 134\n  • Code volume: +7824 / -1133 (195 files)\n  • Median review latency (working hours): 0.33h\n  • Linear issues completed: 66\n  • Linear projects completed: 0\n  • Linear issues worked on: 76\n  • Linear issues created: 58\n  • Linear replies: 133\n  • Repos: apollos-admin, apollos-cluster, apollos-code-reviewer, apollos-infrastructure, apollos-platforms, apollos-shovel\n\n📝 Check-ins:\n\n  Monday: - feat(dashboard): /trains Island Almanac calendar image\n- feat(trains): say WRE...\n  Tuesday: - Read FreedUp's Woo key from cluster config (APO-18581)\n- fix(mobile): name Dai...\n  Wednesday: - feat(dashboard): start the /trains monorail in the mountains south of Crossroa...\n",
+  "formatted_output": null
+}
